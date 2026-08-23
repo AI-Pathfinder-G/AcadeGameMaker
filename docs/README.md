@@ -14,6 +14,9 @@
 ## 현재 준비도
 
 - [2026-08-24 본격 개발 착수 전 준비도 점검](./project-readiness-audit-2026-08-24.md)
+- [2026-08-24 환경 준비 및 제품 기준 승인 기록](./approvals/2026-08-24-environment-and-product-baseline.md)
+- [2026-08-24 개발 환경 준비 상태](./environment/setup-status-2026-08-24.md)
+- [Sol P0 통합 기본안 — Proposed](./proposals/sol-p0-integration-proposal.md)
 
 ## 단일 진실원천
 

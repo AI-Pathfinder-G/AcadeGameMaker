@@ -10,3 +10,4 @@
 - [[Traceability]]
 - [[Publishing Status|Publishing-Status]]
 - [[Project Readiness|Project-Readiness]]
+- [[Sol P0 Proposal|Sol-P0-Proposal]]
