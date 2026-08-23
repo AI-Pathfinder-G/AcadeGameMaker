@@ -15,6 +15,8 @@
 
 첫 결과물은 약 15분 수직 데모다. 작은 거점 1개, 수작업 방 풀 6개를 이용하는 원정 1개, 이동·점프·대시·벽차기, 상자와 적 대상의 무게 전이, 일반 적 2종, 중간보스 1종, 실패와 부분 초기화, 인간성 선택 1회, 선택별 기술 각 1개, 마지막 히로인 등장 장면을 포함한다.
 
+수직 데모의 한 런은 방 풀 6개 중 저작된 네 방을 사용한다. 시작 `R01`과 수렴 `R06`은 고정되고 가운데 두 방과 소켓 변주는 네 개의 검증 시드로 바뀐다. 선택 직후에는 같은 봉쇄선을 수탈 기술 `압착 판결` 또는 연대 기술 `공동 기준면`으로 돌파해 두 기술이 모두 실제 진행 수단임을 확인한다.
+
 ## 명시적 비범위
 
 - 전체 챕터와 완성형 핵심 세계
@@ -25,4 +27,4 @@
 
 ## 근거
 
-[ADR-0001](../adr/0001-metered-gravity-city.md), [ADR-0003](../adr/0003-humanity-is-preserving-others-agency.md), [ADR-0005](../adr/0005-choices-grant-different-skill-families.md), [ADR-0007](../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0008](../adr/0008-assemble-authored-expedition-rooms.md), [ADR-0013](../adr/0013-fifteen-minute-vertical-slice.md)
+[ADR-0001](../adr/0001-metered-gravity-city.md), [ADR-0003](../adr/0003-humanity-is-preserving-others-agency.md), [ADR-0005](../adr/0005-choices-grant-different-skill-families.md), [ADR-0007](../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0008](../adr/0008-assemble-authored-expedition-rooms.md), [ADR-0013](../adr/0013-fifteen-minute-vertical-slice.md), [ADR-0018](../adr/0018-vertical-demo-p0-integration.md)

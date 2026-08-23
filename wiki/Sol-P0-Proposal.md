@@ -12,7 +12,6 @@ Sol이 수직 데모 구현을 막는 P0 여섯 항목을 하나의 약 15분 �
 - 인간 적 `징수보행관`, `부유측량사`, 중간보스 `환수관 오르단`
 - 선택 기술을 즉시 검증하는 비치명 봉쇄선과 히로인의 첫 등장
 
-Terra 구현성 검토와 Luna 결정성·검증성·캐논 검토를 통과했다. 현재 상태는 **Proposed**이며 사용자 내용 승인 전에는 P0을 닫거나 스펙을 `Approved`로 올리지 않는다.
+Terra 구현성 검토와 Luna 결정성·검증성·캐논 검토를 통과했고 2026-08-24 사용자가 승인했다. 현재 상태는 **Accepted**이며 여섯 P0은 ADR-0018과 규범 스펙으로 이전됐다. `Approved` 전환에는 남은 P1과 최종 독립 검토가 필요하다.
 
-> 권위 있는 제안서: [Sol P0 통합 기본안](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/proposals/sol-p0-integration-proposal.md)
-
+> 권위 문서: [ADR-0018](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/adr/0018-vertical-demo-p0-integration.md), [P0 승인 기록](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/approvals/2026-08-24-p0-integration-approval.md), [Sol P0 통합 기본안](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/proposals/sol-p0-integration-proposal.md)

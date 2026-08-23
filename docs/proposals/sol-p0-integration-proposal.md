@@ -1,12 +1,12 @@
 # Sol P0 통합 기본안
 
-- Status: **Proposed — 사용자 승인 필요**
+- Status: **Accepted — [ADR-0018](../adr/0018-vertical-demo-p0-integration.md)과 규범 스펙으로 이전**
 - Owner: GPT-5.6 Sol
 - Review: Terra 구현성 PASS, Luna 결정성·검증성·캐논 PASS
 - Date: 2026-08-24
 - Scope: `OD-WT-001`, `OD-ROOM-001`, `OD-RUN-001`, `OD-CHOICE-001`, `OD-CHOICE-002`, `OD-COM-001`
 
-이 문서는 여섯 P0을 하나의 약 15분 흐름으로 묶는 기본안이다. 승인 전에는 캐논이나 구현 계약이 아니며 스펙 상태를 변경하지 않는다.
+이 문서는 여섯 P0을 하나의 약 15분 흐름으로 묶어 승인받은 역사 기록이다. 현재 규범은 ADR-0018, 캐논, 관련 스펙과 SYSTEM-CONTRACTS가 소유한다.
 
 사용자가 별도로 승인한 플랫폼 기준은 Windows x64, 키보드와 XInput 게임패드, 16:9 1920×1080, 60 FPS, 물리 고정 간격 1/60초, Unity 온라인 기능 기본 비활성이다. 이 문서는 의미 입력만 소유하고 실제 바인딩은 P1 플랫폼 계약에 둔다.
 
@@ -285,19 +285,18 @@ SYSTEM-CONTRACTS 반영 대상 공개 계약은 다음과 같다.
 
 | Decision | 반영 스펙 | 주요 REQ | 주요 AC |
 |---|---|---|---|
-| OD-WT-001 | VD-02, VD-01, VD-03, SYSTEM-CONTRACTS | REQ-WT-001~005 | AC-WT-001~004, AC-MOV-002 |
-| OD-ROOM-001 | VD-00, VD-04 | REQ-ROOM-001~005 | AC-ROOM-001~004, AC-SCOPE-003~004 |
-| OD-RUN-001 | VD-05, VD-09, SYSTEM-CONTRACTS | REQ-RUN-001~004, REQ-PLAT-003 | AC-RUN-001~003, AC-PLAT-003 |
-| OD-CHOICE-001 | VD-00, VD-06 | REQ-CHOICE-001, 004~005 | AC-CHOICE-001~003 |
-| OD-CHOICE-002 | VD-03, VD-06, VD-07 | REQ-CHOICE-002~003, REQ-UX-001~004 | AC-CHOICE-001~002, AC-UX-001~003 |
-| OD-COM-001 | VD-03 | REQ-COM-001~004 | AC-COM-001~003 |
+| OD-WT-001 | VD-02, VD-01, VD-03, SYSTEM-CONTRACTS | REQ-WT-001~007, REQ-MOV-004 | AC-WT-001~005, AC-MOV-002 |
+| OD-ROOM-001 | VD-00, VD-04 | REQ-SCOPE-003, REQ-ROOM-001~006 | AC-SCOPE-004, AC-ROOM-001~005 |
+| OD-RUN-001 | VD-05, VD-09, SYSTEM-CONTRACTS | REQ-RUN-001~006, REQ-PLAT-003, REQ-PLAT-006 | AC-RUN-001~004, AC-PLAT-003~004 |
+| OD-CHOICE-001 | VD-00, VD-06 | REQ-SCOPE-001, REQ-CHOICE-001, REQ-CHOICE-004~005 | AC-SCOPE-001, AC-CHOICE-001~003 |
+| OD-CHOICE-002 | VD-03, VD-06, VD-07 | REQ-CHOICE-002~003, REQ-CHOICE-006~007, REQ-UX-001~005 | AC-CHOICE-001~002, AC-CHOICE-004, AC-UX-001~004 |
+| OD-COM-001 | VD-03 | REQ-COM-001~006 | AC-COM-001~004 |
 
-## 12. 승인 시 처리
+## 12. 승인 후 처리 상태
 
-사용자 승인 뒤 Sol이 다음을 수행한다.
+2026-08-24 사용자 승인 뒤 다음 상태로 이전했다.
 
-1. 여섯 OD를 `Resolved by` 링크로 닫는다.
-2. VD-02~VD-07과 SYSTEM-CONTRACTS에 수치·명령·사건·AC를 반영한다.
-3. P1 기본안을 통합해 VD-01, VD-08, VD-09의 승인 가능 상태를 만든다.
-4. Luna가 AC의 결정성·검증 비용·분기 완주성을 독립 검토한다.
-5. Sol이 충돌을 해소한 뒤에만 관련 스펙을 `Approved`로 전환한다.
+1. 여섯 P0은 [ADR-0018](../adr/0018-vertical-demo-p0-integration.md)과 `OPEN-DECISIONS`의 `Resolved` 링크로 닫았다.
+2. VD-00~VD-07, VD-09~VD-10과 SYSTEM-CONTRACTS에 수치·명령·사건·AC·검증 표본을 반영했다.
+3. P1 네 항목은 열린 결정으로 유지한다.
+4. Luna 독립 검토와 Sol 충돌 해소 뒤에만 관련 스펙을 `Approved`로 전환한다.

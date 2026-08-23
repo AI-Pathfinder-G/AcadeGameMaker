@@ -15,7 +15,7 @@
 ### In scope
 
 - 작은 거점 1개와 원정 1개
-- 수작업 방 풀 6개
+- 수작업 방 풀 6개 중 한 원정에 사용하는 방 4개
 - 이동, 점프, 대시, 벽차기
 - 상자와 적에 적용되는 무게 전이
 - 일반 적 2종과 중간보스 1종
@@ -34,7 +34,7 @@
 
 - **REQ-SCOPE-001:** 깨끗한 시작에서 거점, 원정, 중간보스, 인간성 선택, 마지막 장면까지 하나의 연속된 성공 경로가 있어야 한다.
 - **REQ-SCOPE-002:** 실패 경로는 원정을 종료하고 부분 초기화 후 거점에서 다시 시작할 수 있어야 한다.
-- **REQ-SCOPE-003:** 콘텐츠 수량은 거점 1, 방 풀 6, 일반 적 유형 2, 중간보스 1, 선택 사건 1, 선택별 기술 1을 충족해야 한다.
+- **REQ-SCOPE-003:** 콘텐츠 수량은 거점 1, 방 풀 6, 런당 방 4, 일반 적 유형 2, 중간보스 1, 선택 사건 1, 선택별 기술 1을 충족해야 한다.
 - **REQ-SCOPE-004:** 기준 경로의 목표 플레이 시간은 로딩과 설정 시간을 제외하고 12~18분이어야 한다.
 
 ## Acceptance criteria
@@ -61,7 +61,7 @@
 
 - **Given** 검수 대상 콘텐츠 등록부와 빌드가 있고
 - **When** 거점, 방, 적 유형, 보스, 선택 사건, 선택 기술을 고유 ID로 집계하면
-- **Then** 거점 1개, 방 풀 6개, 일반 적 유형 2개, 중간보스 1개, 선택 사건 1개, 선택 결과별 기술 1개씩이며 중복 ID가 없다.
+- **Then** 거점 1개, 방 풀 6개, 런당 방 4개, 일반 적 유형 2개, 중간보스 1개, 선택 사건 1개, 선택 결과별 기술 1개씩이며 중복 ID가 없다.
 
 ## Unit specifications
 
@@ -80,8 +80,8 @@
 
 ## Approval blocker
 
-[OPEN-DECISIONS.md](./OPEN-DECISIONS.md)의 P0 항목이 해결되기 전에는 이 패키지나 하위 스펙을 Approved로 전환하지 않는다.
+[ADR-0018](../../adr/0018-vertical-demo-p0-integration.md)로 P0 여섯 항목은 모두 해결됐다. P1 계약, 소비 스펙 간 일치, Luna 독립 검토가 끝나고 Sol이 승인 기록을 남기기 전에는 이 패키지나 하위 스펙을 Approved로 전환하지 않는다.
 
 ## Traceability
 
-[게임 디자인 캐논](../../canon/game-design.md), [ADR-0007](../../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0008](../../adr/0008-assemble-authored-expedition-rooms.md), [ADR-0013](../../adr/0013-fifteen-minute-vertical-slice.md)
+[게임 디자인 캐논](../../canon/game-design.md), [ADR-0007](../../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0008](../../adr/0008-assemble-authored-expedition-rooms.md), [ADR-0013](../../adr/0013-fifteen-minute-vertical-slice.md), [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md)

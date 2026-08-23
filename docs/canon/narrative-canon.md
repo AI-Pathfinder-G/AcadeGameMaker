@@ -16,6 +16,14 @@
 
 히로인은 주인공의 고통을 보듬되 타인을 희생시키는 선택에는 맞서는 인간의 닻이다. 보상물이나 무조건적인 구원자가 아니며 자신의 판단과 떠날 권리를 가진다. 수직 데모에서는 마지막 장면에 주인공을 추적하는 인물로 처음 등장한다.
 
+## 수직 데모 인물과 선택
+
+유담은 전직 하방권 검침관이자 공동장부 보관자다. 탈락 예정 시민 47명의 동의를 받은 중력 서명을 자신의 신경계에 보관하며, 장부를 함께 쓸 조건은 제시하지만 소유권 이전과 강제 추출은 거부한다. 위조 과정에서 타인을 위험에 빠뜨린 책임도 있어 무조건적으로 옳은 인물로 그리지 않는다.
+
+환수관 오르단은 공동장부가 도시 기준면을 무너뜨릴 수 있다고 믿는 인간 집행관이다. 외골격과 압류추로 유담을 압류하며, 질서를 지킨다는 동기와 타인의 선택권을 강제로 회수하는 행위를 함께 가진다.
+
+주인공이 유담의 거부를 무시하고 각인을 절단하면 수탈 기술 `압착 판결`을 얻고 유담은 공동장부 조작 능력을 잃는다. 유담의 범위 있는 동의를 받아 소유권을 남기면 연대 기술 `공동 기준면`을 얻는다. 히로인은 어느 경로에서도 보상이 되지 않으며, 유담의 상태와 약속의 실제 이행을 먼저 확인하는 추적자로 등장한다.
+
 ## 근거
 
-[ADR-0002](../adr/0002-human-counterweight-protagonist.md), [ADR-0003](../adr/0003-humanity-is-preserving-others-agency.md), [ADR-0004](../adr/0004-heroine-is-a-conditional-human-anchor.md), [ADR-0005](../adr/0005-choices-grant-different-skill-families.md), [ADR-0006](../adr/0006-protagonist-designed-consensual-gravity-resonance.md), [ADR-0013](../adr/0013-fifteen-minute-vertical-slice.md)
+[ADR-0002](../adr/0002-human-counterweight-protagonist.md), [ADR-0003](../adr/0003-humanity-is-preserving-others-agency.md), [ADR-0004](../adr/0004-heroine-is-a-conditional-human-anchor.md), [ADR-0005](../adr/0005-choices-grant-different-skill-families.md), [ADR-0006](../adr/0006-protagonist-designed-consensual-gravity-resonance.md), [ADR-0013](../adr/0013-fifteen-minute-vertical-slice.md), [ADR-0018](../adr/0018-vertical-demo-p0-integration.md)

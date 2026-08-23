@@ -1,18 +1,25 @@
 # Open Decisions Before Implementation
 
-P0은 관련 스펙의 Approved 전환과 구현을 막는다. P1은 단위 구현 계약 전, P2는 통합 전 해결한다.
+P0은 관련 스펙의 Approved 전환과 구현을 막는다. P1은 단위 구현 계약 전, P2는 통합 전 해결한다. 2026-08-24 현재 열린 P0은 0개다.
+
+## Open
 
 | ID | Priority | Owner | Decision required | Blocks |
 |---|---|---|---|---|
-| OD-WT-001 | P0 | Sol | 전이 거리·대상 선택 규칙·동시 대상 수·회수 방식·재사용 제한·상자/적 물리 배율 | VD-02, VD-01, VD-03 |
-| OD-ROOM-001 | P0 | Sol | 6개가 전체 방 풀인지, 한 런에서 몇 개를 쓰는지, 지원 시드 표본 수와 반복 제한 | VD-04, VD-00 |
-| OD-RUN-001 | P0 | Sol | 실패 조건과 원정 자산/지속 성장/서사 상태의 정확한 보존표, 세션 재시작 경계 | VD-05, VD-09 |
-| OD-CHOICE-001 | P0 | Sol | 선택 대상 인물, 원정 내 시점, 선택 전후 장면 순서 | VD-06, VD-00 |
-| OD-CHOICE-002 | P0 | Sol | 수탈 기술과 연대 기술의 구체 동작, 입력, 성장 없는 데모 내 수치 | VD-06, VD-03, VD-07 |
-| OD-COM-001 | P0 | Sol | 일반 적 2종의 역할, 중간보스 정체·패턴, 성공/실패 조건 | VD-03 |
 | OD-MOV-001 | P1 | Terra, approve Sol | 속도, 가속, 점프, 대시, 벽차기, 입력 버퍼, 코요테 타임과 검수 허용오차 | VD-01, VD-04 |
-| OD-PLAT-001 | P1 | Sol | 입력 기기, Input System 선택, 기준 해상도/화면 모드, 목표 프레임률, 저장 포맷 | VD-07, VD-09 |
+| OD-PLAT-001 | P1 | Sol | 승인된 키보드·XInput·마우스 범위의 Input System 패키지/action map/실제 바인딩과 버전 저장 스키마·손상 복구 정책 | VD-07, VD-09 |
 | OD-ART-001 | P1 | Sol | 기준 픽셀 밀도, 팔레트, 기준 해상도별 카메라/조명 규칙 | VD-08, VD-09 |
 | OD-SCENE-001 | P1 | Sol | 중간보스→선택→히로인 장면의 정확한 성공 경로와 실패 시 히로인 노출 여부 | VD-00, VD-06 |
 
-결정이 확정되면 해당 스펙에 결과와 AC를 반영하고, 이 표에서는 `Resolved by` 링크를 남긴다. 어렵게 되돌릴 결정이고 대안 비교가 있었다면 별도 ADR을 만든다.
+## Resolved
+
+| ID | Priority | Resolved by | Normative specs |
+|---|---|---|---|
+| OD-WT-001 | P0 | [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md) | VD-01, VD-02, VD-03, SYSTEM-CONTRACTS |
+| OD-ROOM-001 | P0 | [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md) | VD-00, VD-04, SYSTEM-CONTRACTS |
+| OD-RUN-001 | P0 | [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md) | VD-05, VD-09, SYSTEM-CONTRACTS |
+| OD-CHOICE-001 | P0 | [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md) | VD-00, VD-06, SYSTEM-CONTRACTS |
+| OD-CHOICE-002 | P0 | [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md) | VD-03, VD-06, VD-07, SYSTEM-CONTRACTS |
+| OD-COM-001 | P0 | [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md) | VD-03, SYSTEM-CONTRACTS |
+
+결정이 확정되면 해당 스펙에 결과와 AC를 반영하고 `Resolved` 표에 근거 링크를 남긴다. 어렵게 되돌릴 결정이고 대안 비교가 있었다면 별도 ADR을 만든다.
