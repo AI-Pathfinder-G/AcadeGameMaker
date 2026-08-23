@@ -6,9 +6,28 @@
 - Verification: Luna
 - Last updated: 2026-08-24
 
+## Scope
+
+- 공식 원출처 후보 조사와 에셋 등록부 기록
+- Sol의 미술 적합성·라이선스 승인
+- 승인된 원본 아카이브의 Git 제외 격리 다운로드
+- 라이선스 증적, 다운로드 URL, 검증일, SHA-256 기록
+- Approved 이후의 Unity 임포트와 대표 검수 장면 일관성 검사
+
+## Non-scope while status is Review
+
+- Unity 프로젝트 또는 `Assets/` 임포트
+- 원본 파일 수정, 재배포 패키지 제작, 팔레트 변환
+- OD-ART-001 이전의 픽셀 밀도·카메라·조명 통합 결정
+
 ## Contract
 
-고해상도 픽셀 아트와 관료주의 디젤펑크 방향을 유지하면서 여러 무료 에셋을 일관되게 조합하는 수용 기준과 라이선스 추적 규칙을 정의한다. 실제 다운로드와 도입은 이 단계의 범위가 아니다.
+- **Input:** 공식 제작자·배포자 페이지, 라이선스 원문, 원본 다운로드 파일, 미술 캐논
+- **Output:** 완전한 등록부 행, 버전 관리되는 라이선스 증적, Git에서 제외된 원본 아카이브와 SHA-256
+- **Owned state:** `docs/assets/asset-register.md`, `docs/assets/evidence/`, `third_party/quarantine/`
+- **Invariants:** 라이선스가 불명확한 파일은 다운로드하지 않는다. 다운로드 파일은 임포트·실행·수정하지 않는다. 등록부의 `Approved by Sol`과 증적·체크섬이 모두 존재하기 전에는 상태를 `Quarantined`로 바꾸지 않는다.
+
+후보 조사와 격리 보관은 구현이 아니므로 이 스펙이 Review인 동안 수행할 수 있다. Unity 임포트와 파생 작업은 이 스펙이 Approved이고 OD-ART-001이 해결된 뒤에만 시작한다.
 
 ## Requirements
 
@@ -17,6 +36,8 @@
 - **REQ-ART-003:** 모든 후보와 도입 에셋은 출처 URL, 제작자, 라이선스 원문 URL, 허용 범위, 표기 의무, 수정 여부, 검증일을 기록한다.
 - **REQ-ART-004:** 라이선스가 불명확하거나 프로젝트 사용 조건과 충돌하는 에셋은 도입하지 않는다.
 - **REQ-ART-005:** 캐릭터, 위험물, 전이 가능 대상은 배경과 구분되는 실루엣·대비·피드백을 가져야 한다.
+- **REQ-ART-006:** 격리 다운로드는 원본 파일명, 최종 다운로드 URL, 다운로드 시각, 파일 크기, SHA-256, 로컬 격리 경로를 기록해야 한다.
+- **REQ-ART-007:** `Needs clarification` 또는 `Rejected`인 후보는 다운로드·임포트하지 않으며, 격리 파일은 Unity나 기타 제작 도구에서 실행·열기·변환하지 않는다.
 
 ## Acceptance criteria
 
@@ -24,7 +45,7 @@
 
 - **Given** 도입 후보 에셋이 있고
 - **When** [에셋 등록부](../../assets/asset-register.md)에 등록하면
-- **Then** REQ-ART-003의 필드가 모두 채워지고 Sol의 라이선스 상태가 `Approved`이기 전에는 프로젝트 도입 상태로 바뀌지 않는다.
+- **Then** REQ-ART-003과 REQ-ART-006의 필드가 해당 단계에 맞게 채워지고 Sol의 라이선스 상태가 `Approved by Sol`이기 전에는 다운로드 상태로 바뀌지 않는다.
 
 ### AC-ART-002 — 씬 일관성과 가독성
 
@@ -32,10 +53,22 @@
 - **When** 캐릭터가 이동·전투·무게 전이를 수행하면
 - **Then** 핵심 상호작용 대상이 배경과 구분되고 아트 캐논의 재질·색·조명 규칙에서 벗어난 항목이 체크리스트에 남는다.
 
+### AC-ART-003 — 격리 아카이브 추적성
+
+- **Given** Sol이 승인한 후보 에셋이 있고
+- **When** 원본 파일을 `third_party/quarantine/`에 다운로드하면
+- **Then** 등록부와 증적에 최종 URL·다운로드 시각·파일 크기·SHA-256·격리 경로가 일치하고 파일은 Git 추적 및 Unity 임포트 대상에서 제외된다.
+
+### AC-ART-004 — 미승인 파일 차단
+
+- **Given** 라이선스 상태가 `Needs clarification` 또는 `Rejected`인 후보가 있고
+- **When** 확보 작업을 검수하면
+- **Then** 해당 후보의 격리 파일과 Unity 임포트 파일이 존재하지 않는다.
+
 ## Verification
 
-에셋 등록부 완전성 검사, 라이선스 원문 수동 확인, 대표 검수 장면 캡처 비교를 사용한다.
+에셋 등록부 완전성 검사, 라이선스 원문 수동 확인, SHA-256 재계산, Git 추적 제외 검사, 대표 검수 장면 캡처 비교를 사용한다.
 
 ## Traceability
 
-[미술 캐논](../../canon/art-direction.md), [ADR-0010](../../adr/0010-unity-for-the-asset-first-prototype.md), [ADR-0011](../../adr/0011-high-resolution-pixel-art.md), [ADR-0012](../../adr/0012-bureaucratic-dieselpunk-art-direction.md)
+[미술 캐논](../../canon/art-direction.md), [ADR-0010](../../adr/0010-unity-for-the-asset-first-prototype.md), [ADR-0011](../../adr/0011-high-resolution-pixel-art.md), [ADR-0012](../../adr/0012-bureaucratic-dieselpunk-art-direction.md), [ADR-0017](../../adr/0017-quarantine-assets-before-import.md)

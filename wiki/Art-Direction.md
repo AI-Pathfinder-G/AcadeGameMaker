@@ -4,4 +4,8 @@
 
 무료 에셋은 수량보다 라이선스 추적과 통합 가능성을 먼저 본다. 출처, 제작자, 라이선스, 표기 의무, 수정 가능 여부, 검증일이 없는 후보는 프로젝트에 도입하지 않는다.
 
+## Acquisition status
+
+2026-08-24 기준 첫 CC0 원본 7종을 Git 제외 격리 영역에 확보했다. 산업 타일, 픽셀 UI, 입력 프롬프트, 파티클·연기, 충돌음·인터페이스음이며 각 ZIP의 SHA-256과 포함 라이선스를 [에셋 등록부](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/assets/asset-register.md)에 기록했다. VD-08 Approved 및 OD-ART-001 해결 전에는 Unity 임포트와 파생 작업을 하지 않는다.
+
 **권위 문서:** [미술 캐논](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/canon/art-direction.md), [미술·에셋 스펙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/08-art-and-asset-integration.md), [에셋 등록부](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/assets/asset-register.md)

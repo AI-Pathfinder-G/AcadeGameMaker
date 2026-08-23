@@ -20,3 +20,4 @@ ADR은 쉽게 되돌리기 어렵고, 맥락 없이 보면 의외이며, 실제 
 | [0014](./0014-gpt-governs-ollama-delegates-routine-work.md) | superseded by 0015 | GPT/Ollama 역할의 첫 분리 |
 | [0015](./0015-sol-orchestrates-terra-builds-units.md) | accepted | Sol 오케스트레이션, Terra 단위 개발 |
 | [0016](./0016-document-authority-and-wiki-publishing.md) | accepted | 권위 문서와 위키 발행 계층 분리 |
+| [0017](./0017-quarantine-assets-before-import.md) | accepted | 외부 에셋을 증적과 함께 격리 후 임포트 |

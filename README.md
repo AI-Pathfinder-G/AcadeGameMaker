@@ -11,6 +11,6 @@
 - [위키 홈](./wiki/Home.md)
 - [에이전트 운영 모델](./docs/agent-operating-model.md)
 
-Unity 프로젝트와 외부 에셋은 아직 생성·도입하지 않는다. 구현 착수 조건은 [스펙 운영 규칙](./docs/specs/README.md)을 따른다.
+Unity 프로젝트는 아직 생성하지 않는다. Sol이 승인한 외부 에셋 원본은 [에셋 등록부](./docs/assets/asset-register.md)와 ADR-0017에 따라 격리 보관하지만, VD-08 Approved 및 OD-ART-001 해결 전에는 Unity에 임포트하거나 수정하지 않는다. 구현 착수 조건은 [스펙 운영 규칙](./docs/specs/README.md)을 따른다.
 
 > **Implementation blocked:** [P0 열린 결정](./docs/specs/vertical-demo/OPEN-DECISIONS.md)이 해결되고 관련 스펙이 Sol에 의해 `Approved`되기 전에는 구현을 시작하지 않는다.
