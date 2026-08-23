@@ -28,9 +28,9 @@ Sol이 P0 게임플레이·런·선택·전투 기본안을 통합 제출하고 
 
 - 저장소 안전장치와 `pre-unity-docs-v1` 태그 적용 완료
 - Unity Hub 설치 완료
+- Unity Editor 6000.3.21f1 설치·버전 검증 완료
 - Ollama Cloud GLM 5.2·MiniMax M3 연결 시험 완료
 - Unity 계정 브라우저 인증 완료 대기
-- Unity Editor 설치는 Windows 확인 단계에서 취소되어 재시도 대기
 - Sol P0 통합안은 Terra/Luna 검토 PASS, 사용자 내용 승인 대기
 
 > 권위 문서: [본격 개발 착수 전 준비도 점검](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/project-readiness-audit-2026-08-24.md)
