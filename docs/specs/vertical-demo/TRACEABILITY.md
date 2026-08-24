@@ -23,6 +23,7 @@
 | [2026-08-24 P1 재지정 충돌 정책 승인](../../approvals/2026-08-24-p1-rebinding-conflict-approval.md) | 같은 Gameplay scheme 충돌의 확인 교환·취소와 중복 방지 | REQ-UX-012 | AC-UX-011 |
 | [2026-08-24 P1 프로필 스키마 승인](../../approvals/2026-08-24-p1-profile-schema-approval.md) | canonical 단일 profile.json의 version 1 field·integrity·비범위 | REQ-PLAT-008 | AC-PLAT-006 |
 | [2026-08-24 P1 원자 저장 승인](../../approvals/2026-08-24-p1-profile-atomic-write-approval.md) | persistentDataPath temp 검증 뒤 primary 원자 교체와 previous 보존 | REQ-PLAT-009 | AC-PLAT-007 |
+| [2026-08-24 P1 로드 복구 승인](../../approvals/2026-08-24-p1-profile-load-recovery-approval.md) | primary→previous→default 선택, stale temp 격리와 binding 부분 복구 | REQ-PLAT-010~011 | AC-PLAT-008~009 |
 
 ## Requirement coverage
 
@@ -31,12 +32,12 @@
 | VD-00 | REQ-SCOPE-001~004 | AC-SCOPE-001~004 | Review |
 | VD-01 | REQ-MOV-001~010 | AC-MOV-001~006 | Review — OD-MOV-001 resolved; Luna review pending |
 | VD-02 | REQ-WT-001~008 | AC-WT-001~006 | Review — pointer targeting contract fixed; Luna review pending |
-| VD-03 | REQ-COM-001~006 | AC-COM-001~004 | Review — P0 resolved; binding waits on OD-PLAT-001 |
+| VD-03 | REQ-COM-001~006 | AC-COM-001~004 | Review — binding contract fixed; Luna review pending |
 | VD-04 | REQ-ROOM-001~007 | AC-ROOM-001~006 | Review — P0 and traversal contract resolved; Luna review pending |
-| VD-05 | REQ-RUN-001~006 | AC-RUN-001~004 | Review — P0 resolved; persistence schema waits on OD-PLAT-001 |
+| VD-05 | REQ-RUN-001~006 | AC-RUN-001~004 | Review — persistence contract fixed; Luna review pending |
 | VD-06 | REQ-CHOICE-001~007 | AC-CHOICE-001~004 | Review — P0 resolved; scene detail waits on OD-SCENE-001 |
-| VD-07 | REQ-UX-001~012 | AC-UX-001~011; REQ-UX-001은 입력 맵 정적 검사 | Review — rebind contract fixed; override persistence waits on OD-PLAT-001 |
+| VD-07 | REQ-UX-001~012 | AC-UX-001~011; REQ-UX-001은 입력 맵 정적 검사 | Review — OD-PLAT-001 document review PASS; other P1 pending |
 | VD-08 | REQ-ART-001~007 | AC-ART-001~004 | Review — acquisition allowed; import blocked by OD-ART-001 |
-| VD-09 | REQ-PLAT-001~009 | AC-PLAT-001~007 | Draft — atomic write fixed; load recovery waits on OD-PLAT-001 |
+| VD-09 | REQ-PLAT-001~011 | AC-PLAT-001~009 | Review — OD-PLAT-001 Luna document review PASS; other P1 pending |
 
 모든 REQ는 구현 작업 계약과 코드 변경에, 모든 AC는 자동 테스트 또는 수동 검수 증적에 역참조되어야 한다.

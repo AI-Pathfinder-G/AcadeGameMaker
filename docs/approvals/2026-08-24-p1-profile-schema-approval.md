@@ -14,7 +14,10 @@
 - tutorial confirmed ID와 completed branch는 ordinal sorted unique array
 - progression은 last offered seed, committed choice, consent state, granted skill, completed branch만 기록
 - `integrity.payloadSha256`는 integrity object를 제외한 canonical payload byte의 lowercase SHA-256
-- object property 순서 고정, UTF-8·LF 사용, wall-clock 저장 시각은 payload에서 제외
+- object property 순서 고정, UTF-8·insignificant whitespace와 파일 끝 newline 없음, wall-clock 저장 시각은 payload에서 제외
+- integer·boolean·null 표기, NFC string·escape, duplicate/unknown property 금지와 outer whitespace 없는 canonical byte 사용
+- binding override JSON은 parse·duplicate-key 검사 뒤 RFC 8785 canonical text로 만들어 outer string에 저장
+- 빈 binding override 문자열은 `no override` sentinel이며 inner JSON parse·canonicalize를 생략
 - 활성 원정·위치·속도·체력·방·적·보상·원정 자산·활성 전이와 runtime reference 저장 금지
 - 알 수 없는 field를 gameplay 의미로 추측하지 않음
 

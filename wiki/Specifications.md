@@ -18,6 +18,6 @@
 
 **권위 문서:** [스펙 운영 규칙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/README.md), [열린 결정](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/OPEN-DECISIONS.md)
 
-P0 여섯 항목과 P1 이동 계약은 해결됐다. `Approved` 전환에는 남은 P1 세 항목, 소비 스펙 간 계약 일치, Luna 독립 검토가 필요하다.
+P0 여섯 항목과 P1 이동·플랫폼 계약은 해결됐다. `Approved` 전환에는 남은 P1 두 항목, 소비 스펙 간 계약 일치, Luna 독립 검토가 필요하다.
 
-플랫폼 P1에서는 입력·재지정 계약이 확정됐다. 영구 상태는 version 1 단일 `profile.json`에 설정·binding override·tutorial·확정 progression만 canonical JSON과 integrity hash로 기록한다. persistentDataPath의 temp를 기록·flush·재검증한 뒤에만 primary를 원자 교체하고 직전 정상본은 `profile.prev.json`으로 보존한다. 시작 시 파일 선택과 손상 복구 순서는 아직 열려 있다.
+플랫폼 P1 입력·재지정·저장·복구 계약은 해결됐고 Luna 독립 문서 검토를 PASS했다. version 1 단일 `profile.json`을 원자 저장하며 시작 시 valid primary→valid previous→revision 0 default만 사용한다. stale temp와 손상·미지원 파일은 로드하지 않고 보존하며 binding만 불일치하면 진행 상태를 유지한 채 입력만 기본값으로 복구한다.

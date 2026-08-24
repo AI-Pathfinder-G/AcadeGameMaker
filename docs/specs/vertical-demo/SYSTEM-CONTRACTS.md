@@ -183,7 +183,9 @@ Gameplay mouse pointer는 총구의 화면 공간 조준 reticle이다. 유효 �
 
 활성 런은 저장하거나 이어 하지 않는다. 앱 재시작은 거점의 새 원정 상태로 복구한다. 영구 상태는 VD-09의 schemaVersion 1 단일 `profile.json`에 settings·binding override·tutorial·확정 progression만 canonical JSON으로 기록하고 payload hash를 검증한다. 알 수 없는 field를 추측해 gameplay 상태로 채택하지 않는다.
 
-저장은 `Application.persistentDataPath`의 `profile.tmp.json`을 전체 기록·storage flush·close·재검증한 뒤에만 `profile.json`으로 atomic replace한다. 기존 primary는 같은 transaction에서 `profile.prev.json`이 된다. 최초 저장은 검증된 temp를 같은 directory에서 move한다. 실패는 기존 primary·previous를 변경하지 않고 실패 결과만 반환한다.
+저장은 `Application.persistentDataPath`의 `profile.tmp.json`을 전체 기록·storage flush·close·재검증한 뒤에만 `profile.json`으로 atomic replace한다. Windows 구현은 `File.Replace(temp, primary, previous, true)`이며 기존 previous가 있으면 교체 전 primary byte로 대체한다. 최초 저장은 검증된 temp를 같은 directory에서 move한다. replace 전 실패는 기존 primary·previous를 변경하지 않는다. replace 호출 오류는 성공을 발행하지 않고 세 파일을 재검증하며 최소 하나의 직전 정상 snapshot을 primary 또는 previous에 보존한다.
+
+load는 valid primary, valid previous, default 순서만 사용하며 stale temp는 revision과 무관하게 로드하지 않는다. primary가 valid여도 invalid previous를 포함한 비정상 파일은 `recovery/`에 보존한다. previous `r` 복구와 binding 부분 복구는 result revision `r+1`, uncommitted default는 source `-1`에서 첫 result `0`이다. binding asset ID·schema·override 적용만 실패하면 input block만 기본값으로 복구하고 다른 profile state는 유지한다. 모든 복구는 atomic save를 요청하며 launch당 한 번 비차단 알림을 낸다.
 
 ## Cross-system invariants
 
@@ -196,6 +198,4 @@ Gameplay mouse pointer는 총구의 화면 공간 조준 reticle이다. 유효 �
 
 ## Remaining approval blockers
 
-- 시작 시 파일 선택·격리와 손상 복구 정책: `OD-PLAT-001`
-
-P0 공개 계약과 이동 계약은 해결됐다. 위 P1과 모든 소비 스펙의 일치 검토가 끝나기 전에는 이 문서를 Approved로 전환하지 않는다.
+`OD-PLAT-001`은 해결됐다. `OD-ART-001`, `OD-SCENE-001`과 모든 소비 스펙의 Luna 일치 검토가 끝나기 전에는 이 문서를 Approved로 전환하지 않는다.

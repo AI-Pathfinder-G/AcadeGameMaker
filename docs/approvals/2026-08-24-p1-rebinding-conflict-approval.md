@@ -19,4 +19,4 @@
 
 ## Remaining boundary
 
-binding override를 포함한 저장 schema·경로와 원자 저장은 후속 승인으로 확정됐다. 시작 시 손상 복구를 확정하기 전에는 `OD-PLAT-001`을 해결 처리하지 않는다.
+binding override를 포함한 저장 schema·경로·원자 저장·시작 복구는 후속 승인으로 확정됐으며 `OD-PLAT-001`은 해결됐다.

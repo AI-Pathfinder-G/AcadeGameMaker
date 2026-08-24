@@ -96,7 +96,7 @@
 
 ## Verification
 
-60Hz PlayMode 입력 재생과 tick별 위치·속도·상태 로그, 방별 수동 완주 영상으로 검증한다. 모든 수치 AC는 동일 입력 기록 3회에서 측정하며, 실제 기기 binding은 `OD-PLAT-001`에서 고정한다.
+60Hz PlayMode 입력 재생과 tick별 위치·속도·상태 로그, 방별 수동 완주 영상으로 검증한다. 모든 수치 AC는 동일 입력 기록 3회에서 측정하며, 실제 기기 binding은 VD-07·VD-09의 해결된 입력 계약을 따른다.
 
 ## Traceability
 

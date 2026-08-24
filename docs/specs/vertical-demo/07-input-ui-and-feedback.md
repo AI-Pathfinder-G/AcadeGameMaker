@@ -141,7 +141,7 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 
 ## Verification
 
-package manifest·Player Settings·생성 wrapper·의미 입력 맵 정적 검사, 키보드·XInput 동등 동작 재생, 상태별 스크린 캡처, 고정 틱 입력 순서·잠금/복구 PlayMode 테스트, 짧은 이해도 관찰로 검증한다. runtime override 저장은 `OD-PLAT-001`, 조준 피드백의 정확한 시각 수치는 `OD-ART-001`에서 고정한다.
+package manifest·Player Settings·생성 wrapper·의미 입력 맵 정적 검사, 키보드·XInput 동등 동작 재생, 상태별 스크린 캡처, 고정 틱 입력 순서·잠금/복구 PlayMode 테스트, 짧은 이해도 관찰로 검증한다. runtime override 저장·복구는 VD-09의 해결된 플랫폼 계약을 따르며 조준 피드백의 정확한 시각 수치는 `OD-ART-001`에서 고정한다.
 
 ## Traceability
 

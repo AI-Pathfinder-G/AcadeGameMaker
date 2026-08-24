@@ -75,7 +75,7 @@
 
 ## Verification
 
-적 상태·DamageRequest 중복 제거 단위 테스트, 복수 충돌 PlayMode 테스트, scripted payload와 패턴 틱 스냅샷, 무게 전이 사용/미사용 보스 완주 영상을 남긴다. 선택 기술의 구체 바인딩은 VD-07과 `OD-PLAT-001`을 따른다.
+적 상태·DamageRequest 중복 제거 단위 테스트, 복수 충돌 PlayMode 테스트, scripted payload와 패턴 틱 스냅샷, 무게 전이 사용/미사용 보스 완주 영상을 남긴다. 선택 기술의 구체 바인딩은 VD-07의 해결된 입력 계약을 따른다.
 
 ## Traceability
 

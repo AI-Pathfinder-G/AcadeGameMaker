@@ -27,4 +27,4 @@
 
 ## Remaining boundary
 
-reticle의 정확한 기본/포착 크기, 상태색의 RGB·발광 강도, 점멸·보간 방식은 `OD-ART-001`에서 고정한다. runtime binding override, 저장 schema·경로와 원자 저장은 후속 승인으로 확정됐으며 시작 시 손상 복구를 확정하기 전에는 `OD-PLAT-001`을 해결 처리하지 않는다.
+reticle의 정확한 기본/포착 크기, 상태색의 RGB·발광 강도, 점멸·보간 방식은 `OD-ART-001`에서 고정한다. runtime binding override, 저장 schema·경로·원자 저장·시작 복구는 후속 승인으로 확정됐으며 `OD-PLAT-001`은 해결됐다.

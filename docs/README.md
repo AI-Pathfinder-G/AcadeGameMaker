@@ -27,6 +27,8 @@
 - [2026-08-24 P1 입력 재지정 충돌 정책 승인 기록](./approvals/2026-08-24-p1-rebinding-conflict-approval.md)
 - [2026-08-24 P1 단일 프로필 저장 스키마 승인 기록](./approvals/2026-08-24-p1-profile-schema-approval.md)
 - [2026-08-24 P1 프로필 원자 저장 순서 승인 기록](./approvals/2026-08-24-p1-profile-atomic-write-approval.md)
+- [2026-08-24 P1 프로필 로드 복구 승인 기록](./approvals/2026-08-24-p1-profile-load-recovery-approval.md)
+- [2026-08-24 OD-PLAT-001 Luna 독립 검토 — PASS](./verification/2026-08-24-od-plat-001-luna-review.md)
 
 ## 단일 진실원천
 
