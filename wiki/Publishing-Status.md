@@ -6,6 +6,7 @@
 - Visibility: Public
 - Default branch: `main`
 - Initial documentation revision: `5b8d090`
+- Latest narrative documentation revision: `7fb211f`
 - Wiki package: `wiki/`
 - Entry page: `Home.md`
 - Navigation: `_Sidebar.md`
@@ -17,8 +18,9 @@
 - Wiki: [AcadeGameMaker Wiki](https://github.com/AI-Pathfinder-G/AcadeGameMaker/wiki)
 - Status: Published
 - Initial full-package revision: `ca9953376a47d6aa3690d8675004440f96573e63`
-- Published pages: 11 reader pages and `_Sidebar.md`
-- Verified: Home rendering, sidebar registration, page routes, and authoritative source links
+- Character-first narrative package revision: `1a0c76b48dde2e2c94b4a88b81cd6ae03a178d6e`
+- Published pages: 13 reader pages and `_Sidebar.md`
+- Verified: Git push success, 13 reader-page file count, local Markdown links, Wiki-style page targets, and authoritative source links
 - Checked: 2026-08-24 (Asia/Seoul)
 
 Wiki는 권위 문서가 아니라 발행·탐색 계층이다. 충돌 시 `CONTEXT.md`, `docs/canon/`, 현재 ADR, Approved 스펙 순으로 원본을 따른다.
