@@ -42,6 +42,8 @@
 
 유효한 선택 기술이 실행되면 같은 틱의 전이 입력을 소비한다. 선택 기술이 실패하면 전이 입력은 계속 처리한다.
 
+실제 기기 입력은 Input System 1.20.0의 단일 `GameInput.inputactions`와 생성 C# wrapper를 통해 VD-07 `InputRouter`에만 들어온다. callback은 의미 명령 버퍼에 기록하고 다음 `SimulationTick`에서 위 순서로 한 번 소비한다. map은 `Gameplay`와 `UI`뿐이며 `InputMode` 전환만 map 활성 상태를 바꾼다.
+
 ## Public contracts
 
 ### Transfer target descriptor
@@ -174,7 +176,7 @@ UI는 모드와 권위 상태를 표현할 뿐 선택, 체력, 전이, 런 결�
 
 ## Remaining approval blockers
 
-- 승인된 기기 범위의 실제 binding과 Input System action map: `OD-PLAT-001`
+- `Gameplay`/`UI`의 실제 action·binding·override 정책: `OD-PLAT-001`
 - 저장 schema version, JSON 필드, 손상 복구 정책: `OD-PLAT-001`
 
 P0 공개 계약과 이동 계약은 해결됐다. 위 P1과 모든 소비 스펙의 일치 검토가 끝나기 전에는 이 문서를 Approved로 전환하지 않는다.

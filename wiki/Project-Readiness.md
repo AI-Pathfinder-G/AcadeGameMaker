@@ -35,5 +35,6 @@ Sol이 `OD-PLAT-001`, `OD-ART-001`, `OD-SCENE-001`을 통합 결정하고 Luna �
 - Unity 계정 로그인 완료를 사용자가 보고함; Personal 라이선스 활성 상태의 기계 검증은 별도 확인
 - Sol P0 통합안 사용자 승인 완료, ADR-0018과 규범 스펙에 반영
 - P1 균형 정밀 이동 계약 사용자 승인 완료, VD-01·VD-04에 반영
+- P1 Input System 1.20.0 단독·InputRouter·Gameplay/UI map 구조 사용자 승인 완료
 
 > 권위 문서: [본격 개발 착수 전 준비도 점검](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/project-readiness-audit-2026-08-24.md)

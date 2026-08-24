@@ -15,6 +15,7 @@
 | ADR-0015 | Sol/Terra/Luna 역할과 승인 경계 | `docs/specs/README.md`의 상태 게이트와 작업 계약 필수 필드 | 모든 AC 증적에 Luna 판정, Sol 통합 승인 기록 |
 | ADR-0018 | P0 무게 전이·방·런·선택·기술·전투를 하나의 공동장부 원정 계약으로 통합 | REQ-SCOPE-003, REQ-MOV-004, REQ-WT-001~007, REQ-COM-001~006, REQ-ROOM-001~006, REQ-RUN-001~006, REQ-CHOICE-001~007, REQ-UX-001~005, REQ-PLAT-006 | AC-SCOPE-004, AC-MOV-002, AC-WT-001~005, AC-COM-001~004, AC-ROOM-001~005, AC-RUN-001~004, AC-CHOICE-001~004, AC-UX-001~004, AC-PLAT-004 |
 | [2026-08-24 P1 movement approval](../../approvals/2026-08-24-p1-movement-approval.md) | 균형 정밀 이동 수치와 검수 허용오차 | REQ-MOV-006~010, REQ-ROOM-007 | AC-MOV-004~006, AC-ROOM-006 |
+| [2026-08-24 P1 input architecture approval](../../approvals/2026-08-24-p1-input-architecture-approval.md) | Input System 1.20.0 단독, 생성 wrapper, InputRouter, Gameplay/UI map | REQ-UX-006, REQ-PLAT-007 | AC-UX-005, AC-PLAT-005 |
 
 ## Requirement coverage
 
@@ -27,8 +28,8 @@
 | VD-04 | REQ-ROOM-001~007 | AC-ROOM-001~006 | Review — P0 and traversal contract resolved; Luna review pending |
 | VD-05 | REQ-RUN-001~006 | AC-RUN-001~004 | Review — P0 resolved; persistence schema waits on OD-PLAT-001 |
 | VD-06 | REQ-CHOICE-001~007 | AC-CHOICE-001~004 | Review — P0 resolved; scene detail waits on OD-SCENE-001 |
-| VD-07 | REQ-UX-001~005 | AC-UX-001~004; REQ-UX-001은 입력 맵 정적 검사 | Review — P0 resolved; device binding waits on OD-PLAT-001 |
+| VD-07 | REQ-UX-001~006 | AC-UX-001~005; REQ-UX-001은 입력 맵 정적 검사 | Review — input architecture fixed; action/binding waits on OD-PLAT-001 |
 | VD-08 | REQ-ART-001~007 | AC-ART-001~004 | Review — acquisition allowed; import blocked by OD-ART-001 |
-| VD-09 | REQ-PLAT-001~006 | AC-PLAT-001~004 | Draft — P0 persistence boundary fixed; OD-PLAT-001 remains |
+| VD-09 | REQ-PLAT-001~007 | AC-PLAT-001~005 | Draft — input architecture and P0 persistence boundary fixed; OD-PLAT-001 remains |
 
 모든 REQ는 구현 작업 계약과 코드 변경에, 모든 AC는 자동 테스트 또는 수동 검수 증적에 역참조되어야 한다.

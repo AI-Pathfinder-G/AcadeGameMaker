@@ -18,9 +18,11 @@
 
 이동·전투·무게 전이·상호작용의 의미 기반 입력과 플레이어가 현재 상태·실패 이유·선택 결과를 이해하는 최소 피드백을 정의한다. 키보드와 XInput 게임패드를 모두 지원하고 마우스는 UI·조준에 사용할 수 있으며, 구체 action map과 실제 바인딩은 플랫폼 계약에 둔다.
 
+입력 계층은 `com.unity.inputsystem` 1.20.0만 사용한다. 단일 `GameInput.inputactions`에서 생성한 C# wrapper를 `InputRouter`가 직접 구독하며 `PlayerInput.SendMessage`, 구형 Input Manager와 `Both` 모드는 사용하지 않는다. action map은 `Gameplay`와 `UI` 두 개뿐이다.
+
 ### Inputs
 
-의미 액션 `Aim`, `Transfer`, `ChoiceSkill`, 이동·공격·상호작용, 전이·런·선택·입력 모드 사건, 실패 이유와 피드백 제한 틱.
+`InputRouter`가 버퍼링한 의미 액션 `Aim`, `Transfer`, `ChoiceSkill`, 이동·공격·상호작용, 전이·런·선택·입력 모드 사건, 실패 이유와 피드백 제한 틱.
 
 ### Outputs
 
@@ -28,12 +30,15 @@
 
 ### Owned state
 
-권위 입력 모드 gate, 피드백 표시와 중복 억제를 소유한다. 전이·체력·선택·런의 게임플레이 권위 상태, 기기 바인딩, 저장 필드는 소유하지 않는다.
+`InputRouter`, 권위 입력 모드 gate, `Gameplay`/`UI` map 활성 상태, 피드백 표시와 중복 억제를 소유한다. 전이·체력·선택·런의 게임플레이 권위 상태, 사용자 binding override와 저장 필드는 소유하지 않는다.
 
 ### Invariants
 
 - `GameplayEnabled`, `UIOnly`, `Cutscene`, `Transition`, `Ended`의 모드에 따라 입력 표현과 허용 상태를 일관되게 갱신한다.
 - 같은 틱의 유효 `ChoiceSkill`과 `Transfer`는 ChoiceSkill을 먼저 처리한다. 수탈 성공은 Transfer를 소비하고, 연대 성공은 Transfer를 무시하며, 실패한 ChoiceSkill은 Transfer를 막지 않는다.
+- 실제 기기 callback은 gameplay state를 직접 변경하지 않고 의미 명령을 버퍼에 기록하며, 각 명령은 다음 `SimulationTick`에서 최대 한 번 소비된다.
+- map 전환은 `InputMode` 소유 경로만 수행한다. 장면·기능 코드는 개별 action 또는 map을 임의로 enable/disable하지 않는다.
+- 기기 연결·분리와 마지막 사용 control scheme 변화는 표시용 상태만 바꾸며 시뮬레이션 결과를 바꾸지 않는다.
 
 ## Requirements
 
@@ -42,6 +47,7 @@
 - **REQ-UX-003:** 체력/실패 위험, 원정 결과, 선택 결과, 새 기술을 플레이 진행을 멈추지 않고 확인할 수 있어야 한다.
 - **REQ-UX-004:** 컷신·메뉴·장면 전환의 입력 잠금과 복구가 일관되어야 한다.
 - **REQ-UX-005:** 전이 후보·활성·회수·차단·쿨다운과 `NoActiveTransfer`, `Cooldown`, `InputLocked`, `InvalidTarget` 실패 이유를 서로 구분해 표시해야 한다.
+- **REQ-UX-006:** Input System 1.20.0의 생성 C# wrapper와 단일 `InputRouter`를 사용해 `Gameplay`/`UI` 두 map의 callback을 다음 60Hz tick 의미 명령으로 한 번만 변환해야 한다.
 
 ## Acceptance criteria
 
@@ -69,9 +75,15 @@
 - **When** 같은 틱의 ChoiceSkill·Transfer 또는 잠긴 상태의 ChoiceSkill을 입력하면
 - **Then** 성공 수탈은 전이를 한 번 회수하고 성공 연대는 유지하며, 실패한 ChoiceSkill은 Transfer를 허용하고 잠긴 상태는 `InputLocked` 피드백만 보인다.
 
+### AC-UX-005 — 입력 구조와 단일 소비
+
+- **Given** Input System package·Player Settings·`GameInput.inputactions`·생성 wrapper와 입력 기록이 있고
+- **When** 정적 계약 검사와 같은 callback 기록의 PlayMode 재생을 수행하면
+- **Then** package는 1.20.0, Active Input Handling은 Input System only, map은 `Gameplay`/`UI`뿐이고 `PlayerInput.SendMessage`·구형 Input Manager 참조가 없으며 각 의미 명령은 다음 SimulationTick에서 정확히 한 번 소비된다.
+
 ## Verification
 
-의미 입력 맵 정적 검사, 키보드·XInput 동등 동작 재생, 상태별 스크린 캡처, 고정 틱 입력 순서·잠금/복구 PlayMode 테스트, 짧은 이해도 관찰로 검증한다. 실제 바인딩은 `OD-PLAT-001`에서 고정한다.
+package manifest·Player Settings·생성 wrapper·의미 입력 맵 정적 검사, 키보드·XInput 동등 동작 재생, 상태별 스크린 캡처, 고정 틱 입력 순서·잠금/복구 PlayMode 테스트, 짧은 이해도 관찰로 검증한다. 실제 action 목록·바인딩과 override 저장은 `OD-PLAT-001`에서 고정한다.
 
 ## Traceability
 

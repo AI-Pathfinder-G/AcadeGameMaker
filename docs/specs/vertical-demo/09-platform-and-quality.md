@@ -44,6 +44,7 @@ Unity 전역 설정, 패키지 잠금, 입력·표시·성능 기준, 버전 저
 - **REQ-PLAT-004:** 개발 경고를 제외한 처리되지 않은 예외와 누락 참조 없이 기준 경로를 완주한다.
 - **REQ-PLAT-005:** 편집기와 Windows 빌드에서 같은 게임플레이 결과와 상태 전이를 재현한다.
 - **REQ-PLAT-006:** 활성 런은 저장하거나 재개하지 않고, 설정·입력 바인딩·튜토리얼 확인과 확정된 선택·해금 기술·완료 분기만 각 승인 시점에 원자 저장한다.
+- **REQ-PLAT-007:** `com.unity.inputsystem` 1.20.0을 고정하고 Active Input Handling은 Input System Package (New)만 사용하며 구형 Input Manager와 Both 모드를 금지한다.
 
 ## Acceptance criteria
 
@@ -71,9 +72,15 @@ Unity 전역 설정, 패키지 잠금, 입력·표시·성능 기준, 버전 저
 - **When** 앱을 종료한 뒤 다시 시작하면
 - **Then** 활성 런 상태는 복원되지 않고 거점의 새 원정 상태가 되며 승인 시점까지 확정된 프로필 상태만 복원된다.
 
+### AC-PLAT-005 — 입력 패키지 고정
+
+- **Given** 프로젝트 manifest, packages lock과 Player Settings가 있고
+- **When** 입력 의존성과 Active Input Handling을 검사하면
+- **Then** `com.unity.inputsystem`은 정확히 1.20.0이고 신규 Input System만 활성화되며 레거시 입력 API 의존성이 없다.
+
 ## Verification
 
-프로젝트 설정 스냅샷, 빌드 로그, 성능 캡처, 저장 호환성 테스트로 검증한다. 제품 기준은 사용자 승인으로 확정됐지만 Input System 패키지·action map·실제 바인딩과 구체 저장 스키마는 `OD-PLAT-001` 해결 전까지 미승인이다.
+프로젝트 설정 스냅샷, package lock, 빌드 로그, 성능 캡처, 저장 호환성 테스트로 검증한다. Input System 패키지와 map 수는 확정됐지만 실제 action·바인딩·override 정책과 구체 저장 스키마는 `OD-PLAT-001` 해결 전까지 미승인이다.
 
 ## Traceability
 

@@ -19,3 +19,5 @@
 **권위 문서:** [스펙 운영 규칙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/README.md), [열린 결정](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/OPEN-DECISIONS.md)
 
 P0 여섯 항목과 P1 이동 계약은 해결됐다. `Approved` 전환에는 남은 P1 세 항목, 소비 스펙 간 계약 일치, Luna 독립 검토가 필요하다.
+
+플랫폼 P1에서는 Input System 1.20.0 단독, 생성 C# wrapper, 단일 InputRouter와 Gameplay/UI 두 map 구조가 부분 확정됐다. 실제 action·binding과 저장 계약은 아직 열려 있다.
