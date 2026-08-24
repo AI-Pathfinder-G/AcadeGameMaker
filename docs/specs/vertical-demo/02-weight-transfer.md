@@ -20,7 +20,7 @@
 
 ### Inputs
 
-`Transfer` 시도, 마우스 포인터 또는 게임패드 오른쪽 스틱의 조준 의도, 후보 대상의 저작 `TransferTargetId`와 기본 보정값, 대상 유효성, 방/원정/컷신 생명주기 사건.
+`TransferPressed`, 최신 `AimSample`, 후보 대상의 저작 `TransferTargetId`·`TargetAimShape`·기본 보정값, 대상 유효성, 시뮬레이션 카메라 pose, 방/원정/컷신 생명주기 사건.
 
 ### Outputs
 
@@ -28,7 +28,7 @@
 
 ### Owned state
 
-활성 대상 ID 하나, 전이 쿨다운 종료 틱, 피드백 제한 종료 틱, 주인공과 대상에 합성한 전이 modifier, 후보 판정 결과를 소유한다. 대상의 체력, 방 순서, 기본 mass/gravityScale/AI 상태는 소유하지 않는다.
+활성 대상 ID 하나, 현재 강조 대상 ID, 전이 쿨다운 종료 틱, 피드백 제한 종료 틱, 주인공과 대상에 합성한 전이 modifier, 후보 판정 결과를 소유한다. 대상의 체력, 방 순서, 기본 mass/gravityScale/AI 상태는 소유하지 않는다.
 
 ### Invariants
 
@@ -37,8 +37,12 @@
 - 회수, 대상 제거, 방 종료, 원정 실패 후에는 고아 전이 상태가 남지 않는다.
 - 후반 기능인 중력 방향 변경은 수직 데모에서 제외한다.
 - 입력은 프레임에서 수집하고 다음 FixedUpdate에서 한 번만 원자 적용한다. 성공한 전이·회수 뒤 21 고정 틱 동안 상태를 바꾸지 않는다.
-- 후보는 플레이어에서 6.0 월드 유닛 안이고 대상 중심점 기준 `TransferLineOfSight` 지형 레이어에 가려지지 않으며 trigger가 아닌 대상이다.
-- 마우스·오른쪽 스틱 조준이 같은 의미 후보를 만들고 바라보는 방향 fallback과 50도 원뿔은 사용하지 않는다. 정확한 보정 반경·후보 정렬·스틱 조준 유지 계약은 `OD-PLAT-001`에서 고정한다.
+- `playerDistanceKey=Round(distanceSquared ×1000, AwayFromZero)`가 36000 이하인 대상만 `≤6.0u` 후보로 인정한다. player transfer origin에서 aim point까지 `TransferLineOfSight` mask linecast가 target 이전 또는 같은 경계에서 하나라도 맞으면 차단이며 target 자체 collider는 이 mask에 포함하지 않는다. trigger 대상은 후보가 아니다.
+- 마우스는 정수 screen pixel과 `cameraPoseTick=sampleTick-1`의 확정 simulation camera pose를 사용한다. 포인터가 투영된 `TargetAimShape` 안에 있거나 1920×1080 기준 aim point의 `screenDistanceSquaredKey=Round(distancePixelsSquared, AwayFromZero)`가 576 이하인 대상만 24px 포함 후보로 삼고 `insideRank(inside=0, outside=1) → screenDistanceSquaredKey → playerDistanceKey → TransferTargetId`로 정렬한다.
+- 게임패드는 원본 `magnitude² ≥0.04`인 오른쪽 스틱으로 마지막 유효 `aimVectorQ4096`을 갱신하고 스틱을 놓아도 유지한다. `angleKey=Round(angleDegrees ×10, AwayFromZero)`가 180 이하인 후보를 `angleKey → playerDistanceKey → TransferTargetId`로 정렬한다.
+- 현재 강조된 gamepad 대상은 `angleKey≤260`, `playerDistanceKey≤36000`, 열린 LOS에서 유지한다. 새 최상 후보는 `newAngleKey + 40 ≤ currentAngleKey`일 때만 현재 대상을 교체한다.
+- 마우스의 player-to-world pointer `distanceSquared ≥0.0025`일 때 새 aim을 만들고 미만이면 마지막 유효 조준을 유지한다. 정규화 성분은 `Clamp(Round(component×4096, AwayFromZero),-4096,4096)`로 양자화하며 `(0,0)`은 invalid다. 유효 조준 이력이 없으면 바라보는 방향으로 대체하지 않고 `InvalidTarget`이다.
+- aim sample과 강조 대상은 방 이탈, 컷신, 실패, 데모 종료에서 초기화한다. 활성 전이 중 `Transfer`는 후보를 다시 계산하지 않고 즉시 회수한다.
 - 기본 물리값은 대상 소유 시스템이 제공하고, 이 시스템은 가역 modifier만 합성·제거한다. 제거된 대상에는 복원을 시도하지 않고 참조와 효과만 정리한다.
 
 ## Requirements
@@ -50,6 +54,7 @@
 - **REQ-WT-005:** 생명주기 경계에서 전이 상태를 결정적으로 정리한다.
 - **REQ-WT-006:** 전이 대상 선택, 적용, 회수와 실패는 고정 틱·저작 ID·명시된 시야 규칙에 따라 재현 가능해야 한다.
 - **REQ-WT-007:** 전이는 주인공 `gravityScale ×0.65`, 공중 가속 ×1.25, 최대 낙하 속도 ×0.70과 상자 `mass ×3.0`·`gravityScale ×2.0`·충돌 피해 배율 ×1.5, 일반 적 `gravityScale ×2.2`·이동 속도 ×0.75·공중 제어 ×0.35·넉백 저항 ×2.0의 modifier를 적용한다.
+- **REQ-WT-008:** 마우스 직접 포인터·24px 보정과 게임패드 18도 획득·26도 유지·4도 교체 히스테리시스는 확정 simulation camera·양자화 key·안정 ID로 같은 입력에서 같은 대상을 골라야 한다.
 
 ## Acceptance criteria
 
@@ -83,9 +88,15 @@
 - **When** 같은 조준·`Transfer` 입력 기록을 재생하면
 - **Then** 같은 `TransferTargetId`가 선택되고 21틱 쿨다운·가역 modifier·`TransferStateChanged`가 일치하며, 상자의 피해 계산은 mass가 아니라 `ImpactDamageMultiplier`를 사용한다.
 
+### AC-WT-006 — 포인터·스틱 보정 경계
+
+- **Given** 5.999/6.000/6.001u·LOS boundary, aim shape 내외, 23/24/25px 포인터, 17.9/18.0/18.1도 신규 gamepad 후보, 25.9/26.0/26.1도 현재 후보와 3.9/4.0/4.1도 우위 후보가 있는 60Hz 검수 장면이 있고
+- **When** 같은 mouse/stick script를 세 번 재생하면
+- **Then** 24px·18도·26도·4도 포함 경계에 따라 같은 target ID와 강조 전이가 exact match하고 6유닛·LOS 밖 후보 및 aim 이력 없는 입력은 `InvalidTarget`이며 활성 전이는 조준과 무관하게 회수된다.
+
 ## Verification
 
-상태 전이 단위 테스트, 후보 정렬·LOS·고정 틱 테스트, 상자·적·scripted handle PlayMode 테스트, 방 전환/실패 회귀 테스트로 검증한다. 이동의 최종 속도·점프·대시 허용오차는 [VD-01](./01-player-movement.md)을 따른다.
+상태 전이 단위 테스트, 포인터·스틱 후보 정렬·LOS·고정 틱·히스테리시스 테스트, 30/60/144 render FPS에서 같은 60Hz aim replay, 상자·적·scripted handle PlayMode 테스트, 방 전환/실패 회귀 테스트로 검증한다. 이동의 최종 속도·점프·대시 허용오차는 [VD-01](./01-player-movement.md)을 따른다.
 
 ## Traceability
 

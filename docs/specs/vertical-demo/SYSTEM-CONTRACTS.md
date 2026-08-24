@@ -26,7 +26,7 @@
 | Seed, immutable room plan, socket plan, current room | VD-04 Expedition assembly | Run, combat, UI, verification | Player physics, choice |
 | Run phase, run result, failure/return transaction | VD-05 Failure and persistence | Combat, UI, verification | Player physics, skill effect |
 | Confirmed choice, consent result, granted skill, skill cooldown | VD-06 Choice | Combat, movement, UI, persistence | Run phase, health |
-| Input mode and presentation state | VD-07 Input/UI | all command producers | Authoritative gameplay state |
+| Input mode, aim camera snapshot and presentation state | VD-07 Input/UI | all command producers, weight transfer | Authoritative gameplay state |
 | Versioned persistent snapshot and atomic file transaction | VD-09 Persistence adapter | VD-04 seed selection, VD-05 restore, VD-06 choice | Live scene objects, active transfer |
 
 소비자는 원본 상태를 직접 수정하지 않고 아래 명령 또는 사건만 사용한다.
@@ -55,6 +55,8 @@
 | `targetId` | 저작된 고유 ordinal 문자열 |
 | `kind` | `Box`, `Enemy`, `BossPayload` |
 | `aimPoint` | 후보 검색용 대상 중심점; VD-02가 1/100 unit로 양자화해 판정 |
+| `aimShapeCenter` | 직접 포인터 hit 검사용 저작 local-space 중심; 1/100 unit |
+| `aimShapeHalfExtents` | 직접 포인터 hit 검사용 저작 local-space 타원 반지름; 각 축 1/100 unit |
 | `baseModifierProfileId` | 대상 소유 시스템이 제공하는 불변 기준 mass/gravity/AI 프로필 ID |
 | `isAvailable` | 제거·사망·비노출 중에는 false |
 
@@ -62,9 +64,17 @@
 
 ### Transfer commands and events
 
-- `TransferPressed(aimVector, hasAimInput, tick)` — VD-07 발행, VD-02 소비
+- `SimulationCameraPoseSnapshot(cameraPoseTick, positionQ100, orthoSizeQ1000, rotationQ10, viewportWidth, viewportHeight)` — VD-07 발행
+- `AimSample(sampleId, source, screenPixel|null, aimVectorQ4096, cameraPoseTick, sampleTick)` — VD-07 발행
+- `TransferPressed(aimSampleId|null, tick)` — VD-07 발행, VD-02 소비
 - `TransferStateChanged(targetId, playerModifierId, targetModifierId, tick)` — VD-02 발행
 - `TransferCleared(reason, previousTargetId, tick)` — VD-02 발행
+
+`source`는 `MousePointer`, `GamepadStick`; `screenPixel`은 마우스일 때 1920×1080 기준 정수 픽셀이고 gamepad에는 null이다. `sampleTick`은 AimSample을 생성해 소비하는 SimulationTick이며 `cameraPoseTick=sampleTick-1`은 직전 완료 tick의 유일한 pose snapshot을 가리킨다. render smoothing camera는 aim 변환에 사용하지 않는다.
+
+`aimVectorQ4096`은 입력 벡터를 정규화한 뒤 각 성분을 `Clamp(Round(component ×4096, AwayFromZero), -4096, 4096)`로 만든 정수 pair다. 양자화 결과가 `(0,0)`이면 invalid다. gamepad 원본 magnitude는 제곱값으로 비교하며 `magnitude² ≥0.04`일 때만 새 sample이다. 유효 조준이 한 번도 없으면 `aimSampleId`는 null이며 전이는 `InvalidTarget`이다.
+
+gamepad `angleKey`는 원시 stick 값이 아니라 `aimVectorQ4096`을 dequantize한 방향과 player-to-aimPoint 방향 사이의 각도를 사용한다.
 
 `reason`은 `ManualRecall`, `TargetRemoved`, `RoomLeaving`, `RunFailed`, `Cutscene`, `DemoCompleted` 중 하나다. 정리는 idempotent하며 이미 제거된 대상에는 원본 복원을 요청하지 않고 modifier·참조·표현 상태만 제거한다.
 
@@ -176,7 +186,7 @@ UI는 모드와 권위 상태를 표현할 뿐 선택, 체력, 전이, 런 결�
 
 ## Remaining approval blockers
 
-- `Gameplay`/`UI`의 실제 action·binding·override 정책: `OD-PLAT-001`
+- `UI` action·binding과 runtime override·충돌 정책: `OD-PLAT-001`
 - 저장 schema version, JSON 필드, 손상 복구 정책: `OD-PLAT-001`
 
 P0 공개 계약과 이동 계약은 해결됐다. 위 P1과 모든 소비 스펙의 일치 검토가 끝나기 전에는 이 문서를 Approved로 전환하지 않는다.

@@ -35,10 +35,11 @@
 
 ## Determinism script
 
-1. 같은 후보 세트와 입력 벡터를 두 번 재생해 angle, distance, target ID 순서로 같은 대상이 선택되는지 확인한다. (`AC-WT-005`)
+1. 같은 mouse/stick script를 세 번 재생해 24px pointer 경계, 18도 획득·26도 유지·4도 교체, 거리·target ID tie-break에서 같은 대상이 선택되는지 확인한다. (`AC-WT-005`, `AC-WT-006`)
 2. 신규 프로필에서 자동 원정을 연속 시작해 `101 → 303 → 202 → 404` 순환과 각 snapshot hash를 비교한다. (`AC-ROOM-005`)
 3. 같은 시드·입력 기록으로 적과 오르단의 패턴 틱을 재생해 동일한 사건 순서를 확인한다. (`AC-COM-004`)
 4. 선택 기술과 전이 입력을 같은 틱에 넣어 기술 성공 시 전이 입력 소비, 기술 실패 시 전이 처리 계속을 확인한다. (`AC-UX-004`)
+5. 같은 조준 기록을 30/60/144 render FPS에서 재생해 Q4096 AimSample과 선택 target ID·tick이 일치하는지 확인한다. (`AC-UX-007`)
 
 ## Evidence manifest
 

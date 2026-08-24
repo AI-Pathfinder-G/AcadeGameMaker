@@ -24,7 +24,7 @@ Gameplay는 `포인터 조준형 횡스크롤 액션`을 따른다. 키보드·�
 
 ### Inputs
 
-`InputRouter`가 버퍼링한 의미 액션 `Aim`, `Transfer`, `ChoiceSkill`, 이동·공격·상호작용, 전이·런·선택·입력 모드 사건, 실패 이유와 피드백 제한 틱.
+`InputRouter`가 버퍼링한 `AimSample`, `Transfer`, `ChoiceSkill`, 이동·공격·상호작용, 전이·런·선택·입력 모드 사건, 실패 이유와 피드백 제한 틱.
 
 ### Outputs
 
@@ -42,6 +42,8 @@ Gameplay는 `포인터 조준형 횡스크롤 액션`을 따른다. 키보드·�
 - map 전환은 `InputMode` 소유 경로만 수행한다. 장면·기능 코드는 개별 action 또는 map을 임의로 enable/disable하지 않는다.
 - 기기 연결·분리와 마지막 사용 control scheme 변화는 표시용 상태만 바꾸며 시뮬레이션 결과를 바꾸지 않는다.
 - 기본 공격과 전이는 같은 포인터·스틱 조준 의도를 사용한다. 선택 기술은 현재 활성 전이 대상을 사용하므로 별도 조준을 요구하지 않는다.
+- 마우스는 마지막 정수 screen pixel을 보관하고 다음 SimulationTick 시작에 직전 완료 tick의 `SimulationCameraPoseSnapshot`으로 변환한다. gamepad stick과 변환된 mouse 방향은 정규화 뒤 각 성분을 `Round(component×4096, AwayFromZero)`하고 -4096~4096으로 clamp한다.
+- Gameplay에서 mouse cursor와 조준 reticle은 표시한다. UIOnly·Cutscene·Transition·Ended 전환은 gameplay command buffer와 이전 press edge를 제거하며, gamepad 오른쪽 스틱은 OS cursor를 움직이지 않는다.
 
 ## Requirements
 
@@ -52,6 +54,7 @@ Gameplay는 `포인터 조준형 횡스크롤 액션`을 따른다. 키보드·�
 - **REQ-UX-005:** 전이 후보·활성·회수·차단·쿨다운과 `NoActiveTransfer`, `Cooldown`, `InputLocked`, `InvalidTarget` 실패 이유를 서로 구분해 표시해야 한다.
 - **REQ-UX-006:** Input System 1.20.0의 생성 C# wrapper와 단일 `InputRouter`를 사용해 `Gameplay`/`UI` 두 map의 callback을 다음 60Hz tick 의미 명령으로 한 번만 변환해야 한다.
 - **REQ-UX-007:** Gameplay는 승인된 키보드·마우스와 XInput 역할 배치를 사용하고 JKL 전투·클릭 이동 없이 포인터·오른쪽 스틱 조준을 공격과 전이에 공통 적용해야 한다.
+- **REQ-UX-008:** `InputRouter`는 정수 mouse pixel 또는 `magnitude²≥0.04`의 오른쪽 스틱과 직전 `SimulationCameraPoseSnapshot`을 Q4096 `AimSample`로 만들어 다음 SimulationTick에 한 번 제공하고, 모드·생명주기 경계에서 aim·press buffer를 결정적으로 정리해야 한다.
 
 ## Acceptance criteria
 
@@ -91,9 +94,15 @@ Gameplay는 `포인터 조준형 횡스크롤 액션`을 따른다. 키보드·�
 - **When** 이동 중 공격·전이·선택 기술을 각 control scheme으로 실행하면
 - **Then** 키보드·마우스는 왼손 이동·플랫폼 조작과 오른손 조준·전투로 분리되고 게임패드는 두 스틱·trigger/bumper로 같은 의미 결과를 내며 JKL 전투와 클릭 이동 binding이 없다.
 
+### AC-UX-007 — 조준 샘플과 카메라 독립성
+
+- **Given** 같은 mouse pixel·stick script와 같은 simulation camera 기록이 있고
+- **When** 30/60/144 render FPS에서 각각 재생하면
+- **Then** 매 tick의 cameraPoseTick, `AimSample` source·screenPixel·Q4096 vector와 소비 tick이 exact match하며 `(0,0)` sample이 없고 mode 전환 이전 press가 Gameplay 복귀 뒤 다시 발동하지 않는다.
+
 ## Verification
 
-package manifest·Player Settings·생성 wrapper·의미 입력 맵 정적 검사, 키보드·XInput 동등 동작 재생, 상태별 스크린 캡처, 고정 틱 입력 순서·잠금/복구 PlayMode 테스트, 짧은 이해도 관찰로 검증한다. 실제 action 목록·바인딩과 override 저장은 `OD-PLAT-001`에서 고정한다.
+package manifest·Player Settings·생성 wrapper·의미 입력 맵 정적 검사, 키보드·XInput 동등 동작 재생, 상태별 스크린 캡처, 고정 틱 입력 순서·잠금/복구 PlayMode 테스트, 짧은 이해도 관찰로 검증한다. `UI` action·binding과 runtime override 저장은 `OD-PLAT-001`에서 고정한다.
 
 ## Traceability
 

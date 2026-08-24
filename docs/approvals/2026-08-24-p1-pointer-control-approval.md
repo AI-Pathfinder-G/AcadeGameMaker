@@ -21,4 +21,4 @@
 
 ## Remaining boundary
 
-마우스 보정 반경·후보 정렬, 게임패드 보정·조준 유지, 카메라 변환 시점, no-target 처리, runtime binding override와 저장 계약은 후속 질문에서 확정한다.
+마우스·게임패드 타겟 판정은 후속 승인으로 확정됐다. runtime binding override와 저장 계약은 아직 열려 있다.

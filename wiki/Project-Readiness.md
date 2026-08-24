@@ -37,5 +37,6 @@ Sol이 `OD-PLAT-001`, `OD-ART-001`, `OD-SCENE-001`을 통합 결정하고 Luna �
 - P1 균형 정밀 이동 계약 사용자 승인 완료, VD-01·VD-04에 반영
 - P1 Input System 1.20.0 단독·InputRouter·Gameplay/UI map 구조 사용자 승인 완료
 - P1 포인터 조준형 횡스크롤 조작과 키보드·마우스/XInput 역할 배치 사용자 승인 완료
+- P1 마우스 24px 직접 포인터와 gamepad 18° 획득·26° 유지 타겟 판정 사용자 승인 완료
 
 > 권위 문서: [본격 개발 착수 전 준비도 점검](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/project-readiness-audit-2026-08-24.md)
