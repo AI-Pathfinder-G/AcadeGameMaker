@@ -28,4 +28,10 @@
 
 수탈은 활성 전이 대상에 피해와 경직을 주는 `압착 판결`, 연대는 플레이어만 밟는 임시 발판을 만드는 `공동 기준면`을 제공한다. 두 기술은 같은 봉쇄선을 통과할 수 있지만 타인의 주체성을 다루는 방식이 다르다.
 
+## Post-demo combat direction
+
+기존 pointer reticle과 함께 캐릭터 주변 조준 방향 쪽 180도 AimArc와 방향 화살표를 사용한다. 차지량은 화살표 내부 shape fill로 표시한다. 후속 활 무기는 같은 중력 가속도 아래 차지별 초기 속도·거리·피해·경직이 달라지는 실제 곡사 탄도를 사용한다.
+
+히로인은 수직 데모 마지막 등장 이후 후속 챕터에서 자율 지원 사이드킥으로 해금된다. 조준 대상 유도 사격과 원정 시드 기반 지원 물품을 제공하되 플레이어의 핵심 전투와 선택을 대신하지 않는다.
+
 **권위 문서:** [게임 디자인 캐논](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/canon/game-design.md), [무게 전이 스펙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/02-weight-transfer.md), [방/원정 스펙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/04-authored-rooms-and-expedition.md)

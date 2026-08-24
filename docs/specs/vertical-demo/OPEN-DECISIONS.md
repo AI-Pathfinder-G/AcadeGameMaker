@@ -6,6 +6,7 @@ P0은 관련 스펙의 Approved 전환과 구현을 막는다. P1은 단위 구�
 
 | ID | Priority | Owner | Decision required | Blocks |
 |---|---|---|---|---|
+| OD-AIMARC-001 | P1 | Sol | 캐릭터 중심 반원·화살표·차지 fill의 exact geometry와 표시 생명주기 | VD-07, VD-08 |
 | OD-SCENE-001 | P1 | Sol | 중간보스→선택→히로인 장면의 정확한 성공 경로와 실패 시 히로인 노출 여부 | VD-00, VD-06 |
 
 ## Resolved

@@ -26,6 +26,15 @@
 - 후반 무게 전이의 중력 방향 조작
 - 출시, 콘솔 대응, 상용 운영
 
+## 수직 데모 이후 확장 방향
+
+- 히로인 유대도와 약속 기반 관계 진행
+- 후속 챕터의 히로인 자율 지원 사이드킥
+- 캐릭터 중심 AimArc와 shape-fill 차지 표시
+- 동일 중력 가속도와 차지별 초기 속도·거리·위력이 다른 활 곡사 탄도
+
+이 항목 중 수직 데모에는 AimArc 표현 계약만 후보로 포함한다. 히로인 사이드킥과 활 무기는 데모 이후 범위다.
+
 ## 근거
 
 [ADR-0001](../adr/0001-metered-gravity-city.md), [ADR-0003](../adr/0003-humanity-is-preserving-others-agency.md), [ADR-0005](../adr/0005-choices-grant-different-skill-families.md), [ADR-0007](../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0008](../adr/0008-assemble-authored-expedition-rooms.md), [ADR-0013](../adr/0013-fifteen-minute-vertical-slice.md), [ADR-0018](../adr/0018-vertical-demo-p0-integration.md), [ADR-0019](../adr/0019-pointer-aimed-sidescroller-controls.md)

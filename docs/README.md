@@ -41,6 +41,8 @@
 - [2026-08-24 P1 URP 2D 조명 승인 기록](./approvals/2026-08-24-p1-art-lighting-approval.md)
 - [2026-08-24 P1 조준기 exact values 승인 기록](./approvals/2026-08-24-p1-art-reticle-values-approval.md)
 - [2026-08-24 OD-ART-001 Luna 독립 검토 — PASS](./verification/2026-08-24-od-art-001-luna-review.md)
+- [ADR-0020 히로인 유대·사이드킥·진엔딩](./adr/0020-heroine-bond-sidekick-and-true-ending.md)
+- [ADR-0021 AimArc·차지 탄도](./adr/0021-character-aim-arc-and-charged-ballistics.md)
 - [독립 QA 마스터 플랜](./qa/qa-master-plan.md)
 - [Pre-Unity QA 아티팩트 작업 계약](./qa/pre-unity-qa-work-contract.md)
 - [2026-08-24 VD-11 Luna 독립 검증](./verification/2026-08-24-vd-11-luna-review.md)

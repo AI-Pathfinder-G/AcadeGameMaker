@@ -23,3 +23,5 @@ ADR은 쉽게 되돌리기 어렵고, 맥락 없이 보면 의외이며, 실제 
 | [0017](./0017-quarantine-assets-before-import.md) | accepted | 외부 에셋을 증적과 함께 격리 후 임포트 |
 | [0018](./0018-vertical-demo-p0-integration.md) | accepted | 공동장부 원정으로 수직 데모 P0 통합 |
 | [0019](./0019-pointer-aimed-sidescroller-controls.md) | accepted | 포인터 조준형 횡스크롤 조작 |
+| [0020](./0020-heroine-bond-sidekick-and-true-ending.md) | accepted | 히로인 유대·자율 지원·진엔딩 관계 축 |
+| [0021](./0021-character-aim-arc-and-charged-ballistics.md) | accepted | 캐릭터 중심 AimArc와 차지 탄도 |
