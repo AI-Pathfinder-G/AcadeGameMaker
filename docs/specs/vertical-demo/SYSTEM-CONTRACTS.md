@@ -70,13 +70,15 @@ runtime binding override는 keyboard Move composite와 Gameplay button, mouse At
 
 ### Transfer commands and events
 
-- `SimulationCameraPoseSnapshot(cameraPoseTick, positionQ100, orthoSizeQ1000, rotationQ10, viewportWidth, viewportHeight)` — VD-07 발행
-- `AimSample(sampleId, source, screenPixel|null, aimVectorQ4096, cameraPoseTick, sampleTick)` — VD-07 발행
+- `SimulationCameraPoseSnapshot(cameraPoseTick, positionQ100, orthoSizeQ1000, rotationQ10, viewportWidth, viewportHeight, gameplayRectX, gameplayRectY, gameplayRectWidth, gameplayRectHeight, integerScale)` — VD-07 발행
+- `AimSample(sampleId, source, screenPixel|null, aimVectorQ4096, isPointerInsideGameplayRect|null, cameraPoseTick, sampleTick)` — VD-07 발행
 - `TransferPressed(aimSampleId|null, tick)` — VD-07 발행, VD-02 소비
 - `TransferStateChanged(targetId, playerModifierId, targetModifierId, tick)` — VD-02 발행
 - `TransferCleared(reason, previousTargetId, tick)` — VD-02 발행
 
-`source`는 `MousePointer`, `GamepadStick`; `screenPixel`은 마우스 actual viewport pixel을 `Round(x×1920/viewportWidth, AwayFromZero)`, `Round(y×1080/viewportHeight, AwayFromZero)`로 변환한 1920×1080 normalized aim-grid 정수이고 gamepad에는 null이다. gameplay world의 logical render canvas는 640×360이며 output baseline 2560×1440에서 nearest-neighbor 4배 확대한다. 24 normalized aim pixels는 이 output에서 32 pixels다. `sampleTick`은 AimSample을 생성해 소비하는 SimulationTick이며 `cameraPoseTick=sampleTick-1`은 직전 완료 tick의 유일한 pose snapshot을 가리킨다. render smoothing camera는 aim 변환에 사용하지 않는다.
+`integerScale=floor(min(viewportWidth/640, viewportHeight/360))`이고 minimum은 1이다. `gameplayRectWidth=640×integerScale`, `gameplayRectHeight=360×integerScale`, `gameplayRectX=floor((viewportWidth-gameplayRectWidth)/2)`, `gameplayRectY=floor((viewportHeight-gameplayRectHeight)/2)`이며 좌표 원점은 viewport bottom-left다. 홀수 잔여 pixel은 right/top bar가 하나 더 가진다.
+
+`source`는 `MousePointer`, `GamepadStick`이다. mouse actual pixel을 gameplay rectangle edge에 clamp한 뒤 rect-local 좌표를 `Round(localX×1919/(gameplayRectWidth-1), AwayFromZero)`, `Round(localY×1079/(gameplayRectHeight-1), AwayFromZero)`로 바꾸고 0..1919, 0..1079에 clamp한 값이 1920×1080 normalized aim-grid `screenPixel`이다. `isPointerInsideGameplayRect`는 clamp 전 actual pixel이 rectangle 안이면 true, 여백이면 false이며 gamepad에서는 null이다. false인 mouse sample은 direction만 제공하고 target acquisition과 mouse press command를 만들지 않는다. gameplay world logical canvas는 640×360이며 output baseline 2560×1440에서 nearest-neighbor 4배 확대한다. 24 normalized aim pixels는 이 output에서 32 pixels다. `sampleTick`은 AimSample을 생성해 소비하는 SimulationTick이며 `cameraPoseTick=sampleTick-1`은 직전 완료 tick의 유일한 pose snapshot을 가리킨다. render smoothing camera는 aim 변환에 사용하지 않는다.
 
 `aimVectorQ4096`은 입력 벡터를 정규화한 뒤 각 성분을 `Clamp(Round(component ×4096, AwayFromZero), -4096, 4096)`로 만든 정수 pair다. 양자화 결과가 `(0,0)`이면 invalid다. gamepad 원본 magnitude는 제곱값으로 비교하며 `magnitude² ≥0.04`일 때만 새 sample이다. 유효 조준이 한 번도 없으면 `aimSampleId`는 null이며 전이는 `InvalidTarget`이다.
 

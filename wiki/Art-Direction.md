@@ -2,7 +2,7 @@
 
 고해상도 픽셀 아트에 URP 2D 조명, 파티클, 다층 패럴랙스를 결합한다. 황동 계량기, 배관, 거대한 추, 붉은 체납 도장, 청회색 콘크리트가 관료주의 디젤펑크 산업도시의 반복 시각 언어다.
 
-환경 공통 격자는 18 PPU이며 18×18px 타일을 1×1 world unit으로 사용한다. gameplay 내부 pixel canvas는 640×360이고 최종 16:9 2560×1440 출력에서 nearest-neighbor 4배로 확대한다. camera aspect·framing은 별도로 결정한다.
+환경 공통 격자는 18 PPU이며 18×18px 타일을 1×1 world unit으로 사용한다. gameplay 내부 pixel canvas는 640×360이고 최종 16:9 2560×1440 출력에서 nearest-neighbor 4배로 확대한다. 비16:9 화면에서도 같은 world framing을 유지하고 중앙 frame 밖은 letterbox/pillarbox로 처리한다. 최소 창은 640×360이다.
 
 무료 에셋은 수량보다 라이선스 추적과 통합 가능성을 먼저 본다. 출처, 제작자, 라이선스, 표기 의무, 수정 가능 여부, 검증일이 없는 후보는 프로젝트에 도입하지 않는다.
 

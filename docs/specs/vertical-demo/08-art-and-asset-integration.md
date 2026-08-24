@@ -29,7 +29,9 @@
 
 후보 조사와 격리 보관은 구현이 아니므로 이 스펙이 Review인 동안 수행할 수 있다. Unity 임포트와 파생 작업은 이 스펙이 Approved이고 OD-ART-001이 해결된 뒤에만 시작한다.
 
-공통 환경 격자는 `18 pixels per unit`이며 18×18 source tile은 1×1 world unit에 native mapping한다. 다른 밀도의 후보는 automatic resample하지 않고 18픽셀 격자에 맞춘 padding·crop·redraw 계획을 등록부에 기록한다. Pixel Perfect Camera reference resolution과 gameplay 내부 render canvas는 640×360이며 nearest-neighbor integer scale로 2560×1440에서 정확히 4배 확대한다. 이 frame은 약 35.56×20 world units를 표시한다. aspect 처리와 camera follow/framing은 `OD-ART-001`의 남은 결정이다.
+공통 환경 격자는 `18 pixels per unit`이며 18×18 source tile은 1×1 world unit에 native mapping한다. 다른 밀도의 후보는 automatic resample하지 않고 18픽셀 격자에 맞춘 padding·crop·redraw 계획을 등록부에 기록한다. Pixel Perfect Camera reference resolution과 gameplay 내부 render canvas는 640×360이며 nearest-neighbor integer scale로 2560×1440에서 정확히 4배 확대한다. 이 frame은 약 35.56×20 world units를 표시한다.
+
+viewport에는 들어가는 가장 큰 integer scale의 640×360 gameplay rectangle을 중앙 배치한다. 비16:9 viewport는 더 많은 world를 노출하거나 crop·stretch하지 않고 넓은 화면은 좌우 pillarbox, 좁거나 더 높은 화면은 상하 letterbox를 사용한다. minimum window size는 640×360이며 scale 1을 허용한다. pixel-art world, HUD와 interactive UI는 gameplay rectangle/safe frame 안에만 배치한다. 여백의 정확한 색·장식은 palette 결정에 둔다.
 
 ## Requirements
 
@@ -42,6 +44,7 @@
 - **REQ-ART-007:** `Needs clarification` 또는 `Rejected`인 후보는 다운로드·임포트하지 않으며, 격리 파일은 Unity나 기타 제작 도구에서 실행·열기·변환하지 않는다.
 - **REQ-ART-008:** 환경·타일·pixel-art VFX는 18 PPU 공통 격자를 사용하고 비18px source는 자동 보간 확대 없이 명시된 수작업 적응 계획을 가져야 하며 최종 출력은 2560×1440을 기준으로 해야 한다.
 - **REQ-ART-009:** gameplay world는 640×360 내부 pixel canvas를 사용해 2560×1440에서 nearest-neighbor 4배 정수 확대하고 18 PPU 기준 약 35.56×20 world-unit framing을 유지해야 한다.
+- **REQ-ART-010:** 모든 지원 viewport는 중앙 고정 16:9 gameplay rectangle에 640×360의 최대 integer scale을 사용하고 비16:9 잔여 영역은 letterbox/pillarbox로 처리하며 world reveal·crop·stretch와 safe-frame 밖 UI를 금지해야 한다.
 
 ## Acceptance criteria
 
@@ -80,6 +83,12 @@
 - **Given** 18 PPU pixel-art 검수 장면과 1280×720, 1920×1080, 2560×1440 viewport가 있고
 - **When** 각 viewport에서 같은 simulation camera pose를 렌더하면
 - **Then** gameplay world의 logical canvas는 모두 640×360이고 각각 nearest-neighbor 2×·3×·4× 정수 확대되며 2560×1440 frame은 약 35.56×20 world units이고 pixel edge에 fractional sampling이 없다.
+
+### AC-ART-007 — 종횡비와 최소 창
+
+- **Given** 640×360 minimum, 1366×768, 2560×1440과 ultrawide·narrow viewport가 있고
+- **When** 같은 simulation camera pose와 UI를 각각 렌더하면
+- **Then** 중앙 gameplay rectangle은 가능한 최대 integer scale의 640×360이며 16:9가 아닌 잔여 영역만 letterbox/pillarbox가 되고 world framing·HUD 위치는 같고 crop·stretch·추가 world reveal이 없다.
 
 ## Verification
 

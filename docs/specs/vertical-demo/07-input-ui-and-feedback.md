@@ -55,6 +55,7 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 - 조준 포착은 공격 조준을 뜻하며 전이 가능 여부와 독립적으로 유지한다. 전이 상태는 reticle 내부 ring의 색과 선 형태로, 활성 전이는 대상의 지속 이중 외곽선으로 별도 표현한다.
 - Gameplay와 UI map은 동시에 활성화하지 않으며 gamepad 오른쪽 스틱은 OS cursor를 움직이지 않는다. UIOnly는 focus navigation만 사용하고 virtual mouse를 만들지 않는다.
 - UIOnly 최상위 일시정지 화면의 `Cancel`은 GameplayEnabled로 복귀하고, 하위 화면의 `Cancel`은 상위 화면으로 한 단계 돌아간다.
+- mouse actual pixel은 중앙 gameplay rectangle 기준으로 조준 좌표를 만든다. pointer가 letterbox/pillarbox에 있으면 조준 방향만 가장 가까운 gameplay edge로 clamp하고 포착·Attack·Transfer mouse press는 생성하지 않는다. UI element는 safe frame 밖에 없으며 여백 Click은 아무 action도 실행하지 않는다.
 
 ## Requirements
 
@@ -70,6 +71,7 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 - **REQ-UX-010:** Gameplay의 mouse pointer는 총구 조준 reticle로 표시하고 유효 대상 포착 시 reticle 확대와 대상 형광 외곽선을 함께 표시하며, 조준 포착을 전이 가능·Cooldown·거리/LOS 차단·활성 전이 상태와 서로 구분하고 UIOnly와 잠긴 모드에서는 gameplay 조준 피드백을 제거해야 한다.
 - **REQ-UX-011:** runtime rebind는 keyboard Move와 Gameplay button, mouse Attack·Transfer, gamepad Gameplay button에만 허용하고 gamepad Move·Aim stick, mouse Point axis와 안전 UI·Pause 기본 binding을 보호하며 stick 축 반전은 별도 설정으로 처리해야 한다.
 - **REQ-UX-012:** 같은 control scheme의 Gameplay binding 충돌은 확인 뒤 원자 교환하거나 취소 시 무변경으로 처리하고 중복·자동 삭제·무통지 덮어쓰기와 protected binding 교환을 금지하며 map 사이 공유는 허용해야 한다.
+- **REQ-UX-013:** mouse aim은 중앙 16:9 gameplay rectangle을 기준으로 변환하고 여백에서는 edge-clamped aim direction만 유지하며 target acquisition·Attack·Transfer·UI action을 발생시키지 않아야 한다.
 
 ## Acceptance criteria
 
@@ -138,6 +140,12 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 - **Given** 같은 Gameplay control scheme에서 서로 다른 두 action, 다른 map의 action, protected binding과 chord 입력 후보가 있고
 - **When** 이미 사용 중인 control로 rebind를 시도해 교환 승인·취소를 각각 수행하면
 - **Then** 승인 시 같은 scheme의 두 Gameplay binding만 원자적으로 교환되고 취소 시 둘 다 유지되며 map 사이 동일 control은 허용되고 protected binding·chord는 거부되며 exact duplicate가 남지 않는다.
+
+### AC-UX-012 — 화면 여백 포인터 차단
+
+- **Given** letterbox와 pillarbox가 있는 viewport, gameplay edge 안팎의 mouse pixel과 target이 있고
+- **When** pointer 이동과 Attack·Transfer·Click을 재생하면
+- **Then** gameplay 안에서는 기존 target 계약이 동작하고 여백에서는 aim direction만 nearest edge로 clamp되며 target ID와 Attack·Transfer·UI Click command가 생성되지 않는다.
 
 ## Verification
 
