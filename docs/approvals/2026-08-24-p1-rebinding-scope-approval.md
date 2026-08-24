@@ -17,4 +17,4 @@
 
 ## Remaining boundary
 
-같은 control scheme 안의 binding 충돌 처리와 override 저장 schema·손상 복구를 확정하기 전에는 `OD-PLAT-001`을 해결 처리하지 않는다.
+같은 control scheme 안의 binding 충돌 처리는 후속 승인으로 확정됐다. override 저장 schema·손상 복구를 확정하기 전에는 `OD-PLAT-001`을 해결 처리하지 않는다.

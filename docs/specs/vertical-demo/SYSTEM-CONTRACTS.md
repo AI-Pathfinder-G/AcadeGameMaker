@@ -48,6 +48,8 @@
 
 runtime binding override는 keyboard Move composite와 Gameplay button, mouse Attack·Transfer button, gamepad Gameplay button에만 허용한다. gamepad Move·Aim stick과 mouse Point axis는 override 대상이 아니다. UI Navigate·Submit·Cancel과 Pause의 Esc·Start 기본 binding은 제거·대체할 수 없는 안전 경로이며 Pause는 추가 binding만 받을 수 있다. stick 축 반전은 binding override 밖의 설정 값이다.
 
+같은 control scheme의 Gameplay map에서 사용 중인 control을 새 action에 지정하면 교환 확인을 요구한다. 승인 transaction은 두 binding을 함께 교환하고 실패 시 둘 다 원래 값으로 rollback한다. 취소는 무변경이다. exact duplicate, 자동 삭제, 무통지 overwrite, protected binding과의 교환, chord·multi-key override는 금지한다. 상호 배타적인 Gameplay/UI map 사이의 동일 control은 허용한다.
+
 ## Public contracts
 
 ### Transfer target descriptor
@@ -192,7 +194,6 @@ Gameplay mouse pointer는 총구의 화면 공간 조준 reticle이다. 유효 �
 
 ## Remaining approval blockers
 
-- runtime binding override 충돌 정책: `OD-PLAT-001`
 - 저장 schema version, JSON 필드, 손상 복구 정책: `OD-PLAT-001`
 
 P0 공개 계약과 이동 계약은 해결됐다. 위 P1과 모든 소비 스펙의 일치 검토가 끝나기 전에는 이 문서를 Approved로 전환하지 않는다.

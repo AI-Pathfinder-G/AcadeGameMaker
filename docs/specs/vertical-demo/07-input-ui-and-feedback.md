@@ -26,6 +26,8 @@ UI는 `Navigate`, `Point`, `Click`, `ScrollWheel`, `Submit`, `Cancel`을 사용�
 
 runtime rebind는 keyboard의 Move composite 네 방향과 모든 Gameplay button action, mouse의 Attack·Transfer button, gamepad의 Gameplay button action에 허용한다. gamepad Move·Aim stick control과 mouse Point axis는 고정한다. UI Navigate·Submit·Cancel과 Pause의 Esc·Start 기본 binding은 안전 복구 경로이므로 제거하거나 덮어쓸 수 없다. Pause에는 추가 binding만 허용한다. stick 축 반전은 binding override가 아닌 별도 설정이다.
 
+같은 control scheme의 Gameplay map 안에서 exact duplicate binding은 허용하지 않는다. 이미 사용 중인 control을 지정하면 현재 action과 교환할지 확인하고, 승인 시 두 binding을 원자적으로 맞바꾸며 취소 시 어느 쪽도 바꾸지 않는다. 자동 삭제·무통지 덮어쓰기는 금지한다. Gameplay와 UI map은 상호 배타적이므로 map 사이의 동일 control은 충돌이 아니다. protected UI·Pause 기본 binding과의 교환은 거부한다. chord·multi-key binding은 수직 데모에서 지원하지 않는다.
+
 Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니라 총구의 화면 공간 조준점을 나타내는 gameplay reticle이다. 유효 대상이 선택되면 reticle이 즉시 커지고 선택 대상에 형광 외곽선을 표시해 `조준 포착`을 알린다. 조준 포착은 공격 조준 상태이며 무게 전이 가능 여부와 분리한다. reticle 내부 ring은 청록 연속선=`전이 가능`, 주황 연속선=`Cooldown`, 적색 단절선=`거리 또는 LOS 차단`으로 나타낸다. 활성 전이 대상은 지속 이중 외곽선을 사용한다. UIOnly에서는 gameplay reticle과 대상 외곽선을 숨기고 일반 UI cursor를 표시한다. 정확한 확대율·RGB·발광 강도·점멸/보간 값은 `OD-ART-001`에서 고정한다.
 
 ### Inputs
@@ -67,6 +69,7 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 - **REQ-UX-009:** UI는 승인된 Navigate·Point·Click·ScrollWheel·Submit·Cancel·Pause binding, focus navigation과 map 상호 배제를 사용하고 gamepad virtual mouse를 만들지 않아야 한다.
 - **REQ-UX-010:** Gameplay의 mouse pointer는 총구 조준 reticle로 표시하고 유효 대상 포착 시 reticle 확대와 대상 형광 외곽선을 함께 표시하며, 조준 포착을 전이 가능·Cooldown·거리/LOS 차단·활성 전이 상태와 서로 구분하고 UIOnly와 잠긴 모드에서는 gameplay 조준 피드백을 제거해야 한다.
 - **REQ-UX-011:** runtime rebind는 keyboard Move와 Gameplay button, mouse Attack·Transfer, gamepad Gameplay button에만 허용하고 gamepad Move·Aim stick, mouse Point axis와 안전 UI·Pause 기본 binding을 보호하며 stick 축 반전은 별도 설정으로 처리해야 한다.
+- **REQ-UX-012:** 같은 control scheme의 Gameplay binding 충돌은 확인 뒤 원자 교환하거나 취소 시 무변경으로 처리하고 중복·자동 삭제·무통지 덮어쓰기와 protected binding 교환을 금지하며 map 사이 공유는 허용해야 한다.
 
 ## Acceptance criteria
 
@@ -130,9 +133,15 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 - **When** 허용된 Gameplay 입력과 고정된 axis·UI·Pause 기본 입력을 각각 재지정 또는 제거하려 하면
 - **Then** keyboard Move·Gameplay button, mouse Attack·Transfer와 gamepad Gameplay button은 재지정할 수 있고 Move·Aim stick과 mouse Point axis는 고정되며 UI Navigate·Submit·Cancel과 Pause Esc·Start 기본 binding은 항상 남고 stick 반전은 별도 설정으로만 바뀐다.
 
+### AC-UX-011 — binding 충돌의 확인 교환
+
+- **Given** 같은 Gameplay control scheme에서 서로 다른 두 action, 다른 map의 action, protected binding과 chord 입력 후보가 있고
+- **When** 이미 사용 중인 control로 rebind를 시도해 교환 승인·취소를 각각 수행하면
+- **Then** 승인 시 같은 scheme의 두 Gameplay binding만 원자적으로 교환되고 취소 시 둘 다 유지되며 map 사이 동일 control은 허용되고 protected binding·chord는 거부되며 exact duplicate가 남지 않는다.
+
 ## Verification
 
-package manifest·Player Settings·생성 wrapper·의미 입력 맵 정적 검사, 키보드·XInput 동등 동작 재생, 상태별 스크린 캡처, 고정 틱 입력 순서·잠금/복구 PlayMode 테스트, 짧은 이해도 관찰로 검증한다. runtime override 충돌·저장은 `OD-PLAT-001`, 조준 피드백의 정확한 시각 수치는 `OD-ART-001`에서 고정한다.
+package manifest·Player Settings·생성 wrapper·의미 입력 맵 정적 검사, 키보드·XInput 동등 동작 재생, 상태별 스크린 캡처, 고정 틱 입력 순서·잠금/복구 PlayMode 테스트, 짧은 이해도 관찰로 검증한다. runtime override 저장은 `OD-PLAT-001`, 조준 피드백의 정확한 시각 수치는 `OD-ART-001`에서 고정한다.
 
 ## Traceability
 

@@ -80,7 +80,7 @@ Unity 전역 설정, 패키지 잠금, 입력·표시·성능 기준, 버전 저
 
 ## Verification
 
-프로젝트 설정 스냅샷, package lock, 빌드 로그, 성능 캡처, 저장 호환성 테스트로 검증한다. Input System 패키지·map 수·Gameplay/UI 기본 binding과 runtime rebind 범위는 확정됐지만 override 충돌 정책과 구체 저장 스키마는 `OD-PLAT-001` 해결 전까지 미승인이다.
+프로젝트 설정 스냅샷, package lock, 빌드 로그, 성능 캡처, 저장 호환성 테스트로 검증한다. Input System 패키지·map 수·Gameplay/UI 기본 binding과 runtime rebind 범위·충돌 정책은 확정됐지만 구체 저장 스키마는 `OD-PLAT-001` 해결 전까지 미승인이다.
 
 ## Traceability
 
