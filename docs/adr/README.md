@@ -22,3 +22,4 @@ ADR은 쉽게 되돌리기 어렵고, 맥락 없이 보면 의외이며, 실제 
 | [0016](./0016-document-authority-and-wiki-publishing.md) | accepted | 권위 문서와 위키 발행 계층 분리 |
 | [0017](./0017-quarantine-assets-before-import.md) | accepted | 외부 에셋을 증적과 함께 격리 후 임포트 |
 | [0018](./0018-vertical-demo-p0-integration.md) | accepted | 공동장부 원정으로 수직 데모 P0 통합 |
+| [0019](./0019-pointer-aimed-sidescroller-controls.md) | accepted | 포인터 조준형 횡스크롤 조작 |

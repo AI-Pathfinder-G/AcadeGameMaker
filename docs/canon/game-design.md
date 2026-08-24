@@ -10,6 +10,7 @@
 2. **정밀함을 보존한 반복성:** 검증한 수작업 방의 지형과 점프 품질을 보존하면서 연결, 위험, 보상, 사건을 변주한다.
 3. **선택도 플레이가 된다:** 인간성 선택은 강함을 포기하는 선택이 아니라 수탈과 연대라는 서로 다른 기술군을 연다.
 4. **세계와 규칙의 일치:** 중력 배급망, 하방권, 중력 부채가 레벨·전투·계층 갈등에서 같은 원리로 드러난다.
+5. **공간을 직접 가리킨다:** 왼손 이동과 오른손 포인터 조준을 분리해 적·상자·중력 payload를 화면 공간에서 직접 선택한다.
 
 ## 첫 검증 목표
 
@@ -27,4 +28,4 @@
 
 ## 근거
 
-[ADR-0001](../adr/0001-metered-gravity-city.md), [ADR-0003](../adr/0003-humanity-is-preserving-others-agency.md), [ADR-0005](../adr/0005-choices-grant-different-skill-families.md), [ADR-0007](../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0008](../adr/0008-assemble-authored-expedition-rooms.md), [ADR-0013](../adr/0013-fifteen-minute-vertical-slice.md), [ADR-0018](../adr/0018-vertical-demo-p0-integration.md)
+[ADR-0001](../adr/0001-metered-gravity-city.md), [ADR-0003](../adr/0003-humanity-is-preserving-others-agency.md), [ADR-0005](../adr/0005-choices-grant-different-skill-families.md), [ADR-0007](../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0008](../adr/0008-assemble-authored-expedition-rooms.md), [ADR-0013](../adr/0013-fifteen-minute-vertical-slice.md), [ADR-0018](../adr/0018-vertical-demo-p0-integration.md), [ADR-0019](../adr/0019-pointer-aimed-sidescroller-controls.md)

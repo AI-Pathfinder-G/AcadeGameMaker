@@ -22,4 +22,4 @@
 
 ## Remaining boundary
 
-실제 action 목록, 키보드·마우스·XInput 기본 binding, runtime override 정책, 저장 schema와 손상 복구를 확정하기 전에는 `OD-PLAT-001`을 해결 처리하지 않는다.
+포인터 조준 역할 배치는 후속 승인으로 확정됐다. 마우스·스틱 타겟 보정과 유지, runtime override 정책, 저장 schema와 손상 복구를 확정하기 전에는 `OD-PLAT-001`을 해결 처리하지 않는다.

@@ -20,6 +20,8 @@
 
 입력 계층은 `com.unity.inputsystem` 1.20.0만 사용한다. 단일 `GameInput.inputactions`에서 생성한 C# wrapper를 `InputRouter`가 직접 구독하며 `PlayerInput.SendMessage`, 구형 Input Manager와 `Both` 모드는 사용하지 않는다. action map은 `Gameplay`와 `UI` 두 개뿐이다.
 
+Gameplay는 `포인터 조준형 횡스크롤 액션`을 따른다. 키보드·마우스는 WASD 이동, Space 점프, Shift 대시, E 상호작용, Q 선택 기술, 좌클릭 공격, 우클릭 전이를 사용하고 JKL 전투·클릭 이동을 사용하지 않는다. 게임패드는 왼쪽/오른쪽 스틱 이동·조준, RT 공격, LT 전이, RB 선택 기술, A 점프, B 대시, X 상호작용을 사용한다.
+
 ### Inputs
 
 `InputRouter`가 버퍼링한 의미 액션 `Aim`, `Transfer`, `ChoiceSkill`, 이동·공격·상호작용, 전이·런·선택·입력 모드 사건, 실패 이유와 피드백 제한 틱.
@@ -39,6 +41,7 @@
 - 실제 기기 callback은 gameplay state를 직접 변경하지 않고 의미 명령을 버퍼에 기록하며, 각 명령은 다음 `SimulationTick`에서 최대 한 번 소비된다.
 - map 전환은 `InputMode` 소유 경로만 수행한다. 장면·기능 코드는 개별 action 또는 map을 임의로 enable/disable하지 않는다.
 - 기기 연결·분리와 마지막 사용 control scheme 변화는 표시용 상태만 바꾸며 시뮬레이션 결과를 바꾸지 않는다.
+- 기본 공격과 전이는 같은 포인터·스틱 조준 의도를 사용한다. 선택 기술은 현재 활성 전이 대상을 사용하므로 별도 조준을 요구하지 않는다.
 
 ## Requirements
 
@@ -48,6 +51,7 @@
 - **REQ-UX-004:** 컷신·메뉴·장면 전환의 입력 잠금과 복구가 일관되어야 한다.
 - **REQ-UX-005:** 전이 후보·활성·회수·차단·쿨다운과 `NoActiveTransfer`, `Cooldown`, `InputLocked`, `InvalidTarget` 실패 이유를 서로 구분해 표시해야 한다.
 - **REQ-UX-006:** Input System 1.20.0의 생성 C# wrapper와 단일 `InputRouter`를 사용해 `Gameplay`/`UI` 두 map의 callback을 다음 60Hz tick 의미 명령으로 한 번만 변환해야 한다.
+- **REQ-UX-007:** Gameplay는 승인된 키보드·마우스와 XInput 역할 배치를 사용하고 JKL 전투·클릭 이동 없이 포인터·오른쪽 스틱 조준을 공격과 전이에 공통 적용해야 한다.
 
 ## Acceptance criteria
 
@@ -81,10 +85,16 @@
 - **When** 정적 계약 검사와 같은 callback 기록의 PlayMode 재생을 수행하면
 - **Then** package는 1.20.0, Active Input Handling은 Input System only, map은 `Gameplay`/`UI`뿐이고 `PlayerInput.SendMessage`·구형 Input Manager 참조가 없으며 각 의미 명령은 다음 SimulationTick에서 정확히 한 번 소비된다.
 
+### AC-UX-006 — 포인터 조준 역할 배치
+
+- **Given** 키보드·마우스와 XInput 기본 binding 및 같은 전투 검수 장면이 있고
+- **When** 이동 중 공격·전이·선택 기술을 각 control scheme으로 실행하면
+- **Then** 키보드·마우스는 왼손 이동·플랫폼 조작과 오른손 조준·전투로 분리되고 게임패드는 두 스틱·trigger/bumper로 같은 의미 결과를 내며 JKL 전투와 클릭 이동 binding이 없다.
+
 ## Verification
 
 package manifest·Player Settings·생성 wrapper·의미 입력 맵 정적 검사, 키보드·XInput 동등 동작 재생, 상태별 스크린 캡처, 고정 틱 입력 순서·잠금/복구 PlayMode 테스트, 짧은 이해도 관찰로 검증한다. 실제 action 목록·바인딩과 override 저장은 `OD-PLAT-001`에서 고정한다.
 
 ## Traceability
 
-[ADR-0007](../../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md), [VD-01](./01-player-movement.md), [VD-02](./02-weight-transfer.md), [VD-06](./06-humanity-choice-and-narrative.md)
+[ADR-0007](../../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md), [ADR-0019](../../adr/0019-pointer-aimed-sidescroller-controls.md), [VD-01](./01-player-movement.md), [VD-02](./02-weight-transfer.md), [VD-06](./06-humanity-choice-and-narrative.md)

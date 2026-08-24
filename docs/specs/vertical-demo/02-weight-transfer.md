@@ -20,7 +20,7 @@
 
 ### Inputs
 
-`Transfer` 시도, `Aim` 방향 또는 바라보는 방향, 후보 대상의 저작 `TransferTargetId`와 기본 보정값, 대상 유효성, 방/원정/컷신 생명주기 사건.
+`Transfer` 시도, 마우스 포인터 또는 게임패드 오른쪽 스틱의 조준 의도, 후보 대상의 저작 `TransferTargetId`와 기본 보정값, 대상 유효성, 방/원정/컷신 생명주기 사건.
 
 ### Outputs
 
@@ -37,8 +37,8 @@
 - 회수, 대상 제거, 방 종료, 원정 실패 후에는 고아 전이 상태가 남지 않는다.
 - 후반 기능인 중력 방향 변경은 수직 데모에서 제외한다.
 - 입력은 프레임에서 수집하고 다음 FixedUpdate에서 한 번만 원자 적용한다. 성공한 전이·회수 뒤 21 고정 틱 동안 상태를 바꾸지 않는다.
-- 후보는 6.0 월드 유닛 안, 조준 반각 50도 안, 대상 중심점 기준 `TransferLineOfSight` 지형 레이어에 가려지지 않고 trigger가 아닌 대상이다. `Aim`이 없으면 바라보는 방향을 쓴다.
-- 후보는 `Round(angleDegrees × 10, AwayFromZero)`, `Round(distanceSquared × 1000, AwayFromZero)`, `TransferTargetId` ordinal 오름차순으로 결정한다.
+- 후보는 플레이어에서 6.0 월드 유닛 안이고 대상 중심점 기준 `TransferLineOfSight` 지형 레이어에 가려지지 않으며 trigger가 아닌 대상이다.
+- 마우스·오른쪽 스틱 조준이 같은 의미 후보를 만들고 바라보는 방향 fallback과 50도 원뿔은 사용하지 않는다. 정확한 보정 반경·후보 정렬·스틱 조준 유지 계약은 `OD-PLAT-001`에서 고정한다.
 - 기본 물리값은 대상 소유 시스템이 제공하고, 이 시스템은 가역 modifier만 합성·제거한다. 제거된 대상에는 복원을 시도하지 않고 참조와 효과만 정리한다.
 
 ## Requirements
@@ -79,8 +79,8 @@
 
 ### AC-WT-005 — 결정적 후보와 물리 modifier
 
-- **Given** 각도·거리·ID 동점 후보, 차단된 후보, scripted `압류추` handle을 포함한 고정 틱 검수 장면이 있고
-- **When** 같은 `Aim`/`Transfer` 입력 기록을 재생하면
+- **Given** 포인터·스틱 조준의 중첩 후보, 차단된 후보, scripted `압류추` handle을 포함한 고정 틱 검수 장면이 있고
+- **When** 같은 조준·`Transfer` 입력 기록을 재생하면
 - **Then** 같은 `TransferTargetId`가 선택되고 21틱 쿨다운·가역 modifier·`TransferStateChanged`가 일치하며, 상자의 피해 계산은 mass가 아니라 `ImpactDamageMultiplier`를 사용한다.
 
 ## Verification
@@ -89,4 +89,4 @@
 
 ## Traceability
 
-[CONTEXT 무게 전이](../../../CONTEXT.md), [ADR-0007](../../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0013](../../adr/0013-fifteen-minute-vertical-slice.md), [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md), [VD-01](./01-player-movement.md), [VD-03](./03-combat-and-enemies.md)
+[CONTEXT 무게 전이](../../../CONTEXT.md), [ADR-0007](../../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0013](../../adr/0013-fifteen-minute-vertical-slice.md), [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md), [ADR-0019](../../adr/0019-pointer-aimed-sidescroller-controls.md), [VD-01](./01-player-movement.md), [VD-03](./03-combat-and-enemies.md)
