@@ -13,16 +13,21 @@
 | Choice/narrative | [VD-06](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/06-humanity-choice-and-narrative.md) | Review |
 | Input/UI | [VD-07](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/07-input-ui-and-feedback.md) | Review |
 | Art/assets | [VD-08](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/08-art-and-asset-integration.md) | Review |
-| Platform/quality | [VD-09](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/09-platform-and-quality.md) | Draft |
+| Platform/quality | [VD-09](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/09-platform-and-quality.md) | Review |
 | Verification | [VD-10](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/10-verification-script.md) | Review |
 | Pre-Unity QA infrastructure | [VD-11](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/11-pre-unity-qa-artifacts.md) | Verified |
+| Full-game narrative | [NAR-00](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/full-game-narrative/00-spec-index.md) | Review |
 
 **권위 문서:** [스펙 운영 규칙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/README.md), [열린 결정](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/OPEN-DECISIONS.md)
 
-P0 여섯 항목과 P1 이동·플랫폼·미술 계약은 해결됐다. `Approved` 전환에는 남은 `OD-SCENE-001`, 소비 스펙 간 계약 일치, Luna 독립 검토가 필요하다.
+P0 여섯 항목과 P1 이동·플랫폼·미술 계약은 해결됐다. `Approved` 전환에는 남은 `OD-AIMARC-001`과 `OD-SCENE-001`, 소비 스펙 간 계약 일치, Luna 독립 검토가 필요하다.
 
 플랫폼 P1 입력·재지정·저장·복구 계약은 해결됐고 Luna 독립 문서 검토를 PASS했다. version 1 단일 `profile.json`을 원자 저장하며 시작 시 valid primary→valid previous→revision 0 default만 사용한다. stale temp와 손상·미지원 파일은 로드하지 않고 보존하며 binding만 불일치하면 진행 상태를 유지한 채 입력만 기본값으로 복구한다.
 
 미술 P1은 18 PPU, 640×360 fixed world/UI frame, predictive camera, pixel UI·SDF text, exact 32색 palette, logical pixel outline, URP 2D lighting과 9×9/13×13px reticle exact values까지 확정돼 `OD-ART-001`이 해결됐다.
 
 VD-11은 GLM의 독립 QA 계획 초안, MiniMax M3의 부분 구현안, GPT 계약 교정과 Luna 독립 검증을 거쳐 Verified가 됐다. 현재 pre-Unity catalog는 UI·menu부터 gameplay·저장·render·build·E2E까지 13개 scenario로 VD-00~09의 68개 AC를 전수 연결한다. 실제 Unity EditMode·PlayMode·Windows build test는 각 기능 스펙 승인과 Unity 프로젝트 생성 뒤 구현한다.
+
+NAR-00은 승인된 8챕터 시놉시스를 관찰 가능한 요구사항과 인수 기준으로 전환한 `Review` 스펙이다. 유대 자격·핵심 약속·재진입 규칙과 광오 상태 전환·우선순위·저장 규칙은 P0 미결정이므로 전체 챕터 구현은 아직 시작하지 않는다. exact 수치 튜닝은 후속 단위 스펙에서 다룬다.
+
+Luna 독립 문서 검토에서 REQ–AC 추적성과 캐논·ADR·VD-06 정합성은 PASS했다. 판정은 미결 승인 차단 항목이 남아 있는 `CONDITIONAL`이며 구현 권한을 제공하지 않는다.

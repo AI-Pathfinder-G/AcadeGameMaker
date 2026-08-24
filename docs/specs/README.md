@@ -22,7 +22,7 @@
 - 미결정: `OD-{영역}-{NNN}`
 - 검증 증적: `EV-{날짜}-{AC ID}`
 
-영역 접두사는 `SCOPE`, `MOV`, `WT`, `COM`, `ROOM`, `RUN`, `CHOICE`, `UX`, `ART`, `PLAT`을 사용한다.
+영역 접두사는 `SCOPE`, `MOV`, `WT`, `COM`, `ROOM`, `RUN`, `CHOICE`, `UX`, `ART`, `PLAT`, `NAR`을 사용한다.
 
 ## 승인 조건
 
@@ -44,6 +44,7 @@
 ## 현재 패키지
 
 - [15분 수직 데모 스펙 색인](./vertical-demo/00-spec-index.md)
+- [인물 중심 8챕터 서사 스펙](./full-game-narrative/00-spec-index.md)
 - [Pre-Unity QA Artifact Infrastructure](./vertical-demo/11-pre-unity-qa-artifacts.md)
 - [추적성 매트릭스](./vertical-demo/TRACEABILITY.md)
 - [열린 결정](./vertical-demo/OPEN-DECISIONS.md)

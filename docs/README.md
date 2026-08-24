@@ -11,6 +11,8 @@
 5. [에이전트 운영 모델](./agent-operating-model.md) — 역할과 승인 흐름
 6. [위키 홈](../wiki/Home.md) — 발행·탐색용 보기
 
+[제안서 색인](./proposals/README.md)은 검토 이력과 비캐논 초안을 구분해 보여 준다.
+
 ## 현재 준비도
 
 - [2026-08-24 본격 개발 착수 전 준비도 점검](./project-readiness-audit-2026-08-24.md)
@@ -43,6 +45,10 @@
 - [2026-08-24 OD-ART-001 Luna 독립 검토 — PASS](./verification/2026-08-24-od-art-001-luna-review.md)
 - [ADR-0020 히로인 유대·사이드킥·진엔딩](./adr/0020-heroine-bond-sidekick-and-true-ending.md)
 - [ADR-0021 AimArc·차지 탄도](./adr/0021-character-aim-arc-and-charged-ballistics.md)
+- [2026-08-24 인물 중심 8챕터 시놉시스 승인](./approvals/2026-08-24-character-first-eight-chapter-synopsis-approval.md)
+- [ADR-0022 인물 중심 8챕터·자기정당화형 광오](./adr/0022-character-first-eight-chapter-narrative.md)
+- [NAR-00 전체 게임 서사 스펙 — Review](./specs/full-game-narrative/00-spec-index.md)
+- [2026-08-24 NAR-00 Luna 독립 문서 검토 — CONDITIONAL](./verification/2026-08-24-nar-00-luna-review.md)
 - [독립 QA 마스터 플랜](./qa/qa-master-plan.md)
 - [Pre-Unity QA 아티팩트 작업 계약](./qa/pre-unity-qa-work-contract.md)
 - [2026-08-24 VD-11 Luna 독립 검증](./verification/2026-08-24-vd-11-luna-review.md)

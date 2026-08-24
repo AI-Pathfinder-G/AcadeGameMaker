@@ -25,3 +25,4 @@ ADR은 쉽게 되돌리기 어렵고, 맥락 없이 보면 의외이며, 실제 
 | [0019](./0019-pointer-aimed-sidescroller-controls.md) | accepted | 포인터 조준형 횡스크롤 조작 |
 | [0020](./0020-heroine-bond-sidekick-and-true-ending.md) | accepted | 히로인 유대·자율 지원·진엔딩 관계 축 |
 | [0021](./0021-character-aim-arc-and-charged-ballistics.md) | accepted | 캐릭터 중심 AimArc와 차지 탄도 |
+| [0022](./0022-character-first-eight-chapter-narrative.md) | accepted | 인물 중심 8챕터와 자기정당화형 광오 |

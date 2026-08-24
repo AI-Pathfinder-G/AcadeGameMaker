@@ -15,7 +15,8 @@
 - 왼손 이동과 오른손 조준·전투를 분리하는 포인터 조준형 횡스크롤 액션
 - 히로인 유대·자율 지원과 인간성 조건을 결합한 진엔딩
 - 캐릭터 중심 AimArc와 후속 차지 곡사 탄도
+- 가칭 도언·세령·라겐·아인을 중심으로 한 8챕터 기승전결과 자기정당화형 광오
 - Sol이 전체 계약·통합, Terra가 단위 설계·구현, Luna가 독립 검증
 - 위키는 권위 원본이 아닌 발행 계층
 
-**권위 문서:** [ADR 색인](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/adr/README.md), [ADR-0020](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/adr/0020-heroine-bond-sidekick-and-true-ending.md), [ADR-0021](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/adr/0021-character-aim-arc-and-charged-ballistics.md)
+**권위 문서:** [ADR 색인](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/adr/README.md), [ADR-0020](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/adr/0020-heroine-bond-sidekick-and-true-ending.md), [ADR-0021](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/adr/0021-character-aim-arc-and-charged-ballistics.md), [ADR-0022](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/adr/0022-character-first-eight-chapter-narrative.md)

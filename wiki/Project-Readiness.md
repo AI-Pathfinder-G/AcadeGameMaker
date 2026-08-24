@@ -15,7 +15,7 @@
 ## 완료한 승인 범위
 
 - Unity Hub와 Unity 6.3 LTS 6000.3.21f1 설치·버전 검증
-- Unity 계정 로그인 완료 보고
+- Unity Hub 계정 로그인·프로필 반영과 Personal 라이선스 활성 표시 확인
 - Ollama Cloud GLM 5.2와 MiniMax M3의 비민감 고정 문장 연결 시험
 - Unity 프로젝트 생성 전 저장소 안전장치 적용
 - Sol P0 기본안 사용자 승인과 ADR-0018·스펙 반영
@@ -32,7 +32,7 @@ Sol이 `OD-SCENE-001`과 새 `OD-AIMARC-001`을 통합 결정하고 소비 스�
 - Unity Hub 설치 완료
 - Unity Editor 6000.3.21f1 설치·버전 검증 완료
 - Ollama Cloud GLM 5.2·MiniMax M3 연결 시험 완료
-- Unity 계정 로그인 완료를 사용자가 보고함; Personal 라이선스 활성 상태의 기계 검증은 별도 확인
+- Unity Hub 계정 로그인·프로필 반영과 Personal 라이선스 활성 표시 확인; 저장소·Unity Cloud 프로젝트는 미연결
 - Sol P0 통합안 사용자 승인 완료, ADR-0018과 규범 스펙에 반영
 - P1 균형 정밀 이동 계약 사용자 승인 완료, VD-01·VD-04에 반영
 - P1 Input System 1.20.0 단독·InputRouter·Gameplay/UI map 구조 사용자 승인 완료
