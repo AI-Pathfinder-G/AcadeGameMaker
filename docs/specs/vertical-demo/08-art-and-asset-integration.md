@@ -35,6 +35,10 @@ viewport에는 들어가는 가장 큰 integer scale의 640×360 gameplay rectan
 
 Gameplay camera는 고정 orthographic size에서 player simulation position을 dead-zone follow한다. horizontal anticipation은 player movement direction만 사용하고 mouse pointer는 camera target에 영향을 주지 않는다. 상승은 작은 upward bias, 빠른 낙하는 더 큰 downward bias를 사용한다. dash는 zoom·hard snap을 유발하지 않는다. camera center는 authored room bounds 안에서 clamp하고 gameplay dynamic zoom을 금지한다. boss·choice·cutscene만 authored camera anchor를 사용할 수 있다. camera pose는 movement 완료 뒤 같은 60Hz tick에서 계산해 1/18 world-unit로 snap하고 그 완료 snapshot을 다음 tick aim이 사용한다. 별도 render-only smoothing pose는 허용하지 않는다.
 
+GameplayFollow의 axis-aligned dead zone은 camera center 기준 6×4u다. horizontal offset target은 `|velocityX|≥2.0`이면 `sign(velocityX)×3.0u`, 아니면 0이다. vertical offset target은 `velocityY≥4.0`이면 +1.5u, `velocityY≤-6.0`이면 -3.0u, 그 사이는 0이다. target band가 바뀌면 현재 offset에서 새 target까지 정확히 12 tick linear transition을 시작하며 전환 중 다시 band가 바뀌면 현재 값을 새 start로 삼는다.
+
+offset을 더한 player focus가 current camera dead zone 밖일 때만 desired center를 해당 nearest dead-zone edge까지 이동한다. camera center는 desired center를 향해 axis-independent `MoveTowards` max 0.5u/tick을 적용한 뒤 authored room bounds clamp, 각 축 1/18u AwayFromZero snap 순서로 확정한다. room entry, respawn, teleport, authored anchor 진입·해제만 이 추적을 생략하고 same-tick snap할 수 있다. dash와 단순 direction change는 snap 사유가 아니다.
+
 ## Requirements
 
 - **REQ-ART-001:** 환경은 황동 계량기, 배관, 거대한 추, 붉은 체납 도장, 청회색 콘크리트의 시각 언어를 사용한다.
@@ -47,7 +51,7 @@ Gameplay camera는 고정 orthographic size에서 player simulation position을 
 - **REQ-ART-008:** 환경·타일·pixel-art VFX는 18 PPU 공통 격자를 사용하고 비18px source는 자동 보간 확대 없이 명시된 수작업 적응 계획을 가져야 하며 최종 출력은 2560×1440을 기준으로 해야 한다.
 - **REQ-ART-009:** gameplay world는 640×360 내부 pixel canvas를 사용해 2560×1440에서 nearest-neighbor 4배 정수 확대하고 18 PPU 기준 약 35.56×20 world-unit framing을 유지해야 한다.
 - **REQ-ART-010:** 모든 지원 viewport는 중앙 고정 16:9 gameplay rectangle에 640×360의 최대 integer scale을 사용하고 비16:9 잔여 영역은 letterbox/pillarbox로 처리하며 world reveal·crop·stretch와 safe-frame 밖 UI를 금지해야 한다.
-- **REQ-ART-011:** gameplay camera는 fixed zoom·dead-zone follow와 movement/fall anticipation을 사용하고 mouse-driven pan·dynamic zoom·dash snap 없이 room bounds와 1/18-unit fixed-tick pose를 지키며 authored scene에서만 anchor를 허용해야 한다.
+- **REQ-ART-011:** gameplay camera는 6×4u dead zone, ±3u horizontal·+1.5/-3u vertical anticipation, 12-tick offset transition과 max 0.5u/tick follow를 사용하고 mouse-driven pan·dynamic zoom·dash snap 없이 room bounds와 1/18-unit fixed-tick pose를 지키며 승인 생명주기에서만 snap·anchor를 허용해야 한다.
 
 ## Acceptance criteria
 
@@ -95,9 +99,9 @@ Gameplay camera는 고정 orthographic size에서 player simulation position을 
 
 ### AC-ART-008 — 카메라 모드와 pixel snap
 
-- **Given** 걷기·방향 전환·상승·빠른 낙하·대시, mouse edge 이동, room bound와 authored boss/choice/cutscene anchor가 있고
+- **Given** dead-zone 6×4u의 안팎, X 속도 1.999/2.000/2.001, Y 속도 3.999/4.000/4.001과 -5.999/-6.000/-6.001, 걷기·방향 전환·상승·낙하·대시, mouse edge, room bound와 승인 snap lifecycle이 있고
 - **When** 같은 movement·mouse 기록을 30/60/144 render FPS에서 재생하면
-- **Then** gameplay zoom과 tick별 snapped camera pose는 exact match하고 mouse 이동·대시는 pan·zoom·hard snap을 만들지 않으며 camera는 room bound 안에 있고 authored scene에서만 anchor mode로 전환된다.
+- **Then** horizontal target은 0/±3u, vertical target은 0/+1.5/-3u 경계에 맞고 offset은 band 전환 뒤 12 tick에 도달하며 camera는 dead-zone 보정 뒤 각 축 max 0.5u/tick·room clamp·1/18u snap 순서로 exact match하고 mouse·대시는 pan·zoom·snap을 만들지 않으며 room entry·respawn·teleport·anchor 진입/해제에서만 same-tick snap한다.
 
 ## Verification
 

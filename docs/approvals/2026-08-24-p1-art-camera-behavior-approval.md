@@ -19,4 +19,4 @@
 
 ## Remaining boundary
 
-dead-zone 크기, horizontal·vertical look-ahead 거리·전환 tick과 hard-snap 허용 생명주기, UI render scale, palette·outline·lighting과 reticle exact 수치를 확정하기 전에는 `OD-ART-001`을 해결 처리하지 않는다.
+dead-zone·look-ahead·전환 tick과 hard-snap 생명주기는 후속 승인으로 확정됐다. UI render scale, palette·outline·lighting과 reticle exact 수치를 확정하기 전에는 `OD-ART-001`을 해결 처리하지 않는다.

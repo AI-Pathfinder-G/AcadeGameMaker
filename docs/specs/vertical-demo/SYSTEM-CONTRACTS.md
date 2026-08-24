@@ -31,7 +31,7 @@
 
 소비자는 원본 상태를 직접 수정하지 않고 아래 명령 또는 사건만 사용한다.
 
-VD-07 camera presentation state는 `GameplayFollow`, `AuthoredAnchor` mode, snapped pose와 active room bounds를 포함한다. GameplayFollow는 movement owner의 완료된 player pose를 읽은 뒤 같은 tick 끝에 fixed zoom target을 계산하고 1/18 unit로 snap해 `SimulationCameraPoseSnapshot`을 발행한다. 다음 tick mouse aim만 이 snapshot을 사용한다. mouse position은 camera target input이 아니며 render-only camera pose를 따로 만들지 않는다. AuthoredAnchor는 boss·choice·cutscene의 저작 ID가 있는 경우에만 허용된다.
+VD-07 camera presentation state는 `GameplayFollow`, `AuthoredAnchor` mode, current anticipation offset, 12-tick transition, snapped pose와 active room bounds를 포함한다. GameplayFollow는 movement owner의 완료된 player pose를 읽은 뒤 같은 tick 끝에 6×4u dead zone과 속도 threshold 기반 ±3u horizontal·+1.5/-3u vertical offset을 계산한다. offset target band 변화는 현재 값에서 12-tick linear transition을 재시작한다. 처리 순서는 focus offset → dead-zone desired center → axis-independent max 0.5u/tick MoveTowards → room clamp → 각 축 1/18u AwayFromZero snap이다. room entry·respawn·teleport·authored anchor 진입/해제만 same-tick snap을 허용한다. 완성한 `SimulationCameraPoseSnapshot`만 다음 tick mouse aim이 사용한다. mouse position은 camera target input이 아니며 render-only camera pose를 따로 만들지 않는다. AuthoredAnchor는 boss·choice·cutscene의 저작 ID가 있는 경우에만 허용된다.
 
 ## Input order
 
