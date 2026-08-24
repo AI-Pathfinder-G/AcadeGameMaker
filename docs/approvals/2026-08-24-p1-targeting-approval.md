@@ -8,7 +8,7 @@
 ## Approved boundary
 
 - 공통 후보는 플레이어에서 6유닛 이내, `TransferLineOfSight`가 열린 단일 대상
-- 마우스는 투영된 TargetAimShape 직접 hit 또는 1920×1080 기준 aim point 24px 이내 후보를 사용
+- 마우스는 투영된 TargetAimShape 직접 hit 또는 1920×1080 normalized aim grid의 aim point 24px 이내 후보를 사용; 2560×1440 output에서는 32 output px에 해당
 - 마우스 정렬은 shape 내부 → screen distance → player distance → TransferTargetId
 - gamepad는 오른쪽 스틱 0.20 이상에서 조준을 갱신하고 neutral 동안 마지막 유효 방향 유지
 - gamepad 신규 후보 18도, 현재 강조 대상 26도 유지, 새 후보가 4도 이상 정확할 때 교체

@@ -12,7 +12,7 @@
 - Ollama Cloud GLM 5.2와 MiniMax M3 비민감 연결 시험
 - Windows 10/11 x64 비출시 수직 데모
 - 키보드와 XInput 게임패드 지원, 마우스는 UI 및 조준 입력에 사용 가능
-- 16:9, 1920×1080 출력 기준, 창 모드/전체 화면 전환
+- 16:9, 2560×1440 출력 기준, 창 모드/전체 화면 전환 — 2026-08-24 후속 사용자 승인으로 기존 1920×1080 기준 대체
 - 60 FPS, 물리 고정 간격 1/60초
 - Unity Analytics, Ads, Cloud, Diagnostics 기본 비활성
 - 기준 태그, Unity `.gitignore`, `.gitattributes`, LFS 정책, main 강제 푸시·삭제 금지

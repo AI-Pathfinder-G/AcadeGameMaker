@@ -29,6 +29,7 @@
 - [2026-08-24 P1 프로필 원자 저장 순서 승인 기록](./approvals/2026-08-24-p1-profile-atomic-write-approval.md)
 - [2026-08-24 P1 프로필 로드 복구 승인 기록](./approvals/2026-08-24-p1-profile-load-recovery-approval.md)
 - [2026-08-24 OD-PLAT-001 Luna 독립 검토 — PASS](./verification/2026-08-24-od-plat-001-luna-review.md)
+- [2026-08-24 P1 18 PPU·2560×1440 출력 기준 승인 기록](./approvals/2026-08-24-p1-art-density-output-approval.md)
 
 ## 단일 진실원천
 

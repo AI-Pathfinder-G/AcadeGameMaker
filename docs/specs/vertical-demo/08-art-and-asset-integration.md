@@ -29,6 +29,8 @@
 
 후보 조사와 격리 보관은 구현이 아니므로 이 스펙이 Review인 동안 수행할 수 있다. Unity 임포트와 파생 작업은 이 스펙이 Approved이고 OD-ART-001이 해결된 뒤에만 시작한다.
 
+공통 환경 격자는 `18 pixels per unit`이며 18×18 source tile은 1×1 world unit에 native mapping한다. 다른 밀도의 후보는 automatic resample하지 않고 18픽셀 격자에 맞춘 padding·crop·redraw 계획을 등록부에 기록한다. 최종 output baseline은 16:9 2560×1440이며 pixel-perfect 내부 render canvas·camera framing은 `OD-ART-001`의 남은 결정이다.
+
 ## Requirements
 
 - **REQ-ART-001:** 환경은 황동 계량기, 배관, 거대한 추, 붉은 체납 도장, 청회색 콘크리트의 시각 언어를 사용한다.
@@ -38,6 +40,7 @@
 - **REQ-ART-005:** 캐릭터, 위험물, 전이 가능 대상은 배경과 구분되는 실루엣·대비·피드백을 가져야 한다.
 - **REQ-ART-006:** 격리 다운로드는 원본 파일명, 최종 다운로드 URL, 다운로드 시각, 파일 크기, SHA-256, 로컬 격리 경로를 기록해야 한다.
 - **REQ-ART-007:** `Needs clarification` 또는 `Rejected`인 후보는 다운로드·임포트하지 않으며, 격리 파일은 Unity나 기타 제작 도구에서 실행·열기·변환하지 않는다.
+- **REQ-ART-008:** 환경·타일·pixel-art VFX는 18 PPU 공통 격자를 사용하고 비18px source는 자동 보간 확대 없이 명시된 수작업 적응 계획을 가져야 하며 최종 출력은 2560×1440을 기준으로 해야 한다.
 
 ## Acceptance criteria
 
@@ -64,6 +67,12 @@
 - **Given** 라이선스 상태가 `Needs clarification` 또는 `Rejected`인 후보가 있고
 - **When** 확보 작업을 검수하면
 - **Then** 해당 후보의 격리 파일과 Unity 임포트 파일이 존재하지 않는다.
+
+### AC-ART-005 — 18 PPU와 출력 기준
+
+- **Given** native 18×18 tile, 16×16 후보, pixel-art VFX와 2560×1440 검수 화면이 있고
+- **When** import 설정·world grid·screen capture를 검사하면
+- **Then** native tile은 18 PPU에서 정확히 1×1 unit이고 16×16 후보는 자동 bilinear resample 없이 승인된 padding·crop·redraw 계획을 따르며 최종 출력은 2560×1440이다.
 
 ## Verification
 
