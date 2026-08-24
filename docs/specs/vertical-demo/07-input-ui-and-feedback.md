@@ -24,7 +24,7 @@ Gameplay는 `포인터 조준형 횡스크롤 액션`을 따른다. 키보드·�
 
 UI는 `Navigate`, `Point`, `Click`, `ScrollWheel`, `Submit`, `Cancel`을 사용한다. `Navigate`는 WASD·방향키와 gamepad D-pad·왼쪽 스틱, `Point`·`Click`·`ScrollWheel`은 mouse, `Submit`은 Enter·Space와 gamepad A, `Cancel`은 Esc와 gamepad B에 연결한다. `Pause`는 Gameplay의 Esc와 gamepad Start이며 `UIOnly`로 전환한다. UIOnly에서는 focus navigation을 사용하고 gamepad virtual mouse cursor는 만들지 않는다. Gameplay와 UI map은 동시에 활성화하지 않는다.
 
-Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니라 총구의 화면 공간 조준점을 나타내는 gameplay reticle이다. 유효 대상이 선택되면 reticle이 즉시 커지고 선택 대상에 형광 외곽선을 표시해 포착 여부를 동시에 알린다. UIOnly에서는 gameplay reticle과 대상 외곽선을 숨기고 일반 UI cursor를 표시한다. 정확한 확대율·팔레트·점멸/보간 값은 `OD-ART-001`에서 고정한다.
+Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니라 총구의 화면 공간 조준점을 나타내는 gameplay reticle이다. 유효 대상이 선택되면 reticle이 즉시 커지고 선택 대상에 형광 외곽선을 표시해 `조준 포착`을 알린다. 조준 포착은 공격 조준 상태이며 무게 전이 가능 여부와 분리한다. reticle 내부 ring은 청록 연속선=`전이 가능`, 주황 연속선=`Cooldown`, 적색 단절선=`거리 또는 LOS 차단`으로 나타낸다. 활성 전이 대상은 지속 이중 외곽선을 사용한다. UIOnly에서는 gameplay reticle과 대상 외곽선을 숨기고 일반 UI cursor를 표시한다. 정확한 확대율·RGB·발광 강도·점멸/보간 값은 `OD-ART-001`에서 고정한다.
 
 ### Inputs
 
@@ -48,6 +48,7 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 - 기본 공격과 전이는 같은 포인터·스틱 조준 의도를 사용한다. 선택 기술은 현재 활성 전이 대상을 사용하므로 별도 조준을 요구하지 않는다.
 - 마우스는 마지막 정수 screen pixel을 보관하고 다음 SimulationTick 시작에 직전 완료 tick의 `SimulationCameraPoseSnapshot`으로 변환한다. gamepad stick과 변환된 mouse 방향은 정규화 뒤 각 성분을 `Round(component×4096, AwayFromZero)`하고 -4096~4096으로 clamp한다.
 - Gameplay에서 mouse pointer 위치는 총구 조준 reticle로 표시하고 유효 포착 시 reticle 확대와 대상 형광 외곽선을 함께 표시한다. UIOnly는 gameplay reticle·대상 외곽선을 숨기고 일반 UI cursor를 사용한다. Cutscene·Transition·Ended 전환은 모든 gameplay pointer 피드백을 숨긴다.
+- 조준 포착은 공격 조준을 뜻하며 전이 가능 여부와 독립적으로 유지한다. 전이 상태는 reticle 내부 ring의 색과 선 형태로, 활성 전이는 대상의 지속 이중 외곽선으로 별도 표현한다.
 - Gameplay와 UI map은 동시에 활성화하지 않으며 gamepad 오른쪽 스틱은 OS cursor를 움직이지 않는다. UIOnly는 focus navigation만 사용하고 virtual mouse를 만들지 않는다.
 - UIOnly 최상위 일시정지 화면의 `Cancel`은 GameplayEnabled로 복귀하고, 하위 화면의 `Cancel`은 상위 화면으로 한 단계 돌아간다.
 
@@ -62,7 +63,7 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 - **REQ-UX-007:** Gameplay는 승인된 키보드·마우스와 XInput 역할 배치를 사용하고 JKL 전투·클릭 이동 없이 포인터·오른쪽 스틱 조준을 공격과 전이에 공통 적용해야 한다.
 - **REQ-UX-008:** `InputRouter`는 정수 mouse pixel 또는 `magnitude²≥0.04`의 오른쪽 스틱과 직전 `SimulationCameraPoseSnapshot`을 Q4096 `AimSample`로 만들어 다음 SimulationTick에 한 번 제공하고, 모드·생명주기 경계에서 aim·press buffer를 결정적으로 정리해야 한다.
 - **REQ-UX-009:** UI는 승인된 Navigate·Point·Click·ScrollWheel·Submit·Cancel·Pause binding, focus navigation과 map 상호 배제를 사용하고 gamepad virtual mouse를 만들지 않아야 한다.
-- **REQ-UX-010:** Gameplay의 mouse pointer는 총구 조준 reticle로 표시하고 유효 대상 포착 시 reticle 확대와 대상 형광 외곽선을 함께 표시하며, UIOnly와 잠긴 모드에서는 gameplay 조준 피드백을 제거해야 한다.
+- **REQ-UX-010:** Gameplay의 mouse pointer는 총구 조준 reticle로 표시하고 유효 대상 포착 시 reticle 확대와 대상 형광 외곽선을 함께 표시하며, 조준 포착을 전이 가능·Cooldown·거리/LOS 차단·활성 전이 상태와 서로 구분하고 UIOnly와 잠긴 모드에서는 gameplay 조준 피드백을 제거해야 한다.
 
 ## Acceptance criteria
 
@@ -116,9 +117,9 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 
 ### AC-UX-009 — 포인터 포착 피드백
 
-- **Given** 유효 후보가 없는 지점, 유효 대상, UIOnly와 입력 잠금 상태가 있고
+- **Given** 유효 후보가 없는 지점, 공격 조준 대상, 전이 가능·Cooldown·거리/LOS 차단·활성 전이 대상, UIOnly와 입력 잠금 상태가 있고
 - **When** mouse pointer가 각 상태를 순서대로 통과하면
-- **Then** Gameplay에서는 pointer 위치에 조준 reticle이 보이고 유효 포착에서만 reticle 확대와 해당 대상 형광 외곽선이 함께 나타나며 UIOnly·잠긴 모드에서는 둘 다 남지 않는다.
+- **Then** Gameplay에서는 pointer 위치에 조준 reticle이 보이고 조준 포착에서 reticle 확대와 형광 외곽선이 유지되며, 내부 ring은 전이 가능=청록 연속선·Cooldown=주황 연속선·거리/LOS 차단=적색 단절선, 활성 전이는 지속 이중 외곽선으로 서로 구분되고 UIOnly·잠긴 모드에서는 gameplay 조준 피드백이 남지 않는다.
 
 ## Verification
 
