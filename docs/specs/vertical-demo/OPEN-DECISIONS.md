@@ -6,7 +6,7 @@ P0은 관련 스펙의 Approved 전환과 구현을 막는다. P1은 단위 구�
 
 | ID | Priority | Owner | Decision required | Blocks |
 |---|---|---|---|---|
-| OD-ART-001 | P1 | Sol | 확정된 18 PPU·640×360 world/UI frame·camera values 안의 팔레트·윤곽선·URP 2D 조명과 reticle exact 규칙 | VD-07, VD-08, VD-09 |
+| OD-ART-001 | P1 | Sol | 확정된 32-color role structure 안의 exact HEX, 윤곽선·URP 2D 조명과 reticle exact 규칙 | VD-07, VD-08, VD-09 |
 | OD-SCENE-001 | P1 | Sol | 중간보스→선택→히로인 장면의 정확한 성공 경로와 실패 시 히로인 노출 여부 | VD-00, VD-06 |
 
 ## Resolved

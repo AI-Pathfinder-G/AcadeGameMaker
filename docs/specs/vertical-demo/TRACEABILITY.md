@@ -30,6 +30,7 @@
 | [2026-08-24 P1 predictive camera 승인](../../approvals/2026-08-24-p1-art-camera-behavior-approval.md) | fixed zoom, movement/fall anticipation, room clamp와 fixed-tick pixel snap | REQ-ART-011 | AC-ART-008 |
 | [2026-08-24 P1 camera values 승인](../../approvals/2026-08-24-p1-art-camera-values-approval.md) | dead-zone·look-ahead·transition·follow cap·snap lifecycle exact values | REQ-ART-011 | AC-ART-008 |
 | [2026-08-24 P1 UI scale 승인](../../approvals/2026-08-24-p1-art-ui-scale-approval.md) | logical pixel UI와 final-output SDF text·hit-area minimum | REQ-ART-012, REQ-UX-014 | AC-ART-009, AC-UX-013 |
+| [2026-08-24 P1 palette roles 승인](../../approvals/2026-08-24-p1-art-palette-roles-approval.md) | world 21색·semantic 11색 역할 분리와 reserved hue 사용 제한 | REQ-ART-013 | AC-ART-010 |
 
 ## Requirement coverage
 
@@ -43,7 +44,7 @@
 | VD-05 | REQ-RUN-001~006 | AC-RUN-001~004 | Review — persistence contract fixed; Luna review pending |
 | VD-06 | REQ-CHOICE-001~007 | AC-CHOICE-001~004 | Review — P0 resolved; scene detail waits on OD-SCENE-001 |
 | VD-07 | REQ-UX-001~014 | AC-UX-001~013; REQ-UX-001은 입력 맵 정적 검사 | Review — platform PASS; UI scale fixed; other P1 pending |
-| VD-08 | REQ-ART-001~012 | AC-ART-001~009 | Review — UI/camera contract fixed; remaining OD-ART-001 blocks import |
+| VD-08 | REQ-ART-001~013 | AC-ART-001~010 | Review — palette roles fixed; remaining OD-ART-001 blocks import |
 | VD-09 | REQ-PLAT-001~011 | AC-PLAT-001~009 | Review — OD-PLAT-001 Luna document review PASS; other P1 pending |
 
 모든 REQ는 구현 작업 계약과 코드 변경에, 모든 AC는 자동 테스트 또는 수동 검수 증적에 역참조되어야 한다.

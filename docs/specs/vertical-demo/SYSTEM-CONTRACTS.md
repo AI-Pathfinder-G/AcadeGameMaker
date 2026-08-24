@@ -137,6 +137,8 @@ UI presentation 좌표는 640×360 logical safe frame이며 gameplay rectangle�
 
 Gameplay mouse pointer는 총구의 화면 공간 조준 reticle이다. 유효 공격 조준 대상이 선택되면 reticle 확대와 해당 대상의 형광 외곽선이 함께 활성화된다. 이 조준 포착은 전이 가능 여부와 독립적이다. reticle 내부 ring은 청록 연속선=`TransferReady`, 주황 연속선=`Cooldown`, 적색 단절선=`RangeOrLineOfSightBlocked`를 나타내며 활성 전이 대상은 지속 이중 외곽선을 사용한다. `UIOnly`는 gameplay reticle과 target outline을 제거하고 일반 UI cursor를 표시하며 `Cutscene`, `Transition`, `Ended`는 gameplay pointer feedback을 표시하지 않는다.
 
+위 semantic hue family는 11색 accent palette에서만 공급하며 ordinary world decoration에 쓰지 않는다. TransferReady cyan, ActiveTransfer white, Cooldown amber, Blocked red, Extraction 2색, Solidarity 2색, heroine identity 3색은 독립 slot을 사용한다. Solidarity ivory와 heroine warm ivory도 공유하지 않으며 heroine identity hue를 reward·interactable indicator로 재사용하지 않는다. lighting은 role hue family를 다른 state hue로 바꾸지 않는다.
+
 ## Lifecycle order
 
 ### Room transition

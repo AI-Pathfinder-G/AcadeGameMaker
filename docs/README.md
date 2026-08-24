@@ -35,6 +35,7 @@
 - [2026-08-24 P1 이동 예측형 고정 배율 카메라 승인 기록](./approvals/2026-08-24-p1-art-camera-behavior-approval.md)
 - [2026-08-24 P1 카메라 추적 수치 승인 기록](./approvals/2026-08-24-p1-art-camera-values-approval.md)
 - [2026-08-24 P1 픽셀 UI·SDF 텍스트 배율 승인 기록](./approvals/2026-08-24-p1-art-ui-scale-approval.md)
+- [2026-08-24 P1 32색 역할 분리 팔레트 승인 기록](./approvals/2026-08-24-p1-art-palette-roles-approval.md)
 
 ## 단일 진실원천
 

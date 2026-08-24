@@ -41,6 +41,8 @@ offset을 더한 player focus가 current camera dead zone 밖일 때만 desired 
 
 HUD·menu layout은 640×360 logical safe frame을 사용하고 gameplay rectangle과 같은 integer scale·offset을 따른다. pixel frame·icon은 point filtering으로 확대한다. TextMeshPro SDF text는 logical position과 size를 사용하되 world upscale 뒤 final output resolution에서 render한다. logical font size는 minimum body 12px, standard body 14px, heading 18px이며 interactive hit area는 최소 24×24 logical px, safe margin은 frame edge에서 12 logical px다. 수직 데모는 user-adjustable UI scale을 제공하지 않는다.
 
+master palette는 world 21색과 semantic accent 11색의 32-color role set이다. 평균 장면의 목표 면적 비중은 cold blue-grey/charcoal 70%, brass/rust/concrete 20%, semantic accents 합계 10% 이하다. semantic accent는 ordinary background·prop decoration에 사용할 수 없다. 11개 accent slot은 TransferReady electric cyan, ActiveTransfer white, Cooldown amber orange, RangeOrLineOfSightBlocked debt-stamp red, Extraction crimson·ink violet, Solidarity pale cyan·ivory, heroine warm ivory·muted rose·gold에 하나씩 배정한다. Solidarity ivory와 heroine warm ivory는 서로 다른 색이다. heroine identity는 interactable·loot·reward indicator에 재사용하지 않는다. URP light는 value·saturation을 바꿀 수 있지만 semantic hue family를 다른 상태 family로 회전시키지 않는다. 모든 상태는 색과 함께 승인된 line shape·outline count를 사용한다.
+
 ## Requirements
 
 - **REQ-ART-001:** 환경은 황동 계량기, 배관, 거대한 추, 붉은 체납 도장, 청회색 콘크리트의 시각 언어를 사용한다.
@@ -55,6 +57,7 @@ HUD·menu layout은 640×360 logical safe frame을 사용하고 gameplay rectang
 - **REQ-ART-010:** 모든 지원 viewport는 중앙 고정 16:9 gameplay rectangle에 640×360의 최대 integer scale을 사용하고 비16:9 잔여 영역은 letterbox/pillarbox로 처리하며 world reveal·crop·stretch와 safe-frame 밖 UI를 금지해야 한다.
 - **REQ-ART-011:** gameplay camera는 6×4u dead zone, ±3u horizontal·+1.5/-3u vertical anticipation, 12-tick offset transition과 max 0.5u/tick follow를 사용하고 mouse-driven pan·dynamic zoom·dash snap 없이 room bounds와 1/18-unit fixed-tick pose를 지키며 승인 생명주기에서만 snap·anchor를 허용해야 한다.
 - **REQ-ART-012:** UI는 640×360 logical safe frame과 gameplay integer scale을 사용하고 pixel frame·icon은 point filtering, text는 final-output SDF로 렌더하며 승인된 font·hit-area·margin 최소값을 지켜야 한다.
+- **REQ-ART-013:** master palette는 world 21색·semantic 11색 역할을 분리하고 11개 의미 역할에 독립 slot을 배정하며 semantic accent의 장식 사용과 heroine identity 색의 reward/interactable 재사용을 금지하고 상태는 색 외 line·outline 신호를 함께 사용해야 한다.
 
 ## Acceptance criteria
 
@@ -111,6 +114,12 @@ HUD·menu layout은 640×360 logical safe frame을 사용하고 gameplay rectang
 - **Given** minimum·standard·heading text, pixel frame·icon, 24×24 hit target과 12px safe margin을 포함한 HUD·menu가 있고
 - **When** 640×360, 1280×720, 1920×1080, 2560×1440과 letterbox/pillarbox viewport에서 렌더하면
 - **Then** layout은 같은 640×360 logical 좌표이고 pixel asset은 1×·2×·3×·4× point scale, SDF text는 final output에서 선명하며 font size는 12/14/18 logical px 이상, hit area와 margin은 각각 24×24·12 logical px 이상이고 safe frame 밖 interactive UI가 없다.
+
+### AC-ART-010 — 팔레트 역할과 의미색 보호
+
+- **Given** hub·expedition·boss·choice·heroine 장면과 모든 target/skill/UI state의 색상 사용표가 있고
+- **When** 32색 role assignment와 representative capture를 검사하면
+- **Then** world 21색·semantic 11색 밖의 무승인 base color가 없고 11개 의미 역할이 서로 지정된 slot을 사용하며 semantic accent 면적은 평균 장면 10% 이하이고 일반 장식은 의미색을, reward/interactable은 heroine identity 색을 사용하지 않으며 각 gameplay state는 색 외 승인된 shape 신호를 함께 가진다.
 
 ## Verification
 

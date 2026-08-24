@@ -10,6 +10,8 @@ dead zone은 6×4u, 수평 선행은 최대 3u, 상승은 +1.5u, 빠른 낙하�
 
 UI는 640×360 logical safe frame을 사용한다. pixel frame·icon은 정수 point scale, text는 final-output SDF이며 logical font size는 최소 12px·본문 14px·제목 18px, hit area 24×24px, edge margin 12px 이상이다.
 
+팔레트는 world 21색과 semantic accent 11색으로 나눈다. 냉청회색·먹색이 주조이고 황동·녹·콘크리트가 보조다. 청록=전이 가능, 주황=쿨다운, 적색=차단이며 수탈 2색·연대 2색·히로인 정체 3색까지 독립 slot으로 분리한다. 연대의 상아색과 히로인의 따뜻한 상아색도 공유하지 않으며, 히로인 색은 보상·상호작용 표시에 재사용하지 않는다.
+
 무료 에셋은 수량보다 라이선스 추적과 통합 가능성을 먼저 본다. 출처, 제작자, 라이선스, 표기 의무, 수정 가능 여부, 검증일이 없는 후보는 프로젝트에 도입하지 않는다.
 
 ## Acquisition status
