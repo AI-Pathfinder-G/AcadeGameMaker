@@ -10,4 +10,6 @@
 
 전체 서사는 `기 1~2장 → 승 3~4장 → 전 5~7장 → 결 8장`으로 진행한다. 진엔딩에서는 NPC들이 허용한 범위만 자발적으로 공명해 절대 하방을 무효화한다. 도언은 유일한 아래를 없애는 `각자의 아래`를 얻고, 권능을 잃은 라겐과 직접 맞선다.
 
-**권위 문서:** [프로젝트 공통 언어](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/CONTEXT.md), [서사 캐논](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/canon/narrative-canon.md), [ADR-0020](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/adr/0020-heroine-bond-sidekick-and-true-ending.md), [ADR-0022](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/adr/0022-character-first-eight-chapter-narrative.md)
+8챕터 실제 대화 제안서는 Kimi K3 초안, GLM 5.2 1차 검수, Sol의 설정·분기·인물 음성 심사를 거쳤다. 현재는 사용자 승인 대기 중인 비캐논 검토본이며, 승인 전에는 구현 대사로 사용하지 않는다.
+
+**권위 문서:** [프로젝트 공통 언어](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/CONTEXT.md), [서사 캐논](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/canon/narrative-canon.md), [ADR-0020](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/adr/0020-heroine-bond-sidekick-and-true-ending.md), [ADR-0022](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/adr/0022-character-first-eight-chapter-narrative.md), [대화 검토본](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/proposals/dialogue/2026-08-24-sol-final-eight-chapter-dialogue.md)

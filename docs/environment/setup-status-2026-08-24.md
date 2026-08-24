@@ -11,6 +11,7 @@
 - Ollama 계정 인증 상태 확인
 - `glm-5.2:cloud` 비민감 고정 문장 호출 성공
 - `minimax-m3:cloud` 비민감 고정 문장 호출 성공
+- `kimi-k3:cloud` 모델 등록과 비민감 고정 문장 `KIMI_K3_OK` 호출 성공
 - 로컬 `qwen3.8:latest` 준비 상태 유지
 - Unity Hub 프로필 반영과 Unity Personal 라이선스 활성 표시를 UI에서 확인
 

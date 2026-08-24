@@ -19,6 +19,7 @@ Read [docs/README.md](./docs/README.md), [CONTEXT.md](./CONTEXT.md), the applica
 - Ollama Cloud GLM 5.2 (`glm-5.2:cloud`)
 - Ollama Cloud MiniMax M3 (`minimax-m3:cloud`)
 - Local Ollama Qwen3.8 (`qwen3.8:latest`)
+- Ollama Cloud Kimi K3 (`kimi-k3:cloud`)
 
 Do not assign project work to other models unless the user changes this roster.
 
@@ -41,6 +42,7 @@ Do not assign project work to other models unless the user changes this roster.
 - Asset cataloging, tagging, naming, metadata tables, and duplicate checks
 - Log summarization, file search summaries, test-case drafts, checklist generation, and formatting
 - Dialogue variants, room/event variants, backlog decomposition, and non-canonical research drafts
+- Full-scene dialogue drafts when explicitly assigned; GLM or GPT must review them and Sol alone may accept canonical text
 - Small utilities or data-transform proposals that do not alter core runtime contracts
 
 Cloud models must never receive secrets, credentials, personal data, or other sensitive local material.

@@ -52,6 +52,10 @@
 - [2026-08-24 NAR 유대도 수치·표시 상태 승인](./approvals/2026-08-24-nar-bond-state-approval.md)
 - [2026-08-24 NAR 세령 핵심 약속 승인](./approvals/2026-08-24-nar-core-promises-approval.md)
 - [2026-08-24 NAR 세령 이탈·재합류 규칙 승인](./approvals/2026-08-24-nar-heroine-departure-reentry-approval.md)
+- [2026-08-24 NAR 광오 5단계·인간성 연속 보존 승인](./approvals/2026-08-24-nar-arrogance-state-approval.md)
+- [2026-08-24 NAR 광오 전환·우선순위 승인](./approvals/2026-08-24-nar-arrogance-transition-approval.md)
+- [8챕터 실제 대화 — Sol 최종 검토본](./proposals/dialogue/2026-08-24-sol-final-eight-chapter-dialogue.md) — Kimi 초안·GLM 1차 검수·Sol 최종 심사, 사용자 승인 대기
+- [Kimi·GLM 검수와 Sol 수용 판단](./proposals/dialogue/2026-08-24-kimi-glm-screening-and-sol-decisions.md)
 - [독립 QA 마스터 플랜](./qa/qa-master-plan.md)
 - [Pre-Unity QA 아티팩트 작업 계약](./qa/pre-unity-qa-work-contract.md)
 - [2026-08-24 VD-11 Luna 독립 검증](./verification/2026-08-24-vd-11-luna-review.md)

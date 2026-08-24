@@ -14,6 +14,7 @@ Sol orchestrates the whole program and integrates every consequential decision. 
 | GLM 5.2 Cloud (`glm-5.2:cloud`) | Long-context summaries, alternatives, backlog decomposition, documentation drafts | Nothing canonical | Architecture, balance, public APIs, canon |
 | MiniMax M3 Cloud (`minimax-m3:cloud`) | Asset and screenshot triage, tags, dialogue and content variants | Nothing canonical | Art direction, character motivation, ending meaning |
 | Qwen3.8 Local (`qwen3.8:latest`) | File and log summaries, data conversion, test drafts, naming and metadata chores | Nothing canonical | Core code, schema changes, merges |
+| Kimi K3 Cloud (`kimi-k3:cloud`) | Full-scene dialogue drafts and long-form non-canonical content when explicitly assigned | Nothing canonical | Character motivation, chapter canon, acceptance, integration |
 
 ## Work gates
 
@@ -28,6 +29,7 @@ Sol orchestrates the whole program and integrates every consequential decision. 
 - **GLM 5.2 Cloud:** large-context requirement digestion, alternative lists, research-note normalization, backlog drafts.
 - **MiniMax M3 Cloud:** visual asset comparison, screenshot tagging, dialogue variations, room and enemy flavor variants.
 - **Qwen3.8 Local:** private local indexing, repetitive JSON/CSV work, asset manifests, log clustering, test matrices.
+- **Kimi K3 Cloud:** full-scene dialogue drafting from a Sol-approved synopsis; GLM or GPT reviews the draft and Sol alone decides whether any line is accepted.
 
 If a cloud model is unavailable, Qwen3.8 may replace only routine summarization and classification. Ambiguous unit work returns to Terra; orchestration, contract, or integration questions return to Sol; bounded verification may move to Luna.
 
@@ -43,3 +45,4 @@ Every unit uses the status and ID rules in [docs/specs/README.md](./specs/README
 - [Ollama GLM 5.2 Cloud](https://ollama.com/library/glm-5.2%3Acloud)
 - [Ollama MiniMax M3 Cloud](https://ollama.com/library/minimax-m3%3Acloud)
 - [Ollama Qwen3.8](https://ollama.com/library/qwen3.8)
+- [Ollama Kimi K3](https://ollama.com/library/kimi-k3%3Acloud)

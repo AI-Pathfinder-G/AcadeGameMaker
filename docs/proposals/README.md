@@ -14,6 +14,12 @@
 - [MiniMax 인물 중심안 편집 검토](./2026-08-24-minimax-character-first-reboot-review-and-sol-decisions.md) — draft/non-canonical
 - [MiniMax 상세 시놉시스 편집 검토](./2026-08-24-minimax-editorial-review-and-sol-decisions.md) — draft/non-canonical
 
+## Dialogue package under review
+
+- [8챕터 실제 대화 — Sol 최종 검토본](./dialogue/2026-08-24-sol-final-eight-chapter-dialogue.md) — Kimi draft → GLM first-pass review → Sol screening; pending user approval
+- [Kimi·GLM 검수와 Sol 수용 판단](./dialogue/2026-08-24-kimi-glm-screening-and-sol-decisions.md) — accepted/rejected changes and final branch corrections
+- `dialogue/kimi-k3-ch*-raw.md`와 `dialogue/glm-ch*-review.md` — non-canonical audit records
+
 ## Prompt records
 
-`glm-*prompt-2026-08-24.md`와 `minimax-*prompt-2026-08-24.md`는 외부 모델에게 제공한 비민감 작업 요청의 감사 기록이다. 단독으로 설계 권한을 갖지 않는다.
+`glm-*prompt-2026-08-24.md`, `minimax-*prompt-2026-08-24.md`, `dialogue/*prompt-2026-08-24.md`는 외부 모델에게 제공한 비민감 작업 요청의 감사 기록이다. 단독으로 설계 권한을 갖지 않는다.
