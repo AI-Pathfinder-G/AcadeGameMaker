@@ -22,4 +22,4 @@ P0 여섯 항목과 P1 이동·플랫폼 계약은 해결됐다. `Approved` 전�
 
 플랫폼 P1 입력·재지정·저장·복구 계약은 해결됐고 Luna 독립 문서 검토를 PASS했다. version 1 단일 `profile.json`을 원자 저장하며 시작 시 valid primary→valid previous→revision 0 default만 사용한다. stale temp와 손상·미지원 파일은 로드하지 않고 보존하며 binding만 불일치하면 진행 상태를 유지한 채 입력만 기본값으로 복구한다.
 
-미술 P1은 18 PPU 공통 환경 격자, 640×360 fixed frame과 정수 확대, movement/fall predictive fixed-zoom camera의 6×4u dead zone·look-ahead·12-tick transition까지 부분 확정됐다. UI scale, palette·outline·URP 2D lighting과 reticle exact values는 아직 열려 있다.
+미술 P1은 18 PPU, 640×360 fixed world/UI frame, predictive camera와 pixel UI·final-output SDF text 혼합 배율까지 부분 확정됐다. palette·outline·URP 2D lighting과 reticle exact values는 아직 열려 있다.

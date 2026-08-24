@@ -18,4 +18,4 @@
 
 ## Remaining boundary
 
-UI render scale, palette·outline·URP 2D lighting, reticle의 base/acquired pixel size·glow·animation을 확정하기 전에는 `OD-ART-001`을 해결 처리하지 않는다.
+UI render scale은 후속 승인으로 확정됐다. palette·outline·URP 2D lighting, reticle의 base/acquired pixel size·glow·animation을 확정하기 전에는 `OD-ART-001`을 해결 처리하지 않는다.

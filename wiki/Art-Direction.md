@@ -8,6 +8,8 @@
 
 dead zone은 6×4u, 수평 선행은 최대 3u, 상승은 +1.5u, 빠른 낙하는 -3u이며 offset은 12 tick에 전환된다. 일반 camera follow는 틱당 각 축 최대 0.5u이고 room 진입·respawn·teleport·anchor 경계에서만 즉시 snap한다.
 
+UI는 640×360 logical safe frame을 사용한다. pixel frame·icon은 정수 point scale, text는 final-output SDF이며 logical font size는 최소 12px·본문 14px·제목 18px, hit area 24×24px, edge margin 12px 이상이다.
+
 무료 에셋은 수량보다 라이선스 추적과 통합 가능성을 먼저 본다. 출처, 제작자, 라이선스, 표기 의무, 수정 가능 여부, 검증일이 없는 후보는 프로젝트에 도입하지 않는다.
 
 ## Acquisition status

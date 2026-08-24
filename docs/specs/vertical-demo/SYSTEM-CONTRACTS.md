@@ -133,6 +133,8 @@ gamepad `angleKey`는 원시 stick 값이 아니라 `aimVectorQ4096`을 dequanti
 
 UI는 모드와 권위 상태를 표현할 뿐 선택, 체력, 전이, 런 결과를 직접 변경하지 않는다.
 
+UI presentation 좌표는 640×360 logical safe frame이며 gameplay rectangle의 integer scale과 offset으로 output에 배치한다. pixel frame·icon은 point scale, text는 logical 12/14/18px role을 final-output SDF로 렌더한다. interactive hit rect는 최소 24×24 logical px이고 frame edge margin은 12 logical px다. UI scale은 profile setting이 아니다.
+
 Gameplay mouse pointer는 총구의 화면 공간 조준 reticle이다. 유효 공격 조준 대상이 선택되면 reticle 확대와 해당 대상의 형광 외곽선이 함께 활성화된다. 이 조준 포착은 전이 가능 여부와 독립적이다. reticle 내부 ring은 청록 연속선=`TransferReady`, 주황 연속선=`Cooldown`, 적색 단절선=`RangeOrLineOfSightBlocked`를 나타내며 활성 전이 대상은 지속 이중 외곽선을 사용한다. `UIOnly`는 gameplay reticle과 target outline을 제거하고 일반 UI cursor를 표시하며 `Cutscene`, `Transition`, `Ended`는 gameplay pointer feedback을 표시하지 않는다.
 
 ## Lifecycle order

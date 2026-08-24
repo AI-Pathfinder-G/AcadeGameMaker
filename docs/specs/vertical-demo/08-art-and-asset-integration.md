@@ -39,6 +39,8 @@ GameplayFollow의 axis-aligned dead zone은 camera center 기준 6×4u다. horiz
 
 offset을 더한 player focus가 current camera dead zone 밖일 때만 desired center를 해당 nearest dead-zone edge까지 이동한다. camera center는 desired center를 향해 axis-independent `MoveTowards` max 0.5u/tick을 적용한 뒤 authored room bounds clamp, 각 축 1/18u AwayFromZero snap 순서로 확정한다. room entry, respawn, teleport, authored anchor 진입·해제만 이 추적을 생략하고 same-tick snap할 수 있다. dash와 단순 direction change는 snap 사유가 아니다.
 
+HUD·menu layout은 640×360 logical safe frame을 사용하고 gameplay rectangle과 같은 integer scale·offset을 따른다. pixel frame·icon은 point filtering으로 확대한다. TextMeshPro SDF text는 logical position과 size를 사용하되 world upscale 뒤 final output resolution에서 render한다. logical font size는 minimum body 12px, standard body 14px, heading 18px이며 interactive hit area는 최소 24×24 logical px, safe margin은 frame edge에서 12 logical px다. 수직 데모는 user-adjustable UI scale을 제공하지 않는다.
+
 ## Requirements
 
 - **REQ-ART-001:** 환경은 황동 계량기, 배관, 거대한 추, 붉은 체납 도장, 청회색 콘크리트의 시각 언어를 사용한다.
@@ -52,6 +54,7 @@ offset을 더한 player focus가 current camera dead zone 밖일 때만 desired 
 - **REQ-ART-009:** gameplay world는 640×360 내부 pixel canvas를 사용해 2560×1440에서 nearest-neighbor 4배 정수 확대하고 18 PPU 기준 약 35.56×20 world-unit framing을 유지해야 한다.
 - **REQ-ART-010:** 모든 지원 viewport는 중앙 고정 16:9 gameplay rectangle에 640×360의 최대 integer scale을 사용하고 비16:9 잔여 영역은 letterbox/pillarbox로 처리하며 world reveal·crop·stretch와 safe-frame 밖 UI를 금지해야 한다.
 - **REQ-ART-011:** gameplay camera는 6×4u dead zone, ±3u horizontal·+1.5/-3u vertical anticipation, 12-tick offset transition과 max 0.5u/tick follow를 사용하고 mouse-driven pan·dynamic zoom·dash snap 없이 room bounds와 1/18-unit fixed-tick pose를 지키며 승인 생명주기에서만 snap·anchor를 허용해야 한다.
+- **REQ-ART-012:** UI는 640×360 logical safe frame과 gameplay integer scale을 사용하고 pixel frame·icon은 point filtering, text는 final-output SDF로 렌더하며 승인된 font·hit-area·margin 최소값을 지켜야 한다.
 
 ## Acceptance criteria
 
@@ -102,6 +105,12 @@ offset을 더한 player focus가 current camera dead zone 밖일 때만 desired 
 - **Given** dead-zone 6×4u의 안팎, X 속도 1.999/2.000/2.001, Y 속도 3.999/4.000/4.001과 -5.999/-6.000/-6.001, 걷기·방향 전환·상승·낙하·대시, mouse edge, room bound와 승인 snap lifecycle이 있고
 - **When** 같은 movement·mouse 기록을 30/60/144 render FPS에서 재생하면
 - **Then** horizontal target은 0/±3u, vertical target은 0/+1.5/-3u 경계에 맞고 offset은 band 전환 뒤 12 tick에 도달하며 camera는 dead-zone 보정 뒤 각 축 max 0.5u/tick·room clamp·1/18u snap 순서로 exact match하고 mouse·대시는 pan·zoom·snap을 만들지 않으며 room entry·respawn·teleport·anchor 진입/해제에서만 same-tick snap한다.
+
+### AC-ART-009 — UI 정수 배율과 텍스트 가독성
+
+- **Given** minimum·standard·heading text, pixel frame·icon, 24×24 hit target과 12px safe margin을 포함한 HUD·menu가 있고
+- **When** 640×360, 1280×720, 1920×1080, 2560×1440과 letterbox/pillarbox viewport에서 렌더하면
+- **Then** layout은 같은 640×360 logical 좌표이고 pixel asset은 1×·2×·3×·4× point scale, SDF text는 final output에서 선명하며 font size는 12/14/18 logical px 이상, hit area와 margin은 각각 24×24·12 logical px 이상이고 safe frame 밖 interactive UI가 없다.
 
 ## Verification
 

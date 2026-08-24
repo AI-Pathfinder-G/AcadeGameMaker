@@ -41,5 +41,6 @@ Sol이 해결된 `OD-PLAT-001`의 Luna 독립 검토를 마치고 `OD-ART-001`, 
 - P1 UI·runtime rebind와 versioned profile 원자 저장·복구 계약 사용자 승인 및 Luna 독립 문서 검토 PASS
 - P1 미술 18 PPU, 640×360 고정 16:9 frame, 최소 640×360 창과 2560×1440 4× 출력 사용자 승인; camera·UI scale·palette·lighting 결정 대기
 - P1 이동 예측형 fixed-zoom camera와 dead-zone·look-ahead·transition 수치 사용자 승인
+- P1 640×360 pixel UI·final-output SDF text 혼합 배율과 font·hit-area·margin minimum 사용자 승인
 
 > 권위 문서: [본격 개발 착수 전 준비도 점검](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/project-readiness-audit-2026-08-24.md)

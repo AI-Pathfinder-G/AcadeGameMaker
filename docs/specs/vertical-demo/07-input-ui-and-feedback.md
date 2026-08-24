@@ -24,6 +24,8 @@ Gameplay는 `포인터 조준형 횡스크롤 액션`을 따른다. 키보드·�
 
 UI는 `Navigate`, `Point`, `Click`, `ScrollWheel`, `Submit`, `Cancel`을 사용한다. `Navigate`는 WASD·방향키와 gamepad D-pad·왼쪽 스틱, `Point`·`Click`·`ScrollWheel`은 mouse, `Submit`은 Enter·Space와 gamepad A, `Cancel`은 Esc와 gamepad B에 연결한다. `Pause`는 Gameplay의 Esc와 gamepad Start이며 `UIOnly`로 전환한다. UIOnly에서는 focus navigation을 사용하고 gamepad virtual mouse cursor는 만들지 않는다. Gameplay와 UI map은 동시에 활성화하지 않는다.
 
+UI layout coordinate는 640×360 logical safe frame이며 pixel frame·icon과 hit rect는 gameplay integer scale·offset을 따른다. final-output SDF text는 같은 logical layout에 결합되고 minimum/standard/heading 12/14/18px, interactive area 24×24px, edge margin 12px minimum을 사용한다. 수직 데모에는 UI scale setting이 없다.
+
 runtime rebind는 keyboard의 Move composite 네 방향과 모든 Gameplay button action, mouse의 Attack·Transfer button, gamepad의 Gameplay button action에 허용한다. gamepad Move·Aim stick control과 mouse Point axis는 고정한다. UI Navigate·Submit·Cancel과 Pause의 Esc·Start 기본 binding은 안전 복구 경로이므로 제거하거나 덮어쓸 수 없다. Pause에는 추가 binding만 허용한다. stick 축 반전은 binding override가 아닌 별도 설정이다.
 
 같은 control scheme의 Gameplay map 안에서 exact duplicate binding은 허용하지 않는다. 이미 사용 중인 control을 지정하면 현재 action과 교환할지 확인하고, 승인 시 두 binding을 원자적으로 맞바꾸며 취소 시 어느 쪽도 바꾸지 않는다. 자동 삭제·무통지 덮어쓰기는 금지한다. Gameplay와 UI map은 상호 배타적이므로 map 사이의 동일 control은 충돌이 아니다. protected UI·Pause 기본 binding과의 교환은 거부한다. chord·multi-key binding은 수직 데모에서 지원하지 않는다.
@@ -72,6 +74,7 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 - **REQ-UX-011:** runtime rebind는 keyboard Move와 Gameplay button, mouse Attack·Transfer, gamepad Gameplay button에만 허용하고 gamepad Move·Aim stick, mouse Point axis와 안전 UI·Pause 기본 binding을 보호하며 stick 축 반전은 별도 설정으로 처리해야 한다.
 - **REQ-UX-012:** 같은 control scheme의 Gameplay binding 충돌은 확인 뒤 원자 교환하거나 취소 시 무변경으로 처리하고 중복·자동 삭제·무통지 덮어쓰기와 protected binding 교환을 금지하며 map 사이 공유는 허용해야 한다.
 - **REQ-UX-013:** mouse aim은 중앙 16:9 gameplay rectangle을 기준으로 변환하고 여백에서는 edge-clamped aim direction만 유지하며 target acquisition·Attack·Transfer·UI action을 발생시키지 않아야 한다.
+- **REQ-UX-014:** HUD·menu는 640×360 logical safe frame, 12/14/18px SDF text와 최소 24×24px hit area·12px edge margin을 사용하고 gameplay rectangle의 integer scale 밖에 interactive UI를 두지 않아야 한다.
 
 ## Acceptance criteria
 
@@ -146,6 +149,12 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 - **Given** letterbox와 pillarbox가 있는 viewport, gameplay edge 안팎의 mouse pixel과 target이 있고
 - **When** pointer 이동과 Attack·Transfer·Click을 재생하면
 - **Then** gameplay 안에서는 기존 target 계약이 동작하고 여백에서는 aim direction만 nearest edge로 clamp되며 target ID와 Attack·Transfer·UI Click command가 생성되지 않는다.
+
+### AC-UX-013 — UI 논리 좌표와 hit area
+
+- **Given** keyboard/mouse와 gamepad focus로 조작하는 HUD·menu 및 지원 viewport가 있고
+- **When** minimum font·button·edge placement를 각 integer scale에서 검사·조작하면
+- **Then** text·hit area·margin은 승인 최소값보다 작지 않고 같은 logical element가 같은 safe-frame 좌표에 있으며 bar 영역 Click·focus target과 UI scale option이 없다.
 
 ## Verification
 

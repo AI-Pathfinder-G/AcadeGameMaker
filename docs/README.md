@@ -34,6 +34,7 @@
 - [2026-08-24 P1 고정 16:9 화면 프레임 승인 기록](./approvals/2026-08-24-p1-art-aspect-frame-approval.md)
 - [2026-08-24 P1 이동 예측형 고정 배율 카메라 승인 기록](./approvals/2026-08-24-p1-art-camera-behavior-approval.md)
 - [2026-08-24 P1 카메라 추적 수치 승인 기록](./approvals/2026-08-24-p1-art-camera-values-approval.md)
+- [2026-08-24 P1 픽셀 UI·SDF 텍스트 배율 승인 기록](./approvals/2026-08-24-p1-art-ui-scale-approval.md)
 
 ## 단일 진실원천
 
