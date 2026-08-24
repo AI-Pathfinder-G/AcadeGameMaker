@@ -16,4 +16,4 @@
 
 ## Remaining boundary
 
-Pixel Perfect Camera의 internal render canvas, camera framing·crop, palette·outline, URP 2D lighting과 reticle의 정확한 pixel size·glow를 확정하기 전에는 `OD-ART-001`을 해결 처리하지 않는다.
+Pixel Perfect Camera의 internal render canvas는 후속 승인으로 640×360에 확정됐다. aspect/camera framing·crop, palette·outline, URP 2D lighting과 reticle의 정확한 pixel size·glow를 확정하기 전에는 `OD-ART-001`을 해결 처리하지 않는다.

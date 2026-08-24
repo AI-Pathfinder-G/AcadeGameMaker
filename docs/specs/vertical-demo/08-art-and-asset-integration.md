@@ -29,7 +29,7 @@
 
 후보 조사와 격리 보관은 구현이 아니므로 이 스펙이 Review인 동안 수행할 수 있다. Unity 임포트와 파생 작업은 이 스펙이 Approved이고 OD-ART-001이 해결된 뒤에만 시작한다.
 
-공통 환경 격자는 `18 pixels per unit`이며 18×18 source tile은 1×1 world unit에 native mapping한다. 다른 밀도의 후보는 automatic resample하지 않고 18픽셀 격자에 맞춘 padding·crop·redraw 계획을 등록부에 기록한다. 최종 output baseline은 16:9 2560×1440이며 pixel-perfect 내부 render canvas·camera framing은 `OD-ART-001`의 남은 결정이다.
+공통 환경 격자는 `18 pixels per unit`이며 18×18 source tile은 1×1 world unit에 native mapping한다. 다른 밀도의 후보는 automatic resample하지 않고 18픽셀 격자에 맞춘 padding·crop·redraw 계획을 등록부에 기록한다. Pixel Perfect Camera reference resolution과 gameplay 내부 render canvas는 640×360이며 nearest-neighbor integer scale로 2560×1440에서 정확히 4배 확대한다. 이 frame은 약 35.56×20 world units를 표시한다. aspect 처리와 camera follow/framing은 `OD-ART-001`의 남은 결정이다.
 
 ## Requirements
 
@@ -41,6 +41,7 @@
 - **REQ-ART-006:** 격리 다운로드는 원본 파일명, 최종 다운로드 URL, 다운로드 시각, 파일 크기, SHA-256, 로컬 격리 경로를 기록해야 한다.
 - **REQ-ART-007:** `Needs clarification` 또는 `Rejected`인 후보는 다운로드·임포트하지 않으며, 격리 파일은 Unity나 기타 제작 도구에서 실행·열기·변환하지 않는다.
 - **REQ-ART-008:** 환경·타일·pixel-art VFX는 18 PPU 공통 격자를 사용하고 비18px source는 자동 보간 확대 없이 명시된 수작업 적응 계획을 가져야 하며 최종 출력은 2560×1440을 기준으로 해야 한다.
+- **REQ-ART-009:** gameplay world는 640×360 내부 pixel canvas를 사용해 2560×1440에서 nearest-neighbor 4배 정수 확대하고 18 PPU 기준 약 35.56×20 world-unit framing을 유지해야 한다.
 
 ## Acceptance criteria
 
@@ -73,6 +74,12 @@
 - **Given** native 18×18 tile, 16×16 후보, pixel-art VFX와 2560×1440 검수 화면이 있고
 - **When** import 설정·world grid·screen capture를 검사하면
 - **Then** native tile은 18 PPU에서 정확히 1×1 unit이고 16×16 후보는 자동 bilinear resample 없이 승인된 padding·crop·redraw 계획을 따르며 최종 출력은 2560×1440이다.
+
+### AC-ART-006 — 내부 캔버스와 정수 확대
+
+- **Given** 18 PPU pixel-art 검수 장면과 1280×720, 1920×1080, 2560×1440 viewport가 있고
+- **When** 각 viewport에서 같은 simulation camera pose를 렌더하면
+- **Then** gameplay world의 logical canvas는 모두 640×360이고 각각 nearest-neighbor 2×·3×·4× 정수 확대되며 2560×1440 frame은 약 35.56×20 world units이고 pixel edge에 fractional sampling이 없다.
 
 ## Verification
 
