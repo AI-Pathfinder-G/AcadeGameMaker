@@ -23,6 +23,7 @@
 - [2026-08-24 P1 포인터 조준 조작 승인 기록](./approvals/2026-08-24-p1-pointer-control-approval.md)
 - [2026-08-24 P1 포인터·스틱 타겟 판정 승인 기록](./approvals/2026-08-24-p1-targeting-approval.md)
 - [2026-08-24 P1 UI·조준 피드백 승인 기록](./approvals/2026-08-24-p1-ui-and-aim-feedback-approval.md)
+- [2026-08-24 P1 런타임 입력 재지정 범위 승인 기록](./approvals/2026-08-24-p1-rebinding-scope-approval.md)
 
 ## 단일 진실원천
 

@@ -20,4 +20,4 @@
 
 P0 여섯 항목과 P1 이동 계약은 해결됐다. `Approved` 전환에는 남은 P1 세 항목, 소비 스펙 간 계약 일치, Luna 독립 검토가 필요하다.
 
-플랫폼 P1에서는 Input System 1.20.0 단독, 생성 C# wrapper, 단일 InputRouter와 Gameplay/UI 두 map, 기본 UI binding·focus navigation, 포인터 조준 역할 배치와 mouse/gamepad 타겟 판정·포착 피드백이 부분 확정됐다. 리바인딩과 저장 계약은 아직 열려 있다.
+플랫폼 P1에서는 Input System 1.20.0 단독, 생성 C# wrapper, 단일 InputRouter와 Gameplay/UI 두 map, 기본 UI binding·focus navigation, 포인터 조준 역할 배치와 mouse/gamepad 타겟 판정·포착 피드백, runtime rebind 허용 범위가 부분 확정됐다. binding 충돌과 저장 계약은 아직 열려 있다.

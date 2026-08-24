@@ -46,6 +46,8 @@
 
 `UI` map은 `Navigate`, `Point`, `Click`, `ScrollWheel`, `Submit`, `Cancel`을 가진다. Navigate는 WASD·방향키와 XInput D-pad·왼쪽 스틱, Point·Click·ScrollWheel은 mouse, Submit은 Enter·Space와 gamepad A, Cancel은 Esc와 gamepad B다. Gameplay의 `Pause`는 Esc와 gamepad Start다. 두 map은 상호 배타적이며 gamepad virtual mouse는 사용하지 않는다.
 
+runtime binding override는 keyboard Move composite와 Gameplay button, mouse Attack·Transfer button, gamepad Gameplay button에만 허용한다. gamepad Move·Aim stick과 mouse Point axis는 override 대상이 아니다. UI Navigate·Submit·Cancel과 Pause의 Esc·Start 기본 binding은 제거·대체할 수 없는 안전 경로이며 Pause는 추가 binding만 받을 수 있다. stick 축 반전은 binding override 밖의 설정 값이다.
+
 ## Public contracts
 
 ### Transfer target descriptor
@@ -190,7 +192,7 @@ Gameplay mouse pointer는 총구의 화면 공간 조준 reticle이다. 유효 �
 
 ## Remaining approval blockers
 
-- runtime binding override·충돌 정책: `OD-PLAT-001`
+- runtime binding override 충돌 정책: `OD-PLAT-001`
 - 저장 schema version, JSON 필드, 손상 복구 정책: `OD-PLAT-001`
 
 P0 공개 계약과 이동 계약은 해결됐다. 위 P1과 모든 소비 스펙의 일치 검토가 끝나기 전에는 이 문서를 Approved로 전환하지 않는다.
