@@ -21,6 +21,7 @@
 | [2026-08-24 P1 UI·조준 피드백 승인](../../approvals/2026-08-24-p1-ui-and-aim-feedback-approval.md) | UI 기본 binding·focus navigation과 mouse 총구 reticle·포착 강조 | REQ-UX-009~010 | AC-UX-008~009 |
 | [2026-08-24 P1 재지정 범위 승인](../../approvals/2026-08-24-p1-rebinding-scope-approval.md) | Gameplay runtime rebind 허용 범위와 안전 UI·Pause binding 보호 | REQ-UX-011 | AC-UX-010 |
 | [2026-08-24 P1 재지정 충돌 정책 승인](../../approvals/2026-08-24-p1-rebinding-conflict-approval.md) | 같은 Gameplay scheme 충돌의 확인 교환·취소와 중복 방지 | REQ-UX-012 | AC-UX-011 |
+| [2026-08-24 P1 프로필 스키마 승인](../../approvals/2026-08-24-p1-profile-schema-approval.md) | canonical 단일 profile.json의 version 1 field·integrity·비범위 | REQ-PLAT-008 | AC-PLAT-006 |
 
 ## Requirement coverage
 
@@ -35,6 +36,6 @@
 | VD-06 | REQ-CHOICE-001~007 | AC-CHOICE-001~004 | Review — P0 resolved; scene detail waits on OD-SCENE-001 |
 | VD-07 | REQ-UX-001~012 | AC-UX-001~011; REQ-UX-001은 입력 맵 정적 검사 | Review — rebind contract fixed; override persistence waits on OD-PLAT-001 |
 | VD-08 | REQ-ART-001~007 | AC-ART-001~004 | Review — acquisition allowed; import blocked by OD-ART-001 |
-| VD-09 | REQ-PLAT-001~007 | AC-PLAT-001~005 | Draft — input architecture and P0 persistence boundary fixed; OD-PLAT-001 remains |
+| VD-09 | REQ-PLAT-001~008 | AC-PLAT-001~006 | Draft — profile schema fixed; atomic recovery waits on OD-PLAT-001 |
 
 모든 REQ는 구현 작업 계약과 코드 변경에, 모든 AC는 자동 테스트 또는 수동 검수 증적에 역참조되어야 한다.

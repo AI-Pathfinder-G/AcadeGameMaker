@@ -28,4 +28,4 @@
 
 ## Remaining boundary
 
-runtime binding override 범위·충돌 정책은 후속 승인으로 확정됐다. 저장 schema·원자 저장·손상 복구를 확정하기 전에는 `OD-PLAT-001`을 해결 처리하지 않는다.
+runtime binding override와 저장 schema는 후속 승인으로 확정됐다. profile 파일 경로·원자 저장·손상 복구를 확정하기 전에는 `OD-PLAT-001`을 해결 처리하지 않는다.

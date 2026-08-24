@@ -181,7 +181,7 @@ Gameplay mouse pointer는 총구의 화면 공간 조준 reticle이다. 유효 �
 | 설정, 입력 바인딩, 튜토리얼 확인 | 보존 |
 | 확정 선택, 해금 기술, 완료 분기 기록 | 승인된 commit 뒤 보존 |
 
-활성 런은 저장하거나 이어 하지 않는다. 앱 재시작은 거점의 새 원정 상태로 복구한다. 실제 JSON version, 필드명, 손상 복구는 OD-PLAT-001에서 고정한다.
+활성 런은 저장하거나 이어 하지 않는다. 앱 재시작은 거점의 새 원정 상태로 복구한다. 영구 상태는 VD-09의 schemaVersion 1 단일 `profile.json`에 settings·binding override·tutorial·확정 progression만 canonical JSON으로 기록하고 payload hash를 검증한다. 알 수 없는 field를 추측해 gameplay 상태로 채택하지 않는다.
 
 ## Cross-system invariants
 
@@ -194,6 +194,6 @@ Gameplay mouse pointer는 총구의 화면 공간 조준 reticle이다. 유효 �
 
 ## Remaining approval blockers
 
-- 저장 schema version, JSON 필드, 손상 복구 정책: `OD-PLAT-001`
+- 저장 경로, 원자 저장 순서와 손상 복구 정책: `OD-PLAT-001`
 
 P0 공개 계약과 이동 계약은 해결됐다. 위 P1과 모든 소비 스펙의 일치 검토가 끝나기 전에는 이 문서를 Approved로 전환하지 않는다.

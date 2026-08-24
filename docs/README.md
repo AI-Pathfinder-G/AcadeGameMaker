@@ -25,6 +25,7 @@
 - [2026-08-24 P1 UI·조준 피드백 승인 기록](./approvals/2026-08-24-p1-ui-and-aim-feedback-approval.md)
 - [2026-08-24 P1 런타임 입력 재지정 범위 승인 기록](./approvals/2026-08-24-p1-rebinding-scope-approval.md)
 - [2026-08-24 P1 입력 재지정 충돌 정책 승인 기록](./approvals/2026-08-24-p1-rebinding-conflict-approval.md)
+- [2026-08-24 P1 단일 프로필 저장 스키마 승인 기록](./approvals/2026-08-24-p1-profile-schema-approval.md)
 
 ## 단일 진실원천
 

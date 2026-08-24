@@ -36,6 +36,32 @@ Unity 전역 설정, 패키지 잠금, 입력·표시·성능 기준, 버전 저
 - 저장 payload에는 활성 scene object 또는 런타임 Component 참조가 없다.
 - 비정상 저장은 기존 정상 snapshot을 훼손하지 않고 플레이 가능한 거점 상태로 복구한다.
 
+### Versioned profile schema
+
+영구 상태는 UTF-8 JSON 단일 snapshot `profile.json`에만 기록한다. object property는 아래 schema 순서, 배열은 비어 있지 않은 ID의 ordinal 오름차순·중복 제거, 개행은 LF로 canonicalize한다. `payloadSha256`은 `integrity` object를 제외한 canonical payload byte의 lowercase SHA-256이며 보안 서명이 아니라 손상 검출 값이다.
+
+| Path | Type and contract |
+|---|---|
+| `schemaVersion` | integer `1` |
+| `profileRevision` | integer `>=0`; 성공한 저장마다 직전 정상 snapshot보다 1 증가 |
+| `settings.windowMode` | `Windowed` 또는 `BorderlessFullscreen` |
+| `settings.masterVolumeQ1000` | integer `0..1000` |
+| `settings.musicVolumeQ1000` | integer `0..1000` |
+| `settings.sfxVolumeQ1000` | integer `0..1000` |
+| `settings.gamepadAimInvertX/Y` | boolean; binding override와 분리 |
+| `input.inputActionsAssetId` | 비어 있지 않은 저작 stable ID; 현재 `GameInput.inputactions`와 exact match |
+| `input.bindingSchemaVersion` | integer `1` |
+| `input.bindingOverridesJson` | Input System이 생성한 override JSON string; override가 없으면 빈 문자열 |
+| `tutorial.confirmedIds` | sorted unique string array |
+| `progression.lastOfferedSeed` | null 또는 `101`, `202`, `303`, `404` |
+| `progression.committedChoice` | null, `Extraction`, `Solidarity` |
+| `progression.consentState` | `RefusesOwnershipTransfer`, `OffersScopedResonance`, `ResonanceLender`, `ImprintSevered` |
+| `progression.grantedSkill` | null, `CompressionVerdict`, `CommonReferencePlane` |
+| `progression.completedBranches` | sorted unique array of `Extraction`, `Solidarity` |
+| `integrity.payloadSha256` | 64-character lowercase hexadecimal string |
+
+wall-clock 저장 시각은 payload에 넣지 않고 진단 로그에만 기록한다. 알 수 없는 field를 gameplay 의미로 추측하지 않는다. 활성 런·위치·속도·체력·방·적·보상·원정 자산·활성 전이와 runtime object reference는 schema에 존재할 수 없다.
+
 ## Requirements
 
 - **REQ-PLAT-001:** Unity 6.3 LTS, C#, URP 2D로 Windows PC 데모를 만든다.
@@ -45,6 +71,7 @@ Unity 전역 설정, 패키지 잠금, 입력·표시·성능 기준, 버전 저
 - **REQ-PLAT-005:** 편집기와 Windows 빌드에서 같은 게임플레이 결과와 상태 전이를 재현한다.
 - **REQ-PLAT-006:** 활성 런은 저장하거나 재개하지 않고, 설정·입력 바인딩·튜토리얼 확인과 확정된 선택·해금 기술·완료 분기만 각 승인 시점에 원자 저장한다.
 - **REQ-PLAT-007:** `com.unity.inputsystem` 1.20.0을 고정하고 Active Input Handling은 Input System Package (New)만 사용하며 구형 Input Manager와 Both 모드를 금지한다.
+- **REQ-PLAT-008:** 영구 상태는 schemaVersion 1의 canonical 단일 `profile.json`에만 기록하고 settings·input override·tutorial·확정 progression과 integrity hash만 포함하며 활성 런 상태를 배제해야 한다.
 
 ## Acceptance criteria
 
@@ -78,9 +105,15 @@ Unity 전역 설정, 패키지 잠금, 입력·표시·성능 기준, 버전 저
 - **When** 입력 의존성과 Active Input Handling을 검사하면
 - **Then** `com.unity.inputsystem`은 정확히 1.20.0이고 신규 Input System만 활성화되며 레거시 입력 API 의존성이 없다.
 
+### AC-PLAT-006 — 단일 프로필 스키마와 canonical payload
+
+- **Given** 같은 보존 상태를 다른 삽입 순서로 만든 두 snapshot과 활성 런 상태가 있고
+- **When** 각각 `profile.json`으로 직렬화해 field·byte·hash를 비교하면
+- **Then** 두 파일은 schema 순서·sorted unique array·LF·UTF-8과 payloadSha256가 exact match하고 승인 필드만 존재하며 활성 런·runtime reference·wall-clock 시각은 포함되지 않는다.
+
 ## Verification
 
-프로젝트 설정 스냅샷, package lock, 빌드 로그, 성능 캡처, 저장 호환성 테스트로 검증한다. Input System 패키지·map 수·Gameplay/UI 기본 binding과 runtime rebind 범위·충돌 정책은 확정됐지만 구체 저장 스키마는 `OD-PLAT-001` 해결 전까지 미승인이다.
+프로젝트 설정 스냅샷, package lock, 빌드 로그, 성능 캡처, canonical 직렬화와 저장 호환성 테스트로 검증한다. Input 계약과 단일 version 1 profile schema는 확정됐지만 파일 경로·원자 저장·손상 복구 순서는 `OD-PLAT-001` 해결 전까지 미승인이다.
 
 ## Traceability
 
