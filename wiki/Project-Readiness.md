@@ -39,10 +39,11 @@ Sol이 해결된 `OD-PLAT-001`의 Luna 독립 검토를 마치고 `OD-ART-001`, 
 - P1 포인터 조준형 횡스크롤 조작과 키보드·마우스/XInput 역할 배치 사용자 승인 완료
 - P1 마우스 24px 직접 포인터와 gamepad 18° 획득·26° 유지 타겟 판정 사용자 승인 완료
 - P1 UI·runtime rebind와 versioned profile 원자 저장·복구 계약 사용자 승인 및 Luna 독립 문서 검토 PASS
-- P1 미술 18 PPU, 640×360 고정 16:9 frame, 최소 640×360 창과 2560×1440 4× 출력 사용자 승인; camera·UI scale·palette·lighting 결정 대기
+- P1 미술 18 PPU, 640×360 고정 16:9 frame, 최소 640×360 창과 2560×1440 4× 출력 사용자 승인
 - P1 이동 예측형 fixed-zoom camera와 dead-zone·look-ahead·transition 수치 사용자 승인
 - P1 640×360 pixel UI·final-output SDF text 혼합 배율과 font·hit-area·margin minimum 사용자 승인
 - P1 world 21색·semantic 11색 역할 분리와 32개 exact sRGB HEX 사용자 승인
 - P1 logical pixel 윤곽선의 정상·조준 포착·활성 전이 색·두께·우선순위 사용자 승인
+- P1 URP 2D world/actor layer, 장면 preset, local light·shadow cap와 semantic unlit 규칙 사용자 승인
 
 > 권위 문서: [본격 개발 착수 전 준비도 점검](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/project-readiness-audit-2026-08-24.md)

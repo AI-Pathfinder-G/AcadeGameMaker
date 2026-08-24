@@ -43,6 +43,10 @@ HUD·menu layout은 640×360 logical safe frame을 사용하고 gameplay rectang
 
 master palette는 world 21색과 semantic accent 11색의 32-color role set이다. 평균 장면의 목표 면적 비중은 cold blue-grey/charcoal 70%, brass/rust/concrete 20%, semantic accents 합계 10% 이하다. semantic accent는 ordinary background·prop decoration에 사용할 수 없다. accent slot은 TransferReady electric cyan, AimAcquired·ActiveTransfer 공통 white, Cooldown amber orange, RangeOrLineOfSightBlocked debt-stamp red, Extraction crimson·ink violet, Solidarity pale cyan·ivory, heroine warm ivory·muted rose·gold에 배정한다. Solidarity ivory와 heroine warm ivory는 서로 다른 색이다. heroine identity는 interactable·loot·reward indicator에 재사용하지 않는다. URP light는 value·saturation을 바꿀 수 있지만 semantic hue family를 다른 상태 family로 회전시키지 않는다. 모든 상태는 색과 함께 승인된 line shape·outline count를 사용한다.
 
+URP 2D sorting/light contract는 `BackDecor`, `WorldGeometry`, `Actors`, `GameplaySemanticFX`, `UI`, `FrontOccluder`를 사용한다. BackDecor는 world global+environment local, WorldGeometry는 같은 조명+hard shadow, Actors는 별도 actor global+제한된 environment local, FrontOccluder는 world 조명을 받는다. GameplaySemanticFX와 UI는 environment light의 영향을 받지 않는다. gameplay global light는 Hub world W11 `#CAC9B8` 0.85/actor W11 1.00, Expedition world W10 `#A9B0A7` 0.75/actor W11 0.95, Boss world W09 `#899693` 0.65/actor W10 0.90을 하한으로 사용한다. gameplay 중 하한 아래로 내리지 않고 cutscene 변경은 control 반환 전에 복구한다.
+
+warm fixture는 W18 `#A47E43`, max intensity 1.10, radius 5u이고 cold work light는 W10, max 0.85, radius 7u다. warning fixture는 semantic red 대신 W16 `#92563A`를 사용한다. 한 output pixel의 environment local overlap은 max 3, combined contribution은 1.35 cap이다. decorative modulation은 base intensity ±8%, max 3Hz이며 full-off blink와 semantic hue 모방을 금지한다. WorldGeometry·large machinery만 hard pixel-aligned shadow를 cast하고 maximum attenuation은 55%다. actor·enemy·transfer target은 shadow로 완전히 사라질 수 없다. vertical demo는 sprite normal map과 soft shadow blur를 사용하지 않는다. semantic core pixel은 unlit approved HEX를 유지하며 emission은 hue rotation 없이 max 1.25다.
+
 | ID | Role | sRGB HEX |
 |---|---|---|
 | W01 | Void Ink | `#090D12` |
@@ -94,6 +98,7 @@ master palette는 world 21색과 semantic accent 11색의 32-color role set이�
 - **REQ-ART-012:** UI는 640×360 logical safe frame과 gameplay integer scale을 사용하고 pixel frame·icon은 point filtering, text는 final-output SDF로 렌더하며 승인된 font·hit-area·margin 최소값을 지켜야 한다.
 - **REQ-ART-013:** master palette는 승인된 21 world·11 semantic sRGB HEX mapping과 지정된 역할 공유만 사용하며 semantic accent의 장식 사용과 heroine identity 색의 reward/interactable 재사용을 금지하고 상태는 색 외 line·outline 신호를 함께 사용해야 한다.
 - **REQ-ART-014:** actor·major NPC·핵심 충돌 실루엣은 8방향 1px W01 normal outline을 사용하고 AimAcquired는 1px S02 단일선, ActiveTransfer는 안쪽 S01·바깥 S02의 지속 2px 이중선으로 대체하며 `ActiveTransfer > AimAcquired > Normal` 우선순위, 무점멸, 비투시, 타일 내부 이음매·비충돌 장식 제외 규칙을 지켜야 한다.
+- **REQ-ART-015:** URP 2D는 승인된 six-layer light separation, 장면별 world/actor global minimum, local light overlap·합산·modulation cap, hard-shadow 제한과 semantic/UI unlit 보호를 사용하고 sprite normal map·soft shadow·full-off decorative blink를 금지해야 한다.
 
 ## Acceptance criteria
 
@@ -162,6 +167,12 @@ master palette는 world 21색과 semantic accent 11색의 32-color role set이�
 - **Given** player·enemy·heroine·충돌/비충돌 prop·연결된 tile과 normal·AimAcquired·ActiveTransfer 상태 및 부분/완전 가림 장면이 있고
 - **When** 640×360과 2×·3×·4× integer output capture에서 윤곽선을 검사하면
 - **Then** normal 핵심 실루엣은 8방향 1px W01, AimAcquired는 1px S02 단일선, ActiveTransfer는 안쪽 S01·바깥 S02의 지속 2px 이중선이고 상위 상태가 하위를 대체하며 점멸·subpixel edge·타일 내부선·비충돌 장식 전체선·벽 너머 outline이 없다.
+
+### AC-ART-012 — 조명 분리와 의미색 보호
+
+- **Given** Hub·Expedition·Boss 조명 preset, warm/cold/warning fixture, 1~4개 local overlap, shadow caster, actor·transfer target·semantic effect·UI가 있는 검수 장면이 있고
+- **When** gameplay와 cutscene→control 복귀를 640×360 및 2560×1440 capture와 renderer 설정으로 검사하면
+- **Then** six layer가 승인된 light 대상을 사용하고 world/actor global은 각각 0.85/1.00, 0.75/0.95, 0.65/0.90 하한 이상이며 local overlap은 3, 합산은 1.35, modulation은 ±8%·3Hz 이내이고 shadow attenuation은 55% 이하이며 semantic core·UI는 승인 HEX를 유지하고 normal map·soft shadow·full-off blink·복귀 후 cutscene light 잔존이 없다.
 
 ## Verification
 

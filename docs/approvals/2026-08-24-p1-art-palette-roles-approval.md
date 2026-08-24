@@ -22,4 +22,4 @@
 
 ## Remaining boundary
 
-32색 exact HEX와 world/character outline은 후속 승인으로 확정됐다. URP 2D light layer·intensity·blend와 reticle base/acquired pixel size·glow·animation을 확정하기 전에는 `OD-ART-001`을 해결 처리하지 않는다.
+32색 exact HEX, world/character outline과 URP 2D light layer·intensity·blend는 후속 승인으로 확정됐다. reticle base/acquired pixel size·glow·animation을 확정하기 전에는 `OD-ART-001`을 해결 처리하지 않는다.

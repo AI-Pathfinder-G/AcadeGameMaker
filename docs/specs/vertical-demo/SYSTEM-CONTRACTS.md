@@ -141,6 +141,8 @@ target outline priority는 `ActiveTransfer > AimAcquired > Normal`이다. Normal
 
 위 semantic hue family는 11색 accent palette에서만 공급하며 ordinary world decoration에 쓰지 않는다. TransferReady cyan, AimAcquired·ActiveTransfer 공통 white, Cooldown amber, Blocked red, Extraction 2색, Solidarity 2색, heroine identity 3색을 사용한다. Solidarity ivory와 heroine warm ivory는 공유하지 않으며 heroine identity hue를 reward·interactable indicator로 재사용하지 않는다. lighting은 role hue family를 다른 state hue로 바꾸지 않는다.
 
+renderer light ownership은 BackDecor·WorldGeometry·Actors·GameplaySemanticFX·UI·FrontOccluder로 분리한다. world global은 BackDecor·WorldGeometry·FrontOccluder, actor global은 Actors만 소유하고 environment local은 승인된 world layer와 제한된 Actors에만 적용한다. GameplaySemanticFX·UI는 unlit이며 semantic core pixel의 승인 HEX를 보존한다. gameplay preset의 Hub/Expedition/Boss world·actor intensity 하한은 각각 0.85/1.00, 0.75/0.95, 0.65/0.90이고 cutscene override는 control 반환 전에 해당 preset으로 복구한다.
+
 ## Lifecycle order
 
 ### Room transition
