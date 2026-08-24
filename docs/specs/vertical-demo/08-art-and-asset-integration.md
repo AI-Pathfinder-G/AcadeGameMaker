@@ -41,7 +41,7 @@ offset을 더한 player focus가 current camera dead zone 밖일 때만 desired 
 
 HUD·menu layout은 640×360 logical safe frame을 사용하고 gameplay rectangle과 같은 integer scale·offset을 따른다. pixel frame·icon은 point filtering으로 확대한다. TextMeshPro SDF text는 logical position과 size를 사용하되 world upscale 뒤 final output resolution에서 render한다. logical font size는 minimum body 12px, standard body 14px, heading 18px이며 interactive hit area는 최소 24×24 logical px, safe margin은 frame edge에서 12 logical px다. 수직 데모는 user-adjustable UI scale을 제공하지 않는다.
 
-master palette는 world 21색과 semantic accent 11색의 32-color role set이다. 평균 장면의 목표 면적 비중은 cold blue-grey/charcoal 70%, brass/rust/concrete 20%, semantic accents 합계 10% 이하다. semantic accent는 ordinary background·prop decoration에 사용할 수 없다. 11개 accent slot은 TransferReady electric cyan, ActiveTransfer white, Cooldown amber orange, RangeOrLineOfSightBlocked debt-stamp red, Extraction crimson·ink violet, Solidarity pale cyan·ivory, heroine warm ivory·muted rose·gold에 하나씩 배정한다. Solidarity ivory와 heroine warm ivory는 서로 다른 색이다. heroine identity는 interactable·loot·reward indicator에 재사용하지 않는다. URP light는 value·saturation을 바꿀 수 있지만 semantic hue family를 다른 상태 family로 회전시키지 않는다. 모든 상태는 색과 함께 승인된 line shape·outline count를 사용한다.
+master palette는 world 21색과 semantic accent 11색의 32-color role set이다. 평균 장면의 목표 면적 비중은 cold blue-grey/charcoal 70%, brass/rust/concrete 20%, semantic accents 합계 10% 이하다. semantic accent는 ordinary background·prop decoration에 사용할 수 없다. accent slot은 TransferReady electric cyan, AimAcquired·ActiveTransfer 공통 white, Cooldown amber orange, RangeOrLineOfSightBlocked debt-stamp red, Extraction crimson·ink violet, Solidarity pale cyan·ivory, heroine warm ivory·muted rose·gold에 배정한다. Solidarity ivory와 heroine warm ivory는 서로 다른 색이다. heroine identity는 interactable·loot·reward indicator에 재사용하지 않는다. URP light는 value·saturation을 바꿀 수 있지만 semantic hue family를 다른 상태 family로 회전시키지 않는다. 모든 상태는 색과 함께 승인된 line shape·outline count를 사용한다.
 
 | ID | Role | sRGB HEX |
 |---|---|---|
@@ -67,7 +67,7 @@ master palette는 world 21색과 semantic accent 11색의 32-color role set이�
 | W20 | Patina | `#3B6258` |
 | W21 | Soot Olive | `#394035` |
 | S01 | TransferReady cyan | `#20E0D0` |
-| S02 | ActiveTransfer white | `#F7FFFC` |
+| S02 | AimAcquired·ActiveTransfer white | `#F7FFFC` |
 | S03 | Cooldown amber | `#FFAA2B` |
 | S04 | Blocked red | `#FF3B45` |
 | S05 | Extraction crimson | `#C92350` |
@@ -92,7 +92,8 @@ master palette는 world 21색과 semantic accent 11색의 32-color role set이�
 - **REQ-ART-010:** 모든 지원 viewport는 중앙 고정 16:9 gameplay rectangle에 640×360의 최대 integer scale을 사용하고 비16:9 잔여 영역은 letterbox/pillarbox로 처리하며 world reveal·crop·stretch와 safe-frame 밖 UI를 금지해야 한다.
 - **REQ-ART-011:** gameplay camera는 6×4u dead zone, ±3u horizontal·+1.5/-3u vertical anticipation, 12-tick offset transition과 max 0.5u/tick follow를 사용하고 mouse-driven pan·dynamic zoom·dash snap 없이 room bounds와 1/18-unit fixed-tick pose를 지키며 승인 생명주기에서만 snap·anchor를 허용해야 한다.
 - **REQ-ART-012:** UI는 640×360 logical safe frame과 gameplay integer scale을 사용하고 pixel frame·icon은 point filtering, text는 final-output SDF로 렌더하며 승인된 font·hit-area·margin 최소값을 지켜야 한다.
-- **REQ-ART-013:** master palette는 승인된 21 world·11 semantic sRGB HEX mapping을 사용하고 11개 의미 역할에 독립 slot을 배정하며 semantic accent의 장식 사용과 heroine identity 색의 reward/interactable 재사용을 금지하고 상태는 색 외 line·outline 신호를 함께 사용해야 한다.
+- **REQ-ART-013:** master palette는 승인된 21 world·11 semantic sRGB HEX mapping과 지정된 역할 공유만 사용하며 semantic accent의 장식 사용과 heroine identity 색의 reward/interactable 재사용을 금지하고 상태는 색 외 line·outline 신호를 함께 사용해야 한다.
+- **REQ-ART-014:** actor·major NPC·핵심 충돌 실루엣은 8방향 1px W01 normal outline을 사용하고 AimAcquired는 1px S02 단일선, ActiveTransfer는 안쪽 S01·바깥 S02의 지속 2px 이중선으로 대체하며 `ActiveTransfer > AimAcquired > Normal` 우선순위, 무점멸, 비투시, 타일 내부 이음매·비충돌 장식 제외 규칙을 지켜야 한다.
 
 ## Acceptance criteria
 
@@ -154,7 +155,13 @@ master palette는 world 21색과 semantic accent 11색의 32-color role set이�
 
 - **Given** hub·expedition·boss·choice·heroine 장면과 모든 target/skill/UI state의 색상 사용표가 있고
 - **When** 32색 role assignment와 representative capture를 검사하면
-- **Then** 모든 base color가 위 32개 sRGB HEX 중 하나와 정확히 일치하고 11개 의미 역할이 서로 지정된 slot을 사용하며 semantic accent 면적은 평균 장면 10% 이하이고 일반 장식은 의미색을, reward/interactable은 heroine identity 색을 사용하지 않으며 각 gameplay state는 색 외 승인된 shape 신호를 함께 가진다.
+- **Then** 모든 base color가 위 32개 sRGB HEX 중 하나와 정확히 일치하고 semantic color는 표의 역할 또는 승인된 S02 공유만 사용하며 semantic accent 면적은 평균 장면 10% 이하이고 일반 장식은 의미색을, reward/interactable은 heroine identity 색을 사용하지 않으며 각 gameplay state는 색 외 승인된 shape 신호를 함께 가진다.
+
+### AC-ART-011 — 픽셀 윤곽선과 상태 우선순위
+
+- **Given** player·enemy·heroine·충돌/비충돌 prop·연결된 tile과 normal·AimAcquired·ActiveTransfer 상태 및 부분/완전 가림 장면이 있고
+- **When** 640×360과 2×·3×·4× integer output capture에서 윤곽선을 검사하면
+- **Then** normal 핵심 실루엣은 8방향 1px W01, AimAcquired는 1px S02 단일선, ActiveTransfer는 안쪽 S01·바깥 S02의 지속 2px 이중선이고 상위 상태가 하위를 대체하며 점멸·subpixel edge·타일 내부선·비충돌 장식 전체선·벽 너머 outline이 없다.
 
 ## Verification
 

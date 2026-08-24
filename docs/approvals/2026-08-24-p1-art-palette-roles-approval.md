@@ -12,7 +12,7 @@
 - TransferReady=electric cyan, Cooldown=amber orange, blocked=debt-stamp red, ActiveTransfer=cyan+white
 - Extraction skill=crimson+ink violet, Solidarity skill=pale cyan+ivory
 - heroine identity=warm ivory+muted rose/gold
-- semantic 11색은 TransferReady cyan, ActiveTransfer white, Cooldown amber orange, blocked red, Extraction crimson·ink violet, Solidarity pale cyan·ivory, heroine warm ivory·muted rose·gold에 각각 한 slot을 배정한다. Solidarity ivory와 heroine warm ivory는 별개 색이다.
+- semantic 11색은 TransferReady cyan, AimAcquired·ActiveTransfer 공통 white, Cooldown amber orange, blocked red, Extraction crimson·ink violet, Solidarity pale cyan·ivory, heroine warm ivory·muted rose·gold에 slot을 배정한다. Solidarity ivory와 heroine warm ivory는 별개 색이다.
 - semantic accent의 background·ordinary prop decoration 사용 금지
 - heroine identity hue의 interactable·loot·reward indicator 재사용 금지
 - URP lighting은 value·saturation을 바꿀 수 있지만 semantic hue family를 다른 state family로 회전시키지 않음
@@ -22,4 +22,4 @@
 
 ## Remaining boundary
 
-32색 exact HEX는 후속 승인으로 확정됐다. world/character outline value, URP 2D light layer·intensity·blend와 reticle base/acquired pixel size·glow·animation을 확정하기 전에는 `OD-ART-001`을 해결 처리하지 않는다.
+32색 exact HEX와 world/character outline은 후속 승인으로 확정됐다. URP 2D light layer·intensity·blend와 reticle base/acquired pixel size·glow·animation을 확정하기 전에는 `OD-ART-001`을 해결 처리하지 않는다.

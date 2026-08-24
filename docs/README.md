@@ -37,6 +37,7 @@
 - [2026-08-24 P1 픽셀 UI·SDF 텍스트 배율 승인 기록](./approvals/2026-08-24-p1-art-ui-scale-approval.md)
 - [2026-08-24 P1 32색 역할 분리 팔레트 승인 기록](./approvals/2026-08-24-p1-art-palette-roles-approval.md)
 - [2026-08-24 P1 32색 HEX 팔레트 승인 기록](./approvals/2026-08-24-p1-art-palette-hex-approval.md)
+- [2026-08-24 P1 픽셀 윤곽선 승인 기록](./approvals/2026-08-24-p1-art-outline-approval.md)
 
 ## 단일 진실원천
 

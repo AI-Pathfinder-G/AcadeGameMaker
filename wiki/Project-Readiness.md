@@ -43,5 +43,6 @@ Sol이 해결된 `OD-PLAT-001`의 Luna 독립 검토를 마치고 `OD-ART-001`, 
 - P1 이동 예측형 fixed-zoom camera와 dead-zone·look-ahead·transition 수치 사용자 승인
 - P1 640×360 pixel UI·final-output SDF text 혼합 배율과 font·hit-area·margin minimum 사용자 승인
 - P1 world 21색·semantic 11색 역할 분리와 32개 exact sRGB HEX 사용자 승인
+- P1 logical pixel 윤곽선의 정상·조준 포착·활성 전이 색·두께·우선순위 사용자 승인
 
 > 권위 문서: [본격 개발 착수 전 준비도 점검](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/project-readiness-audit-2026-08-24.md)

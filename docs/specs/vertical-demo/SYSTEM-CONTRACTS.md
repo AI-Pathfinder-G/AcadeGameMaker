@@ -137,7 +137,9 @@ UI presentation 좌표는 640×360 logical safe frame이며 gameplay rectangle�
 
 Gameplay mouse pointer는 총구의 화면 공간 조준 reticle이다. 유효 공격 조준 대상이 선택되면 reticle 확대와 해당 대상의 형광 외곽선이 함께 활성화된다. 이 조준 포착은 전이 가능 여부와 독립적이다. reticle 내부 ring은 청록 연속선=`TransferReady`, 주황 연속선=`Cooldown`, 적색 단절선=`RangeOrLineOfSightBlocked`를 나타내며 활성 전이 대상은 지속 이중 외곽선을 사용한다. `UIOnly`는 gameplay reticle과 target outline을 제거하고 일반 UI cursor를 표시하며 `Cutscene`, `Transition`, `Ended`는 gameplay pointer feedback을 표시하지 않는다.
 
-위 semantic hue family는 11색 accent palette에서만 공급하며 ordinary world decoration에 쓰지 않는다. TransferReady cyan, ActiveTransfer white, Cooldown amber, Blocked red, Extraction 2색, Solidarity 2색, heroine identity 3색은 독립 slot을 사용한다. Solidarity ivory와 heroine warm ivory도 공유하지 않으며 heroine identity hue를 reward·interactable indicator로 재사용하지 않는다. lighting은 role hue family를 다른 state hue로 바꾸지 않는다.
+target outline priority는 `ActiveTransfer > AimAcquired > Normal`이다. Normal actor·major NPC·핵심 충돌 실루엣은 8방향 1px W01 `#090D12`, AimAcquired는 1px S02 `#F7FFFC`, ActiveTransfer는 안쪽 1px S01 `#20E0D0`와 바깥 1px S02의 지속 이중선으로 대체한다. outline은 640×360 logical pixel에 고정하고 점멸·subpixel sampling·occluder 투시를 허용하지 않는다.
+
+위 semantic hue family는 11색 accent palette에서만 공급하며 ordinary world decoration에 쓰지 않는다. TransferReady cyan, AimAcquired·ActiveTransfer 공통 white, Cooldown amber, Blocked red, Extraction 2색, Solidarity 2색, heroine identity 3색을 사용한다. Solidarity ivory와 heroine warm ivory는 공유하지 않으며 heroine identity hue를 reward·interactable indicator로 재사용하지 않는다. lighting은 role hue family를 다른 state hue로 바꾸지 않는다.
 
 ## Lifecycle order
 

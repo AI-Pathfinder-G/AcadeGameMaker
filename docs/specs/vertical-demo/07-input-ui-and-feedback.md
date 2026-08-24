@@ -30,7 +30,7 @@ runtime rebind는 keyboard의 Move composite 네 방향과 모든 Gameplay butto
 
 같은 control scheme의 Gameplay map 안에서 exact duplicate binding은 허용하지 않는다. 이미 사용 중인 control을 지정하면 현재 action과 교환할지 확인하고, 승인 시 두 binding을 원자적으로 맞바꾸며 취소 시 어느 쪽도 바꾸지 않는다. 자동 삭제·무통지 덮어쓰기는 금지한다. Gameplay와 UI map은 상호 배타적이므로 map 사이의 동일 control은 충돌이 아니다. protected UI·Pause 기본 binding과의 교환은 거부한다. chord·multi-key binding은 수직 데모에서 지원하지 않는다.
 
-Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니라 총구의 화면 공간 조준점을 나타내는 gameplay reticle이다. 유효 대상이 선택되면 reticle이 즉시 커지고 선택 대상에 형광 외곽선을 표시해 `조준 포착`을 알린다. 조준 포착은 공격 조준 상태이며 무게 전이 가능 여부와 분리한다. reticle 내부 ring은 청록 연속선=`전이 가능`, 주황 연속선=`Cooldown`, 적색 단절선=`거리 또는 LOS 차단`으로 나타낸다. 활성 전이 대상은 지속 이중 외곽선을 사용한다. UIOnly에서는 gameplay reticle과 대상 외곽선을 숨기고 일반 UI cursor를 표시한다. 정확한 확대율·RGB·발광 강도·점멸/보간 값은 `OD-ART-001`에서 고정한다.
+Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니라 총구의 화면 공간 조준점을 나타내는 gameplay reticle이다. 유효 대상이 선택되면 reticle이 즉시 커지고 선택 대상에 1px `#F7FFFC` 형광 외곽선을 표시해 `조준 포착`을 알린다. 조준 포착은 공격 조준 상태이며 무게 전이 가능 여부와 분리한다. reticle 내부 ring은 청록 연속선=`전이 가능`, 주황 연속선=`Cooldown`, 적색 단절선=`거리 또는 LOS 차단`으로 나타낸다. 활성 전이 대상은 안쪽 `#20E0D0`·바깥 `#F7FFFC`의 지속 2px 이중 외곽선을 사용한다. UIOnly에서는 gameplay reticle과 대상 외곽선을 숨기고 일반 UI cursor를 표시한다. reticle의 정확한 확대율·발광 강도·점멸/보간 값은 `OD-ART-001`에서 고정한다.
 
 ### Inputs
 
@@ -130,7 +130,7 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 
 - **Given** 유효 후보가 없는 지점, 공격 조준 대상, 전이 가능·Cooldown·거리/LOS 차단·활성 전이 대상, UIOnly와 입력 잠금 상태가 있고
 - **When** mouse pointer가 각 상태를 순서대로 통과하면
-- **Then** Gameplay에서는 pointer 위치에 조준 reticle이 보이고 조준 포착에서 reticle 확대와 형광 외곽선이 유지되며, 내부 ring은 전이 가능=청록 연속선·Cooldown=주황 연속선·거리/LOS 차단=적색 단절선, 활성 전이는 지속 이중 외곽선으로 서로 구분되고 UIOnly·잠긴 모드에서는 gameplay 조준 피드백이 남지 않는다.
+- **Then** Gameplay에서는 pointer 위치에 조준 reticle이 보이고 조준 포착에서 reticle 확대와 1px `#F7FFFC` 단일선이 유지되며, 내부 ring은 전이 가능=청록 연속선·Cooldown=주황 연속선·거리/LOS 차단=적색 단절선, 활성 전이는 안쪽 `#20E0D0`·바깥 `#F7FFFC`의 지속 2px 이중선으로 서로 구분되고 UIOnly·잠긴 모드에서는 gameplay 조준 피드백이 남지 않는다.
 
 ### AC-UX-010 — 재지정 허용 범위와 안전 입력
 
