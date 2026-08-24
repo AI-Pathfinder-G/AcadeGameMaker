@@ -43,6 +43,41 @@ HUD·menu layout은 640×360 logical safe frame을 사용하고 gameplay rectang
 
 master palette는 world 21색과 semantic accent 11색의 32-color role set이다. 평균 장면의 목표 면적 비중은 cold blue-grey/charcoal 70%, brass/rust/concrete 20%, semantic accents 합계 10% 이하다. semantic accent는 ordinary background·prop decoration에 사용할 수 없다. 11개 accent slot은 TransferReady electric cyan, ActiveTransfer white, Cooldown amber orange, RangeOrLineOfSightBlocked debt-stamp red, Extraction crimson·ink violet, Solidarity pale cyan·ivory, heroine warm ivory·muted rose·gold에 하나씩 배정한다. Solidarity ivory와 heroine warm ivory는 서로 다른 색이다. heroine identity는 interactable·loot·reward indicator에 재사용하지 않는다. URP light는 value·saturation을 바꿀 수 있지만 semantic hue family를 다른 상태 family로 회전시키지 않는다. 모든 상태는 색과 함께 승인된 line shape·outline count를 사용한다.
 
+| ID | Role | sRGB HEX |
+|---|---|---|
+| W01 | Void Ink | `#090D12` |
+| W02 | Tar Navy | `#101820` |
+| W03 | Deep Slate | `#17232C` |
+| W04 | Rail Slate | `#20323C` |
+| W05 | Steel Blue | `#2C424B` |
+| W06 | Concrete Blue | `#3B555D` |
+| W07 | Dust Blue | `#526B70` |
+| W08 | Fog Grey | `#6C8081` |
+| W09 | Ash Grey | `#899693` |
+| W10 | Pale Concrete | `#A9B0A7` |
+| W11 | Chalk Dust | `#CAC9B8` |
+| W12 | Oil Brown | `#211916` |
+| W13 | Furnace Brown | `#37241E` |
+| W14 | Dark Rust | `#503027` |
+| W15 | Brick Rust | `#704031` |
+| W16 | Oxide Copper | `#92563A` |
+| W17 | Aged Brass | `#7B6035` |
+| W18 | Brass Highlight | `#A47E43` |
+| W19 | Dark Patina | `#203D39` |
+| W20 | Patina | `#3B6258` |
+| W21 | Soot Olive | `#394035` |
+| S01 | TransferReady cyan | `#20E0D0` |
+| S02 | ActiveTransfer white | `#F7FFFC` |
+| S03 | Cooldown amber | `#FFAA2B` |
+| S04 | Blocked red | `#FF3B45` |
+| S05 | Extraction crimson | `#C92350` |
+| S06 | Extraction ink violet | `#632E83` |
+| S07 | Solidarity pale cyan | `#91F3E3` |
+| S08 | Solidarity cool ivory | `#E7E7C5` |
+| S09 | Heroine warm ivory | `#F0D7B2` |
+| S10 | Heroine muted rose | `#C9858D` |
+| S11 | Heroine gold | `#D7AE68` |
+
 ## Requirements
 
 - **REQ-ART-001:** 환경은 황동 계량기, 배관, 거대한 추, 붉은 체납 도장, 청회색 콘크리트의 시각 언어를 사용한다.
@@ -57,7 +92,7 @@ master palette는 world 21색과 semantic accent 11색의 32-color role set이�
 - **REQ-ART-010:** 모든 지원 viewport는 중앙 고정 16:9 gameplay rectangle에 640×360의 최대 integer scale을 사용하고 비16:9 잔여 영역은 letterbox/pillarbox로 처리하며 world reveal·crop·stretch와 safe-frame 밖 UI를 금지해야 한다.
 - **REQ-ART-011:** gameplay camera는 6×4u dead zone, ±3u horizontal·+1.5/-3u vertical anticipation, 12-tick offset transition과 max 0.5u/tick follow를 사용하고 mouse-driven pan·dynamic zoom·dash snap 없이 room bounds와 1/18-unit fixed-tick pose를 지키며 승인 생명주기에서만 snap·anchor를 허용해야 한다.
 - **REQ-ART-012:** UI는 640×360 logical safe frame과 gameplay integer scale을 사용하고 pixel frame·icon은 point filtering, text는 final-output SDF로 렌더하며 승인된 font·hit-area·margin 최소값을 지켜야 한다.
-- **REQ-ART-013:** master palette는 world 21색·semantic 11색 역할을 분리하고 11개 의미 역할에 독립 slot을 배정하며 semantic accent의 장식 사용과 heroine identity 색의 reward/interactable 재사용을 금지하고 상태는 색 외 line·outline 신호를 함께 사용해야 한다.
+- **REQ-ART-013:** master palette는 승인된 21 world·11 semantic sRGB HEX mapping을 사용하고 11개 의미 역할에 독립 slot을 배정하며 semantic accent의 장식 사용과 heroine identity 색의 reward/interactable 재사용을 금지하고 상태는 색 외 line·outline 신호를 함께 사용해야 한다.
 
 ## Acceptance criteria
 
@@ -119,7 +154,7 @@ master palette는 world 21색과 semantic accent 11색의 32-color role set이�
 
 - **Given** hub·expedition·boss·choice·heroine 장면과 모든 target/skill/UI state의 색상 사용표가 있고
 - **When** 32색 role assignment와 representative capture를 검사하면
-- **Then** world 21색·semantic 11색 밖의 무승인 base color가 없고 11개 의미 역할이 서로 지정된 slot을 사용하며 semantic accent 면적은 평균 장면 10% 이하이고 일반 장식은 의미색을, reward/interactable은 heroine identity 색을 사용하지 않으며 각 gameplay state는 색 외 승인된 shape 신호를 함께 가진다.
+- **Then** 모든 base color가 위 32개 sRGB HEX 중 하나와 정확히 일치하고 11개 의미 역할이 서로 지정된 slot을 사용하며 semantic accent 면적은 평균 장면 10% 이하이고 일반 장식은 의미색을, reward/interactable은 heroine identity 색을 사용하지 않으며 각 gameplay state는 색 외 승인된 shape 신호를 함께 가진다.
 
 ## Verification
 
