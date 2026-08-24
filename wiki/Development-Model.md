@@ -4,4 +4,6 @@
 
 모든 구현 작업은 Approved 스펙, REQ ID, AC ID, 허용 파일, 금지 영역, 롤백 지점을 포함한 작업 계약을 가져야 한다.
 
+독립 QA는 `GLM 계획 초안 → Sol 계약화 → MiniMax 비권위 구현안 → GPT 교정·통합 → Luna 독립 변조 검증` 순으로 운영한다. Ollama 출력이 불완전하거나 계약을 위반하면 그대로 채택하지 않고 그 사실과 교정 내역을 검증 기록에 남긴다.
+
 **권위 문서:** [에이전트 운영 규칙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/AGENTS.md), [멀티에이전트 운영 모델](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/agent-operating-model.md), [작업 계약 템플릿](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/templates/work-contract-template.md)

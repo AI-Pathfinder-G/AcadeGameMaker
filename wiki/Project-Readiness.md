@@ -4,7 +4,7 @@
 
 ## 핵심 상태
 
-- 구현 가능한 `Approved` 스펙: 0개
+- gameplay 구현 가능한 `Approved` 스펙: 0개 (`VD-11` pre-Unity QA infrastructure만 Verified)
 - 열린 P0 미결정: 0개
 - 열린 P1 결정: 2개
 - Unity Hub와 Unity Editor 6000.3.21f1: 설치·버전 검증 완료
@@ -45,5 +45,6 @@ Sol이 해결된 `OD-PLAT-001`의 Luna 독립 검토를 마치고 `OD-ART-001`, 
 - P1 world 21색·semantic 11색 역할 분리와 32개 exact sRGB HEX 사용자 승인
 - P1 logical pixel 윤곽선의 정상·조준 포착·활성 전이 색·두께·우선순위 사용자 승인
 - P1 URP 2D world/actor layer, 장면 preset, local light·shadow cap와 semantic unlit 규칙 사용자 승인
+- GLM QA 계획 초안과 MiniMax 부분 구현안을 GPT가 계약 교정하고 Luna가 독립 변조 검증해 VD-11을 Verified로 전환; 13 scenario가 VD-00~09의 68 AC를 전수 연결
 
 > 권위 문서: [본격 개발 착수 전 준비도 점검](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/project-readiness-audit-2026-08-24.md)

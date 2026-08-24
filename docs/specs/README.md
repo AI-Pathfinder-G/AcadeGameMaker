@@ -44,6 +44,7 @@
 ## 현재 패키지
 
 - [15분 수직 데모 스펙 색인](./vertical-demo/00-spec-index.md)
+- [Pre-Unity QA Artifact Infrastructure](./vertical-demo/11-pre-unity-qa-artifacts.md)
 - [추적성 매트릭스](./vertical-demo/TRACEABILITY.md)
 - [열린 결정](./vertical-demo/OPEN-DECISIONS.md)
 - [단위 스펙 템플릿](./templates/feature-spec-template.md)

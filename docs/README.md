@@ -39,6 +39,9 @@
 - [2026-08-24 P1 32색 HEX 팔레트 승인 기록](./approvals/2026-08-24-p1-art-palette-hex-approval.md)
 - [2026-08-24 P1 픽셀 윤곽선 승인 기록](./approvals/2026-08-24-p1-art-outline-approval.md)
 - [2026-08-24 P1 URP 2D 조명 승인 기록](./approvals/2026-08-24-p1-art-lighting-approval.md)
+- [독립 QA 마스터 플랜](./qa/qa-master-plan.md)
+- [Pre-Unity QA 아티팩트 작업 계약](./qa/pre-unity-qa-work-contract.md)
+- [2026-08-24 VD-11 Luna 독립 검증](./verification/2026-08-24-vd-11-luna-review.md)
 
 ## 단일 진실원천
 

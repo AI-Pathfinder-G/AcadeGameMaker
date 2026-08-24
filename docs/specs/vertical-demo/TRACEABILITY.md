@@ -34,6 +34,7 @@
 | [2026-08-24 P1 palette HEX 승인](../../approvals/2026-08-24-p1-art-palette-hex-approval.md) | 32개 sRGB HEX와 역할별 고정 mapping | REQ-ART-013 | AC-ART-010 |
 | [2026-08-24 P1 outline 승인](../../approvals/2026-08-24-p1-art-outline-approval.md) | logical pixel outline 두께·색·상태 우선순위와 비투시 규칙 | REQ-ART-014, REQ-UX-010 | AC-ART-011, AC-UX-009 |
 | [2026-08-24 P1 URP 2D lighting 승인](../../approvals/2026-08-24-p1-art-lighting-approval.md) | light layer·preset minimum·local cap·shadow와 semantic unlit 보호 | REQ-ART-015 | AC-ART-012 |
+| [VD-11 Pre-Unity QA infrastructure](./11-pre-unity-qa-artifacts.md) | Unity 생성 전 기계 판독 QA catalog·coverage·validator | REQ-PLAT-012~014 | AC-PLAT-010~012 |
 
 ## Requirement coverage
 
@@ -49,5 +50,6 @@
 | VD-07 | REQ-UX-001~014 | AC-UX-001~013; REQ-UX-001은 입력 맵 정적 검사 | Review — platform PASS; UI scale fixed; other P1 pending |
 | VD-08 | REQ-ART-001~015 | AC-ART-001~012 | Review — palette, outline and lighting fixed; reticle OD-ART-001 remains |
 | VD-09 | REQ-PLAT-001~011 | AC-PLAT-001~009 | Review — OD-PLAT-001 Luna document review PASS; other P1 pending |
+| VD-11 | REQ-PLAT-012~014 | AC-PLAT-010~012 | Verified — Luna independent review PASS |
 
 모든 REQ는 구현 작업 계약과 코드 변경에, 모든 AC는 자동 테스트 또는 수동 검수 증적에 역참조되어야 한다.

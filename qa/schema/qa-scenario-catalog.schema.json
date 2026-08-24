@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "qa-scenario-catalog.schema.json",
+  "title": "QA Scenario Catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "scenarios"],
+  "properties": {
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "scenarios": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/scenario" } }
+  },
+  "$defs": {
+    "scenario": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scenarioId", "domain", "caseType", "priority", "phase", "status", "title", "requirementIds", "acceptanceCriterionIds", "fixtureRefs", "steps", "oracle", "evidence", "blockedBy", "tags"],
+      "properties": {
+        "scenarioId": { "type": "string", "pattern": "^QA-[A-Z0-9]+-(POS|NEG|BND|LIFE|DET|REC|VIS|READ|BUILD)-[0-9]{3}$" },
+        "domain": { "type": "string", "enum": ["TITLE", "MENU", "SETTINGS", "PAUSE", "INPUT", "REBIND", "HUD", "AIM", "MOVE", "WEIGHT", "COMBAT", "ENEMY", "BOSS", "ROOM", "RUN", "FAIL", "CHOICE", "SKILL", "PROFILE", "RENDER", "LIGHT", "PLATFORM", "BUILD", "E2E"] },
+        "caseType": { "type": "string", "enum": ["POS", "NEG", "BND", "LIFE", "DET", "REC", "VIS", "READ", "BUILD"] },
+        "priority": { "type": "string", "enum": ["P0", "P1", "P2"] },
+        "phase": { "type": "string", "enum": ["pre_unity", "editmode", "playmode", "windows_build", "manual"] },
+        "status": { "type": "string", "enum": ["draft", "ready", "blocked"] },
+        "title": { "type": "string", "minLength": 1 },
+        "requirementIds": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "pattern": "^REQ-(SCOPE|MOV|WT|COM|ROOM|RUN|CHOICE|UX|ART|PLAT)-[0-9]{3}$" } },
+        "acceptanceCriterionIds": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "pattern": "^AC-(SCOPE|MOV|WT|COM|ROOM|RUN|CHOICE|UX|ART|PLAT)-[0-9]{3}$" } },
+        "fixtureRefs": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+        "steps": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/step" } },
+        "oracle": { "$ref": "#/$defs/oracle" },
+        "evidence": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "enum": ["log", "state_dump", "replay", "screenshot", "video", "profile_bytes", "build_record", "performance_capture", "manual_report"] } },
+        "blockedBy": { "type": "array", "uniqueItems": true, "items": { "type": "string", "enum": ["OD-ART-001", "OD-SCENE-001"] } },
+        "tags": { "type": "array", "uniqueItems": true, "items": { "type": "string" } }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "const": "blocked" } } },
+          "then": { "properties": { "blockedBy": { "minItems": 1 } } },
+          "else": { "properties": { "blockedBy": { "maxItems": 0 } } }
+        }
+      ]
+    },
+    "step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["order", "action", "expected"],
+      "properties": {
+        "order": { "type": "integer", "minimum": 1 },
+        "action": { "type": "string", "minLength": 1 },
+        "expected": { "type": "string", "minLength": 1 }
+      }
+    },
+    "oracle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "comparison", "expected"],
+      "properties": {
+        "kind": { "type": "string", "enum": ["exact_state", "exact_event_sequence", "exact_bytes_or_hash", "numeric_tolerance", "visual_contract", "performance_budget", "manual_observation"] },
+        "comparison": { "type": "string", "enum": ["exact", "within_contract", "sequence_match", "hash_match", "manual"] },
+        "expected": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

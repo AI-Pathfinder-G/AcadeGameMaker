@@ -75,6 +75,7 @@
 8. [VD-08 Art and asset integration](./08-art-and-asset-integration.md)
 9. [VD-09 Platform and quality](./09-platform-and-quality.md)
 10. [VD-10 Verification script](./10-verification-script.md)
+11. [VD-11 Pre-Unity QA artifact infrastructure](./11-pre-unity-qa-artifacts.md)
 
 교차 시스템의 상태·사건·생명주기 소유권은 [System Contracts](./SYSTEM-CONTRACTS.md)가 정의한다.
 

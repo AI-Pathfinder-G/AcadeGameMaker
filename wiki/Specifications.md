@@ -15,6 +15,7 @@
 | Art/assets | [VD-08](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/08-art-and-asset-integration.md) | Review |
 | Platform/quality | [VD-09](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/09-platform-and-quality.md) | Draft |
 | Verification | [VD-10](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/10-verification-script.md) | Review |
+| Pre-Unity QA infrastructure | [VD-11](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/11-pre-unity-qa-artifacts.md) | Verified |
 
 **권위 문서:** [스펙 운영 규칙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/README.md), [열린 결정](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/OPEN-DECISIONS.md)
 
@@ -23,3 +24,5 @@ P0 여섯 항목과 P1 이동·플랫폼 계약은 해결됐다. `Approved` 전�
 플랫폼 P1 입력·재지정·저장·복구 계약은 해결됐고 Luna 독립 문서 검토를 PASS했다. version 1 단일 `profile.json`을 원자 저장하며 시작 시 valid primary→valid previous→revision 0 default만 사용한다. stale temp와 손상·미지원 파일은 로드하지 않고 보존하며 binding만 불일치하면 진행 상태를 유지한 채 입력만 기본값으로 복구한다.
 
 미술 P1은 18 PPU, 640×360 fixed world/UI frame, predictive camera, pixel UI·SDF text, exact 32색 palette, logical pixel outline과 URP 2D lighting까지 부분 확정됐다. reticle exact values만 아직 열려 있다.
+
+VD-11은 GLM의 독립 QA 계획 초안, MiniMax M3의 부분 구현안, GPT 계약 교정과 Luna 독립 검증을 거쳐 Verified가 됐다. 현재 pre-Unity catalog는 UI·menu부터 gameplay·저장·render·build·E2E까지 13개 scenario로 VD-00~09의 68개 AC를 전수 연결한다. 실제 Unity EditMode·PlayMode·Windows build test는 각 기능 스펙 승인과 Unity 프로젝트 생성 뒤 구현한다.

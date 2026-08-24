@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "scenarios": [
+    {
+      "scenarioId": "QA-E2E-POS-001", "domain": "E2E", "caseType": "POS", "priority": "P1", "phase": "manual", "status": "blocked", "title": "성공 경로·분량·히로인 종결",
+      "requirementIds": ["REQ-SCOPE-001", "REQ-SCOPE-003", "REQ-SCOPE-004", "REQ-CHOICE-005"],
+      "acceptanceCriterionIds": ["AC-SCOPE-001", "AC-SCOPE-003", "AC-SCOPE-004", "AC-CHOICE-003"], "fixtureRefs": ["VD-10 success path"],
+      "steps": [{"order": 1, "action": "인용 AC의 성공 경로 fixture를 준비한다.", "expected": "계약 fixture가 식별된다."}, {"order": 2, "action": "인용 AC 경로를 실행하고 증적을 수집한다.", "expected": "인용 AC의 Then을 증적으로 판정한다."}],
+      "oracle": {"kind": "manual_observation", "comparison": "manual", "expected": "AC-SCOPE-001·003·004와 AC-CHOICE-003 계약"}, "evidence": ["video", "manual_report"], "blockedBy": ["OD-SCENE-001"], "tags": ["success", "timing", "heroine"]
+    },
+    {
+      "scenarioId": "QA-E2E-REC-001", "domain": "E2E", "caseType": "REC", "priority": "P0", "phase": "playmode", "status": "draft", "title": "실패·초기화·재시작 생명주기",
+      "requirementIds": ["REQ-SCOPE-002", "REQ-RUN-001", "REQ-RUN-002", "REQ-RUN-003", "REQ-RUN-004", "REQ-RUN-005", "REQ-RUN-006"],
+      "acceptanceCriterionIds": ["AC-SCOPE-002", "AC-RUN-001", "AC-RUN-002", "AC-RUN-003", "AC-RUN-004"], "fixtureRefs": ["VD-10 failure path"],
+      "steps": [{"order": 1, "action": "실패 원인과 보존 상태 fixture를 준비한다.", "expected": "인용 계약 상태가 재현된다."}, {"order": 2, "action": "실패·복귀·재시작을 실행한다.", "expected": "인용 AC의 사건·상태 순서가 일치한다."}],
+      "oracle": {"kind": "exact_event_sequence", "comparison": "sequence_match", "expected": "AC-SCOPE-002와 AC-RUN-001~004 계약"}, "evidence": ["log", "state_dump", "replay"], "blockedBy": [], "tags": ["failure", "reset"]
+    },
+    {
+      "scenarioId": "QA-MENU-POS-001", "domain": "MENU", "caseType": "POS", "priority": "P1", "phase": "windows_build", "status": "draft", "title": "메뉴·HUD·안전 프레임과 환경 식별",
+      "requirementIds": ["REQ-UX-003", "REQ-UX-009", "REQ-UX-014", "REQ-PLAT-001", "REQ-PLAT-002"],
+      "acceptanceCriterionIds": ["AC-UX-003", "AC-UX-008", "AC-UX-013", "AC-PLAT-001"], "fixtureRefs": ["keyboard-mouse", "XInput", "supported viewports"],
+      "steps": [{"order": 1, "action": "지원 입력과 viewport fixture를 준비한다.", "expected": "계약 환경이 기록된다."}, {"order": 2, "action": "메뉴·HUD·pause navigation을 실행한다.", "expected": "인용 AC의 UI 결과가 관찰된다."}],
+      "oracle": {"kind": "visual_contract", "comparison": "within_contract", "expected": "AC-UX-003·008·013와 AC-PLAT-001 계약"}, "evidence": ["screenshot", "video", "build_record"], "blockedBy": [], "tags": ["menu", "hud", "pause"]
+    },
+    {
+      "scenarioId": "QA-REBIND-NEG-001", "domain": "REBIND", "caseType": "NEG", "priority": "P1", "phase": "playmode", "status": "draft", "title": "입력 구조·재지정·충돌·부분 복구",
+      "requirementIds": ["REQ-UX-006", "REQ-UX-007", "REQ-UX-011", "REQ-UX-012", "REQ-PLAT-007", "REQ-PLAT-011"],
+      "acceptanceCriterionIds": ["AC-UX-005", "AC-UX-006", "AC-UX-010", "AC-UX-011", "AC-PLAT-005", "AC-PLAT-009"], "fixtureRefs": ["GameInput", "rebind conflicts", "binding recovery"],
+      "steps": [{"order": 1, "action": "허용·금지·충돌 binding fixture를 준비한다.", "expected": "각 fixture가 계약 ID와 연결된다."}, {"order": 2, "action": "재지정·교환·취소·복구를 실행한다.", "expected": "인용 AC 결과가 일치한다."}],
+      "oracle": {"kind": "exact_state", "comparison": "exact", "expected": "AC-UX-005·006·010·011와 AC-PLAT-005·009 계약"}, "evidence": ["log", "state_dump"], "blockedBy": [], "tags": ["input", "rebind"]
+    },
+    {
+      "scenarioId": "QA-AIM-DET-001", "domain": "AIM", "caseType": "DET", "priority": "P0", "phase": "playmode", "status": "blocked", "title": "입력 모드·조준·포착·여백 결정성",
+      "requirementIds": ["REQ-UX-001", "REQ-UX-002", "REQ-UX-004", "REQ-UX-005", "REQ-UX-008", "REQ-UX-010", "REQ-UX-013", "REQ-WT-008"],
+      "acceptanceCriterionIds": ["AC-UX-001", "AC-UX-002", "AC-UX-004", "AC-UX-007", "AC-UX-009", "AC-UX-012", "AC-WT-006"], "fixtureRefs": ["aim replay", "mode lifecycle", "bar pixels"],
+      "steps": [{"order": 1, "action": "조준·모드·경계 fixture를 준비한다.", "expected": "동일 replay 조건이 고정된다."}, {"order": 2, "action": "인용 AC replay를 반복한다.", "expected": "상태·tick·시각 계약을 판정한다."}],
+      "oracle": {"kind": "exact_event_sequence", "comparison": "sequence_match", "expected": "AC-UX-001·002·004·007·009·012와 AC-WT-006 계약"}, "evidence": ["replay", "log", "screenshot"], "blockedBy": ["OD-ART-001"], "tags": ["aim", "reticle", "determinism"]
+    },
+    {
+      "scenarioId": "QA-MOVE-BND-001", "domain": "MOVE", "caseType": "BND", "priority": "P1", "phase": "playmode", "status": "draft", "title": "이동 전체 경계와 방 도달성",
+      "requirementIds": ["REQ-MOV-001", "REQ-MOV-002", "REQ-MOV-003", "REQ-MOV-004", "REQ-MOV-005", "REQ-MOV-006", "REQ-MOV-007", "REQ-MOV-008", "REQ-MOV-009", "REQ-MOV-010", "REQ-ROOM-005", "REQ-ROOM-007"],
+      "acceptanceCriterionIds": ["AC-MOV-001", "AC-MOV-002", "AC-MOV-003", "AC-MOV-004", "AC-MOV-005", "AC-MOV-006", "AC-ROOM-003", "AC-ROOM-006"], "fixtureRefs": ["60Hz movement room", "six authored rooms"],
+      "steps": [{"order": 1, "action": "인용 이동 경계 fixture를 준비한다.", "expected": "계약 수치가 fixture에서 참조된다."}, {"order": 2, "action": "동일 입력 replay와 완주 검수를 실행한다.", "expected": "인용 AC 허용오차와 도달성을 만족한다."}],
+      "oracle": {"kind": "numeric_tolerance", "comparison": "within_contract", "expected": "AC-MOV-001~006와 AC-ROOM-003·006 계약"}, "evidence": ["replay", "state_dump", "video"], "blockedBy": [], "tags": ["movement", "boundary"]
+    },
+    {
+      "scenarioId": "QA-WEIGHT-DET-001", "domain": "WEIGHT", "caseType": "DET", "priority": "P0", "phase": "playmode", "status": "draft", "title": "무게 전이 원자성·modifier·정리",
+      "requirementIds": ["REQ-WT-001", "REQ-WT-002", "REQ-WT-003", "REQ-WT-004", "REQ-WT-005", "REQ-WT-006", "REQ-WT-007"],
+      "acceptanceCriterionIds": ["AC-WT-001", "AC-WT-002", "AC-WT-003", "AC-WT-004", "AC-WT-005"], "fixtureRefs": ["box", "enemy", "BossPayload", "lifecycle"],
+      "steps": [{"order": 1, "action": "전이 성공·실패·정리 fixture를 준비한다.", "expected": "대상 ID와 생명주기가 고정된다."}, {"order": 2, "action": "동일 입력을 반복 재생한다.", "expected": "인용 AC 상태·사건이 exact match한다."}],
+      "oracle": {"kind": "exact_state", "comparison": "exact", "expected": "AC-WT-001~005 계약"}, "evidence": ["replay", "state_dump", "log"], "blockedBy": [], "tags": ["weight-transfer", "atomicity"]
+    },
+    {
+      "scenarioId": "QA-COMBAT-DET-001", "domain": "COMBAT", "caseType": "DET", "priority": "P0", "phase": "playmode", "status": "draft", "title": "전투·적·보스 결정성과 중복 제거",
+      "requirementIds": ["REQ-COM-001", "REQ-COM-002", "REQ-COM-003", "REQ-COM-004", "REQ-COM-005", "REQ-COM-006"],
+      "acceptanceCriterionIds": ["AC-COM-001", "AC-COM-002", "AC-COM-003", "AC-COM-004"], "fixtureRefs": ["two enemies", "Ordan pattern", "damage dedupe"],
+      "steps": [{"order": 1, "action": "적·보스·중복 피해 fixture를 준비한다.", "expected": "계약 pattern과 ID가 고정된다."}, {"order": 2, "action": "전투 replay와 paired run을 실행한다.", "expected": "인용 AC를 만족한다."}],
+      "oracle": {"kind": "exact_event_sequence", "comparison": "sequence_match", "expected": "AC-COM-001~004 계약"}, "evidence": ["replay", "log", "video"], "blockedBy": [], "tags": ["combat", "boss"]
+    },
+    {
+      "scenarioId": "QA-ROOM-DET-001", "domain": "ROOM", "caseType": "DET", "priority": "P1", "phase": "editmode", "status": "draft", "title": "방 snapshot·구조·자동 시드 순환",
+      "requirementIds": ["REQ-ROOM-001", "REQ-ROOM-002", "REQ-ROOM-003", "REQ-ROOM-004", "REQ-ROOM-005", "REQ-ROOM-006", "REQ-ROOM-007"],
+      "acceptanceCriterionIds": ["AC-ROOM-001", "AC-ROOM-002", "AC-ROOM-004", "AC-ROOM-005"], "fixtureRefs": ["room snapshots", "SHA256SUMS", "seed cycle"],
+      "steps": [{"order": 1, "action": "네 authored snapshot과 manifest를 준비한다.", "expected": "fixture hash가 식별된다."}, {"order": 2, "action": "구조·재현·gate·순환 검사를 실행한다.", "expected": "인용 AC가 exact match한다."}],
+      "oracle": {"kind": "exact_bytes_or_hash", "comparison": "hash_match", "expected": "AC-ROOM-001·002·004·005 계약"}, "evidence": ["log", "state_dump"], "blockedBy": [], "tags": ["rooms", "seed"]
+    },
+    {
+      "scenarioId": "QA-CHOICE-LIFE-001", "domain": "CHOICE", "caseType": "LIFE", "priority": "P1", "phase": "playmode", "status": "draft", "title": "선택·기술·봉쇄선 생명주기",
+      "requirementIds": ["REQ-CHOICE-001", "REQ-CHOICE-002", "REQ-CHOICE-003", "REQ-CHOICE-004", "REQ-CHOICE-005", "REQ-CHOICE-006", "REQ-CHOICE-007"],
+      "acceptanceCriterionIds": ["AC-CHOICE-001", "AC-CHOICE-002", "AC-CHOICE-004"], "fixtureRefs": ["choice baseline", "BarrierCounterweight"],
+      "steps": [{"order": 1, "action": "양쪽 선택의 동일 기준 상태를 준비한다.", "expected": "분기 전 상태가 일치한다."}, {"order": 2, "action": "각 선택·기술·봉쇄선 경로를 실행한다.", "expected": "인용 AC의 분기 결과가 일치한다."}],
+      "oracle": {"kind": "exact_state", "comparison": "exact", "expected": "AC-CHOICE-001·002·004 계약"}, "evidence": ["state_dump", "video", "profile_bytes"], "blockedBy": [], "tags": ["choice", "skills"]
+    },
+    {
+      "scenarioId": "QA-PROFILE-REC-001", "domain": "PROFILE", "caseType": "REC", "priority": "P0", "phase": "editmode", "status": "draft", "title": "프로필 canonical·원자 저장·복구",
+      "requirementIds": ["REQ-PLAT-003", "REQ-PLAT-006", "REQ-PLAT-008", "REQ-PLAT-009", "REQ-PLAT-010", "REQ-PLAT-011"],
+      "acceptanceCriterionIds": ["AC-PLAT-003", "AC-PLAT-004", "AC-PLAT-006", "AC-PLAT-007", "AC-PLAT-008"], "fixtureRefs": ["profile combinations", "failure injection"],
+      "steps": [{"order": 1, "action": "정상·손상·미지원·stale 파일 조합을 준비한다.", "expected": "fixture byte가 고정된다."}, {"order": 2, "action": "직렬화·저장 실패·load recovery를 실행한다.", "expected": "인용 AC byte·revision·선택 순서가 일치한다."}],
+      "oracle": {"kind": "exact_bytes_or_hash", "comparison": "hash_match", "expected": "AC-PLAT-003·004·006·007·008 계약"}, "evidence": ["profile_bytes", "log", "state_dump"], "blockedBy": [], "tags": ["persistence", "recovery"]
+    },
+    {
+      "scenarioId": "QA-RENDER-VIS-001", "domain": "RENDER", "caseType": "VIS", "priority": "P2", "phase": "manual", "status": "blocked", "title": "에셋·픽셀·카메라·UI·팔레트·조명",
+      "requirementIds": ["REQ-ART-001", "REQ-ART-002", "REQ-ART-003", "REQ-ART-004", "REQ-ART-005", "REQ-ART-006", "REQ-ART-007", "REQ-ART-008", "REQ-ART-009", "REQ-ART-010", "REQ-ART-011", "REQ-ART-012", "REQ-ART-013", "REQ-ART-014", "REQ-ART-015"],
+      "acceptanceCriterionIds": ["AC-ART-001", "AC-ART-002", "AC-ART-003", "AC-ART-004", "AC-ART-005", "AC-ART-006", "AC-ART-007", "AC-ART-008", "AC-ART-009", "AC-ART-010", "AC-ART-011", "AC-ART-012"], "fixtureRefs": ["asset register", "supported captures", "lighting presets"],
+      "steps": [{"order": 1, "action": "인용 미술 fixture와 capture 환경을 준비한다.", "expected": "출처·viewport·state가 식별된다."}, {"order": 2, "action": "정적 검사와 대표 capture를 비교한다.", "expected": "인용 AC 시각 계약을 판정한다."}],
+      "oracle": {"kind": "visual_contract", "comparison": "within_contract", "expected": "AC-ART-001~012 계약"}, "evidence": ["screenshot", "video", "manual_report"], "blockedBy": ["OD-ART-001"], "tags": ["art", "render", "lighting"]
+    },
+    {
+      "scenarioId": "QA-BUILD-BUILD-001", "domain": "BUILD", "caseType": "BUILD", "priority": "P0", "phase": "windows_build", "status": "draft", "title": "Windows 기준 경로 안정성",
+      "requirementIds": ["REQ-PLAT-001", "REQ-PLAT-002", "REQ-PLAT-004", "REQ-PLAT-005"],
+      "acceptanceCriterionIds": ["AC-PLAT-002"], "fixtureRefs": ["VD-10", "clean log", "Windows build"],
+      "steps": [{"order": 1, "action": "편집기와 Windows build 기준 환경을 준비한다.", "expected": "build identity가 기록된다."}, {"order": 2, "action": "VD-10 기준 경로를 각각 실행한다.", "expected": "AC-PLAT-002의 안정성 결과가 일치한다."}],
+      "oracle": {"kind": "exact_event_sequence", "comparison": "sequence_match", "expected": "AC-PLAT-002 계약"}, "evidence": ["build_record", "log", "video"], "blockedBy": [], "tags": ["build", "smoke"]
+    }
+  ]
+}
