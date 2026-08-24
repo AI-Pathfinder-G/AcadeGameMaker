@@ -44,6 +44,8 @@
 
 실제 기기 입력은 Input System 1.20.0의 단일 `GameInput.inputactions`와 생성 C# wrapper를 통해 VD-07 `InputRouter`에만 들어온다. callback은 의미 명령 버퍼에 기록하고 다음 `SimulationTick`에서 위 순서로 한 번 소비한다. map은 `Gameplay`와 `UI`뿐이며 `InputMode` 전환만 map 활성 상태를 바꾼다.
 
+`UI` map은 `Navigate`, `Point`, `Click`, `ScrollWheel`, `Submit`, `Cancel`을 가진다. Navigate는 WASD·방향키와 XInput D-pad·왼쪽 스틱, Point·Click·ScrollWheel은 mouse, Submit은 Enter·Space와 gamepad A, Cancel은 Esc와 gamepad B다. Gameplay의 `Pause`는 Esc와 gamepad Start다. 두 map은 상호 배타적이며 gamepad virtual mouse는 사용하지 않는다.
+
 ## Public contracts
 
 ### Transfer target descriptor
@@ -123,6 +125,8 @@ gamepad `angleKey`는 원시 stick 값이 아니라 `aimVectorQ4096`을 dequanti
 
 UI는 모드와 권위 상태를 표현할 뿐 선택, 체력, 전이, 런 결과를 직접 변경하지 않는다.
 
+Gameplay mouse pointer는 총구의 화면 공간 조준 reticle이다. 유효 target descriptor가 선택되면 reticle 확대와 해당 대상의 형광 외곽선이 함께 활성화된다. `UIOnly`는 gameplay reticle과 target outline을 제거하고 일반 UI cursor를 표시하며 `Cutscene`, `Transition`, `Ended`는 gameplay pointer feedback을 표시하지 않는다.
+
 ## Lifecycle order
 
 ### Room transition
@@ -186,7 +190,7 @@ UI는 모드와 권위 상태를 표현할 뿐 선택, 체력, 전이, 런 결�
 
 ## Remaining approval blockers
 
-- `UI` action·binding과 runtime override·충돌 정책: `OD-PLAT-001`
+- runtime binding override·충돌 정책: `OD-PLAT-001`
 - 저장 schema version, JSON 필드, 손상 복구 정책: `OD-PLAT-001`
 
 P0 공개 계약과 이동 계약은 해결됐다. 위 P1과 모든 소비 스펙의 일치 검토가 끝나기 전에는 이 문서를 Approved로 전환하지 않는다.

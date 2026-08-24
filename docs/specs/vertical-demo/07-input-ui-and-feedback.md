@@ -12,7 +12,7 @@
 
 ## Non-scope
 
-실제 action map·키 배치, 최종 UI 아트, 접근성 전체 기능과 게임플레이 권위 상태의 직접 변경은 포함하지 않는다.
+최종 UI 아트, 접근성 전체 기능과 게임플레이 권위 상태의 직접 변경은 포함하지 않는다.
 
 ## Contract
 
@@ -21,6 +21,10 @@
 입력 계층은 `com.unity.inputsystem` 1.20.0만 사용한다. 단일 `GameInput.inputactions`에서 생성한 C# wrapper를 `InputRouter`가 직접 구독하며 `PlayerInput.SendMessage`, 구형 Input Manager와 `Both` 모드는 사용하지 않는다. action map은 `Gameplay`와 `UI` 두 개뿐이다.
 
 Gameplay는 `포인터 조준형 횡스크롤 액션`을 따른다. 키보드·마우스는 WASD 이동, Space 점프, Shift 대시, E 상호작용, Q 선택 기술, 좌클릭 공격, 우클릭 전이를 사용하고 JKL 전투·클릭 이동을 사용하지 않는다. 게임패드는 왼쪽/오른쪽 스틱 이동·조준, RT 공격, LT 전이, RB 선택 기술, A 점프, B 대시, X 상호작용을 사용한다.
+
+UI는 `Navigate`, `Point`, `Click`, `ScrollWheel`, `Submit`, `Cancel`을 사용한다. `Navigate`는 WASD·방향키와 gamepad D-pad·왼쪽 스틱, `Point`·`Click`·`ScrollWheel`은 mouse, `Submit`은 Enter·Space와 gamepad A, `Cancel`은 Esc와 gamepad B에 연결한다. `Pause`는 Gameplay의 Esc와 gamepad Start이며 `UIOnly`로 전환한다. UIOnly에서는 focus navigation을 사용하고 gamepad virtual mouse cursor는 만들지 않는다. Gameplay와 UI map은 동시에 활성화하지 않는다.
+
+Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니라 총구의 화면 공간 조준점을 나타내는 gameplay reticle이다. 유효 대상이 선택되면 reticle이 즉시 커지고 선택 대상에 형광 외곽선을 표시해 포착 여부를 동시에 알린다. UIOnly에서는 gameplay reticle과 대상 외곽선을 숨기고 일반 UI cursor를 표시한다. 정확한 확대율·팔레트·점멸/보간 값은 `OD-ART-001`에서 고정한다.
 
 ### Inputs
 
@@ -43,7 +47,9 @@ Gameplay는 `포인터 조준형 횡스크롤 액션`을 따른다. 키보드·�
 - 기기 연결·분리와 마지막 사용 control scheme 변화는 표시용 상태만 바꾸며 시뮬레이션 결과를 바꾸지 않는다.
 - 기본 공격과 전이는 같은 포인터·스틱 조준 의도를 사용한다. 선택 기술은 현재 활성 전이 대상을 사용하므로 별도 조준을 요구하지 않는다.
 - 마우스는 마지막 정수 screen pixel을 보관하고 다음 SimulationTick 시작에 직전 완료 tick의 `SimulationCameraPoseSnapshot`으로 변환한다. gamepad stick과 변환된 mouse 방향은 정규화 뒤 각 성분을 `Round(component×4096, AwayFromZero)`하고 -4096~4096으로 clamp한다.
-- Gameplay에서 mouse cursor와 조준 reticle은 표시한다. UIOnly·Cutscene·Transition·Ended 전환은 gameplay command buffer와 이전 press edge를 제거하며, gamepad 오른쪽 스틱은 OS cursor를 움직이지 않는다.
+- Gameplay에서 mouse pointer 위치는 총구 조준 reticle로 표시하고 유효 포착 시 reticle 확대와 대상 형광 외곽선을 함께 표시한다. UIOnly는 gameplay reticle·대상 외곽선을 숨기고 일반 UI cursor를 사용한다. Cutscene·Transition·Ended 전환은 모든 gameplay pointer 피드백을 숨긴다.
+- Gameplay와 UI map은 동시에 활성화하지 않으며 gamepad 오른쪽 스틱은 OS cursor를 움직이지 않는다. UIOnly는 focus navigation만 사용하고 virtual mouse를 만들지 않는다.
+- UIOnly 최상위 일시정지 화면의 `Cancel`은 GameplayEnabled로 복귀하고, 하위 화면의 `Cancel`은 상위 화면으로 한 단계 돌아간다.
 
 ## Requirements
 
@@ -55,6 +61,8 @@ Gameplay는 `포인터 조준형 횡스크롤 액션`을 따른다. 키보드·�
 - **REQ-UX-006:** Input System 1.20.0의 생성 C# wrapper와 단일 `InputRouter`를 사용해 `Gameplay`/`UI` 두 map의 callback을 다음 60Hz tick 의미 명령으로 한 번만 변환해야 한다.
 - **REQ-UX-007:** Gameplay는 승인된 키보드·마우스와 XInput 역할 배치를 사용하고 JKL 전투·클릭 이동 없이 포인터·오른쪽 스틱 조준을 공격과 전이에 공통 적용해야 한다.
 - **REQ-UX-008:** `InputRouter`는 정수 mouse pixel 또는 `magnitude²≥0.04`의 오른쪽 스틱과 직전 `SimulationCameraPoseSnapshot`을 Q4096 `AimSample`로 만들어 다음 SimulationTick에 한 번 제공하고, 모드·생명주기 경계에서 aim·press buffer를 결정적으로 정리해야 한다.
+- **REQ-UX-009:** UI는 승인된 Navigate·Point·Click·ScrollWheel·Submit·Cancel·Pause binding, focus navigation과 map 상호 배제를 사용하고 gamepad virtual mouse를 만들지 않아야 한다.
+- **REQ-UX-010:** Gameplay의 mouse pointer는 총구 조준 reticle로 표시하고 유효 대상 포착 시 reticle 확대와 대상 형광 외곽선을 함께 표시하며, UIOnly와 잠긴 모드에서는 gameplay 조준 피드백을 제거해야 한다.
 
 ## Acceptance criteria
 
@@ -100,9 +108,21 @@ Gameplay는 `포인터 조준형 횡스크롤 액션`을 따른다. 키보드·�
 - **When** 30/60/144 render FPS에서 각각 재생하면
 - **Then** 매 tick의 cameraPoseTick, `AimSample` source·screenPixel·Q4096 vector와 소비 tick이 exact match하며 `(0,0)` sample이 없고 mode 전환 이전 press가 Gameplay 복귀 뒤 다시 발동하지 않는다.
 
+### AC-UX-008 — UI 기본 조작과 map 상호 배제
+
+- **Given** keyboard/mouse와 XInput 기본 binding, 일시정지 최상위·하위 UI가 있고
+- **When** 각 control scheme으로 메뉴 이동·확인·취소·일시정지·복귀를 수행하면
+- **Then** 승인된 binding으로 같은 의미 결과를 내고 Gameplay/UI map은 한 번에 하나만 활성화되며 gamepad virtual mouse가 생성되지 않는다.
+
+### AC-UX-009 — 포인터 포착 피드백
+
+- **Given** 유효 후보가 없는 지점, 유효 대상, UIOnly와 입력 잠금 상태가 있고
+- **When** mouse pointer가 각 상태를 순서대로 통과하면
+- **Then** Gameplay에서는 pointer 위치에 조준 reticle이 보이고 유효 포착에서만 reticle 확대와 해당 대상 형광 외곽선이 함께 나타나며 UIOnly·잠긴 모드에서는 둘 다 남지 않는다.
+
 ## Verification
 
-package manifest·Player Settings·생성 wrapper·의미 입력 맵 정적 검사, 키보드·XInput 동등 동작 재생, 상태별 스크린 캡처, 고정 틱 입력 순서·잠금/복구 PlayMode 테스트, 짧은 이해도 관찰로 검증한다. `UI` action·binding과 runtime override 저장은 `OD-PLAT-001`에서 고정한다.
+package manifest·Player Settings·생성 wrapper·의미 입력 맵 정적 검사, 키보드·XInput 동등 동작 재생, 상태별 스크린 캡처, 고정 틱 입력 순서·잠금/복구 PlayMode 테스트, 짧은 이해도 관찰로 검증한다. runtime override 저장은 `OD-PLAT-001`, 조준 피드백의 정확한 시각 수치는 `OD-ART-001`에서 고정한다.
 
 ## Traceability
 

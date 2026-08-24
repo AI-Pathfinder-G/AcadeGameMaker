@@ -18,6 +18,7 @@
 | [2026-08-24 P1 input architecture approval](../../approvals/2026-08-24-p1-input-architecture-approval.md) | Input System 1.20.0 단독, 생성 wrapper, InputRouter, Gameplay/UI map | REQ-UX-006, REQ-PLAT-007 | AC-UX-005, AC-PLAT-005 |
 | [ADR-0019](../../adr/0019-pointer-aimed-sidescroller-controls.md), [pointer control approval](../../approvals/2026-08-24-p1-pointer-control-approval.md) | 왼손 이동·오른손 포인터 전투와 게임패드 twin-stick 의미 대응 | REQ-WT-006, REQ-UX-007 | AC-WT-005, AC-UX-006 |
 | [2026-08-24 P1 targeting approval](../../approvals/2026-08-24-p1-targeting-approval.md) | mouse direct pointer와 gamepad angular soft target의 결정적 판정 | REQ-WT-008, REQ-UX-008 | AC-WT-006, AC-UX-007 |
+| [2026-08-24 P1 UI·조준 피드백 승인](../../approvals/2026-08-24-p1-ui-and-aim-feedback-approval.md) | UI 기본 binding·focus navigation과 mouse 총구 reticle·포착 강조 | REQ-UX-009~010 | AC-UX-008~009 |
 
 ## Requirement coverage
 
@@ -30,7 +31,7 @@
 | VD-04 | REQ-ROOM-001~007 | AC-ROOM-001~006 | Review — P0 and traversal contract resolved; Luna review pending |
 | VD-05 | REQ-RUN-001~006 | AC-RUN-001~004 | Review — P0 resolved; persistence schema waits on OD-PLAT-001 |
 | VD-06 | REQ-CHOICE-001~007 | AC-CHOICE-001~004 | Review — P0 resolved; scene detail waits on OD-SCENE-001 |
-| VD-07 | REQ-UX-001~008 | AC-UX-001~007; REQ-UX-001은 입력 맵 정적 검사 | Review — targeting fixed; rebinding waits on OD-PLAT-001 |
+| VD-07 | REQ-UX-001~010 | AC-UX-001~009; REQ-UX-001은 입력 맵 정적 검사 | Review — UI/target feedback fixed; rebinding waits on OD-PLAT-001 |
 | VD-08 | REQ-ART-001~007 | AC-ART-001~004 | Review — acquisition allowed; import blocked by OD-ART-001 |
 | VD-09 | REQ-PLAT-001~007 | AC-PLAT-001~005 | Draft — input architecture and P0 persistence boundary fixed; OD-PLAT-001 remains |
 
