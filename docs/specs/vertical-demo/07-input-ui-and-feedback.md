@@ -30,7 +30,7 @@ runtime rebind는 keyboard의 Move composite 네 방향과 모든 Gameplay butto
 
 같은 control scheme의 Gameplay map 안에서 exact duplicate binding은 허용하지 않는다. 이미 사용 중인 control을 지정하면 현재 action과 교환할지 확인하고, 승인 시 두 binding을 원자적으로 맞바꾸며 취소 시 어느 쪽도 바꾸지 않는다. 자동 삭제·무통지 덮어쓰기는 금지한다. Gameplay와 UI map은 상호 배타적이므로 map 사이의 동일 control은 충돌이 아니다. protected UI·Pause 기본 binding과의 교환은 거부한다. chord·multi-key binding은 수직 데모에서 지원하지 않는다.
 
-Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니라 총구의 화면 공간 조준점을 나타내는 gameplay reticle이다. 유효 대상이 선택되면 reticle이 즉시 커지고 선택 대상에 1px `#F7FFFC` 형광 외곽선을 표시해 `조준 포착`을 알린다. 조준 포착은 공격 조준 상태이며 무게 전이 가능 여부와 분리한다. reticle 내부 ring은 청록 연속선=`전이 가능`, 주황 연속선=`Cooldown`, 적색 단절선=`거리 또는 LOS 차단`으로 나타낸다. 활성 전이 대상은 안쪽 `#20E0D0`·바깥 `#F7FFFC`의 지속 2px 이중 외곽선을 사용한다. UIOnly에서는 gameplay reticle과 대상 외곽선을 숨기고 일반 UI cursor를 표시한다. reticle의 정확한 확대율·발광 강도·점멸/보간 값은 `OD-ART-001`에서 고정한다.
+Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니라 총구의 화면 공간 조준점을 나타내는 gameplay reticle이다. 비포착 reticle은 9×9 logical px의 1px W11 `#CAC9B8`이며 유효 대상이 선택되면 reticle core와 대상의 1px 외곽선은 같은 SimulationTick에 S02 `#F7FFFC`로 전환되고 reticle은 정확히 3 tick에 13×13px 확대를 완료한다. 포착 해제 시 외곽선은 같은 tick에 사라지고 core는 W11로 복귀하며 reticle은 정확히 6 tick에 9×9px 축소를 완료한다. 대상 교체 중에는 S02·13×13px를 유지한다. 조준 포착은 공격 조준 상태이며 무게 전이 가능 여부와 분리한다. 1px 내부 ring은 S01 `#20E0D0` 연속선=`전이 가능`, S03 `#FFAA2B` 연속선=`Cooldown`, S04 `#FF3B45` 단절선=`거리 또는 LOS 차단`으로 나타낸다. reticle line은 같은 hue의 바깥 1px halo를 사용하고 semantic core는 승인 HEX를 unlit로 유지하며 emission은 1.25 이하이다. 활성 전이 대상은 안쪽 S01·바깥 S02의 지속 2px 이중 외곽선을 사용한다. 모든 reticle·ring·대상 외곽선은 점멸하지 않고 UIOnly·Cutscene·Transition·Ended 또는 화면 여백 진입과 같은 tick에 숨는다.
 
 ### Inputs
 
@@ -70,7 +70,7 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 - **REQ-UX-007:** Gameplay는 승인된 키보드·마우스와 XInput 역할 배치를 사용하고 JKL 전투·클릭 이동 없이 포인터·오른쪽 스틱 조준을 공격과 전이에 공통 적용해야 한다.
 - **REQ-UX-008:** `InputRouter`는 정수 mouse pixel 또는 `magnitude²≥0.04`의 오른쪽 스틱과 직전 `SimulationCameraPoseSnapshot`을 Q4096 `AimSample`로 만들어 다음 SimulationTick에 한 번 제공하고, 모드·생명주기 경계에서 aim·press buffer를 결정적으로 정리해야 한다.
 - **REQ-UX-009:** UI는 승인된 Navigate·Point·Click·ScrollWheel·Submit·Cancel·Pause binding, focus navigation과 map 상호 배제를 사용하고 gamepad virtual mouse를 만들지 않아야 한다.
-- **REQ-UX-010:** Gameplay의 mouse pointer는 총구 조준 reticle로 표시하고 유효 대상 포착 시 reticle 확대와 대상 형광 외곽선을 함께 표시하며, 조준 포착을 전이 가능·Cooldown·거리/LOS 차단·활성 전이 상태와 서로 구분하고 UIOnly와 잠긴 모드에서는 gameplay 조준 피드백을 제거해야 한다.
+- **REQ-UX-010:** Gameplay의 mouse pointer는 승인된 W11 9×9px→S02 13×13px·정확한 3/6 tick·동일 hue 1px halo 조준 reticle로 표시하고 유효 대상 포착 시 reticle 확대와 대상 형광 외곽선을 함께 표시하며, 조준 포착을 전이 가능·Cooldown·거리/LOS 차단·활성 전이 상태와 서로 구분하고 UIOnly와 잠긴 모드에서는 gameplay 조준 피드백을 같은 tick에 제거해야 한다.
 - **REQ-UX-011:** runtime rebind는 keyboard Move와 Gameplay button, mouse Attack·Transfer, gamepad Gameplay button에만 허용하고 gamepad Move·Aim stick, mouse Point axis와 안전 UI·Pause 기본 binding을 보호하며 stick 축 반전은 별도 설정으로 처리해야 한다.
 - **REQ-UX-012:** 같은 control scheme의 Gameplay binding 충돌은 확인 뒤 원자 교환하거나 취소 시 무변경으로 처리하고 중복·자동 삭제·무통지 덮어쓰기와 protected binding 교환을 금지하며 map 사이 공유는 허용해야 한다.
 - **REQ-UX-013:** mouse aim은 중앙 16:9 gameplay rectangle을 기준으로 변환하고 여백에서는 edge-clamped aim direction만 유지하며 target acquisition·Attack·Transfer·UI action을 발생시키지 않아야 한다.
@@ -130,7 +130,7 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 
 - **Given** 유효 후보가 없는 지점, 공격 조준 대상, 전이 가능·Cooldown·거리/LOS 차단·활성 전이 대상, UIOnly와 입력 잠금 상태가 있고
 - **When** mouse pointer가 각 상태를 순서대로 통과하면
-- **Then** Gameplay에서는 pointer 위치에 조준 reticle이 보이고 조준 포착에서 reticle 확대와 1px `#F7FFFC` 단일선이 유지되며, 내부 ring은 전이 가능=청록 연속선·Cooldown=주황 연속선·거리/LOS 차단=적색 단절선, 활성 전이는 안쪽 `#20E0D0`·바깥 `#F7FFFC`의 지속 2px 이중선으로 서로 구분되고 UIOnly·잠긴 모드에서는 gameplay 조준 피드백이 남지 않는다.
+- **Then** Gameplay 비포착 reticle은 9×9px W11이고 포착 시 core·target outline은 같은 tick에 S02가 되며 reticle은 정확히 3 tick에 13×13px, 해제 시 core는 같은 tick에 W11로 돌아오고 정확히 6 tick에 9×9px가 된다. target 교체에서는 S02·13×13px를 유지하고 동일 hue 바깥 1px halo·무점멸을 지키며 내부 1px ring은 S01 연속선·S03 연속선·S04 단절선, 활성 전이는 안쪽 S01·바깥 S02의 지속 2px 이중선으로 서로 구분된다. UIOnly·잠긴 모드·화면 여백에서는 같은 tick에 gameplay 조준 피드백이 남지 않는다.
 
 ### AC-UX-010 — 재지정 허용 범위와 안전 입력
 
@@ -148,7 +148,7 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 
 - **Given** letterbox와 pillarbox가 있는 viewport, gameplay edge 안팎의 mouse pixel과 target이 있고
 - **When** pointer 이동과 Attack·Transfer·Click을 재생하면
-- **Then** gameplay 안에서는 기존 target 계약이 동작하고 여백에서는 aim direction만 nearest edge로 clamp되며 target ID와 Attack·Transfer·UI Click command가 생성되지 않는다.
+- **Then** gameplay 안에서는 기존 target 계약이 동작하고 여백에서는 aim direction만 nearest edge로 clamp되며 target ID와 Attack·Transfer·UI Click command가 생성되지 않고 reticle·ring·target outline은 여백 진입과 같은 tick에 숨는다.
 
 ### AC-UX-013 — UI 논리 좌표와 hit area
 
@@ -158,7 +158,7 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 
 ## Verification
 
-package manifest·Player Settings·생성 wrapper·의미 입력 맵 정적 검사, 키보드·XInput 동등 동작 재생, 상태별 스크린 캡처, 고정 틱 입력 순서·잠금/복구 PlayMode 테스트, 짧은 이해도 관찰로 검증한다. runtime override 저장·복구는 VD-09의 해결된 플랫폼 계약을 따르며 조준 피드백의 정확한 시각 수치는 `OD-ART-001`에서 고정한다.
+package manifest·Player Settings·생성 wrapper·의미 입력 맵 정적 검사, 키보드·XInput 동등 동작 재생, 상태별 스크린 캡처, 고정 틱 입력 순서·잠금/복구 PlayMode 테스트, 짧은 이해도 관찰로 검증한다. runtime override 저장·복구는 VD-09의 해결된 플랫폼 계약을 따르고 조준 피드백은 해결된 `OD-ART-001` 수치를 검사한다.
 
 ## Traceability
 

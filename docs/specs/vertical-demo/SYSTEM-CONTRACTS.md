@@ -135,7 +135,7 @@ UI는 모드와 권위 상태를 표현할 뿐 선택, 체력, 전이, 런 결�
 
 UI presentation 좌표는 640×360 logical safe frame이며 gameplay rectangle의 integer scale과 offset으로 output에 배치한다. pixel frame·icon은 point scale, text는 logical 12/14/18px role을 final-output SDF로 렌더한다. interactive hit rect는 최소 24×24 logical px이고 frame edge margin은 12 logical px다. UI scale은 profile setting이 아니다.
 
-Gameplay mouse pointer는 총구의 화면 공간 조준 reticle이다. 유효 공격 조준 대상이 선택되면 reticle 확대와 해당 대상의 형광 외곽선이 함께 활성화된다. 이 조준 포착은 전이 가능 여부와 독립적이다. reticle 내부 ring은 청록 연속선=`TransferReady`, 주황 연속선=`Cooldown`, 적색 단절선=`RangeOrLineOfSightBlocked`를 나타내며 활성 전이 대상은 지속 이중 외곽선을 사용한다. `UIOnly`는 gameplay reticle과 target outline을 제거하고 일반 UI cursor를 표시하며 `Cutscene`, `Transition`, `Ended`는 gameplay pointer feedback을 표시하지 않는다.
+Gameplay mouse pointer는 총구의 화면 공간 조준 reticle이다. 유효 공격 조준 대상이 선택되면 reticle 확대와 해당 대상의 형광 외곽선이 함께 활성화된다. 이 조준 포착은 전이 가능 여부와 독립적이다. reticle 내부 ring은 청록 연속선=`TransferReady`, 주황 연속선=`Cooldown`, 적색 단절선=`RangeOrLineOfSightBlocked`를 나타내며 활성 전이 대상은 지속 이중 외곽선을 사용한다. `UIOnly`는 gameplay reticle과 target outline을 제거하고 일반 UI cursor를 표시하며 `Cutscene`, `Transition`, `Ended`와 letterbox/pillarbox pointer는 gameplay reticle·ring·target outline을 같은 tick에 숨긴다.
 
 target outline priority는 `ActiveTransfer > AimAcquired > Normal`이다. Normal actor·major NPC·핵심 충돌 실루엣은 8방향 1px W01 `#090D12`, AimAcquired는 1px S02 `#F7FFFC`, ActiveTransfer는 안쪽 1px S01 `#20E0D0`와 바깥 1px S02의 지속 이중선으로 대체한다. outline은 640×360 logical pixel에 고정하고 점멸·subpixel sampling·occluder 투시를 허용하지 않는다.
 
@@ -210,4 +210,4 @@ load는 valid primary, valid previous, default 순서만 사용하며 stale temp
 
 ## Remaining approval blockers
 
-`OD-PLAT-001`은 해결됐다. `OD-ART-001`, `OD-SCENE-001`과 모든 소비 스펙의 Luna 일치 검토가 끝나기 전에는 이 문서를 Approved로 전환하지 않는다.
+`OD-PLAT-001`과 `OD-ART-001`은 해결됐다. `OD-SCENE-001`과 모든 소비 스펙의 Luna 일치 검토가 끝나기 전에는 이 문서를 Approved로 전환하지 않는다.

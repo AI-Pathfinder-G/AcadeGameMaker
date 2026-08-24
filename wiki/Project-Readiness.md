@@ -1,12 +1,12 @@
 # Project Readiness
 
-2026-08-24 갱신 결과, P0와 이동·플랫폼 계약 반영은 끝났지만 **P1 두 항목과 독립 검토가 남아 Unity 프로젝트 생성·에셋 임포트·구현은 아직 시작할 수 없다.**
+2026-08-24 갱신 결과, P0와 이동·플랫폼·미술 계약 반영은 끝났지만 **P1 장면 항목 하나와 독립 검토가 남아 Unity 프로젝트 생성·에셋 임포트·구현은 아직 시작할 수 없다.**
 
 ## 핵심 상태
 
 - gameplay 구현 가능한 `Approved` 스펙: 0개 (`VD-11` pre-Unity QA infrastructure만 Verified)
 - 열린 P0 미결정: 0개
-- 열린 P1 결정: 2개
+- 열린 P1 결정: 1개 (`OD-SCENE-001`)
 - Unity Hub와 Unity Editor 6000.3.21f1: 설치·버전 검증 완료
 - Git과 Git LFS: 준비됨
 - 무료 에셋: CC0 원본 7개 격리 확보, 미임포트
@@ -24,7 +24,7 @@ IDE, 아트 편집기, 오디오 도구, 추가 플랫폼 모듈은 해당 작�
 
 ## 다음 게이트
 
-Sol이 해결된 `OD-PLAT-001`의 Luna 독립 검토를 마치고 `OD-ART-001`, `OD-SCENE-001`을 통합 결정한 뒤 관련 스펙을 `Approved`로 승격한다. 그 다음에만 Unity 프로젝트를 생성한다.
+Sol이 해결된 `OD-ART-001`의 소비 스펙을 Luna가 독립 검토하고 `OD-SCENE-001`을 통합 결정한 뒤 관련 스펙을 `Approved`로 승격한다. 그 다음에만 Unity 프로젝트를 생성한다.
 
 ## 2026-08-24 진행 갱신
 
@@ -45,6 +45,7 @@ Sol이 해결된 `OD-PLAT-001`의 Luna 독립 검토를 마치고 `OD-ART-001`, 
 - P1 world 21색·semantic 11색 역할 분리와 32개 exact sRGB HEX 사용자 승인
 - P1 logical pixel 윤곽선의 정상·조준 포착·활성 전이 색·두께·우선순위 사용자 승인
 - P1 URP 2D world/actor layer, 장면 preset, local light·shadow cap와 semantic unlit 규칙 사용자 승인
+- P1 reticle 9×9/13×13px, 획득/해제 3/6 tick, 1px halo·상태 ring 사용자 승인으로 OD-ART-001 해결
 - GLM QA 계획 초안과 MiniMax 부분 구현안을 GPT가 계약 교정하고 Luna가 독립 변조 검증해 VD-11을 Verified로 전환; 13 scenario가 VD-00~09의 68 AC를 전수 연결
 
 > 권위 문서: [본격 개발 착수 전 준비도 점검](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/project-readiness-audit-2026-08-24.md)

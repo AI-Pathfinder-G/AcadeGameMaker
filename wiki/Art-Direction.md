@@ -16,12 +16,14 @@ UI는 640×360 logical safe frame을 사용한다. pixel frame·icon은 정수 p
 
 인물과 핵심 충돌 실루엣은 1px 먹색, 일반 조준 포착은 1px 백색 단일선, 활성 전이는 청록 안쪽선+백색 바깥선의 지속 2px 이중선을 사용한다. 우선순위는 활성 전이, 조준 포착, 정상 순이며 점멸·타일 내부 이음매·비충돌 장식 전체선·벽 너머 투시를 금지한다.
 
+gameplay reticle은 640×360 logical canvas 기준 비포착 9×9px W11, 포착 13×13px S02다. 포착은 정확히 3 tick, 해제는 정확히 6 tick에 완료하며 core 색은 상태 사건과 같은 tick에 전환되고 target 교체 중에는 S02·13×13px를 유지한다. 동일 hue 바깥 1px halo는 emission 1.25 이하이고 내부 1px 상태 ring은 청록 연속선=전이 가능, amber 연속선=Cooldown, 적색 단절선=거리·LOS 차단이다. UI·컷신·전환·종료·화면 여백에서는 같은 tick에 숨는다.
+
 조명은 world와 actor를 분리한다. Hub world/actor intensity는 0.85/1.00, Expedition은 0.75/0.95, Boss는 0.65/0.90을 하한으로 한다. local light는 한 픽셀에 최대 3개·합산 1.35, 장식 변조는 ±8%·3Hz로 제한한다. 의미 효과와 UI는 unlit이고 승인 HEX를 유지한다. 수직 데모에서는 normal map·soft shadow·완전 소등 점멸을 쓰지 않는다.
 
 무료 에셋은 수량보다 라이선스 추적과 통합 가능성을 먼저 본다. 출처, 제작자, 라이선스, 표기 의무, 수정 가능 여부, 검증일이 없는 후보는 프로젝트에 도입하지 않는다.
 
 ## Acquisition status
 
-2026-08-24 기준 첫 CC0 원본 7종을 Git 제외 격리 영역에 확보했다. 산업 타일, 픽셀 UI, 입력 프롬프트, 파티클·연기, 충돌음·인터페이스음이며 각 ZIP의 SHA-256과 포함 라이선스를 [에셋 등록부](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/assets/asset-register.md)에 기록했다. VD-08 Approved 및 OD-ART-001 해결 전에는 Unity 임포트와 파생 작업을 하지 않는다.
+2026-08-24 기준 첫 CC0 원본 7종을 Git 제외 격리 영역에 확보했다. 산업 타일, 픽셀 UI, 입력 프롬프트, 파티클·연기, 충돌음·인터페이스음이며 각 ZIP의 SHA-256과 포함 라이선스를 [에셋 등록부](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/assets/asset-register.md)에 기록했다. OD-ART-001은 해결됐으며 VD-08 Luna 독립 검토와 Approved 전환 전에는 Unity 임포트와 파생 작업을 하지 않는다.
 
 **권위 문서:** [미술 캐논](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/canon/art-direction.md), [미술·에셋 스펙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/08-art-and-asset-integration.md), [에셋 등록부](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/assets/asset-register.md)

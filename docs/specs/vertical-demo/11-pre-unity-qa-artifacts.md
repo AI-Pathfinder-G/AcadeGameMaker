@@ -20,7 +20,7 @@ Unity project·`Assets/`·`Packages/`·`ProjectSettings/`, C# test, runtime hook
 - **Input:** VD-00~10에 현재 선언된 requirement·acceptance-criterion ID, unresolved OD ID와 scenario JSON. 여기서 68-ID manifest는 VD-00~09의 Review 후보 AC 집합을 고정한 coverage baseline이며, 해당 기능 스펙의 Approved·구현 완료를 주장하지 않는다.
 - **Output:** deterministic validation exit code와 duplicate·missing coverage·invalid field·unknown reference 진단.
 - **Owned state:** `qa/schema/`, `qa/catalog/`, `qa/coverage/`, `qa/tools/`, `qa/README.md`.
-- **Invariants:** scenario는 gameplay 값을 소유하지 않고 existing REQ/AC를 참조한다. `blocked` scenario만 `OD-ART-001` 또는 `OD-SCENE-001`을 참조한다. validator는 네트워크·Unity·외부 module 없이 동작하고 파일을 수정하지 않는다.
+- **Invariants:** scenario는 gameplay 값을 소유하지 않고 existing REQ/AC를 참조한다. `blocked` scenario만 현재 열린 `OD-SCENE-001`을 참조한다. validator는 네트워크·Unity·외부 module 없이 동작하고 파일을 수정하지 않는다.
 
 Catalog schema는 `schemaVersion=1`, unique `scenarioId`, `domain`, `caseType`, `priority`, `phase`, `status`, nonempty `requirementIds`, nonempty `acceptanceCriterionIds`, `fixtureRefs`, ordered `steps`, typed `oracle`, `evidence`, `blockedBy`, `tags`를 요구한다. phase는 `pre_unity`, `editmode`, `playmode`, `windows_build`, `manual`; status는 `draft`, `ready`, `blocked`다.
 

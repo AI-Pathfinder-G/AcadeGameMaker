@@ -6,13 +6,13 @@ P0은 관련 스펙의 Approved 전환과 구현을 막는다. P1은 단위 구�
 
 | ID | Priority | Owner | Decision required | Blocks |
 |---|---|---|---|---|
-| OD-ART-001 | P1 | Sol | 확정된 32-color HEX palette·윤곽선·URP 2D 조명 위의 reticle exact 규칙 | VD-07, VD-08, VD-09 |
 | OD-SCENE-001 | P1 | Sol | 중간보스→선택→히로인 장면의 정확한 성공 경로와 실패 시 히로인 노출 여부 | VD-00, VD-06 |
 
 ## Resolved
 
 | ID | Priority | Resolved by | Normative specs |
 |---|---|---|---|
+| OD-ART-001 | P1 | [2026-08-24 조준기 exact values 승인](../../approvals/2026-08-24-p1-art-reticle-values-approval.md) | VD-07, VD-08, VD-09 |
 | OD-PLAT-001 | P1 | [2026-08-24 플랫폼 입력·저장·복구 최종 승인](../../approvals/2026-08-24-p1-profile-load-recovery-approval.md) | VD-01, VD-03, VD-05, VD-06, VD-07, VD-09, SYSTEM-CONTRACTS |
 | OD-MOV-001 | P1 | [2026-08-24 이동 계약 승인](../../approvals/2026-08-24-p1-movement-approval.md) | VD-01, VD-02, VD-04, SYSTEM-CONTRACTS |
 | OD-WT-001 | P0 | [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md) | VD-01, VD-02, VD-03, SYSTEM-CONTRACTS |

@@ -28,7 +28,7 @@
         "steps": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/step" } },
         "oracle": { "$ref": "#/$defs/oracle" },
         "evidence": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "enum": ["log", "state_dump", "replay", "screenshot", "video", "profile_bytes", "build_record", "performance_capture", "manual_report"] } },
-        "blockedBy": { "type": "array", "uniqueItems": true, "items": { "type": "string", "enum": ["OD-ART-001", "OD-SCENE-001"] } },
+        "blockedBy": { "type": "array", "uniqueItems": true, "items": { "type": "string", "enum": ["OD-SCENE-001"] } },
         "tags": { "type": "array", "uniqueItems": true, "items": { "type": "string" } }
       },
       "allOf": [

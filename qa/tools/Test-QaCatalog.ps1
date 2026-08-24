@@ -94,7 +94,7 @@ function Test-CatalogObject {
     $oracleKinds = @('exact_state','exact_event_sequence','exact_bytes_or_hash','numeric_tolerance','visual_contract','performance_budget','manual_observation')
     $comparisons = @('exact','within_contract','sequence_match','hash_match','manual')
     $evidenceTypes = @('log','state_dump','replay','screenshot','video','profile_bytes','build_record','performance_capture','manual_report')
-    $blockers = @('OD-ART-001','OD-SCENE-001')
+    $blockers = @('OD-SCENE-001')
     $reqPattern = '^REQ-(SCOPE-(?:00[1-4])|MOV-(?:00[1-9]|010)|WT-00[1-8]|COM-00[1-6]|ROOM-00[1-7]|RUN-00[1-6]|CHOICE-00[1-7]|UX-(?:00[1-9]|01[0-4])|ART-(?:00[1-9]|01[0-5])|PLAT-(?:00[1-9]|01[0-4]))$'
     $acPattern = '^AC-(SCOPE-00[1-4]|MOV-00[1-6]|WT-00[1-6]|COM-00[1-4]|ROOM-00[1-6]|RUN-00[1-4]|CHOICE-00[1-4]|UX-(?:00[1-9]|01[0-3])|ART-(?:00[1-9]|01[0-2])|PLAT-00[1-9])$'
 
@@ -261,7 +261,7 @@ $tests = @(
     @{ Token='INVALID_ENUM'; Mutate={ param($x) $x.scenarios[0].phase = 'unknown' } },
     @{ Token='UNKNOWN_AC'; Mutate={ param($x) $x.scenarios[0].acceptanceCriterionIds[0] = 'AC-FAKE-001' } },
     @{ Token='UNCOVERED_AC'; Mutate={ param($x) foreach ($s in $x.scenarios) { $s.acceptanceCriterionIds = @($s.acceptanceCriterionIds | Where-Object { $_ -ne 'AC-SCOPE-001' }) } } },
-    @{ Token='UNAUTHORIZED_BLOCKER'; Mutate={ param($x) $x.scenarios[1].blockedBy = @('OD-ART-001'); $x.scenarios[1].status = 'draft' } }
+    @{ Token='UNAUTHORIZED_BLOCKER'; Mutate={ param($x) $x.scenarios[1].blockedBy = @('OD-SCENE-001'); $x.scenarios[1].status = 'draft' } }
 )
 
 $failed = [System.Collections.Generic.List[string]]::new()

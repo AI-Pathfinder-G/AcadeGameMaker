@@ -6,7 +6,7 @@
 - License: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
 - Page facts verified 2026-08-24: 18×18 tiles, 110 files, CC0, free download
 - Sol license decision: Approved by Sol; commercial use and modification allowed, attribution not required; Kenney logo excluded
-- Art decision: Approved as the first industrial blockout and palette-reference pack; final scale and palette wait for OD-ART-001
+- Art decision: Approved as the first industrial blockout and palette-reference pack; scale and palette contracts are resolved, but adaptation/import waits for VD-08 Luna review and Approved status
 - Download URL: https://kenney.nl/media/pages/assets/pixel-platformer-industrial-expansion/f95a0189cd-1668793443/kenney_pixel-platformer-industrial-expansion.zip
 - Quarantine path: `third_party/quarantine/AST-ENV-001/kenney_pixel-platformer-industrial-expansion.zip`
 - Downloaded at: 2026-08-24T06:47:06+09:00

@@ -30,11 +30,11 @@
       "oracle": {"kind": "exact_state", "comparison": "exact", "expected": "AC-UX-005·006·010·011와 AC-PLAT-005·009 계약"}, "evidence": ["log", "state_dump"], "blockedBy": [], "tags": ["input", "rebind"]
     },
     {
-      "scenarioId": "QA-AIM-DET-001", "domain": "AIM", "caseType": "DET", "priority": "P0", "phase": "playmode", "status": "blocked", "title": "입력 모드·조준·포착·여백 결정성",
+      "scenarioId": "QA-AIM-DET-001", "domain": "AIM", "caseType": "DET", "priority": "P0", "phase": "playmode", "status": "draft", "title": "입력 모드·조준·포착·여백 결정성",
       "requirementIds": ["REQ-UX-001", "REQ-UX-002", "REQ-UX-004", "REQ-UX-005", "REQ-UX-008", "REQ-UX-010", "REQ-UX-013", "REQ-WT-008"],
       "acceptanceCriterionIds": ["AC-UX-001", "AC-UX-002", "AC-UX-004", "AC-UX-007", "AC-UX-009", "AC-UX-012", "AC-WT-006"], "fixtureRefs": ["aim replay", "mode lifecycle", "bar pixels"],
       "steps": [{"order": 1, "action": "조준·모드·경계 fixture를 준비한다.", "expected": "동일 replay 조건이 고정된다."}, {"order": 2, "action": "인용 AC replay를 반복한다.", "expected": "상태·tick·시각 계약을 판정한다."}],
-      "oracle": {"kind": "exact_event_sequence", "comparison": "sequence_match", "expected": "AC-UX-001·002·004·007·009·012와 AC-WT-006 계약"}, "evidence": ["replay", "log", "screenshot"], "blockedBy": ["OD-ART-001"], "tags": ["aim", "reticle", "determinism"]
+      "oracle": {"kind": "exact_event_sequence", "comparison": "sequence_match", "expected": "AC-UX-001·002·004·007·009·012와 AC-WT-006 계약"}, "evidence": ["replay", "log", "screenshot"], "blockedBy": [], "tags": ["aim", "reticle", "determinism"]
     },
     {
       "scenarioId": "QA-MOVE-BND-001", "domain": "MOVE", "caseType": "BND", "priority": "P1", "phase": "playmode", "status": "draft", "title": "이동 전체 경계와 방 도달성",
@@ -79,11 +79,11 @@
       "oracle": {"kind": "exact_bytes_or_hash", "comparison": "hash_match", "expected": "AC-PLAT-003·004·006·007·008 계약"}, "evidence": ["profile_bytes", "log", "state_dump"], "blockedBy": [], "tags": ["persistence", "recovery"]
     },
     {
-      "scenarioId": "QA-RENDER-VIS-001", "domain": "RENDER", "caseType": "VIS", "priority": "P2", "phase": "manual", "status": "blocked", "title": "에셋·픽셀·카메라·UI·팔레트·조명",
+      "scenarioId": "QA-RENDER-VIS-001", "domain": "RENDER", "caseType": "VIS", "priority": "P2", "phase": "manual", "status": "draft", "title": "에셋·픽셀·카메라·UI·팔레트·조명",
       "requirementIds": ["REQ-ART-001", "REQ-ART-002", "REQ-ART-003", "REQ-ART-004", "REQ-ART-005", "REQ-ART-006", "REQ-ART-007", "REQ-ART-008", "REQ-ART-009", "REQ-ART-010", "REQ-ART-011", "REQ-ART-012", "REQ-ART-013", "REQ-ART-014", "REQ-ART-015"],
       "acceptanceCriterionIds": ["AC-ART-001", "AC-ART-002", "AC-ART-003", "AC-ART-004", "AC-ART-005", "AC-ART-006", "AC-ART-007", "AC-ART-008", "AC-ART-009", "AC-ART-010", "AC-ART-011", "AC-ART-012"], "fixtureRefs": ["asset register", "supported captures", "lighting presets"],
       "steps": [{"order": 1, "action": "인용 미술 fixture와 capture 환경을 준비한다.", "expected": "출처·viewport·state가 식별된다."}, {"order": 2, "action": "정적 검사와 대표 capture를 비교한다.", "expected": "인용 AC 시각 계약을 판정한다."}],
-      "oracle": {"kind": "visual_contract", "comparison": "within_contract", "expected": "AC-ART-001~012 계약"}, "evidence": ["screenshot", "video", "manual_report"], "blockedBy": ["OD-ART-001"], "tags": ["art", "render", "lighting"]
+      "oracle": {"kind": "visual_contract", "comparison": "within_contract", "expected": "AC-ART-001~012 계약"}, "evidence": ["screenshot", "video", "manual_report"], "blockedBy": [], "tags": ["art", "render", "lighting"]
     },
     {
       "scenarioId": "QA-BUILD-BUILD-001", "domain": "BUILD", "caseType": "BUILD", "priority": "P0", "phase": "windows_build", "status": "draft", "title": "Windows 기준 경로 안정성",

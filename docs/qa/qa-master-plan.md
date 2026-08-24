@@ -49,7 +49,7 @@ ID format is `QA-{DOMAIN}-{POS|NEG|BND|LIFE|DET|REC|VIS|READ|BUILD}-{NNN}`. P0 m
 
 Fixtures use authored IDs, four supported room snapshots, integer SimulationTick, quantized input samples, explicit profile file combinations and deterministic event logs. They never use wall clock, Unity instance ID or creation order as gameplay keys.
 
-Oracles are `exact_state`, `exact_event_sequence`, `exact_bytes_or_hash`, `numeric_tolerance`, `visual_contract`, `performance_budget` or `manual_observation`. A scenario must cite at least one existing requirement and acceptance criterion. Unresolved behavior is marked `blocked` with `OD-ART-001` or `OD-SCENE-001`; the catalog may not invent the missing value.
+Oracles are `exact_state`, `exact_event_sequence`, `exact_bytes_or_hash`, `numeric_tolerance`, `visual_contract`, `performance_budget` or `manual_observation`. A scenario must cite at least one existing requirement and acceptance criterion. Unresolved behavior is marked `blocked` with an approved open-decision ID; 현재 남은 blocker는 `OD-SCENE-001`이며 catalog는 누락된 값을 발명할 수 없다.
 
 ## Evidence and defects
 
@@ -73,4 +73,4 @@ Every result records scenario ID, AC IDs, commit/build identity, environment, fi
 
 ## Current boundary
 
-Only step 1 is authorized now. There is no Unity project, VD-00~09 remain Review, and `OD-ART-001`·`OD-SCENE-001` remain open. Creating `Assets/`, `Packages/`, `ProjectSettings/`, Unity test code or runtime hooks is prohibited until their owning specs are Approved.
+Only step 1 is authorized now. There is no Unity project, VD-00~09 remain Review, `OD-ART-001`은 해결됐고 `OD-SCENE-001`만 열려 있다. Creating `Assets/`, `Packages/`, `ProjectSettings/`, Unity test code or runtime hooks is prohibited until their owning specs are Approved.
