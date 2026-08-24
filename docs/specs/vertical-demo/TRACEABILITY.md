@@ -14,16 +14,17 @@
 | ADR-0013 | 15분 데모의 기능·콘텐츠 범위 | REQ-SCOPE-001~004, 하위 스펙 전체 | AC-SCOPE-001~004와 각 하위 스펙의 AC |
 | ADR-0015 | Sol/Terra/Luna 역할과 승인 경계 | `docs/specs/README.md`의 상태 게이트와 작업 계약 필수 필드 | 모든 AC 증적에 Luna 판정, Sol 통합 승인 기록 |
 | ADR-0018 | P0 무게 전이·방·런·선택·기술·전투를 하나의 공동장부 원정 계약으로 통합 | REQ-SCOPE-003, REQ-MOV-004, REQ-WT-001~007, REQ-COM-001~006, REQ-ROOM-001~006, REQ-RUN-001~006, REQ-CHOICE-001~007, REQ-UX-001~005, REQ-PLAT-006 | AC-SCOPE-004, AC-MOV-002, AC-WT-001~005, AC-COM-001~004, AC-ROOM-001~005, AC-RUN-001~004, AC-CHOICE-001~004, AC-UX-001~004, AC-PLAT-004 |
+| [2026-08-24 P1 movement approval](../../approvals/2026-08-24-p1-movement-approval.md) | 균형 정밀 이동 수치와 검수 허용오차 | REQ-MOV-006~010, REQ-ROOM-007 | AC-MOV-004~006, AC-ROOM-006 |
 
 ## Requirement coverage
 
 | Spec | Requirement range | Acceptance coverage | Status |
 |---|---|---|---|
 | VD-00 | REQ-SCOPE-001~004 | AC-SCOPE-001~004 | Review |
-| VD-01 | REQ-MOV-001~005 | AC-MOV-001~003 | Review |
-| VD-02 | REQ-WT-001~007 | AC-WT-001~005 | Review — P0 resolved; OD-MOV-001 affects movement tolerance |
+| VD-01 | REQ-MOV-001~010 | AC-MOV-001~006 | Review — OD-MOV-001 resolved; Luna review pending |
+| VD-02 | REQ-WT-001~007 | AC-WT-001~005 | Review — P0 and movement tolerance resolved |
 | VD-03 | REQ-COM-001~006 | AC-COM-001~004 | Review — P0 resolved; binding waits on OD-PLAT-001 |
-| VD-04 | REQ-ROOM-001~006 | AC-ROOM-001~005 | Review — P0 resolved; traversal tolerance waits on OD-MOV-001 |
+| VD-04 | REQ-ROOM-001~007 | AC-ROOM-001~006 | Review — P0 and traversal contract resolved; Luna review pending |
 | VD-05 | REQ-RUN-001~006 | AC-RUN-001~004 | Review — P0 resolved; persistence schema waits on OD-PLAT-001 |
 | VD-06 | REQ-CHOICE-001~007 | AC-CHOICE-001~004 | Review — P0 resolved; scene detail waits on OD-SCENE-001 |
 | VD-07 | REQ-UX-001~005 | AC-UX-001~004; REQ-UX-001은 입력 맵 정적 검사 | Review — P0 resolved; device binding waits on OD-PLAT-001 |

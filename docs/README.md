@@ -18,6 +18,7 @@
 - [2026-08-24 개발 환경 준비 상태](./environment/setup-status-2026-08-24.md)
 - [Sol P0 통합 기본안 — Accepted](./proposals/sol-p0-integration-proposal.md)
 - [2026-08-24 P0 통합 승인 기록](./approvals/2026-08-24-p0-integration-approval.md)
+- [2026-08-24 P1 이동 계약 승인 기록](./approvals/2026-08-24-p1-movement-approval.md)
 
 ## 단일 진실원천
 

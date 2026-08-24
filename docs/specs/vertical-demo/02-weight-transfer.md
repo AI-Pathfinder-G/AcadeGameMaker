@@ -85,7 +85,7 @@
 
 ## Verification
 
-상태 전이 단위 테스트, 후보 정렬·LOS·고정 틱 테스트, 상자·적·scripted handle PlayMode 테스트, 방 전환/실패 회귀 테스트로 검증한다. 이동의 최종 속도·점프·대시 허용오차는 `OD-MOV-001`에서 고정한다.
+상태 전이 단위 테스트, 후보 정렬·LOS·고정 틱 테스트, 상자·적·scripted handle PlayMode 테스트, 방 전환/실패 회귀 테스트로 검증한다. 이동의 최종 속도·점프·대시 허용오차는 [VD-01](./01-player-movement.md)을 따른다.
 
 ## Traceability
 
