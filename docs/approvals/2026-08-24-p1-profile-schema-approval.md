@@ -20,4 +20,4 @@
 
 ## Remaining boundary
 
-profile 파일 경로, temporary·backup 파일을 포함한 원자 저장 순서와 손상·미지원 version 복구를 확정하기 전에는 `OD-PLAT-001`을 해결 처리하지 않는다.
+profile 파일 경로와 temporary·previous 파일을 포함한 원자 저장 순서는 후속 승인으로 확정됐다. 손상·미지원 version과 binding 불일치의 load recovery를 확정하기 전에는 `OD-PLAT-001`을 해결 처리하지 않는다.

@@ -62,6 +62,25 @@ Unity 전역 설정, 패키지 잠금, 입력·표시·성능 기준, 버전 저
 
 wall-clock 저장 시각은 payload에 넣지 않고 진단 로그에만 기록한다. 알 수 없는 field를 gameplay 의미로 추측하지 않는다. 활성 런·위치·속도·체력·방·적·보상·원정 자산·활성 전이와 runtime object reference는 schema에 존재할 수 없다.
 
+### Atomic write contract
+
+세 파일은 모두 `Application.persistentDataPath` 바로 아래의 sibling이다.
+
+- `profile.json`: 현재 정상 snapshot
+- `profile.prev.json`: 직전 정상 snapshot
+- `profile.tmp.json`: 작성·검증 중인 후보
+
+저장은 다음 순서를 지키며 어느 실패 단계에서도 기존 `profile.json`을 먼저 삭제·truncate·overwrite하지 않는다.
+
+1. 직전 정상 revision보다 1 큰 `profileRevision`으로 canonical payload와 hash를 만든다.
+2. 새 byte 전체를 `profile.tmp.json`에 truncate-write하고 file buffer를 storage까지 flush한다.
+3. file handle을 닫은 뒤 temp를 다시 읽어 schema, field constraint, canonical byte와 `payloadSha256`를 검증한다.
+4. 현재 `profile.json`이 있으면 같은 filesystem의 atomic replace로 temp를 primary에 배치하면서 교체 전 primary를 `profile.prev.json`으로 보존한다.
+5. primary가 없는 최초 저장이면 검증된 temp를 같은 directory 안에서 `profile.json`으로 move한다.
+6. 어느 단계든 실패하면 정상 primary와 previous를 변경하지 않고 저장 요청자에게 실패를 반환하며 원인·경로·revision을 진단 로그에 남긴다.
+
+성공은 replacement/move가 끝난 뒤에만 발행한다. 시작 시 남은 temp, 손상 primary와 previous 중 선택·격리는 별도 load recovery contract에서 정한다.
+
 ## Requirements
 
 - **REQ-PLAT-001:** Unity 6.3 LTS, C#, URP 2D로 Windows PC 데모를 만든다.
@@ -72,6 +91,7 @@ wall-clock 저장 시각은 payload에 넣지 않고 진단 로그에만 기록�
 - **REQ-PLAT-006:** 활성 런은 저장하거나 재개하지 않고, 설정·입력 바인딩·튜토리얼 확인과 확정된 선택·해금 기술·완료 분기만 각 승인 시점에 원자 저장한다.
 - **REQ-PLAT-007:** `com.unity.inputsystem` 1.20.0을 고정하고 Active Input Handling은 Input System Package (New)만 사용하며 구형 Input Manager와 Both 모드를 금지한다.
 - **REQ-PLAT-008:** 영구 상태는 schemaVersion 1의 canonical 단일 `profile.json`에만 기록하고 settings·input override·tutorial·확정 progression과 integrity hash만 포함하며 활성 런 상태를 배제해야 한다.
+- **REQ-PLAT-009:** 저장은 persistentDataPath의 temp를 완전히 기록·flush·재검증한 뒤에만 primary를 원자 교체하고 직전 primary를 previous로 보존하며 실패 시 기존 정상본을 변경하지 않아야 한다.
 
 ## Acceptance criteria
 
@@ -111,9 +131,15 @@ wall-clock 저장 시각은 payload에 넣지 않고 진단 로그에만 기록�
 - **When** 각각 `profile.json`으로 직렬화해 field·byte·hash를 비교하면
 - **Then** 두 파일은 schema 순서·sorted unique array·LF·UTF-8과 payloadSha256가 exact match하고 승인 필드만 존재하며 활성 런·runtime reference·wall-clock 시각은 포함되지 않는다.
 
+### AC-PLAT-007 — 원자 저장과 실패 격리
+
+- **Given** 정상 primary·previous와 다음 revision snapshot이 있고 temp write·flush·재검증·replace 각 단계의 주입 가능한 실패가 있고
+- **When** 각 단계에서 저장을 중단한 뒤 primary·previous byte와 반환 결과를 확인하면
+- **Then** 성공한 경우만 새 revision이 primary이고 직전 primary가 previous이며, 모든 실패에서 기존 primary·previous byte가 exact match하고 성공 사건 없이 원인·경로·revision이 기록된다.
+
 ## Verification
 
-프로젝트 설정 스냅샷, package lock, 빌드 로그, 성능 캡처, canonical 직렬화와 저장 호환성 테스트로 검증한다. Input 계약과 단일 version 1 profile schema는 확정됐지만 파일 경로·원자 저장·손상 복구 순서는 `OD-PLAT-001` 해결 전까지 미승인이다.
+프로젝트 설정 스냅샷, package lock, 빌드 로그, 성능 캡처, canonical 직렬화, 단계별 I/O 실패 주입과 저장 호환성 테스트로 검증한다. Input 계약, profile schema·경로와 원자 저장 순서는 확정됐지만 load recovery 순서는 `OD-PLAT-001` 해결 전까지 미승인이다.
 
 ## Traceability
 

@@ -183,6 +183,8 @@ Gameplay mouse pointer는 총구의 화면 공간 조준 reticle이다. 유효 �
 
 활성 런은 저장하거나 이어 하지 않는다. 앱 재시작은 거점의 새 원정 상태로 복구한다. 영구 상태는 VD-09의 schemaVersion 1 단일 `profile.json`에 settings·binding override·tutorial·확정 progression만 canonical JSON으로 기록하고 payload hash를 검증한다. 알 수 없는 field를 추측해 gameplay 상태로 채택하지 않는다.
 
+저장은 `Application.persistentDataPath`의 `profile.tmp.json`을 전체 기록·storage flush·close·재검증한 뒤에만 `profile.json`으로 atomic replace한다. 기존 primary는 같은 transaction에서 `profile.prev.json`이 된다. 최초 저장은 검증된 temp를 같은 directory에서 move한다. 실패는 기존 primary·previous를 변경하지 않고 실패 결과만 반환한다.
+
 ## Cross-system invariants
 
 - 방 객체 제거 전에 활성 무게 전이를 정리한다.
@@ -194,6 +196,6 @@ Gameplay mouse pointer는 총구의 화면 공간 조준 reticle이다. 유효 �
 
 ## Remaining approval blockers
 
-- 저장 경로, 원자 저장 순서와 손상 복구 정책: `OD-PLAT-001`
+- 시작 시 파일 선택·격리와 손상 복구 정책: `OD-PLAT-001`
 
 P0 공개 계약과 이동 계약은 해결됐다. 위 P1과 모든 소비 스펙의 일치 검토가 끝나기 전에는 이 문서를 Approved로 전환하지 않는다.

@@ -20,4 +20,4 @@
 
 P0 여섯 항목과 P1 이동 계약은 해결됐다. `Approved` 전환에는 남은 P1 세 항목, 소비 스펙 간 계약 일치, Luna 독립 검토가 필요하다.
 
-플랫폼 P1에서는 Input System 1.20.0 단독, 생성 C# wrapper, 단일 InputRouter와 Gameplay/UI 두 map, 기본 UI binding·focus navigation, 포인터 조준 역할 배치와 mouse/gamepad 타겟 판정·포착 피드백, runtime rebind 범위와 확인 교환 충돌 정책이 확정됐다. 영구 상태는 version 1 단일 `profile.json`에 설정·binding override·tutorial·확정 progression만 canonical JSON과 integrity hash로 기록한다. 파일 경로와 원자 저장·손상 복구 순서는 아직 열려 있다.
+플랫폼 P1에서는 입력·재지정 계약이 확정됐다. 영구 상태는 version 1 단일 `profile.json`에 설정·binding override·tutorial·확정 progression만 canonical JSON과 integrity hash로 기록한다. persistentDataPath의 temp를 기록·flush·재검증한 뒤에만 primary를 원자 교체하고 직전 정상본은 `profile.prev.json`으로 보존한다. 시작 시 파일 선택과 손상 복구 순서는 아직 열려 있다.
