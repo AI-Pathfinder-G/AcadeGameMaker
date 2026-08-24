@@ -28,6 +28,6 @@ P0 여섯 항목과 P1 이동·플랫폼·미술 계약은 해결됐다. `Approv
 
 VD-11은 GLM의 독립 QA 계획 초안, MiniMax M3의 부분 구현안, GPT 계약 교정과 Luna 독립 검증을 거쳐 Verified가 됐다. 현재 pre-Unity catalog는 UI·menu부터 gameplay·저장·render·build·E2E까지 13개 scenario로 VD-00~09의 68개 AC를 전수 연결한다. 실제 Unity EditMode·PlayMode·Windows build test는 각 기능 스펙 승인과 Unity 프로젝트 생성 뒤 구현한다.
 
-NAR-00은 승인된 8챕터 시놉시스를 관찰 가능한 요구사항과 인수 기준으로 전환한 `Review` 스펙이다. 유대 자격·핵심 약속·재진입 규칙과 광오 상태 전환·우선순위·저장 규칙은 P0 미결정이므로 전체 챕터 구현은 아직 시작하지 않는다. exact 수치 튜닝은 후속 단위 스펙에서 다룬다.
+NAR-00은 승인된 8챕터 시놉시스를 관찰 가능한 요구사항과 인수 기준으로 전환한 `Review` 스펙이다. OD-NAR-001의 유대도·핵심 약속·이탈·재합류 규칙은 해결됐다. 남은 P0은 광오 상태 전환·우선순위·저장 규칙이며, 전체 챕터 구현은 아직 시작하지 않는다.
 
 Luna 독립 문서 검토에서 REQ–AC 추적성과 캐논·ADR·VD-06 정합성은 PASS했다. 판정은 미결 승인 차단 항목이 남아 있는 `CONDITIONAL`이며 구현 권한을 제공하지 않는다.
