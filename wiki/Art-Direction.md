@@ -4,6 +4,8 @@
 
 환경 공통 격자는 18 PPU이며 18×18px 타일을 1×1 world unit으로 사용한다. gameplay 내부 pixel canvas는 640×360이고 최종 16:9 2560×1440 출력에서 nearest-neighbor 4배로 확대한다. 비16:9 화면에서도 같은 world framing을 유지하고 중앙 frame 밖은 letterbox/pillarbox로 처리한다. 최소 창은 640×360이다.
 
+일반 카메라는 고정 배율·dead-zone 방식으로 이동 방향과 상승·낙하를 예측해 따라간다. mouse pan과 gameplay dynamic zoom은 사용하지 않고 room bounds를 지키며 보스·선택·컷신에서만 authored anchor를 사용한다.
+
 무료 에셋은 수량보다 라이선스 추적과 통합 가능성을 먼저 본다. 출처, 제작자, 라이선스, 표기 의무, 수정 가능 여부, 검증일이 없는 후보는 프로젝트에 도입하지 않는다.
 
 ## Acquisition status

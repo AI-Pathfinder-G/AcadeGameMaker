@@ -33,6 +33,8 @@
 
 viewport에는 들어가는 가장 큰 integer scale의 640×360 gameplay rectangle을 중앙 배치한다. 비16:9 viewport는 더 많은 world를 노출하거나 crop·stretch하지 않고 넓은 화면은 좌우 pillarbox, 좁거나 더 높은 화면은 상하 letterbox를 사용한다. minimum window size는 640×360이며 scale 1을 허용한다. pixel-art world, HUD와 interactive UI는 gameplay rectangle/safe frame 안에만 배치한다. 여백의 정확한 색·장식은 palette 결정에 둔다.
 
+Gameplay camera는 고정 orthographic size에서 player simulation position을 dead-zone follow한다. horizontal anticipation은 player movement direction만 사용하고 mouse pointer는 camera target에 영향을 주지 않는다. 상승은 작은 upward bias, 빠른 낙하는 더 큰 downward bias를 사용한다. dash는 zoom·hard snap을 유발하지 않는다. camera center는 authored room bounds 안에서 clamp하고 gameplay dynamic zoom을 금지한다. boss·choice·cutscene만 authored camera anchor를 사용할 수 있다. camera pose는 movement 완료 뒤 같은 60Hz tick에서 계산해 1/18 world-unit로 snap하고 그 완료 snapshot을 다음 tick aim이 사용한다. 별도 render-only smoothing pose는 허용하지 않는다.
+
 ## Requirements
 
 - **REQ-ART-001:** 환경은 황동 계량기, 배관, 거대한 추, 붉은 체납 도장, 청회색 콘크리트의 시각 언어를 사용한다.
@@ -45,6 +47,7 @@ viewport에는 들어가는 가장 큰 integer scale의 640×360 gameplay rectan
 - **REQ-ART-008:** 환경·타일·pixel-art VFX는 18 PPU 공통 격자를 사용하고 비18px source는 자동 보간 확대 없이 명시된 수작업 적응 계획을 가져야 하며 최종 출력은 2560×1440을 기준으로 해야 한다.
 - **REQ-ART-009:** gameplay world는 640×360 내부 pixel canvas를 사용해 2560×1440에서 nearest-neighbor 4배 정수 확대하고 18 PPU 기준 약 35.56×20 world-unit framing을 유지해야 한다.
 - **REQ-ART-010:** 모든 지원 viewport는 중앙 고정 16:9 gameplay rectangle에 640×360의 최대 integer scale을 사용하고 비16:9 잔여 영역은 letterbox/pillarbox로 처리하며 world reveal·crop·stretch와 safe-frame 밖 UI를 금지해야 한다.
+- **REQ-ART-011:** gameplay camera는 fixed zoom·dead-zone follow와 movement/fall anticipation을 사용하고 mouse-driven pan·dynamic zoom·dash snap 없이 room bounds와 1/18-unit fixed-tick pose를 지키며 authored scene에서만 anchor를 허용해야 한다.
 
 ## Acceptance criteria
 
@@ -89,6 +92,12 @@ viewport에는 들어가는 가장 큰 integer scale의 640×360 gameplay rectan
 - **Given** 640×360 minimum, 1366×768, 2560×1440과 ultrawide·narrow viewport가 있고
 - **When** 같은 simulation camera pose와 UI를 각각 렌더하면
 - **Then** 중앙 gameplay rectangle은 가능한 최대 integer scale의 640×360이며 16:9가 아닌 잔여 영역만 letterbox/pillarbox가 되고 world framing·HUD 위치는 같고 crop·stretch·추가 world reveal이 없다.
+
+### AC-ART-008 — 카메라 모드와 pixel snap
+
+- **Given** 걷기·방향 전환·상승·빠른 낙하·대시, mouse edge 이동, room bound와 authored boss/choice/cutscene anchor가 있고
+- **When** 같은 movement·mouse 기록을 30/60/144 render FPS에서 재생하면
+- **Then** gameplay zoom과 tick별 snapped camera pose는 exact match하고 mouse 이동·대시는 pan·zoom·hard snap을 만들지 않으며 camera는 room bound 안에 있고 authored scene에서만 anchor mode로 전환된다.
 
 ## Verification
 

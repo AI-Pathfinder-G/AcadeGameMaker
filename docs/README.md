@@ -32,6 +32,7 @@
 - [2026-08-24 P1 18 PPU·2560×1440 출력 기준 승인 기록](./approvals/2026-08-24-p1-art-density-output-approval.md)
 - [2026-08-24 P1 640×360 내부 픽셀 캔버스 승인 기록](./approvals/2026-08-24-p1-art-internal-canvas-approval.md)
 - [2026-08-24 P1 고정 16:9 화면 프레임 승인 기록](./approvals/2026-08-24-p1-art-aspect-frame-approval.md)
+- [2026-08-24 P1 이동 예측형 고정 배율 카메라 승인 기록](./approvals/2026-08-24-p1-art-camera-behavior-approval.md)
 
 ## 단일 진실원천
 

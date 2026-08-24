@@ -19,4 +19,4 @@
 
 ## Remaining boundary
 
-camera follow·look-ahead·dead zone·room bounds, UI render scale, palette·outline·URP 2D lighting과 reticle pixel/glow 수치를 확정하기 전에는 `OD-ART-001`을 해결 처리하지 않는다.
+camera follow 방향은 후속 승인으로 확정됐다. look-ahead·dead-zone exact 수치, UI render scale, palette·outline·URP 2D lighting과 reticle pixel/glow 수치를 확정하기 전에는 `OD-ART-001`을 해결 처리하지 않는다.

@@ -27,6 +27,7 @@
 | [2026-08-24 P1 18 PPU·2560×1440 승인](../../approvals/2026-08-24-p1-art-density-output-approval.md) | 18px environment grid와 2560×1440 output baseline | REQ-ART-008, REQ-PLAT-002 | AC-ART-005, AC-PLAT-001 |
 | [2026-08-24 P1 640×360 canvas 승인](../../approvals/2026-08-24-p1-art-internal-canvas-approval.md) | gameplay logical canvas와 1440p 4× integer scale | REQ-ART-009 | AC-ART-006 |
 | [2026-08-24 P1 fixed 16:9 frame 승인](../../approvals/2026-08-24-p1-art-aspect-frame-approval.md) | integer-scaled safe frame, letterbox/pillarbox와 bar input 차단 | REQ-ART-010, REQ-UX-013, REQ-PLAT-002 | AC-ART-007, AC-UX-012, AC-PLAT-001 |
+| [2026-08-24 P1 predictive camera 승인](../../approvals/2026-08-24-p1-art-camera-behavior-approval.md) | fixed zoom, movement/fall anticipation, room clamp와 fixed-tick pixel snap | REQ-ART-011 | AC-ART-008 |
 
 ## Requirement coverage
 
@@ -40,7 +41,7 @@
 | VD-05 | REQ-RUN-001~006 | AC-RUN-001~004 | Review — persistence contract fixed; Luna review pending |
 | VD-06 | REQ-CHOICE-001~007 | AC-CHOICE-001~004 | Review — P0 resolved; scene detail waits on OD-SCENE-001 |
 | VD-07 | REQ-UX-001~013 | AC-UX-001~012; REQ-UX-001은 입력 맵 정적 검사 | Review — platform PASS; aspect pointer contract fixed; other P1 pending |
-| VD-08 | REQ-ART-001~010 | AC-ART-001~007 | Review — density/canvas/aspect fixed; remaining OD-ART-001 blocks import |
+| VD-08 | REQ-ART-001~011 | AC-ART-001~008 | Review — camera direction fixed; remaining OD-ART-001 blocks import |
 | VD-09 | REQ-PLAT-001~011 | AC-PLAT-001~009 | Review — OD-PLAT-001 Luna document review PASS; other P1 pending |
 
 모든 REQ는 구현 작업 계약과 코드 변경에, 모든 AC는 자동 테스트 또는 수동 검수 증적에 역참조되어야 한다.
