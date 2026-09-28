@@ -1,6 +1,10 @@
 # Multi-Agent Operating Model
 
-## Current override — 2026-09-15
+## Current override — 2026-09-29
+
+[ADR-0037](./adr/0037-gpt6-role-model-migration.md) applies the user's explicit GPT-6 migration. Astra uses `gpt-6-astra`, Sol uses `gpt-6-sol`, Terra's implementation role uses a separate `gpt-6-sol` agent, and Luna uses `gpt-6-luna`. The current dispatch tool exposes no `gpt-6-terra`; that identifier must not be invented or reported as executed. New work, retries and fallbacks must never invoke GPT-5.6. Existing GPT-5.6 workers are not resumed. The role and implementation/independent-verification separation remain unchanged; historical evidence is preserved.
+
+## Previous routing decision — 2026-09-15
 
 [ADR-0032](./adr/0032-gpt-terra-luna-subagent-standard.md) supersedes ADR-0031 for active external-model routing. Future project work uses only GPT Astra, Sol, Terra and Luna. No Ollama, Kimi, GLM, MiniMax or Qwen calls, probes, retries or schedules are permitted. Spark is used only if actually exposed; otherwise Luna is the verification fallback. Historical ADRs and evidence retain their factual past records.
 

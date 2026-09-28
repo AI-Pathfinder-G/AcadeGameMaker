@@ -1,5 +1,7 @@
 # ADR-0032: GPT Terra/Luna 서브에이전트 표준
 
+2026-09-29 후속 결정: 아래 당시 모델 버전 지정은 [ADR-0037](./0037-gpt6-role-model-migration.md)이 대체한다. 과거 5.6 배정은 사실 이력이며 현재 신규 호출·재시도에 사용하지 않는다. 역할 분리와 승인·독립 검수 요건은 유지한다.
+
 - Status: accepted
 - Date: 2026-09-15
 - Decision owner: Astra
