@@ -66,4 +66,4 @@ Unity 라이선스 초기화가 정상화되면 M4B3A fresh Graph PlayMode를 �
 - P1 reticle 9×9/13×13px, 획득/해제 3/6 tick, 1px halo·상태 ring 사용자 승인으로 OD-ART-001 해결
 - GLM QA 계획 초안과 MiniMax 부분 구현안을 GPT가 계약 교정하고 Luna가 독립 변조 검증해 VD-11을 Verified로 전환; 13 scenario가 VD-00~09의 68 AC를 전수 연결 (역사 기록; 현재 외부 모델 호출 없음)
 
-> 권위 문서: [본격 개발 착수 전 준비도 점검](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/project-readiness-audit-2026-08-24.md)
+> 권위 문서: [본격 개발 착수 전 준비도 점검](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/project-readiness-audit-2026-08-24.md)

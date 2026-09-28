@@ -9,4 +9,4 @@
 
 첫 제작 목표는 약 15분 수직 데모이며 전체 게임이나 출시 준비는 범위가 아니다.
 
-**권위 문서:** [게임 디자인 캐논](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/canon/game-design.md), [ADR-0013](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/adr/0013-fifteen-minute-vertical-slice.md)
+**권위 문서:** [게임 디자인 캐논](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/canon/game-design.md), [ADR-0013](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/adr/0013-fifteen-minute-vertical-slice.md)

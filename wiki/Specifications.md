@@ -4,21 +4,21 @@
 
 | Area | Spec | Current status |
 |---|---|---|
-| Scope | [VD-00](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/00-spec-index.md) | Approved |
-| Movement | [VD-01](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/01-player-movement.md) | Approved |
-| Weight transfer | [VD-02](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/02-weight-transfer.md) | Approved |
-| Combat | [VD-03](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/03-combat-and-enemies.md) | Approved |
-| Rooms/expedition | [VD-04](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/04-authored-rooms-and-expedition.md) | Approved |
-| Failure/persistence | [VD-05](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/05-failure-and-persistence.md) | Approved |
-| Choice/narrative | [VD-06](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/06-humanity-choice-and-narrative.md) | Approved |
-| Input/UI | [VD-07](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/07-input-ui-and-feedback.md) | Approved |
-| Art/assets | [VD-08](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/08-art-and-asset-integration.md) | Approved |
-| Platform/quality | [VD-09](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/09-platform-and-quality.md) | Approved |
-| Verification | [VD-10](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/10-verification-script.md) | Approved |
-| Pre-Unity QA infrastructure | [VD-11](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/11-pre-unity-qa-artifacts.md) | Verified |
-| Full-game narrative | [NAR-00](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/full-game-narrative/00-spec-index.md) | Review |
+| Scope | [VD-00](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/vertical-demo/00-spec-index.md) | Approved |
+| Movement | [VD-01](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/vertical-demo/01-player-movement.md) | Approved |
+| Weight transfer | [VD-02](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/vertical-demo/02-weight-transfer.md) | Approved |
+| Combat | [VD-03](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/vertical-demo/03-combat-and-enemies.md) | Approved |
+| Rooms/expedition | [VD-04](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/vertical-demo/04-authored-rooms-and-expedition.md) | Approved |
+| Failure/persistence | [VD-05](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/vertical-demo/05-failure-and-persistence.md) | Approved |
+| Choice/narrative | [VD-06](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/vertical-demo/06-humanity-choice-and-narrative.md) | Approved |
+| Input/UI | [VD-07](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/vertical-demo/07-input-ui-and-feedback.md) | Approved |
+| Art/assets | [VD-08](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/vertical-demo/08-art-and-asset-integration.md) | Approved |
+| Platform/quality | [VD-09](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/vertical-demo/09-platform-and-quality.md) | Approved |
+| Verification | [VD-10](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/vertical-demo/10-verification-script.md) | Approved |
+| Pre-Unity QA infrastructure | [VD-11](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/vertical-demo/11-pre-unity-qa-artifacts.md) | Verified |
+| Full-game narrative | [NAR-00](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/full-game-narrative/00-spec-index.md) | Review |
 
-**권위 문서:** [스펙 운영 규칙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/README.md), [열린 결정](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/OPEN-DECISIONS.md)
+**권위 문서:** [스펙 운영 규칙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/README.md), [열린 결정](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/vertical-demo/OPEN-DECISIONS.md)
 
 P0 여섯 항목과 P1 이동·플랫폼·미술·AimArc·성공 장면 흐름 계약은 모두 해결됐다. Luna의 최종 계약 검토가 PASS했고 Sol이 2026-08-25 수직 데모 구현 게이트를 승인했다. 구현은 승인된 작업 계약 단위로만 진행한다.
 

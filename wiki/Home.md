@@ -24,4 +24,4 @@ AcadeGameMaker는 중력을 계량·과금하는 관료주의 디젤펑크 도�
 - [[Project Readiness|Project-Readiness]]
 - [[Sol P0 Proposal|Sol-P0-Proposal]]
 
-> 이 위키는 발행·탐색용 보기다. 충돌 시 [문서 지도](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/README.md)가 지정한 권위 문서를 따른다.
+> 이 위키는 발행·탐색용 보기다. 충돌 시 [문서 지도](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/README.md)가 지정한 권위 문서를 따른다.

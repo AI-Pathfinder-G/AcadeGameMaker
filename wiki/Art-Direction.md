@@ -24,6 +24,6 @@ gameplay reticle은 640×360 logical canvas 기준 비포착 9×9px W11, 포착 
 
 ## Acquisition status
 
-2026-08-24 기준 첫 CC0 원본 7종을 Git 제외 격리 영역에 확보했다. 산업 타일, 픽셀 UI, 입력 프롬프트, 파티클·연기, 충돌음·인터페이스음이며 각 ZIP의 SHA-256과 포함 라이선스를 [에셋 등록부](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/assets/asset-register.md)에 기록했다. OD-ART-001은 해결됐으며 VD-08 Luna 독립 검토와 Approved 전환 전에는 Unity 임포트와 파생 작업을 하지 않는다.
+2026-08-24 기준 첫 CC0 원본 7종을 Git 제외 격리 영역에 확보했다. 산업 타일, 픽셀 UI, 입력 프롬프트, 파티클·연기, 충돌음·인터페이스음이며 각 ZIP의 SHA-256과 포함 라이선스를 [에셋 등록부](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/assets/asset-register.md)에 기록했다. OD-ART-001은 해결됐으며 VD-08 Luna 독립 검토와 Approved 전환 전에는 Unity 임포트와 파생 작업을 하지 않는다.
 
-**권위 문서:** [미술 캐논](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/canon/art-direction.md), [미술·에셋 스펙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/08-art-and-asset-integration.md), [에셋 등록부](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/assets/asset-register.md)
+**권위 문서:** [미술 캐논](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/canon/art-direction.md), [미술·에셋 스펙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/vertical-demo/08-art-and-asset-integration.md), [에셋 등록부](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/assets/asset-register.md)

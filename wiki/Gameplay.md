@@ -34,10 +34,10 @@
 
 보스전은 초반 한 화면형에서 중반 확장·복합 기믹형으로 발전한다. 최종 보스전은 두 단계 이상의 거대 보스·발사 중력 장치 공략과 고피해 패턴 학습이 중심이다. 진보스전은 공명으로 권능과 장치 기믹을 봉인한 뒤 좁은 거리에서 도언이 직접 맞서는 결전으로 반전된다. 자동 승리나 기술 삭제를 뜻하지 않는다.
 
-이 방향의 권위 문서: [보스전 구성 캐논](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/canon/boss-encounter-direction.md), [ADR-0028](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/adr/0028-boss-arena-escalation-and-final-duel.md). 로컬 위키 원고 반영이며 원격 게시 완료를 의미하지 않는다.
+이 방향의 권위 문서: [보스전 구성 캐논](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/canon/boss-encounter-direction.md), [ADR-0028](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/adr/0028-boss-arena-escalation-and-final-duel.md). 로컬 위키 원고 반영이며 원격 게시 완료를 의미하지 않는다.
 
 기존 pointer reticle과 함께 캐릭터 주변 조준 방향 쪽 180도 AimArc와 방향 화살표를 사용한다. 차지량은 화살표 내부 shape fill로 표시한다. 후속 활 무기는 같은 중력 가속도 아래 차지별 초기 속도·거리·피해·경직이 달라지는 실제 곡사 탄도를 사용한다.
 
 히로인은 수직 데모 마지막 등장 이후 후속 챕터에서 자율 지원 사이드킥으로 해금된다. 조준 대상 유도 사격과 원정 시드 기반 지원 물품을 제공하되 플레이어의 핵심 전투와 선택을 대신하지 않는다.
 
-**권위 문서:** [게임 디자인 캐논](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/canon/game-design.md), [무게 전이 스펙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/02-weight-transfer.md), [방/원정 스펙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/vertical-demo/04-authored-rooms-and-expedition.md)
+**권위 문서:** [게임 디자인 캐논](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/canon/game-design.md), [무게 전이 스펙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/vertical-demo/02-weight-transfer.md), [방/원정 스펙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/specs/vertical-demo/04-authored-rooms-and-expedition.md)
