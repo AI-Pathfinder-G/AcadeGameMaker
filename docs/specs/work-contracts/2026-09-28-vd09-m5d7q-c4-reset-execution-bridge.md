@@ -10,7 +10,8 @@ status: Review
 - Bounded design: Sol; intended implementation: Terra; independent QA: Luna
 - Parent: `2026-09-28-vd09-m5d7q-c-new-game-reset.md` (Approved)
 - Required predecessors: C1 Verified; C2 Approved and independently verified
-  before C4 execution; C3 Approved and independently verified before C4 intake
+  before C4 execution; C3 Approved with its independently accepted pre-C4 gate
+  and frozen source/API before C4 intake, as specified by ADR-0036 below
 - Parent trace: `REQ-M5D7QC-001/003/004/005/006/007`,
   `AC-M5D7QC-002/003/004/005/006/007`
 
@@ -344,3 +345,9 @@ split. Astra alone may change Review to Approved, and only after C2's exact
 implemented boundary is frozen and independently accepted. Terra then
 implements with `REQ-M5D7QC4-*` citations; Luna independently verifies; Astra
 alone accepts integration. This draft authorizes no runtime edit.
+
+### 아스트라 선행 조건 명확화 — 2026-09-29, 상태 Review 유지
+
+[ADR-0036](../../adr/0036-staged-confirmation-and-execution-acceptance.md)과 Approved C3의 단계적 수용 보정에 따라 C4 준비의 C3 선행 조건은 합성 선행 단계의 독립 수용 및 정확한 소스·API 동결이다. 이 단계는 C3 전체 Verified가 아니며 C3 AC-M5D7QC3-007/008은 Open/Not Verified로 남는다. C3 AC-M5D7QC3-010의 해당 집중·필수 회귀와 루나 P0/P1=0, 아스트라 선행 단계 수용을 생략할 수 없다.
+
+C4 자체는 Review이며 별도 아스트라 승인 전 구현을 허용하지 않는다. Approved C4의 실제 실행 결과가 준비된 뒤 C3 잔여 AC-M5D7QC3-007/008 및 C4 AC-M5D7QC4-001..010 전체를 공동 최종 검증한다. AC-009 정적/API·권한 검수와 AC-010의 현재 소스 집중·필수 편집 모드 및 실행 모드 회귀도 유지한다. 기존 결과 출처, 실행 가드, C1/C2 경계와 제품 동작은 바꾸지 않는다.

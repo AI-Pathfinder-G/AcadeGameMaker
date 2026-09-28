@@ -477,3 +477,13 @@ typed provenance; this closes the design blocker without changing parent
 AC-M5D7QC3-002/004/007/009/010 or existing durable behavior. The other C3
 allowlist, synthetic-only restrictions and Q0 exact-source successor gate
 remain unchanged. C3/C3L acceptance requires actual independent verification.
+
+### 아스트라 단계적 수용 보정 — Approved, 2026-09-29
+
+[ADR-0036](../../adr/0036-staged-confirmation-and-execution-acceptance.md)에 따라 C3의 실제 Q-B 발급, 관찰, 결정, 취소, 새 입력 세대와 실행 직전 권한 폐쇄를 선행 단계로 구현·독립 검증한다. AC-M5D7QC3-001..006/009와 AC-M5D7QC3-010의 해당 집중·필수 편집 모드 및 실행 모드 회귀, 루나 P0/P1=0과 아스트라 수용이 필요하다. C3L 관찰 단위의 제한된 회귀 결과로 새 소유자·재무장 검증을 대신할 수 없다.
+
+AC-M5D7QC3-007의 관찰 Busy와 AC-M5D7QC3-008의 C3 커밋 구간은 실행 연결 전 부분 증거로만 기록한다. 두 전체 기준은 Open/Not Verified로 유지하며 부분 PASS·독립 Verified로 표시하지 않는다. C3 전체 Verified도 아직 기록할 수 없다.
+
+실제 C1 결과 발급·보고 수용은 별도로 Approved가 된 C4만 구현할 수 있다. 그 후 남은 AC-M5D7QC3-007/008과 AC-M5D7QC4-001..010 전체를 실제 출처 및 현재 소스의 집중·필수 회귀로 공동 검증하고 루나 독립 검수와 아스트라 최종 수용을 받아야 한다. 반사 호출을 통한 정상 권한 발급, 합성 결과 발급기, 결과 스칼라 대체는 허용하지 않는다. 제품 동작·허용 목록·C1/C2 실행 금지는 그대로 유지한다.
+
+승인 근거는 [독립 보정 검수](../../verification/2026-09-29-vd09-m5d7q-c3-c4-acceptance-cycle-resolution-luna-closure.md)와 제안서 SHA-256 `A8D35076BADAD0E897C9E27F15055956A3B13D96AE222BE81953129ECB4660B3`이다. 이 보정은 수용 순서의 승인이지 실제 코드 수용 또는 C4 계약 승인 자체가 아니다.

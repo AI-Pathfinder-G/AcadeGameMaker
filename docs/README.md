@@ -1,6 +1,9 @@
 # Documentation Map
 
-- [C3 실행 관리자 조회 함수 사용자 승인](./approvals/2026-09-28-c3-readonly-launch-root-accessor-approval.md) — 이번 세션에서 내부 읽기 전용 함수 추가를 명시적으로 승인받았다. Q0 후속 지문 변경은 정확한 소스 독립 검수와 별도 아스트라 승인이 필요하다.
+- [확인·실행 연결 단계적 수용 결정](./adr/0036-staged-confirmation-and-execution-acceptance.md) · [독립 폐쇄 검수](./verification/2026-09-29-vd09-m5d7q-c3-c4-acceptance-cycle-resolution-luna-closure.md) — 아스트라가 C3 선행 검증과 C4 공동 최종 검증 순서만 승인했다. C3 실행 결과 관련 전체 기준은 미검증이며 C4는 Review를 유지한다. 시험 요구·제품 동작·현재 코드 허용 범위는 완화하지 않았다.
+
+- [C3L 집중 실행 11/11](./verification/2026-09-28-vd09-m5d7q-c3l-focused-execution.md) · [독립 검수](./verification/2026-09-28-vd09-m5d7q-c3l-r3-luna-review.md) · [C3 소유자 설계 승인](./approvals/2026-09-28-c3-owner-implementation-design-approval.md) — 집중 시험의 실패·건너뜀·판정보류 0, 시험 이름과 전후 입력 지문 차이 0이다. 필수 편집 모드 회귀는 진행 중이며 C3L 전체 수용과 C3 본체 구현은 아직 완료하지 않았다. 아래 인계서의 중단·승인 대기는 이전 시점의 기록이다.
+- [C3 실행 관리자 조회 함수 사용자 승인](./approvals/2026-09-28-c3-readonly-launch-root-accessor-approval.md) · [Q0 후속 지문 승인](./approvals/2026-09-28-c3-adapter-successor-sha-approval.md) — 이번 세션에서 내부 읽기 전용 함수 추가를 명시적으로 승인받고 정확한 소스 독립 검수와 후속 지문 승인을 완료했다.
 - [C3L 관찰 잠금 구분 — Approved, 미검증](./specs/work-contracts/2026-09-28-vd09-m5d7q-c3l-observation-lease-provenance.md) · [C4 초기화 실행 연결 — Review](./specs/work-contracts/2026-09-28-vd09-m5d7q-c4-reset-execution-bridge.md) — C3/C3L 새 검증 후 C4 계약 승인과 구현을 진행한다. 이전 인계서의 승인 대기는 당시 기록이며 위 사용자 승인으로 조회 함수 차단만 해소됐다.
 
 - [다음 세션 인계서](./handoffs/2026-09-28-next-session.md) · [핵심 파일 지문](./handoffs/2026-09-28-workspace-checkpoint.json) — 사용자 요청으로 구현을 종료하고 작업물을 보존했다. C2/C2R 수용 결과와 C3L 미검증 변경분을 구분했으며, 다음 세션은 실행 관리자 내부 조회 함수의 미답변 승인부터 확인해야 한다. 이 인계 요청 자체는 해당 변경 승인이 아니다.
