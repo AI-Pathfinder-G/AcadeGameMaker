@@ -1,7 +1,7 @@
 # Work Contract: [unit]
 
 - Owning spec and revision:
-- Assigned by: Sol
+- Assigned by: Astra
 - Implementer: Terra
 - Independent verifier: Luna
 - Requirement IDs:
@@ -14,6 +14,11 @@
 - Required implementation evidence:
 - Required independent verification evidence:
 - Integration order and dependencies:
-- Sol approval/date:
+- Terra local impact brief location:
+- Terra implementation/tooling assignment and expected artifact:
+- Luna pre/post adversarial QA assignment and expected artifact:
+- Sol complex-design support or non-applicability reason:
+- Actual GPT participation and independent evidence location:
+- Astra approval/date:
 
-계약에 빈 필드가 있거나 owning spec이 Approved가 아니면 구현을 시작하지 않는다.
+계약에 빈 필드가 있거나 owning spec이 Approved가 아니면 구현을 시작하지 않는다. ADR-0027에 따라 실제 GPT 구현·독립 검증 참여를 기록한다.

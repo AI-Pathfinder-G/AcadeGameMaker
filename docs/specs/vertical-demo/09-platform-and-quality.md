@@ -1,10 +1,14 @@
 # [VD-09] Platform and Quality Baseline
 
-- Status: Review
+- Status: Approved
 - Owner: Sol
 - Unit implementation: Terra
 - Verification: Luna
-- Last updated: 2026-08-24
+- Approved by: Sol
+- Approved: 2026-08-25
+- Last updated: 2026-08-25
+- 2026-09-28 Astra amendment: confirmed New Game reset exception is governed
+  solely by `docs/specs/work-contracts/2026-09-28-vd09-m5d7q-c-new-game-reset.md`.
 
 ## Scope
 
@@ -106,6 +110,17 @@ wall-clock 저장 시각은 payload에 넣지 않고 진단 로그에만 기록�
 9. 복구 후 atomic save가 실패해도 검증된 previous 또는 default in-memory profile로 거점 진입을 허용하되, 보존되지 않았음을 알리고 다음 저장에서 다시 시도한다.
 
 손상·미지원 파일은 삭제하지 않는다. recovery filename의 UTC는 진단용이며 gameplay 상태와 revision 결정에 사용하지 않는다. 동일 이름 충돌 시 ordinal suffix를 붙인다.
+
+### Confirmed New Game reset exception — M5D7Q-C
+
+위 일반 저장·복구 순서는 확인된 `NewGame` 초기화 트랜잭션에 한해
+M5D7Q-C 계약의 durable barrier와 수동 보관 경계가 우선한다. barrier가
+존재하면 일반 primary/previous/temp 자동 선택·저장을 시작하지 않는다.
+이전 세 active leaf를 검증된 수동 복구 전용 보관소로 옮긴 뒤에만 새
+계보의 정확한 기본 profile을 revision `0` 첫 저장으로 만든다. 완료 후
+옛 진행은 자동 복구 후보가 아니며, barrier가 없어진 뒤부터 이 문서의
+일반 v1 저장·복구 규칙이 새 계보에 다시 적용된다. 이 예외는 다른
+저장, `Continue`, 원정 중 상태 복원 또는 추가 save slot에 적용되지 않는다.
 
 ## Requirements
 

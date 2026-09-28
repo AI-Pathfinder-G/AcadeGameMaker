@@ -1,5 +1,9 @@
 # Wiki Publishing Status
 
+## 2026-09-28 게시 준비
+
+이번 정리본은 문서 변경 요청의 `codex/documentation-checkpoint-20260928` 브랜치를 원본으로 사용한다. 아직 병합 전이므로 최신 계약 링크는 해당 브랜치로 연결한다. 아래 2026-08-24 게시 완료·개정 기록은 당시 이력이며 이번 게시의 성공 증거가 아니다. 실제 게시 후 개정과 검수일을 별도 기록한다.
+
 ## Repository publication
 
 - Repository: [AI-Pathfinder-G/AcadeGameMaker](https://github.com/AI-Pathfinder-G/AcadeGameMaker)

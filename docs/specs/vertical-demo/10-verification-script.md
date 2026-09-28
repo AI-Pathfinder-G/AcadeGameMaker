@@ -1,9 +1,11 @@
 # [VD-10] Vertical Demo Verification Script
 
-- Status: Review
+- Status: Approved
 - Owner: Luna
-- Contract approval/integration: Sol
-- Last updated: 2026-08-24
+- Contract approval/integration: Astra
+- Approved by: Astra
+- Approved: 2026-08-25
+- Last updated: 2026-08-25
 
 ## Required environments
 
@@ -50,9 +52,10 @@
 | Play capture | uninterrupted path or timestamped clips, AC IDs |
 | State snapshot | before/after values for persistence and transfer cleanup |
 | Exception log | zero unresolved exceptions or linked defect ID |
+| GPT participation ledger | Astra/Terra/Luna/Sol 역할, model ID, bounded task, output/evidence reference, independent verification owner |
 | Verification report | Luna verdict by AC ID, deviations, reproducible steps |
 
-검증 보고서는 모든 필수 AC를 `Pass`, `Fail`, `Blocked` 중 하나로 기록한다. `Blocked`나 계약 위반이 하나라도 있으면 Sol은 Verified 또는 통합 완료로 승인하지 않는다.
+검증 보고서는 모든 필수 AC를 `Pass`, `Fail`, `Blocked` 중 하나로 기록한다. `Blocked`나 계약 위반이 하나라도 있으면 Astra는 Verified 또는 통합 완료로 승인하지 않는다. 과거 Ollama 참여 기록은 이 표준의 현재 배정 입력이 아니다.
 
 ## Traceability
 

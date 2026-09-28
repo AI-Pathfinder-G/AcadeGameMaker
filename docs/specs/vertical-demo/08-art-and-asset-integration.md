@@ -1,10 +1,12 @@
 # [VD-08] Art and Asset Integration
 
-- Status: Review
+- Status: Approved
 - Owner: Terra
 - Direction and license approval: Sol
 - Verification: Luna
-- Last updated: 2026-08-24
+- Approved by: Sol
+- Approved: 2026-08-25
+- Last updated: 2026-09-06
 
 ## Scope
 
@@ -14,7 +16,7 @@
 - 라이선스 증적, 다운로드 URL, 검증일, SHA-256 기록
 - Approved 이후의 Unity 임포트와 대표 검수 장면 일관성 검사
 
-## Non-scope while status is Review
+## Deferred until asset-import evidence
 
 - Unity 프로젝트 또는 `Assets/` 임포트
 - 원본 파일 수정, 재배포 패키지 제작, 팔레트 변환
@@ -27,7 +29,7 @@
 - **Owned state:** `docs/assets/asset-register.md`, `docs/assets/evidence/`, `third_party/quarantine/`
 - **Invariants:** 라이선스가 불명확한 파일은 다운로드하지 않는다. 다운로드 파일은 임포트·실행·수정하지 않는다. 등록부의 `Approved by Sol`과 증적·체크섬이 모두 존재하기 전에는 상태를 `Quarantined`로 바꾸지 않는다.
 
-후보 조사와 격리 보관은 구현이 아니므로 이 스펙이 Review인 동안 수행할 수 있다. `OD-ART-001`은 해결됐지만 Unity 임포트와 파생 작업은 이 스펙이 Luna 독립 검토 뒤 Approved가 된 다음에만 시작한다.
+후보 조사와 격리 보관은 완료된 준비 작업이다. `OD-ART-001`과 이 스펙은 Approved지만, Unity 임포트와 파생 작업은 별도의 승인된 작업 계약과 Luna 독립 검증 증적이 있어야 완료로 표시한다. 현재 외부 아트 원본은 격리 상태이며, `Assets/`의 BGM 3개와 티저 MP4 3개는 별도 제작 산출물인 생성본으로서 최종 채택·런타임 검수 증적이 없다.
 
 공통 환경 격자는 `18 pixels per unit`이며 18×18 source tile은 1×1 world unit에 native mapping한다. 다른 밀도의 후보는 automatic resample하지 않고 18픽셀 격자에 맞춘 padding·crop·redraw 계획을 등록부에 기록한다. Pixel Perfect Camera reference resolution과 gameplay 내부 render canvas는 640×360이며 nearest-neighbor integer scale로 2560×1440에서 정확히 4배 확대한다. 이 frame은 약 35.56×20 world units를 표시한다.
 
@@ -48,6 +50,8 @@ URP 2D sorting/light contract는 `BackDecor`, `WorldGeometry`, `Actors`, `Gamepl
 warm fixture는 W18 `#A47E43`, max intensity 1.10, radius 5u이고 cold work light는 W10, max 0.85, radius 7u다. warning fixture는 semantic red 대신 W16 `#92563A`를 사용한다. 한 output pixel의 environment local overlap은 max 3, combined contribution은 1.35 cap이다. decorative modulation은 base intensity ±8%, max 3Hz이며 full-off blink와 semantic hue 모방을 금지한다. WorldGeometry·large machinery만 hard pixel-aligned shadow를 cast하고 maximum attenuation은 55%다. actor·enemy·transfer target은 shadow로 완전히 사라질 수 없다. vertical demo는 sprite normal map과 soft shadow blur를 사용하지 않는다. semantic core pixel은 unlit approved HEX를 유지하며 emission은 hue rotation 없이 max 1.25다.
 
 Gameplay reticle은 640×360 logical canvas에서 비포착 9×9px·1px W11 core, 포착 13×13px·S02 core이며 획득은 정확히 3 tick, 해제는 정확히 6 tick에 크기 전환을 완료한다. core 색은 포착·해제 사건과 같은 tick에 전환된다. 동일 hue의 바깥 1px halo는 emission 1.25 이하이고 core HEX를 바꾸지 않는다. target 교체는 S02·13×13px를 유지한다. 내부 1px ring은 S01 연속선, S03 연속선, S04 단절선을 사용하며 reticle·ring·target outline은 점멸하지 않는다.
+
+캐릭터 AimArc는 640×360 logical canvas에서 1/18u snap된 player aim origin을 중심으로 조준 방향 전방 180°, 반지름 18px, 두께 1px를 사용한다. 방향 화살표는 반지름 18→27px의 9px shaft와 5×5px head이고, 차지는 내부를 꼬리에서 촉까지 16단계 floor 양자화 shape fill로 채운다. 기본 W11·포착 S02를 사용하고 halo·점멸·추가 의미색은 없다. reticle과 같은 InputMode·여백·invalid aim 생명주기로 숨는다.
 
 | ID | Role | sRGB HEX |
 |---|---|---|
@@ -99,7 +103,7 @@ Gameplay reticle은 640×360 logical canvas에서 비포착 9×9px·1px W11 core
 - **REQ-ART-011:** gameplay camera는 6×4u dead zone, ±3u horizontal·+1.5/-3u vertical anticipation, 12-tick offset transition과 max 0.5u/tick follow를 사용하고 mouse-driven pan·dynamic zoom·dash snap 없이 room bounds와 1/18-unit fixed-tick pose를 지키며 승인 생명주기에서만 snap·anchor를 허용해야 한다.
 - **REQ-ART-012:** UI는 640×360 logical safe frame과 gameplay integer scale을 사용하고 pixel frame·icon은 point filtering, text는 final-output SDF로 렌더하며 승인된 font·hit-area·margin 최소값을 지켜야 한다.
 - **REQ-ART-013:** master palette는 승인된 21 world·11 semantic sRGB HEX mapping과 지정된 역할 공유만 사용하며 semantic accent의 장식 사용과 heroine identity 색의 reward/interactable 재사용을 금지하고 상태는 색 외 line·outline 신호를 함께 사용해야 한다.
-- **REQ-ART-014:** actor·major NPC·핵심 충돌 실루엣은 8방향 1px W01 normal outline을 사용하고 AimAcquired는 1px S02 단일선, ActiveTransfer는 안쪽 S01·바깥 S02의 지속 2px 이중선으로 대체해야 한다. reticle은 승인된 W11/S02 9×9/13×13px·정확한 3/6 tick·1px ring·동일 hue 바깥 1px halo geometry를 사용하고 `ActiveTransfer > AimAcquired > Normal` 우선순위, 무점멸, 비투시, 타일 내부 이음매·비충돌 장식 제외 규칙을 지켜야 한다.
+- **REQ-ART-014:** actor·major NPC·핵심 충돌 실루엣은 8방향 1px W01 normal outline을 사용하고 AimAcquired는 1px S02 단일선, ActiveTransfer는 안쪽 S01·바깥 S02의 지속 2px 이중선으로 대체해야 한다. reticle은 승인된 W11/S02 9×9/13×13px·정확한 3/6 tick·1px ring·동일 hue 바깥 1px halo geometry를 사용한다. AimArc는 18px·1px·180° 반원, 9px shaft·5×5px head와 16단계 charge fill을 사용한다. `ActiveTransfer > AimAcquired > Normal` 우선순위, 무점멸, 비투시, 타일 내부 이음매·비충돌 장식 제외 규칙을 지켜야 한다.
 - **REQ-ART-015:** URP 2D는 승인된 six-layer light separation, 장면별 world/actor global minimum, local light overlap·합산·modulation cap, hard-shadow 제한과 semantic/UI unlit 보호를 사용하고 sprite normal map·soft shadow·full-off decorative blink를 금지해야 한다. reticle halo는 core와 동일 hue이고 core HEX를 보존하며 emission 1.25를 넘지 않아야 한다.
 
 ## Acceptance criteria
@@ -168,7 +172,7 @@ Gameplay reticle은 640×360 logical canvas에서 비포착 9×9px·1px W11 core
 
 - **Given** player·enemy·heroine·충돌/비충돌 prop·연결된 tile과 normal·AimAcquired·ActiveTransfer 상태 및 부분/완전 가림 장면이 있고
 - **When** 640×360과 2×·3×·4× integer output capture에서 윤곽선을 검사하면
-- **Then** normal 핵심 실루엣은 8방향 1px W01, AimAcquired는 1px S02 단일선, ActiveTransfer는 안쪽 S01·바깥 S02의 지속 2px 이중선이고 reticle은 비포착 W11 9×9px·포착 S02 13×13px·정확한 획득 3 tick·해제 6 tick·target 교체 크기 유지·1px 상태 ring·동일 hue 바깥 1px halo를 exact match한다. 상위 상태가 하위를 대체하며 점멸·subpixel edge·타일 내부선·비충돌 장식 전체선·벽 너머 outline이 없다.
+- **Then** normal 핵심 실루엣은 8방향 1px W01, AimAcquired는 1px S02 단일선, ActiveTransfer는 안쪽 S01·바깥 S02의 지속 2px 이중선이고 reticle은 비포착 W11 9×9px·포착 S02 13×13px·정확한 획득 3 tick·해제 6 tick·target 교체 크기 유지·1px 상태 ring·동일 hue 바깥 1px halo를 exact match한다. AimArc는 18px radius·1px stroke·180° span, 9px shaft·5×5px head와 0/1/15/16단계 charge fill을 logical pixel에서 exact match한다. 상위 상태가 하위를 대체하며 점멸·subpixel edge·타일 내부선·비충돌 장식 전체선·벽 너머 outline이 없다.
 
 ### AC-ART-012 — 조명 분리와 의미색 보호
 
@@ -182,4 +186,4 @@ Gameplay reticle은 640×360 logical canvas에서 비포착 9×9px·1px W11 core
 
 ## Traceability
 
-[미술 캐논](../../canon/art-direction.md), [ADR-0010](../../adr/0010-unity-for-the-asset-first-prototype.md), [ADR-0011](../../adr/0011-high-resolution-pixel-art.md), [ADR-0012](../../adr/0012-bureaucratic-dieselpunk-art-direction.md), [ADR-0017](../../adr/0017-quarantine-assets-before-import.md)
+[미술 캐논](../../canon/art-direction.md), [ADR-0010](../../adr/0010-unity-for-the-asset-first-prototype.md), [ADR-0011](../../adr/0011-high-resolution-pixel-art.md), [ADR-0012](../../adr/0012-bureaucratic-dieselpunk-art-direction.md), [ADR-0017](../../adr/0017-quarantine-assets-before-import.md), [ADR-0021](../../adr/0021-character-aim-arc-and-charged-ballistics.md), [AimArc 승인](../../approvals/2026-08-25-p1-aimarc-geometry-approval.md)

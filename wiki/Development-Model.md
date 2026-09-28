@@ -1,9 +1,17 @@
 # Development Model
 
-작업 흐름은 `Sol 계약 → Terra 단위 설계·구현과 단위 테스트 → Luna 독립 검증 → Sol 통합`이다. GLM 5.2 Cloud, MiniMax M3 Cloud, 로컬 Qwen3.8, Kimi K3 Cloud는 비핵심 초안·분류·반복 작업만 수행하며 승인·캐논·통합 권한이 없다. Kimi K3의 전체 장면 대사 초안은 GLM 또는 GPT가 선행 검수하고 Sol이 최종 수용 여부를 판정한다.
+## 2026-09-15 우선 변경
 
-모든 구현 작업은 Approved 스펙, REQ ID, AC ID, 허용 파일, 금지 영역, 롤백 지점을 포함한 작업 계약을 가져야 한다.
+Astra 핵심 판단·Terra 구현·Luna 독립 검증을 유지한다. 미래 프로젝트 작업은 GPT 모델만 사용한다. Spark는 실제 도구에 노출될 때만 검증에 사용하며, 현재 미노출이면 Luna가 담당한다. Ollama, Kimi, GLM, MiniMax, Qwen 호출·탐색·재시도·예약 감시와 새 유료 API는 사용하지 않는다. 게시본은 권위 문서의 탐색용 보기이며 승인·수용 상태를 변경하지 않는다.
 
-독립 QA는 `GLM 계획 초안 → Sol 계약화 → MiniMax 비권위 구현안 → GPT 교정·통합 → Luna 독립 변조 검증` 순으로 운영한다. Ollama 출력이 불완전하거나 계약을 위반하면 그대로 채택하지 않고 그 사실과 교정 내역을 검증 기록에 남긴다.
+## 현재 운영 — 2026-09-08
 
-**권위 문서:** [에이전트 운영 규칙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/AGENTS.md), [멀티에이전트 운영 모델](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/agent-operating-model.md), [작업 계약 템플릿](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/templates/work-contract-template.md)
+사용자 승인으로 `Astra 계약·최종 판단 → Terra 구현 → Luna 독립 검증 → Astra 통합`으로 변경했다. Sol은 복잡한 설계·계약 초안·반대 검토를 지원한다.
+
+과거 Ollama 외주와 대체 모델 배정은 모두 종료했다. 기존 산출물과 기록은 역사적 사실로 보존하며 현재 실행하지 않는다. 새 작업은 GPT Terra가 구현·도구를, GPT Luna가 독립 QA·회귀 검증을 담당하고 Astra가 최종 통합한다.
+
+Pro는 실제 실행 지원이 확인될 때만 사용으로 기록한다. 현재 서브에이전트 도구의 모델·추론 강도 지정은 Pro 모드 활성화가 아니다.
+
+모든 구현 작업은 Astra가 승인한 스펙, REQ ID, AC ID, 허용 파일, 금지 영역, 롤백 지점을 포함한 작업 계약을 가져야 한다. 역사적 역할 배정과 승인 기록은 해당 ADR과 검증 증적에서 확인한다.
+
+**권위 문서:** [ADR-0027](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/adr/0027-astra-orchestration-and-gpt-only-delivery.md), [에이전트 운영 규칙](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/AGENTS.md), [멀티에이전트 운영 모델](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/agent-operating-model.md), [작업 계약 템플릿](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/main/docs/specs/templates/work-contract-template.md)

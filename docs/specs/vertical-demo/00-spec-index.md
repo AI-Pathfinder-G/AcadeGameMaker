@@ -1,10 +1,12 @@
 # [VD-00] Fifteen-minute Vertical Demo
 
-- Status: Review
+- Status: Approved
 - Owner: Sol
 - Unit design/implementation: Terra
 - Verification: Luna
-- Last updated: 2026-08-24
+- Approved by: Sol
+- Approved: 2026-08-25
+- Last updated: 2026-08-25
 
 ## Purpose
 
@@ -32,8 +34,8 @@
 
 ## Requirements
 
-- **REQ-SCOPE-001:** 깨끗한 시작에서 거점, 원정, 중간보스, 인간성 선택, 마지막 장면까지 하나의 연속된 성공 경로가 있어야 한다.
-- **REQ-SCOPE-002:** 실패 경로는 원정을 종료하고 부분 초기화 후 거점에서 다시 시작할 수 있어야 한다.
+- **REQ-SCOPE-001:** 깨끗한 시작에서 거점, 원정, 중간보스, 인간성 선택, 부여 기술의 봉쇄선 검증, `DemoCompleted`, 세령의 추적자 첫 등장까지 하나의 연속된 성공 경로가 있어야 한다.
+- **REQ-SCOPE-002:** 실패 경로는 원정을 종료하고 부분 초기화 후 거점에서 다시 시작할 수 있어야 하며 `DemoCompleted` 전에는 세령의 첫 등장 장면을 노출하지 않아야 한다.
 - **REQ-SCOPE-003:** 콘텐츠 수량은 거점 1, 방 풀 6, 런당 방 4, 일반 적 유형 2, 중간보스 1, 선택 사건 1, 선택별 기술 1을 충족해야 한다.
 - **REQ-SCOPE-004:** 기준 경로의 목표 플레이 시간은 로딩과 설정 시간을 제외하고 12~18분이어야 한다.
 
@@ -43,13 +45,13 @@
 
 - **Given** 신규 데모 상태와 검수용 기준 입력 프로필이 있고
 - **When** 검수자가 거점에서 출정해 중간보스를 격파하고 인간성 선택을 완료하면
-- **Then** 선택에 맞는 기술을 확인한 뒤 히로인의 첫 등장 장면에 도달한다.
+- **Then** 선택에 맞는 기술로 비치명 봉쇄선을 통과하고 `DemoCompleted`를 한 번 확정한 뒤 히로인의 첫 등장 장면에 도달한다.
 
 ### AC-SCOPE-002 — 실패 후 재시작
 
 - **Given** 진행 중인 원정이 있고
 - **When** 원정 실패 조건이 발생하면
-- **Then** 원정 자산은 초기화 규칙을 따르고 보존 대상은 유지되며 거점에서 새 원정을 시작할 수 있다.
+- **Then** 원정 자산은 초기화 규칙을 따르고 보존 대상은 유지되며 히로인 장면을 재생하지 않고 거점에서 새 원정을 시작할 수 있다.
 
 ### AC-SCOPE-003 — 분량 측정
 
@@ -85,4 +87,4 @@
 
 ## Traceability
 
-[게임 디자인 캐논](../../canon/game-design.md), [ADR-0007](../../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0008](../../adr/0008-assemble-authored-expedition-rooms.md), [ADR-0013](../../adr/0013-fifteen-minute-vertical-slice.md), [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md)
+[게임 디자인 캐논](../../canon/game-design.md), [ADR-0007](../../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0008](../../adr/0008-assemble-authored-expedition-rooms.md), [ADR-0013](../../adr/0013-fifteen-minute-vertical-slice.md), [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md), [성공 장면 흐름 승인](../../approvals/2026-08-25-p1-demo-success-scene-flow-approval.md)

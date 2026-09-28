@@ -1,9 +1,8 @@
 # [VD-11] Pre-Unity QA Artifact Infrastructure
 
 - Status: Verified
-- Owner and approval: Sol
-- Draft implementation proposal: MiniMax M3 Cloud
-- Proposal screening: Terra or Luna
+- Owner and approval: Astra
+- Implementation/tooling: Terra (`gpt-5.6-terra`)
 - Independent verification: Luna
 - Approved: 2026-08-24
 
@@ -11,16 +10,18 @@
 
 Unity 프로젝트가 생기기 전에 사용할 machine-readable QA schema, required-AC manifest, scenario catalog와 dependency-free PowerShell validator를 정의한다.
 
+이 스펙의 구현·도구 작업은 GPT Terra가 수행하고, 독립 검증은 GPT Luna가 수행한다. 과거 MiniMax 제안 표기는 역사적 문서에만 남아 있으며 현재 작업 지시가 아니다.
+
 ## Non-scope
 
 Unity project·`Assets/`·`Packages/`·`ProjectSettings/`, C# test, runtime hook, scene, prefab, build runner, gameplay·canon·public contract 변경은 포함하지 않는다.
 
 ## Contract
 
-- **Input:** VD-00~10에 현재 선언된 requirement·acceptance-criterion ID, unresolved OD ID와 scenario JSON. 여기서 68-ID manifest는 VD-00~09의 Review 후보 AC 집합을 고정한 coverage baseline이며, 해당 기능 스펙의 Approved·구현 완료를 주장하지 않는다.
+- **Input:** VD-00~10에 현재 선언된 requirement·acceptance-criterion ID, 현재 열린 승인 OD만 담는 `allowed-blocker-ids.json`과 scenario JSON. 여기서 68-ID manifest는 VD-00~09의 Review 후보 AC 집합을 고정한 coverage baseline이며, 해당 기능 스펙의 Approved·구현 완료를 주장하지 않는다.
 - **Output:** deterministic validation exit code와 duplicate·missing coverage·invalid field·unknown reference 진단.
 - **Owned state:** `qa/schema/`, `qa/catalog/`, `qa/coverage/`, `qa/tools/`, `qa/README.md`.
-- **Invariants:** scenario는 gameplay 값을 소유하지 않고 existing REQ/AC를 참조한다. `blocked` scenario만 현재 열린 `OD-SCENE-001`을 참조한다. validator는 네트워크·Unity·외부 module 없이 동작하고 파일을 수정하지 않는다.
+- **Invariants:** scenario는 gameplay 값을 소유하지 않고 existing REQ/AC를 참조한다. 해결된 OD는 blocker manifest에 남기지 않으며, `blocked` scenario는 `allowed-blocker-ids.json`에 등록된 당시 열린 승인 OD만 참조한다. 현재 manifest는 빈 배열이다. validator는 네트워크·Unity·외부 module 없이 동작하고 파일을 수정하지 않는다.
 
 Catalog schema는 `schemaVersion=1`, unique `scenarioId`, `domain`, `caseType`, `priority`, `phase`, `status`, nonempty `requirementIds`, nonempty `acceptanceCriterionIds`, `fixtureRefs`, ordered `steps`, typed `oracle`, `evidence`, `blockedBy`, `tags`를 요구한다. phase는 `pre_unity`, `editmode`, `playmode`, `windows_build`, `manual`; status는 `draft`, `ready`, `blocked`다.
 
