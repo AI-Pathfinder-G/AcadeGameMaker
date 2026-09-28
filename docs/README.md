@@ -1,5 +1,7 @@
 # Documentation Map
 
+- [문서 정리 초안 변경 요청 #1](https://github.com/AI-Pathfinder-G/AcadeGameMaker/pull/1) — 사용자 기기 인증 승인으로 재인증을 완료해 생성·첨부했다. 아래 인증 차단·변경 요청 부재는 이전 기록이며 병합은 수행하지 않았다.
+
 - [관찰 단위 수용 이후 작업 기준](./handoffs/2026-09-29-c3l-verified-checkpoint.md) — 조회 함수 사용자 승인과 C3L 수용을 완료했다. 실제 변경 요청 인증 갱신, C3 소유자·재무장 구현과 후속 검증이 남아 있다. 이전 인계서의 미답변 승인 대기는 당시 기록이다.
 
 - [C3L 관찰 단위 — Verified](./approvals/2026-09-29-c3l-integration-acceptance.md) · [최종 독립 수용 검수](./verification/2026-09-29-c3l-final-regression-luna-acceptance-review.md) · [분할 실행 대조](./verification/2026-09-29-vd09-m5d7q-c3l-r6-regression-closure.md) — 집중 11개와 같은 소스의 필수 회귀 고유 613개를 검증해 관찰 단위만 수용했다. R4 시간 초과 이력은 보존했으며 C3 전체·소유자·C4는 미수용이다. 아래 회귀 진행·실패·미검증 표기는 당시 기록이다.

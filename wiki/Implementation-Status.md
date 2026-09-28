@@ -27,6 +27,7 @@ ADR-0036은 C3 선행 검증과 C4 실제 실행 연결 공동 최종 검증의 
 권위 문서와 근거는 문서 정리 변경 요청의 정확한 개정에서 확인한다. 기본 브랜치에 병합되기 전에는 변경 요청의 파일 보기를 사용하며, 기본 브랜치 링크만으로 최신 자료를 판단하지 않는다.
 
 - [문서 지도](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/README.md)
+- [문서 정리 초안 변경 요청](https://github.com/AI-Pathfinder-G/AcadeGameMaker/pull/1)
 - [C3L 집중 실행 기록](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/verification/2026-09-28-vd09-m5d7q-c3l-focused-execution.md)
 - [C3L R4 회귀 결과](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/verification/2026-09-29-vd09-m5d7q-c3l-r4-execution.md)
 - [C3L 최종 통합 수용](https://github.com/AI-Pathfinder-G/AcadeGameMaker/blob/codex/documentation-checkpoint-20260928/docs/approvals/2026-09-29-c3l-integration-acceptance.md)
