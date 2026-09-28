@@ -1,10 +1,12 @@
 # [VD-06] Humanity Choice, Skills, and Final Scene
 
-- Status: Review
+- Status: Approved
 - Owner: Terra
 - Canon and contract approval: Sol
 - Verification: Luna
-- Last updated: 2026-08-24
+- Approved by: Sol
+- Approved: 2026-08-25
+- Last updated: 2026-08-25
 
 ## Scope
 
@@ -20,11 +22,11 @@
 
 ### Inputs
 
-유담의 `ConsentRefused`/`ConsentOffered`, 선택 확정 또는 취소, 활성 전이, `ChoiceSkill`, 봉쇄선 앵커 상태와 장면 생명주기 입력 모드.
+유담의 `RefusesOwnershipTransfer`/`OffersScopedResonance`, 선택 확정 또는 취소, 활성 전이, `ChoiceSkill`, 봉쇄선 앵커 상태와 장면 생명주기 입력 모드.
 
 ### Outputs
 
-`ChoiceCommitted`, 선택별 해금 기술, `ResonanceLease` 또는 `ImprintSevered`, 봉쇄선 해제 요청과 선택·기술 저장 요청을 낸다.
+`ChoiceCommitted`, 선택별 해금 기술, `ResonanceLender` 또는 `ImprintSevered`, 봉쇄선 해제 요청과 선택·기술 저장 요청을 낸다.
 
 ### Owned state
 
@@ -40,6 +42,7 @@
 - `ChoiceSkill`은 `GameplayEnabled`에서만 동작하며 UI·컷신·방 전환·실패·종료에서는 잠긴다. 쿨다운은 60Hz 고정 틱으로 계산한다.
 - 유담의 동의 상태는 `RefusesOwnershipTransfer → OffersScopedResonance → ResonanceLender` 또는 `RefusesOwnershipTransfer → ImprintSevered`만 허용하며 확정 전 취소는 거부 상태로 돌아간다.
 - `압착 판결`은 성공 시 전이를 회수하고, `공동 기준면`은 전이를 유지한다. 공동 기준면의 활성 대상에는 대상 소유 시스템이 60틱 `ResonanceHold`를 적용하며 제거·사망·장면 전환 시 속도 복원 없이 상태만 정리한다.
+- 성공 경로는 `BossDefeated → Transition → 선택 확정·원자 저장(기확정이면 생략) → 기술 부여 → 비치명 봉쇄선에서 기술 성공 → DemoCompleted → 세령 추적자 컷신 → Ended` 순서다. RunFailed·거점 복귀·선택 미확정·봉쇄선 미통과에서는 세령을 노출하지 않는다.
 
 ## Requirements
 
@@ -47,7 +50,7 @@
 - **REQ-CHOICE-002:** 수탈 결과는 직접적인 파괴력·효율 중심 기술 1개를 제공한다.
 - **REQ-CHOICE-003:** 연대 결과는 이동·제어·환경 조합 중심 기술 1개를 제공한다.
 - **REQ-CHOICE-004:** 선택은 한 번만 확정되고 원정 생명주기에서 정의한 보존 규칙을 따른다.
-- **REQ-CHOICE-005:** 성공 경로 마지막에는 히로인이 주인공의 추적자로 처음 등장한다.
+- **REQ-CHOICE-005:** 성공 경로는 중간보스 뒤 선택 확정과 봉쇄선 기술 검증을 마친 `DemoCompleted`에서만 히로인을 주인공의 독립 추적자로 처음 등장시키고 실패·거점 복귀·미완료 경로에서는 노출하지 않아야 한다.
 - **REQ-CHOICE-006:** 수탈 `압착 판결`은 활성 전이 대상에 36틱 뒤 중심 4 피해·주변 2 피해와 60틱 경직을 적용하고 전이를 회수하며 300틱 재사용을 가져야 한다.
 - **REQ-CHOICE-007:** 연대 `공동 기준면`은 활성 전이 대상과 플레이어의 발동 틱 X 사이에 150틱 지속하는 길이 1.5~6.0·두께 0.25의 `PlayerOnlyPlatform` 발판을 만들고 420틱 재사용을 가져야 한다.
 
@@ -69,7 +72,7 @@
 
 - **Given** 중간보스와 선택을 완료한 성공 경로가 있고
 - **When** 데모 종결 조건이 발생하면
-- **Then** 히로인은 별도 추적자로 처음 등장하고 중간보스나 선택 보상으로 오인되지 않는다.
+- **Then** 선택이 원자 저장되고 부여 기술로 봉쇄선을 통과한 뒤에만 `DemoCompleted`가 한 번 확정되고 히로인은 별도 추적자로 처음 등장한다. RunFailed·거점 복귀·선택 미확정·봉쇄선 미통과에서는 장면이 재생되지 않으며 중간보스나 선택 보상으로 오인되지 않는다.
 
 ### AC-CHOICE-004 — 봉쇄선의 즉시 사용
 
@@ -83,4 +86,4 @@
 
 ## Traceability
 
-[서사 캐논](../../canon/narrative-canon.md), [ADR-0003](../../adr/0003-humanity-is-preserving-others-agency.md), [ADR-0004](../../adr/0004-heroine-is-a-conditional-human-anchor.md), [ADR-0005](../../adr/0005-choices-grant-different-skill-families.md), [ADR-0013](../../adr/0013-fifteen-minute-vertical-slice.md), [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md)
+[서사 캐논](../../canon/narrative-canon.md), [ADR-0003](../../adr/0003-humanity-is-preserving-others-agency.md), [ADR-0004](../../adr/0004-heroine-is-a-conditional-human-anchor.md), [ADR-0005](../../adr/0005-choices-grant-different-skill-families.md), [ADR-0013](../../adr/0013-fifteen-minute-vertical-slice.md), [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md), [성공 장면 흐름 승인](../../approvals/2026-08-25-p1-demo-success-scene-flow-approval.md)

@@ -1,10 +1,12 @@
 # [VD-02] Weight Transfer
 
-- Status: Review
+- Status: Approved
 - Owner: Terra
 - Contract approval/integration: Sol
 - Verification: Luna
-- Last updated: 2026-08-24
+- Approved by: Sol
+- Approved: 2026-08-25
+- Last updated: 2026-08-25
 
 ## Scope
 
@@ -38,11 +40,12 @@
 - 후반 기능인 중력 방향 변경은 수직 데모에서 제외한다.
 - 입력은 프레임에서 수집하고 다음 FixedUpdate에서 한 번만 원자 적용한다. 성공한 전이·회수 뒤 21 고정 틱 동안 상태를 바꾸지 않는다.
 - `playerDistanceKey=Round(distanceSquared ×1000, AwayFromZero)`가 36000 이하인 대상만 `≤6.0u` 후보로 인정한다. player transfer origin에서 aim point까지 `TransferLineOfSight` mask linecast가 target 이전 또는 같은 경계에서 하나라도 맞으면 차단이며 target 자체 collider는 이 mask에 포함하지 않는다. trigger 대상은 후보가 아니다.
+- Player transfer origin, target aim point, aim-shape center와 half extents는 Q1000으로 판정한다. 이는 5.999/6.000/6.001u 경계를 서로 다른 `playerDistanceKey`로 보존한다. Simulation camera position은 별도 presentation 계약의 Q100을 유지한다.
 - 마우스는 중앙 16:9 gameplay rectangle의 실제 정수 pixel을 rect-local 0..1919·0..1079 normalized aim grid로 AwayFromZero 반올림 변환하고 `cameraPoseTick=sampleTick-1`의 확정 simulation camera pose를 사용한다. 여백 pointer는 edge-clamped `screenPixel`과 aim direction을 만들되 `isPointerInsideGameplayRect=false`이므로 target candidate와 mouse press를 만들지 않는다. 포인터가 투영된 `TargetAimShape` 안에 있거나 normalized aim point의 `screenDistanceSquaredKey=Round(distancePixelsSquared, AwayFromZero)`가 576 이하인 대상만 24 normalized-pixel 포함 후보로 삼고 `insideRank(inside=0, outside=1) → screenDistanceSquaredKey → playerDistanceKey → TransferTargetId`로 정렬한다. 2560×1440 output에서는 같은 비율이 32 output pixels다.
 - 게임패드는 원본 `magnitude² ≥0.04`인 오른쪽 스틱으로 마지막 유효 `aimVectorQ4096`을 갱신하고 스틱을 놓아도 유지한다. `angleKey=Round(angleDegrees ×10, AwayFromZero)`가 180 이하인 후보를 `angleKey → playerDistanceKey → TransferTargetId`로 정렬한다.
 - 현재 강조된 gamepad 대상은 `angleKey≤260`, `playerDistanceKey≤36000`, 열린 LOS에서 유지한다. 새 최상 후보는 `newAngleKey + 40 ≤ currentAngleKey`일 때만 현재 대상을 교체한다.
 - 마우스의 player-to-world pointer `distanceSquared ≥0.0025`일 때 새 aim을 만들고 미만이면 마지막 유효 조준을 유지한다. 정규화 성분은 `Clamp(Round(component×4096, AwayFromZero),-4096,4096)`로 양자화하며 `(0,0)`은 invalid다. 유효 조준 이력이 없으면 바라보는 방향으로 대체하지 않고 `InvalidTarget`이다.
-- aim sample과 강조 대상은 방 이탈, 컷신, 실패, 데모 종료에서 초기화한다. 활성 전이 중 `Transfer`는 후보를 다시 계산하지 않고 즉시 회수한다.
+- aim sample과 강조 대상은 방 이탈, 컷신, 실패, 데모 종료에서 초기화한다. 활성 전이 중 `Transfer`는 후보를 다시 계산하지 않고 회수를 시도한다. 성공 전이 또는 직전 회수의 21틱 전환 잠금 중이면 `Cooldown`으로 거부하고, 잠금 age 21부터 같은 입력으로 회수한다.
 - 기본 물리값은 대상 소유 시스템이 제공하고, 이 시스템은 가역 modifier만 합성·제거한다. 제거된 대상에는 복원을 시도하지 않고 참조와 효과만 정리한다.
 
 ## Requirements

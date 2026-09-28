@@ -1,13 +1,11 @@
 # Open Decisions Before Implementation
 
-P0은 관련 스펙의 Approved 전환과 구현을 막는다. P1은 단위 구현 계약 전, P2는 통합 전 해결한다. 2026-08-24 현재 열린 P0은 0개다.
+P0은 관련 스펙의 Approved 전환과 구현을 막는다. P1은 단위 구현 계약 전, P2는 통합 전 해결한다. 2026-08-25 현재 열린 P0·P1은 0개다.
 
 ## Open
 
 | ID | Priority | Owner | Decision required | Blocks |
 |---|---|---|---|---|
-| OD-AIMARC-001 | P1 | Sol | 캐릭터 중심 반원·화살표·차지 fill의 exact geometry와 표시 생명주기 | VD-07, VD-08 |
-| OD-SCENE-001 | P1 | Sol | 중간보스→선택→히로인 장면의 정확한 성공 경로와 실패 시 히로인 노출 여부 | VD-00, VD-06 |
 
 ## Resolved
 
@@ -22,5 +20,7 @@ P0은 관련 스펙의 Approved 전환과 구현을 막는다. P1은 단위 구�
 | OD-CHOICE-001 | P0 | [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md) | VD-00, VD-06, SYSTEM-CONTRACTS |
 | OD-CHOICE-002 | P0 | [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md) | VD-03, VD-06, VD-07, SYSTEM-CONTRACTS |
 | OD-COM-001 | P0 | [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md) | VD-03, SYSTEM-CONTRACTS |
+| OD-AIMARC-001 | P1 | [2026-08-25 AimArc 형상·생명주기 승인](../../approvals/2026-08-25-p1-aimarc-geometry-approval.md) | VD-07, VD-08 |
+| OD-SCENE-001 | P1 | [2026-08-25 성공 장면 흐름 승인](../../approvals/2026-08-25-p1-demo-success-scene-flow-approval.md) | VD-00, VD-06 |
 
 결정이 확정되면 해당 스펙에 결과와 AC를 반영하고 `Resolved` 표에 근거 링크를 남긴다. 어렵게 되돌릴 결정이고 대안 비교가 있었다면 별도 ADR을 만든다.

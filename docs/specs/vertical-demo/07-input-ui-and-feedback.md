@@ -1,10 +1,12 @@
 # [VD-07] Input, UI, and Feedback
 
-- Status: Review
+- Status: Approved
 - Owner: Terra
 - Contract approval/integration: Sol
 - Verification: Luna
-- Last updated: 2026-08-24
+- Approved by: Sol
+- Approved: 2026-08-25
+- Last updated: 2026-08-25
 
 ## Scope
 
@@ -32,6 +34,8 @@ runtime rebind는 keyboard의 Move composite 네 방향과 모든 Gameplay butto
 
 Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니라 총구의 화면 공간 조준점을 나타내는 gameplay reticle이다. 비포착 reticle은 9×9 logical px의 1px W11 `#CAC9B8`이며 유효 대상이 선택되면 reticle core와 대상의 1px 외곽선은 같은 SimulationTick에 S02 `#F7FFFC`로 전환되고 reticle은 정확히 3 tick에 13×13px 확대를 완료한다. 포착 해제 시 외곽선은 같은 tick에 사라지고 core는 W11로 복귀하며 reticle은 정확히 6 tick에 9×9px 축소를 완료한다. 대상 교체 중에는 S02·13×13px를 유지한다. 조준 포착은 공격 조준 상태이며 무게 전이 가능 여부와 분리한다. 1px 내부 ring은 S01 `#20E0D0` 연속선=`전이 가능`, S03 `#FFAA2B` 연속선=`Cooldown`, S04 `#FF3B45` 단절선=`거리 또는 LOS 차단`으로 나타낸다. reticle line은 같은 hue의 바깥 1px halo를 사용하고 semantic core는 승인 HEX를 unlit로 유지하며 emission은 1.25 이하이다. 활성 전이 대상은 안쪽 S01·바깥 S02의 지속 2px 이중 외곽선을 사용한다. 모든 reticle·ring·대상 외곽선은 점멸하지 않고 UIOnly·Cutscene·Transition·Ended 또는 화면 여백 진입과 같은 tick에 숨는다.
 
+AimArc는 완료된 SimulationTick의 player aim origin을 1/18u로 snap한 중심에서 Q4096 조준 방향 기준 `-90°..+90°` 반원을 그린다. 반지름은 18 logical px, 두께는 1px이고, 화살표는 반지름 18px에서 27px까지의 9px shaft와 5×5px head다. 기본 W11·포착 S02를 reticle과 같은 tick에 사용하며 halo와 점멸은 없다. 차지 중 화살표 내부는 꼬리에서 촉까지 16단계 floor 양자화 shape fill로 차오르고 비차지 상태는 빈 내부다. GameplayEnabled와 유효 aim sample에서만 보이며 UIOnly·Cutscene·Transition·Ended·화면 여백·invalid aim에서는 같은 tick에 전부 숨는다.
+
 ### Inputs
 
 `InputRouter`가 버퍼링한 `AimSample`, `Transfer`, `ChoiceSkill`, 이동·공격·상호작용, 전이·런·선택·입력 모드 사건, 실패 이유와 피드백 제한 틱.
@@ -58,6 +62,7 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 - Gameplay와 UI map은 동시에 활성화하지 않으며 gamepad 오른쪽 스틱은 OS cursor를 움직이지 않는다. UIOnly는 focus navigation만 사용하고 virtual mouse를 만들지 않는다.
 - UIOnly 최상위 일시정지 화면의 `Cancel`은 GameplayEnabled로 복귀하고, 하위 화면의 `Cancel`은 상위 화면으로 한 단계 돌아간다.
 - mouse actual pixel은 중앙 gameplay rectangle 기준으로 조준 좌표를 만든다. pointer가 letterbox/pillarbox에 있으면 조준 방향만 가장 가까운 gameplay edge로 clamp하고 포착·Attack·Transfer mouse press는 생성하지 않는다. UI element는 safe frame 밖에 없으며 여백 Click은 아무 action도 실행하지 않는다.
+- AimArc의 arc·arrow·charge fill은 reticle과 같은 Q4096 aim·completed simulation pose·InputMode 생명주기를 사용하고 render FPS나 render smoothing에 종속되지 않는다.
 
 ## Requirements
 
@@ -70,7 +75,7 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 - **REQ-UX-007:** Gameplay는 승인된 키보드·마우스와 XInput 역할 배치를 사용하고 JKL 전투·클릭 이동 없이 포인터·오른쪽 스틱 조준을 공격과 전이에 공통 적용해야 한다.
 - **REQ-UX-008:** `InputRouter`는 정수 mouse pixel 또는 `magnitude²≥0.04`의 오른쪽 스틱과 직전 `SimulationCameraPoseSnapshot`을 Q4096 `AimSample`로 만들어 다음 SimulationTick에 한 번 제공하고, 모드·생명주기 경계에서 aim·press buffer를 결정적으로 정리해야 한다.
 - **REQ-UX-009:** UI는 승인된 Navigate·Point·Click·ScrollWheel·Submit·Cancel·Pause binding, focus navigation과 map 상호 배제를 사용하고 gamepad virtual mouse를 만들지 않아야 한다.
-- **REQ-UX-010:** Gameplay의 mouse pointer는 승인된 W11 9×9px→S02 13×13px·정확한 3/6 tick·동일 hue 1px halo 조준 reticle로 표시하고 유효 대상 포착 시 reticle 확대와 대상 형광 외곽선을 함께 표시하며, 조준 포착을 전이 가능·Cooldown·거리/LOS 차단·활성 전이 상태와 서로 구분하고 UIOnly와 잠긴 모드에서는 gameplay 조준 피드백을 같은 tick에 제거해야 한다.
+- **REQ-UX-010:** Gameplay의 mouse pointer는 승인된 W11 9×9px→S02 13×13px·정확한 3/6 tick·동일 hue 1px halo 조준 reticle로 표시하고 유효 대상 포착 시 reticle 확대와 대상 형광 외곽선을 함께 표시해야 한다. 캐릭터 AimArc는 18px·1px 반원, 9px shaft·5×5px head 화살표와 16단계 비색상 charge fill을 사용한다. 조준 포착을 전이 가능·Cooldown·거리/LOS 차단·활성 전이 상태와 구분하고 UIOnly·잠긴 모드·화면 여백·invalid aim에서는 모든 gameplay 조준 피드백을 같은 tick에 제거해야 한다.
 - **REQ-UX-011:** runtime rebind는 keyboard Move와 Gameplay button, mouse Attack·Transfer, gamepad Gameplay button에만 허용하고 gamepad Move·Aim stick, mouse Point axis와 안전 UI·Pause 기본 binding을 보호하며 stick 축 반전은 별도 설정으로 처리해야 한다.
 - **REQ-UX-012:** 같은 control scheme의 Gameplay binding 충돌은 확인 뒤 원자 교환하거나 취소 시 무변경으로 처리하고 중복·자동 삭제·무통지 덮어쓰기와 protected binding 교환을 금지하며 map 사이 공유는 허용해야 한다.
 - **REQ-UX-013:** mouse aim은 중앙 16:9 gameplay rectangle을 기준으로 변환하고 여백에서는 edge-clamped aim direction만 유지하며 target acquisition·Attack·Transfer·UI action을 발생시키지 않아야 한다.
@@ -130,7 +135,7 @@ Gameplay의 mouse pointer는 별도 OS cursor 위에 겹치는 장식이 아니�
 
 - **Given** 유효 후보가 없는 지점, 공격 조준 대상, 전이 가능·Cooldown·거리/LOS 차단·활성 전이 대상, UIOnly와 입력 잠금 상태가 있고
 - **When** mouse pointer가 각 상태를 순서대로 통과하면
-- **Then** Gameplay 비포착 reticle은 9×9px W11이고 포착 시 core·target outline은 같은 tick에 S02가 되며 reticle은 정확히 3 tick에 13×13px, 해제 시 core는 같은 tick에 W11로 돌아오고 정확히 6 tick에 9×9px가 된다. target 교체에서는 S02·13×13px를 유지하고 동일 hue 바깥 1px halo·무점멸을 지키며 내부 1px ring은 S01 연속선·S03 연속선·S04 단절선, 활성 전이는 안쪽 S01·바깥 S02의 지속 2px 이중선으로 서로 구분된다. UIOnly·잠긴 모드·화면 여백에서는 같은 tick에 gameplay 조준 피드백이 남지 않는다.
+- **Then** Gameplay 비포착 reticle은 9×9px W11이고 포착 시 core·target outline은 같은 tick에 S02가 되며 reticle은 정확히 3 tick에 13×13px, 해제 시 core는 같은 tick에 W11로 돌아오고 정확히 6 tick에 9×9px가 된다. target 교체에서는 S02·13×13px를 유지하고 동일 hue 바깥 1px halo·무점멸을 지키며 내부 1px ring은 S01 연속선·S03 연속선·S04 단절선, 활성 전이는 안쪽 S01·바깥 S02의 지속 2px 이중선으로 서로 구분된다. AimArc는 18px radius·1px stroke·180° span, 9px shaft·5×5px head와 0/1/15/16단계 charge fill 경계를 exact match하고 mouse/gamepad에서 같은 Q4096 방향을 사용한다. UIOnly·잠긴 모드·화면 여백·invalid aim에서는 같은 tick에 gameplay 조준 피드백이 남지 않는다.
 
 ### AC-UX-010 — 재지정 허용 범위와 안전 입력
 
@@ -162,4 +167,4 @@ package manifest·Player Settings·생성 wrapper·의미 입력 맵 정적 검�
 
 ## Traceability
 
-[ADR-0007](../../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md), [ADR-0019](../../adr/0019-pointer-aimed-sidescroller-controls.md), [VD-01](./01-player-movement.md), [VD-02](./02-weight-transfer.md), [VD-06](./06-humanity-choice-and-narrative.md)
+[ADR-0007](../../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md), [ADR-0019](../../adr/0019-pointer-aimed-sidescroller-controls.md), [ADR-0021](../../adr/0021-character-aim-arc-and-charged-ballistics.md), [AimArc 승인](../../approvals/2026-08-25-p1-aimarc-geometry-approval.md), [VD-01](./01-player-movement.md), [VD-02](./02-weight-transfer.md), [VD-06](./06-humanity-choice-and-narrative.md)

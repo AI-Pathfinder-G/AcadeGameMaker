@@ -1,10 +1,12 @@
 # [VD-04] Authored Rooms and Expedition Assembly
 
-- Status: Review
+- Status: Approved
 - Owner: Terra
 - Contract approval/integration: Sol
 - Verification: Luna
-- Last updated: 2026-08-24
+- Approved by: Sol
+- Approved: 2026-08-25
+- Last updated: 2026-08-25
 
 ## Scope
 

@@ -1,0 +1,117 @@
+{
+  "CapturedAt": "2026-09-28T22:34:38.6070454+09:00",
+  "Workspace": "C:\\Users\\me\\Documents\\GPT-workspace\\AcadeGameMaker",
+  "Branch": "main",
+  "Head": "309f2204cf19a321ae74c92f3be0e3fc94e3499e",
+  "TrackedChanged": 61,
+  "UntrackedStatusEntries": 562,
+  "Scope": "인계 핵심 파일의 지문만 기록한다. 전체 작업 공간 백업이나 새 실행 검증 증거가 아니다.",
+  "Files": [
+    {
+      "Path": "AGENTS.md",
+      "SHA256": "CA828A371A50D627AC73F3EC0ADA2A70016BC33C06EF7C654B5FC95EEDD094A2"
+    },
+    {
+      "Path": "docs/specs/work-contracts/2026-09-28-vd09-m5d7q-c1-reset-disk-transaction.md",
+      "SHA256": "D03C77478D2EC4214A225E4EA46B993E59C753C6EB883BB0C913491D3068E455"
+    },
+    {
+      "Path": "docs/specs/work-contracts/2026-09-28-vd09-m5d7q-c2-memory-cutover.md",
+      "SHA256": "F76E9AF2B7A9A2E936A8E2253A3E1FDA7E94E164DC0FBCBC08BBF2BAA4D1F5DF"
+    },
+    {
+      "Path": "docs/specs/work-contracts/2026-09-28-vd09-m5d7q-c2r-restart-bootstrap.md",
+      "SHA256": "E490CD2F27663BF5800A7132DC541230DCFEBE473448CD12213D55200CF2C4C6"
+    },
+    {
+      "Path": "docs/specs/work-contracts/2026-09-28-vd09-m5d7q-c3-confirmation-owner.md",
+      "SHA256": "0D9FC21B8C259CB1D0EC6C2FDDD4F97496157D237D626C7A4F219F0B684A4017"
+    },
+    {
+      "Path": "docs/specs/work-contracts/2026-09-28-vd09-m5d7q-c3l-observation-lease-provenance.md",
+      "SHA256": "A2760191B74A376386A4C3B11172FD62C65D7D1C4FBD87562CBE509BB72A8BA1"
+    },
+    {
+      "Path": "docs/specs/work-contracts/2026-09-28-vd09-m5d7q-c4-reset-execution-bridge.md",
+      "SHA256": "9D3284A144D2073C9A55D5CB7D7A11519AC9461782C77B542297F8484DBF03F7"
+    },
+    {
+      "Path": "docs/specs/work-contracts/2026-09-28-unity-qa-owned-editor-wait.md",
+      "SHA256": "D312AAF5188017438DF54FFC6FB62F5395CB70F2EA0ECF80117D563628DDA1AD"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileNewGameResetServiceV1.cs",
+      "SHA256": "BAE684476B4F38A5E80322FEE6E91034D4BF2952EC51944240965C4C96B67B9D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileResetDiskTransactionV1.cs",
+      "SHA256": "13675608C636F1C6B05B10CADB62F4E157FA6300742B37FCDBCA5A6FA949317E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/DesktopProfileLaunchAdapterV1.cs",
+      "SHA256": "0DC2D05B209CB49EA6A44DACA0B76687A30597EE999ACE68AD20C6DF93B51D20"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/InputRouter.cs",
+      "SHA256": "66CD817B322565753A3533EA93FFA2BD4E347B24C9A61D5F9C4A1A1169EC54AB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileResetMemoryCutoverV1.cs",
+      "SHA256": "60DFD415C0425F88046C47F51142749F230FF39CA7C81AEBA90D4C778993F275"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuPresenterV1.cs",
+      "SHA256": "A45FCE08EA626F3EBEF4499C920FBF5694CF0CEB14B1008AC63105F3B9DC8096"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuIntentHandoffOwnerV1.cs",
+      "SHA256": "C3AAF779480706699010C538E76E88EE0A5E6F74DAAC12703D2AD078BBEB7733"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubUiOnlyQ0ScopeAuditEditModeTests.cs",
+      "SHA256": "12B98E06919CDC2AFFBD9E380BF2B4546C00D3BA86A8F86E5D9EDF59FFE331FD"
+    },
+    {
+      "Path": "qa/tools/Invoke-UnityQa.ps1",
+      "SHA256": "A4DD378FF02105345B63B40C6F446B304B04F9E8B894CCD2218806F42DD7DA85"
+    },
+    {
+      "Path": "qa/tools/Test-UnityQaOwnedEditorWait.ps1",
+      "SHA256": "2FABA87A41D70167DACAA25B13808852F1A9BF8C32146E1053E5E14005CDADF2"
+    },
+    {
+      "Path": "artifacts/c2-r34-final-playmode.xml",
+      "SHA256": "3E7FCA0E0F11C103125934407AE9515522B1F7B71DA1AB894A2740337C39DECD"
+    },
+    {
+      "Path": "artifacts/c2-r35-final-editmode.xml",
+      "SHA256": "7F1B78659A0F6E13567D4ACFD07BFA6B6A24E4FE8DF913169CFE6DB557D5840E"
+    },
+    {
+      "Path": "artifacts/c2-r36-final-editmode.xml",
+      "SHA256": "6ADC451890CADDE6729E0D654D122042CFC12FB7B3ED2D1309ED2643C12A76B8"
+    },
+    {
+      "Path": "artifacts/c2-r36-source-before.json",
+      "SHA256": "2CAB80CC20A01165778905F67161866906F439C6E5AAFC5E316D1813628F5EA4"
+    },
+    {
+      "Path": "artifacts/c2-r36-source-after.json",
+      "SHA256": "B0D8D917D1A9D65B0D4B2B66EDEDAEB4C097BE7F2A36FA01FDFE603E8303E218"
+    },
+    {
+      "Path": "docs/verification/2026-09-28-vd09-m5d7q-c2-c2r-luna-final-independent-acceptance.md",
+      "SHA256": "3EE81482D43D5039E3D412EF3C38400F6A7E4903541DCDE29D77E7BD3A733A8E"
+    }
+  ],
+  "NotYetAdded": [
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileNewGameConfirmationV1.cs",
+      "Exists": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/NewGameConfirmationOwnerV1.cs",
+      "Exists": false
+    }
+  ]
+}

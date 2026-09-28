@@ -1,6 +1,7 @@
 ---
 status: accepted
 supersedes: ADR-0014
+superseded by: ADR-0023
 ---
 
 # Sol이 전체를 오케스트레이션하고 Terra가 단위 파트를 설계·구현한다

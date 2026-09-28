@@ -2,7 +2,7 @@
 
 - Status: Draft
 - Owner: Terra
-- Contract approval/integration: Sol
+- Contract approval/integration: Astra
 - Verification: Luna
 - Last updated: YYYY-MM-DD
 

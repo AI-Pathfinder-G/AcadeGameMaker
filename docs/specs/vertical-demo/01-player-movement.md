@@ -1,10 +1,12 @@
 # [VD-01] Player Movement
 
-- Status: Review
+- Status: Approved
 - Owner: Terra
 - Contract approval/integration: Sol
 - Verification: Luna
-- Last updated: 2026-08-24
+- Approved by: Sol
+- Approved: 2026-08-25
+- Last updated: 2026-08-25
 
 ## Scope
 
@@ -37,7 +39,7 @@
 - 피격, 사망, 컷신이 입력을 잠그는 경우 해제 조건이 명시되어야 한다.
 - 활성 전이 중 이동 파라미터는 기준값에 `gravityScale ×0.65`, 공중 가속 ×1.25, 최대 낙하 속도 ×0.70을 곱하고 회수 시 같은 기준값으로 복구한다.
 - 기준 이동은 최대 run 속도 8.0, 지상 가속/감속 70/90, 공중 가속/감속 40/20을 사용한다.
-- `Physics2D.gravity`는 `(0, -9.81)`, 주인공 기준 `Rigidbody2D.gravityScale`은 3.1315로 실제 하방 가속 약 30.72u/s²를 만든다. 기준 점프는 초기 상방 속도 14.39로 3.25u, 28틱(약 0.46초) apex를 목표로 한다. 점프 release는 남은 상방 속도에 ×0.45를 한 번만 적용한다.
+- `Physics2D.gravity`는 `(0, -9.81)`, 주인공 기준 `Rigidbody2D.gravityScale`은 3.1315를 호환·검수 값으로 유지한다. 플레이어는 결정론적 kinematic adapter이므로 실제 권위 하방 가속은 모터의 Q4096 약 30.72u/s²이며 Unity solver 중력을 중복 적용하지 않는다. 기준 점프는 초기 상방 속도 14.39로 3.25u, 28틱(약 0.46초) apex를 목표로 한다. 점프 release는 남은 상방 속도에 ×0.45를 한 번만 적용한다.
 - coyote와 jump buffer는 각각 6틱을 포함하고 7틱에서 실패한다. 기준 최대 낙하 속도는 22.0이다.
 - 대시는 5.0u를 15틱에 이동하고 종료 뒤 36틱 cooldown을 시작한다. 공중 charge는 안정 접지에서만 한 번 복구하며, 대시 중 무적·중력·방향 입력은 없고 충돌은 이동만 끝내며 cooldown은 유지한다.
 - 벽 슬라이드 낙하 상한은 6.0, 벽차기 초기 속도는 벽 반대 X 9.5·상방 Y 13.5이며 같은 벽 재부착은 6틱 동안 금지한다. 의미 이동/조준 벡터의 radial deadzone은 0.20이다.
@@ -50,7 +52,7 @@
 - **REQ-MOV-003:** 유효한 벽 접촉에서 벽차기를 제공한다.
 - **REQ-MOV-004:** 무게 전이로 가벼워진 상태는 기준값 대비 `gravityScale ×0.65`, 공중 가속 ×1.25, 최대 낙하 속도 ×0.70을 적용한다.
 - **REQ-MOV-005:** 모든 수작업 방의 필수 동선은 선택 기술 없이 기본 이동 세트로 통과 가능하다.
-- **REQ-MOV-006:** 기준 이동은 run 8.0, 지상 가속/감속 70/90, 공중 가속/감속 40/20, `Physics2D.gravity=(0,-9.81)`, 주인공 `gravityScale=3.1315`와 최대 낙하 속도 22.0을 사용해야 한다.
+- **REQ-MOV-006:** 기준 이동은 run 8.0, 지상 가속/감속 70/90, 공중 가속/감속 40/20, 권위 모터 중력 약 30.72u/s², `Physics2D.gravity=(0,-9.81)`, 주인공 호환 `gravityScale=3.1315`와 최대 낙하 속도 22.0을 사용해야 한다. Kinematic 플레이어에는 solver 중력을 중복 적용하지 않는다.
 - **REQ-MOV-007:** 점프는 초기 속도 14.39로 기준 3.25u·28틱 apex를 만들고, release 시 남은 상방 속도에 ×0.45를 한 번 적용하며 coyote와 buffer의 6틱 포함 경계를 지켜야 한다.
 - **REQ-MOV-008:** 대시는 5.0u·15틱이고 종료 뒤 36틱 cooldown을 사용하며, 공중 charge는 안정 접지에서만 복구하고 대시 중 무적·중력·방향 입력을 허용하지 않아야 한다.
 - **REQ-MOV-009:** 벽 슬라이드는 6.0 낙하 상한, 벽차기는 반대 X 9.5·상방 Y 13.5, 같은 벽 재부착 6틱 잠금을 사용해야 한다.
@@ -80,7 +82,7 @@
 
 - **Given** 충돌 없는 60Hz 검수실과 동일 입력 기록 3회가 있고
 - **When** 기준 run, 점프, release, coyote, buffer, radial deadzone을 재생하면
-- **Then** 중력 설정은 `(0,-9.81)`·`gravityScale=3.1315`, run 속도는 8.0±0.05u/s, 초기 점프 속도는 14.39±0.01u/s, 기준 apex는 3.25±0.05u·28±1틱이고, release는 남은 상방 속도에 한 번만 ×0.45가 적용되며, radial deadzone은 0.20 경계를 사용하고 coyote/buffer는 6틱에서 성공하고 7틱에서 실패한다.
+- **Then** 호환 중력 설정은 `(0,-9.81)`·`gravityScale=3.1315`, 권위 모터 하방 가속은 30.72±0.01u/s²이고 solver 중력은 플레이어 이동에 중복 적용되지 않으며, run 속도는 8.0±0.05u/s, 초기 점프 속도는 14.39±0.01u/s, 기준 apex는 3.25±0.05u·28±1틱이고, release는 남은 상방 속도에 한 번만 ×0.45가 적용되며, radial deadzone은 0.20 경계를 사용하고 coyote/buffer는 6틱에서 성공하고 7틱에서 실패한다.
 
 ### AC-MOV-005 — 대시와 벽 동작
 
@@ -100,4 +102,4 @@
 
 ## Traceability
 
-[ADR-0007](../../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0013](../../adr/0013-fifteen-minute-vertical-slice.md), [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md), [VD-02](./02-weight-transfer.md), [VD-04](./04-authored-rooms-and-expedition.md)
+[ADR-0007](../../adr/0007-weight-transfer-is-the-core-player-verb.md), [ADR-0013](../../adr/0013-fifteen-minute-vertical-slice.md), [ADR-0018](../../adr/0018-vertical-demo-p0-integration.md), [ADR-0024](../../adr/0024-deterministic-player-motor-owns-gravity.md), [VD-02](./02-weight-transfer.md), [VD-04](./04-authored-rooms-and-expedition.md)
