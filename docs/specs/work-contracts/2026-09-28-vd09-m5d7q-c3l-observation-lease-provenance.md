@@ -1,5 +1,5 @@
 ---
-status: Approved
+status: Verified
 ---
 
 # C3L — observation-only lease acquisition provenance
@@ -128,3 +128,9 @@ Implementation remains unverified. C3 synthetic-only restrictions and Q0
 successor exact-hash approval gate remain binding. This is a technical
 correctness clarification, not a new user product decision or permission to
 modify legacy acquisition/durable behavior.
+
+## 아스트라 통합 수용 — Verified, 2026-09-29
+
+[통합 수용 기록](../../approvals/2026-09-29-c3l-integration-acceptance.md)에 따라 AC-M5D7QC3L-001..005를 수용했다. 루나 최종 독립 검수 P0=0/P1=0, 실제 집중 11개와 현재 필수 회귀 고유 613개의 증거를 확인했다. R4 시간 초과 실패는 보존하며 동일 소스·동일 제한의 R6 한 행과 R5 실제 별도 프로세스 결과를 정확한 이름 및 출처로 대조했다. 입력 874개는 모든 실행 전후 동일하다.
+
+위 승인 시점의 미검증 표기는 당시 이력이다. 현재 수용은 관찰 단위에 한정하며 C3 전체, C3 owner/rearm 회귀, 실행 모드 또는 Review C4 실제 실행 연결 통과를 뜻하지 않는다. 이후 source 변경은 새 검증이 필요하다.

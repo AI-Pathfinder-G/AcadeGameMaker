@@ -1,12 +1,12 @@
 # C3 확인 소유자와 재무장 구현 순서
 
 - 날짜: 2026-09-28
-- 상태: 구현 준비 전용. C3L 집중 검증의 독립 수용과 아스트라의 시작 지시 전에는 아래 본체 소스와 시험을 변경하지 않는다.
-- 근거: Approved C3 계약, Sol의 epoch-handshake 반대 검수, C3 기존 경계 지도·fixture 구성·시험 행렬, 아스트라의 adapter 후속 SHA 승인.
+- 상태: 구현 준비 전용. C3L 집중과 필수 편집 모드 회귀의 최종 수용, 아스트라의 시작 지시 전에는 아래 본체 소스와 시험을 변경하지 않는다.
+- 근거: Approved C3 계약, ADR-0036 단계적 수용 결정, Sol의 epoch-handshake 반대 검수, C3 기존 경계 지도·fixture 구성·시험 행렬, 아스트라의 adapter 후속 SHA 승인.
 
 ## 동결 및 경계
 
-현재 C3L 관찰 단위가 실제 Unity 집중 검증 중이다. 그 수용 전에는
+현재 C3L 관찰 단위의 실제 Unity 집중 및 필수 편집 모드 회귀가 수용 전이다. 그 수용 전에는
 `ProfileResetDiskTransactionV1.cs`, `ProfileNewGameResetServiceV1.cs`,
 `ProfileNewGameConfirmationV1.cs`, `DesktopProfileLaunchAdapterV1.cs` 및
 모든 C3L 시험을 포함해 C3 본체 소스를 변경하지 않는다. 승인된 adapter
@@ -93,13 +93,17 @@ successor는 `AwaitingBaseline` witness가 남아 있는 동안 ordinary `Update
 `Activate`를 호출하지 않는다. 그 다음 frame부터만 Ready/입력이 가능하다. skipped,
 malformed, foreign cursor, lifecycle 및 witness fault는 모든 successor를 닫는다.
 
-### 5. 실행 직전 폐쇄 permit
+### 5. 실행 직전 폐쇄 permit의 선행 증거
 
-C3는 Confirmed request를 단 한 번 terminal consume하고 confirm/cancel/retry/rearm
-capability를 먼저 무효화한 private executor permit까지만 제공한다. 이 단계는 C1
-`Begin`을 호출하지 않으며 C4 Review 또는 실제 실행 권한을 만들지 않는다. 이후의
-Busy/ConfirmationStale와 Reload/ManualRepair 경로는 Approved C3의 typed report
-계약으로만 모델링하고, C4 구현은 보류한다.
+C3 선행 단계는 Confirmed request의 단 한 번 terminal consume과
+confirm/cancel/retry/rearm capability의 선행 무효화까지만 증명한다. C1 `Begin`을
+호출하지 않고, 실제 issuer 또는 report intake를 구현·제조·모사하지 않으며, C4
+Review 또는 실제 실행 권한을 만들지 않는다. 실제 C1 결과 발급과 typed report
+intake는 별도 Approved C4에서만 구현한다.
+
+따라서 AC-M5D7QC3-007의 관찰 Busy 행과 AC-M5D7QC3-008의 커밋 구간은 실행 연결
+전 부분 증거로만 남긴다. 두 전체 기준은 `Open / Not Verified`를 유지하며 부분
+통과나 독립 Verified로 표시하지 않는다.
 
 ## 시험 행렬과 증거
 
@@ -117,16 +121,23 @@ handoff receipts, 통지, scene/run 상태와 Q-A/Q-B 역사를 전후 비교한
 | AC-M5D7QC3-004 | display 이후 모든 leaf 추가·삭제·bytes/identity/projection 변화, default 전환, stale identity 미전달 |
 | AC-M5D7QC3-005 | Cancel의 bytes/memory/actions/maps/receipts/scene 중립성, old Q-A/Q-B 불변과 새 epoch 단일 selection |
 | AC-M5D7QC3-006 | notice 보존, AwaitingBaseline의 false 유지·첫 true 폐기·다음 frame만 전달, fault closure |
-| AC-M5D7QC3-007 | initial/confirm Busy의 동일 ownership, typed stale과 terminal unreadable/reload/manual 경계 |
-| AC-M5D7QC3-008 | execution-commit 전 capability 전체 무효화와 permit 발급 fault containment, C1 Begin 미호출 |
+| AC-M5D7QC3-007 | initial/confirm Busy의 동일 ownership에 대한 실행 연결 전 부분 증거만 기록한다. 실제 issuer/report intake와 전체 Busy/Stale/terminal 경계는 C4 공동 최종 검증까지 `Open / Not Verified`다. |
+| AC-M5D7QC3-008 | execution-commit 전 capability 전체 무효화의 부분 증거만 기록한다. 실제 실행 경계와 permit 소비 결과는 C4 공동 최종 검증까지 `Open / Not Verified`다. |
 | AC-M5D7QC3-009 | 허용 목록·assembly 방향·public ABI·C2/scene/map/UI/C4 발급 금지 정적 점검 |
 | AC-M5D7QC3-010 | focused EditMode/PlayMode와 지정 영향 회귀의 고정 입력·결과 ledger, Luna 독립 P0/P1 검수 |
 
 ## 시작 및 중단 조건
 
-시작 전에는 C3L R3 실제 Unity 결과, frozen input 지문, Luna 독립 검수와 아스트라
-수용을 확인한다. 이 중 하나라도 없으면 이 문서만 유지하고 C3 본체 구현을 시작하지
-않는다.
+시작 전에는 C3L 집중 R3 실제 Unity 결과와 고정 입력 지문뿐 아니라, 새 소스의
+필수 EditMode 562건과 worker 51건 실행 결과, AC-M5D7QC3L-005 최종 Luna 독립 검수
+P0/P1=0, 아스트라 수용을 모두 확인한다. 이 중 하나라도 없으면 이 문서만 유지하고
+C3 본체 구현을 시작하지 않는다.
+
+owner/rearm 구현 뒤에는 C3L의 562+51 결과를 재사용하지 않는다. 변경된 현재
+소스로 필요한 C3 focused EditMode와 PlayMode 회귀를 수행하고, 그 결과·Luna
+독립 검수·아스트라 선행 단계 수용을 별도로 기록한다. 이 선행 수용은 C3 전체
+`Verified`가 아니며, 실제 issuer/report intake와 AC-M5D7QC3-007/008의 잔여 증거는
+별도 Approved C4 및 공동 최종 검증 뒤에만 닫을 수 있다.
 
 구현 중 다음 사실이 나오면 즉시 아스트라에 중단·상승 보고한다: 원래
 IntentRetained/RequestTaken을 보존할 수 없음, 권한에 값 동등 비교가 필요함,

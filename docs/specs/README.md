@@ -1,6 +1,6 @@
 # Specification System
 
-- [VD-09 M5D7Q-C3L 관찰 전용 잠금 구분 — Approved](./work-contracts/2026-09-28-vd09-m5d7q-c3l-observation-lease-provenance.md) · [루나 사전 검수](../verification/2026-09-28-vd09-m5d7q-c3l-luna-pregate.md) — 확인 단계에서 실제 잠금 충돌 시간 초과만 재시도 상태로 취급한다. 접근·읽기 실패는 종료 상태로 구분하고 기존 초기화·복구·잠금 동작은 바꾸지 않는다. 구현·실행 검증은 아직 미완료다.
+- [VD-09 M5D7Q-C3L 관찰 전용 잠금 구분 — Verified](./work-contracts/2026-09-28-vd09-m5d7q-c3l-observation-lease-provenance.md) · [최종 독립 검수](../verification/2026-09-29-c3l-final-regression-luna-acceptance-review.md) · [통합 수용](../approvals/2026-09-29-c3l-integration-acceptance.md) — 집중 11개와 동일 소스 필수 회귀 고유 613개로 관찰 단위만 수용했다. 실제 잠금 충돌 시간 초과만 재시도 상태이며 접근·읽기 실패는 종료 상태로 구분한다. C3 전체나 C4 실행 연결 수용은 아니다.
 
 - [VD-09 M5D7Q-C2R 실제 재시작 복구 — Verified](./work-contracts/2026-09-28-vd09-m5d7q-c2r-restart-bootstrap.md) · [Luna 최종 독립 검수](../verification/2026-09-28-vd09-m5d7q-c2-c2r-luna-final-independent-acceptance.md) — 실제 별도 프로세스 복구와 삭제 후 종료·재시작, 현재 EditMode 613건·PlayMode 610건의 범위별 회귀를 검증했다. 부모 C2 AC-007을 닫았으며 실제 메뉴·목적지 연결은 승인하지 않는다.
 

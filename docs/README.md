@@ -1,5 +1,11 @@
 # Documentation Map
 
+- [관찰 단위 수용 이후 작업 기준](./handoffs/2026-09-29-c3l-verified-checkpoint.md) — 조회 함수 사용자 승인과 C3L 수용을 완료했다. 실제 변경 요청 인증 갱신, C3 소유자·재무장 구현과 후속 검증이 남아 있다. 이전 인계서의 미답변 승인 대기는 당시 기록이다.
+
+- [C3L 관찰 단위 — Verified](./approvals/2026-09-29-c3l-integration-acceptance.md) · [최종 독립 수용 검수](./verification/2026-09-29-c3l-final-regression-luna-acceptance-review.md) · [분할 실행 대조](./verification/2026-09-29-vd09-m5d7q-c3l-r6-regression-closure.md) — 집중 11개와 같은 소스의 필수 회귀 고유 613개를 검증해 관찰 단위만 수용했다. R4 시간 초과 이력은 보존했으며 C3 전체·소유자·C4는 미수용이다. 아래 회귀 진행·실패·미검증 표기는 당시 기록이다.
+
+- [C3L 필수 회귀 R4 실제 결과](./verification/2026-09-29-vd09-m5d7q-c3l-r4-execution.md) — 예정 562개 중 561개 통과, 기존 알림 검사 1개 시간 초과 실패다. 이름·전후 입력 지문 차이는 0이지만 전체 수용은 미완료다. 별도 프로세스 51개는 실행 중이며, 아래 R4 진행 중 표기는 당시 기록이다.
+
 - [확인·실행 연결 단계적 수용 결정](./adr/0036-staged-confirmation-and-execution-acceptance.md) · [독립 폐쇄 검수](./verification/2026-09-29-vd09-m5d7q-c3-c4-acceptance-cycle-resolution-luna-closure.md) — 아스트라가 C3 선행 검증과 C4 공동 최종 검증 순서만 승인했다. C3 실행 결과 관련 전체 기준은 미검증이며 C4는 Review를 유지한다. 시험 요구·제품 동작·현재 코드 허용 범위는 완화하지 않았다.
 
 - [C3L 집중 실행 11/11](./verification/2026-09-28-vd09-m5d7q-c3l-focused-execution.md) · [독립 검수](./verification/2026-09-28-vd09-m5d7q-c3l-r3-luna-review.md) · [C3 소유자 설계 승인](./approvals/2026-09-28-c3-owner-implementation-design-approval.md) — 집중 시험의 실패·건너뜀·판정보류 0, 시험 이름과 전후 입력 지문 차이 0이다. 필수 편집 모드 회귀는 진행 중이며 C3L 전체 수용과 C3 본체 구현은 아직 완료하지 않았다. 아래 인계서의 중단·승인 대기는 이전 시점의 기록이다.
