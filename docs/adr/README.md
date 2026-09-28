@@ -4,6 +4,7 @@ ADR은 쉽게 되돌리기 어렵고, 맥락 없이 보면 의외이며, 실제 
 
 | ADR | 상태 | 결정 |
 |---|---|---|
+| [0037](./0037-gpt6-role-model-migration.md) | accepted | 솔·테라·루나 역할을 호출 가능한 GPT-6 모델로 전환하고 5.6 신규·재시도 호출 금지 |
 | [0036](./0036-staged-confirmation-and-execution-acceptance.md) | accepted; execution implementation remains separately gated | 확인 소유자 선행 검증과 실제 실행 연결 공동 최종 검증을 분리하고 전체 수용 기준을 유지 |
 | [0035](./0035-new-game-manual-only-prior-profile.md) | accepted product direction; implementation pending | 새 게임 전 진행은 수동 복구 전용으로 보존하고 자동 복구 후보에서 제외 |
 | [0034](./0034-seryeong-a1-initial-default-costume.md) | accepted | 세령 수직 데모의 초기 기본 의상을 A1로 지정하되 미디어·임포트 수용 전에는 지급하지 않음 |
