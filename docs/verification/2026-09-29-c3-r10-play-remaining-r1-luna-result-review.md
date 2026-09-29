@@ -1,0 +1,7 @@
+# C3 R10 Play 나머지 실행 독립 결과 검토
+
+XML SHA-256 `74A7C664074ECACBDD564A44D4418B3B0E464C04E960E66C5E82FCE5179AB1F7`, 비교 JSON SHA-256 `2EC91B005A8534359F0F4AB90CE05258A21818D533E3A6DAF534A14C41468A09`, QA 반환 JSON SHA-256 `E0B347820B64FF7C5284B6F58478D3D19ABE2484ED4D18C514DA7C7D67E65588`을 대조했다. 나머지 선택은 `Total=13, Passed=11, Failed=2, Skipped=0, Inconclusive=0`; 정확 이름/중복 차이 0이며 input snapshot 884개 전후 차이 0이다. XML 비교 `Verified=false`, runner exit 5 및 QA 도구 반환 5다. 각 probe/remaining 결과 이름 합집합은 R10 Play 선택 15개와 정확히 같고 중복은 없다. R10 동결 manifest는 현재 14/14 일치한다.
+
+두 실패는 `AC005_SameActualCancelPreservesCompleteObservedFixtureSnapshot(False)` 및 `(True)`다. 각각 실제 take와 Accept 이후 line 50의 `var before=f.CancelSnapshot();`에서 같은 `TypeLoadException`으로 실패했다: `'AcadeGameMaker.Movement.Unity.PlayerMovementController'`를 `AcadeGameMaker.Movement.Unity` 조립에서 찾을 수 없다는 내용이다. 현재 실제 `PlayerMovementController` 선언은 namespace `AcadeGameMaker.Movement`, assembly `AcadeGameMaker.Movement.Unity`이므로 시험 snapshot 도우미의 hard-coded qualified type 이름이 어긋난다. snapshot은 완성되지 않았고 다음 줄의 `f.Cancel(decision)` 및 취소 전후 snapshot 비교는 실행되지 않았다. 이 결과만으로 취소 제품 동작의 실패를 주장할 수 없다. 전체 관찰 snapshot 취소 검증은 아직 증거가 없다.
+
+동일 remaining XML에서 다른 11개 시험은 통과했다. 앞서 별도 probe에서 두 시험도 통과했으므로 서로 다른 두 실행의 명명된 Play 전체 15개는 13 pass/2 test-fixture error다. 합산 결과를 단일 Unity 실행이라고 표현하지 않는다. R10 focused Edit 240개, 377행/91 case matrix 및 필수 562/51/610 회귀는 이 자료에 포함되지 않았다. **전체 수용 차단 P1 1건**은 위 시험 도우미의 형식 이름 오류와 그로 인한 두 취소 snapshot 사례 미검증이다. Unity 재실행·소스 변경은 없었다.

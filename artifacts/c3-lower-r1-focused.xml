@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="21" result="Passed" total="21" passed="21" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-28 22:14:39Z" end-time="2026-09-28 22:25:18Z" duration="639.0023506">
+  <test-suite type="TestSuite" id="1000" name="AcadeGameMaker" fullname="AcadeGameMaker" runstate="Runnable" testcasecount="1143" result="Passed" start-time="2026-09-28 22:14:39Z" end-time="2026-09-28 22:25:18Z" duration="639.002351" total="21" passed="21" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1685" name="AcadeGameMaker.Input.Unity.EditMode.Tests.dll" fullname="C:/Users/me/Documents/GPT-workspace/AcadeGameMaker/Library/ScriptAssemblies/AcadeGameMaker.Input.Unity.EditMode.Tests.dll" runstate="Runnable" testcasecount="96" result="Passed" start-time="2026-09-28 22:14:39Z" end-time="2026-09-28 22:25:18Z" duration="638.975100" total="21" passed="21" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="30724" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1686" name="AcadeGameMaker" fullname="AcadeGameMaker" runstate="Runnable" testcasecount="96" result="Passed" start-time="2026-09-28 22:14:39Z" end-time="2026-09-28 22:25:18Z" duration="638.974008" total="21" passed="21" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1687" name="Tests" fullname="AcadeGameMaker.Tests" runstate="Runnable" testcasecount="96" result="Passed" start-time="2026-09-28 22:14:39Z" end-time="2026-09-28 22:25:18Z" duration="638.973129" total="21" passed="21" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1688" name="EditMode" fullname="AcadeGameMaker.Tests.EditMode" runstate="Runnable" testcasecount="96" result="Passed" start-time="2026-09-28 22:14:39Z" end-time="2026-09-28 22:25:18Z" duration="638.972266" total="21" passed="21" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1689" name="InputUnity" fullname="AcadeGameMaker.Tests.EditMode.InputUnity" runstate="Runnable" testcasecount="96" result="Passed" start-time="2026-09-28 22:14:39Z" end-time="2026-09-28 22:25:18Z" duration="638.971343" total="21" passed="21" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1656" name="ProfileNewGameConfirmationV1Tests" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-28 22:14:39Z" end-time="2026-09-28 22:19:09Z" duration="269.785041" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1658" name="AC001_NoConfirmationCaptureMintsOneOpaqueRequestAndOneReciprocalCommit" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC001_NoConfirmationCaptureMintsOneOpaqueRequestAndOneReciprocalCommit" methodname="AC001_NoConfirmationCaptureMintsOneOpaqueRequestAndOneReciprocalCommit" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests" runstate="Runnable" seed="2022830838" result="Passed" start-time="2026-09-28 22:14:39Z" end-time="2026-09-28 22:15:07Z" duration="27.561225" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1665" name="AC001_ProjectionCorruptionAndImpossibleResolutionFailClosed" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC001_ProjectionCorruptionAndImpossibleResolutionFailClosed" methodname="AC001_ProjectionCorruptionAndImpossibleResolutionFailClosed" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests" runstate="Runnable" seed="1006546658" result="Passed" start-time="2026-09-28 22:15:07Z" end-time="2026-09-28 22:15:29Z" duration="22.288644" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1664" name="AC001_ReflectedCaptureResultFieldsOrCloneCannotAuthenticateRecapture" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC001_ReflectedCaptureResultFieldsOrCloneCannotAuthenticateRecapture" methodname="AC001_ReflectedCaptureResultFieldsOrCloneCannotAuthenticateRecapture" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests" runstate="Runnable" seed="1382300719" result="Passed" start-time="2026-09-28 22:15:29Z" end-time="2026-09-28 22:15:52Z" duration="23.324041" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1657" name="AC004_ActualSameLeaseEvidenceRecapturesAsTheSameIdentity" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC004_ActualSameLeaseEvidenceRecapturesAsTheSameIdentity" methodname="AC004_ActualSameLeaseEvidenceRecapturesAsTheSameIdentity" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests" runstate="Runnable" seed="1299797953" result="Passed" start-time="2026-09-28 22:15:52Z" end-time="2026-09-28 22:16:16Z" duration="23.386927" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1666" name="AC004_AllThreeActualLeafProjectionsAreRequiredForFreshComparison" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC004_AllThreeActualLeafProjectionsAreRequiredForFreshComparison" methodname="AC004_AllThreeActualLeafProjectionsAreRequiredForFreshComparison" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests" runstate="Runnable" seed="1751288640" result="Passed" start-time="2026-09-28 22:16:16Z" end-time="2026-09-28 22:16:39Z" duration="23.354828" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1663" name="AC004_ChangedActualLeafRequiresFreshDecisionAndForeignEvidenceFailsClosed" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC004_ChangedActualLeafRequiresFreshDecisionAndForeignEvidenceFailsClosed" methodname="AC004_ChangedActualLeafRequiresFreshDecisionAndForeignEvidenceFailsClosed" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests" runstate="Runnable" seed="69972452" result="Passed" start-time="2026-09-28 22:16:39Z" end-time="2026-09-28 22:17:03Z" duration="23.651892" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1662" name="AC004_ChangedAmbiguousActualRecaptureReturnsNoRequest" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC004_ChangedAmbiguousActualRecaptureReturnsNoRequest" methodname="AC004_ChangedAmbiguousActualRecaptureReturnsNoRequest" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests" runstate="Runnable" seed="832603949" result="Passed" start-time="2026-09-28 22:17:03Z" end-time="2026-09-28 22:17:26Z" duration="23.518650" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1661" name="AC004_ConfirmedRecaptureMintsOnlyTheFreshActualCapture" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC004_ConfirmedRecaptureMintsOnlyTheFreshActualCapture" methodname="AC004_ConfirmedRecaptureMintsOnlyTheFreshActualCapture" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests" runstate="Runnable" seed="1808328191" result="Passed" start-time="2026-09-28 22:17:26Z" end-time="2026-09-28 22:17:52Z" duration="25.537946" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1659" name="AC008_ClosedReservationCannotRollbackOrComplete" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC008_ClosedReservationCannotRollbackOrComplete" methodname="AC008_ClosedReservationCannotRollbackOrComplete" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests" runstate="Runnable" seed="1035898062" result="Passed" start-time="2026-09-28 22:17:52Z" end-time="2026-09-28 22:18:18Z" duration="26.451922" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1660" name="AC008_ReservedProjectionOrRootCorruptionClosesTheOriginalRequest" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC008_ReservedProjectionOrRootCorruptionClosesTheOriginalRequest" methodname="AC008_ReservedProjectionOrRootCorruptionClosesTheOriginalRequest" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests" runstate="Runnable" seed="809862456" result="Passed" start-time="2026-09-28 22:18:18Z" end-time="2026-09-28 22:19:09Z" duration="50.698458" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="TestFixture" id="1667" name="ProfileNewGameObservationLeaseV1Tests" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-09-28 22:19:09Z" end-time="2026-09-28 22:25:18Z" duration="369.184152" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1677" name="AC001_ForeignRealReceiptAndActionsCannotReturnOriginalRoot" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC001_ForeignRealReceiptAndActionsCannotReturnOriginalRoot" methodname="AC001_ForeignRealReceiptAndActionsCannotReturnOriginalRoot" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests" runstate="Runnable" seed="376669970" result="Passed" start-time="2026-09-28 22:19:09Z" end-time="2026-09-28 22:20:07Z" duration="58.474301" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1678" name="AC001_PredecessorBodiesReconstructToAcceptedR36Fingerprints" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC001_PredecessorBodiesReconstructToAcceptedR36Fingerprints" methodname="AC001_PredecessorBodiesReconstructToAcceptedR36Fingerprints" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests" runstate="Runnable" seed="906770979" result="Passed" start-time="2026-09-28 22:20:07Z" end-time="2026-09-28 22:20:07Z" duration="0.004771" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1669" name="AC002_ActualHeldLockReleasedEarlyCapturesBeforeDeadline" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC002_ActualHeldLockReleasedEarlyCapturesBeforeDeadline" methodname="AC002_ActualHeldLockReleasedEarlyCapturesBeforeDeadline" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests" runstate="Runnable" seed="1267127753" result="Passed" start-time="2026-09-28 22:20:07Z" end-time="2026-09-28 22:20:41Z" duration="33.651626" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1668" name="AC002_ActualHeldLockTimesOutOnlyThroughLowerBusy" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC002_ActualHeldLockTimesOutOnlyThroughLowerBusy" methodname="AC002_ActualHeldLockTimesOutOnlyThroughLowerBusy" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests" runstate="Runnable" seed="1321070126" result="Passed" start-time="2026-09-28 22:20:41Z" end-time="2026-09-28 22:21:19Z" duration="37.851702" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1673" name="AC003_BarrierFileAndDirectoryAreUnreadableWithoutMutation" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC003_BarrierFileAndDirectoryAreUnreadableWithoutMutation" methodname="AC003_BarrierFileAndDirectoryAreUnreadableWithoutMutation" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests" runstate="Runnable" seed="165879866" result="Passed" start-time="2026-09-28 22:21:19Z" end-time="2026-09-28 22:22:25Z" duration="65.976475" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1674" name="AC003_HeldPrimaryReadFailureIsUnreadableAndPreservesBytes" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC003_HeldPrimaryReadFailureIsUnreadableAndPreservesBytes" methodname="AC003_HeldPrimaryReadFailureIsUnreadableAndPreservesBytes" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests" runstate="Runnable" seed="1358712294" result="Passed" start-time="2026-09-28 22:22:25Z" end-time="2026-09-28 22:22:56Z" duration="30.819844" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1671" name="AC003_ObservationRejectsRelativeAndFilesystemRootWithoutWrites" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC003_ObservationRejectsRelativeAndFilesystemRootWithoutWrites" methodname="AC003_ObservationRejectsRelativeAndFilesystemRootWithoutWrites" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests" runstate="Runnable" seed="498046841" result="Passed" start-time="2026-09-28 22:22:56Z" end-time="2026-09-28 22:22:56Z" duration="0.001928" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1670" name="AC003_OnlyActualObservationTimeoutIssuerAuthenticatesProvenance" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC003_OnlyActualObservationTimeoutIssuerAuthenticatesProvenance" methodname="AC003_OnlyActualObservationTimeoutIssuerAuthenticatesProvenance" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests" runstate="Runnable" seed="231034726" result="Passed" start-time="2026-09-28 22:22:56Z" end-time="2026-09-28 22:23:01Z" duration="5.024735" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1672" name="AC003_RootFileAndLockDirectoryAreUnreadableWithoutCaptureEvidence" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC003_RootFileAndLockDirectoryAreUnreadableWithoutCaptureEvidence" methodname="AC003_RootFileAndLockDirectoryAreUnreadableWithoutCaptureEvidence" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests" runstate="Runnable" seed="1659603230" result="Passed" start-time="2026-09-28 22:23:01Z" end-time="2026-09-28 22:24:08Z" duration="66.886866" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1675" name="AC004_ActualCaptureIsIssuedAndReflectionCorruptionFailsClosed" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC004_ActualCaptureIsIssuedAndReflectionCorruptionFailsClosed" methodname="AC004_ActualCaptureIsIssuedAndReflectionCorruptionFailsClosed" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests" runstate="Runnable" seed="141422452" result="Passed" start-time="2026-09-28 22:24:08Z" end-time="2026-09-28 22:24:42Z" duration="33.974613" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1676" name="AC004_CaptureLeafAndProjectionReflectionCorruptionFailsClosed" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC004_CaptureLeafAndProjectionReflectionCorruptionFailsClosed" methodname="AC004_CaptureLeafAndProjectionReflectionCorruptionFailsClosed" classname="AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests" runstate="Runnable" seed="1394651957" result="Passed" start-time="2026-09-28 22:24:42Z" end-time="2026-09-28 22:25:18Z" duration="36.487111" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[Saving results to: C:/Users/me/AppData/LocalLow/AcadeGameMaker/AcadeGameMaker\TestResults.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

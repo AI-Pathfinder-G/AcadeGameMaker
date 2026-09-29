@@ -1,0 +1,3819 @@
+{
+  "SchemaVersion": 1,
+  "Date": "2026-09-29",
+  "Author": "솔",
+  "ActualModel": "gpt-6-sol",
+  "Status": "읽기 전용 정확 바이트 증거 후보; 새 규범/승인/게시/실행 판정 아님",
+  "CandidateLedger": "artifacts/c3-initial-code-publication-candidate-files.json",
+  "CandidateLedgerSHA256": "A08A87B89CD4058D7B357F5FB6C8E7F30BEC863365526FC6BEAD40E0C1B57E5C",
+  "CandidateCount": 489,
+  "MatchingByteEvidenceCandidateCount": 61,
+  "RemainingDirectEvidenceGapCount": 428,
+  "IdentityPolicy": "명시된 정확 파일+현재 전체 SHA가 같은 행에 있거나 단일 정확 승인 기록에 있을 때만 연결. 유일 파일명+전체 SHA 행은 정확한 그 파일만 매핑. 파일명 언급만, 접두사/그룹 수용, 부모 소스로 meta 승인 확장은 하지 않음.",
+  "Entries": [
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring.meta",
+      "CurrentSHA256": "A3539C6B6B0594852E4C779DF110B0E20B092A108FB8FDCB4429EC798DF6B5FC",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7q0-implementation-evidence.md",
+          "EvidenceFileSHA256": "EA331572123B3CEF88D63DE837BB59E3A570312EB75D7080578341CEBFA70BD9",
+          "EvidenceLine": 93,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            6,
+            8
+          ],
+          "DeclaredFile": "HubAuthoring.meta",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/AssemblyInfo.cs",
+      "CurrentSHA256": "67F8C19E30E0351CB725493E7FB3D794E6EBB5786EC8851660B3525AEA9F1320",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7q0-implementation-evidence.md",
+          "EvidenceFileSHA256": "EA331572123B3CEF88D63DE837BB59E3A570312EB75D7080578341CEBFA70BD9",
+          "EvidenceLine": 50,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            6,
+            8
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Editor/HubAuthoring/AssemblyInfo.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubPresentationAuthoringBuilder.cs",
+      "CurrentSHA256": "ECC1F74B3ACE02D2F770A1DD32893E8CD3C851551107EAA512CE021FBA5AA7F7",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-28-vd09-m5d7q-b-preexecution-evidence.md",
+          "EvidenceFileSHA256": "0F00AA781F42075AF4E439F52490B08AF824A17074F3F226414E9E89F9EA50DF",
+          "EvidenceLine": 39,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            8
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubPresentationAuthoringBuilder.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubPresentationAuthoringValidator.cs",
+      "CurrentSHA256": "B1A450D477DB000E4489C4D5E1CB4944A0625E664BD334E53932C02DE649E8A2",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-28-vd09-m5d7q-b-preexecution-evidence.md",
+          "EvidenceFileSHA256": "0F00AA781F42075AF4E439F52490B08AF824A17074F3F226414E9E89F9EA50DF",
+          "EvidenceLine": 40,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            8
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubPresentationAuthoringValidator.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubRuntimeAuthoringBuilder.cs",
+      "CurrentSHA256": "3E91A2741EC5BA106DE5703167D52ACAD2AA930BAFD54C0F00368246AA41CD5E",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7q0-implementation-evidence.md",
+          "EvidenceFileSHA256": "EA331572123B3CEF88D63DE837BB59E3A570312EB75D7080578341CEBFA70BD9",
+          "EvidenceLine": 51,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            6,
+            8
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubRuntimeAuthoringBuilder.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubRuntimeAuthoringValidator.cs",
+      "CurrentSHA256": "C88C27BC316192925F652017F4251E13EED86AE5F200358B48FF8A4714BE6067",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7q0-implementation-evidence.md",
+          "EvidenceFileSHA256": "EA331572123B3CEF88D63DE837BB59E3A570312EB75D7080578341CEBFA70BD9",
+          "EvidenceLine": 52,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            6,
+            8
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubRuntimeAuthoringValidator.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/DesktopProfileLaunchAdapterV1.cs",
+      "CurrentSHA256": "1798F51244FCAFD8EE4B0D847AABBC6DA89EC8EA7138A12826CB37810264DCFB",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/approvals/2026-09-29-c3l-integration-acceptance.md",
+          "EvidenceFileSHA256": "1000E2752EAB63B496C5DA8491D698A8FE40D492497E039D3F96A725D09B582F",
+          "EvidenceLine": 15,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            1,
+            7,
+            11,
+            23
+          ],
+          "DeclaredFile": "DesktopProfileLaunchAdapterV1.cs",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        },
+        {
+          "EvidenceFile": "docs/approvals/2026-09-28-c3-adapter-successor-sha-approval.md",
+          "EvidenceFileSHA256": "107653CEDA8C38226D098DF1FB6FC9E61B3C9463109AF1640D292B628C566037",
+          "EvidenceLine": 8,
+          "FileIdentityLine": 7,
+          "StatusAnchorLines": [
+            5,
+            16
+          ],
+          "EvidenceStatus": "정확 파일과 정확 후속 변경 SHA를 명시 승인; C3 전체 수용 아님",
+          "DeclaredFile": "Assets/AcadeGameMaker/Runtime/Input/Unity/DesktopProfileLaunchAdapterV1.cs",
+          "IdentityResolution": "같은 단일 승인 기록의 파일 행과 승인 SHA 행",
+          "HistoricalCurrent": "승인된 C3 후속 소스와 현재 바이트 일치; 이전 C2/C2R 지문은 역사",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/HubEntryHandoffLatchV1.cs",
+      "CurrentSHA256": "1201240D6E874E596E00D36EFD37330D3C37AEF0591EDA38BAF30D635E4C267C",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7q0-implementation-evidence.md",
+          "EvidenceFileSHA256": "EA331572123B3CEF88D63DE837BB59E3A570312EB75D7080578341CEBFA70BD9",
+          "EvidenceLine": 47,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            6,
+            8
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Runtime/Input/Unity/HubEntryHandoffLatchV1.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/InputRouterDiagnostic.cs",
+      "CurrentSHA256": "D1768821D6B635AD1B515FCEB326BC58C2F92E1551D640B2BAA268F9983181F1",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7q0-implementation-evidence.md",
+          "EvidenceFileSHA256": "EA331572123B3CEF88D63DE837BB59E3A570312EB75D7080578341CEBFA70BD9",
+          "EvidenceLine": 45,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            6,
+            8
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Runtime/Input/Unity/InputRouterDiagnostic.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/UiSemanticFrameV1.cs",
+      "CurrentSHA256": "CCD7763A1103BA096DD64E02C5B91A99A3ADA21D49506CC81E5F0601E06D316F",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7p-a-implementation-evidence.md",
+          "EvidenceFileSHA256": "1053CAE9075081C0E152E49863DA6BB7289E8B23424CBED8F5FC559BC3A26395",
+          "EvidenceLine": 30,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Runtime/Input/Unity/UiSemanticFrameV1.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileAtomicSaveServiceV1.cs.meta",
+      "CurrentSHA256": "DE020BF9FBB5059399796460931AD619A782561EF8828AECE5F8743A495A1C80",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7d-implementation-evidence.md",
+          "EvidenceFileSHA256": "45998C5A30CDA1604890D1B9B83D3FA8113EACDB8032506DCF8E31169F24FEE1",
+          "EvidenceLine": 29,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            5
+          ],
+          "DeclaredFile": "ProfileAtomicSaveServiceV1.cs.meta",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileCanonicalDecoderV1.cs",
+      "CurrentSHA256": "F361E860E09217B1DD32CEDD48980FE0E6F22F993800C20B6EF7AA13029EBE42",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7b-implementation-evidence.md",
+          "EvidenceFileSHA256": "3E3F791D94AA39BD8BE5B84FBE3A907F381BC82F006EF4982E8828C681A252C0",
+          "EvidenceLine": 22,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Runtime/Profile/ProfileCanonicalDecoderV1.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileCanonicalDecoderV1.cs.meta",
+      "CurrentSHA256": "1FD839D0480508A7F1F9DB9E81CD73AA5A58A49831E82B5CEBAC87543CF6AFDE",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7b-implementation-evidence.md",
+          "EvidenceFileSHA256": "3E3F791D94AA39BD8BE5B84FBE3A907F381BC82F006EF4982E8828C681A252C0",
+          "EvidenceLine": 23,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Runtime/Profile/ProfileCanonicalDecoderV1.cs.meta",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileCanonicalEncoder.cs",
+      "CurrentSHA256": "5326FDB385A058A4590B9BD16B07D78A0F0033FF485D4971C8C6FC56A3CABDF5",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7a-implementation-evidence.md",
+          "EvidenceFileSHA256": "139602FC5852D9C4E10E3AD1D4957638A9CF4C4B3E78BB228EC2E909890F0845",
+          "EvidenceLine": 21,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            10,
+            15
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Runtime/Profile/ProfileCanonicalEncoder.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileCanonicalEncoder.cs.meta",
+      "CurrentSHA256": "8E926437FD6AF6473D39A4F76578F53D5BA98219B75256946A5BA1331B6EF306",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7a-implementation-evidence.md",
+          "EvidenceFileSHA256": "139602FC5852D9C4E10E3AD1D4957638A9CF4C4B3E78BB228EC2E909890F0845",
+          "EvidenceLine": 22,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            10,
+            15
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Runtime/Profile/ProfileCanonicalEncoder.cs.meta",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileLaunchObservationAdapterV1.cs.meta",
+      "CurrentSHA256": "8CEA63C429C974B654579EE713C066BB5736FA3454F59DE22845FC65170431F0",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7g-implementation-evidence.md",
+          "EvidenceFileSHA256": "C066BF7FF1D6B6D047B180776CEC0E2208053A7956D038D3E6273BA5F901AFCB",
+          "EvidenceLine": 48,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            7,
+            10,
+            21
+          ],
+          "DeclaredFile": "ProfileLaunchObservationAdapterV1.cs.meta",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileLoadSelectorV1.cs",
+      "CurrentSHA256": "706B01B9FCE5299B2EE32E6BE3356AB1B04ACC3922C85FBC2C054FA89B12FCAB",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7e-implementation-evidence.md",
+          "EvidenceFileSHA256": "C4ED3B493D0F151A4B94F2115A849B4262AB8F0F29B88B55E41625E29356D747",
+          "EvidenceLine": 26,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            5
+          ],
+          "DeclaredFile": "ProfileLoadSelectorV1.cs",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileLoadSelectorV1.cs.meta",
+      "CurrentSHA256": "2F22B0E888BCB3233C0367ED8DA669B8B001B729DFCA5263C29E01C6C92CD388",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7e-implementation-evidence.md",
+          "EvidenceFileSHA256": "C4ED3B493D0F151A4B94F2115A849B4262AB8F0F29B88B55E41625E29356D747",
+          "EvidenceLine": 27,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            5
+          ],
+          "DeclaredFile": "ProfileLoadSelectorV1.cs.meta",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileNewGameResetServiceV1.cs",
+      "CurrentSHA256": "23D7248B1A603A89BC8FF0FFDBB24FA04E640A66018DDC5689F97EC80701FBE5",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/approvals/2026-09-29-c3l-integration-acceptance.md",
+          "EvidenceFileSHA256": "1000E2752EAB63B496C5DA8491D698A8FE40D492497E039D3F96A725D09B582F",
+          "EvidenceLine": 16,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            1,
+            7,
+            11,
+            23
+          ],
+          "DeclaredFile": "ProfileNewGameResetServiceV1.cs",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileQuarantineServiceV1.cs",
+      "CurrentSHA256": "CF73B2452B1F7839A346F13E65E4076F2B688F067DD2B66ED931F7D3810FF162",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7f-implementation-evidence.md",
+          "EvidenceFileSHA256": "0A3AC4C4F78604A7DCFD0F713DC6C08F0486EE5CD9007C073EBE2729B7AF40F7",
+          "EvidenceLine": 37,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            8,
+            11
+          ],
+          "DeclaredFile": "ProfileQuarantineServiceV1.cs",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileQuarantineServiceV1.cs.meta",
+      "CurrentSHA256": "07A30262C8FDEB170D25B8546556E17E9E6F7BDB349555BB00DCBD029A311ED5",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7f-implementation-evidence.md",
+          "EvidenceFileSHA256": "0A3AC4C4F78604A7DCFD0F713DC6C08F0486EE5CD9007C073EBE2729B7AF40F7",
+          "EvidenceLine": 38,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            8,
+            11
+          ],
+          "DeclaredFile": "ProfileQuarantineServiceV1.cs.meta",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileRecoveryPlannerV1.cs.meta",
+      "CurrentSHA256": "044B6BCD6CE279110052A4692E8D680E7A7C19166E1EF4126FDF3766CAF96EEA",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7c-implementation-evidence.md",
+          "EvidenceFileSHA256": "1232A685E48A1AE0ACDEF4B19EC8B34E78871480F8CF2C90BB13FD203D2CF3E2",
+          "EvidenceLine": 21,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3
+          ],
+          "DeclaredFile": "ProfileRecoveryPlannerV1.cs.meta",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileResetDiskTransactionV1.cs",
+      "CurrentSHA256": "BE0F16834F96272AD68C15F5004E9C37491EEF6F82D7CA728A5E1D1D60CB71E2",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/approvals/2026-09-29-c3l-integration-acceptance.md",
+          "EvidenceFileSHA256": "1000E2752EAB63B496C5DA8491D698A8FE40D492497E039D3F96A725D09B582F",
+          "EvidenceLine": 17,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            1,
+            7,
+            11,
+            23
+          ],
+          "DeclaredFile": "ProfileResetDiskTransactionV1.cs",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffC3AuditSuccessorTests.cs.meta",
+      "CurrentSHA256": "F1FFFA239E271C037AC818FF4C03B698DC3B07B561F8024887F4E80677A2FEFB",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-29-c3-upper-r6-meta-correction-luna-review.md",
+          "EvidenceFileSHA256": "46ACFFA03B4D6D71E61FF1C5E57067E4EA9EC07E6726DF3E0DBC59FCB14064A5",
+          "EvidenceLine": 9,
+          "StatusAnchorLines": [
+            3,
+            7,
+            19
+          ],
+          "EvidenceStatus": "승인된 단일 meta 변경의 제한 정적 검수; 실행 및 전체 수용 아님",
+          "DeclaredFile": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffC3AuditSuccessorTests.cs.meta",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 R6 현재 SHA가 일치",
+          "HistoricalCurrent": "현재 R6 meta; R5의 다른 SHA는 역사 실패 자료",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/AcadeGameMaker.Input.Unity.EditMode.Tests.asmdef",
+      "CurrentSHA256": "1ED81F65C60ACA26C6BEDE2C76DE2B81A3A08FD1D22544E58EC41AF76677BA72",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7q0-implementation-evidence.md",
+          "EvidenceFileSHA256": "EA331572123B3CEF88D63DE837BB59E3A570312EB75D7080578341CEBFA70BD9",
+          "EvidenceLine": 53,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            6,
+            8
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/AcadeGameMaker.Input.Unity.EditMode.Tests.asmdef",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubRuntimeAuthoringBuilderEditModeTests.cs",
+      "CurrentSHA256": "E853B2A777B86E9F70AF4B06FED7427DB7A9DF0710A1BD3F3B311EAD3F1D122D",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7q0-implementation-evidence.md",
+          "EvidenceFileSHA256": "EA331572123B3CEF88D63DE837BB59E3A570312EB75D7080578341CEBFA70BD9",
+          "EvidenceLine": 54,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            6,
+            8
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubRuntimeAuthoringBuilderEditModeTests.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/ProfileNewGameObservationLeaseV1Tests.cs",
+      "CurrentSHA256": "E899F8531763CD47BE3366619A31CD91700F65EF6B2770339728B59E66E1E1AA",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/approvals/2026-09-29-c3l-integration-acceptance.md",
+          "EvidenceFileSHA256": "1000E2752EAB63B496C5DA8491D698A8FE40D492497E039D3F96A725D09B582F",
+          "EvidenceLine": 19,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            1,
+            7,
+            11,
+            23
+          ],
+          "DeclaredFile": "ProfileNewGameObservationLeaseV1Tests.cs",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/UiSemanticFrameV1Tests.cs",
+      "CurrentSHA256": "000044B22F846550EC8DD6E92BD949E6BC1FAF257EA83719A3983C54A529BE4B",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7p-a-implementation-evidence.md",
+          "EvidenceFileSHA256": "1053CAE9075081C0E152E49863DA6BB7289E8B23424CBED8F5FC559BC3A26395",
+          "EvidenceLine": 33,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/UiSemanticFrameV1Tests.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileAtomicSaveServiceV1Tests.cs",
+      "CurrentSHA256": "DACEDD7AEC5E5D71746A10DC7CAC92E229513829E6AB4645A4EEB80924BF51DB",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-28-vd09-m5d7q-c-lock-barrier-foundation.md",
+          "EvidenceFileSHA256": "AA9DE2280BEB2BF72AC57D112C8AFE74A9F0252FB851F9FFFC1A1D49A573A3D3",
+          "EvidenceLine": 23,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            7
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileAtomicSaveServiceV1Tests.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileAtomicSaveServiceV1Tests.cs.meta",
+      "CurrentSHA256": "B35C122B3514FFFC6F2BA62B9E85329ED2147A68255CC4B42652DEAE2D2DE3E0",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7d-implementation-evidence.md",
+          "EvidenceFileSHA256": "45998C5A30CDA1604890D1B9B83D3FA8113EACDB8032506DCF8E31169F24FEE1",
+          "EvidenceLine": 31,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            5
+          ],
+          "DeclaredFile": "ProfileAtomicSaveServiceV1Tests.cs.meta",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileCanonicalDecoderV1Tests.cs",
+      "CurrentSHA256": "A292D404C2E6F5BBE0534F1F0345350FEC64672A7BB269231531B333C3D540BB",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7b-implementation-evidence.md",
+          "EvidenceFileSHA256": "3E3F791D94AA39BD8BE5B84FBE3A907F381BC82F006EF4982E8828C681A252C0",
+          "EvidenceLine": 24,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileCanonicalDecoderV1Tests.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileCanonicalDecoderV1Tests.cs.meta",
+      "CurrentSHA256": "6B72B98EA1C31096E9CE1BD473737711F8D414000052621AF2164DCA0120EB43",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7b-implementation-evidence.md",
+          "EvidenceFileSHA256": "3E3F791D94AA39BD8BE5B84FBE3A907F381BC82F006EF4982E8828C681A252C0",
+          "EvidenceLine": 25,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileCanonicalDecoderV1Tests.cs.meta",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileCanonicalEncoderTests.cs",
+      "CurrentSHA256": "0FBC8FABF8B14DC4D607DAE4D49AE3088E5CC0D6BD6D0B374857DC05326153F0",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7a-implementation-evidence.md",
+          "EvidenceFileSHA256": "139602FC5852D9C4E10E3AD1D4957638A9CF4C4B3E78BB228EC2E909890F0845",
+          "EvidenceLine": 23,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            10,
+            15
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileCanonicalEncoderTests.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileCanonicalEncoderTests.cs.meta",
+      "CurrentSHA256": "647B0211D3DD9F8BFE46662E2D2CE8482406BD53BFA0B6F64B80341D7B4DEA1C",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7a-implementation-evidence.md",
+          "EvidenceFileSHA256": "139602FC5852D9C4E10E3AD1D4957638A9CF4C4B3E78BB228EC2E909890F0845",
+          "EvidenceLine": 24,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            10,
+            15
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileCanonicalEncoderTests.cs.meta",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileInputRecoveryAtomicSaveServiceV1Tests.cs",
+      "CurrentSHA256": "C601560CE285B9774F64800ECECBFABED3140AB6D9795A424B43BEF78BA76F06",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7h-implementation-evidence.md",
+          "EvidenceFileSHA256": "4614B07A14390B16B66AB3D70EA7D90440EEECDD137E7945B1045216BE697452",
+          "EvidenceLine": 46,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            19
+          ],
+          "DeclaredFile": "ProfileInputRecoveryAtomicSaveServiceV1Tests.cs",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileInputRecoveryAtomicSaveServiceV1Tests.cs.meta",
+      "CurrentSHA256": "CB0431CE7E282125DBE4E78D8F30285212BF9FE85C0522798B708D4ED675D5E3",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7h-implementation-evidence.md",
+          "EvidenceFileSHA256": "4614B07A14390B16B66AB3D70EA7D90440EEECDD137E7945B1045216BE697452",
+          "EvidenceLine": 35,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            19
+          ],
+          "DeclaredFile": "ProfileInputRecoveryAtomicSaveServiceV1Tests.cs.meta",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        },
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7h-implementation-evidence.md",
+          "EvidenceFileSHA256": "4614B07A14390B16B66AB3D70EA7D90440EEECDD137E7945B1045216BE697452",
+          "EvidenceLine": 47,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            19
+          ],
+          "DeclaredFile": "ProfileInputRecoveryAtomicSaveServiceV1Tests.cs.meta",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileLaunchObservationAdapterV1Tests.cs",
+      "CurrentSHA256": "22DFFFCD03ADF1AA3E390540A2C7649AD9E3E321CF1310BDCDF7504A04F0B0C1",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7g-implementation-evidence.md",
+          "EvidenceFileSHA256": "C066BF7FF1D6B6D047B180776CEC0E2208053A7956D038D3E6273BA5F901AFCB",
+          "EvidenceLine": 49,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            7,
+            10,
+            21
+          ],
+          "DeclaredFile": "ProfileLaunchObservationAdapterV1Tests.cs",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileLaunchObservationAdapterV1Tests.cs.meta",
+      "CurrentSHA256": "BBE68988BB8B3735EC9560FF115B6C336EAC290AF7C0090E2449EF644E7CA25B",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7g-implementation-evidence.md",
+          "EvidenceFileSHA256": "C066BF7FF1D6B6D047B180776CEC0E2208053A7956D038D3E6273BA5F901AFCB",
+          "EvidenceLine": 50,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            7,
+            10,
+            21
+          ],
+          "DeclaredFile": "ProfileLaunchObservationAdapterV1Tests.cs.meta",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileLoadSelectorV1Tests.cs",
+      "CurrentSHA256": "1C84DB7296CCC9256289DC7BB4375A05A4FDC7005953DCF230F9BE41C24CF550",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7e-implementation-evidence.md",
+          "EvidenceFileSHA256": "C4ED3B493D0F151A4B94F2115A849B4262AB8F0F29B88B55E41625E29356D747",
+          "EvidenceLine": 28,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            5
+          ],
+          "DeclaredFile": "ProfileLoadSelectorV1Tests.cs",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileLoadSelectorV1Tests.cs.meta",
+      "CurrentSHA256": "461F25582A3A3637B8171744DA795991DCA7750CD40BA62FBA37BDFCA805CF86",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7e-implementation-evidence.md",
+          "EvidenceFileSHA256": "C4ED3B493D0F151A4B94F2115A849B4262AB8F0F29B88B55E41625E29356D747",
+          "EvidenceLine": 29,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            5
+          ],
+          "DeclaredFile": "ProfileLoadSelectorV1Tests.cs.meta",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileQuarantineServiceV1Tests.cs",
+      "CurrentSHA256": "8FCDB5CE41671C4CC991C525F25043690674DB7BE74CAD1B35762D455CAEFDAA",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7f-implementation-evidence.md",
+          "EvidenceFileSHA256": "0A3AC4C4F78604A7DCFD0F713DC6C08F0486EE5CD9007C073EBE2729B7AF40F7",
+          "EvidenceLine": 39,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            8,
+            11
+          ],
+          "DeclaredFile": "ProfileQuarantineServiceV1Tests.cs",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileQuarantineServiceV1Tests.cs.meta",
+      "CurrentSHA256": "F01112A5674D6217FF5FA888566898F2BDE751F5ACE904B32F5CA1FC2016FE16",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7f-implementation-evidence.md",
+          "EvidenceFileSHA256": "0A3AC4C4F78604A7DCFD0F713DC6C08F0486EE5CD9007C073EBE2729B7AF40F7",
+          "EvidenceLine": 40,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3,
+            8,
+            11
+          ],
+          "DeclaredFile": "ProfileQuarantineServiceV1Tests.cs.meta",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileRecoveryPlannerV1Tests.cs",
+      "CurrentSHA256": "F58B4E9877D92D66AAF518795DA0927DEAEAC738C641C5F49223F4BF95FDC44A",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7c-implementation-evidence.md",
+          "EvidenceFileSHA256": "1232A685E48A1AE0ACDEF4B19EC8B34E78871480F8CF2C90BB13FD203D2CF3E2",
+          "EvidenceLine": 22,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3
+          ],
+          "DeclaredFile": "ProfileRecoveryPlannerV1Tests.cs",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileRecoveryPlannerV1Tests.cs.meta",
+      "CurrentSHA256": "33858F59C5BBBC7CCA03EE30E5CEFBC5E02AEE026389CE6153FC674C834BCB28",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-13-vd09-m5d7c-implementation-evidence.md",
+          "EvidenceFileSHA256": "1232A685E48A1AE0ACDEF4B19EC8B34E78871480F8CF2C90BB13FD203D2CF3E2",
+          "EvidenceLine": 23,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3
+          ],
+          "DeclaredFile": "ProfileRecoveryPlannerV1Tests.cs.meta",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuIntentHandoffPlayModeTests.cs",
+      "CurrentSHA256": "3AB39CDAA80E471475D44C219FE2DECFF33E772C2614F3CA75D63FBB1687ADDA",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-28-vd09-m5d7q-b-preexecution-evidence.md",
+          "EvidenceFileSHA256": "0F00AA781F42075AF4E439F52490B08AF824A17074F3F226414E9E89F9EA50DF",
+          "EvidenceLine": 42,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            8
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuIntentHandoffPlayModeTests.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyInputRouterPlayModeTests.cs",
+      "CurrentSHA256": "2CCBF5CE34A541E6012CCB48086353356D71D766C5BED68C43018AA1BE0FFE1F",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7q0-implementation-evidence.md",
+          "EvidenceFileSHA256": "EA331572123B3CEF88D63DE837BB59E3A570312EB75D7080578341CEBFA70BD9",
+          "EvidenceLine": 56,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            6,
+            8
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyInputRouterPlayModeTests.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0CoverageBPlayModeTests.cs",
+      "CurrentSHA256": "8EEDFA700F94B0101A1C4AF89A5D26905C5A8F95B42781935D6A6BD3832328A5",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7q0-implementation-evidence.md",
+          "EvidenceFileSHA256": "EA331572123B3CEF88D63DE837BB59E3A570312EB75D7080578341CEBFA70BD9",
+          "EvidenceLine": 57,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            6,
+            8
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0CoverageBPlayModeTests.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0HandoffMatrixPlayModeTests.cs",
+      "CurrentSHA256": "1AF86650F070896A77D33453E76C346ECAA04CAEDAB62D5E192214097CFA6667",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7q0-implementation-evidence.md",
+          "EvidenceFileSHA256": "EA331572123B3CEF88D63DE837BB59E3A570312EB75D7080578341CEBFA70BD9",
+          "EvidenceLine": 58,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            6,
+            8
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0HandoffMatrixPlayModeTests.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0RemainingRuntimePlayModeTests.cs",
+      "CurrentSHA256": "6899830A32D452F8C82BC18697E1B9744C2C050EAC7A89A856DE6240EB9C5D1F",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7q0-implementation-evidence.md",
+          "EvidenceFileSHA256": "EA331572123B3CEF88D63DE837BB59E3A570312EB75D7080578341CEBFA70BD9",
+          "EvidenceLine": 59,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            6,
+            8
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0RemainingRuntimePlayModeTests.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0TestSupport.cs",
+      "CurrentSHA256": "404B0E2D123EC9430A152D602DF302BB943EB1B772133519E62CCB1A0FCFD09B",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7q0-implementation-evidence.md",
+          "EvidenceFileSHA256": "EA331572123B3CEF88D63DE837BB59E3A570312EB75D7080578341CEBFA70BD9",
+          "EvidenceLine": 60,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            6,
+            8
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0TestSupport.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/UiSemanticFrameRouterPlayModeTests.cs",
+      "CurrentSHA256": "102480263B811F0DE915679C4585970A21C1CF40D4197863A6EA05FFBF6727C9",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7p-a-implementation-evidence.md",
+          "EvidenceFileSHA256": "1053CAE9075081C0E152E49863DA6BB7289E8B23424CBED8F5FC559BC3A26395",
+          "EvidenceLine": 32,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            3
+          ],
+          "DeclaredFile": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/UiSemanticFrameRouterPlayModeTests.cs",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/Prefabs/Hub.meta",
+      "CurrentSHA256": "772772C20B2021B4094ACD0600624F13714D7EB3F8E7E8BB93FF0FBC5F1F6749",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7q0-implementation-evidence.md",
+          "EvidenceFileSHA256": "EA331572123B3CEF88D63DE837BB59E3A570312EB75D7080578341CEBFA70BD9",
+          "EvidenceLine": 92,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            6,
+            8
+          ],
+          "DeclaredFile": "Hub.meta",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/Prefabs/Hub/HubMenuRoot.prefab",
+      "CurrentSHA256": "BE2930556473C47FA8E78EC7F9A46243162E3F7231A0034DA64832F46A5676A5",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-28-vd09-m5d7q-b-preexecution-evidence.md",
+          "EvidenceFileSHA256": "0F00AA781F42075AF4E439F52490B08AF824A17074F3F226414E9E89F9EA50DF",
+          "EvidenceLine": 43,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            8
+          ],
+          "DeclaredFile": "Assets/Prefabs/Hub/HubMenuRoot.prefab",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/UI/Shaders.meta",
+      "CurrentSHA256": "142F6FE56DA2CF181D4E55B0C86F0A10ECFD0A1CE266BFAAF1FCFC0ABB5C9BC8",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/specs/work-contracts/2026-09-23-vd09-m5d7q-a-authored-hub-shell.md",
+          "EvidenceFileSHA256": "91C1B9E5A1F1294C14DFFB63623914FDA58BB9BD7C0EB1E3220C691F531B8D32",
+          "EvidenceLine": 346,
+          "EvidenceStatus": "승인된 규범이 정확 파일별 허용 바이트와 meta 지문을 고정; 불일치한 실행 원장으로 과거 실행 수용을 추정하지 않음",
+          "StatusAnchorLines": [
+            8,
+            14,
+            15,
+            315,
+            341
+          ],
+          "DeclaredFile": "Assets/UI/Shaders.meta",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 승인된 규범의 정확 파일별 지문과 현재 후보 바이트의 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/UI/Shaders/Hub.meta",
+      "CurrentSHA256": "0441D34AA04ED1622960D9B115A249E452A1E75B97DB0E1DCF8D8A861EAAE5A9",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/specs/work-contracts/2026-09-23-vd09-m5d7q-a-authored-hub-shell.md",
+          "EvidenceFileSHA256": "91C1B9E5A1F1294C14DFFB63623914FDA58BB9BD7C0EB1E3220C691F531B8D32",
+          "EvidenceLine": 347,
+          "EvidenceStatus": "승인된 규범이 정확 파일별 허용 바이트와 meta 지문을 고정; 불일치한 실행 원장으로 과거 실행 수용을 추정하지 않음",
+          "StatusAnchorLines": [
+            8,
+            14,
+            15,
+            315,
+            341
+          ],
+          "DeclaredFile": "Assets/UI/Shaders/Hub.meta",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 승인된 규범의 정확 파일별 지문과 현재 후보 바이트의 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/UI/Shaders/Hub/TMP_SDF-Mobile.shader",
+      "CurrentSHA256": "44C39AABC7E88E7E1FEFFC1880DF754F4ADF86B62E9512AA89E9D2D65171AFF4",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/specs/work-contracts/2026-09-23-vd09-m5d7q-a-authored-hub-shell.md",
+          "EvidenceFileSHA256": "91C1B9E5A1F1294C14DFFB63623914FDA58BB9BD7C0EB1E3220C691F531B8D32",
+          "EvidenceLine": 321,
+          "EvidenceStatus": "승인된 규범이 정확 파일별 허용 바이트와 meta 지문을 고정; 불일치한 실행 원장으로 과거 실행 수용을 추정하지 않음",
+          "StatusAnchorLines": [
+            8,
+            14,
+            15,
+            315,
+            341
+          ],
+          "DeclaredFile": "Assets/UI/Shaders/Hub/TMP_SDF-Mobile.shader",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 승인된 규범의 정확 파일별 지문과 현재 후보 바이트의 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/UI/Shaders/Hub/TMP_SDF-Mobile.shader.meta",
+      "CurrentSHA256": "94D3127E88D565DE1A4D71F6FB8F4E08A2CAEAC3D2FD6D8BE0277C033E9BF91C",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/specs/work-contracts/2026-09-23-vd09-m5d7q-a-authored-hub-shell.md",
+          "EvidenceFileSHA256": "91C1B9E5A1F1294C14DFFB63623914FDA58BB9BD7C0EB1E3220C691F531B8D32",
+          "EvidenceLine": 348,
+          "EvidenceStatus": "승인된 규범이 정확 파일별 허용 바이트와 meta 지문을 고정; 불일치한 실행 원장으로 과거 실행 수용을 추정하지 않음",
+          "StatusAnchorLines": [
+            8,
+            14,
+            15,
+            315,
+            341
+          ],
+          "DeclaredFile": "TMP_SDF-Mobile.shader.meta",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 승인된 규범의 정확 파일별 지문과 현재 후보 바이트의 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/UI/Shaders/Hub/TMPro_Properties.cginc",
+      "CurrentSHA256": "66DB1F03E8D7A413EBA79BCB6602FDB2DE710B586F34A6F2584ED6F68F028E90",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/specs/work-contracts/2026-09-23-vd09-m5d7q-a-authored-hub-shell.md",
+          "EvidenceFileSHA256": "91C1B9E5A1F1294C14DFFB63623914FDA58BB9BD7C0EB1E3220C691F531B8D32",
+          "EvidenceLine": 322,
+          "EvidenceStatus": "승인된 규범이 정확 파일별 허용 바이트와 meta 지문을 고정; 불일치한 실행 원장으로 과거 실행 수용을 추정하지 않음",
+          "StatusAnchorLines": [
+            8,
+            14,
+            15,
+            315,
+            341
+          ],
+          "DeclaredFile": "Assets/UI/Shaders/Hub/TMPro_Properties.cginc",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 승인된 규범의 정확 파일별 지문과 현재 후보 바이트의 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/UI/Shaders/Hub/TMPro_Properties.cginc.meta",
+      "CurrentSHA256": "E8B9FD72E432CE711D125188E548A461263E1A74FE673A01D736984BCFCCDAF8",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/specs/work-contracts/2026-09-23-vd09-m5d7q-a-authored-hub-shell.md",
+          "EvidenceFileSHA256": "91C1B9E5A1F1294C14DFFB63623914FDA58BB9BD7C0EB1E3220C691F531B8D32",
+          "EvidenceLine": 349,
+          "EvidenceStatus": "승인된 규범이 정확 파일별 허용 바이트와 meta 지문을 고정; 불일치한 실행 원장으로 과거 실행 수용을 추정하지 않음",
+          "StatusAnchorLines": [
+            8,
+            14,
+            15,
+            315,
+            341
+          ],
+          "DeclaredFile": "TMPro_Properties.cginc.meta",
+          "IdentityResolution": "같은 행의 명시 파일명과 현재 64자리 SHA가 일치하고 후보 내 파일명·SHA 쌍이 유일; 다른 경로/메타로 확장 없음",
+          "HistoricalCurrent": "과거 승인된 규범의 정확 파일별 지문과 현재 후보 바이트의 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Packages/manifest.json",
+      "CurrentSHA256": "AD3A5D2329D5A8FD71BE89873C75BA2CAA98B4391558A69D83D81CADFE684E1E",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7p-b-implementation-evidence.md",
+          "EvidenceFileSHA256": "C350B78A19F2F704A91F48B595A3FFA39FFB40B883A3B7F7E03C98392A65548E",
+          "EvidenceLine": 85,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            7,
+            8
+          ],
+          "DeclaredFile": "Packages/manifest.json",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Packages/packages-lock.json",
+      "CurrentSHA256": "B2B9B1DE4381F3C289837ACD1BDE69013C1F7581511E26861DFDF4F5AE00E550",
+      "CurrentFileRehashMatches": true,
+      "Evidence": [
+        {
+          "EvidenceFile": "docs/verification/2026-09-20-vd09-m5d7p-b-implementation-evidence.md",
+          "EvidenceFileSHA256": "C350B78A19F2F704A91F48B595A3FFA39FFB40B883A3B7F7E03C98392A65548E",
+          "EvidenceLine": 86,
+          "EvidenceStatus": "문서가 명시한 과거 한정 통합수용의 실제 파일 지문 행",
+          "StatusAnchorLines": [
+            7,
+            8
+          ],
+          "DeclaredFile": "Packages/packages-lock.json",
+          "IdentityResolution": "같은 행의 정확 파일 경로와 현재 64자리 SHA가 일치",
+          "HistoricalCurrent": "과거 해당 단위 수용 지문과 현재 후보 바이트의 정확 일치",
+          "CurrentC3WholeAcceptance": false,
+          "PublicationApproval": false
+        }
+      ],
+      "PublicationApproved": false
+    }
+  ],
+  "CurrentC3R6StaticOnly": [
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileNewGameConfirmationV1.cs",
+      "CurrentSHA256": "ABD4B8CC79D0C24F16EB053B98460C68A466B03AABE0B2CFA01C7862BA027CB1",
+      "ManifestSHA256": "ABD4B8CC79D0C24F16EB053B98460C68A466B03AABE0B2CFA01C7862BA027CB1",
+      "ExactMatch": true,
+      "EvidenceFile": "artifacts/c3-upper-r6-frozen-source-manifest.json",
+      "EvidenceFileSHA256": "84B36B9A4E62BCE98206320EA4D3CBE26CCBCBF590FFA505486CF932E568776B",
+      "IndependentReview": "docs/verification/2026-09-29-c3-upper-r6-meta-correction-luna-review.md",
+      "ReviewStatus": "R6 제한 정적 검수 P0/P1=0. 상위 요청이 실행 검증 진행 중으로 지정; 최종 실행/수용 결과는 조회하지 않음",
+      "HistoricalCurrent": "현재 R6 정적 동결; 과거 통과·R5 실행 실패는 별도 역사",
+      "CurrentC3WholeAcceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/ProfileNewGameConfirmationV1Tests.cs",
+      "CurrentSHA256": "F80D57376F3845E16BB3D347CFB3834ACE8FCCB53F539376D880A844A90F9581",
+      "ManifestSHA256": "F80D57376F3845E16BB3D347CFB3834ACE8FCCB53F539376D880A844A90F9581",
+      "ExactMatch": true,
+      "EvidenceFile": "artifacts/c3-upper-r6-frozen-source-manifest.json",
+      "EvidenceFileSHA256": "84B36B9A4E62BCE98206320EA4D3CBE26CCBCBF590FFA505486CF932E568776B",
+      "IndependentReview": "docs/verification/2026-09-29-c3-upper-r6-meta-correction-luna-review.md",
+      "ReviewStatus": "R6 제한 정적 검수 P0/P1=0. 상위 요청이 실행 검증 진행 중으로 지정; 최종 실행/수용 결과는 조회하지 않음",
+      "HistoricalCurrent": "현재 R6 정적 동결; 과거 통과·R5 실행 실패는 별도 역사",
+      "CurrentC3WholeAcceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/ProfileNewGameConfirmationV1Tests.cs.meta",
+      "CurrentSHA256": "4DDE703DFCF2E048D9737FF57EED9E0CA1192109046871AFE31C437400F13AD2",
+      "ManifestSHA256": "4DDE703DFCF2E048D9737FF57EED9E0CA1192109046871AFE31C437400F13AD2",
+      "ExactMatch": true,
+      "EvidenceFile": "artifacts/c3-upper-r6-frozen-source-manifest.json",
+      "EvidenceFileSHA256": "84B36B9A4E62BCE98206320EA4D3CBE26CCBCBF590FFA505486CF932E568776B",
+      "IndependentReview": "docs/verification/2026-09-29-c3-upper-r6-meta-correction-luna-review.md",
+      "ReviewStatus": "R6 제한 정적 검수 P0/P1=0. 상위 요청이 실행 검증 진행 중으로 지정; 최종 실행/수용 결과는 조회하지 않음",
+      "HistoricalCurrent": "현재 R6 정적 동결; 과거 통과·R5 실행 실패는 별도 역사",
+      "CurrentC3WholeAcceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuIntentHandoffOwnerV1.cs",
+      "CurrentSHA256": "F47C61A043DAF4695CC53E41C6BE9BB67CA147C722F7B830459AA6304B45B3B5",
+      "ManifestSHA256": "F47C61A043DAF4695CC53E41C6BE9BB67CA147C722F7B830459AA6304B45B3B5",
+      "ExactMatch": true,
+      "EvidenceFile": "artifacts/c3-upper-r6-frozen-source-manifest.json",
+      "EvidenceFileSHA256": "84B36B9A4E62BCE98206320EA4D3CBE26CCBCBF590FFA505486CF932E568776B",
+      "IndependentReview": "docs/verification/2026-09-29-c3-upper-r6-meta-correction-luna-review.md",
+      "ReviewStatus": "R6 제한 정적 검수 P0/P1=0. 상위 요청이 실행 검증 진행 중으로 지정; 최종 실행/수용 결과는 조회하지 않음",
+      "HistoricalCurrent": "현재 R6 정적 동결; 과거 통과·R5 실행 실패는 별도 역사",
+      "CurrentC3WholeAcceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuPresenterV1.cs",
+      "CurrentSHA256": "393B325BA5B8F6D79CA983F1A91098215E7A6993DE37E9F5D98BA775760E4900",
+      "ManifestSHA256": "393B325BA5B8F6D79CA983F1A91098215E7A6993DE37E9F5D98BA775760E4900",
+      "ExactMatch": true,
+      "EvidenceFile": "artifacts/c3-upper-r6-frozen-source-manifest.json",
+      "EvidenceFileSHA256": "84B36B9A4E62BCE98206320EA4D3CBE26CCBCBF590FFA505486CF932E568776B",
+      "IndependentReview": "docs/verification/2026-09-29-c3-upper-r6-meta-correction-luna-review.md",
+      "ReviewStatus": "R6 제한 정적 검수 P0/P1=0. 상위 요청이 실행 검증 진행 중으로 지정; 최종 실행/수용 결과는 조회하지 않음",
+      "HistoricalCurrent": "현재 R6 정적 동결; 과거 통과·R5 실행 실패는 별도 역사",
+      "CurrentC3WholeAcceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/NewGameConfirmationOwnerV1.cs",
+      "CurrentSHA256": "CAEBD7B5DA99AF94A25C5C300789AA48CA87908CA6D8894B99AE49C2391D7043",
+      "ManifestSHA256": "CAEBD7B5DA99AF94A25C5C300789AA48CA87908CA6D8894B99AE49C2391D7043",
+      "ExactMatch": true,
+      "EvidenceFile": "artifacts/c3-upper-r6-frozen-source-manifest.json",
+      "EvidenceFileSHA256": "84B36B9A4E62BCE98206320EA4D3CBE26CCBCBF590FFA505486CF932E568776B",
+      "IndependentReview": "docs/verification/2026-09-29-c3-upper-r6-meta-correction-luna-review.md",
+      "ReviewStatus": "R6 제한 정적 검수 P0/P1=0. 상위 요청이 실행 검증 진행 중으로 지정; 최종 실행/수용 결과는 조회하지 않음",
+      "HistoricalCurrent": "현재 R6 정적 동결; 과거 통과·R5 실행 실패는 별도 역사",
+      "CurrentC3WholeAcceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/NewGameConfirmationOwnerV1.cs.meta",
+      "CurrentSHA256": "05F240AFB899893F47C94798D05D65BD97F5982120AD8EE086CBFBD27C1C482B",
+      "ManifestSHA256": "05F240AFB899893F47C94798D05D65BD97F5982120AD8EE086CBFBD27C1C482B",
+      "ExactMatch": true,
+      "EvidenceFile": "artifacts/c3-upper-r6-frozen-source-manifest.json",
+      "EvidenceFileSHA256": "84B36B9A4E62BCE98206320EA4D3CBE26CCBCBF590FFA505486CF932E568776B",
+      "IndependentReview": "docs/verification/2026-09-29-c3-upper-r6-meta-correction-luna-review.md",
+      "ReviewStatus": "R6 제한 정적 검수 P0/P1=0. 상위 요청이 실행 검증 진행 중으로 지정; 최종 실행/수용 결과는 조회하지 않음",
+      "HistoricalCurrent": "현재 R6 정적 동결; 과거 통과·R5 실행 실패는 별도 역사",
+      "CurrentC3WholeAcceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffEditModeTests.cs",
+      "CurrentSHA256": "57E7EFB17307BFB156D338F7BDCE25104E3192748FD6C159F7BB7B4A7483DAD6",
+      "ManifestSHA256": "57E7EFB17307BFB156D338F7BDCE25104E3192748FD6C159F7BB7B4A7483DAD6",
+      "ExactMatch": true,
+      "EvidenceFile": "artifacts/c3-upper-r6-frozen-source-manifest.json",
+      "EvidenceFileSHA256": "84B36B9A4E62BCE98206320EA4D3CBE26CCBCBF590FFA505486CF932E568776B",
+      "IndependentReview": "docs/verification/2026-09-29-c3-upper-r6-meta-correction-luna-review.md",
+      "ReviewStatus": "R6 제한 정적 검수 P0/P1=0. 상위 요청이 실행 검증 진행 중으로 지정; 최종 실행/수용 결과는 조회하지 않음",
+      "HistoricalCurrent": "현재 R6 정적 동결; 과거 통과·R5 실행 실패는 별도 역사",
+      "CurrentC3WholeAcceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/NewGameConfirmationOwnerV1Tests.cs",
+      "CurrentSHA256": "647BEB1256A18EA90A3F73BB3D81B3219A248EBCCE8A7DBB9EA26D176CCB897A",
+      "ManifestSHA256": "647BEB1256A18EA90A3F73BB3D81B3219A248EBCCE8A7DBB9EA26D176CCB897A",
+      "ExactMatch": true,
+      "EvidenceFile": "artifacts/c3-upper-r6-frozen-source-manifest.json",
+      "EvidenceFileSHA256": "84B36B9A4E62BCE98206320EA4D3CBE26CCBCBF590FFA505486CF932E568776B",
+      "IndependentReview": "docs/verification/2026-09-29-c3-upper-r6-meta-correction-luna-review.md",
+      "ReviewStatus": "R6 제한 정적 검수 P0/P1=0. 상위 요청이 실행 검증 진행 중으로 지정; 최종 실행/수용 결과는 조회하지 않음",
+      "HistoricalCurrent": "현재 R6 정적 동결; 과거 통과·R5 실행 실패는 별도 역사",
+      "CurrentC3WholeAcceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/NewGameConfirmationOwnerV1Tests.cs.meta",
+      "CurrentSHA256": "AC62F31C59BC1FA79BC0999BFCE6D6F7965AE6C3F2E2061DE8B96587A2C6B611",
+      "ManifestSHA256": "AC62F31C59BC1FA79BC0999BFCE6D6F7965AE6C3F2E2061DE8B96587A2C6B611",
+      "ExactMatch": true,
+      "EvidenceFile": "artifacts/c3-upper-r6-frozen-source-manifest.json",
+      "EvidenceFileSHA256": "84B36B9A4E62BCE98206320EA4D3CBE26CCBCBF590FFA505486CF932E568776B",
+      "IndependentReview": "docs/verification/2026-09-29-c3-upper-r6-meta-correction-luna-review.md",
+      "ReviewStatus": "R6 제한 정적 검수 P0/P1=0. 상위 요청이 실행 검증 진행 중으로 지정; 최종 실행/수용 결과는 조회하지 않음",
+      "HistoricalCurrent": "현재 R6 정적 동결; 과거 통과·R5 실행 실패는 별도 역사",
+      "CurrentC3WholeAcceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffC3AuditSuccessorTests.cs",
+      "CurrentSHA256": "1B0F8D0919770CD1FBD06F908EC23E370A18E911EC5AAC09938FAF0BFDA174E6",
+      "ManifestSHA256": "1B0F8D0919770CD1FBD06F908EC23E370A18E911EC5AAC09938FAF0BFDA174E6",
+      "ExactMatch": true,
+      "EvidenceFile": "artifacts/c3-upper-r6-frozen-source-manifest.json",
+      "EvidenceFileSHA256": "84B36B9A4E62BCE98206320EA4D3CBE26CCBCBF590FFA505486CF932E568776B",
+      "IndependentReview": "docs/verification/2026-09-29-c3-upper-r6-meta-correction-luna-review.md",
+      "ReviewStatus": "R6 제한 정적 검수 P0/P1=0. 상위 요청이 실행 검증 진행 중으로 지정; 최종 실행/수용 결과는 조회하지 않음",
+      "HistoricalCurrent": "현재 R6 정적 동결; 과거 통과·R5 실행 실패는 별도 역사",
+      "CurrentC3WholeAcceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffC3AuditSuccessorTests.cs.meta",
+      "CurrentSHA256": "F1FFFA239E271C037AC818FF4C03B698DC3B07B561F8024887F4E80677A2FEFB",
+      "ManifestSHA256": "F1FFFA239E271C037AC818FF4C03B698DC3B07B561F8024887F4E80677A2FEFB",
+      "ExactMatch": true,
+      "EvidenceFile": "artifacts/c3-upper-r6-frozen-source-manifest.json",
+      "EvidenceFileSHA256": "84B36B9A4E62BCE98206320EA4D3CBE26CCBCBF590FFA505486CF932E568776B",
+      "IndependentReview": "docs/verification/2026-09-29-c3-upper-r6-meta-correction-luna-review.md",
+      "ReviewStatus": "R6 제한 정적 검수 P0/P1=0. 상위 요청이 실행 검증 진행 중으로 지정; 최종 실행/수용 결과는 조회하지 않음",
+      "HistoricalCurrent": "현재 R6 정적 동결; 과거 통과·R5 실행 실패는 별도 역사",
+      "CurrentC3WholeAcceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/NewGameConfirmationOwnerPlayModeTests.cs",
+      "CurrentSHA256": "2D3403E910E0DBA349854A194F7140DE65759190DF53920F2A989C6D0D07127C",
+      "ManifestSHA256": "2D3403E910E0DBA349854A194F7140DE65759190DF53920F2A989C6D0D07127C",
+      "ExactMatch": true,
+      "EvidenceFile": "artifacts/c3-upper-r6-frozen-source-manifest.json",
+      "EvidenceFileSHA256": "84B36B9A4E62BCE98206320EA4D3CBE26CCBCBF590FFA505486CF932E568776B",
+      "IndependentReview": "docs/verification/2026-09-29-c3-upper-r6-meta-correction-luna-review.md",
+      "ReviewStatus": "R6 제한 정적 검수 P0/P1=0. 상위 요청이 실행 검증 진행 중으로 지정; 최종 실행/수용 결과는 조회하지 않음",
+      "HistoricalCurrent": "현재 R6 정적 동결; 과거 통과·R5 실행 실패는 별도 역사",
+      "CurrentC3WholeAcceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/NewGameConfirmationOwnerPlayModeTests.cs.meta",
+      "CurrentSHA256": "1F20AD5E096121FE7D60FF605474376F4F7BF4786DED820C455916B584A40D6A",
+      "ManifestSHA256": "1F20AD5E096121FE7D60FF605474376F4F7BF4786DED820C455916B584A40D6A",
+      "ExactMatch": true,
+      "EvidenceFile": "artifacts/c3-upper-r6-frozen-source-manifest.json",
+      "EvidenceFileSHA256": "84B36B9A4E62BCE98206320EA4D3CBE26CCBCBF590FFA505486CF932E568776B",
+      "IndependentReview": "docs/verification/2026-09-29-c3-upper-r6-meta-correction-luna-review.md",
+      "ReviewStatus": "R6 제한 정적 검수 P0/P1=0. 상위 요청이 실행 검증 진행 중으로 지정; 최종 실행/수용 결과는 조회하지 않음",
+      "HistoricalCurrent": "현재 R6 정적 동결; 과거 통과·R5 실행 실패는 별도 역사",
+      "CurrentC3WholeAcceptance": false,
+      "PublicationApproved": false
+    }
+  ],
+  "EvidenceChainMismatch": [
+    {
+      "ReferencedManifest": "artifacts/unity-results/m5d7qa-20260923/final-manifest.json",
+      "CurrentManifestSHA256": "B27EE836EF92AB1205D93B449331CD24A4B597383ED4C3A36D60FAC7EC02DABF",
+      "HistoricalPinnedManifestSHA256": "DEB56250A07CC469B71325D38C9B1E9232F68099ED7190924007F6C6E3492B19",
+      "HistoricalEvidenceFile": "docs/verification/2026-09-27-vd09-m5d7q-a-final-luna-postreview.md",
+      "HistoricalEvidenceFileSHA256": "B73F2AA693244B141244EE2F34EB12780DB059674BE057A07F5ED191019F3E67",
+      "HistoricalEvidenceLine": 15,
+      "Disposition": "현재 원장의 파일 지문표를 과거 수용으로 자동 연결하지 않음. 역사/현재 자료는 수정하지 않았고 현재 시험 실패나 코드 결함 판정으로 확대하지 않음"
+    }
+  ],
+  "RemainingGaps": [
+    {
+      "Path": ".gitattributes",
+      "CurrentSHA256": "B9F5FEFF7436951FB7240538F993E5F61D091480D2069D8E0AC9D4D5B2970FFB",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "artifacts/c2-r36-selection-preflight.json",
+      "CurrentSHA256": "B2CF18E155D98BA7ECAC1E8CABE5EAF90CF6C48CC0419D1ECC800758220120E3",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "artifacts/c3-build-focused-selection.ps1",
+      "CurrentSHA256": "80208736A98B7517CA5776B95CA9C25A79D62F1C9B9C04284A8A16634D220F46",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "artifacts/c3-build-required-decision-expected-rows.ps1",
+      "CurrentSHA256": "6958914E48E3D9A1BF7250B8E9F519C5DDFAF36DB3004D1A6A98F79A127F4206",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "artifacts/c3-r5-focused-edit-selection.json",
+      "CurrentSHA256": "FCC48ACECEB152AFFC20481F43CDFD609E7F03B1B9D31363735D0E31B760896A",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "artifacts/c3-r5-focused-play-selection.json",
+      "CurrentSHA256": "BD6526ADFFF8F1C7E5F3BD45EEE8FF0A22339962A9EB658013317382CC5E3F8D",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "artifacts/c3-required-decision-expected-rows.json",
+      "CurrentSHA256": "FB4745C4296BD17716328592106171054D1F807E7BEF3FFB663BCF7DB39A17F1",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "artifacts/c3l-edit-regression-selection.json",
+      "CurrentSHA256": "FBD1B5A6FE6AD6E96CA5CDAD4103C9DFA129B3F5F622859E11D0B43FD4D649F8",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "artifacts/c3l-focused-selection.json",
+      "CurrentSHA256": "DA7B37D16740D2F7B276D222AA66271002FEAC50C19FC05E1CC8F1D6EC49734A",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "artifacts/c3l-play-regression-selection.json",
+      "CurrentSHA256": "FFFF443666F58B8518A6E89C206AF8BF23A0EF559888AAC8D528E3111591FB9E",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "artifacts/c3l-regression-selection.ps1",
+      "CurrentSHA256": "E93C7D94586CDCA6B52053344E647B0AAAC65ED96810E3A8D4AE13EE98A83FCC",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker.meta",
+      "CurrentSHA256": "75B32963C5AF25FAE39F1AFC381CA265D79063E8D77BE10F87EC1767341806AD",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor.meta",
+      "CurrentSHA256": "5FD1A34FBD6386E2FF4B2B6203FCA97FE2CB9FCF0B613F26E90BCCB9F77A2A46",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/AcadeGameMaker.Hub.Authoring.Editor.asmdef",
+      "CurrentSHA256": "5F66B114B04A8B12D6E7A852D6297C6D01EEB695FC942300C3CB412F9E754E4C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/AcadeGameMaker.Hub.Authoring.Editor.asmdef.meta",
+      "CurrentSHA256": "783010E056140DC9E9D4717AF5E6F873C02CFD9563D1BDB554C300E3873BB50D",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/AssemblyInfo.cs.meta",
+      "CurrentSHA256": "DE2EDAC181EE011D1CC6A358557D486B5464480A4F6EB175CDD75D05E023D6EB",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubPresentationAuthoringBuilder.cs.meta",
+      "CurrentSHA256": "9EFA53F583E154B7A80374BEEE8F01D3E6813707CDAE7AAEF5DB7D07EA5536D8",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubPresentationAuthoringValidator.cs.meta",
+      "CurrentSHA256": "6E8621141287A53293E71A1A9CC30704072C4300662165CE0979DEE020B7B9D2",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubPresentationCaptureGenerator.cs",
+      "CurrentSHA256": "8DB852A5D6CAF1DA4883ED3D27DEB909CA5B877DA4D6BA10246E9CAE934E0C90",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubPresentationCaptureGenerator.cs.meta",
+      "CurrentSHA256": "8458536C75C8E23C1712E1D84ABE0CA31B3AF0A20FBF6F5A0762D122F9941126",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubRuntimeAuthoringBuilder.cs.meta",
+      "CurrentSHA256": "6D56D60D5AE4DED0B3517CC07E306239A9FF7A9715C64BF1CDD9FFFB002D3D2A",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubRuntimeAuthoringValidator.cs.meta",
+      "CurrentSHA256": "ACD3FDD879118AD90996A15AC84E721C85447AAC4C09722CD8BE02434A775E0C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime.meta",
+      "CurrentSHA256": "66E092DEE18172037FD5AC5BF438413BD74267E8CBD0B5FD3026721BBF23F2F8",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera.meta",
+      "CurrentSHA256": "F908B363CB91E0616761A8883571BC23082415C23A64826AB2F077A2C318323B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/AcadeGameMaker.Camera.asmdef",
+      "CurrentSHA256": "90BAC467E161F6CDC98BEF5838DA3BBCA206D9CF2970D7C1E99A22E005DEC2DF",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/AcadeGameMaker.Camera.asmdef.meta",
+      "CurrentSHA256": "FF88D16ED9A46BB97EE1C92A129DC1280F632CAE15D433141054FB31661652A7",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/AssemblyInfo.cs",
+      "CurrentSHA256": "5ACD32BEAAF8DC51123C8AC4F2143457A04EE77C0092B84E1BD83F0DC296D42E",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/AssemblyInfo.cs.meta",
+      "CurrentSHA256": "3834097A6186185372C1D254C98B023A5F4C77DA4866481BCFE1D8557243A93B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/CameraFollowContracts.cs",
+      "CurrentSHA256": "A35B424CC6F74F8C125064144B9AC429879F26F76ADF7FE72A2990294673466C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/CameraFollowContracts.cs.meta",
+      "CurrentSHA256": "337B8A7265410DFCD561A7F5D636774D35D5D82321F5704698ECA575229A9E14",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/SimulationCameraSession.cs",
+      "CurrentSHA256": "9EE6FD21AB23297EC8423CC96CD1F4C42B97BD992F87866B1F45D810974D9416",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/SimulationCameraSession.cs.meta",
+      "CurrentSHA256": "CCE0ACF7C70A59A7F753D63FCCB80ACBBBCACE6F73895B226D945C51CE6FD817",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity.meta",
+      "CurrentSHA256": "CFC69E4209FBA4AFBCEE4C4B7131ED4A5F1D1A3F6244EC9E923A60F38EE84FE9",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity/AcadeGameMaker.Camera.Unity.asmdef",
+      "CurrentSHA256": "25B56C8058AC14848C89E4C4CDBF26AACA5E04F7A21EA78DB641CD4E6A31EF2C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity/AcadeGameMaker.Camera.Unity.asmdef.meta",
+      "CurrentSHA256": "8D093C72A8B5BC2D4F2B539ED3D3CE04F17A4976E18DA1D57A3B860AE32B5CEF",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity/AssemblyInfo.cs",
+      "CurrentSHA256": "08726A61BBD872451F2D25F28E296064324D57916B11A3F2FA73E7D31218DB84",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity/AssemblyInfo.cs.meta",
+      "CurrentSHA256": "E89D448E9C1E56DD53481BAAF99110DC6EB0B1D828A25AC85FCE6A6FCA3E678F",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity/SimulationCameraDriver.cs",
+      "CurrentSHA256": "1652EF5503C3930FCF3C02238C81885A3E6FC2D81F7A593922BFC2019914B4FA",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity/SimulationCameraDriver.cs.meta",
+      "CurrentSHA256": "127469D0A5110F11467D83BE93ED6021C6C1E5248293FDC7E8FCB665EA9F4A78",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity/SimulationCameraDriverDiagnostic.cs",
+      "CurrentSHA256": "1B1376E492B1BA8E343E134BD966479CE9CFE3112049F84A6A7A701336C5F714",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity/SimulationCameraDriverDiagnostic.cs.meta",
+      "CurrentSHA256": "BD85C9A15ACF0F653C3E56710DFF4036BD6C7113111CA113F86AB9C344720EDC",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat.meta",
+      "CurrentSHA256": "07B71F3EDF5E3ED3F968AE05C117A44EE9ACA4E0F1C5BC73A37BA6E416832944",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/AcadeGameMaker.Combat.asmdef",
+      "CurrentSHA256": "316CEC416AC7C4CDB9862DBA87F522EE705EDF8D621E07D433BE8EDA380E9B9E",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/AcadeGameMaker.Combat.asmdef.meta",
+      "CurrentSHA256": "A379D0C1506652072799DADA5CA697ED60C86D4F11D3E572AC5335B0E69271C3",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/AssemblyInfo.cs",
+      "CurrentSHA256": "9DE595ED5DEC0E4F658211CA3237519A11B9D161DE372410FF190B5BEEEAB4C0",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/AssemblyInfo.cs.meta",
+      "CurrentSHA256": "4EE6ECA93DD34492CC157B823A98D6D6DC5B6222007FF5B3A398D996340203AB",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/BasicAttackSession.cs",
+      "CurrentSHA256": "C49CE2400225456EAF1858C9AF146E86C7708BC3EADB8D5B35CBF4FF25F2D43F",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/BasicAttackSession.cs.meta",
+      "CurrentSHA256": "92E8C9463B226019C803E48079C3F86F4AD1A41C9D44DF370C778BDEF2C5A544",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/CombatSession.cs",
+      "CurrentSHA256": "916682D9FFDBCE3083653495CBBA569C2DE290279AC4C6FCFAA46B582A6CB46A",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/CombatSession.cs.meta",
+      "CurrentSHA256": "4CF5BCCCDEDA2336E38D02063BD0B6F6FAFC95AF803E99AF6BB291E0945E03A2",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/DamageContracts.cs",
+      "CurrentSHA256": "A462093EC0B919ECCCB8CE55CD9E56B951E3CD4B213C8A48F30AA1A2B04E1BF0",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/DamageContracts.cs.meta",
+      "CurrentSHA256": "E900218A1A9AE7BA60BBF995E02E06B0807F6B755E7D709980E12FFCD9AAE777",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/OrdanBossSession.cs",
+      "CurrentSHA256": "2EAE623B2B47EE5D4D96CC77B71DB6D2BA0E043815420A11C5B5C728BBF897B1",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/OrdanBossSession.cs.meta",
+      "CurrentSHA256": "A587336E9B9A006B0CF439F94805571FCF93C7E044E0843517A7916EB1B7B136",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyBehaviorSession.cs",
+      "CurrentSHA256": "ABF1CD7FD29E26BD7F78F7786114695A37B929017A6C8F47006C6F3B85530FBF",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyBehaviorSession.cs.meta",
+      "CurrentSHA256": "DB73969EEC60E6B7133A1F1A134EA681DDA52FA6DC0619CB930B48AC490F1645",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyEncounterLifecycleSession.cs",
+      "CurrentSHA256": "D2FFCFC1174CDB5E75E7A12A674175A0FFC1190345144D9168106A0455210095",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyEncounterLifecycleSession.cs.meta",
+      "CurrentSHA256": "60620718E9B359EC992D3CD45370AF65E360B445084F15EB73C38AA0B06EB6DD",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyLocomotionSession.cs",
+      "CurrentSHA256": "ED6818A15EB3197F473119FAA239FFD4682DCA46DB6E1884C64A7F978B56FC4D",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyLocomotionSession.cs.meta",
+      "CurrentSHA256": "C5F0DC63AA0F6375517ED9BD4F795271582970DD9AAB00017EDE7C6D16DD7E47",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyReactionSession.cs",
+      "CurrentSHA256": "8E1DC79A4D4DD955F0EE413A6680FDBC8406006B239C16C26A3CD11BB5362F07",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyReactionSession.cs.meta",
+      "CurrentSHA256": "6D8FA59950E7DEB02BC0FC5EA47D4BB4FBCEB9075D6B87D6D184616CD2027EDF",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyThreatSession.cs",
+      "CurrentSHA256": "3CCDF32A12F32903FB745E4A3342ACFC5EE58AD8A1D30117DF91C133E3FD3A68",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyThreatSession.cs.meta",
+      "CurrentSHA256": "FF73F3CB6336589547270AC101517FE8B33C62A1D8E890EE4E0BC8AA317526FE",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity.meta",
+      "CurrentSHA256": "AD63C01D2C1EDB4057C80C2A438D1C2AA910CB1C520FD3E102B143493EB2FF47",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/AcadeGameMaker.Combat.Unity.asmdef",
+      "CurrentSHA256": "A748CE7DA46FF98EF63E8CF593C01BA78B2389F551C3E8876A26791EF81574FB",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/AcadeGameMaker.Combat.Unity.asmdef.meta",
+      "CurrentSHA256": "9316D253823B2F53483695B081DF6FFA1C87495556BE1480D2C4AD978DD70336",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/AssemblyInfo.cs",
+      "CurrentSHA256": "5EBBF05888EBDAFA263E0CED95C40086D9A542C7B76F0C13D95799B76C69D5C1",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/AssemblyInfo.cs.meta",
+      "CurrentSHA256": "35DD5BA8E01055BC508341731B2AF464D600FCE50A16BB16D37070602B13DAC1",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/CombatObservationBuilder.cs",
+      "CurrentSHA256": "DF530E6E311986B12A89EA440BC8FCE6707409FA1234E590BD13663182013831",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/CombatObservationBuilder.cs.meta",
+      "CurrentSHA256": "683F69932DD20EF65C891E1004D8A66A76EB0A2CF5F1BB6301224F4A9A6AC526",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/CombatSimulationDriver.cs",
+      "CurrentSHA256": "51260ED20D8EFAA658B4303CFAE4832B6CA89CC349915D797C83495BEEA8155A",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/CombatSimulationDriver.cs.meta",
+      "CurrentSHA256": "82FE5B528FD98765032139FE05039BF397B48852DE5209AFDF622F8BBBB6DC8E",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/CombatTarget.cs",
+      "CurrentSHA256": "E713E8CD8710A8F501D1890EF2B497819E1F42ED5926E749CC20158163A4CBDF",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/CombatTarget.cs.meta",
+      "CurrentSHA256": "68891F4EECE927E02C621F9BBFB9CEBCB3D3DF6D07B2197C28BE98EC9C77BF9C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/CombatTargetRegistry.cs",
+      "CurrentSHA256": "6A5058151DC697446AB632A7E97EB058424C8715DF204BE348060A53A49C0424",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/CombatTargetRegistry.cs.meta",
+      "CurrentSHA256": "A784EF28041900D25AA97DC48F2ABDB6C459AEBF875D7A0C751F02ADA61E331C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossAuditTransferModifierSink.cs",
+      "CurrentSHA256": "37368BC01088662B2A325F16BF023F4AD71C06BB6A066EC3C56500E368A0468D",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossAuditTransferModifierSink.cs.meta",
+      "CurrentSHA256": "3E9A839A73AA2D0B481599D8FB3BFF300E0CB73B8F7E5522B9B7F8BD5179C89C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossBalanceAuditPullProducer.cs",
+      "CurrentSHA256": "78040974C11CCD8F971D175916B506DCCE976364FE0454BBFD33DD16665C542C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossBalanceAuditPullProducer.cs.meta",
+      "CurrentSHA256": "07CED79BC08384CBFF4470DCA32F6BA6D03A9C91133811A7A97BC263BD397E05",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossCombatSimulationDriver.cs",
+      "CurrentSHA256": "89A338A71618A7702D9B604AF53D51CC5215AA95ECB074529F4725407CB04258",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossCombatSimulationDriver.cs.meta",
+      "CurrentSHA256": "B0FEE2E8AF99C79F42463616A16706C1B0D28555187E6179B635BAF6BCF664B3",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossEncounterHandoffAdapter.cs",
+      "CurrentSHA256": "8F57C7123031629EB30FBBA0D16261ECF213D28B267358BDCCE1E617642A9761",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossEncounterHandoffAdapter.cs.meta",
+      "CurrentSHA256": "E36BF17FE8C40E580ADA48E67FDC2504F8FED53A1F2C36251F831896457243AA",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossHostileDamageProducer.cs",
+      "CurrentSHA256": "F92A3D7C7B8DF4281036AFE7736B993E830DDFA9F528E289F50E6D22B2CA4C58",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossHostileDamageProducer.cs.meta",
+      "CurrentSHA256": "44846EF5211B8C8803F9659393FB6FF554CB8F41E2234B356E42F174E2DE8178",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossPayloadTransferModifierSink.cs",
+      "CurrentSHA256": "A6239D6F0BC487241E321C70CB516FF6847BB2F5B79DF25B73CC1D8D6CE8A84A",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossPayloadTransferModifierSink.cs.meta",
+      "CurrentSHA256": "00CE4132ED982DFA6C30C1364203B7359293998796A3EB9F4059CA15CC505C24",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossSimulationDriver.cs",
+      "CurrentSHA256": "405D8725C95A94B6758F463E4821AA8FE2ED88C47B15FB617B6EFF6D402C4A6D",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossSimulationDriver.cs.meta",
+      "CurrentSHA256": "88203007EEE34A141301ACD9B4D18AE467FAFEB45023172167D6C813F268820B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossTerminalTeardown.cs",
+      "CurrentSHA256": "D737A32490403AAEC4332DC90808ED3F0D4B49A0FA4BD03E4D332CB8F6D23B1E",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossTerminalTeardown.cs.meta",
+      "CurrentSHA256": "B1EC01FBFC52A2F96012EA4AECD6946312BF7EC26F8B27966CB554D1BE8F33D8",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossTransferExposureScheduler.cs",
+      "CurrentSHA256": "C00D1488CB0A8BDC21055ACDE1DE2EDA5D6C3F6D612A152DA83E3C2E5BE0BE19",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossTransferExposureScheduler.cs.meta",
+      "CurrentSHA256": "055028212450473974A346EEE9A2AD4499BF63F094FACF1BE4F4041BEEABDD8B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyBehaviorSimulationDriver.cs",
+      "CurrentSHA256": "EF64704686B6429848B7A3FBF684CA714E06F58CADDADDBC338AB01B22C31B69",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyBehaviorSimulationDriver.cs.meta",
+      "CurrentSHA256": "658F31D5285C5803A1FE9C52962C53E9A520C96D618D1CD5A93B3412EED8DAF7",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyEncounterHandoffAdapter.cs",
+      "CurrentSHA256": "0B62C1C6FBA06FD84213235DFF02B40B2831EAF8A774C4D0170E24860581867D",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyEncounterHandoffAdapter.cs.meta",
+      "CurrentSHA256": "A0D38CD66865A9F08E76FB07C005EB798B313292A26ED5B81909687C5DF2727D",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyLocomotionSimulationDriver.cs",
+      "CurrentSHA256": "CE1D80C515B9E00A197DDC818E9F3B96679F170363ABEA981D0F5A94C556737F",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyLocomotionSimulationDriver.cs.meta",
+      "CurrentSHA256": "4C544165FA9BFBC951C24095587C109E69899F9A61E0651644E00259A62CD91C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyReactionSimulationDriver.cs",
+      "CurrentSHA256": "377A3B9A08DDCFEAE0C16F8A3F992D8F7904A8D58287EB463AF085889B088E78",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyReactionSimulationDriver.cs.meta",
+      "CurrentSHA256": "569D5C3231C1CBBECCEA5BBDC91EB1E13C75F685B505AF8129019B9FD87BFCF1",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyThreatDelivery.cs",
+      "CurrentSHA256": "2535B8FE8C8ABEF6BF09FC9CCF2BE8DE0C9A422956EC4D3C76B8C5F458531BE9",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyThreatDelivery.cs.meta",
+      "CurrentSHA256": "00511C3947E8E351A409318A83DE9F8614AC28F1B317900BF8D11D93BE70367E",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyThreatSimulationDriver.cs",
+      "CurrentSHA256": "3B8DD00DC2430FCC90C40B04EF603C139C44636A17CAC9EE2909FC6A90BF8962",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyThreatSimulationDriver.cs.meta",
+      "CurrentSHA256": "E98BCB72A444734A0A00DA5192B0A3F03623A2A06EC46B4F3C25329B4439C485",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core.meta",
+      "CurrentSHA256": "0895CE9BD39A41E6E46C6079181806C4C5C96FE4FB576BE2E81882EF9A84E649",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/AcadeGameMaker.Core.asmdef",
+      "CurrentSHA256": "EBFE068E8FEA1E825318E4965F16A9F5A09AF3D1D8DE4E271C676237B58A48CF",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/AcadeGameMaker.Core.asmdef.meta",
+      "CurrentSHA256": "F63188224860A7FC36B44FE1C5F1E7157388BA7261D1950BE917112DFF12E4B2",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/AimContracts.cs",
+      "CurrentSHA256": "073EA586D10DD8EB7713966034BB42B39503B39210ABF15FFDB9EB73BE5B1353",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/AimContracts.cs.meta",
+      "CurrentSHA256": "9CFCC9DC088593D09ECDC246C8A113EF78AC2F9895FF885DA590B4F501F8CD4C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/AssemblyInfo.cs",
+      "CurrentSHA256": "D6D080D35AE5E1F5984368A973DB4E95A27C415F4831C703EF63B9CCB8B98CC0",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/AssemblyInfo.cs.meta",
+      "CurrentSHA256": "0C3B563D20169BCB81F5FC6A3CC95718BDD63A585F69D59F1224FD66EFD438C0",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/BasicAttackContracts.cs",
+      "CurrentSHA256": "CB5FA09CB890CA306CFC8D149A9857D97AC57E580913CC225D5B9123D286CE67",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/BasicAttackContracts.cs.meta",
+      "CurrentSHA256": "8EA2722FC2D8F4D9253C47187D0DAD7E3A5D13C1E69438C7FA9FBAA36C6BAFCD",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/InputFrameCommitContracts.cs",
+      "CurrentSHA256": "07C2F842AB8C5BF7894BDDC33BE5026CF5A78A52C70E34C244D90A3E8D67C1C6",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/InputFrameCommitContracts.cs.meta",
+      "CurrentSHA256": "3D6D82B5485C62A5F15A1DABC803985B194A1D4DA6FB5EE6CF0201FD7E366CAE",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/SimulationTick.cs",
+      "CurrentSHA256": "779514FEEB11BA8A3E3272AFA814ABDCAA4290581BED81C23E8CFA8D219DBABB",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/SimulationTick.cs.meta",
+      "CurrentSHA256": "3B025A8CB30D821812D376B04BF215B7C625FDD819EFF78B314A303798DF583F",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation.meta",
+      "CurrentSHA256": "0180BAEA450E15D9D72C53BE5DCF998810DEE434B0753566A8DE2A597B4511B1",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity.meta",
+      "CurrentSHA256": "00BA1FB844976025875A25297D9C6436C99C3FB4D90C431F3C55380DB91DD435",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/AcadeGameMaker.Hub.Presentation.Unity.asmdef",
+      "CurrentSHA256": "97C953B9F7B60F8C6E68AE6DC3AD1E11464E9DAE8D62C73B015012FF3C3C82C4",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/AcadeGameMaker.Hub.Presentation.Unity.asmdef.meta",
+      "CurrentSHA256": "54588CD2E7D108AB6887FB6A9FBAC1749B9D9902994542DDC0B16775BE24E89F",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/AssemblyInfo.cs",
+      "CurrentSHA256": "CE7A4C92AB87A45F17B4606837B9F2BBD109A8C9297F49446EB492199BAB832B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/AssemblyInfo.cs.meta",
+      "CurrentSHA256": "2A762316679178F07F833F2F443C383FF0C88CA0526940FF002DDE0351277569",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuButtonViewV1.cs",
+      "CurrentSHA256": "95E52BBE8B37744F3D13F21082D1CDCD392FAFB28CFDFA49DD29509E478A15EE",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuButtonViewV1.cs.meta",
+      "CurrentSHA256": "22163255EF978AB8F01C8B65D609DDA3B8267D0E67FFF8CD983DC5CA425EBDA9",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuCopyV1.cs",
+      "CurrentSHA256": "147241E3827A613DA92951DA5625DF4BD75365A6589B6C551D5D4ACCEB262B8B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuCopyV1.cs.meta",
+      "CurrentSHA256": "960761E652CE2815B0D4324B505D3116A9E2B2079C65EC7C634C1C096F995F05",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuIntentHandoffOwnerV1.cs",
+      "CurrentSHA256": "F47C61A043DAF4695CC53E41C6BE9BB67CA147C722F7B830459AA6304B45B3B5",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuIntentHandoffOwnerV1.cs.meta",
+      "CurrentSHA256": "0897CFE731CBA96E67FAD30F3184AFC974B32B50E05C35DAA089B6E1D9F40CE9",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuPresenterV1.cs",
+      "CurrentSHA256": "393B325BA5B8F6D79CA983F1A91098215E7A6993DE37E9F5D98BA775760E4900",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuPresenterV1.cs.meta",
+      "CurrentSHA256": "608106A9EAD57D137E6C257CBAEF78B2D7686884C05F17647829ECD76A5772F9",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubSafeFrameScalerV1.cs",
+      "CurrentSHA256": "ED25DD25FAE9A0D4E0F1775DB36731C209C76EED728E0C5BB5D45F21125D85BE",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubSafeFrameScalerV1.cs.meta",
+      "CurrentSHA256": "8277907E5EDA669A7BCD4F62E110EC639BE43972455EA38FF0E339687D724BCE",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/NewGameConfirmationOwnerV1.cs",
+      "CurrentSHA256": "CAEBD7B5DA99AF94A25C5C300789AA48CA87908CA6D8894B99AE49C2391D7043",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/NewGameConfirmationOwnerV1.cs.meta",
+      "CurrentSHA256": "05F240AFB899893F47C94798D05D65BD97F5982120AD8EE086CBFBD27C1C482B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input.meta",
+      "CurrentSHA256": "74780C51E57DE7C4C1F85200C0298FC75B752CD79EB1546928FBE75394D78301",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/AcadeGameMaker.Input.asmdef",
+      "CurrentSHA256": "F95FCECF60D84520CC44DAB42CBEB10E3DE860FE85F5927A126372092F92C77B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/AcadeGameMaker.Input.asmdef.meta",
+      "CurrentSHA256": "391C4284F16561004E38B2A3FF17FA54D7BD9499E7743D7B295B2D67E175E795",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/GameInputActions.cs",
+      "CurrentSHA256": "730BE8CAD941CD4567BBEA9B844FE33673FEA49842E28CB53C2F088D3F528C89",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/GameInputActions.cs.meta",
+      "CurrentSHA256": "251551B23E761CE8B97102BCE4098ED657292F5A1EA4A874C34EF4BC8461F796",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity.meta",
+      "CurrentSHA256": "12E43721A6BE42A9B440B0DFD158004803D620404BA9CF1A989ECAAB8CCBC593",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/AcadeGameMaker.Input.Unity.asmdef",
+      "CurrentSHA256": "CD3E47DD94BCCB9E537CA7AF4C6029FC8327EA0154C90EC7B6FD305218FE4C0E",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/AcadeGameMaker.Input.Unity.asmdef.meta",
+      "CurrentSHA256": "A623B4B5C8EB6571C9221AF27D0C00A6B4D9CCEA082C4EF361D9CAD54E710471",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/AssemblyInfo.cs",
+      "CurrentSHA256": "4F316D35CBF07F0D745F3B26C536E75762327499A1177CBE09E1D2039D9BBC5B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/AssemblyInfo.cs.meta",
+      "CurrentSHA256": "3D17A26759E6A930A6DC3FD6C20127F191BDC2F32A12C41E02975A32ECE23EB7",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/DesktopProfileLaunchAdapterV1.cs.meta",
+      "CurrentSHA256": "C828E535A3480250033DEBBAAF42EFEB7F47A11F0BF782A98346E47C7EF3099C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/HubEntryHandoffLatchV1.cs.meta",
+      "CurrentSHA256": "ED26E027C7129E2D53F7D588841BAA77D20CD7829043CBF703995869018F57FA",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/HubMenuPresentationControllerV1.cs",
+      "CurrentSHA256": "F4E9CD4CEEB704CC26869750EF14FEA4A3402055A1F2D1F51BA40F7333CA60C9",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/HubMenuPresentationControllerV1.cs.meta",
+      "CurrentSHA256": "C8E833DF17030C14ABFD49EE501E6A9B019E5F37046AA38EB188DF6DE5AFF61D",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/InputCameraSnapshotProvider.cs",
+      "CurrentSHA256": "AAB65E46C54EEF6F55A12FC38C96ACEE91CFCE4C50E040DA098C2AA87B505291",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/InputCameraSnapshotProvider.cs.meta",
+      "CurrentSHA256": "9A64C34F725C828C3F896369C9970D2C52E4B56D9C3D53236AC8736537484C4C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/InputRouter.cs",
+      "CurrentSHA256": "66CD817B322565753A3533EA93FFA2BD4E347B24C9A61D5F9C4A1A1169EC54AB",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/InputRouter.cs.meta",
+      "CurrentSHA256": "090FF619085A1A4151A2994439606C25912251653AEAF183348B5B984EE7B53B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/InputRouterDiagnostic.cs.meta",
+      "CurrentSHA256": "ECCAFAB6EBC88DC4469A467DFFBBC6CB8D1739834C0B4FDCF24D6E763B8E1650",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/OrdanBossTerminalTransitionRequester.cs",
+      "CurrentSHA256": "46CF17CAE4046FF9BCA7E06D5AED40666D56D6BF7AEA96380FAEC971DE297D32",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/OrdanBossTerminalTransitionRequester.cs.meta",
+      "CurrentSHA256": "EE1A7139BB4E6E10F248CAE03B325BA4239A50B297A9F1EE7F69AECDDFB45429",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileBindingOverrideApplyAdapterV1.cs",
+      "CurrentSHA256": "92572BB90723C213194D3C9DD221C113BD135FCFD2F5AD091E9B27F4E9A473E1",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileBindingOverrideApplyAdapterV1.cs.meta",
+      "CurrentSHA256": "30658173D410337DBD2FE36D1002D7A4418D056D7AE344CB2B0694D1061287F1",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileLaunchPreparationCoordinatorV1.cs",
+      "CurrentSHA256": "8FA81A8E0082F5E05EAB8200BB28B020F038DAC66BBC33B6026E3A4906E15C00",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileLaunchPreparationCoordinatorV1.cs.meta",
+      "CurrentSHA256": "3775F07A8BD98F84AA0F87F77E446E3079D3B2B4DC884684EAA34E0E9F6159A6",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileNewGameConfirmationV1.cs",
+      "CurrentSHA256": "ABD4B8CC79D0C24F16EB053B98460C68A466B03AABE0B2CFA01C7862BA027CB1",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileNewGameConfirmationV1.cs.meta",
+      "CurrentSHA256": "423EF93762F398A8AF9E179CDD256915AF6596A8E84D9915CB772A5A629471F0",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileResetMemoryCutoverV1.cs",
+      "CurrentSHA256": "60DFD415C0425F88046C47F51142749F230FF39CA7C81AEBA90D4C778993F275",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileResetMemoryCutoverV1.cs.meta",
+      "CurrentSHA256": "EB98BA020FC30072B59BB02FBEEA5B610F9DE2D8E16BA86769EF5EEA4932337C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/UiSemanticFrameV1.cs.meta",
+      "CurrentSHA256": "9CDD3FBE37EB5DD0EC5ABD46A46ACCBB51913D94934284277F598F57E6C8DA86",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement.meta",
+      "CurrentSHA256": "CA83E1D56E6CDC94B7FB447089F1DC71D776DD14629308E1C93984166732F4E6",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/AcadeGameMaker.Movement.asmdef",
+      "CurrentSHA256": "497889F00FEE49C2349482C1747703346FBD5853EF3D528DA83CA35BDC05DF83",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/AcadeGameMaker.Movement.asmdef.meta",
+      "CurrentSHA256": "34629A8A0220FDFB8A25027F35F6238CE7923C17F7CEBF6F976C960B276466A9",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/AssemblyInfo.cs",
+      "CurrentSHA256": "7A300F3726FF5CC989CDACAD930CB9AB5FCD481E440564C7B01A8AA8173BBD36",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/AssemblyInfo.cs.meta",
+      "CurrentSHA256": "95C42126097D540D451474E29726119111EAEF8D9D9A0C9492A5C3C616A0B4A3",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/FixedQ4096.cs",
+      "CurrentSHA256": "BD06E3C202B2030EBCEE4755FEC48091627C2DEDE69D38BA2DC711D14EC73D75",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/FixedQ4096.cs.meta",
+      "CurrentSHA256": "56DD3EFE31F4C53F408E3DC40D315582D8179A2B9E4B3B39E64AF7B3913A0C90",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/MovementCollisionResolution.cs",
+      "CurrentSHA256": "03164D9B903CE6386CC57C62F740A34B2F5714392C922B54D98E8D62E76648B5",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/MovementCollisionResolution.cs.meta",
+      "CurrentSHA256": "B8AD82C2EBD4BC8FAEBC5D4CD21B68135499233EA6E38F67C59A2476C545B92C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/MovementContracts.cs",
+      "CurrentSHA256": "9E3D934A32557E45FC6BD252AFF5CB29D35A00E16289EBCBCE3620CDAA4A0389",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/MovementContracts.cs.meta",
+      "CurrentSHA256": "4B6054B8F3F12E108F567C2E61C77D769C1962A88A8AD88771BE91D327AFB9AD",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/PlayerMovementMotor.cs",
+      "CurrentSHA256": "CA5B366911BBBBED636E2CAE62847225D68173AD38676571C21B7C5AADB66154",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/PlayerMovementMotor.cs.meta",
+      "CurrentSHA256": "BF4DFE8C82A79450843E2C5F1F12D6E19A6589B7D09CC9EEB8C11526F97EDBB8",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/Unity.meta",
+      "CurrentSHA256": "FC4F07256D3F9F1549B7D80F381EED7FD045402ECF053E65C112BF3C34B69099",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/Unity/AcadeGameMaker.Movement.Unity.asmdef",
+      "CurrentSHA256": "4FE36BB891DEC94612CCB8717F69006851BF7983E35AA2137979DF49A5F47131",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/Unity/AcadeGameMaker.Movement.Unity.asmdef.meta",
+      "CurrentSHA256": "27FD62BD872E036985AE9A159F12FAEF1D187B053CB508FBA7DF6FAB7A8F9D80",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/Unity/AssemblyInfo.cs",
+      "CurrentSHA256": "1C0E7370AA05439FA9DF9A0BDDCCA28ED4C5719F4124D969FB2D08783DAD79BB",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/Unity/AssemblyInfo.cs.meta",
+      "CurrentSHA256": "308423C9C4DE4657EB7EF57FD490FCC9CF95216BB6412930774E6780D0CAE200",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/Unity/PlayerMovementController.cs",
+      "CurrentSHA256": "B26395C912F17898C4842517EC7393DB0F4C8C3C69D7477A452AEEC2D0B23930",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/Unity/PlayerMovementController.cs.meta",
+      "CurrentSHA256": "8C11860EB69E37AE15750C83DBF44A53A1EB96D549F375D36D5C8751757B8A97",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile.meta",
+      "CurrentSHA256": "9F6A1E106C4A13F4306526115D3959E1AA93F05DDCE3429C7D2BADB1324E9683",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/AcadeGameMaker.Profile.asmdef",
+      "CurrentSHA256": "D4C8C4E694046072EDE986EE14C2AEB1AAC8A57A761487245BC1764EBA10B99B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/AcadeGameMaker.Profile.asmdef.meta",
+      "CurrentSHA256": "F49083744D8931D6FE88051BDD673BCD6E3B42ABD0FE85CCE018329AFEF40EA1",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/AssemblyInfo.cs",
+      "CurrentSHA256": "9CAC7929FDEEA6CB76AB092CE656D06B78E90E6FB03672290F3D1ACAC07CBF30",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/AssemblyInfo.cs.meta",
+      "CurrentSHA256": "5181E13A417A6C8FBA47C0F19C7C387C7C29BE9C5F951F29F5F830D52330B511",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileAtomicSaveServiceV1.cs",
+      "CurrentSHA256": "80DDBF925C74A8A81DD3B3950F25B3843D76B81F62ED942F3F3585CFB52B3F87",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileBindingOverridesJson.cs",
+      "CurrentSHA256": "91E5EBD41A99ECDCC6B4F1EAE2122E4F23B8F0FD8AF084ADE00A85C5E5D8FD14",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileBindingOverridesJson.cs.meta",
+      "CurrentSHA256": "318BC91572265C141E1A33374DAC609699205438F30E0D12253F377E51F2FE8F",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileInputSnapshot.cs",
+      "CurrentSHA256": "A58B024F5E288739342603AAC77F1A32C6DFAF66CB40853F364F0AD196522644",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileInputSnapshot.cs.meta",
+      "CurrentSHA256": "3091821BA8AC0F1B4D855DF1E1D7F051ADB5893735D8142AA7DC2524E2341F40",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileLaunchObservationAdapterV1.cs",
+      "CurrentSHA256": "1AF63C8C9691C9AB1980B18AAA762A77CCBFEB09FBA0C9F9704874750DF5EF0A",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileLaunchPreservationExecutorV1.cs",
+      "CurrentSHA256": "D2844C5697F58DE47933BE87B82DC8A45496F7DBE7B17ADC3CD01491926FE8FA",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileLaunchPreservationExecutorV1.cs.meta",
+      "CurrentSHA256": "EAC633B1E8822C0DBE30DF2A3B221C6BD602027B22419A58649A4DD6CC95DCCB",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileNewGameResetServiceV1.cs.meta",
+      "CurrentSHA256": "38F6241119E22F94BE0120B48B6D3904EBB00759D6AB05F73CD0C91E26B54F26",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileProgressionSnapshot.cs",
+      "CurrentSHA256": "B3B4BA3912F4D3B25C894C362940EF1518594DAAC6F36E6FC89CD68F5BDB440C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileProgressionSnapshot.cs.meta",
+      "CurrentSHA256": "5F2D060F014F93D8A4FE42AA7D1C148DC8CEEC5A24B7777276119C2144FB2854",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileRecoveryPlannerV1.cs",
+      "CurrentSHA256": "E72FE64417385170391E2B7EE6DC7740E448AC1828DC77BFF7A603DB235F56F8",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileResetDiskTransactionV1.cs.meta",
+      "CurrentSHA256": "52C909A14AF50B13F2CA7E3A55BD8F14A854FD0960AE86BCC61FD28F8D57C356",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileSettingsTutorialSnapshots.cs",
+      "CurrentSHA256": "7018BE226C0FAF41BCF8ABA39FA76AF07EA89E70211D8E81965CB8A31504B938",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileSettingsTutorialSnapshots.cs.meta",
+      "CurrentSHA256": "35AC987D49F9637F51D344CB4C1E380BB6DF7E70892784A073BAFFFA8BE7AFBE",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer.meta",
+      "CurrentSHA256": "EB0057FF1AC21A1934C3F0BB4A6DBDF5E325A430358D05C051A2CC66FB8CB4D5",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/AcadeGameMaker.Transfer.asmdef",
+      "CurrentSHA256": "B205068791C73DF77B7A11D0424424052B7337CD7DA6ABD6DCF42B0526167D1F",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/AcadeGameMaker.Transfer.asmdef.meta",
+      "CurrentSHA256": "0AEB4C4A48A568E6BE66126A8A48787C45D2CEFB8636E1494F653015FD0B0ABB",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/AssemblyInfo.cs",
+      "CurrentSHA256": "D2ED4FC9FFA6CC396508F7FF33F992C49D25A2FFBE71F001A038F79D25D9DC60",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/AssemblyInfo.cs.meta",
+      "CurrentSHA256": "1F4734FC22465269A23DDD0C0B141D6174226CB78F16D913CFE8ABA5AB1CE6AB",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/TransferContracts.cs",
+      "CurrentSHA256": "A6F2AD4BA77F3162EFA943805F73BCB0729B4CE70A73C50176B4C6CE3A0D5E0C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/TransferContracts.cs.meta",
+      "CurrentSHA256": "11D09A8B6D018F7D5BE209AACD7D99A634B0F29B9E1F494F2AD297312D6DB373",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/TransferSelector.cs",
+      "CurrentSHA256": "89AE360A2DD25DAEF8BC0162BB724E216E256DC7C6A38E601AB8CEABB4619DBF",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/TransferSelector.cs.meta",
+      "CurrentSHA256": "A3DA5A43F999F76461305B9129DC23456AC0F6AF06ACA5E326167F9EBC60E380",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/TransferSession.cs",
+      "CurrentSHA256": "921360C17C1010CAA3F240F46E5F76272F87B93E0498F6542B4F4E1442326339",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/TransferSession.cs.meta",
+      "CurrentSHA256": "CDEDC31D3294B173592B9AC7F8D069B35E4E4F15D759888AD01AE017AEC1BD93",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity.meta",
+      "CurrentSHA256": "B26C32F7ED9DE3E5AC93E685682AF75A43FF8634BB19B9FD3389891C72ED06D5",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/AcadeGameMaker.Transfer.Unity.asmdef",
+      "CurrentSHA256": "E253A43989B66CD33334F7610B379932EC702389824598A7CD45556F7268BC84",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/AcadeGameMaker.Transfer.Unity.asmdef.meta",
+      "CurrentSHA256": "C1A69C1C9DF9D73D7C84588B059687D3F750C381C122772BB07529E475676382",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/AssemblyInfo.cs",
+      "CurrentSHA256": "CAAA76CF3E164CC287899756544C8A20540EEC08231CE4DBFD161D33BACD7A44",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/AssemblyInfo.cs.meta",
+      "CurrentSHA256": "93A9E47F027C6EA1EDEB0D43EA570120DAF4C0FDB9B465AB5020E3709F64CC66",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/RegularEnemyTransferModifierSink.cs",
+      "CurrentSHA256": "1BD848275FBFF4B19888220A5B03AB1EF00323C0E1053322425A13BA5CBAC6C0",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/RegularEnemyTransferModifierSink.cs.meta",
+      "CurrentSHA256": "D06D28FEFDB276B109D7D717097B9E08B8B00FCD911010FBCEDD01565C043076",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferFixedMath.cs",
+      "CurrentSHA256": "9C0A33A1E4CAC920825218D3627D3F4D36E113F0B5B68DF54CAA865465958E8A",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferFixedMath.cs.meta",
+      "CurrentSHA256": "EDB1954296451953D887A59C3DB1791C68E77CDEDFC6D23B6B712D21A2087959",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferLineOfSight.cs",
+      "CurrentSHA256": "9A74F5887ADB7F27E2DE57E10A31D678553492D8CD1BB35479368E710825B772",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferLineOfSight.cs.meta",
+      "CurrentSHA256": "7ACB606D037F5AA31316B32E287FD7CC4FDE247A2407A90B985DCEDF50A2B198",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferObservationBuilder.cs",
+      "CurrentSHA256": "8DA52624593FBA523904B03B64A05D495E46C8E7F17785FC0A59C2278CE4B187",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferObservationBuilder.cs.meta",
+      "CurrentSHA256": "73B8228D6E6939134A0DCE55D7047088944ED5821440ABC1627146503FC19772",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferSandboxOwnerSinks.cs",
+      "CurrentSHA256": "EE599FDA0B28FF010E37AD08500733FE07BF786E13CEB763C1D210CEB8BA3266",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferSandboxOwnerSinks.cs.meta",
+      "CurrentSHA256": "764973250CDA4F5925D7767C89DC2D8C5F77D8C5AE285570829C2E782A048558",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferSimulationDriver.cs",
+      "CurrentSHA256": "650ABBE8D319846FD780C3F1ED4E394FB13FE07C51D173B548BFBB2D761709B9",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferSimulationDriver.cs.meta",
+      "CurrentSHA256": "153E4AADCDB307FD828682A39A2EB9223F91EEEB042C05B3098B7C6730971A60",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferTarget.cs",
+      "CurrentSHA256": "81D33BB3E98C65F3A222F89A8E2095AE06C2C915A9E1856C2693A2C91BED4E5E",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferTarget.cs.meta",
+      "CurrentSHA256": "80BB2F9FFBB5B065741FE33A103AD81295DBF0971582AED94A413CA365CB6ABE",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferTargetRegistry.cs",
+      "CurrentSHA256": "AC59AAFCC05E35AFC305E46ECEDF2D48381B4946DEF5AF8BF0220DC60E9E8DC1",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferTargetRegistry.cs.meta",
+      "CurrentSHA256": "327E0DBB64237EA9310B239E783FED34687ABFAE8E65B5F41902DEAEDCE77C29",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests.meta",
+      "CurrentSHA256": "4B8C18DFBD827AC49428BD7EFAD6AF6D7C73A31B2FDCBE8978787BA5E421DE6D",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/Bootstrap.meta",
+      "CurrentSHA256": "63F6BCC864A2B4A14BD0D64CA25A97921AF270E3264D44EDCAF74D9F1E490D47",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/Bootstrap/Editor.meta",
+      "CurrentSHA256": "606C7DE7E1F6D72684B27A817BBBC67D17C6455496D0CC4F13F61B65384F6D5B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/Bootstrap/Editor/AcadeGameMaker.Bootstrap.Tests.asmdef",
+      "CurrentSHA256": "DBA23CE3637DA402AECCFF6B4AC62B2691EB4CC5AB77FA3C3C4649D10DA0FFB0",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/Bootstrap/Editor/AcadeGameMaker.Bootstrap.Tests.asmdef.meta",
+      "CurrentSHA256": "7E901132481CD7A9590943F65E60D0A5DC0DAD966D4D654A382063F0FFE003E9",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/Bootstrap/Editor/BootstrapBuild.cs",
+      "CurrentSHA256": "27517F12DA8A62DA99CBB41D311D98BEBC3D043E88C94CA48ADBB438480874DE",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/Bootstrap/Editor/BootstrapBuild.cs.meta",
+      "CurrentSHA256": "2E31D5154B1C183777C32BA318D92D350276150BBABEFB89390067BCAE120806",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/Bootstrap/Editor/BootstrapProjectConfigurationTests.cs",
+      "CurrentSHA256": "A41059F8881B179EEF87B95DA858AEC05D8D7399057550F982CB45486E442AEF",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/Bootstrap/Editor/BootstrapProjectConfigurationTests.cs.meta",
+      "CurrentSHA256": "F6F5475B5A3455F89B384FEBA3028FF390F0AE6BEA4200F4F7B5FEB710661D7B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode.meta",
+      "CurrentSHA256": "12969CBDB4E1563E267CE12CA96AC2687FCA2D044603EEDCF9AF526F1B2016E5",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation.meta",
+      "CurrentSHA256": "B7D6CAC50148B9EEC3F8F125666502E2940912B4207A335827A2B52D1FB9B565",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/AcadeGameMaker.Hub.Presentation.Unity.EditMode.Tests.asmdef",
+      "CurrentSHA256": "FFF73083608E9EEB8539A84A164E8E6A7665A986B777DC6EADD6E054A1BB1D0F",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/AcadeGameMaker.Hub.Presentation.Unity.EditMode.Tests.asmdef.meta",
+      "CurrentSHA256": "CD2B5CBD97F59CF9AD628F2930DDC7B020D61CA60FC6819D4C2D4392A0F4646F",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffC3AuditSuccessorTests.cs",
+      "CurrentSHA256": "1B0F8D0919770CD1FBD06F908EC23E370A18E911EC5AAC09938FAF0BFDA174E6",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffEditModeTests.cs",
+      "CurrentSHA256": "57E7EFB17307BFB156D338F7BDCE25104E3192748FD6C159F7BB7B4A7483DAD6",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffEditModeTests.cs.meta",
+      "CurrentSHA256": "3907F0C1BAEC180D9CB3A79612E5BBCC06562384C52F2BC3C913DD76A5ADFEE3",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubPresentationAuthoringTests.cs",
+      "CurrentSHA256": "D7A41D0B6F4B6F703D02BC6CD0DF5316DFB95B338128A749928D2CAAA0A13208",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubPresentationAuthoringTests.cs.meta",
+      "CurrentSHA256": "E63193DB3034A36344F418D7CAC8C8266D601524FFD9AF71DCE420D8716183FB",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubPresentationScopeAuditTests.cs",
+      "CurrentSHA256": "1DB3012C82DD6E0A1348ADEAF954EF0056EB28E925108716B6317289AAA93D60",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubPresentationScopeAuditTests.cs.meta",
+      "CurrentSHA256": "C354A86725991111485C725256023849A93E0F2E9994CBEAC55FD3721674B0FE",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity.meta",
+      "CurrentSHA256": "00C14CFAEF5492A7E2F018A3ECECF00309BCA9EA8AB4E9E3F787AB1CDD429DD3",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/AcadeGameMaker.Input.Unity.EditMode.Tests.asmdef.meta",
+      "CurrentSHA256": "83B752FC12003AA7EF1B9190836A192C8DFFF4CD796B9A79515594E35B4572FE",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubMenuPresentationControllerV1Tests.cs",
+      "CurrentSHA256": "40AA974BF8407A6FD2AAE57830256F04599AF1A835F708999BDC10F332061699",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubMenuPresentationControllerV1Tests.cs.meta",
+      "CurrentSHA256": "2F5613553611812EC047BEAAC95743F3896CE7DBC9490C8935B57FF01B79ACA8",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubRuntimeAuthoringBuilderEditModeTests.cs.meta",
+      "CurrentSHA256": "69561A1B3306BA73227E567829287BB844987155AD3AC2EB15B8F0D73457FE8A",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubUiOnlyQ0ScopeAuditEditModeTests.cs",
+      "CurrentSHA256": "C27116AC35BF83D4AB8794FA9D3E379AD6F127B0E52B48C51399F49ADDF862D4",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubUiOnlyQ0ScopeAuditEditModeTests.cs.meta",
+      "CurrentSHA256": "9622EC3AEB65C5CC2AB713117FB8E0E091030EFC9731DC1206159EB0D686F147",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/NewGameConfirmationOwnerV1Tests.cs",
+      "CurrentSHA256": "647BEB1256A18EA90A3F73BB3D81B3219A248EBCCE8A7DBB9EA26D176CCB897A",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/NewGameConfirmationOwnerV1Tests.cs.meta",
+      "CurrentSHA256": "AC62F31C59BC1FA79BC0999BFCE6D6F7965AE6C3F2E2061DE8B96587A2C6B611",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/ProfileNewGameConfirmationV1Tests.cs",
+      "CurrentSHA256": "F80D57376F3845E16BB3D347CFB3834ACE8FCCB53F539376D880A844A90F9581",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/ProfileNewGameConfirmationV1Tests.cs.meta",
+      "CurrentSHA256": "4DDE703DFCF2E048D9737FF57EED9E0CA1192109046871AFE31C437400F13AD2",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/ProfileNewGameObservationLeaseV1Tests.cs.meta",
+      "CurrentSHA256": "8121B03B865DF9958C49C3A7899A9690BB8997B6586E77097C187C21699610FA",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/UiSemanticFrameV1Tests.cs.meta",
+      "CurrentSHA256": "3691C492BE0238123056F7E0AE89C7BAB4B9F012A66E299326EE91B34E10993C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile.meta",
+      "CurrentSHA256": "65D7A6A555126CECA041611CA6714A28251A9A9BC763AEFAE57E52C23628FB68",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/AcadeGameMaker.Profile.EditMode.Tests.asmdef",
+      "CurrentSHA256": "DC1E6DD360DBE6785D6611677C47F8624A92A874DEFBEB521F86CA52E097D97F",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/AcadeGameMaker.Profile.EditMode.Tests.asmdef.meta",
+      "CurrentSHA256": "E9EA0DBDB986B6E50B167907CD9A08D63BC4EA90337BCEFBE77FE7C5BC0EC09F",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileBindingApplyFailureRecoveryPlannerV1Tests.cs",
+      "CurrentSHA256": "D7B2BB12686CAFC0AC5CAED5483B01240C27D309401CD50D49F526B02EA43505",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileBindingApplyFailureRecoveryPlannerV1Tests.cs.meta",
+      "CurrentSHA256": "351E39332FAB391EFB44A66FD093AAC020CB45294D96A951536A3A5E1F456C6C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileBindingOverridesJsonTests.cs",
+      "CurrentSHA256": "5FB2E8EEA4ED8264762794B9597AA3D9D67050DE19A7B9DB4EAF0AB8B4003D6E",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileBindingOverridesJsonTests.cs.meta",
+      "CurrentSHA256": "7E6FFD1F8EF0E5FCC98E088BC51D6C3E37BBC1A0BE454C0127A4E9CD3D964F76",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileInputSnapshotTests.cs",
+      "CurrentSHA256": "F57A0CB4191CAC84C6429F8FA475A529378E7996C9B96EC2AE8B29A089975A77",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileInputSnapshotTests.cs.meta",
+      "CurrentSHA256": "6B00DF2CD8724D94F0219DEB568DB885111A6AB354BC9BC3AFB2DBEA06B657A4",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileLaunchPreservationExecutorV1Tests.cs",
+      "CurrentSHA256": "176B517B7C4B05E412DED5B36464038BF6995F1DB573323CCA83411B1A2EAA3F",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileLaunchPreservationExecutorV1Tests.cs.meta",
+      "CurrentSHA256": "91DA4C8008DD7792CBD0930D26A771EB478DA01E4F155B08098DE5171184CCA9",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileProgressionSnapshotTests.cs",
+      "CurrentSHA256": "E8E296D216EB05370731B52188276BAE2AE8EF3784134BFDBEE276F753AF430D",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileProgressionSnapshotTests.cs.meta",
+      "CurrentSHA256": "BC80C06F61A687AECEEC83AFF143F8EB60F1E02D20C8169CF3241D8D2208E138",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetBarrierInterceptionV1Tests.cs",
+      "CurrentSHA256": "38AE4DA7D8786D3A4697A1688CF107A4A71E61573910F8A4099A55C2C3B6C3CA",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetBarrierInterceptionV1Tests.cs.meta",
+      "CurrentSHA256": "77CA2A42CE20038E1DA80670D8C90F13648E7963F730142F59106023DD54C7BE",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskAdversarialV1Tests.cs",
+      "CurrentSHA256": "522E0B1C95694FB3E663B829E56772B99D8C98D3813044FE8BCD93B1E2DB377C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskAdversarialV1Tests.cs.meta",
+      "CurrentSHA256": "B5B9BE95950A924046284E09C7B9F769F359F6E8B9953873445D938967488844",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskCheckpointV1Tests.cs",
+      "CurrentSHA256": "B1422C20E89F9156E9598ACACA497049760BCA0E90B9E9DDF02CA8B9F1661EF5",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskCheckpointV1Tests.cs.meta",
+      "CurrentSHA256": "C2597782899D9B10229BC6E773C966338D5D31DC68FC163C371192E6BADBC306",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskFaultV1Tests.cs",
+      "CurrentSHA256": "5611412CB030F1FA4F9ECC754203E04B1BDEC2D60C990016DF996DBAC9540CE2",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskFaultV1Tests.cs.meta",
+      "CurrentSHA256": "027394C3520671CEDCF30499FC0E442A44D67D383D71B3A88ACC8B916F036C08",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskProcessV1Tests.cs",
+      "CurrentSHA256": "FD33B463615DC3D1A6BCAB6D8425992E5925D662BC62FD1CEF44CC9E636E0E90",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskProcessV1Tests.cs.meta",
+      "CurrentSHA256": "B2D7E37FCF0A309B88492BF0145E650FF991B7ABA2238BA53EC374EB21610247",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskProofV1Tests.cs",
+      "CurrentSHA256": "3371AB3B5E1F7961C93D64DC9565DB658139ADC6AF9F12164AAC0D46D123CB9B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskProofV1Tests.cs.meta",
+      "CurrentSHA256": "8D85F5DB7AB0CC00555AC44AE1A829E4FD438A5A995D3BADDE981F14317C26E0",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskResultV1Tests.cs",
+      "CurrentSHA256": "F9C5C6E00D32AA2F0008BC89B0D282F891B2BA9903E5F9ACF40C18318658EBD0",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskResultV1Tests.cs.meta",
+      "CurrentSHA256": "85B8E5E762FB3A79042E55FC87E3D43394E54AB5AF449DEE8D6ECB35C6DB9E73",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskSaveFaultV1Tests.cs",
+      "CurrentSHA256": "B220976755A075233C50CE3ED1EB4249423A330401808D5C845145FC17455B6B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskSaveFaultV1Tests.cs.meta",
+      "CurrentSHA256": "E5E1CB097DFA1D6A7E5A82DFCC3EBE5A75EBE5AFA56A57B01BD9077DC9A2C382",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskTransactionV1Tests.cs",
+      "CurrentSHA256": "AAF9C05B61F612A48EBC72CEF990D576AB24C1AA5785CBFBBB76D793EF21C862",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskTransactionV1Tests.cs.meta",
+      "CurrentSHA256": "623180D809535A0868D1002912CE220404F31791E54740657A0381E4E2570843",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetMemoryAuthorityV1Tests.cs",
+      "CurrentSHA256": "D39DA6EE7A28CBC409A9F2FF07B3CD3992FB2FC2B84EA03160FFAD971A45FD89",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetMemoryAuthorityV1Tests.cs.meta",
+      "CurrentSHA256": "89DA1932F655861D7351AEBD02182A73E00E8AE3CDF0CF287454B4931924150D",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetMemoryJunctionFixtureV1.cs",
+      "CurrentSHA256": "543B545439985313BB474BECA97F817D86D7FE87759F3F851256815D9F31140E",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetMemoryJunctionFixtureV1.cs.meta",
+      "CurrentSHA256": "1DA38E82D2901B20BA79D772E6BEFC7501DB8385C84B9C38BEC268D28AB9427B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileSettingsTutorialSnapshotsTests.cs",
+      "CurrentSHA256": "940CD278B2B3105E24314164BEECE7F75B12D273710B903085C170603C1681AC",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileSettingsTutorialSnapshotsTests.cs.meta",
+      "CurrentSHA256": "CE84400F454556CF01FBF1786723E197CB7706A52E03CB19E06CF3B68ACEB78C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode.meta",
+      "CurrentSHA256": "98EDFC9AE22DC068D4FE7EF6A21BB9D984A37FAAD178F37003CE778313191390",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation.meta",
+      "CurrentSHA256": "A96A6159C322C6D14D2EEC2577A6AE00D9086A39F19E2206018E924213065E13",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/AcadeGameMaker.Hub.Presentation.Unity.PlayMode.Tests.asmdef",
+      "CurrentSHA256": "23ABC35A37A894980E1F9B52CF58A83533A41D6E2B8961C584ECBABFBC21E620",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/AcadeGameMaker.Hub.Presentation.Unity.PlayMode.Tests.asmdef.meta",
+      "CurrentSHA256": "AE6B4F92828F4EA7D91E504337DB3D762A85447189BFC5B4BDA0C5030CBC4A86",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuFailureTeardownPlayModeTests.cs",
+      "CurrentSHA256": "1BD5082F5AF9ECE20BEC5DCAC69BE0528D1006471967778A76FFCABD5C3D33C5",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuFailureTeardownPlayModeTests.cs.meta",
+      "CurrentSHA256": "441F2380CEFF68A34854DCA2C36995CA545AEADABCC63654750F84DF2D9FC2AF",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuIntentHandoffPlayModeTests.cs.meta",
+      "CurrentSHA256": "340C3D2214EC5F9E01FA632A7F9905841EE79FAF7D0F11AA043D3796476BDACD",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuPresenterPlayModeTests.cs",
+      "CurrentSHA256": "C0E473D554BC8B39219F2FEDDEF1C5E4846A632D67C89719D6FF28706BCA83F7",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuPresenterPlayModeTests.cs.meta",
+      "CurrentSHA256": "9B8466138C4DE564C72A637D8A55E635234F078E12B1F280AB2AF31BD9678025",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuResolutionPlayModeTests.cs",
+      "CurrentSHA256": "C49A5687CA044D070AA18FCF60BB236ACE7258F6CAC1532509569B6BC2275EFB",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuResolutionPlayModeTests.cs.meta",
+      "CurrentSHA256": "9E7FDC239DD45621A6D715F3C391AAB3C52D6A90662DEB613CBE4199022D2E9E",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity.meta",
+      "CurrentSHA256": "2AFF8B7ABF780E2E3D18EFE3A30E8CB9EA57E590A926ECDC8D2EEDB6BCD3DDF8",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/AcadeGameMaker.Input.Unity.PlayMode.Tests.asmdef",
+      "CurrentSHA256": "5F79096CA7294D07C77AF7AA8612B439114148C415FE53A8B07DD19207B6595F",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/AcadeGameMaker.Input.Unity.PlayMode.Tests.asmdef.meta",
+      "CurrentSHA256": "E79D6890A1BB24425DC20FC4FC4AD13B54DF1976A6AA2E2FB9259702E36DC064",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/DesktopProfileLaunchAdapterV1Tests.cs",
+      "CurrentSHA256": "563907B3CF817CFAE426B65C9E86B5F3304A6FD82B5BEF3F186D02E4D61F25BB",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/DesktopProfileLaunchAdapterV1Tests.cs.meta",
+      "CurrentSHA256": "5BD61F5E03B50FC13A2F7B575CB2A2D7A053E782C5737A0B16B2D1337BFD66C3",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubEntryHandoffLatchV1Tests.cs",
+      "CurrentSHA256": "9A96ABD3985785FBDE6FAFD2A825B44AD1D5B3AE3F3AFDB61C47DDF4655C1B2E",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubEntryHandoffLatchV1Tests.cs.meta",
+      "CurrentSHA256": "BF4F7413B8BB5C5D5FCF776A1D98CDA07120DAEAC7FDB6208A4490A2840BF73C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyInputRouterPlayModeTests.cs.meta",
+      "CurrentSHA256": "4465FE82C83B5B0EFF95E735658031C91037B77E8B6EA03DF51039698198211C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0CoverageBPlayModeTests.cs.meta",
+      "CurrentSHA256": "FE83EE7BB66E431CB908938B733A141A838DC4F60318C0CD5CD4587095F88AD6",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0HandoffMatrixPlayModeTests.cs.meta",
+      "CurrentSHA256": "A2C615683B65F554107B3371D69B6848B02DBEE5FA74768AA12A1493D03DF65F",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0RemainingRuntimePlayModeTests.cs.meta",
+      "CurrentSHA256": "36E8F2DB4904E74C9373ACBC1D315DAEB7BBA3825CCC22B3563778E9D316A37D",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0TestSupport.cs.meta",
+      "CurrentSHA256": "04C6173FEDCD2119AF19CE9D327A09688A787D8695521FD378545F37766E22A6",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterActualCameraPlayModeTests.cs",
+      "CurrentSHA256": "AD7207F15B45E5CD10E0887A4D140AE7B7A7F3A037C834CE6BCC673C0CD20079",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterActualCameraPlayModeTests.cs.meta",
+      "CurrentSHA256": "DAF644BF3A2818378588D2D5CCEE07D8989DF915378C384EAF4382053B8BE0D9",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterAdversarialPlayModeTests.cs",
+      "CurrentSHA256": "AFB6F05B4DF532B5B36171A6DAC9599C8EED307D06C5AB8682DFFEDE19239A6B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterAdversarialPlayModeTests.cs.meta",
+      "CurrentSHA256": "0E53B7C3C1034DD46E8A4FA54C7D7BE40A0622E98199D343450E10041384F81D",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterAimPlayModeTests.cs",
+      "CurrentSHA256": "C9187979286110571080B50A81506903D36CED591D82DCC7D88F0DB2521A7391",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterAimPlayModeTests.cs.meta",
+      "CurrentSHA256": "9CA9B9667CDCF7440E475C1E2CD068F0306430C7D43DD3E16DA1D129910B84F3",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterFailureBoundaryPlayModeTests.cs",
+      "CurrentSHA256": "0B2A7B3EFC2D8B43DDCE589ACB4F04F286BD82A86748CDB63C737BF9691B9054",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterFailureBoundaryPlayModeTests.cs.meta",
+      "CurrentSHA256": "F049B8B3833DE462D52F92C01AB1B42169A2A6B5493C590A6A96E993BAB5E334",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterPlayModeTests.cs",
+      "CurrentSHA256": "34BE32A8917CDF25A7B36EF7523C26919FFAE47CA8B9AE75DDE7262BBB21F708",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterPlayModeTests.cs.meta",
+      "CurrentSHA256": "7D77EC59C10AA6ADE1369CB872230C66F067A766A74E6EA45D8F50B3C66D2446",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterTerminalPlayModeTests.cs",
+      "CurrentSHA256": "381D40068860D3C789E7AD6FCA178E44043E9DCBC81F49DD54DEEFB17FEC0A63",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterTerminalPlayModeTests.cs.meta",
+      "CurrentSHA256": "A932BE1CC9CF78AD203DBED367AB96F9CEEE561EABFB696C5C536C59ECB0CA2F",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/NewGameConfirmationOwnerPlayModeTests.cs",
+      "CurrentSHA256": "2D3403E910E0DBA349854A194F7140DE65759190DF53920F2A989C6D0D07127C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/NewGameConfirmationOwnerPlayModeTests.cs.meta",
+      "CurrentSHA256": "1F20AD5E096121FE7D60FF605474376F4F7BF4786DED820C455916B584A40D6A",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/OrdanBossTerminalTransitionRequesterPlayModeTests.cs",
+      "CurrentSHA256": "0DDA463A3FAE06F6508C103559160271490E39EEC37CAE6D577660BEE1FE4719",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/OrdanBossTerminalTransitionRequesterPlayModeTests.cs.meta",
+      "CurrentSHA256": "A0BEAB6BC6EC3B16FEB18B780434315362CF0E99AEF6D884D6249A0D79A04F11",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileBindingOverrideApplyAdapterV1Tests.cs",
+      "CurrentSHA256": "30654C5DD8555BABE616AC484B4A3BF84BF34CA7B9CED774E1EFDD72967C5CF4",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileBindingOverrideApplyAdapterV1Tests.cs.meta",
+      "CurrentSHA256": "37E9373654891CF44188B55AC2BAF601AD7D78C1D5185769408347C43A9E5203",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileLaunchPreparationCoordinatorV1Tests.cs",
+      "CurrentSHA256": "11A6D2951DB5A3C8F22C53577A7282E84A23C07B8A8E4F559DFCE9405E537B7B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileLaunchPreparationCoordinatorV1Tests.cs.meta",
+      "CurrentSHA256": "A6C6BD9F8DD041D65FF05C7F4F82647DA46FA93E578DF8DB85744F3BC85D661C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetMemoryCutoverDataV1Tests.cs",
+      "CurrentSHA256": "9F61A4EB2278C8069742BDA56BCF13140E1B717826908D5D6BC64B60B9EEB8A0",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetMemoryCutoverDataV1Tests.cs.meta",
+      "CurrentSHA256": "F821D99898E87AB1AAE0CCD2F456FD61943B248E68AE466B2F896E3B54B92D50",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetMemoryCutoverFaultMatrixV1Tests.cs",
+      "CurrentSHA256": "1AD60243FB3902E52CC5BD9D05C5A4C4DBEC7ADE1060979CAA79659EA32A85E4",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetMemoryCutoverFaultMatrixV1Tests.cs.meta",
+      "CurrentSHA256": "304E91D4CC8CBA9C49D4366775E2C269C263274474D422BF65889972DB70EDCB",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetMemoryCutoverV1Tests.cs",
+      "CurrentSHA256": "1B1C4018A8A914D04155782E7ACCD4971C5F33E85A4B2A1653A9C7D1DDB11EEF",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetMemoryCutoverV1Tests.cs.meta",
+      "CurrentSHA256": "59BF3838F6AE2E60724F3A0618F69362FDC8FF3C85A7014B8D6A9F11106BABC0",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetRestartBootstrapV1Tests.cs",
+      "CurrentSHA256": "41A9F04F76C9771CB44FC1A35A0A3823952101C8B4ACF28AB4E575268A67E320",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetRestartBootstrapV1Tests.cs.meta",
+      "CurrentSHA256": "1E63AB44C35313809666078013F2BE1C9BA1BF9B385C0360D41773157E0A0604",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetRestartProcessV1Tests.cs",
+      "CurrentSHA256": "F612D9E042D2748BA2D23E2C35CCCA693C1225EA0356A8A9AF41F9D2E0545AD4",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetRestartProcessV1Tests.cs.meta",
+      "CurrentSHA256": "5910D695FF5FB1C7E288F3D40C31C46DCA4EEE69A9C604241E30EECE8E5C64E1",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/UiSemanticFrameRouterPlayModeTests.cs.meta",
+      "CurrentSHA256": "3B4C6DCE2BC1182F8ED5316305A0288EB6152DDD5A4975DDC0395F38B841A121",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/GameInput.inputactions",
+      "CurrentSHA256": "8E23A5A3AE1D514596A1FC8C61017F2740664904741D5A95383074A06E840E76",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/GameInput.inputactions.meta",
+      "CurrentSHA256": "E952AD774BBE63BE75692008486FC282EA79C65DEE7A2D24E8587E788171B044",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Prefabs.meta",
+      "CurrentSHA256": "B0468C8FC0DD7F28CFFC9C2C2EBE353E629DDFF2D09141D840439BB4801951AF",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Prefabs/Combat.meta",
+      "CurrentSHA256": "C0A34922F17C1053C8AE67AC4CF4CBC01674EAE7F20A9E94E642BADECB5E8173",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Prefabs/Combat/OrdanBossEncounterGraph.prefab",
+      "CurrentSHA256": "4444E2417FE8C24446BAF4044CD28F738341082C9E45CFA58F9561FAEED2B139",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Prefabs/Combat/OrdanBossEncounterGraph.prefab.meta",
+      "CurrentSHA256": "58F4EA1561B852598A6828A0EB6C5A6097490541B379EBCE7125EDB35AD4D0E7",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Prefabs/Hub/HubMenuRoot.prefab.meta",
+      "CurrentSHA256": "8F8DC1AE7635C426128A6AE5B3DB319F3408460D3C1B824A45197B7A254491D5",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Prefabs/Hub/HubRuntimeRoot.prefab",
+      "CurrentSHA256": "B1CFD731A4E177C37B59CEA0813E3B51E44DD10BA96AE38A1B15F15012438EEE",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Prefabs/Hub/HubRuntimeRoot.prefab.meta",
+      "CurrentSHA256": "B4C188F55CD7DA32649008AB5FA84CC434C04FF10BF64F1AB7C31071063D86AE",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Prefabs/Player.meta",
+      "CurrentSHA256": "DF86DA1312E1D0E7A27B70D5EE330AFEC63DF70DE68A6D3F1B5222D22E9810EC",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Prefabs/Player/CombatEncounterPlayer.prefab",
+      "CurrentSHA256": "68FFFA9384412ED8C1326E2928515145251E22AD6AADBA3584E56E736AE07247",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Prefabs/Player/CombatEncounterPlayer.prefab.meta",
+      "CurrentSHA256": "6F1A32A4DD92C7BCBF2ECE9AC3FAE49E5A0E1B3EBA172D2D2589D3B054DEB73E",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Scenes.meta",
+      "CurrentSHA256": "76D6EBB808AD24CE1B3F6468173693094D2DA20021EF6E5EFDB53D426DFB17B8",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Scenes/Bootstrap.unity",
+      "CurrentSHA256": "EB6809DE2B02518BBE693FB771F6B61B154133E07C693F48465C8DF5DB05C0A9",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Scenes/Bootstrap.unity.meta",
+      "CurrentSHA256": "065AC17ED944DE738FC7041CEB3CD6FDC00B464D27ACC9945D0515F8490E7EAE",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Scenes/Hub.unity",
+      "CurrentSHA256": "04F3F0EA73C40A964DCE93766CF21AFE3F57DC20912AEAB86ABDADB239BC9C6A",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Scenes/Hub.unity.meta",
+      "CurrentSHA256": "EFF61B30B80FAF11C00AE6745E0EB9AC70898959FF84AB179F3C11A221EB6890",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Settings.meta",
+      "CurrentSHA256": "F87C78222BCF3083D275C5C7FEB36EF52115D3BBD140B7C38D35B9EC6411164C",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Settings/DefaultVolumeProfile.asset",
+      "CurrentSHA256": "4789B43834DD5EFB32EEC4C3B436BAF0895C9F8CF2A0624121DA8DD812EE984A",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Settings/DefaultVolumeProfile.asset.meta",
+      "CurrentSHA256": "E168E7BBCBB60751647D479A47E6149DBE216A3296CAE1C53652A955BAF557D9",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Settings/PlatformBaseline.md",
+      "CurrentSHA256": "636A15B6D4F6EE60158A0CB2C67206DF8DBE7F3855B992B31EDF76266F25F890",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Settings/PlatformBaseline.md.meta",
+      "CurrentSHA256": "DFA42A6AC094B3DA468241FEFF3A81B66EB18A66F5621C856E7365B1EBA0E5EF",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Settings/Renderer2D.asset",
+      "CurrentSHA256": "B8F2684833BF219E0348E5D2EA193AC2F3CC8481755BDC75206DFE6750DC6368",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Settings/Renderer2D.asset.meta",
+      "CurrentSHA256": "8F7DB8088442362ED4EB3541E46127D317944B7AD95A8859C69B47851C0D4111",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Settings/UniversalRenderPipelineGlobalSettings.asset",
+      "CurrentSHA256": "75AC0247F483990A85E147DF1EC52C50C63F489C601E2C9B053570794982E288",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Settings/UniversalRenderPipelineGlobalSettings.asset.meta",
+      "CurrentSHA256": "FDD0DAD27CB0086F3A01A27FFFF4A4E9100FB8B8643A32FC333811389293BCF4",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Settings/UniversalRP.asset",
+      "CurrentSHA256": "167D20E3285F9071DC9BCB0A4FEE7CDF8BB335DD849EC96E4B3FA39BD401F266",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/Settings/UniversalRP.asset.meta",
+      "CurrentSHA256": "5F03013148B256FED5702CCB8B2AEC5F0FB57960B73EDF0C01B24F70E6470FD7",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/UI.meta",
+      "CurrentSHA256": "7ACF81A799D4344DC3E197DECC6F2E116BE530BDB122D9580915B13603FD511D",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/UI/Fonts.meta",
+      "CurrentSHA256": "5E95F49117F7F192E5AEE8876B2D7104E7BE7A98F45A77EA7A8815213B8C1A52",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub.meta",
+      "CurrentSHA256": "CBA326C0B0C89AC1ED7CDD95C83BBC1C6148CD65A15D1FED2C09867928ACCE88",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/NotoSansCJKkr-Bold-SDF.asset",
+      "CurrentSHA256": "1E4055E162823ED840632395556990762AA0E6C38A38EAB34470349D072D7923",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/NotoSansCJKkr-Bold-SDF.asset.meta",
+      "CurrentSHA256": "291683025E4B0F751063732CF6C1BF54003724697C7ADEA2CF3E500904086238",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/NotoSansCJKkr-Bold.otf",
+      "CurrentSHA256": "26D0C6748500A0444844280B308F5B62C7AE92AC6C6AC88148E502DD211EB52A",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/NotoSansCJKkr-Bold.otf.meta",
+      "CurrentSHA256": "AFE86499F7CD6BA9166D00D9A1FDEA94D5196561FEE167A46009D2A9F6A350DB",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/NotoSansCJKkr-Regular-SDF.asset",
+      "CurrentSHA256": "26A9F4625038996F683318A181AD4CB03A544134F889630AE75CD87629CA8797",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/NotoSansCJKkr-Regular-SDF.asset.meta",
+      "CurrentSHA256": "E67F19B8A4300A5B09DD427BC686929742D0756E473F82FA5AE9BC6F1DA5AA04",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/NotoSansCJKkr-Regular.otf",
+      "CurrentSHA256": "6BCB2A0703AA137E874FC2DFFA85F6C21BA9A67FA329E81B8C801663AF7E992A",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/NotoSansCJKkr-Regular.otf.meta",
+      "CurrentSHA256": "6F84ECC36D55743913F5355BD594B595E871AC7DE9DE418B87F6250D898CD7C5",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/OFL-1.1.txt",
+      "CurrentSHA256": "6A73F9541C2DE74158C0E7CF6B0A58EF774F5A780BF191F2D7EC9CC53EFE2BF2",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/OFL-1.1.txt.meta",
+      "CurrentSHA256": "CFF037B6302C2D7EED8A5F58C022F719EE690F37CFDAFA4B11044D404A7A2971",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/UI/Resources.meta",
+      "CurrentSHA256": "556DBA7BA0ED23496609B9CFEABDDED7124467A8026F5949CD97D34DBA66428B",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/UI/Resources/TMP Settings.asset",
+      "CurrentSHA256": "71A6F2477A384F5D12D27AC22F6C30449ED87AA21FD0906FB119442FEAEECBD4",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "Assets/UI/Resources/TMP Settings.asset.meta",
+      "CurrentSHA256": "C3635AC3B06610CD6CE0E815A418563D7CB70DC49FE45A790A7CE5051EDE799F",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "docs/approvals/2026-09-28-c3-adapter-successor-sha-approval.md",
+      "CurrentSHA256": "107653CEDA8C38226D098DF1FB6FC9E61B3C9463109AF1640D292B628C566037",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "docs/evidence/c3-qb-audit-predecessor/HubMenuIntentHandoffEditModeTests.cs.txt",
+      "CurrentSHA256": "FC7DD9F902C9783036137CE68423D43A28C00DE187DA125FDB8C41CDCF79B421",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "docs/verification/2026-09-20-vd09-m5d7q0-implementation-evidence.md",
+      "CurrentSHA256": "EA331572123B3CEF88D63DE837BB59E3A570312EB75D7080578341CEBFA70BD9",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "docs/verification/2026-09-28-vd09-m5d7q-c2-r25-luna-digest.md",
+      "CurrentSHA256": "8E58FCCA5809AED400466C88CDFBE1A1BB0737F093FCFAFC72795C8485F730C7",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "docs/verification/2026-09-28-vd09-m5d7q-c2r-process-execution.md",
+      "CurrentSHA256": "C635DD84FEFFAB5797345575106BF818C51AF3C861A57F13DDBBF4D50419E3C5",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "ProjectSettings/EditorBuildSettings.asset",
+      "CurrentSHA256": "71EF0DE27D164D41A67D502E6EC79D5875D64ED4B61C831C1E57BD0D544D6ADB",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "ProjectSettings/EditorSettings.asset",
+      "CurrentSHA256": "4A87C54B3541C7BD242AAD68C3FC28661083DB1117EC56149694EE592156415E",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "ProjectSettings/GraphicsSettings.asset",
+      "CurrentSHA256": "BCDB6EE570B5EDC137B79E48F860495035136E494030E214FE39C151D16FE993",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "ProjectSettings/Physics2DSettings.asset",
+      "CurrentSHA256": "57D62FAC9AA4ABCA093E4EAEC56539DF001BE39C7AEF612CD4F07DDDBC4238A4",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "ProjectSettings/PhysicsCoreProjectSettings2D.asset",
+      "CurrentSHA256": "BEDC5339A832C60DC3F11B84ABC4F4384DBFA20B0CD9AD6C444B907E751FC35E",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "ProjectSettings/ProjectSettings.asset",
+      "CurrentSHA256": "5A94F3C7571DC7F2EB0C51911CE70C3CA33F5351E409BC159C1D21D34270D028",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "ProjectSettings/ProjectVersion.txt",
+      "CurrentSHA256": "39584C3E6C1E571D53A79EF2DD6EA91C0568AC086792CC435E86401A0BA824ED",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "ProjectSettings/QualitySettings.asset",
+      "CurrentSHA256": "7EC339D3E5E2B8CC73548E69256F6151782BB68A4AFB64F865FD94704DBF0DE3",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "ProjectSettings/TagManager.asset",
+      "CurrentSHA256": "57087AD26B4AD250643ABD48B9B8525404ACAF51A21698025DB93B2DC15F33C9",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "ProjectSettings/TimeManager.asset",
+      "CurrentSHA256": "8FA4333AC4E99D3C522B512E4F9EC78D73401504AC0EFAECE4AEAAFA0E45DFFF",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "qa/fixtures/ProfileResetCrashWorker/ProfileResetCrashWorker.csproj",
+      "CurrentSHA256": "8B92C34BBDB2A83973285D7125004DF595EEBF4C66B4769B65DA255FCDCDC31A",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "qa/fixtures/ProfileResetCrashWorker/Program.cs",
+      "CurrentSHA256": "740C37EE597749C0E3B3BA346A01940555F7CD09096B06E018E757FC426AAEA0",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "qa/tools/Invoke-UnityQa.ps1",
+      "CurrentSHA256": "A4DD378FF02105345B63B40C6F446B304B04F9E8B894CCD2218806F42DD7DA85",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "qa/tools/Test-QaCatalog.ps1",
+      "CurrentSHA256": "E13E91B6967520D6ADC357E03C7A32D3B6A07F061A1FF0CA1F2A85228FF1B835",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    },
+    {
+      "Path": "qa/tools/Test-UnityQaOwnedEditorWait.ps1",
+      "CurrentSHA256": "2FABA87A41D70167DACAA25B13808852F1A9BF8C32146E1053E5E14005CDADF2",
+      "Gap": "이번 한정 조회에서 실제 수용/승인 변경 SHA와 파일 단위 직접 연결을 확정하지 못함; 미승인 또는 결함이라고 판정한 것은 아님"
+    }
+  ],
+  "ExcludedEvidenceKinds": [
+    "현재 SHA와 다르거나 전체 SHA가 없는 기록",
+    "파일명 언급만 또는 수용되지 않은 사전 검수/FAIL 기록",
+    "같은 지문이 있더라도 현재 다른 SHA인 과거 수용 manifest를 통한 자동 연결",
+    "R6 정적 동결을 전체 실행 수용 또는 게시 승인으로 승격"
+  ],
+  "NoExecutionPerformed": true
+}

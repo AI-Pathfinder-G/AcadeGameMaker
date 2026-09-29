@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-29 03:44:40Z" end-time="2026-09-29 03:44:50Z" duration="10.6689864">
+  <test-suite type="TestSuite" id="1000" name="AcadeGameMaker" fullname="AcadeGameMaker" runstate="Runnable" testcasecount="1363" result="Failed" site="Child" start-time="2026-09-29 03:44:40Z" end-time="2026-09-29 03:44:50Z" duration="10.668986" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1925" name="AcadeGameMaker.Input.Unity.EditMode.Tests.dll" fullname="C:/Users/me/Documents/GPT-workspace/AcadeGameMaker/Library/ScriptAssemblies/AcadeGameMaker.Input.Unity.EditMode.Tests.dll" runstate="Runnable" testcasecount="291" result="Failed" site="Child" start-time="2026-09-29 03:44:40Z" end-time="2026-09-29 03:44:50Z" duration="10.637596" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="46308" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1926" name="AcadeGameMaker" fullname="AcadeGameMaker" runstate="Runnable" testcasecount="291" result="Failed" site="Child" start-time="2026-09-29 03:44:40Z" end-time="2026-09-29 03:44:50Z" duration="10.635293" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1927" name="Tests" fullname="AcadeGameMaker.Tests" runstate="Runnable" testcasecount="291" result="Failed" site="Child" start-time="2026-09-29 03:44:40Z" end-time="2026-09-29 03:44:50Z" duration="10.633231" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1928" name="EditMode" fullname="AcadeGameMaker.Tests.EditMode" runstate="Runnable" testcasecount="291" result="Failed" site="Child" start-time="2026-09-29 03:44:40Z" end-time="2026-09-29 03:44:50Z" duration="10.631223" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestSuite" id="1929" name="InputUnity" fullname="AcadeGameMaker.Tests.EditMode.InputUnity" runstate="Runnable" testcasecount="291" result="Failed" site="Child" start-time="2026-09-29 03:44:40Z" end-time="2026-09-29 03:44:50Z" duration="10.625771" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-suite type="TestFixture" id="1684" name="NewGameConfirmationOwnerV1Tests" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.NewGameConfirmationOwnerV1Tests" classname="AcadeGameMaker.Tests.EditMode.InputUnity.NewGameConfirmationOwnerV1Tests" runstate="Runnable" testcasecount="132" result="Failed" site="Child" start-time="2026-09-29 03:44:40Z" end-time="2026-09-29 03:44:50Z" duration="10.621818" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <failure>
+                  <message><![CDATA[One or more child tests had errors]]></message>
+                </failure>
+                <test-case id="1816" name="AC006_ImmediateReadyCursorDiscardsActualSubmitFrameWithoutActivation" fullname="AcadeGameMaker.Tests.EditMode.InputUnity.NewGameConfirmationOwnerV1Tests.AC006_ImmediateReadyCursorDiscardsActualSubmitFrameWithoutActivation" methodname="AC006_ImmediateReadyCursorDiscardsActualSubmitFrameWithoutActivation" classname="AcadeGameMaker.Tests.EditMode.InputUnity.NewGameConfirmationOwnerV1Tests" runstate="Runnable" seed="893421727" result="Failed" start-time="2026-09-29 03:44:40Z" end-time="2026-09-29 03:44:50Z" duration="10.610006" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  real published Submit edge
+  Expected: True
+  But was:  False
+]]></message>
+                    <stack-trace><![CDATA[at AcadeGameMaker.Tests.EditMode.InputUnity.NewGameConfirmationOwnerV1Tests.AC006_ImmediateReadyCursorDiscardsActualSubmitFrameWithoutActivation () [0x00171] in C:\Users\me\Documents\GPT-workspace\AcadeGameMaker\Assets\AcadeGameMaker\Tests\EditMode\InputUnity\NewGameConfirmationOwnerV1Tests.cs:426
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[Saving results to: C:/Users/me/AppData/LocalLow/AcadeGameMaker/AcadeGameMaker\TestResults.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

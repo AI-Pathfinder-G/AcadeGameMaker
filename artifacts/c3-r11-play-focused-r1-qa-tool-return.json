@@ -1,0 +1,8 @@
+{
+  "Trace": "AC-M5D7QC3-009/010",
+  "Platform": "PlayMode",
+  "SelectionPath": "artifacts/c3-r11-playmode-focused-selection.json",
+  "QaToolReturnedCode": 0,
+  "ObservationSeconds": 21600,
+  "Note": "관찰 시간만 지정하며 시험 제한 시간·선택·소스는 변경하지 않음. 반환값 0이 아니면 별도 실제 종료 증거 없이 통과로 간주하지 않음."
+}

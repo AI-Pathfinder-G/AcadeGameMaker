@@ -1,0 +1,20 @@
+{
+  "Trace": "REQ-M5D7QC3-007 / AC-M5D7QC3-009/010",
+  "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffC3AuditSuccessorTests.cs.meta",
+  "OldGUID": "50b803be06dd4777ac62bd70ca5368f5e",
+  "NewGUID": "50b803be06dd4777ac62bd70ca5368f5",
+  "BeforeBytes": 61,
+  "AfterBytes": 60,
+  "BeforeSHA256": "D8098D01444B011F288F405C9C313B8BE7499EFA4951AEE0001BE2EC7F3F70AB",
+  "AfterSHA256": "F1FFFA239E271C037AC818FF4C03B698DC3B07B561F8024887F4E80677A2FEFB",
+  "ExactApprovedSingleCharacterRemoval": true,
+  "MetaCount": 438,
+  "InvalidGUIDCount": 0,
+  "DuplicateValidGUIDGroups": 0,
+  "NewGUIDUseCount": 1,
+  "ChangedMetaPaths": [
+    "Assets\\AcadeGameMaker\\Tests\\EditMode\\HubPresentation\\HubMenuIntentHandoffC3AuditSuccessorTests.cs.meta"
+  ],
+  "FailureLog": "artifacts/c3-r5-focused-edit-r1.log",
+  "Limit": "메타 한 항목만 수정. 코드·선택·Unity·컴파일 변경 또는 실행 없음. 이전 실패와 r5 원장 보존."
+}

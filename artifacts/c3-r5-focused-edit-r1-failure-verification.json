@@ -1,0 +1,13 @@
+{
+  "Trace": "AC-M5D7QC3-009/010",
+  "ActualRunnerExitCode": 1,
+  "XmlPresent": false,
+  "SelectedTests": 155,
+  "TestsExecutedVerified": false,
+  "SourceBeforeCount": 884,
+  "SourceAfterCount": 884,
+  "SourceHashDifferences": 0,
+  "Failure": "신규 감사 시험 meta GUID 33자리로 Unity 자산 제외, CS0103, 시험 실행 전 컴파일 실패",
+  "LogSha256": "961C42729B0743FA8B1F48A5A1C5670889E07EA3D35BED90626C27DCB86E472E",
+  "Accepted": false
+}

@@ -1,0 +1,3727 @@
+{
+  "Trace": "AC-M5D7QC3L-005",
+  "EligibleRegressionCount": 613,
+  "R4PassedRows": 561,
+  "R5PassedRows": 51,
+  "R6PassedRows": 1,
+  "DuplicateNames": 0,
+  "NameDifferences": 0,
+  "SharedInputs": 874,
+  "InputDifferences": 0,
+  "R4OriginalOutcome": "561 passed, 1 timeout failed; actual Editor exit 2; retained without alteration",
+  "Claim": "현재 동일 동결 소스의 분할 증거 대조. R4 전체 통과, C3 전체 수용 또는 C4 구현을 주장하지 않는다.",
+  "ManifestSha256": [
+    {
+      "Path": "artifacts/c3l-r3-source-before.json",
+      "Sha256": "8B837143CC8E46AB93C141ADE12CF3237D8759A1676CB6CC6A63FE8117CF103E"
+    },
+    {
+      "Path": "artifacts/c3l-r3-source-after.json",
+      "Sha256": "F6B958D57EA827B4D51085021757DC50BDC6F8AC717A55B1ED2C616F63EB4101"
+    },
+    {
+      "Path": "artifacts/c3l-r4-source-before.json",
+      "Sha256": "D519B8AF451C36D3321291138E6E2345A752F8DDE07A09B91D69688EC3157274"
+    },
+    {
+      "Path": "artifacts/c3l-r4-source-after.json",
+      "Sha256": "E1A591C28C24A8A68EF46D72B73E8ADB68C9182C530E4704A8B35584243CF6F3"
+    },
+    {
+      "Path": "artifacts/c3l-r5-source-before.json",
+      "Sha256": "D1FDF456F44AC9DC582B0B45C65BF2B80D55A7729942DDC873BA546AF37F39FF"
+    },
+    {
+      "Path": "artifacts/c3l-r5-source-after.json",
+      "Sha256": "33B1EF81F33C5E6E243700C8283BF5E125B93E7EED1AF087A5217BC1A2668698"
+    },
+    {
+      "Path": "artifacts/c3l-r6-source-before.json",
+      "Sha256": "B1030BB0ECE773CEDE99DCBD1D3C5995B7D856DCA83159CC9C676B724AEE4383"
+    },
+    {
+      "Path": "artifacts/c3l-r6-source-after.json",
+      "Sha256": "37861313C2A63DFDB7ABD6F8F8BF9F249F6ABDA459BDBC3882DC9D171FE71C7C"
+    }
+  ],
+  "Rows": [
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC001_FreshRoleMutationIsStaleAndLeavesEveryFileUntouched(0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC001_FreshRoleMutationIsStaleAndLeavesEveryFileUntouched(1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC001_FreshRoleMutationIsStaleAndLeavesEveryFileUntouched(2)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC001_UnreadableExclusiveLeafBeforeBeginDoesNotChangeAnyActiveLeaf(0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC001_UnreadableExclusiveLeafBeforeBeginDoesNotChangeAnyActiveLeaf(1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC001_UnreadableExclusiveLeafBeforeBeginDoesNotChangeAnyActiveLeaf(2)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC002_AC007_LoneBarrierTempIsInertAndBeginCollisionDoesNotMutateActiveLeaves",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC002_GoldenMarkerSingleFieldOrderTypeCaseHashAndVersionMutationsFailClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC002_LiteralMarkerOracleUsesInvariantLengthsUnderHostileCulture",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC002_OversizeDirectoryAndExclusiveLockedMarkerAreTerminal",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC002_RehashedSingleMarkerMutationsAreRejectedByDecoderBeforeArchive(\"duplicate\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC002_RehashedSingleMarkerMutationsAreRejectedByDecoderBeforeArchive(\"missing-nonnull\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC002_RehashedSingleMarkerMutationsAreRejectedByDecoderBeforeArchive(\"path-extra\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC002_RehashedSingleMarkerMutationsAreRejectedByDecoderBeforeArchive(\"present-missing-revision\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC002_RehashedSingleMarkerMutationsAreRejectedByDecoderBeforeArchive(\"unknown-classification\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC002_RehashedSingleMarkerMutationsAreRejectedByDecoderBeforeArchive(\"upper-id\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_AllRoleClassificationsArchiveExactlyBeforeDefaultAppears",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_MixedThreeRoleClassesArchiveExactlyAndMarkerRecordsActualClasses(Invalid,Unsupported,ValidCurrent)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_MixedThreeRoleClassesArchiveExactlyAndMarkerRecordsActualClasses(Missing,ValidRecoveryBinding,ValidRecoveryMetadata)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_MixedThreeRoleClassesArchiveExactlyAndMarkerRecordsActualClasses(Unsupported,ValidCurrent,Invalid)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_MixedThreeRoleClassesArchiveExactlyAndMarkerRecordsActualClasses(ValidCurrent,ValidRecoveryMetadata,Unsupported)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_MixedThreeRoleClassesArchiveExactlyAndMarkerRecordsActualClasses(ValidRecoveryBinding,Invalid,Missing)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.json_Invalid",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.json_Missing",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.json_Unsupported",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.json_ValidCurrent",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.json_ValidRecoveryBinding",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.json_ValidRecoveryMetadata",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.prev.json_Invalid",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.prev.json_Missing",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.prev.json_Unsupported",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.prev.json_ValidCurrent",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.prev.json_ValidRecoveryBinding",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.prev.json_ValidRecoveryMetadata",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.tmp.json_Invalid",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.tmp.json_Missing",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.tmp.json_Unsupported",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.tmp.json_ValidCurrent",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.tmp.json_ValidRecoveryBinding",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC004_profile.tmp.json_ValidRecoveryMetadata",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC007_ArchiveBothNeitherAndMismatchRemainManualRepair",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC007_CorruptNewPrimaryIsPreservedThenExactDefaultIsRebuilt",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC007_IdenticalInterruptedTempCollisionDoesNotOverwriteEitherCopy",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC007_UnreadableArchiveDestinationAndCollisionFailClosedForEachRole(0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC007_UnreadableArchiveDestinationAndCollisionFailClosedForEachRole(1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC007_UnreadableArchiveDestinationAndCollisionFailClosedForEachRole(2)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC007_UnreadablePendingOldSourceFailsClosedWithoutMoves(0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC007_UnreadablePendingOldSourceFailsClosedWithoutMoves(1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC007_UnreadablePendingOldSourceFailsClosedWithoutMoves(2)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskAdversarialV1Tests.AC009_OutputsValidateAndBarrierBlocksObserveSaveAndInputRepairWithoutActiveMutation",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(13)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(14)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(15)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(16)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(17)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(18)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(19)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(20)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(21)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(22)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(23)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(24)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(25)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(26)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(27)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(28)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(29)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(30)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(31)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(32)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(33)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(34)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(35)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(36)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(37)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(38)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(39)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(40)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(41)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(42)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(43)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(44)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(45)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(46)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(47)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(48)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(49)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(50)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_RealBclRecoverableCheckpointRetainsBarrierAndRestarts(51)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(13)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(14)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(15)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(16)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(17)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(18)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(19)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(20)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(21)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(22)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(23)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(24)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(25)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(26)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(27)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(28)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(29)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(30)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(31)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(32)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(33)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(34)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(35)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(36)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(37)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(38)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(39)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(40)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(41)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(42)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(43)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(44)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(45)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(46)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(47)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(48)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(49)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(50)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskCheckpointV1Tests.AC003_AC006_TestOnlyInterruptionEscapesThenRestartsWithoutResurrection(51)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskFaultV1Tests.AC003_PostPublicationFaultNeverMovesOldLeafBeforeValidatedResume(10)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskFaultV1Tests.AC003_PostPublicationFaultNeverMovesOldLeafBeforeValidatedResume(11)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskFaultV1Tests.AC003_PostPublicationFaultNeverMovesOldLeafBeforeValidatedResume(12)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskFaultV1Tests.AC003_PostPublicationFaultNeverMovesOldLeafBeforeValidatedResume(8)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskFaultV1Tests.AC003_PostPublicationFaultNeverMovesOldLeafBeforeValidatedResume(9)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskFaultV1Tests.AC003_PreCommitMarkerFaultLeavesActiveAuthoritative(1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskFaultV1Tests.AC003_PreCommitMarkerFaultLeavesActiveAuthoritative(2)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskFaultV1Tests.AC003_PreCommitMarkerFaultLeavesActiveAuthoritative(3)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskFaultV1Tests.AC003_PreCommitMarkerFaultLeavesActiveAuthoritative(4)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskFaultV1Tests.AC003_PreCommitMarkerFaultLeavesActiveAuthoritative(5)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskFaultV1Tests.AC003_PreCommitMarkerFaultLeavesActiveAuthoritative(6)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskFaultV1Tests.AC003_PreCommitMarkerFaultLeavesActiveAuthoritative(7)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterArchivePreviousMove\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterArchivePreviousReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterArchivePrimaryMove\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterArchivePrimaryReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterArchiveTempMove\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterArchiveTempReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterDefaultClose\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterDefaultCommitMove\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterDefaultFlush\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterDefaultPostPrimaryReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterDefaultPreviousProbe\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterDefaultTempOpen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterDefaultTempProbe\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterDefaultTempReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterDefaultWrite\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterInterruptedPrimaryMove\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterInterruptedPrimaryReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterInterruptedTempMove\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterInterruptedTempReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterMarkerClose\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterMarkerCommitMove\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterMarkerCommittedReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterMarkerFlush\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterMarkerTempReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"AfterMarkerWrite\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeArchivePreviousMove\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeArchivePreviousReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeArchivePrimaryMove\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeArchivePrimaryReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeArchiveTempMove\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeArchiveTempReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeDefaultClose\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeDefaultCommitMove\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeDefaultFlush\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeDefaultPostPrimaryReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeDefaultPreviousProbe\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeDefaultSave\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeDefaultTempOpen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeDefaultTempProbe\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeDefaultTempReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeDefaultWrite\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeInterruptedPrimaryMove\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeInterruptedPrimaryReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeInterruptedTempMove\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeInterruptedTempReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeMarkerClose\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeMarkerCommitMove\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeMarkerCommittedReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeMarkerFlush\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeMarkerTempReopen\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProcessV1Tests.AC003_AC006_AC008_ActualWorkerCrashAtEveryCheckpointRestartsSafely(\"BeforeMarkerWrite\")",
+      "Result": "Passed",
+      "Run": "r5-worker",
+      "XmlSha256": "2A4A4A21D891EC10B95BDC6E226BD049221F1AE7C1EFDD2A74AADD9126E59FC6"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProofV1Tests.AC005_ActualIssuingLeaseInstanceIsRequiredBeforeAnyResetSaveMutation",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProofV1Tests.AC009_ConcurrentProofConsumersHaveExactlyOneWinnerWithoutDiskIo",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProofV1Tests.AC009_InvalidConsumptionStateFailsAndTheNormalDuplicateIsFalse",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProofV1Tests.AC009_MutatedProofLeafRejectsWithoutBurningItsConsumer(\"Classification\",Invalid)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProofV1Tests.AC009_MutatedProofLeafRejectsWithoutBurningItsConsumer(\"Hash\",\"ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProofV1Tests.AC009_MutatedProofLeafRejectsWithoutBurningItsConsumer(\"Role\",\"Temp\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProofV1Tests.AC009_MutatedProofMarkerBytesRejectWithoutBurningItsConsumer",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProofV1Tests.AC009_MutatedProofScalarRejectsWithoutBurningItsConsumer(\"_id\",\"ffffffffffffffffffffffffffffffff\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProofV1Tests.AC009_MutatedProofScalarRejectsWithoutBurningItsConsumer(\"_root\",\"C:\\\\Temp\\\\AcadeGameMaker-C1-proof-other-root\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskProofV1Tests.AC009_PreparedProofGetterObservesButDoesNotConsume",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskResultV1Tests.AC001_StaleResultHasNoAuthenticatedArchivePath",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskResultV1Tests.AC002_MalformedMarkerDoesNotAuthenticateArchiveSnapshots",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskResultV1Tests.AC003_PostPublicationFaultRetainsOnlyFreshlyAuthenticatedTargetEvidence",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskResultV1Tests.AC009_ArchiveExactCarriesDeclaredClassificationAndRevision",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskResultV1Tests.AC009_AuthenticatedMissingArchiveDirectoryReportsUnreadableInsteadOfThrowing",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskResultV1Tests.AC009_AuthenticatedUnexpectedArchiveForMissingLeafIsReadableMismatch",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskResultV1Tests.AC009_BusyDoesNotProbeOrAuthenticateResult",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskResultV1Tests.AC009_DefensiveSnapshotArrayCopyCannotMutateResult",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskResultV1Tests.AC009_PreparedCarriesFixedExactAndTargetOnlySnapshots",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskResultV1Tests.AC009_ReflectionTargetMutationFailsClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskResultV1Tests.AC009_ReflectionUnknownArchiveClassificationFailsClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_DefaultCommitOrPostcheckAfterIoFaultIsUncertainAndRetainsBarrier(5,0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_DefaultCommitOrPostcheckAfterIoFaultIsUncertainAndRetainsBarrier(5,1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_DefaultCommitOrPostcheckAfterIoFaultIsUncertainAndRetainsBarrier(6,0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_DefaultCommitOrPostcheckAfterIoFaultIsUncertainAndRetainsBarrier(6,1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_DefaultCommitOrPostcheckAfterIoFaultIsUncertainAndRetainsBarrier(7,0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_DefaultCommitOrPostcheckAfterIoFaultIsUncertainAndRetainsBarrier(7,1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_DefaultCommitOrPostcheckAfterIoFaultIsUncertainAndRetainsBarrier(8,0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_DefaultCommitOrPostcheckAfterIoFaultIsUncertainAndRetainsBarrier(8,1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_DefaultPrecommitAfterIoFaultRetainsBarrierAndDoesNotCommit(1,0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_DefaultPrecommitAfterIoFaultRetainsBarrierAndDoesNotCommit(1,1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_DefaultPrecommitAfterIoFaultRetainsBarrierAndDoesNotCommit(2,0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_DefaultPrecommitAfterIoFaultRetainsBarrierAndDoesNotCommit(2,1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_DefaultPrecommitAfterIoFaultRetainsBarrierAndDoesNotCommit(3,0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_DefaultPrecommitAfterIoFaultRetainsBarrierAndDoesNotCommit(3,1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_DefaultPrecommitAfterIoFaultRetainsBarrierAndDoesNotCommit(4,0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_DefaultPrecommitAfterIoFaultRetainsBarrierAndDoesNotCommit(4,1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_SimulatedInterruptionEscapesAndRestartPreservesBytes(1,0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_SimulatedInterruptionEscapesAndRestartPreservesBytes(1,1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_SimulatedInterruptionEscapesAndRestartPreservesBytes(2,0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_SimulatedInterruptionEscapesAndRestartPreservesBytes(2,1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_SimulatedInterruptionEscapesAndRestartPreservesBytes(3,0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_SimulatedInterruptionEscapesAndRestartPreservesBytes(3,1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_SimulatedInterruptionEscapesAndRestartPreservesBytes(4,0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_SimulatedInterruptionEscapesAndRestartPreservesBytes(4,1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_SimulatedInterruptionEscapesAndRestartPreservesBytes(5,0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_SimulatedInterruptionEscapesAndRestartPreservesBytes(5,1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_SimulatedInterruptionEscapesAndRestartPreservesBytes(6,0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_SimulatedInterruptionEscapesAndRestartPreservesBytes(6,1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_SimulatedInterruptionEscapesAndRestartPreservesBytes(7,0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_SimulatedInterruptionEscapesAndRestartPreservesBytes(7,1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_SimulatedInterruptionEscapesAndRestartPreservesBytes(8,0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskSaveFaultV1Tests.AC005_AC006_SimulatedInterruptionEscapesAndRestartPreservesBytes(8,1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC001_IdentityCannotBeUsedTwice",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC001_StaleIdentityDoesNotPublishBarrierOrMoveLeaves",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC002_AC004_ArchivesInvalidBytesAndWritesOnlyExactR0",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC002_MalformedBarrierVariantsFailClosed(\"[]\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC002_MalformedBarrierVariantsFailClosed(\"{}\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC002_MalformedBarrierVariantsFailClosed(\"{\\\"format\\\":\\\"wrong\\\"}\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC004_FullyPreparedBarrierResumesWithoutCreatingAnotherArchive",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC006_ExactPrimaryWithInterruptedTempPreservesTempThenPrepares",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC007_ResumeWithoutBarrierFailsClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC008_BusyDoesNotConsumeIdentity",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC009_CoupledProofLeafAndArchiveMutationStillFailsAgainstMarker",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC009_DefaultResultFailsClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC009_ReflectionCorruptedActiveRoleMappingFailsClosed(0,\"_role\",\"Temp\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC009_ReflectionCorruptedActiveRoleMappingFailsClosed(1,\"_name\",\"profile.json\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC009_ReflectionCorruptedActiveRoleMappingFailsClosed(2,\"_role\",\"Previous\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC009_ReflectionCorruptedPreparedResultFailsClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC009_ReflectionCorruptedPreparedScalarFailsClosed(\"_targetHash\",\"0000000000000000000000000000000000000000000000000000000000000000\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC009_ReflectionCorruptedPreparedScalarFailsClosed(\"_transactionId\",\"00000000000000000000000000000000\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetDiskTransactionV1Tests.AC009_ReflectionCorruptedProofRootFailsClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC001_ActualArchiveJunctionFailsReauthenticationPathWithoutForeignLockCreation",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC001_DisposedIssuerLeaseAndReflectedAuthorityPayloadAreClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC001_DuplicateAndReflectionMutatedProofCannotMintAuthority",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC001_EachLivePreparedRowMutationFailsBeforeProofCas(\"archive\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC001_EachLivePreparedRowMutationFailsBeforeProofCas(\"barrier-temp\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC001_EachLivePreparedRowMutationFailsBeforeProofCas(\"previous\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC001_EachLivePreparedRowMutationFailsBeforeProofCas(\"primary\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC001_EachLivePreparedRowMutationFailsBeforeProofCas(\"temp\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC001_ExactPreparedRowReauthenticatesAndExposesOnlyDefensiveScalars",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC001_ForeignRootRejectsBeforeProofConsumption",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC001_MutatedLiveMarkerFailsWithoutConsumingPreparedProof",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC001_OldPrimaryEqualToDefaultStillReauthenticatesThroughArchiveProof",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC001_PresentDeclaredArchiveMutationFailsBeforeProofCas(\"previous.bin\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC001_PresentDeclaredArchiveMutationFailsBeforeProofCas(\"primary.bin\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC001_PresentDeclaredArchiveMutationFailsBeforeProofCas(\"temp.bin\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC003_ActualRootAndAncestorJunctionsFailPreleaseValidationWithoutForeignLockCreation",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC005_ActualBarrierJunctionFailsClosedWithoutMutatingJunctionTarget",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC005_ActualLockDirectoryAndJunctionFailPreleaseValidationWithoutForeignLockCreation",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC005_AfterActualDeleteFaultRetainsAttemptAndForbidsRetry",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC005_BeforeDeleteFaultAndRealExclusiveMarkerLockDoNotProduceSuccess",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC005_MissingAndDirectoryMarkerAreReloadRequiredNotSuccess",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC006_ArchiveMutationAfterDeleteFailsFinalReprobeWithoutBarrierRecreation",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC006_EachFinalDiskRowMutationRejectsReceiptPrecondition(\"archive-missing\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC006_EachFinalDiskRowMutationRejectsReceiptPrecondition(\"archive-present\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC006_EachFinalDiskRowMutationRejectsReceiptPrecondition(\"barrier-temp\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC006_EachFinalDiskRowMutationRejectsReceiptPrecondition(\"barrier\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC006_EachFinalDiskRowMutationRejectsReceiptPrecondition(\"previous\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC006_EachFinalDiskRowMutationRejectsReceiptPrecondition(\"primary\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC006_EachFinalDiskRowMutationRejectsReceiptPrecondition(\"temp\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC006_ExactFinalRowVerifiesOnlyUnderTheOriginalLiveLease",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC006_FinalDiskProofCannotMintBeforeDeletionOrAfterReflectionCorruption",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Profile.Tests.ProfileResetMemoryAuthorityV1Tests.AC006_FinalDiskProofIsDetachedExactAndDefensivelyCopied",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubMenuIntentHandoffEditModeTests.AC_M5D7QB_001_AllKnownItemsTransferExactlyOnce",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubMenuIntentHandoffEditModeTests.AC_M5D7QB_002_ForeignAndPreRetentionTransfersCloseThePresenter",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubMenuIntentHandoffEditModeTests.AC_M5D7QB_002_UnknownIntentMalformedReceiptAndDuplicateOrUnboundOwnerFailClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubMenuIntentHandoffEditModeTests.AC_M5D7QB_004_PrefabAndRequestSurfaceAreClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubMenuIntentHandoffEditModeTests.AC_M5D7QB_004_ReflectionCorruptionFailsClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_001_And_002_BuilderCreatesAndThenValidatesCanonicalAssets",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_007_MenuLabelsUseExactCenteredNoOverflowProfile",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_008_CanonicalTmpSettingsPassesTypedPrecondition",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"alignment\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"anchor\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"button\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"copy\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"fontSize\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"height\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"height23\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"legacy\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"margin\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"material\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"mixed20\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"mixed22\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"pivot\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"position\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"rotation\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"scale\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"width\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"wrapping\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LabelProfileRejectsIndependentMutation(\"y4\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_LegacyAllFourIsAdmittedOnlyAsACompleteMigrationProfile",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_MigrationFailureRestoresExactAuthoringBytesAndGuids(AfterRefresh)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_MigrationFailureRestoresExactAuthoringBytesAndGuids(AfterReloadValidation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_MigrationFailureRestoresExactAuthoringBytesAndGuids(AfterSave)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_MigrationFailureRestoresExactAuthoringBytesAndGuids(AfterSceneValidation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_MigrationFailureRestoresExactAuthoringBytesAndGuids(BeforeSave)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_MigrationFailureRestoresExactAuthoringBytesAndGuids(BeforeSceneValidation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_Q0OverrideMatrixRejectsIndependentMutation(\"duplicate\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_Q0OverrideMatrixRejectsIndependentMutation(\"extra\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_Q0OverrideMatrixRejectsIndependentMutation(\"missing\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_Q0OverrideMatrixRejectsIndependentMutation(\"wrongPath\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_Q0OverrideMatrixRejectsIndependentMutation(\"wrongReference\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_Q0OverrideMatrixRejectsIndependentMutation(\"wrongTarget\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_Q0OverrideMatrixRejectsIndependentMutation(\"wrongValue\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_SceneOverrideMatrixRejectsIndependentMutation(\"duplicateLatch\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_SceneOverrideMatrixRejectsIndependentMutation(\"duplicateRouter\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_SceneOverrideMatrixRejectsIndependentMutation(\"extraRootTransform\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_SceneOverrideMatrixRejectsIndependentMutation(\"missingLatch\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_SceneOverrideMatrixRejectsIndependentMutation(\"missingRouter\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_SceneOverrideMatrixRejectsIndependentMutation(\"wrongLatch\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_SceneOverrideMatrixRejectsIndependentMutation(\"wrongPath\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_SceneOverrideMatrixRejectsIndependentMutation(\"wrongPresenterValue\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_SceneOverrideMatrixRejectsIndependentMutation(\"wrongRootName\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_SceneOverrideMatrixRejectsIndependentMutation(\"wrongRootReference\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_SceneOverrideMatrixRejectsIndependentMutation(\"wrongRootTransformValue\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_SceneOverrideMatrixRejectsIndependentMutation(\"wrongRouter\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_002_And_010_SceneOverrideMatrixRejectsIndependentMutation(\"wrongTarget\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_007_And_009_CanvasChannelsAreIsolatedAcrossBothCapturePassLabels",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_009_ChannelPredicateRejectsIndependentMissingAndExtraBits(1,\"AFTER_TMP_MISSING_BITS\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_009_ChannelPredicateRejectsIndependentMissingAndExtraBits(16,\"AFTER_TMP_MISSING_BITS\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_009_ChannelPredicateRejectsIndependentMissingAndExtraBits(27,\"AFTER_TMP_EXTRA_BITS\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_009_ChannelPredicateRejectsIndependentMissingAndExtraBits(29,\"AFTER_TMP_EXTRA_BITS\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_009_ChannelPredicateRejectsIndependentMissingAndExtraBits(8,\"AFTER_TMP_MISSING_BITS\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_009_ChannelPredicateRejectsNonChannelCanvasProfileDrift",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_009_CleanupFailureRetainsThePrimaryFault",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_009_FaultsAfterTmpThroughReadbackStillRestoreExactNone(1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_009_FaultsAfterTmpThroughReadbackStillRestoreExactNone(2)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_009_FaultsAfterTmpThroughReadbackStillRestoreExactNone(3)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationAuthoringTests.AC_M5D7QA_009_FaultsAfterTmpThroughReadbackStillRestoreExactNone(4)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationScopeAuditTests.AC_M5D7QA_002_And_010_CanonicalLabelProfileIsBuilderByteNoOp",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.HubPresentation.HubPresentationScopeAuditTests.AC_M5D7QA_002_TmpSettingsBytesAreUnchangedByBuilder",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC001_SourceAloneDeterminesProfileContinuationAcrossPersistenceOutcomes",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC002_ExactOrderAndDisabledContinueRemainStable",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC003_OneInteractableActivationPublishesOneTakeOnly(Continue)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC003_OneInteractableActivationPublishesOneTakeOnly(NewGame)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC003_OneInteractableActivationPublishesOneTakeOnly(Quit)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC003_OneInteractableActivationPublishesOneTakeOnly(Settings)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC004_AbsentNotificationUsesCleanPrimaryReceipt",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC004_AC005_NotificationIsTopRightAndManualOnly",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC004_ForeignNotificationIsRejected",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC004_MissingRequiredNotificationIsRejected",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC004_PersistenceDeferredNotificationUsesFailedSaveReceipt",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC004_PreservationFailureNotificationUsesPreservationOnlyReceipt",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC004_RecoveryCompletedNotificationUsesPreviousReceipt",
+      "Result": "Passed",
+      "Run": "r6-recovery-notice",
+      "XmlSha256": "80107DBA94E17AFB39C84DB1964A64034AD20246C2B10B4111623E85BDA7F7C9"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC005_EachApprovedDismissalSourceClosesVisibleNoticeOnce(Click)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC005_EachApprovedDismissalSourceClosesVisibleNoticeOnce(Submit)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC005_UnknownCommandEnumsLatchFailedAndThrow",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_Consumed_consumedIntent",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_Consumed_consumedIntentProof",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_NestedValueBackings",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_Pending_intent",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_Pending_intentProof",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_Ready_handoff",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_Ready_handoffProof",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_Ready_notification",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_Ready_notificationKind",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_Ready_notificationKindProof",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_Ready_notificationProof",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_Ready_persistedValidProfile",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_Ready_persistedValidProfileProof",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_Ready_state",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_Ready_stateProof",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_Ready_view",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_Ready_viewProof",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC006_ReflectedViewAndControllerProofsFailClosedAtBoundary",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubMenuPresentationControllerV1Tests.AC007_SourceHasNoForbiddenPresentationOrSideEffectAuthority",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_BuilderCreatesTheExactActiveCanonicalPrefab",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_EngineFreeHubMenuPresentationControllerIsNotAComponentWhenAccessible",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_RepairRestoresExactCanonicalBytesAndMeta",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_SecondBuilderRunPreservesCanonicalBytesAndMetaGuids",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsCanonicalComponentOrderWithoutRepair",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsCanonicalMissingScriptWithoutRepair",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsCanonicalPrefabVariantOverrideWithoutRepair",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachAvailableUiOrTmpExtraComponentWithoutRepair",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachExternalForbiddenReferenceWithoutRepair(\"_cameraProviderBehaviour\",\"AcadeGameMaker.Input.Unity.OrdanBossTerminalTransitionRequester\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachExternalForbiddenReferenceWithoutRepair(\"_combat\",\"AcadeGameMaker.Combat.Unity.OrdanBossCombatSimulationDriver\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachExternalForbiddenReferenceWithoutRepair(\"_player\",\"AcadeGameMaker.Movement.PlayerMovementController\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachExternalForbiddenReferenceWithoutRepair(\"_terminalTeardown\",\"AcadeGameMaker.Combat.Unity.OrdanBossTerminalTeardown\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachExternalForbiddenReferenceWithoutRepair(\"_transfer\",\"AcadeGameMaker.Transfer.Unity.TransferSimulationDriver\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachForbiddenExtraComponentWithoutRepair(\"camera\",\"UnityEngine.Camera\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachForbiddenExtraComponentWithoutRepair(\"event-system\",\"UnityEngine.EventSystems.EventSystem\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachForbiddenExtraComponentWithoutRepair(\"gameplay-component\",\"AcadeGameMaker.Transfer.Unity.TransferSimulationDriver\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachForbiddenExtraComponentWithoutRepair(\"presentation-canvas\",\"UnityEngine.Canvas\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachForbiddenExtraComponentWithoutRepair(\"presentation-ui\",\"UnityEngine.UI.Image\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachForbiddenExtraComponentWithoutRepair(\"transition-executor\",\"AcadeGameMaker.Input.Unity.OrdanBossTerminalTransitionRequester\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachReachableCanonicalMutationWithoutRepair(\"adapter-disabled\",\"enabled matrix\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachReachableCanonicalMutationWithoutRepair(\"adapter-router\",\"sibling identity\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachReachableCanonicalMutationWithoutRepair(\"flag\",\"discriminator\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachReachableCanonicalMutationWithoutRepair(\"intent\",\"discriminator\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachReachableCanonicalMutationWithoutRepair(\"latch-adapter\",\"sibling identity\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachReachableCanonicalMutationWithoutRepair(\"latch-disabled\",\"enabled matrix\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachReachableCanonicalMutationWithoutRepair(\"latch-router\",\"sibling identity\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachReachableCanonicalMutationWithoutRepair(\"mode\",\"mode\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsEachReachableCanonicalMutationWithoutRepair(\"router-disabled\",\"enabled matrix\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidatorRejectsForbiddenChildWithoutRepairingCandidate",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC008_ValidCanonicalAssetUsesNoOpBuilderPathWithoutByteOrMetaWrite",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubRuntimeAuthoringBuilderEditModeTests.AC011_HubAuthoringStaticScopeHasNoSecondUiOwnerOrParentFolderWrite",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubUiOnlyQ0ScopeAuditEditModeTests.AC011_ActualRepositoryManifestClassifiesTheExactQ0DeltaWithoutFolderInference",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubUiOnlyQ0ScopeAuditEditModeTests.AC011_ActualRepositoryManifestPermitsOnlyIndividuallyNamedQ0Metas",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubUiOnlyQ0ScopeAuditEditModeTests.AC011_EvidenceBackedHistoricalSourcesAndPinnedC2C2RSuccessorsMatchTheirSeparateManifests",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.HubUiOnlyQ0ScopeAuditEditModeTests.AC011_StaticProductionAuditFindsOneGeneratedSubscriberAndOneSemanticSource",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.UiSemanticFrameV1Tests.AC006_AC007_MalformedPairsAndEveryCheckedSuccessorAxisFailBeforeDelivery",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.UiSemanticFrameV1Tests.AC006_BaselineDuplicateConsecutiveAndCleanExitAreExact",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.UiSemanticFrameV1Tests.AC006_ForeignSkipAndFirstNonUiFailOrCloseExactly",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.UiSemanticFrameV1Tests.AC006_ReplayEpochJumpSourceFaultAndSuccessorOverflowFailBeforeDelivery",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.InputUnity.UiSemanticFrameV1Tests.AC007_FrameAndCursorProofBackingsFailClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC001_FirstSaveWritesExactBytesAndLeavesNoTemp",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC002_InjectedPortPreservesRequiredCommitPrefixOrder",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC002_ReplacementPreservesExactOldPrimary",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC003_AC005_UnexpectedFaultEscapesAndReleasesLease(\"unexpected-open\",False)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC003_AC005_UnexpectedFaultEscapesAndReleasesLease(\"unexpected-presence\",True)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC003_FatalFaultEscapesAndReleasesLease",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC003_InjectedPrecommitFailuresNeverCommit(\"close\",TempWriteFlushClose)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC003_InjectedPrecommitFailuresNeverCommit(\"ensure\",DirectoryPreparation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC003_InjectedPrecommitFailuresNeverCommit(\"flush\",TempWriteFlushClose)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC003_InjectedPrecommitFailuresNeverCommit(\"temp-corrupt\",TempReadValidation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC003_InjectedPrecommitFailuresNeverCommit(\"temp-read\",TempReadValidation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC003_InjectedPrecommitFailuresNeverCommit(\"write\",TempWriteFlushClose)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC004_CommitAndPostCommitFaultsAreUncertainWithoutFallback(\"move\",CommitCall)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC004_CommitAndPostCommitFaultsAreUncertainWithoutFallback(\"post-corrupt\",PostCommitValidation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC004_CommitAndPostCommitFaultsAreUncertainWithoutFallback(\"post-missing\",PostCommitValidation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC004_CommitAndPostCommitFaultsAreUncertainWithoutFallback(\"post-old-primary\",PostCommitValidation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC004_CommitAndPostCommitFaultsAreUncertainWithoutFallback(\"post-previous-mismatch\",PostCommitValidation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC004_CommitAndPostCommitFaultsAreUncertainWithoutFallback(\"post-temp-remains\",PostCommitValidation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC004_CommitAndPostCommitFaultsAreUncertainWithoutFallback(\"replace\",CommitCall)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC005_EachNonCurrentExistingPrimaryBlocksCommit(\"input-recovery\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC005_EachNonCurrentExistingPrimaryBlocksCommit(\"unreadable\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC005_EachNonCurrentExistingPrimaryBlocksCommit(\"unsupported\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC005_InvalidExistingPrimaryAndStaleTempStopBeforeReplace",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC005_PresenceAccessErrorIsUnreadableAndNeverCommits",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC006_ArgumentsRejectBeforeAnyPortIo",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC007_AliasesAndWaitersSerializeAndFinalLeaseIsRemoved",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC008_ResultInvariantsAndSourceByteOwnershipFailClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC009_ProductionSourceUsesRequiredBclTransactionWithoutFallback",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileAtomicSaveServiceV1Tests.AC010_DifferentDirectoriesProceedWithoutSharedDirectoryLock",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileBindingApplyFailureRecoveryPlannerV1Tests.AC001_AC002_PrimaryAndPreviousResetOnlyInputWithExactSingleIncrement",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileBindingApplyFailureRecoveryPlannerV1Tests.AC003_RevisionBoundariesAreExactAndOverflowDoesNotPoisonFollowingCall",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileBindingApplyFailureRecoveryPlannerV1Tests.AC004_InapplicableAndMalformedSourcesHaveClosedBoundary",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileBindingApplyFailureRecoveryPlannerV1Tests.AC005_NewProofKindsAndAllGettersFailClosedUnderReflectionMutation",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileBindingApplyFailureRecoveryPlannerV1Tests.AC006_AC007_ExistingReasonsRemainNumericAndPlannerHasNoApplyOrIoAuthority",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileBindingOverridesJsonTests.AC001_EmptySentinelAndDefaultBoundariesAreExact",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileBindingOverridesJsonTests.AC002_MaxDepth64IsAcceptedAndDepth65IsRejected",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileBindingOverridesJsonTests.AC002_RecursiveOrdinalSortingAndDecodedDuplicatesAreStrict",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileBindingOverridesJsonTests.AC003_CustomStringEscapingAndUnicodeValidationAreExact",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileBindingOverridesJsonTests.AC004_Binary64AppendixThresholdAndCultureGoldensAreExact",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileBindingOverridesJsonTests.AC005_IdempotenceHashAndPublicRevalidationAreStrict",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileBindingOverridesJsonTests.AC006_StaticProfileBoundaryUsesStrictParserAndCustomCanonicalization",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalDecoderV1Tests.AC001_CurrentDefaultExtractionAndSolidarityDocumentsRoundTripExactly",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalDecoderV1Tests.AC002_MetadataMismatchRetainsDocumentAndNonInputProjection(\"7c8d9e0f1a2b4c3d8e9f0a1b2c3d4e5f\",0,BindingSchemaMismatch)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalDecoderV1Tests.AC002_MetadataMismatchRetainsDocumentAndNonInputProjection(\"7c8d9e0f1a2b4c3d8e9f0a1b2c3d4e5f\",2,BindingSchemaMismatch)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalDecoderV1Tests.AC002_MetadataMismatchRetainsDocumentAndNonInputProjection(\"7c8d9e0f1a2b4c3d8e9f0a1b2c3d4e5f\",int.MaxValue,BindingSchemaMismatch)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalDecoderV1Tests.AC002_MetadataMismatchRetainsDocumentAndNonInputProjection(\"different-id\",1,AssetIdMismatch)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalDecoderV1Tests.AC002_MetadataMismatchRetainsDocumentAndNonInputProjection(\"different-id\",2,AssetIdMismatch, BindingSchemaMismatch)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalDecoderV1Tests.AC003_AC004_LexicalSchemaAndDepthFailuresAreTypedWithoutDataExceptions",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalDecoderV1Tests.AC003_ParseableUniqueUnsupportedSchemasReturnExactVersion(-1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalDecoderV1Tests.AC003_ParseableUniqueUnsupportedSchemasReturnExactVersion(0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalDecoderV1Tests.AC003_ParseableUniqueUnsupportedSchemasReturnExactVersion(2)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalDecoderV1Tests.AC003_ParseableUniqueUnsupportedSchemasReturnExactVersion(int.MaxValue)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalDecoderV1Tests.AC005_AC006_OuterCanonicalPrecedesInnerBindingRecoveryAndIntegrityShape",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalDecoderV1Tests.AC006_AC007_DefensiveInputDefaultBypassAndGetterAvailabilityReject",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalDecoderV1Tests.AC007_BindingCombinedReasonsAndProjectionCollectionsAreDefensive",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalDecoderV1Tests.AC007_LunaResultNeutralFieldsProjectionMatchAndUnavailableGetterMatrix",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalDecoderV1Tests.AC008_RuntimeIsEngineFreeAndHasNoPersistenceOrInputApplyAuthority",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalEncoderTests.AC001_AC002_GoldenPayloadUsesExactFixedOrderEnumsNullsAndInvariantIntegers",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalEncoderTests.AC001_AC006_DefaultAndReflectionBypassNestedSnapshotDocumentHashAndBytesReject",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalEncoderTests.AC002_AC003_OverridesOuterEscapeAndCultureDoNotChangeExactBytes",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalEncoderTests.AC002_MismatchedInputCandidatesEncodeExactFieldsWithoutFallbackOrDerivedMetadata(0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalEncoderTests.AC002_MismatchedInputCandidatesEncodeExactFieldsWithoutFallbackOrDerivedMetadata(2)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalEncoderTests.AC002_MismatchedInputCandidatesEncodeExactFieldsWithoutFallbackOrDerivedMetadata(int.MaxValue)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalEncoderTests.AC004_HashAndFinalFileAreExactLowercaseUtf8WithoutBomOrNewline",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileCanonicalEncoderTests.AC005_AC006_SourceCollectionsAndReturnedArraysAreDefensiveAndRepeatedEncodingIsIdempotent",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC001_MetadataRecoveryReplacesPrimaryAndPreservesExactPrevious",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC002_BindingRecoveryUsesRepairWithoutUnavailableCompatibilityGetter",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC003_AC004_InvalidProofAndChangedPrimaryFailBeforeReplacement",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC004_FreshPrimaryMismatchTableNeverReplacesOrMoves(\"classification\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC004_FreshPrimaryMismatchTableNeverReplacesOrMoves(\"current\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC004_FreshPrimaryMismatchTableNeverReplacesOrMoves(\"invalid\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC004_FreshPrimaryMismatchTableNeverReplacesOrMoves(\"missing\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC004_FreshPrimaryMismatchTableNeverReplacesOrMoves(\"overflow\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC004_FreshPrimaryMismatchTableNeverReplacesOrMoves(\"revision\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC004_FreshPrimaryMismatchTableNeverReplacesOrMoves(\"unsupported\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC005_RecoveryPrecommitFaultsNeverReplaceOrMove(\"close\",\"TempWriteFlushClose\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC005_RecoveryPrecommitFaultsNeverReplaceOrMove(\"ensure\",\"DirectoryPreparation\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC005_RecoveryPrecommitFaultsNeverReplaceOrMove(\"flush\",\"TempWriteFlushClose\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC005_RecoveryPrecommitFaultsNeverReplaceOrMove(\"source-read\",\"ExistingPrimaryValidation\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC005_RecoveryPrecommitFaultsNeverReplaceOrMove(\"temp-read\",\"TempReadValidation\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC005_RecoveryPrecommitFaultsNeverReplaceOrMove(\"write\",\"TempWriteFlushClose\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC006_RecoveryCommitAndPostFaultsAreUncertainWithoutFallback(\"post-previous\",\"PostCommitValidation\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC006_RecoveryCommitAndPostFaultsAreUncertainWithoutFallback(\"post-primary\",\"PostCommitValidation\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC006_RecoveryCommitAndPostFaultsAreUncertainWithoutFallback(\"post-temp\",\"PostCommitValidation\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC006_RecoveryCommitAndPostFaultsAreUncertainWithoutFallback(\"replace\",\"CommitCall\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC007_SuccessPortOrderUsesOneReplaceAndPreservesCapturedPrimary",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC008_OrdinaryAndRecoveryShareAliasLeaseWithRegisteredWaiters",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC009_InvalidPresenceUnexpectedAndFatalEscapeAndReleaseSharedLease",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC009_ResultAndSourceBoundariesFailClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputRecoveryAtomicSaveServiceV1Tests.AC010_StaticBoundaryRetainsOrdinarySaveAndOneSharedPortRegistry",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputSnapshotTests.AC001_CurrentMetadataAndOverridesAreExactAndStructuralInvalidsReject",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputSnapshotTests.AC002_CompatibilityFlagsUseExactOrdinalCultureIndependentComparison",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputSnapshotTests.AC003_BindingSchemaValuesRemainStructuralButMismatched",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputSnapshotTests.AC004_DefaultBypassNestedInvalidAndEveryGetterThrow",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileInputSnapshotTests.AC005_ConstantsMatchMetaAndDoNotConfuseOuterSchema",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchObservationAdapterV1Tests.AC001_ThreeMissingLeavesProduceRoleExactMissingWithoutReads",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchObservationAdapterV1Tests.AC002_AllFiveDecoderClassificationsArePreservedForEveryRole",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchObservationAdapterV1Tests.AC003_RealMixedFixtureAndPortOrderRemainObservationOnly",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchObservationAdapterV1Tests.AC004_ProbeAndReadRecoverableFaultsArePerRole(\"profile.json\",Primary)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchObservationAdapterV1Tests.AC004_ProbeAndReadRecoverableFaultsArePerRole(\"profile.prev.json\",Previous)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchObservationAdapterV1Tests.AC004_ProbeAndReadRecoverableFaultsArePerRole(\"profile.tmp.json\",Temp)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchObservationAdapterV1Tests.AC005_EmptyIsDecodedInvalidAndProtocolViolationsEscapeBeforeBatch",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchObservationAdapterV1Tests.AC006_ReturnedCandidatesDoNotExposeInjectedByteMutation",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchObservationAdapterV1Tests.AC007_AC008_PathBatchAndUnexpectedFailuresFailClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchObservationAdapterV1Tests.AC009_AC010_SourceIsReadOnlyFixedLeafAndHasNoLeaseAuthority",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchPreservationExecutorV1Tests.AC001_NoIntentReturnsThreeNotRequiredWithoutPortCall",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchPreservationExecutorV1Tests.AC002_ResolvedOutcomesForwardExactArgumentsInOrder",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchPreservationExecutorV1Tests.AC003_BothStopOutcomesAtEveryRoleCloseExactPrefix",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchPreservationExecutorV1Tests.AC003_LaterNoneRemainsNotRequiredAfterEarlierStop",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchPreservationExecutorV1Tests.AC004_RealFilesUseExactRecoveryNamesAndDoNotRewriteSources",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchPreservationExecutorV1Tests.AC004_UnreadableIntentIsForwardedDeterministically",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchPreservationExecutorV1Tests.AC005_InvalidInputsAndSemanticMismatchMakeZeroCalls",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchPreservationExecutorV1Tests.AC005_ReflectionCorruptedSelectionFieldsMakeZeroCalls",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchPreservationExecutorV1Tests.AC006_ProtocolViolationsAndExceptionsStopAndNextExecuteWorks",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchPreservationExecutorV1Tests.AC007_EveryResultBackingFieldMutationFailsClosedFromGetter",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLaunchPreservationExecutorV1Tests.AC008_StaticBoundaryHasOneStatelessDelegationAndNoForbiddenAuthority",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLoadSelectorV1Tests.AC001_CurrentPrimaryAlwaysWinsOverEveryPreviousAndHigherTemp",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLoadSelectorV1Tests.AC002_PrimaryMetadataAndBindingRecoveryUseExactInputRepair",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLoadSelectorV1Tests.AC003_UnusablePrimaryPromotesCurrentPrevious",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLoadSelectorV1Tests.AC004_UnusablePrimaryPromotesInputRecoverablePrevious",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLoadSelectorV1Tests.AC005_EveryUnselectablePrimaryPreviousCrossProductDefaultsAndIgnoresTemp",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLoadSelectorV1Tests.AC006_TempExistenceAloneControlsStaleTempIntent",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLoadSelectorV1Tests.AC007_PreservationReasonsAreRoleExactAndIndependentOfWinner",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLoadSelectorV1Tests.AC008_CandidatePlanGetterRoleAndReflectionMisuseFailClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLoadSelectorV1Tests.AC009_RevisionBoundariesAndDeterminismAreExact",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileLoadSelectorV1Tests.AC010_RuntimeIsEngineFreeAndHasNoLoadExecutionAuthority",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileProgressionSnapshotTests.AC001_RevisionAndApprovedSeedValuesAreExactAtConstructionAndRevalidation(-1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileProgressionSnapshotTests.AC001_RevisionAndApprovedSeedValuesAreExactAtConstructionAndRevalidation(101)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileProgressionSnapshotTests.AC001_RevisionAndApprovedSeedValuesAreExactAtConstructionAndRevalidation(202)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileProgressionSnapshotTests.AC001_RevisionAndApprovedSeedValuesAreExactAtConstructionAndRevalidation(303)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileProgressionSnapshotTests.AC001_RevisionAndApprovedSeedValuesAreExactAtConstructionAndRevalidation(404)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileProgressionSnapshotTests.AC002_NoChoiceAndBothExactPairsProjectWithoutPartialOrInvalidFallback",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileProgressionSnapshotTests.AC003_AllConsentValuesArePreservedWithoutPairConsentInferenceOrTransitions",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileProgressionSnapshotTests.AC004_CompletedBranchesAreCanonicalUniqueAndDefensivelyCopied",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileProgressionSnapshotTests.AC005_DefaultAndBypassedValuesThrowRatherThanMasqueradingAsNoChoice",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileProgressionSnapshotTests.AC006_ProfileRuntimeStaysEngineFreeAndOmitsPersistenceAuthority",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC001_InvalidPrimaryMovesExactBytesToExactUtcHashName",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC002_AllReasonFamiliesAndNoHashNamesAreExact",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC003_CollisionAllocationUsesSmallestOrdinalAndCheckedFailureBeforeMove",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC003_UnreadableRolesUseNoHashOnlyWithUnreadableProof(Previous,UnreadablePrevious,\"profile.prev.json\",\"previous\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC003_UnreadableRolesUseNoHashOnlyWithUnreadableProof(Primary,UnreadablePrimary,\"profile.json\",\"primary\")",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC004_ClassificationOnlyRevalidationRejectsChangedOrMismatchedSource",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC005_AC006_ClosedFailureMatrixMapsRecoverableFaults(\"allocate\",FailedBeforeMove,DestinationAllocation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC005_AC006_ClosedFailureMatrixMapsRecoverableFaults(\"ensure\",FailedBeforeMove,RecoveryDirectoryPreparation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC005_AC006_ClosedFailureMatrixMapsRecoverableFaults(\"hash-io\",FailedBeforeMove,DestinationAllocation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC005_AC006_ClosedFailureMatrixMapsRecoverableFaults(\"missing\",SourceMissing,SourceRevalidation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC005_AC006_ClosedFailureMatrixMapsRecoverableFaults(\"move\",MoveOutcomeUncertain,MoveCall)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC005_AC006_ClosedFailureMatrixMapsRecoverableFaults(\"post\",MoveOutcomeUncertain,PostMoveValidation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC005_AC006_ClosedFailureMatrixMapsRecoverableFaults(\"presence-access\",FailedBeforeMove,SourceRevalidation)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC007_ArgumentsAndMalformedResultFailBeforeIo",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC008_ResultStatesAndPostDigestDetectTampering",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC009_ResultProofRejectsEveryForgedDestinationIdentityField",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC009_UnexpectedAndFatalFaultsEscapeAndReleaseLease",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileQuarantineServiceV1Tests.AC010_AliasesSerializeWhileDifferentRootsProceedAndSourceHasNoEngineAuthority",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileRecoveryPlannerV1Tests.AC001_DefaultBootstrapIsExactCurrentCompatibleAndIdempotent",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileRecoveryPlannerV1Tests.AC002_AC003_BindingRecoveryFormsAndFullProgressionCollectionsArePreserved",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileRecoveryPlannerV1Tests.AC002_AC006_InputRepairPreservesNonInputAndReplacesEntireInput(\"7c8d9e0f1a2b4c3d8e9f0a1b2c3d4e5f\",0)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileRecoveryPlannerV1Tests.AC002_AC006_InputRepairPreservesNonInputAndReplacesEntireInput(\"other\",1)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileRecoveryPlannerV1Tests.AC002_AC006_InputRepairPreservesNonInputAndReplacesEntireInput(\"other\",2)",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileRecoveryPlannerV1Tests.AC003_PreviousPromotionPreservesCurrentOverrideAndRepairsRecoverySources",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileRecoveryPlannerV1Tests.AC004_AC005_OverflowAndClassificationMisuseHaveExactEntryFailures",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileRecoveryPlannerV1Tests.AC004_RevisionBoundariesApplyToEveryApplicableClassification",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileRecoveryPlannerV1Tests.AC007_ReasonClosureAndReflectionBypassPlansFailClosed",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileRecoveryPlannerV1Tests.AC008_StaticBoundaryStoresNoSourceBytesOrIoAuthority",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileResetBarrierInterceptionV1Tests.AC004_AC007_HeldRootEntryPointsRejectDisposedLeaseBeforeProfileIo",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileResetBarrierInterceptionV1Tests.AC004_AC007_HeldRootEntryPointsRejectWrongRootBeforeProfileIo",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileResetBarrierInterceptionV1Tests.AC004_HeldRootOperationLockReturnsBusyAndDoesNotMutateFiles",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileResetBarrierInterceptionV1Tests.AC007_AnyCommittedBarrierBlocksOrdinaryLoadAndSaveBeforePreviousRecovery",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileResetBarrierInterceptionV1Tests.AC007_BarrierDirectoryIsTerminalAndCannotFallThroughToPrevious",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileResetBarrierInterceptionV1Tests.AC007_GuardedTwoArgumentInputRecoveryIsBlockedByBarrier",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileSettingsTutorialSnapshotsTests.AC001_SettingsPreserveExactModesVolumesAndInvertFlagsAndRejectInvalidValues",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileSettingsTutorialSnapshotsTests.AC002_TutorialIdsRequireSurrogateSafeNfcOrdinalCanonicalValuesWithoutRepair",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileSettingsTutorialSnapshotsTests.AC003_TutorialCollectionsAreDefensivelyCopiedFromSourceAndOnEveryGetter",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileSettingsTutorialSnapshotsTests.AC004_DefaultAndConstructorBypassValuesAreRejectedByEveryPublicGetter",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    },
+    {
+      "Name": "AcadeGameMaker.Tests.EditMode.Profile.ProfileSettingsTutorialSnapshotsTests.AC005_RuntimeSourceStaysEngineFreeAndSurrogateScanPrecedesNormalization",
+      "Result": "Passed",
+      "Run": "r4-edit-regression",
+      "XmlSha256": "4DFF58576D5329BA6C8A1D0264FBA41C0090763E9D2162FCBE7FA65E11594284"
+    }
+  ]
+}
