@@ -1,0 +1,28 @@
+{
+  "Trace": "AC-M5D7QC3-001/004/008/009 partial lower evidence; AC-M5D7QC3L regression only",
+  "Selector": "^AcadeGameMaker\\.Tests\\.EditMode\\.InputUnity\\.(?:ProfileNewGameConfirmationV1Tests|ProfileNewGameObservationLeaseV1Tests)\\.",
+  "ExpectedCount": 21,
+  "ExpectedQualifiedNames": [
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC001_NoConfirmationCaptureMintsOneOpaqueRequestAndOneReciprocalCommit",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC001_ProjectionCorruptionAndImpossibleResolutionFailClosed",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC001_ReflectedCaptureResultFieldsOrCloneCannotAuthenticateRecapture",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC004_ActualSameLeaseEvidenceRecapturesAsTheSameIdentity",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC004_AllThreeActualLeafProjectionsAreRequiredForFreshComparison",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC004_ChangedActualLeafRequiresFreshDecisionAndForeignEvidenceFailsClosed",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC004_ChangedAmbiguousActualRecaptureReturnsNoRequest",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC004_ConfirmedRecaptureMintsOnlyTheFreshActualCapture",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC008_ClosedReservationCannotRollbackOrComplete",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameConfirmationV1Tests.AC008_ReservedProjectionOrRootCorruptionClosesTheOriginalRequest",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC001_ForeignRealReceiptAndActionsCannotReturnOriginalRoot",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC001_PredecessorBodiesReconstructToAcceptedR36Fingerprints",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC002_ActualHeldLockReleasedEarlyCapturesBeforeDeadline",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC002_ActualHeldLockTimesOutOnlyThroughLowerBusy",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC003_BarrierFileAndDirectoryAreUnreadableWithoutMutation",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC003_HeldPrimaryReadFailureIsUnreadableAndPreservesBytes",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC003_ObservationRejectsRelativeAndFilesystemRootWithoutWrites",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC003_OnlyActualObservationTimeoutIssuerAuthenticatesProvenance",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC003_RootFileAndLockDirectoryAreUnreadableWithoutCaptureEvidence",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC004_ActualCaptureIsIssuedAndReflectionCorruptionFailsClosed",
+    "AcadeGameMaker.Tests.EditMode.InputUnity.ProfileNewGameObservationLeaseV1Tests.AC004_CaptureLeafAndProjectionReflectionCorruptionFailsClosed"
+  ]
+}

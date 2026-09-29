@@ -1,0 +1,25 @@
+{
+  "Trace": "REQ-M5D7QC3-001/005/007; AC-M5D7QC3-001/006/009/010",
+  "ActualModel": "gpt-6-sol",
+  "ChangedPaths": [
+    "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/NewGameConfirmationOwnerPlayModeTests.cs"
+  ],
+  "BeforeSHA256": "FC431157BEBF276EDA2C36ACF7682E2C3144A999AF39A18375D492B1D0D116A2",
+  "AfterSHA256": "6A3FB8BE37AE8644E446AA04FAE63D4BF75469C4DA704D253D146E715D086FEF",
+  "EditUnchanged": true,
+  "ExpectedLedgerEntirelyEqual": true,
+  "ExpectedRows": 377,
+  "MatrixCases": 91,
+  "EditCount": 240,
+  "PlayCount": 15,
+  "Diff": {
+    "CommonPrefixCharacters": 37188,
+    "CommonSuffixCharacters": 4436,
+    "Before": "if (_recovered) { Publish(Key.Enter); PresenterFixed(); Publish(); PresenterFixed(); }\n                else { Publish(Key.DownArrow); PresenterFixed(); Publish(); PresenterFixed(); }\n                Publish(Key.Enter); Assert.That(Router.CurrentUiFrame.Value.SubmitPressed,Is.True); PresenterFixed(); Late();\n                Assert.That(HandoffState,Is.EqualTo(\"RequestReady\"),\"actual UI selection reaches Q-B\"",
+    "After": "Publish();\n                if (_recovered) { Publish(Key.Enter); PresenterFixed(); Publish(); PresenterFixed(); }\n                else\n                {\n                    Publish(Key.DownArrow);\n                    Assert.That(Router.CurrentUiFrame.Value.NavigateChanged,Is.True);\n                    Assert.That(Router.CurrentUiFrame.Value.NavigateYQ4096,Is.LessThan(0));\n                    PresenterFixed(); Publish(); PresenterFixed();\n                }\n                Publish(Key.Enter); Assert.That(Router.CurrentUiFrame.Value.SubmitPressed,Is.True); PresenterFixed(); Late();\n                Assert.That(HandoffState,Is.EqualTo(\"RequestReady\"),\"actual UI selection reaches Q-B\");\n                var requestType=Hub(\"HubMenuIntentRequestV1\");\n                var actualRequest=Opaque(SnapshotField(HandoffOwner,HandoffType,\"_request\",typeof(Nullable<>).MakeGenericType(requestType)),requestType);\n                Assert.That((HubMenuItemV1)SnapshotField(actualRequest,requestType,\"_item\",typeof(HubMenuItemV1)),Is.EqualTo(HubMenuItemV1.NewGame)"
+  },
+  "UnityExecuted": false,
+  "CompileExecuted": false,
+  "GitExecuted": false,
+  "Accepted": false
+}

@@ -1,0 +1,49 @@
+{
+  "Name": "input-editmode",
+  "OriginalRsp": "Library/Bee/artifacts/1900b0aE.dag/AcadeGameMaker.Input.Unity.EditMode.Tests.rsp",
+  "OriginalSha": "EA6E5A3CD8123C6699B88CF368A0C40F90B0D11806C0B1D4A72E7576893A0AE2",
+  "ModifiedRsp": "artifacts/c3-upper-local-compile-r4/input-editmode.rsp",
+  "ModifiedSha": "BC4699DCFBD6CA34DFB72260F22DEDF875F81AFC220909B8BF503ADDC714C706",
+  "Executable": "C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/DotNetSdk/dotnet.exe",
+  "Arguments": [
+    "C:/Program Files/Unity/Hub/Editor/6000.6.0f1/Editor/Data/DotNetSdk/sdk/8.0.318/Roslyn/bincore/csc.dll",
+    "@artifacts/c3-upper-local-compile-r4/input-editmode.rsp"
+  ],
+  "WorkingDirectory": "C:\\Users\\me\\Documents\\GPT-workspace\\AcadeGameMaker",
+  "Inputs": [
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubMenuPresentationControllerV1Tests.cs",
+      "SHA256": "40AA974BF8407A6FD2AAE57830256F04599AF1A835F708999BDC10F332061699"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubRuntimeAuthoringBuilderEditModeTests.cs",
+      "SHA256": "E853B2A777B86E9F70AF4B06FED7427DB7A9DF0710A1BD3F3B311EAD3F1D122D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubUiOnlyQ0ScopeAuditEditModeTests.cs",
+      "SHA256": "C27116AC35BF83D4AB8794FA9D3E379AD6F127B0E52B48C51399F49ADDF862D4"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/ProfileNewGameConfirmationV1Tests.cs",
+      "SHA256": "F80D57376F3845E16BB3D347CFB3834ACE8FCCB53F539376D880A844A90F9581"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/ProfileNewGameObservationLeaseV1Tests.cs",
+      "SHA256": "E899F8531763CD47BE3366619A31CD91700F65EF6B2770339728B59E66E1E1AA"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/UiSemanticFrameV1Tests.cs",
+      "SHA256": "000044B22F846550EC8DD6E92BD949E6BC1FAF257EA83719A3983C54A529BE4B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/NewGameConfirmationOwnerV1Tests.cs",
+      "SHA256": "753996EB6979EF739AEDA26CFAD31EF57F91280F8E12C10E44B46BC0344E68F8"
+    }
+  ],
+  "Log": "artifacts/c3-upper-local-compile-r4/input-editmode.log",
+  "LogSHA": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "Exit": 0,
+  "OutputDll": "artifacts/c3-upper-local-compile-r4/AcadeGameMaker.Input.Unity.EditMode.Tests.dll",
+  "OutputSha": "77EB09897FB2465AF41918AAAAD5E21082888442B7F35CA67EB11820E963983B",
+  "Limitation": "기존 Bee 의존 참조에 대한 독립 컴파일. Unity 실행과 XML 출력 확인 아님."
+}

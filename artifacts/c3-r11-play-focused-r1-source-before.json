@@ -1,0 +1,3543 @@
+{
+  "Trace": "AC-M5D7QC3L-001..005 / AC-M5D7QC3-001/009/010",
+  "CapturedAt": "2026-09-29T13:59:00.5119760+09:00",
+  "Count": 884,
+  "Files": [
+    {
+      "Path": "artifacts/c2-r36-source-before.json",
+      "Sha256": "2CAB80CC20A01165778905F67161866906F439C6E5AAFC5E316D1813628F5EA4"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker.meta",
+      "Sha256": "75B32963C5AF25FAE39F1AFC381CA265D79063E8D77BE10F87EC1767341806AD"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor.meta",
+      "Sha256": "5FD1A34FBD6386E2FF4B2B6203FCA97FE2CB9FCF0B613F26E90BCCB9F77A2A46"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CameraAuthoring.meta",
+      "Sha256": "A015A3FA354A28E278B9B7349C4F0A1B3923AAC42E469AF63EBF301D4CD570BE"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CameraAuthoring/AcadeGameMaker.Camera.Authoring.Editor.asmdef",
+      "Sha256": "3E9620FE6DA137BD66789C59C6D7B65AD4945DF4FCBF1A914FD084118C8877AA"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CameraAuthoring/AcadeGameMaker.Camera.Authoring.Editor.asmdef.meta",
+      "Sha256": "A5F0C3C11F3D9C682C68A3652971046DCFE8CFF438FB56412C2AFC9F7D132CC4"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CameraAuthoring/AssemblyInfo.cs",
+      "Sha256": "A7975BADB51872588BEB7321B5CB2792C7725803282912B0E04A71C0A0968529"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CameraAuthoring/AssemblyInfo.cs.meta",
+      "Sha256": "773E4B45A5D5618AB716D5A56CC3337C5C6558F9C66A1A3A0FF88E9CB01D92F2"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CameraAuthoring/SimulationCameraProfileAuthoring.cs",
+      "Sha256": "132156CFC32FD71A712673C9F6CA0D3BC3363717BBAC7A7C280279B29E4E6A71"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CameraAuthoring/SimulationCameraProfileAuthoring.cs.meta",
+      "Sha256": "F11749AD0A2D6B8A68B0F5F4348EAEE70D5684863C1A1E06B1FC6E9572AC617C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CombatAuthoring.meta",
+      "Sha256": "0CB5715AEB71E91CD4DB83BD869ED633A83AFC8443A6BC3542C02A41EC8C5982"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CombatAuthoring/AcadeGameMaker.Combat.Authoring.Editor.asmdef",
+      "Sha256": "C94953BFE99845147A446054AB2608C41A15CFDEECC3362687EAAFC33589A43E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CombatAuthoring/AcadeGameMaker.Combat.Authoring.Editor.asmdef.meta",
+      "Sha256": "F5C680A88BA0BCA59767263E76BCFDD109AF75571C070A3D3700F4609894129F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CombatAuthoring/AssemblyInfo.cs",
+      "Sha256": "56B56A9AADE4BEF060B05AB435FCB1FAC3C76BECD5E4B380392B7064C25E640F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CombatAuthoring/AssemblyInfo.cs.meta",
+      "Sha256": "9841A272A52DE975B1CBD06AED260C22675414A4D9FA875E5E15E3E1294866CB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CombatAuthoring/OrdanBossEncounterAuthoringBuilder.cs",
+      "Sha256": "2AEA4CE24A2BDA73B7C22BE56854C497AD807BFB3A1B25085871CA0FCA4759C3"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CombatAuthoring/OrdanBossEncounterAuthoringBuilder.cs.meta",
+      "Sha256": "5220CF23A3CF514A667CBDE8E6BB99A05EBDBA8882D0E659F2E61DAE9BC7337B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CombatAuthoring/OrdanBossEncounterAuthoringValidator.cs",
+      "Sha256": "B759E9D2129EEE29F4E4214B2FC350070BE091A5E10C5819D827EDBD494538C8"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CombatAuthoring/OrdanBossEncounterAuthoringValidator.cs.meta",
+      "Sha256": "3402D2BA6E2A3189434173BF8C909CAF37B1071B9418FBF72A2C30EEC8B6C7D2"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CombatAuthoring/RegularEnemyEncounterAuthoringBuilder.cs",
+      "Sha256": "1668C043AC46E493A73C1A3BD3F7308293E83634B6C647076C61DD4DC82FDD4B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CombatAuthoring/RegularEnemyEncounterAuthoringBuilder.cs.meta",
+      "Sha256": "50E9CC977BF5064CEFBCE3F596C7615C59CD5E62A5BE15D295C3AA15BDCFF0D4"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CombatAuthoring/RegularEnemyEncounterAuthoringValidator.cs",
+      "Sha256": "C792279F0112840E303F6A02F6B444670857FC0737167BAB927508F5F8DD7223"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/CombatAuthoring/RegularEnemyEncounterAuthoringValidator.cs.meta",
+      "Sha256": "BC74EAC7366A7A528AF69D6B7A2329F027DFB26ED19499FE36A147A3DEAE4533"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring.meta",
+      "Sha256": "A3539C6B6B0594852E4C779DF110B0E20B092A108FB8FDCB4429EC798DF6B5FC"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/AcadeGameMaker.Hub.Authoring.Editor.asmdef",
+      "Sha256": "5F66B114B04A8B12D6E7A852D6297C6D01EEB695FC942300C3CB412F9E754E4C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/AcadeGameMaker.Hub.Authoring.Editor.asmdef.meta",
+      "Sha256": "783010E056140DC9E9D4717AF5E6F873C02CFD9563D1BDB554C300E3873BB50D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/AssemblyInfo.cs",
+      "Sha256": "67F8C19E30E0351CB725493E7FB3D794E6EBB5786EC8851660B3525AEA9F1320"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/AssemblyInfo.cs.meta",
+      "Sha256": "DE2EDAC181EE011D1CC6A358557D486B5464480A4F6EB175CDD75D05E023D6EB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubPresentationAuthoringBuilder.cs",
+      "Sha256": "ECC1F74B3ACE02D2F770A1DD32893E8CD3C851551107EAA512CE021FBA5AA7F7"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubPresentationAuthoringBuilder.cs.meta",
+      "Sha256": "9EFA53F583E154B7A80374BEEE8F01D3E6813707CDAE7AAEF5DB7D07EA5536D8"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubPresentationAuthoringValidator.cs",
+      "Sha256": "B1A450D477DB000E4489C4D5E1CB4944A0625E664BD334E53932C02DE649E8A2"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubPresentationAuthoringValidator.cs.meta",
+      "Sha256": "6E8621141287A53293E71A1A9CC30704072C4300662165CE0979DEE020B7B9D2"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubPresentationCaptureGenerator.cs",
+      "Sha256": "8DB852A5D6CAF1DA4883ED3D27DEB909CA5B877DA4D6BA10246E9CAE934E0C90"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubPresentationCaptureGenerator.cs.meta",
+      "Sha256": "8458536C75C8E23C1712E1D84ABE0CA31B3AF0A20FBF6F5A0762D122F9941126"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubRuntimeAuthoringBuilder.cs",
+      "Sha256": "3E91A2741EC5BA106DE5703167D52ACAD2AA930BAFD54C0F00368246AA41CD5E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubRuntimeAuthoringBuilder.cs.meta",
+      "Sha256": "6D56D60D5AE4DED0B3517CC07E306239A9FF7A9715C64BF1CDD9FFFB002D3D2A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubRuntimeAuthoringValidator.cs",
+      "Sha256": "C88C27BC316192925F652017F4251E13EED86AE5F200358B48FF8A4714BE6067"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/HubAuthoring/HubRuntimeAuthoringValidator.cs.meta",
+      "Sha256": "ACD3FDD879118AD90996A15AC84E721C85447AAC4C09722CD8BE02434A775E0C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/Movement.meta",
+      "Sha256": "B2304D16B44ED340EF9CEFE084A4B3E526265823FB0E92B232C0EB5144C55A55"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/Movement/AcadeGameMaker.Movement.Authoring.Editor.asmdef",
+      "Sha256": "A760F5BFFA4E5DECCA8C321B2EE086CBF3435C92E96880CED8EB6E7E95746270"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/Movement/AcadeGameMaker.Movement.Authoring.Editor.asmdef.meta",
+      "Sha256": "F95C27722F4963FE943B895C753CCEDF9D11ADDB7FE6B58F097102F0762EC078"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/Movement/AssemblyInfo.cs",
+      "Sha256": "59AA101FA7EB9AE3DFCF977566A886C77D72D841C98F45D9ABE6BD5B66FFA357"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/Movement/AssemblyInfo.cs.meta",
+      "Sha256": "D1F7026E0B69836BD6C169C3E67CF8097F22B1C28EDB52C55AB8C1C7D3792F1B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/Movement/MovementSandboxAuthoringBuilder.cs",
+      "Sha256": "A98032B0F9F09F47C84E4CA950580DD8649AB7656474C844F4C63BD70CB3718A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Editor/Movement/MovementSandboxAuthoringBuilder.cs.meta",
+      "Sha256": "71855B23C57A7743FFE8C89E86FB100C1B203DC0B75ADAC1803B779B10598927"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime.meta",
+      "Sha256": "66E092DEE18172037FD5AC5BF438413BD74267E8CBD0B5FD3026721BBF23F2F8"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera.meta",
+      "Sha256": "F908B363CB91E0616761A8883571BC23082415C23A64826AB2F077A2C318323B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/AcadeGameMaker.Camera.asmdef",
+      "Sha256": "90BAC467E161F6CDC98BEF5838DA3BBCA206D9CF2970D7C1E99A22E005DEC2DF"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/AcadeGameMaker.Camera.asmdef.meta",
+      "Sha256": "FF88D16ED9A46BB97EE1C92A129DC1280F632CAE15D433141054FB31661652A7"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/AssemblyInfo.cs",
+      "Sha256": "5ACD32BEAAF8DC51123C8AC4F2143457A04EE77C0092B84E1BD83F0DC296D42E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/AssemblyInfo.cs.meta",
+      "Sha256": "3834097A6186185372C1D254C98B023A5F4C77DA4866481BCFE1D8557243A93B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/CameraFollowContracts.cs",
+      "Sha256": "A35B424CC6F74F8C125064144B9AC429879F26F76ADF7FE72A2990294673466C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/CameraFollowContracts.cs.meta",
+      "Sha256": "337B8A7265410DFCD561A7F5D636774D35D5D82321F5704698ECA575229A9E14"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/SimulationCameraSession.cs",
+      "Sha256": "9EE6FD21AB23297EC8423CC96CD1F4C42B97BD992F87866B1F45D810974D9416"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/SimulationCameraSession.cs.meta",
+      "Sha256": "CCE0ACF7C70A59A7F753D63FCCB80ACBBBCACE6F73895B226D945C51CE6FD817"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity.meta",
+      "Sha256": "CFC69E4209FBA4AFBCEE4C4B7131ED4A5F1D1A3F6244EC9E923A60F38EE84FE9"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity/AcadeGameMaker.Camera.Unity.asmdef",
+      "Sha256": "25B56C8058AC14848C89E4C4CDBF26AACA5E04F7A21EA78DB641CD4E6A31EF2C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity/AcadeGameMaker.Camera.Unity.asmdef.meta",
+      "Sha256": "8D093C72A8B5BC2D4F2B539ED3D3CE04F17A4976E18DA1D57A3B860AE32B5CEF"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity/AssemblyInfo.cs",
+      "Sha256": "08726A61BBD872451F2D25F28E296064324D57916B11A3F2FA73E7D31218DB84"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity/AssemblyInfo.cs.meta",
+      "Sha256": "E89D448E9C1E56DD53481BAAF99110DC6EB0B1D828A25AC85FCE6A6FCA3E678F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity/SimulationCameraDriver.cs",
+      "Sha256": "1652EF5503C3930FCF3C02238C81885A3E6FC2D81F7A593922BFC2019914B4FA"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity/SimulationCameraDriver.cs.meta",
+      "Sha256": "127469D0A5110F11467D83BE93ED6021C6C1E5248293FDC7E8FCB665EA9F4A78"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity/SimulationCameraDriverDiagnostic.cs",
+      "Sha256": "1B1376E492B1BA8E343E134BD966479CE9CFE3112049F84A6A7A701336C5F714"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Camera/Unity/SimulationCameraDriverDiagnostic.cs.meta",
+      "Sha256": "BD85C9A15ACF0F653C3E56710DFF4036BD6C7113111CA113F86AB9C344720EDC"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat.meta",
+      "Sha256": "07B71F3EDF5E3ED3F968AE05C117A44EE9ACA4E0F1C5BC73A37BA6E416832944"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/AcadeGameMaker.Combat.asmdef",
+      "Sha256": "316CEC416AC7C4CDB9862DBA87F522EE705EDF8D621E07D433BE8EDA380E9B9E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/AcadeGameMaker.Combat.asmdef.meta",
+      "Sha256": "A379D0C1506652072799DADA5CA697ED60C86D4F11D3E572AC5335B0E69271C3"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/AssemblyInfo.cs",
+      "Sha256": "9DE595ED5DEC0E4F658211CA3237519A11B9D161DE372410FF190B5BEEEAB4C0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/AssemblyInfo.cs.meta",
+      "Sha256": "4EE6ECA93DD34492CC157B823A98D6D6DC5B6222007FF5B3A398D996340203AB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/BasicAttackSession.cs",
+      "Sha256": "C49CE2400225456EAF1858C9AF146E86C7708BC3EADB8D5B35CBF4FF25F2D43F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/BasicAttackSession.cs.meta",
+      "Sha256": "92E8C9463B226019C803E48079C3F86F4AD1A41C9D44DF370C778BDEF2C5A544"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/CombatSession.cs",
+      "Sha256": "916682D9FFDBCE3083653495CBBA569C2DE290279AC4C6FCFAA46B582A6CB46A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/CombatSession.cs.meta",
+      "Sha256": "4CF5BCCCDEDA2336E38D02063BD0B6F6FAFC95AF803E99AF6BB291E0945E03A2"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/DamageContracts.cs",
+      "Sha256": "A462093EC0B919ECCCB8CE55CD9E56B951E3CD4B213C8A48F30AA1A2B04E1BF0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/DamageContracts.cs.meta",
+      "Sha256": "E900218A1A9AE7BA60BBF995E02E06B0807F6B755E7D709980E12FFCD9AAE777"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/OrdanBossSession.cs",
+      "Sha256": "2EAE623B2B47EE5D4D96CC77B71DB6D2BA0E043815420A11C5B5C728BBF897B1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/OrdanBossSession.cs.meta",
+      "Sha256": "A587336E9B9A006B0CF439F94805571FCF93C7E044E0843517A7916EB1B7B136"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyBehaviorSession.cs",
+      "Sha256": "ABF1CD7FD29E26BD7F78F7786114695A37B929017A6C8F47006C6F3B85530FBF"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyBehaviorSession.cs.meta",
+      "Sha256": "DB73969EEC60E6B7133A1F1A134EA681DDA52FA6DC0619CB930B48AC490F1645"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyEncounterLifecycleSession.cs",
+      "Sha256": "D2FFCFC1174CDB5E75E7A12A674175A0FFC1190345144D9168106A0455210095"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyEncounterLifecycleSession.cs.meta",
+      "Sha256": "60620718E9B359EC992D3CD45370AF65E360B445084F15EB73C38AA0B06EB6DD"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyLocomotionSession.cs",
+      "Sha256": "ED6818A15EB3197F473119FAA239FFD4682DCA46DB6E1884C64A7F978B56FC4D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyLocomotionSession.cs.meta",
+      "Sha256": "C5F0DC63AA0F6375517ED9BD4F795271582970DD9AAB00017EDE7C6D16DD7E47"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyReactionSession.cs",
+      "Sha256": "8E1DC79A4D4DD955F0EE413A6680FDBC8406006B239C16C26A3CD11BB5362F07"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyReactionSession.cs.meta",
+      "Sha256": "6D8FA59950E7DEB02BC0FC5EA47D4BB4FBCEB9075D6B87D6D184616CD2027EDF"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyThreatSession.cs",
+      "Sha256": "3CCDF32A12F32903FB745E4A3342ACFC5EE58AD8A1D30117DF91C133E3FD3A68"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/RegularEnemyThreatSession.cs.meta",
+      "Sha256": "FF73F3CB6336589547270AC101517FE8B33C62A1D8E890EE4E0BC8AA317526FE"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity.meta",
+      "Sha256": "AD63C01D2C1EDB4057C80C2A438D1C2AA910CB1C520FD3E102B143493EB2FF47"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/AcadeGameMaker.Combat.Unity.asmdef",
+      "Sha256": "A748CE7DA46FF98EF63E8CF593C01BA78B2389F551C3E8876A26791EF81574FB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/AcadeGameMaker.Combat.Unity.asmdef.meta",
+      "Sha256": "9316D253823B2F53483695B081DF6FFA1C87495556BE1480D2C4AD978DD70336"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/AssemblyInfo.cs",
+      "Sha256": "5EBBF05888EBDAFA263E0CED95C40086D9A542C7B76F0C13D95799B76C69D5C1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/AssemblyInfo.cs.meta",
+      "Sha256": "35DD5BA8E01055BC508341731B2AF464D600FCE50A16BB16D37070602B13DAC1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/CombatObservationBuilder.cs",
+      "Sha256": "DF530E6E311986B12A89EA440BC8FCE6707409FA1234E590BD13663182013831"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/CombatObservationBuilder.cs.meta",
+      "Sha256": "683F69932DD20EF65C891E1004D8A66A76EB0A2CF5F1BB6301224F4A9A6AC526"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/CombatSimulationDriver.cs",
+      "Sha256": "51260ED20D8EFAA658B4303CFAE4832B6CA89CC349915D797C83495BEEA8155A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/CombatSimulationDriver.cs.meta",
+      "Sha256": "82FE5B528FD98765032139FE05039BF397B48852DE5209AFDF622F8BBBB6DC8E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/CombatTarget.cs",
+      "Sha256": "E713E8CD8710A8F501D1890EF2B497819E1F42ED5926E749CC20158163A4CBDF"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/CombatTarget.cs.meta",
+      "Sha256": "68891F4EECE927E02C621F9BBFB9CEBCB3D3DF6D07B2197C28BE98EC9C77BF9C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/CombatTargetRegistry.cs",
+      "Sha256": "6A5058151DC697446AB632A7E97EB058424C8715DF204BE348060A53A49C0424"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/CombatTargetRegistry.cs.meta",
+      "Sha256": "A784EF28041900D25AA97DC48F2ABDB6C459AEBF875D7A0C751F02ADA61E331C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossAuditTransferModifierSink.cs",
+      "Sha256": "37368BC01088662B2A325F16BF023F4AD71C06BB6A066EC3C56500E368A0468D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossAuditTransferModifierSink.cs.meta",
+      "Sha256": "3E9A839A73AA2D0B481599D8FB3BFF300E0CB73B8F7E5522B9B7F8BD5179C89C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossBalanceAuditPullProducer.cs",
+      "Sha256": "78040974C11CCD8F971D175916B506DCCE976364FE0454BBFD33DD16665C542C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossBalanceAuditPullProducer.cs.meta",
+      "Sha256": "07CED79BC08384CBFF4470DCA32F6BA6D03A9C91133811A7A97BC263BD397E05"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossCombatSimulationDriver.cs",
+      "Sha256": "89A338A71618A7702D9B604AF53D51CC5215AA95ECB074529F4725407CB04258"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossCombatSimulationDriver.cs.meta",
+      "Sha256": "B0FEE2E8AF99C79F42463616A16706C1B0D28555187E6179B635BAF6BCF664B3"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossEncounterHandoffAdapter.cs",
+      "Sha256": "8F57C7123031629EB30FBBA0D16261ECF213D28B267358BDCCE1E617642A9761"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossEncounterHandoffAdapter.cs.meta",
+      "Sha256": "E36BF17FE8C40E580ADA48E67FDC2504F8FED53A1F2C36251F831896457243AA"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossHostileDamageProducer.cs",
+      "Sha256": "F92A3D7C7B8DF4281036AFE7736B993E830DDFA9F528E289F50E6D22B2CA4C58"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossHostileDamageProducer.cs.meta",
+      "Sha256": "44846EF5211B8C8803F9659393FB6FF554CB8F41E2234B356E42F174E2DE8178"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossPayloadTransferModifierSink.cs",
+      "Sha256": "A6239D6F0BC487241E321C70CB516FF6847BB2F5B79DF25B73CC1D8D6CE8A84A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossPayloadTransferModifierSink.cs.meta",
+      "Sha256": "00CE4132ED982DFA6C30C1364203B7359293998796A3EB9F4059CA15CC505C24"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossSimulationDriver.cs",
+      "Sha256": "405D8725C95A94B6758F463E4821AA8FE2ED88C47B15FB617B6EFF6D402C4A6D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossSimulationDriver.cs.meta",
+      "Sha256": "88203007EEE34A141301ACD9B4D18AE467FAFEB45023172167D6C813F268820B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossTerminalTeardown.cs",
+      "Sha256": "D737A32490403AAEC4332DC90808ED3F0D4B49A0FA4BD03E4D332CB8F6D23B1E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossTerminalTeardown.cs.meta",
+      "Sha256": "B1EC01FBFC52A2F96012EA4AECD6946312BF7EC26F8B27966CB554D1BE8F33D8"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossTransferExposureScheduler.cs",
+      "Sha256": "C00D1488CB0A8BDC21055ACDE1DE2EDA5D6C3F6D612A152DA83E3C2E5BE0BE19"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/OrdanBossTransferExposureScheduler.cs.meta",
+      "Sha256": "055028212450473974A346EEE9A2AD4499BF63F094FACF1BE4F4041BEEABDD8B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyBehaviorSimulationDriver.cs",
+      "Sha256": "EF64704686B6429848B7A3FBF684CA714E06F58CADDADDBC338AB01B22C31B69"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyBehaviorSimulationDriver.cs.meta",
+      "Sha256": "658F31D5285C5803A1FE9C52962C53E9A520C96D618D1CD5A93B3412EED8DAF7"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyEncounterHandoffAdapter.cs",
+      "Sha256": "0B62C1C6FBA06FD84213235DFF02B40B2831EAF8A774C4D0170E24860581867D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyEncounterHandoffAdapter.cs.meta",
+      "Sha256": "A0D38CD66865A9F08E76FB07C005EB798B313292A26ED5B81909687C5DF2727D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyLocomotionSimulationDriver.cs",
+      "Sha256": "CE1D80C515B9E00A197DDC818E9F3B96679F170363ABEA981D0F5A94C556737F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyLocomotionSimulationDriver.cs.meta",
+      "Sha256": "4C544165FA9BFBC951C24095587C109E69899F9A61E0651644E00259A62CD91C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyReactionSimulationDriver.cs",
+      "Sha256": "377A3B9A08DDCFEAE0C16F8A3F992D8F7904A8D58287EB463AF085889B088E78"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyReactionSimulationDriver.cs.meta",
+      "Sha256": "569D5C3231C1CBBECCEA5BBDC91EB1E13C75F685B505AF8129019B9FD87BFCF1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyThreatDelivery.cs",
+      "Sha256": "2535B8FE8C8ABEF6BF09FC9CCF2BE8DE0C9A422956EC4D3C76B8C5F458531BE9"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyThreatDelivery.cs.meta",
+      "Sha256": "00511C3947E8E351A409318A83DE9F8614AC28F1B317900BF8D11D93BE70367E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyThreatSimulationDriver.cs",
+      "Sha256": "3B8DD00DC2430FCC90C40B04EF603C139C44636A17CAC9EE2909FC6A90BF8962"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Combat/Unity/RegularEnemyThreatSimulationDriver.cs.meta",
+      "Sha256": "E98BCB72A444734A0A00DA5192B0A3F03623A2A06EC46B4F3C25329B4439C485"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core.meta",
+      "Sha256": "0895CE9BD39A41E6E46C6079181806C4C5C96FE4FB576BE2E81882EF9A84E649"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/AcadeGameMaker.Core.asmdef",
+      "Sha256": "EBFE068E8FEA1E825318E4965F16A9F5A09AF3D1D8DE4E271C676237B58A48CF"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/AcadeGameMaker.Core.asmdef.meta",
+      "Sha256": "F63188224860A7FC36B44FE1C5F1E7157388BA7261D1950BE917112DFF12E4B2"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/AimContracts.cs",
+      "Sha256": "073EA586D10DD8EB7713966034BB42B39503B39210ABF15FFDB9EB73BE5B1353"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/AimContracts.cs.meta",
+      "Sha256": "9CFCC9DC088593D09ECDC246C8A113EF78AC2F9895FF885DA590B4F501F8CD4C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/AssemblyInfo.cs",
+      "Sha256": "D6D080D35AE5E1F5984368A973DB4E95A27C415F4831C703EF63B9CCB8B98CC0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/AssemblyInfo.cs.meta",
+      "Sha256": "0C3B563D20169BCB81F5FC6A3CC95718BDD63A585F69D59F1224FD66EFD438C0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/BasicAttackContracts.cs",
+      "Sha256": "CB5FA09CB890CA306CFC8D149A9857D97AC57E580913CC225D5B9123D286CE67"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/BasicAttackContracts.cs.meta",
+      "Sha256": "8EA2722FC2D8F4D9253C47187D0DAD7E3A5D13C1E69438C7FA9FBAA36C6BAFCD"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/InputFrameCommitContracts.cs",
+      "Sha256": "07C2F842AB8C5BF7894BDDC33BE5026CF5A78A52C70E34C244D90A3E8D67C1C6"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/InputFrameCommitContracts.cs.meta",
+      "Sha256": "3D6D82B5485C62A5F15A1DABC803985B194A1D4DA6FB5EE6CF0201FD7E366CAE"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/SimulationTick.cs",
+      "Sha256": "779514FEEB11BA8A3E3272AFA814ABDCAA4290581BED81C23E8CFA8D219DBABB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Core/SimulationTick.cs.meta",
+      "Sha256": "3B025A8CB30D821812D376B04BF215B7C625FDD819EFF78B314A303798DF583F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Costumes.meta",
+      "Sha256": "F74B12FEC96635DF7D328AC5162B4941DBCFEC15EADB65C59D9D0650C20A31D1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Costumes/AcadeGameMaker.Costumes.asmdef",
+      "Sha256": "DF21E38D10C384F4FCF24A14EC379DD75BFB4C4ACBAE4A4195DB199785359EC2"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Costumes/AcadeGameMaker.Costumes.asmdef.meta",
+      "Sha256": "870EF3EEF26C4F71D4DEB320EC8561A9E8AD3C1F20219A83593B62C81AE5589B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Costumes/AssemblyInfo.cs",
+      "Sha256": "D1D6BEFD583B0BE062E4E0382A43EED57A031D6261CB5DB66F3531CA5C6DE336"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Costumes/AssemblyInfo.cs.meta",
+      "Sha256": "3F31231B244A91576A7FED87FBBEDD102770ED2C81D671522521E0F403216AA1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Costumes/CostumeCoreV1.cs",
+      "Sha256": "9149AD9E4D806F02811C0D85F5E1DB044E6380C70B5409C4929CA09913EF8178"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Costumes/CostumeCoreV1.cs.meta",
+      "Sha256": "2402731E2907DAAF96A3D17F1DFDF5B66F02DD31DF7A5B101E10907201246801"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Costumes/IO.meta",
+      "Sha256": "FF926D060A841F0C0AC74E1A4ADA4390EFA8C921A2A941B6E83A9DF1CA580984"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Costumes/IO/AcadeGameMaker.Costumes.IO.asmdef",
+      "Sha256": "920DD615F12F0086D978BB1E990B480ADE833F06491B0A2A58B4B41099AC3449"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Costumes/IO/AcadeGameMaker.Costumes.IO.asmdef.meta",
+      "Sha256": "6E5314FCFB71EFC4FB9CB2FC843D48AC340E1DBB7695F199CE45B64D5C5AE482"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Costumes/IO/CostumeFileAdapterV1.cs",
+      "Sha256": "67CCF0DE7E74B3FA9AE6582CCD1AF04D35F61A2135A029D0AA089A1A1B798A8E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Costumes/IO/CostumeFileAdapterV1.cs.meta",
+      "Sha256": "22279AC6745358AE14B54290C35AA67883872CD9BE9DE38C01CA0873BA223B99"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation.meta",
+      "Sha256": "0180BAEA450E15D9D72C53BE5DCF998810DEE434B0753566A8DE2A597B4511B1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity.meta",
+      "Sha256": "00BA1FB844976025875A25297D9C6436C99C3FB4D90C431F3C55380DB91DD435"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/AcadeGameMaker.Hub.Presentation.Unity.asmdef",
+      "Sha256": "97C953B9F7B60F8C6E68AE6DC3AD1E11464E9DAE8D62C73B015012FF3C3C82C4"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/AcadeGameMaker.Hub.Presentation.Unity.asmdef.meta",
+      "Sha256": "54588CD2E7D108AB6887FB6A9FBAC1749B9D9902994542DDC0B16775BE24E89F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/AssemblyInfo.cs",
+      "Sha256": "CE7A4C92AB87A45F17B4606837B9F2BBD109A8C9297F49446EB492199BAB832B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/AssemblyInfo.cs.meta",
+      "Sha256": "2A762316679178F07F833F2F443C383FF0C88CA0526940FF002DDE0351277569"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuButtonViewV1.cs",
+      "Sha256": "95E52BBE8B37744F3D13F21082D1CDCD392FAFB28CFDFA49DD29509E478A15EE"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuButtonViewV1.cs.meta",
+      "Sha256": "22163255EF978AB8F01C8B65D609DDA3B8267D0E67FFF8CD983DC5CA425EBDA9"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuCopyV1.cs",
+      "Sha256": "147241E3827A613DA92951DA5625DF4BD75365A6589B6C551D5D4ACCEB262B8B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuCopyV1.cs.meta",
+      "Sha256": "960761E652CE2815B0D4324B505D3116A9E2B2079C65EC7C634C1C096F995F05"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuIntentHandoffOwnerV1.cs",
+      "Sha256": "F47C61A043DAF4695CC53E41C6BE9BB67CA147C722F7B830459AA6304B45B3B5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuIntentHandoffOwnerV1.cs.meta",
+      "Sha256": "0897CFE731CBA96E67FAD30F3184AFC974B32B50E05C35DAA089B6E1D9F40CE9"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuPresenterV1.cs",
+      "Sha256": "393B325BA5B8F6D79CA983F1A91098215E7A6993DE37E9F5D98BA775760E4900"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuPresenterV1.cs.meta",
+      "Sha256": "608106A9EAD57D137E6C257CBAEF78B2D7686884C05F17647829ECD76A5772F9"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubSafeFrameScalerV1.cs",
+      "Sha256": "ED25DD25FAE9A0D4E0F1775DB36731C209C76EED728E0C5BB5D45F21125D85BE"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubSafeFrameScalerV1.cs.meta",
+      "Sha256": "8277907E5EDA669A7BCD4F62E110EC639BE43972455EA38FF0E339687D724BCE"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/NewGameConfirmationOwnerV1.cs",
+      "Sha256": "CAEBD7B5DA99AF94A25C5C300789AA48CA87908CA6D8894B99AE49C2391D7043"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/NewGameConfirmationOwnerV1.cs.meta",
+      "Sha256": "05F240AFB899893F47C94798D05D65BD97F5982120AD8EE086CBFBD27C1C482B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input.meta",
+      "Sha256": "74780C51E57DE7C4C1F85200C0298FC75B752CD79EB1546928FBE75394D78301"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/AcadeGameMaker.Input.asmdef",
+      "Sha256": "F95FCECF60D84520CC44DAB42CBEB10E3DE860FE85F5927A126372092F92C77B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/AcadeGameMaker.Input.asmdef.meta",
+      "Sha256": "391C4284F16561004E38B2A3FF17FA54D7BD9499E7743D7B295B2D67E175E795"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/GameInputActions.cs",
+      "Sha256": "730BE8CAD941CD4567BBEA9B844FE33673FEA49842E28CB53C2F088D3F528C89"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/GameInputActions.cs.meta",
+      "Sha256": "251551B23E761CE8B97102BCE4098ED657292F5A1EA4A874C34EF4BC8461F796"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity.meta",
+      "Sha256": "12E43721A6BE42A9B440B0DFD158004803D620404BA9CF1A989ECAAB8CCBC593"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/AcadeGameMaker.Input.Unity.asmdef",
+      "Sha256": "CD3E47DD94BCCB9E537CA7AF4C6029FC8327EA0154C90EC7B6FD305218FE4C0E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/AcadeGameMaker.Input.Unity.asmdef.meta",
+      "Sha256": "A623B4B5C8EB6571C9221AF27D0C00A6B4D9CCEA082C4EF361D9CAD54E710471"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/AssemblyInfo.cs",
+      "Sha256": "4F316D35CBF07F0D745F3B26C536E75762327499A1177CBE09E1D2039D9BBC5B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/AssemblyInfo.cs.meta",
+      "Sha256": "3D17A26759E6A930A6DC3FD6C20127F191BDC2F32A12C41E02975A32ECE23EB7"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/DesktopProfileLaunchAdapterV1.cs",
+      "Sha256": "1798F51244FCAFD8EE4B0D847AABBC6DA89EC8EA7138A12826CB37810264DCFB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/DesktopProfileLaunchAdapterV1.cs.meta",
+      "Sha256": "C828E535A3480250033DEBBAAF42EFEB7F47A11F0BF782A98346E47C7EF3099C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/HubEntryHandoffLatchV1.cs",
+      "Sha256": "1201240D6E874E596E00D36EFD37330D3C37AEF0591EDA38BAF30D635E4C267C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/HubEntryHandoffLatchV1.cs.meta",
+      "Sha256": "ED26E027C7129E2D53F7D588841BAA77D20CD7829043CBF703995869018F57FA"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/HubMenuPresentationControllerV1.cs",
+      "Sha256": "F4E9CD4CEEB704CC26869750EF14FEA4A3402055A1F2D1F51BA40F7333CA60C9"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/HubMenuPresentationControllerV1.cs.meta",
+      "Sha256": "C8E833DF17030C14ABFD49EE501E6A9B019E5F37046AA38EB188DF6DE5AFF61D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/InputCameraSnapshotProvider.cs",
+      "Sha256": "AAB65E46C54EEF6F55A12FC38C96ACEE91CFCE4C50E040DA098C2AA87B505291"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/InputCameraSnapshotProvider.cs.meta",
+      "Sha256": "9A64C34F725C828C3F896369C9970D2C52E4B56D9C3D53236AC8736537484C4C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/InputRouter.cs",
+      "Sha256": "66CD817B322565753A3533EA93FFA2BD4E347B24C9A61D5F9C4A1A1169EC54AB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/InputRouter.cs.meta",
+      "Sha256": "090FF619085A1A4151A2994439606C25912251653AEAF183348B5B984EE7B53B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/InputRouterDiagnostic.cs",
+      "Sha256": "D1768821D6B635AD1B515FCEB326BC58C2F92E1551D640B2BAA268F9983181F1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/InputRouterDiagnostic.cs.meta",
+      "Sha256": "ECCAFAB6EBC88DC4469A467DFFBBC6CB8D1739834C0B4FDCF24D6E763B8E1650"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/OrdanBossTerminalTransitionRequester.cs",
+      "Sha256": "46CF17CAE4046FF9BCA7E06D5AED40666D56D6BF7AEA96380FAEC971DE297D32"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/OrdanBossTerminalTransitionRequester.cs.meta",
+      "Sha256": "EE1A7139BB4E6E10F248CAE03B325BA4239A50B297A9F1EE7F69AECDDFB45429"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileBindingOverrideApplyAdapterV1.cs",
+      "Sha256": "92572BB90723C213194D3C9DD221C113BD135FCFD2F5AD091E9B27F4E9A473E1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileBindingOverrideApplyAdapterV1.cs.meta",
+      "Sha256": "30658173D410337DBD2FE36D1002D7A4418D056D7AE344CB2B0694D1061287F1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileLaunchPreparationCoordinatorV1.cs",
+      "Sha256": "8FA81A8E0082F5E05EAB8200BB28B020F038DAC66BBC33B6026E3A4906E15C00"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileLaunchPreparationCoordinatorV1.cs.meta",
+      "Sha256": "3775F07A8BD98F84AA0F87F77E446E3079D3B2B4DC884684EAA34E0E9F6159A6"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileNewGameConfirmationV1.cs",
+      "Sha256": "ABD4B8CC79D0C24F16EB053B98460C68A466B03AABE0B2CFA01C7862BA027CB1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileNewGameConfirmationV1.cs.meta",
+      "Sha256": "423EF93762F398A8AF9E179CDD256915AF6596A8E84D9915CB772A5A629471F0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileResetMemoryCutoverV1.cs",
+      "Sha256": "60DFD415C0425F88046C47F51142749F230FF39CA7C81AEBA90D4C778993F275"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileResetMemoryCutoverV1.cs.meta",
+      "Sha256": "EB98BA020FC30072B59BB02FBEEA5B610F9DE2D8E16BA86769EF5EEA4932337C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/UiSemanticFrameV1.cs",
+      "Sha256": "CCD7763A1103BA096DD64E02C5B91A99A3ADA21D49506CC81E5F0601E06D316F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/UiSemanticFrameV1.cs.meta",
+      "Sha256": "9CDD3FBE37EB5DD0EC5ABD46A46ACCBB51913D94934284277F598F57E6C8DA86"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement.meta",
+      "Sha256": "CA83E1D56E6CDC94B7FB447089F1DC71D776DD14629308E1C93984166732F4E6"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/AcadeGameMaker.Movement.asmdef",
+      "Sha256": "497889F00FEE49C2349482C1747703346FBD5853EF3D528DA83CA35BDC05DF83"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/AcadeGameMaker.Movement.asmdef.meta",
+      "Sha256": "34629A8A0220FDFB8A25027F35F6238CE7923C17F7CEBF6F976C960B276466A9"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/AssemblyInfo.cs",
+      "Sha256": "7A300F3726FF5CC989CDACAD930CB9AB5FCD481E440564C7B01A8AA8173BBD36"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/AssemblyInfo.cs.meta",
+      "Sha256": "95C42126097D540D451474E29726119111EAEF8D9D9A0C9492A5C3C616A0B4A3"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/FixedQ4096.cs",
+      "Sha256": "BD06E3C202B2030EBCEE4755FEC48091627C2DEDE69D38BA2DC711D14EC73D75"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/FixedQ4096.cs.meta",
+      "Sha256": "56DD3EFE31F4C53F408E3DC40D315582D8179A2B9E4B3B39E64AF7B3913A0C90"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/MovementCollisionResolution.cs",
+      "Sha256": "03164D9B903CE6386CC57C62F740A34B2F5714392C922B54D98E8D62E76648B5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/MovementCollisionResolution.cs.meta",
+      "Sha256": "B8AD82C2EBD4BC8FAEBC5D4CD21B68135499233EA6E38F67C59A2476C545B92C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/MovementContracts.cs",
+      "Sha256": "9E3D934A32557E45FC6BD252AFF5CB29D35A00E16289EBCBCE3620CDAA4A0389"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/MovementContracts.cs.meta",
+      "Sha256": "4B6054B8F3F12E108F567C2E61C77D769C1962A88A8AD88771BE91D327AFB9AD"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/PlayerMovementMotor.cs",
+      "Sha256": "CA5B366911BBBBED636E2CAE62847225D68173AD38676571C21B7C5AADB66154"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/PlayerMovementMotor.cs.meta",
+      "Sha256": "BF4DFE8C82A79450843E2C5F1F12D6E19A6589B7D09CC9EEB8C11526F97EDBB8"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/Unity.meta",
+      "Sha256": "FC4F07256D3F9F1549B7D80F381EED7FD045402ECF053E65C112BF3C34B69099"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/Unity/AcadeGameMaker.Movement.Unity.asmdef",
+      "Sha256": "4FE36BB891DEC94612CCB8717F69006851BF7983E35AA2137979DF49A5F47131"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/Unity/AcadeGameMaker.Movement.Unity.asmdef.meta",
+      "Sha256": "27FD62BD872E036985AE9A159F12FAEF1D187B053CB508FBA7DF6FAB7A8F9D80"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/Unity/AssemblyInfo.cs",
+      "Sha256": "1C0E7370AA05439FA9DF9A0BDDCCA28ED4C5719F4124D969FB2D08783DAD79BB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/Unity/AssemblyInfo.cs.meta",
+      "Sha256": "308423C9C4DE4657EB7EF57FD490FCC9CF95216BB6412930774E6780D0CAE200"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/Unity/PlayerMovementController.cs",
+      "Sha256": "B26395C912F17898C4842517EC7393DB0F4C8C3C69D7477A452AEEC2D0B23930"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Movement/Unity/PlayerMovementController.cs.meta",
+      "Sha256": "8C11860EB69E37AE15750C83DBF44A53A1EB96D549F375D36D5C8751757B8A97"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Presentation.meta",
+      "Sha256": "DFDF66A5C018845E140803594E3632DA6B441E0460CBD8BAD680767187DC5DDB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Presentation/AcadeGameMaker.Presentation.asmdef",
+      "Sha256": "C58E397C436DCF16E328AD841C821A0AA686FCFE9696A78DFBD1F85C5D8CBD7C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Presentation/AcadeGameMaker.Presentation.asmdef.meta",
+      "Sha256": "CFD62A207C1632CE23B78AB0C14309A1BC28B57010F7F58CBDB61A5354389AAD"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Presentation/AssemblyInfo.cs",
+      "Sha256": "06D9B8A46CABA9842997E3296D663B477BEE817CC39C0E928AAE66F0E610EF9D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Presentation/AssemblyInfo.cs.meta",
+      "Sha256": "F4D3CBC009BFEF52FDC6F5402200A6290E777C1B66BCFBA837B912E352B67123"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Presentation/CostumePresentationV1.cs",
+      "Sha256": "600077CAE9B792451A37CC977FC19632E7AE2309428978CED4552937CB6C27DA"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Presentation/CostumePresentationV1.cs.meta",
+      "Sha256": "F59ED73AD3A625CCB8D9D05F1333A717692AFEC1025B5E0BFC20EE11AA5E8507"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Presentation/Unity.meta",
+      "Sha256": "DE32325146F40217AA691868854C8CC6600590399437AB57B5B401E13C116D30"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Presentation/Unity/AcadeGameMaker.Presentation.Unity.asmdef",
+      "Sha256": "F4953F55EB97B770FA3DE150D3412F5AAB63B40DF0DA02DCAFAAC1A7742AB70D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Presentation/Unity/AcadeGameMaker.Presentation.Unity.asmdef.meta",
+      "Sha256": "76A81F1EB8E2ADFD301020C9E8DF2F342826F919CF5DC2F73421FD3F0915C171"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Presentation/Unity/CostumeUnityMediaPackageV1.cs",
+      "Sha256": "A4F52C4A3D468C2AAD57E07C27196CF31CF36AABEE977C9310E293F554609F44"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Presentation/Unity/CostumeUnityMediaPackageV1.cs.meta",
+      "Sha256": "5C04B4DD35436FC5C2DBA498BE036E39BA3F99FACB19252AAD536EA7423B0C8D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Presentation/Unity/CostumeUnityPresentationAdapterV1.cs",
+      "Sha256": "52B4B36F66FDF1DBAC49BB056E204F5918BAFD7BB2B6E7E0A0E6A6569CFD85EB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Presentation/Unity/CostumeUnityPresentationAdapterV1.cs.meta",
+      "Sha256": "69E7D17B614ACAF4358535CFA3E957C2B8653794C7978F929BB78896FA6197AD"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Presentation/Unity/CostumeUnityViewPresenterV1.cs",
+      "Sha256": "B2BB6CFB83EF2812756ED837850C13E6135B0EFD53AE01DAB74FC196580E7587"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Presentation/Unity/CostumeUnityViewPresenterV1.cs.meta",
+      "Sha256": "52B45E061F90817F0035749DA25A4AE000784F7866270C5A0D793CAF66AC7972"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile.meta",
+      "Sha256": "9F6A1E106C4A13F4306526115D3959E1AA93F05DDCE3429C7D2BADB1324E9683"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/AcadeGameMaker.Profile.asmdef",
+      "Sha256": "D4C8C4E694046072EDE986EE14C2AEB1AAC8A57A761487245BC1764EBA10B99B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/AcadeGameMaker.Profile.asmdef.meta",
+      "Sha256": "F49083744D8931D6FE88051BDD673BCD6E3B42ABD0FE85CCE018329AFEF40EA1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/AssemblyInfo.cs",
+      "Sha256": "9CAC7929FDEEA6CB76AB092CE656D06B78E90E6FB03672290F3D1ACAC07CBF30"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/AssemblyInfo.cs.meta",
+      "Sha256": "5181E13A417A6C8FBA47C0F19C7C387C7C29BE9C5F951F29F5F830D52330B511"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileAtomicSaveServiceV1.cs",
+      "Sha256": "80DDBF925C74A8A81DD3B3950F25B3843D76B81F62ED942F3F3585CFB52B3F87"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileAtomicSaveServiceV1.cs.meta",
+      "Sha256": "DE020BF9FBB5059399796460931AD619A782561EF8828AECE5F8743A495A1C80"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileBindingOverridesJson.cs",
+      "Sha256": "91E5EBD41A99ECDCC6B4F1EAE2122E4F23B8F0FD8AF084ADE00A85C5E5D8FD14"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileBindingOverridesJson.cs.meta",
+      "Sha256": "318BC91572265C141E1A33374DAC609699205438F30E0D12253F377E51F2FE8F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileCanonicalDecoderV1.cs",
+      "Sha256": "F361E860E09217B1DD32CEDD48980FE0E6F22F993800C20B6EF7AA13029EBE42"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileCanonicalDecoderV1.cs.meta",
+      "Sha256": "1FD839D0480508A7F1F9DB9E81CD73AA5A58A49831E82B5CEBAC87543CF6AFDE"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileCanonicalEncoder.cs",
+      "Sha256": "5326FDB385A058A4590B9BD16B07D78A0F0033FF485D4971C8C6FC56A3CABDF5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileCanonicalEncoder.cs.meta",
+      "Sha256": "8E926437FD6AF6473D39A4F76578F53D5BA98219B75256946A5BA1331B6EF306"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileInputSnapshot.cs",
+      "Sha256": "A58B024F5E288739342603AAC77F1A32C6DFAF66CB40853F364F0AD196522644"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileInputSnapshot.cs.meta",
+      "Sha256": "3091821BA8AC0F1B4D855DF1E1D7F051ADB5893735D8142AA7DC2524E2341F40"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileLaunchObservationAdapterV1.cs",
+      "Sha256": "1AF63C8C9691C9AB1980B18AAA762A77CCBFEB09FBA0C9F9704874750DF5EF0A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileLaunchObservationAdapterV1.cs.meta",
+      "Sha256": "8CEA63C429C974B654579EE713C066BB5736FA3454F59DE22845FC65170431F0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileLaunchPreservationExecutorV1.cs",
+      "Sha256": "D2844C5697F58DE47933BE87B82DC8A45496F7DBE7B17ADC3CD01491926FE8FA"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileLaunchPreservationExecutorV1.cs.meta",
+      "Sha256": "EAC633B1E8822C0DBE30DF2A3B221C6BD602027B22419A58649A4DD6CC95DCCB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileLoadSelectorV1.cs",
+      "Sha256": "706B01B9FCE5299B2EE32E6BE3356AB1B04ACC3922C85FBC2C054FA89B12FCAB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileLoadSelectorV1.cs.meta",
+      "Sha256": "2F22B0E888BCB3233C0367ED8DA669B8B001B729DFCA5263C29E01C6C92CD388"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileNewGameResetServiceV1.cs",
+      "Sha256": "23D7248B1A603A89BC8FF0FFDBB24FA04E640A66018DDC5689F97EC80701FBE5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileNewGameResetServiceV1.cs.meta",
+      "Sha256": "38F6241119E22F94BE0120B48B6D3904EBB00759D6AB05F73CD0C91E26B54F26"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileProgressionSnapshot.cs",
+      "Sha256": "B3B4BA3912F4D3B25C894C362940EF1518594DAAC6F36E6FC89CD68F5BDB440C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileProgressionSnapshot.cs.meta",
+      "Sha256": "5F2D060F014F93D8A4FE42AA7D1C148DC8CEEC5A24B7777276119C2144FB2854"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileQuarantineServiceV1.cs",
+      "Sha256": "CF73B2452B1F7839A346F13E65E4076F2B688F067DD2B66ED931F7D3810FF162"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileQuarantineServiceV1.cs.meta",
+      "Sha256": "07A30262C8FDEB170D25B8546556E17E9E6F7BDB349555BB00DCBD029A311ED5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileRecoveryPlannerV1.cs",
+      "Sha256": "E72FE64417385170391E2B7EE6DC7740E448AC1828DC77BFF7A603DB235F56F8"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileRecoveryPlannerV1.cs.meta",
+      "Sha256": "044B6BCD6CE279110052A4692E8D680E7A7C19166E1EF4126FDF3766CAF96EEA"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileResetDiskTransactionV1.cs",
+      "Sha256": "BE0F16834F96272AD68C15F5004E9C37491EEF6F82D7CA728A5E1D1D60CB71E2"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileResetDiskTransactionV1.cs.meta",
+      "Sha256": "52C909A14AF50B13F2CA7E3A55BD8F14A854FD0960AE86BCC61FD28F8D57C356"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileSettingsTutorialSnapshots.cs",
+      "Sha256": "7018BE226C0FAF41BCF8ABA39FA76AF07EA89E70211D8E81965CB8A31504B938"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Profile/ProfileSettingsTutorialSnapshots.cs.meta",
+      "Sha256": "35AC987D49F9637F51D344CB4C1E380BB6DF7E70892784A073BAFFFA8BE7AFBE"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Run.meta",
+      "Sha256": "B05C85C5D95D454C1065FC9F8788DAB4237FDDC574B1398C4CBA9B24AE1992FF"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Run/AcadeGameMaker.Run.asmdef",
+      "Sha256": "1C2D4100DE3182E2137B5062CE02CBB086BC673063BDAFF74D30F3211311DCBD"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Run/AcadeGameMaker.Run.asmdef.meta",
+      "Sha256": "965654964846BB2936F730C8D947AE26B117AF320D071BA053B72CC1D8C77FF8"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Run/AssemblyInfo.cs",
+      "Sha256": "DB23914DB7851633A88CCD3813A16B852C241CD5DD207CB28F26F1DC460E681B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Run/AssemblyInfo.cs.meta",
+      "Sha256": "AC65BD991CDBEB5B588361F3E410FAC9C825D912AC42F51B6067EEE7F1BD7080"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Run/PostBossProgressionSession.cs",
+      "Sha256": "DCDF3CB209C937329FD7424096B95FED30016ED7ACFDCBFB7D238A784A0F1A2B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Run/PostBossProgressionSession.cs.meta",
+      "Sha256": "61D838DE070DBC47B243D5A5C2F6A7B3F1003667AB2348030956F30A36A08BF9"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Run/RunFailureArbitrationSession.cs",
+      "Sha256": "047C6F5573C367D417FD9BC8EDB163EBB2930DC494333FB07CFF002A3D5F902B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Run/RunFailureArbitrationSession.cs.meta",
+      "Sha256": "D67C991514D54F78F1441F70B4DCD46C6B85EC89A45FA830FBA167D23364690D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer.meta",
+      "Sha256": "EB0057FF1AC21A1934C3F0BB4A6DBDF5E325A430358D05C051A2CC66FB8CB4D5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/AcadeGameMaker.Transfer.asmdef",
+      "Sha256": "B205068791C73DF77B7A11D0424424052B7337CD7DA6ABD6DCF42B0526167D1F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/AcadeGameMaker.Transfer.asmdef.meta",
+      "Sha256": "0AEB4C4A48A568E6BE66126A8A48787C45D2CEFB8636E1494F653015FD0B0ABB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/AssemblyInfo.cs",
+      "Sha256": "D2ED4FC9FFA6CC396508F7FF33F992C49D25A2FFBE71F001A038F79D25D9DC60"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/AssemblyInfo.cs.meta",
+      "Sha256": "1F4734FC22465269A23DDD0C0B141D6174226CB78F16D913CFE8ABA5AB1CE6AB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/TransferContracts.cs",
+      "Sha256": "A6F2AD4BA77F3162EFA943805F73BCB0729B4CE70A73C50176B4C6CE3A0D5E0C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/TransferContracts.cs.meta",
+      "Sha256": "11D09A8B6D018F7D5BE209AACD7D99A634B0F29B9E1F494F2AD297312D6DB373"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/TransferSelector.cs",
+      "Sha256": "89AE360A2DD25DAEF8BC0162BB724E216E256DC7C6A38E601AB8CEABB4619DBF"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/TransferSelector.cs.meta",
+      "Sha256": "A3DA5A43F999F76461305B9129DC23456AC0F6AF06ACA5E326167F9EBC60E380"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/TransferSession.cs",
+      "Sha256": "921360C17C1010CAA3F240F46E5F76272F87B93E0498F6542B4F4E1442326339"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/TransferSession.cs.meta",
+      "Sha256": "CDEDC31D3294B173592B9AC7F8D069B35E4E4F15D759888AD01AE017AEC1BD93"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity.meta",
+      "Sha256": "B26C32F7ED9DE3E5AC93E685682AF75A43FF8634BB19B9FD3389891C72ED06D5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/AcadeGameMaker.Transfer.Unity.asmdef",
+      "Sha256": "E253A43989B66CD33334F7610B379932EC702389824598A7CD45556F7268BC84"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/AcadeGameMaker.Transfer.Unity.asmdef.meta",
+      "Sha256": "C1A69C1C9DF9D73D7C84588B059687D3F750C381C122772BB07529E475676382"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/AssemblyInfo.cs",
+      "Sha256": "CAAA76CF3E164CC287899756544C8A20540EEC08231CE4DBFD161D33BACD7A44"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/AssemblyInfo.cs.meta",
+      "Sha256": "93A9E47F027C6EA1EDEB0D43EA570120DAF4C0FDB9B465AB5020E3709F64CC66"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/RegularEnemyTransferModifierSink.cs",
+      "Sha256": "1BD848275FBFF4B19888220A5B03AB1EF00323C0E1053322425A13BA5CBAC6C0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/RegularEnemyTransferModifierSink.cs.meta",
+      "Sha256": "D06D28FEFDB276B109D7D717097B9E08B8B00FCD911010FBCEDD01565C043076"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferFixedMath.cs",
+      "Sha256": "9C0A33A1E4CAC920825218D3627D3F4D36E113F0B5B68DF54CAA865465958E8A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferFixedMath.cs.meta",
+      "Sha256": "EDB1954296451953D887A59C3DB1791C68E77CDEDFC6D23B6B712D21A2087959"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferLineOfSight.cs",
+      "Sha256": "9A74F5887ADB7F27E2DE57E10A31D678553492D8CD1BB35479368E710825B772"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferLineOfSight.cs.meta",
+      "Sha256": "7ACB606D037F5AA31316B32E287FD7CC4FDE247A2407A90B985DCEDF50A2B198"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferObservationBuilder.cs",
+      "Sha256": "8DA52624593FBA523904B03B64A05D495E46C8E7F17785FC0A59C2278CE4B187"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferObservationBuilder.cs.meta",
+      "Sha256": "73B8228D6E6939134A0DCE55D7047088944ED5821440ABC1627146503FC19772"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferSandboxOwnerSinks.cs",
+      "Sha256": "EE599FDA0B28FF010E37AD08500733FE07BF786E13CEB763C1D210CEB8BA3266"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferSandboxOwnerSinks.cs.meta",
+      "Sha256": "764973250CDA4F5925D7767C89DC2D8C5F77D8C5AE285570829C2E782A048558"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferSimulationDriver.cs",
+      "Sha256": "650ABBE8D319846FD780C3F1ED4E394FB13FE07C51D173B548BFBB2D761709B9"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferSimulationDriver.cs.meta",
+      "Sha256": "153E4AADCDB307FD828682A39A2EB9223F91EEEB042C05B3098B7C6730971A60"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferTarget.cs",
+      "Sha256": "81D33BB3E98C65F3A222F89A8E2095AE06C2C915A9E1856C2693A2C91BED4E5E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferTarget.cs.meta",
+      "Sha256": "80BB2F9FFBB5B065741FE33A103AD81295DBF0971582AED94A413CA365CB6ABE"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferTargetRegistry.cs",
+      "Sha256": "AC59AAFCC05E35AFC305E46ECEDF2D48381B4946DEF5AF8BF0220DC60E9E8DC1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Transfer/Unity/TransferTargetRegistry.cs.meta",
+      "Sha256": "327E0DBB64237EA9310B239E783FED34687ABFAE8E65B5F41902DEAEDCE77C29"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests.meta",
+      "Sha256": "4B8C18DFBD827AC49428BD7EFAD6AF6D7C73A31B2FDCBE8978787BA5E421DE6D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/Bootstrap.meta",
+      "Sha256": "63F6BCC864A2B4A14BD0D64CA25A97921AF270E3264D44EDCAF74D9F1E490D47"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/Bootstrap/Editor.meta",
+      "Sha256": "606C7DE7E1F6D72684B27A817BBBC67D17C6455496D0CC4F13F61B65384F6D5B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/Bootstrap/Editor/AcadeGameMaker.Bootstrap.Tests.asmdef",
+      "Sha256": "DBA23CE3637DA402AECCFF6B4AC62B2691EB4CC5AB77FA3C3C4649D10DA0FFB0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/Bootstrap/Editor/AcadeGameMaker.Bootstrap.Tests.asmdef.meta",
+      "Sha256": "7E901132481CD7A9590943F65E60D0A5DC0DAD966D4D654A382063F0FFE003E9"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/Bootstrap/Editor/BootstrapBuild.cs",
+      "Sha256": "27517F12DA8A62DA99CBB41D311D98BEBC3D043E88C94CA48ADBB438480874DE"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/Bootstrap/Editor/BootstrapBuild.cs.meta",
+      "Sha256": "2E31D5154B1C183777C32BA318D92D350276150BBABEFB89390067BCAE120806"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/Bootstrap/Editor/BootstrapProjectConfigurationTests.cs",
+      "Sha256": "A41059F8881B179EEF87B95DA858AEC05D8D7399057550F982CB45486E442AEF"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/Bootstrap/Editor/BootstrapProjectConfigurationTests.cs.meta",
+      "Sha256": "F6F5475B5A3455F89B384FEBA3028FF390F0AE6BEA4200F4F7B5FEB710661D7B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode.meta",
+      "Sha256": "12969CBDB4E1563E267CE12CA96AC2687FCA2D044603EEDCF9AF526F1B2016E5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Camera.meta",
+      "Sha256": "2EB90DB4F7DCEE8D63DDE6A19FC29956EB68F4ABD31961F69BFA43F4BABAD5C2"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Camera/AcadeGameMaker.Camera.EditMode.Tests.asmdef",
+      "Sha256": "845492F826BFF04DC8280CB3DEA8C7203FC513F2436F39B419E08983AE4B93EA"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Camera/AcadeGameMaker.Camera.EditMode.Tests.asmdef.meta",
+      "Sha256": "C0D0F303E807F9B3295063C212F9936022156D6D046D240F4DA09B9B725A3733"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Camera/CameraFollowSessionTests.cs",
+      "Sha256": "75405BBD63255262A7391CD222A68B75DB107DFD95F04DC98C1B09A1D63876FE"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Camera/CameraFollowSessionTests.cs.meta",
+      "Sha256": "BCABDF726F9E6C535DF8E31CDB2C1DF8C800D23A1486BAA643CA0781261FDA8A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CameraAuthoring.meta",
+      "Sha256": "1EC2D3AF7DD942D6AC6623EE07E42DCA5A13ABC42294AD721F895F39C3280B7F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CameraAuthoring/AcadeGameMaker.Camera.Authoring.EditMode.Tests.asmdef",
+      "Sha256": "3903F372A69F3C3B493950BB3467DE599AB8085AAAB475F893B7731C75EDF776"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CameraAuthoring/AcadeGameMaker.Camera.Authoring.EditMode.Tests.asmdef.meta",
+      "Sha256": "1A32CAFB5AB9E894E18E2ED7A5F38ABE85BB0018A010456BAC6D50217CDE2F51"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CameraAuthoring/SimulationCameraProfileAuthoringTests.cs",
+      "Sha256": "1C218A029D0CF1ABCCA9DD45A18295669BDB725F89F52101E44A47CBA0529219"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CameraAuthoring/SimulationCameraProfileAuthoringTests.cs.meta",
+      "Sha256": "F539B3AE8DF19C8F01DEE5870A93231F2769CAD337A159C8482A079AA458E4C0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat.meta",
+      "Sha256": "FC322BDA122C422A42A397ED83310C7573C5D1272ADDBCDC5223BB0952F14975"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/AcadeGameMaker.Combat.EditMode.Tests.asmdef",
+      "Sha256": "D95777AC0EC8A1B62372438714DFE2ED0A6C02DB342D87545AF5EE4C344C5894"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/AcadeGameMaker.Combat.EditMode.Tests.asmdef.meta",
+      "Sha256": "028E55302A620388350CAB02E977CCD0FAEBE5DAD724AAF38660B9607C681576"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/BasicAttackSessionTests.cs",
+      "Sha256": "DFE0C85D94D96A476F97C81ADE06A498AE61D3931012F2B3E2A5B906C3EF46D7"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/BasicAttackSessionTests.cs.meta",
+      "Sha256": "BC29CB29A34ECCA79E9F844439FDE978C92EA451B193873F0BE2A8CCF6164845"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/CombatSessionTests.cs",
+      "Sha256": "513172B360A6ACFC3BC18FAC25621CB532778F7521F3C7A62B55B7094C86C22E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/CombatSessionTests.cs.meta",
+      "Sha256": "41FF1EBDCE823B595D8F2E39126B5D95A8B36307315C2D1AF6B35FF9BAB66E36"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/OrdanBossSessionTests.cs",
+      "Sha256": "3D148DD2B6810EF15BD48B03B81BF8BFE0AFA5B7D41B7FA7DF30D7D3CFFCB889"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/OrdanBossSessionTests.cs.meta",
+      "Sha256": "2517AB2AAED1062A3B676816D58BFF7BA9849CFD3247EA8D74473BF5200DB7D4"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/RegularEnemyBehaviorSessionTests.cs",
+      "Sha256": "D4683AC6A18B9658857E4D8FFD41D25D23ADA2AEA54E96E201288FE8B275246A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/RegularEnemyBehaviorSessionTests.cs.meta",
+      "Sha256": "663245F5268A4B376C6FC64D8D95A97192F3C9FC75D5B46C069F2DEA6C0C14AE"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/RegularEnemyEncounterLifecycleSessionTests.cs",
+      "Sha256": "2C6C94C8CB936CDBFA91FF9E825F707DB190DBA88171542C26A4B74E628C7BB4"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/RegularEnemyEncounterLifecycleSessionTests.cs.meta",
+      "Sha256": "FFB6A0DF63A34D8A85EDD9F26D2686EB834D184EDE4EF0DFC47B0BA1064A5C71"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/RegularEnemyLocomotionSessionTests.cs",
+      "Sha256": "C3159FBF0A279E6A21E4ECF6DDC2FE2BB399F286A2BC7292E6FB4ED4FD431CEC"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/RegularEnemyLocomotionSessionTests.cs.meta",
+      "Sha256": "74E78CED4744A4D43BE2EF9283DACCAC68FF7FB2D024412645D1E37A336A53C3"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/RegularEnemyReactionSessionTests.cs",
+      "Sha256": "41BA5B233D82344BF79BA78519DE9A5E973E959BDA3B10CB47F4B420E98401D7"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/RegularEnemyReactionSessionTests.cs.meta",
+      "Sha256": "721DEB2C3AD4F0EE3482BA1B478DF14493EE15DBBBA45B2C5D67345F2B2F6C95"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/RegularEnemyThreatSessionTests.cs",
+      "Sha256": "120FA439907A29DC1AC8BD321DD502C0DEFB09B4FD185FECCC865E3915116D3A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Combat/RegularEnemyThreatSessionTests.cs.meta",
+      "Sha256": "29FD6E044C117907F6DB80D6D9C0DF50D49571A409A7A86EB92ED5B11B61C74E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity.meta",
+      "Sha256": "E8ACAB7AE36757585751346A6215D7B4301F634747065D85DDA1BA1990E2E1AB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/AcadeGameMaker.Combat.Unity.EditMode.Tests.asmdef",
+      "Sha256": "F3A39E3BBB976F323EC28654BDA43629B23EF3180C97DFF29F2B47E2DC4F117C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/AcadeGameMaker.Combat.Unity.EditMode.Tests.asmdef.meta",
+      "Sha256": "E31A6BAB13B0FA375D369B6706364D67BB8B6324587FFED1E82C213720455440"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/CombatObservationBuilderTests.cs",
+      "Sha256": "AB0750F8C4AD973472B12A934EE7E89D217EAA5A0CB67DD8922ACD7710DDA340"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/CombatObservationBuilderTests.cs.meta",
+      "Sha256": "1E2D4457F52E6EE07B1E87E4F5899960071B8B1F4ECF212DA1A763710D59EF4C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/CombatTargetAuthoringTests.cs",
+      "Sha256": "7A81AA85CD26539C5F2A66526502964B7B68422276F230458DA17BCD8A925F3E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/CombatTargetAuthoringTests.cs.meta",
+      "Sha256": "C3CC134D7D9451714DF64BE675DACE98DCBE18668C57166730E74D7D84A6DD6D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/OrdanBossAuditExposureTests.cs",
+      "Sha256": "8292DED00B93D2F8A8E4823E9E92C9F147BD0ABADD1E4E2B1A9E19A06FEB5A76"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/OrdanBossAuditExposureTests.cs.meta",
+      "Sha256": "4669B3138E3E0495731B637A3B316C93A4E850A71F648105D4B42FEF47FDF424"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/OrdanBossBalanceAuditPullContractTests.cs",
+      "Sha256": "816903C2A1761FA29C96AE067E5E9C553CC529176E6351B27F414E6022ED81E6"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/OrdanBossBalanceAuditPullContractTests.cs.meta",
+      "Sha256": "68B1D3CC35977B5582E6D01F449CC17803ADE3B469E03FD1C1A95AD9E1E4A679"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/OrdanBossCombatBridgeTests.cs",
+      "Sha256": "90706B72D98ADB85C6E65A2D0C865800A5DC4731F0D51A8E0962D04493D71D41"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/OrdanBossCombatBridgeTests.cs.meta",
+      "Sha256": "AE06EAA1A24B92823B0F5688AA98E1D72F85DE9F5C376D7CF6C3C289C8BE6ECB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/OrdanBossEncounterAuthoringTests.cs",
+      "Sha256": "8EC42229B60CA51E945A07DDDDFB4D6B23585BA2A3EC703653DC4713EC789315"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/OrdanBossEncounterAuthoringTests.cs.meta",
+      "Sha256": "A155ACECAB016410D631F54E3CE6836223C0526DDE7F6EA730963825191F53E5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/OrdanBossHostileGeometryTests.cs",
+      "Sha256": "06F080F23BEC2FF62F955D2A1C6957B714B6A6289C175AE69528636E270BCEE7"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/OrdanBossHostileGeometryTests.cs.meta",
+      "Sha256": "E53B7C54295B10301D11D7D9AB9F2355284072F85C00996FE755A9F971A4A51A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/OrdanBossTerminalTeardownContractTests.cs",
+      "Sha256": "77C00F1EE182458E4A9556838039C468E9B4041AED4512AEE79504D8D17DD70E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/OrdanBossTerminalTeardownContractTests.cs.meta",
+      "Sha256": "22BDAE21DD5366C8C10AF7A918C4DA628F680E6ED6B8A79D5229A12AB894C076"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/OrdanBossTransferExposureTests.cs",
+      "Sha256": "8F42AF9D1DC810063C1C415CDB8A9A0A01F697905EA2234DAD8488003C0ACAE5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/OrdanBossTransferExposureTests.cs.meta",
+      "Sha256": "1040C563132FE89AA69C6D5409DC1B41869F50490B0B756887390B391B1B11DC"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/RegularEnemyEncounterAuthoringTests.cs",
+      "Sha256": "BA8162CD012E76755CF0CBB8D4A25F1B16C3196541DDBC22F56CB999435FCDA1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CombatUnity/RegularEnemyEncounterAuthoringTests.cs.meta",
+      "Sha256": "7A8281F0FB3DD5E3A6A1E8E261D931FA90CA7F72DF90D7E31DC8E4C82F55724D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Costumes.meta",
+      "Sha256": "3C30C133133D48407459E9705AB314C99FB700BBCC0F3A87369854E55BCEFECD"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Costumes/AcadeGameMaker.Costumes.EditMode.Tests.asmdef",
+      "Sha256": "8FB341B38042B7E9E52131FB6AD0927CE8ED3679FF291F3D59D0936E820C466A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Costumes/AcadeGameMaker.Costumes.EditMode.Tests.asmdef.meta",
+      "Sha256": "9D5F8B696FC50F888F057086DF195DD41A8ED5D22BB9980FECCC653C83802BD6"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Costumes/CostumeCoreV1Tests.cs",
+      "Sha256": "53591F88A2A1CFF75D6F29D8CDDAF9A592340BC4723EFCCFBB5989B645F880B1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Costumes/CostumeCoreV1Tests.cs.meta",
+      "Sha256": "9531E8C8D1495EBA77A19D5BA117F161BBA7117CA4560D03AF2077F9070DCCC5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CostumesIO.meta",
+      "Sha256": "CBEE5A13586CBD5FBDFD6D100DCE877851A13512B31594EB774A1C80A400B765"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CostumesIO/AcadeGameMaker.Costumes.IO.EditMode.Tests.asmdef",
+      "Sha256": "939382127FA662D3CF4B93F08C02EABF03061884FC6DC7925A0B3A3D0C05309D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CostumesIO/AcadeGameMaker.Costumes.IO.EditMode.Tests.asmdef.meta",
+      "Sha256": "24C43D606721B56A2533019C434E76462132267548063A033AE3816843F980D5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CostumesIO/CostumeFileAdapterV1Tests.cs",
+      "Sha256": "6A939599F0D55B03B4CBDCB939283BEB5F1B36506E815662CB125B9CD5622C23"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/CostumesIO/CostumeFileAdapterV1Tests.cs.meta",
+      "Sha256": "31C4F428C458879BDF16792AB5D1B5FF668DC436AF8CF1413D3A92945947BC53"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation.meta",
+      "Sha256": "B7D6CAC50148B9EEC3F8F125666502E2940912B4207A335827A2B52D1FB9B565"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/AcadeGameMaker.Hub.Presentation.Unity.EditMode.Tests.asmdef",
+      "Sha256": "FFF73083608E9EEB8539A84A164E8E6A7665A986B777DC6EADD6E054A1BB1D0F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/AcadeGameMaker.Hub.Presentation.Unity.EditMode.Tests.asmdef.meta",
+      "Sha256": "CD2B5CBD97F59CF9AD628F2930DDC7B020D61CA60FC6819D4C2D4392A0F4646F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffC3AuditSuccessorTests.cs",
+      "Sha256": "1B0F8D0919770CD1FBD06F908EC23E370A18E911EC5AAC09938FAF0BFDA174E6"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffC3AuditSuccessorTests.cs.meta",
+      "Sha256": "F1FFFA239E271C037AC818FF4C03B698DC3B07B561F8024887F4E80677A2FEFB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffEditModeTests.cs",
+      "Sha256": "57E7EFB17307BFB156D338F7BDCE25104E3192748FD6C159F7BB7B4A7483DAD6"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffEditModeTests.cs.meta",
+      "Sha256": "3907F0C1BAEC180D9CB3A79612E5BBCC06562384C52F2BC3C913DD76A5ADFEE3"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubPresentationAuthoringTests.cs",
+      "Sha256": "D7A41D0B6F4B6F703D02BC6CD0DF5316DFB95B338128A749928D2CAAA0A13208"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubPresentationAuthoringTests.cs.meta",
+      "Sha256": "E63193DB3034A36344F418D7CAC8C8266D601524FFD9AF71DCE420D8716183FB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubPresentationScopeAuditTests.cs",
+      "Sha256": "1DB3012C82DD6E0A1348ADEAF954EF0056EB28E925108716B6317289AAA93D60"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubPresentationScopeAuditTests.cs.meta",
+      "Sha256": "C354A86725991111485C725256023849A93E0F2E9994CBEAC55FD3721674B0FE"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity.meta",
+      "Sha256": "00C14CFAEF5492A7E2F018A3ECECF00309BCA9EA8AB4E9E3F787AB1CDD429DD3"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/AcadeGameMaker.Input.Unity.EditMode.Tests.asmdef",
+      "Sha256": "1ED81F65C60ACA26C6BEDE2C76DE2B81A3A08FD1D22544E58EC41AF76677BA72"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/AcadeGameMaker.Input.Unity.EditMode.Tests.asmdef.meta",
+      "Sha256": "83B752FC12003AA7EF1B9190836A192C8DFFF4CD796B9A79515594E35B4572FE"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubMenuPresentationControllerV1Tests.cs",
+      "Sha256": "40AA974BF8407A6FD2AAE57830256F04599AF1A835F708999BDC10F332061699"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubMenuPresentationControllerV1Tests.cs.meta",
+      "Sha256": "2F5613553611812EC047BEAAC95743F3896CE7DBC9490C8935B57FF01B79ACA8"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubRuntimeAuthoringBuilderEditModeTests.cs",
+      "Sha256": "E853B2A777B86E9F70AF4B06FED7427DB7A9DF0710A1BD3F3B311EAD3F1D122D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubRuntimeAuthoringBuilderEditModeTests.cs.meta",
+      "Sha256": "69561A1B3306BA73227E567829287BB844987155AD3AC2EB15B8F0D73457FE8A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubUiOnlyQ0ScopeAuditEditModeTests.cs",
+      "Sha256": "C27116AC35BF83D4AB8794FA9D3E379AD6F127B0E52B48C51399F49ADDF862D4"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubUiOnlyQ0ScopeAuditEditModeTests.cs.meta",
+      "Sha256": "9622EC3AEB65C5CC2AB713117FB8E0E091030EFC9731DC1206159EB0D686F147"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/NewGameConfirmationOwnerV1Tests.cs",
+      "Sha256": "A0A1928CE83A22D324F785476B38DCDE595B71E53122139F10535C5B3AF6F9D6"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/NewGameConfirmationOwnerV1Tests.cs.meta",
+      "Sha256": "AC62F31C59BC1FA79BC0999BFCE6D6F7965AE6C3F2E2061DE8B96587A2C6B611"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/ProfileNewGameConfirmationV1Tests.cs",
+      "Sha256": "F80D57376F3845E16BB3D347CFB3834ACE8FCCB53F539376D880A844A90F9581"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/ProfileNewGameConfirmationV1Tests.cs.meta",
+      "Sha256": "4DDE703DFCF2E048D9737FF57EED9E0CA1192109046871AFE31C437400F13AD2"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/ProfileNewGameObservationLeaseV1Tests.cs",
+      "Sha256": "E899F8531763CD47BE3366619A31CD91700F65EF6B2770339728B59E66E1E1AA"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/ProfileNewGameObservationLeaseV1Tests.cs.meta",
+      "Sha256": "8121B03B865DF9958C49C3A7899A9690BB8997B6586E77097C187C21699610FA"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/UiSemanticFrameV1Tests.cs",
+      "Sha256": "000044B22F846550EC8DD6E92BD949E6BC1FAF257EA83719A3983C54A529BE4B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/UiSemanticFrameV1Tests.cs.meta",
+      "Sha256": "3691C492BE0238123056F7E0AE89C7BAB4B9F012A66E299326EE91B34E10993C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Movement.meta",
+      "Sha256": "4965839E0E56CF691002F4639538AE84CFB637014949E419AA32ACE2BF65E034"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Movement/AcadeGameMaker.Movement.EditMode.Tests.asmdef",
+      "Sha256": "3F3ECC52527E6DED237E9A7EA9EEACA41FA9DF42DC4C97C3D519BED1E5487685"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Movement/AcadeGameMaker.Movement.EditMode.Tests.asmdef.meta",
+      "Sha256": "5AE7CCB3A19A433A1FF1D1B7323986D3FE37A4A4262495485A55BD2EE8DD1B36"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Movement/MovementSandboxAuthoringTests.cs",
+      "Sha256": "E4E44E740492FB099DD640356E8303DE0EE46FFA359B60D4E0026D63063CDF2B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Movement/MovementSandboxAuthoringTests.cs.meta",
+      "Sha256": "AB03E54E42B4FD95D19A2C402DACD9612DCC32DBE9309E4153E6102F8C3DA2F0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Movement/PlayerMovementMotorTests.cs",
+      "Sha256": "04D122DCA901838A835F6113C856DD47F9EF11468CB8B4E193E64E5238B99E7F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Movement/PlayerMovementMotorTests.cs.meta",
+      "Sha256": "E752D84E5D052B912BB70E7704E7135E2AE0C7A1CA17AA969F21022A71FB4157"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Presentation.meta",
+      "Sha256": "EA4139A7362DDB1532CA042B07F5DB13CDA63465447C2448886DBF9C624CF8DD"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Presentation/AcadeGameMaker.Presentation.EditMode.Tests.asmdef",
+      "Sha256": "E640F6E171ACF2912047614E32CA06AFD338AD502C7C22D14637A3DBB69CC624"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Presentation/AcadeGameMaker.Presentation.EditMode.Tests.asmdef.meta",
+      "Sha256": "E48ACFCC11EFF99BACC339A7D3EC922F0D02BE467B227B053019264B955C3E36"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Presentation/CostumePresentationV1Tests.cs",
+      "Sha256": "7F431FBDE198E7FB72A8D385A0E6DBC4D61556CA8BA5E1C79683872DE9191C59"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Presentation/CostumePresentationV1Tests.cs.meta",
+      "Sha256": "C52B2DD815BD4B8521CD475F8FC56EB24714F2A325D1F0B5C0DB33CDE2BD8E52"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile.meta",
+      "Sha256": "65D7A6A555126CECA041611CA6714A28251A9A9BC763AEFAE57E52C23628FB68"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/AcadeGameMaker.Profile.EditMode.Tests.asmdef",
+      "Sha256": "DC1E6DD360DBE6785D6611677C47F8624A92A874DEFBEB521F86CA52E097D97F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/AcadeGameMaker.Profile.EditMode.Tests.asmdef.meta",
+      "Sha256": "E9EA0DBDB986B6E50B167907CD9A08D63BC4EA90337BCEFBE77FE7C5BC0EC09F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileAtomicSaveServiceV1Tests.cs",
+      "Sha256": "DACEDD7AEC5E5D71746A10DC7CAC92E229513829E6AB4645A4EEB80924BF51DB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileAtomicSaveServiceV1Tests.cs.meta",
+      "Sha256": "B35C122B3514FFFC6F2BA62B9E85329ED2147A68255CC4B42652DEAE2D2DE3E0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileBindingApplyFailureRecoveryPlannerV1Tests.cs",
+      "Sha256": "D7B2BB12686CAFC0AC5CAED5483B01240C27D309401CD50D49F526B02EA43505"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileBindingApplyFailureRecoveryPlannerV1Tests.cs.meta",
+      "Sha256": "351E39332FAB391EFB44A66FD093AAC020CB45294D96A951536A3A5E1F456C6C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileBindingOverridesJsonTests.cs",
+      "Sha256": "5FB2E8EEA4ED8264762794B9597AA3D9D67050DE19A7B9DB4EAF0AB8B4003D6E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileBindingOverridesJsonTests.cs.meta",
+      "Sha256": "7E6FFD1F8EF0E5FCC98E088BC51D6C3E37BBC1A0BE454C0127A4E9CD3D964F76"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileCanonicalDecoderV1Tests.cs",
+      "Sha256": "A292D404C2E6F5BBE0534F1F0345350FEC64672A7BB269231531B333C3D540BB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileCanonicalDecoderV1Tests.cs.meta",
+      "Sha256": "6B72B98EA1C31096E9CE1BD473737711F8D414000052621AF2164DCA0120EB43"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileCanonicalEncoderTests.cs",
+      "Sha256": "0FBC8FABF8B14DC4D607DAE4D49AE3088E5CC0D6BD6D0B374857DC05326153F0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileCanonicalEncoderTests.cs.meta",
+      "Sha256": "647B0211D3DD9F8BFE46662E2D2CE8482406BD53BFA0B6F64B80341D7B4DEA1C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileInputRecoveryAtomicSaveServiceV1Tests.cs",
+      "Sha256": "C601560CE285B9774F64800ECECBFABED3140AB6D9795A424B43BEF78BA76F06"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileInputRecoveryAtomicSaveServiceV1Tests.cs.meta",
+      "Sha256": "CB0431CE7E282125DBE4E78D8F30285212BF9FE85C0522798B708D4ED675D5E3"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileInputSnapshotTests.cs",
+      "Sha256": "F57A0CB4191CAC84C6429F8FA475A529378E7996C9B96EC2AE8B29A089975A77"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileInputSnapshotTests.cs.meta",
+      "Sha256": "6B00DF2CD8724D94F0219DEB568DB885111A6AB354BC9BC3AFB2DBEA06B657A4"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileLaunchObservationAdapterV1Tests.cs",
+      "Sha256": "22DFFFCD03ADF1AA3E390540A2C7649AD9E3E321CF1310BDCDF7504A04F0B0C1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileLaunchObservationAdapterV1Tests.cs.meta",
+      "Sha256": "BBE68988BB8B3735EC9560FF115B6C336EAC290AF7C0090E2449EF644E7CA25B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileLaunchPreservationExecutorV1Tests.cs",
+      "Sha256": "176B517B7C4B05E412DED5B36464038BF6995F1DB573323CCA83411B1A2EAA3F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileLaunchPreservationExecutorV1Tests.cs.meta",
+      "Sha256": "91DA4C8008DD7792CBD0930D26A771EB478DA01E4F155B08098DE5171184CCA9"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileLoadSelectorV1Tests.cs",
+      "Sha256": "1C84DB7296CCC9256289DC7BB4375A05A4FDC7005953DCF230F9BE41C24CF550"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileLoadSelectorV1Tests.cs.meta",
+      "Sha256": "461F25582A3A3637B8171744DA795991DCA7750CD40BA62FBA37BDFCA805CF86"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileProgressionSnapshotTests.cs",
+      "Sha256": "E8E296D216EB05370731B52188276BAE2AE8EF3784134BFDBEE276F753AF430D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileProgressionSnapshotTests.cs.meta",
+      "Sha256": "BC80C06F61A687AECEEC83AFF143F8EB60F1E02D20C8169CF3241D8D2208E138"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileQuarantineServiceV1Tests.cs",
+      "Sha256": "8FCDB5CE41671C4CC991C525F25043690674DB7BE74CAD1B35762D455CAEFDAA"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileQuarantineServiceV1Tests.cs.meta",
+      "Sha256": "F01112A5674D6217FF5FA888566898F2BDE751F5ACE904B32F5CA1FC2016FE16"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileRecoveryPlannerV1Tests.cs",
+      "Sha256": "F58B4E9877D92D66AAF518795DA0927DEAEAC738C641C5F49223F4BF95FDC44A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileRecoveryPlannerV1Tests.cs.meta",
+      "Sha256": "33858F59C5BBBC7CCA03EE30E5CEFBC5E02AEE026389CE6153FC674C834BCB28"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetBarrierInterceptionV1Tests.cs",
+      "Sha256": "38AE4DA7D8786D3A4697A1688CF107A4A71E61573910F8A4099A55C2C3B6C3CA"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetBarrierInterceptionV1Tests.cs.meta",
+      "Sha256": "77CA2A42CE20038E1DA80670D8C90F13648E7963F730142F59106023DD54C7BE"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskAdversarialV1Tests.cs",
+      "Sha256": "522E0B1C95694FB3E663B829E56772B99D8C98D3813044FE8BCD93B1E2DB377C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskAdversarialV1Tests.cs.meta",
+      "Sha256": "B5B9BE95950A924046284E09C7B9F769F359F6E8B9953873445D938967488844"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskCheckpointV1Tests.cs",
+      "Sha256": "B1422C20E89F9156E9598ACACA497049760BCA0E90B9E9DDF02CA8B9F1661EF5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskCheckpointV1Tests.cs.meta",
+      "Sha256": "C2597782899D9B10229BC6E773C966338D5D31DC68FC163C371192E6BADBC306"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskFaultV1Tests.cs",
+      "Sha256": "5611412CB030F1FA4F9ECC754203E04B1BDEC2D60C990016DF996DBAC9540CE2"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskFaultV1Tests.cs.meta",
+      "Sha256": "027394C3520671CEDCF30499FC0E442A44D67D383D71B3A88ACC8B916F036C08"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskProcessV1Tests.cs",
+      "Sha256": "FD33B463615DC3D1A6BCAB6D8425992E5925D662BC62FD1CEF44CC9E636E0E90"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskProcessV1Tests.cs.meta",
+      "Sha256": "B2D7E37FCF0A309B88492BF0145E650FF991B7ABA2238BA53EC374EB21610247"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskProofV1Tests.cs",
+      "Sha256": "3371AB3B5E1F7961C93D64DC9565DB658139ADC6AF9F12164AAC0D46D123CB9B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskProofV1Tests.cs.meta",
+      "Sha256": "8D85F5DB7AB0CC00555AC44AE1A829E4FD438A5A995D3BADDE981F14317C26E0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskResultV1Tests.cs",
+      "Sha256": "F9C5C6E00D32AA2F0008BC89B0D282F891B2BA9903E5F9ACF40C18318658EBD0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskResultV1Tests.cs.meta",
+      "Sha256": "85B8E5E762FB3A79042E55FC87E3D43394E54AB5AF449DEE8D6ECB35C6DB9E73"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskSaveFaultV1Tests.cs",
+      "Sha256": "B220976755A075233C50CE3ED1EB4249423A330401808D5C845145FC17455B6B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskSaveFaultV1Tests.cs.meta",
+      "Sha256": "E5E1CB097DFA1D6A7E5A82DFCC3EBE5A75EBE5AFA56A57B01BD9077DC9A2C382"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskTransactionV1Tests.cs",
+      "Sha256": "AAF9C05B61F612A48EBC72CEF990D576AB24C1AA5785CBFBBB76D793EF21C862"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetDiskTransactionV1Tests.cs.meta",
+      "Sha256": "623180D809535A0868D1002912CE220404F31791E54740657A0381E4E2570843"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetMemoryAuthorityV1Tests.cs",
+      "Sha256": "D39DA6EE7A28CBC409A9F2FF07B3CD3992FB2FC2B84EA03160FFAD971A45FD89"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetMemoryAuthorityV1Tests.cs.meta",
+      "Sha256": "89DA1932F655861D7351AEBD02182A73E00E8AE3CDF0CF287454B4931924150D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetMemoryJunctionFixtureV1.cs",
+      "Sha256": "543B545439985313BB474BECA97F817D86D7FE87759F3F851256815D9F31140E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileResetMemoryJunctionFixtureV1.cs.meta",
+      "Sha256": "1DA38E82D2901B20BA79D772E6BEFC7501DB8385C84B9C38BEC268D28AB9427B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileSettingsTutorialSnapshotsTests.cs",
+      "Sha256": "940CD278B2B3105E24314164BEECE7F75B12D273710B903085C170603C1681AC"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Profile/ProfileSettingsTutorialSnapshotsTests.cs.meta",
+      "Sha256": "CE84400F454556CF01FBF1786723E197CB7706A52E03CB19E06CF3B68ACEB78C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Run.meta",
+      "Sha256": "7207FCBE7D529B26AE4321480363B0E9CC1BB3F9010386A08AA265FE90715AD0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Run/AcadeGameMaker.Tests.EditMode.Run.asmdef",
+      "Sha256": "0499A0C50F6C4254E039F16DF346D6430A5C2079483649AE19DFF6E42703948B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Run/AcadeGameMaker.Tests.EditMode.Run.asmdef.meta",
+      "Sha256": "E8C7A1DD1A70BD34B73C1FE9DC4AC7401FFB8FE243329B7FE39B45F95624A8DC"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Run/PostBossProgressionSessionTests.cs",
+      "Sha256": "CB17920662CAEEA68300E4BB978C63756B9254CC8E69CA3C098D1A49510208CF"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Run/PostBossProgressionSessionTests.cs.meta",
+      "Sha256": "2688A8527D3D472D0A8D20DEFC68F06E03E7DB6068B7690C09F06EE888F9A18B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Run/RunFailureArbitrationSessionTests.cs",
+      "Sha256": "2063E9B60A3C9B2497F192CDFE9BF03587AE55B4F3F04EE71ABB271294911952"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Run/RunFailureArbitrationSessionTests.cs.meta",
+      "Sha256": "C05AE0D038C0B551AA530449530FF65DE846B3EAC1C5C87CDCCE308167E8162A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Transfer.meta",
+      "Sha256": "89AE8C65152683C3A3E9CE242F01CB8F2EF94125BF8AA148691B5F3A911CDEED"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Transfer/AcadeGameMaker.Transfer.EditMode.Tests.asmdef",
+      "Sha256": "3304A73B86F79FA65CDEF902503284CEDBCBA7B10EF9F5A9D4E708737F98B186"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Transfer/AcadeGameMaker.Transfer.EditMode.Tests.asmdef.meta",
+      "Sha256": "92ABE2A9762A3F0922E75F453B4EFCCC8EF2431EE1AD02A1187870D8952BDC49"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Transfer/TransferM1Tests.cs",
+      "Sha256": "A863BB8A34183CA142558F4B27F5D43ED9CAE435B7576718E77DF630136800B3"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/Transfer/TransferM1Tests.cs.meta",
+      "Sha256": "7E71E210135B6FD0FB91B9F49CED9BF05FE2B2FB1FCE306F043C7135E89820DC"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/TransferUnity.meta",
+      "Sha256": "E01D1DC49F9F3955937142F4C3A4500FFAE8AB01132EBD802E43399E879E6BAE"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/TransferUnity/AcadeGameMaker.Transfer.Unity.EditMode.Tests.asmdef",
+      "Sha256": "9DC4D30D762E48410252CBD7942087B918C60C975AE86E7793AB0D8466152CCC"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/TransferUnity/AcadeGameMaker.Transfer.Unity.EditMode.Tests.asmdef.meta",
+      "Sha256": "DD61F229A023AE72A00BB846720345EAF44851F0637D61FE0C20CC7BC2649C8D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/TransferUnity/TransferFixedMathTests.cs",
+      "Sha256": "505C86B8223DEC06D92E421F1A9E4044B2E39077905A431BF1661511D1155D95"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/TransferUnity/TransferFixedMathTests.cs.meta",
+      "Sha256": "1DAD21D7ECC4B7E7AC1EF4B8C7F25D02CD40CD5D369733C4AB8B51926631249A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/TransferUnity/TransferObservationBuilderTests.cs",
+      "Sha256": "D4C88A064F62D7A6155E40ABF72AF8D8E08BAE79CA411DF761D50F8748AA4EB0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/TransferUnity/TransferObservationBuilderTests.cs.meta",
+      "Sha256": "ACCF6FB38D3878F4FB0E90105663112996DDAD92B0B05A3F961A3A5AE731CFF1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/TransferUnity/TransferTargetAuthoringTests.cs",
+      "Sha256": "47D1A5C66A5F83FE8814E77FE2E94D52A205CAD9F7781B220D11D622D8987247"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/TransferUnity/TransferTargetAuthoringTests.cs.meta",
+      "Sha256": "FBB8D13F19426860694B3F0CE2688141E1347249D350A8FD2ED686A786284F17"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode.meta",
+      "Sha256": "98EDFC9AE22DC068D4FE7EF6A21BB9D984A37FAAD178F37003CE778313191390"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CameraUnity.meta",
+      "Sha256": "B11F972D415EFCB9AE1A4DCA7FF71830FCEA523D560367E27CD3CA7DEC1F3C00"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CameraUnity/AcadeGameMaker.Camera.Unity.PlayMode.Tests.asmdef",
+      "Sha256": "7CCC31D6455E1822ABCB9F4E3CF855CD0771C56F277E4962A22D117F26F33460"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CameraUnity/AcadeGameMaker.Camera.Unity.PlayMode.Tests.asmdef.meta",
+      "Sha256": "07FEED00714D1FC7C2A91BAEBF4BCA6DA608031D3CDBF31824568EE35E203CEF"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CameraUnity/SimulationCameraDriverPlayModeTests.cs",
+      "Sha256": "5DC692891C6C09AF6E557E2CA2C41387101EE562E73CAFA2616BF73FECB605F1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CameraUnity/SimulationCameraDriverPlayModeTests.cs.meta",
+      "Sha256": "8BC5B9BD41388C76CCC9FE7E81B2DCDEE7124395C7F43CEDC16748B292619DC7"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity.meta",
+      "Sha256": "3E58F1A9DC551E869FFF23223D03DA168C80FAB2994532EEEDCD32A0EA58B411"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/AcadeGameMaker.Combat.Unity.PlayMode.Tests.asmdef",
+      "Sha256": "96E92D633EA529E33AD345CE73DD251003BDB9F197FA2CEE8108EAEA4DE813E1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/AcadeGameMaker.Combat.Unity.PlayMode.Tests.asmdef.meta",
+      "Sha256": "A89CA59CEB5A3B0256BEED417F30CEC3569B13573312F1B9AB807A114B524CED"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/CombatObservationBuilderPlayModeTests.cs",
+      "Sha256": "61F92A57672F456E0D6F16EFE2117B91E18F60C9218F3CD9265E84E1B7F22424"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/CombatObservationBuilderPlayModeTests.cs.meta",
+      "Sha256": "21D5DD67B31D774C16AA244460E313AA7515C426FEB142FA293CBAD2B798987B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/CombatSimulationDriverPlayModeTests.cs",
+      "Sha256": "E748C84CF8DD48091A6CD767456B9DA3F1CB9EF09DE9134D857F0D31A443A868"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/CombatSimulationDriverPlayModeTests.cs.meta",
+      "Sha256": "65166C59478A2B86860CF66BB40A414ABC330542EB3720385BFFF727119B49F1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/OrdanBossAuditExposurePlayModeTests.cs",
+      "Sha256": "139058F187EC807B7F0791ED71C4BCC9439B48566390C65D7A9823D279463344"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/OrdanBossAuditExposurePlayModeTests.cs.meta",
+      "Sha256": "4E85D20042FD15D8AF885D6A76768881877DB0A1E61BAAA82D81867FDB9DC334"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/OrdanBossCombatBridgePlayModeTests.cs",
+      "Sha256": "FEA974BAF28D95C96BCE21D64BA8A609FA584035DBE33DB23F32BEDED4702509"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/OrdanBossCombatBridgePlayModeTests.cs.meta",
+      "Sha256": "C06BF582701C20DE746FF84E34E2671F27D135F9C7C15E424E036C2293CD3B32"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/OrdanBossCombatInputGatePlayModeTests.cs",
+      "Sha256": "FE9FD0510BF4435E15329E6627E47A29AD68D5BEF097BE075C9AD8AB98A9B4DC"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/OrdanBossCombatInputGatePlayModeTests.cs.meta",
+      "Sha256": "89558631A75384B438AB85D91D242AF1264EA2AACC78D8002C384E5A214A6DC9"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/OrdanBossEncounterAuthoredGraphPlayModeTests.cs",
+      "Sha256": "92F62974AAF6CFCE9A31CA992AED1F506C9B4FEF4A89376D7E6534A4D39DC87C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/OrdanBossEncounterAuthoredGraphPlayModeTests.cs.meta",
+      "Sha256": "42B64EF821ED2D3651985D0A0F9AA599319A4E7153EADB2519632559E65C4C42"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/OrdanBossEncounterHandoffAdapterPlayModeTests.cs",
+      "Sha256": "E430CB33E4080BF7906A6CCF4AD3ADD3C3160C8EFC23C8EF4438DA0392730B15"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/OrdanBossEncounterHandoffAdapterPlayModeTests.cs.meta",
+      "Sha256": "274227CC491EA23AC036ECEAF5861F6E3E01753E82926FF9E94CD05A0BBDBDA8"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/OrdanBossHostileDamageProducerPlayModeTests.cs",
+      "Sha256": "4B7F6CB21BDD1870DFF93EF7959F83A42EA8075E3BB543F566365E44D3539FD6"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/OrdanBossHostileDamageProducerPlayModeTests.cs.meta",
+      "Sha256": "6C2B6B6FA6A99CD272550F44F8677C3EC81AB48F9D829BAEA69CCA20A734173E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/OrdanBossTerminalTeardownPlayModeTests.cs",
+      "Sha256": "EE5F2104EE6B048C05C6F38F5064260874F059AA7FDB6FA8FF8CA4EB7F02B294"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/OrdanBossTerminalTeardownPlayModeTests.cs.meta",
+      "Sha256": "7B4FB5E9B7478E1A75A53097B361EB2A7320BCEC1AE069962B987A94442B972A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/OrdanBossTransferExposurePlayModeTests.cs",
+      "Sha256": "5F6C24676E798FA72E510D9FD2F9D461D5C575B153CDEA29D6A563FFFA68D876"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/OrdanBossTransferExposurePlayModeTests.cs.meta",
+      "Sha256": "80916F177E970E9BFC3BCD447988D0A470E5447C2EA5C10B015F2B6398BF987C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/RegularEnemyCollisionExclusionFeasibilityPlayModeTests.cs",
+      "Sha256": "4AC1D3CE179FB84AB78E00A9EC579F95F7E392CB8D9BC7CF89F4F37EED1064C0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/RegularEnemyCollisionExclusionFeasibilityPlayModeTests.cs.meta",
+      "Sha256": "B608A86D34B05AA3A7D8C34D0530D68C84E860FBE1909CE9B0D732A860CED0FA"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/RegularEnemyEncounterAuthoredGraphPlayModeTests.cs",
+      "Sha256": "5D849F5A84F0430008EDF030E7D57541487B5CFFA7975ED2B10F39EFDEC5325B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/RegularEnemyEncounterAuthoredGraphPlayModeTests.cs.meta",
+      "Sha256": "8D5641CD6775697C448517BBF6D57C8A3E1932936DC265FFD9984185DE377DAF"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/RegularEnemyEncounterHandoffAdapterPlayModeTests.cs",
+      "Sha256": "48407AFFCB5CA1ECE3281EA26359B66DF89E047A6D9240036C700934AE026A29"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/RegularEnemyEncounterHandoffAdapterPlayModeTests.cs.meta",
+      "Sha256": "400A5A6DAB23B7857D44E292596A1770D02D002C64E3ABA132B6C92EBC512BF5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/RegularEnemyLocomotionSimulationDriverPlayModeTests.cs",
+      "Sha256": "9F512B9CAE03ACFF3A74BB91DE1E941958647716BD8F2E3D17C8D5FF726FDF90"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/RegularEnemyLocomotionSimulationDriverPlayModeTests.cs.meta",
+      "Sha256": "E62DD304F8F39884FF2EDCAC54A1749B5328582DFBF7E5480C54AB27EEBD9D35"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/RegularEnemyThreatSimulationDriverPlayModeTests.cs",
+      "Sha256": "A18F675209AFCBA253E17E7628712771DA4A7371CF172C9764EF5C06E2A5B6B5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/CombatUnity/RegularEnemyThreatSimulationDriverPlayModeTests.cs.meta",
+      "Sha256": "95EB440C05DFD34B08697862B21D63D9282415D2FD3CE173088D781E47E11A53"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation.meta",
+      "Sha256": "A96A6159C322C6D14D2EEC2577A6AE00D9086A39F19E2206018E924213065E13"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/AcadeGameMaker.Hub.Presentation.Unity.PlayMode.Tests.asmdef",
+      "Sha256": "23ABC35A37A894980E1F9B52CF58A83533A41D6E2B8961C584ECBABFBC21E620"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/AcadeGameMaker.Hub.Presentation.Unity.PlayMode.Tests.asmdef.meta",
+      "Sha256": "AE6B4F92828F4EA7D91E504337DB3D762A85447189BFC5B4BDA0C5030CBC4A86"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuFailureTeardownPlayModeTests.cs",
+      "Sha256": "1BD5082F5AF9ECE20BEC5DCAC69BE0528D1006471967778A76FFCABD5C3D33C5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuFailureTeardownPlayModeTests.cs.meta",
+      "Sha256": "441F2380CEFF68A34854DCA2C36995CA545AEADABCC63654750F84DF2D9FC2AF"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuIntentHandoffPlayModeTests.cs",
+      "Sha256": "3AB39CDAA80E471475D44C219FE2DECFF33E772C2614F3CA75D63FBB1687ADDA"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuIntentHandoffPlayModeTests.cs.meta",
+      "Sha256": "340C3D2214EC5F9E01FA632A7F9905841EE79FAF7D0F11AA043D3796476BDACD"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuPresenterPlayModeTests.cs",
+      "Sha256": "C0E473D554BC8B39219F2FEDDEF1C5E4846A632D67C89719D6FF28706BCA83F7"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuPresenterPlayModeTests.cs.meta",
+      "Sha256": "9B8466138C4DE564C72A637D8A55E635234F078E12B1F280AB2AF31BD9678025"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuResolutionPlayModeTests.cs",
+      "Sha256": "C49A5687CA044D070AA18FCF60BB236ACE7258F6CAC1532509569B6BC2275EFB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/HubPresentation/HubMenuResolutionPlayModeTests.cs.meta",
+      "Sha256": "9E7FDC239DD45621A6D715F3C391AAB3C52D6A90662DEB613CBE4199022D2E9E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/Input.meta",
+      "Sha256": "93B2230FAFF24BB8FDCB0DD6E8F8868E07148B4020936E336727295AB05FF6D9"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/Input/AcadeGameMaker.Input.PlayMode.Tests.asmdef",
+      "Sha256": "EF64DB22637F7C1145B6A7811479C28046A229F85AF073799D63A7814685EA74"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/Input/AcadeGameMaker.Input.PlayMode.Tests.asmdef.meta",
+      "Sha256": "1F692E82345BA6EC0D6D7D449EC1A03396B3F5D5518B96FEC07667C74D8C330F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/Input/GameInputAssetPlayModeTests.cs",
+      "Sha256": "A6FA75A24D0C9C77A15B5F8A3C2FC8A24079F8DFBF5B116D22730F9F00B21AB4"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/Input/GameInputAssetPlayModeTests.cs.meta",
+      "Sha256": "9ADA55D958D8246C13D40B7D19A318A93FD9BABC848F45E92E3A7CA8391E5AB7"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity.meta",
+      "Sha256": "2AFF8B7ABF780E2E3D18EFE3A30E8CB9EA57E590A926ECDC8D2EEDB6BCD3DDF8"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/AcadeGameMaker.Input.Unity.PlayMode.Tests.asmdef",
+      "Sha256": "5F79096CA7294D07C77AF7AA8612B439114148C415FE53A8B07DD19207B6595F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/AcadeGameMaker.Input.Unity.PlayMode.Tests.asmdef.meta",
+      "Sha256": "E79D6890A1BB24425DC20FC4FC4AD13B54DF1976A6AA2E2FB9259702E36DC064"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/DesktopProfileLaunchAdapterV1Tests.cs",
+      "Sha256": "563907B3CF817CFAE426B65C9E86B5F3304A6FD82B5BEF3F186D02E4D61F25BB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/DesktopProfileLaunchAdapterV1Tests.cs.meta",
+      "Sha256": "5BD61F5E03B50FC13A2F7B575CB2A2D7A053E782C5737A0B16B2D1337BFD66C3"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubEntryHandoffLatchV1Tests.cs",
+      "Sha256": "9A96ABD3985785FBDE6FAFD2A825B44AD1D5B3AE3F3AFDB61C47DDF4655C1B2E"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubEntryHandoffLatchV1Tests.cs.meta",
+      "Sha256": "BF4F7413B8BB5C5D5FCF776A1D98CDA07120DAEAC7FDB6208A4490A2840BF73C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyInputRouterPlayModeTests.cs",
+      "Sha256": "2CCBF5CE34A541E6012CCB48086353356D71D766C5BED68C43018AA1BE0FFE1F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyInputRouterPlayModeTests.cs.meta",
+      "Sha256": "4465FE82C83B5B0EFF95E735658031C91037B77E8B6EA03DF51039698198211C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0CoverageBPlayModeTests.cs",
+      "Sha256": "8EEDFA700F94B0101A1C4AF89A5D26905C5A8F95B42781935D6A6BD3832328A5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0CoverageBPlayModeTests.cs.meta",
+      "Sha256": "FE83EE7BB66E431CB908938B733A141A838DC4F60318C0CD5CD4587095F88AD6"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0HandoffMatrixPlayModeTests.cs",
+      "Sha256": "1AF86650F070896A77D33453E76C346ECAA04CAEDAB62D5E192214097CFA6667"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0HandoffMatrixPlayModeTests.cs.meta",
+      "Sha256": "A2C615683B65F554107B3371D69B6848B02DBEE5FA74768AA12A1493D03DF65F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0RemainingRuntimePlayModeTests.cs",
+      "Sha256": "6899830A32D452F8C82BC18697E1B9744C2C050EAC7A89A856DE6240EB9C5D1F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0RemainingRuntimePlayModeTests.cs.meta",
+      "Sha256": "36E8F2DB4904E74C9373ACBC1D315DAEB7BBA3825CCC22B3563778E9D316A37D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0TestSupport.cs",
+      "Sha256": "404B0E2D123EC9430A152D602DF302BB943EB1B772133519E62CCB1A0FCFD09B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/HubUiOnlyQ0TestSupport.cs.meta",
+      "Sha256": "04C6173FEDCD2119AF19CE9D327A09688A787D8695521FD378545F37766E22A6"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterActualCameraPlayModeTests.cs",
+      "Sha256": "AD7207F15B45E5CD10E0887A4D140AE7B7A7F3A037C834CE6BCC673C0CD20079"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterActualCameraPlayModeTests.cs.meta",
+      "Sha256": "DAF644BF3A2818378588D2D5CCEE07D8989DF915378C384EAF4382053B8BE0D9"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterAdversarialPlayModeTests.cs",
+      "Sha256": "AFB6F05B4DF532B5B36171A6DAC9599C8EED307D06C5AB8682DFFEDE19239A6B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterAdversarialPlayModeTests.cs.meta",
+      "Sha256": "0E53B7C3C1034DD46E8A4FA54C7D7BE40A0622E98199D343450E10041384F81D"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterAimPlayModeTests.cs",
+      "Sha256": "C9187979286110571080B50A81506903D36CED591D82DCC7D88F0DB2521A7391"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterAimPlayModeTests.cs.meta",
+      "Sha256": "9CA9B9667CDCF7440E475C1E2CD068F0306430C7D43DD3E16DA1D129910B84F3"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterFailureBoundaryPlayModeTests.cs",
+      "Sha256": "0B2A7B3EFC2D8B43DDCE589ACB4F04F286BD82A86748CDB63C737BF9691B9054"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterFailureBoundaryPlayModeTests.cs.meta",
+      "Sha256": "F049B8B3833DE462D52F92C01AB1B42169A2A6B5493C590A6A96E993BAB5E334"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterPlayModeTests.cs",
+      "Sha256": "34BE32A8917CDF25A7B36EF7523C26919FFAE47CA8B9AE75DDE7262BBB21F708"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterPlayModeTests.cs.meta",
+      "Sha256": "7D77EC59C10AA6ADE1369CB872230C66F067A766A74E6EA45D8F50B3C66D2446"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterTerminalPlayModeTests.cs",
+      "Sha256": "381D40068860D3C789E7AD6FCA178E44043E9DCBC81F49DD54DEEFB17FEC0A63"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/InputRouterTerminalPlayModeTests.cs.meta",
+      "Sha256": "A932BE1CC9CF78AD203DBED367AB96F9CEEE561EABFB696C5C536C59ECB0CA2F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/NewGameConfirmationOwnerPlayModeTests.cs",
+      "Sha256": "2FA406515CEB7C885A5F41EC6438ACC85123714AB00302B520A58B36066C9E23"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/NewGameConfirmationOwnerPlayModeTests.cs.meta",
+      "Sha256": "1F20AD5E096121FE7D60FF605474376F4F7BF4786DED820C455916B584A40D6A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/OrdanBossTerminalTransitionRequesterPlayModeTests.cs",
+      "Sha256": "0DDA463A3FAE06F6508C103559160271490E39EEC37CAE6D577660BEE1FE4719"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/OrdanBossTerminalTransitionRequesterPlayModeTests.cs.meta",
+      "Sha256": "A0BEAB6BC6EC3B16FEB18B780434315362CF0E99AEF6D884D6249A0D79A04F11"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileBindingOverrideApplyAdapterV1Tests.cs",
+      "Sha256": "30654C5DD8555BABE616AC484B4A3BF84BF34CA7B9CED774E1EFDD72967C5CF4"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileBindingOverrideApplyAdapterV1Tests.cs.meta",
+      "Sha256": "37E9373654891CF44188B55AC2BAF601AD7D78C1D5185769408347C43A9E5203"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileLaunchPreparationCoordinatorV1Tests.cs",
+      "Sha256": "11A6D2951DB5A3C8F22C53577A7282E84A23C07B8A8E4F559DFCE9405E537B7B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileLaunchPreparationCoordinatorV1Tests.cs.meta",
+      "Sha256": "A6C6BD9F8DD041D65FF05C7F4F82647DA46FA93E578DF8DB85744F3BC85D661C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetMemoryCutoverDataV1Tests.cs",
+      "Sha256": "9F61A4EB2278C8069742BDA56BCF13140E1B717826908D5D6BC64B60B9EEB8A0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetMemoryCutoverDataV1Tests.cs.meta",
+      "Sha256": "F821D99898E87AB1AAE0CCD2F456FD61943B248E68AE466B2F896E3B54B92D50"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetMemoryCutoverFaultMatrixV1Tests.cs",
+      "Sha256": "1AD60243FB3902E52CC5BD9D05C5A4C4DBEC7ADE1060979CAA79659EA32A85E4"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetMemoryCutoverFaultMatrixV1Tests.cs.meta",
+      "Sha256": "304E91D4CC8CBA9C49D4366775E2C269C263274474D422BF65889972DB70EDCB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetMemoryCutoverV1Tests.cs",
+      "Sha256": "1B1C4018A8A914D04155782E7ACCD4971C5F33E85A4B2A1653A9C7D1DDB11EEF"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetMemoryCutoverV1Tests.cs.meta",
+      "Sha256": "59BF3838F6AE2E60724F3A0618F69362FDC8FF3C85A7014B8D6A9F11106BABC0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetRestartBootstrapV1Tests.cs",
+      "Sha256": "41A9F04F76C9771CB44FC1A35A0A3823952101C8B4ACF28AB4E575268A67E320"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetRestartBootstrapV1Tests.cs.meta",
+      "Sha256": "1E63AB44C35313809666078013F2BE1C9BA1BF9B385C0360D41773157E0A0604"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetRestartProcessV1Tests.cs",
+      "Sha256": "F612D9E042D2748BA2D23E2C35CCCA693C1225EA0356A8A9AF41F9D2E0545AD4"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/ProfileResetRestartProcessV1Tests.cs.meta",
+      "Sha256": "5910D695FF5FB1C7E288F3D40C31C46DCA4EEE69A9C604241E30EECE8E5C64E1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/UiSemanticFrameRouterPlayModeTests.cs",
+      "Sha256": "102480263B811F0DE915679C4585970A21C1CF40D4197863A6EA05FFBF6727C9"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/UiSemanticFrameRouterPlayModeTests.cs.meta",
+      "Sha256": "3B4C6DCE2BC1182F8ED5316305A0288EB6152DDD5A4975DDC0395F38B841A121"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/Movement.meta",
+      "Sha256": "F352792A9B76D06E5A561DB104B2C98F0496274BBF7C5E1282D5F8FE662055ED"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/Movement/AcadeGameMaker.Movement.PlayMode.Tests.asmdef",
+      "Sha256": "0890FA3F34DF84A315EBF8C737CF5DC987EAECBB8010272CE207235397FDC80C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/Movement/AcadeGameMaker.Movement.PlayMode.Tests.asmdef.meta",
+      "Sha256": "5EAF98BA8661B1590022DFFAA740609DF251FBAECEEFEE96007B4AB6740D777A"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/Movement/PlayerMovementControllerPlayModeTests.cs",
+      "Sha256": "5762DF8E7FA980328FB600B1F25404F53DA238F0C7619A74DCB730D95951C267"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/Movement/PlayerMovementControllerPlayModeTests.cs.meta",
+      "Sha256": "8CEA19BC1FDA3E23C4AA6AB9B5E82BD89F0B94E864A849965A02508E51B5A5F3"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/Movement/PlayerMovementInputFrameCandidatePlayModeTests.cs",
+      "Sha256": "67235BDA1AC8D54D5B712A229DC64C2A093D94B83A6A756DCA60524912A13FC4"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/Movement/PlayerMovementInputFrameCandidatePlayModeTests.cs.meta",
+      "Sha256": "DC8BAD4A3DE72088F7C3E6C4A941B9FB21BE62CCDC9D23CCAAC843E3CB3F0D24"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/Movement/PlayerMovementInputGatePlayModeTests.cs",
+      "Sha256": "792C71B4A025E4F761D94193C858724C7465494BF6407E12F3F670B9B5A94097"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/Movement/PlayerMovementInputGatePlayModeTests.cs.meta",
+      "Sha256": "5452292935A794135D707CB91F621D25F687134769238AC526A9554EA9A8B977"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/PresentationUnity.meta",
+      "Sha256": "EA9EA98409E0ED9AC50D0554095534C90FAF2D36F96E128930C0F9B9BE615000"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/PresentationUnity/AcadeGameMaker.Presentation.Unity.PlayMode.Tests.asmdef",
+      "Sha256": "65BCEC274D49AE7F3EF00F8161ED2518D6F3236DD7E3B9842936D9D8A3632D86"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/PresentationUnity/AcadeGameMaker.Presentation.Unity.PlayMode.Tests.asmdef.meta",
+      "Sha256": "1E1344F1B37134D60D05F8A75F808862D5DDB85B8E86095119432463638608F0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/PresentationUnity/CostumeUnityPresentationAdapterV1Tests.cs",
+      "Sha256": "16FC44301D96D035FCBF30D57AA25ED9EA9E7755E9FFBA4B58F654A31245EE4F"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/PresentationUnity/CostumeUnityPresentationAdapterV1Tests.cs.meta",
+      "Sha256": "521C6E381E6138139B7D7730DE33E4589BB1E595FA1E74FF078C480C30875FC4"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/PresentationUnity/CostumeUnityViewPresenterV1Tests.cs",
+      "Sha256": "6BFE90A9FEBC201750B186C84DEF0B2B4593C013F022EB621545E49D5E681D00"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/PresentationUnity/CostumeUnityViewPresenterV1Tests.cs.meta",
+      "Sha256": "AD858ECF62AD1F5FE2D36D49B569835BB759676F07A08627ADB5010DBF86A2AB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/TransferUnity.meta",
+      "Sha256": "F8E55A722602929CD85CC6CF1C92AE2C594594EB29D97180C1BE25E00AA5FF24"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/TransferUnity/AcadeGameMaker.Transfer.Unity.PlayMode.Tests.asmdef",
+      "Sha256": "D76A37D0B2F94FE0FCD431B7E9522D901C99F0E61E1487DBECF5D39E884C2ED5"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/TransferUnity/AcadeGameMaker.Transfer.Unity.PlayMode.Tests.asmdef.meta",
+      "Sha256": "1FF0782B6F55061239DF6D8B1968DA0594DCB6BD9BF8E864A5572088959EBC31"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/TransferUnity/TransferInputFrameCandidatePlayModeTests.cs",
+      "Sha256": "A53E8A0E875C0B1EFE2D867B7D2FB97E9A58B11A21C24CC2091A376629A3A546"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/TransferUnity/TransferInputFrameCandidatePlayModeTests.cs.meta",
+      "Sha256": "74923F48C27AA9CCC9B74B6CCC89D689065791B8142288AE6B7EEC8C8B858792"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/TransferUnity/TransferInputGatePlayModeTests.cs",
+      "Sha256": "555CDA491CFA1AD7A5FF8559888429F2748E9EF53A5835785DBFD7FBE3CA85B1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/TransferUnity/TransferInputGatePlayModeTests.cs.meta",
+      "Sha256": "DFEC7D6ECE92561801C517A2692E52A148F3BD279BB9DEC24A924523435F1C3B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/TransferUnity/TransferLinecastPhysicsSpikeTests.cs",
+      "Sha256": "564D12E46CCA4F589597A4E036E99B84ACE1BF58C5A864F64BB1A0A5E265F0B8"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/TransferUnity/TransferLinecastPhysicsSpikeTests.cs.meta",
+      "Sha256": "0828E27B01CEDFF0D050C4D1AB3D07A77C380A85E140CB7FA842FBD31553A6C4"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/TransferUnity/TransferLineOfSightTests.cs",
+      "Sha256": "1FBD606ECF94D6FBB3467A44B0EE5A934EA36CEA7DEE77873904053868159081"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/TransferUnity/TransferLineOfSightTests.cs.meta",
+      "Sha256": "7ED78C126F23997D57F574F0494FAB7401007129E7BFB3619F18409D73E8622C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/TransferUnity/TransferObservationBuilderPlayModeTests.cs",
+      "Sha256": "A6F99897A289470CC954BE1165E96373A51DBBF18E3161E9486E51C7A6AA256C"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/TransferUnity/TransferObservationBuilderPlayModeTests.cs.meta",
+      "Sha256": "C9EE440EA4095DA792E4D296C4B1B7F751C6CE90F486509F0B4F593065298774"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/TransferUnity/TransferSimulationDriverPlayModeTests.cs",
+      "Sha256": "5F934941897FC67C58FC07046CBD5B069C20167A8808EAA17748904B1A384E39"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/TransferUnity/TransferSimulationDriverPlayModeTests.cs.meta",
+      "Sha256": "76C904922C87CE27A06A7560A3CCCBA427D6100182C97D95AE6E349C82A5099A"
+    },
+    {
+      "Path": "Assets/BGM.meta",
+      "Sha256": "4C7991D56D6BE7DB6EB3A68E5799D1DAE0EBB56885F49576A4BB24B653BDA314"
+    },
+    {
+      "Path": "Assets/BGM/01-title-menu.wav",
+      "Sha256": "3C41BE1E863EE598AC8CF74930AB4C24CF2B499754AA550334B44D69BCCD3F97"
+    },
+    {
+      "Path": "Assets/BGM/01-title-menu.wav.meta",
+      "Sha256": "B065CEA61A4E4175A1992C9A8729C305736879A716302BFE6265A692890F7B9F"
+    },
+    {
+      "Path": "Assets/BGM/02-city-hub.wav",
+      "Sha256": "4DFEE0699C969AA0D75365FDF340064F5EC3263453AB83A5EF54366C5BEC1C2D"
+    },
+    {
+      "Path": "Assets/BGM/02-city-hub.wav.meta",
+      "Sha256": "32390619467FD4FDE5CB2984AD3067D99C6CCD92A5E59E7550CD9B950BB3DB2D"
+    },
+    {
+      "Path": "Assets/BGM/03-seryeong-bond.wav",
+      "Sha256": "A724A89F24D35AF3978FBD38203245DB72C4152FF53987CC8B16273A0F68AE8A"
+    },
+    {
+      "Path": "Assets/BGM/03-seryeong-bond.wav.meta",
+      "Sha256": "031625D9CACABA038D712237097E82B58001FFDA0D339414448AFF72279478F1"
+    },
+    {
+      "Path": "Assets/BGM/04-chapter-01.wav",
+      "Sha256": "A170DE632B0D025E13EA2B6AA92BB588832F117B104A3B63458DD05EF22134ED"
+    },
+    {
+      "Path": "Assets/BGM/04-chapter-01.wav.meta",
+      "Sha256": "A4C18B805A93A352D38697E035B15BB1C07BA13590D807F1A976E19BA9C19AB8"
+    },
+    {
+      "Path": "Assets/BGM/05-chapter-02.wav",
+      "Sha256": "9B6030606B8BCE4ED9AD074FF0A39DC620CB19D9E3A94E1E0B6633C26AAAAC06"
+    },
+    {
+      "Path": "Assets/BGM/05-chapter-02.wav.meta",
+      "Sha256": "C8F3B8711F4B2A2B42811C6987444D0F20CEFE490417C84323A894745C7A4C41"
+    },
+    {
+      "Path": "Assets/BGM/06-chapter-03.wav",
+      "Sha256": "3784092462F73753287298216AA67BECC7D7425E7FB14741CC64CF325B54A57C"
+    },
+    {
+      "Path": "Assets/BGM/06-chapter-03.wav.meta",
+      "Sha256": "C8D19EE3C98BA7B08BDCBC2EA3D1E9D3A2CC5B3BEAEFA627022B141B290D7DA6"
+    },
+    {
+      "Path": "Assets/BGM/07-chapter-04.wav",
+      "Sha256": "5859F81949B7723A13AB1A879765616E5D4FD0B83B84EA3E908B6FCE0420C58C"
+    },
+    {
+      "Path": "Assets/BGM/07-chapter-04.wav.meta",
+      "Sha256": "2E8859B6515C9347F277D736B58D7A6306DB2C32EF23FA0E5CCDDBEBC912D977"
+    },
+    {
+      "Path": "Assets/BGM/08-chapter-05.wav",
+      "Sha256": "59E94DD83997E232D56BE8839B31C176F3395AB3F3F0487A7077917C10769AA6"
+    },
+    {
+      "Path": "Assets/BGM/08-chapter-05.wav.meta",
+      "Sha256": "7B0A82416B1C148A80726EB8D23DDAB9C002222A0F4C9299F1C3685186792063"
+    },
+    {
+      "Path": "Assets/BGM/09-chapter-06.wav",
+      "Sha256": "A73582392BB7A440FCF32577FFDD941F2A2C36A3038CD343DAC5FDBCB8140B44"
+    },
+    {
+      "Path": "Assets/BGM/09-chapter-06.wav.meta",
+      "Sha256": "4F3A7D38133C2223595EEF007306C7B8CBE138DF807C04AF631068CFAE6635C6"
+    },
+    {
+      "Path": "Assets/BGM/10-chapter-07.wav",
+      "Sha256": "88D7AB2C52445FFD4CFA58A71191661E00EFF98AB6D488A789096A573BEF26F8"
+    },
+    {
+      "Path": "Assets/BGM/10-chapter-07.wav.meta",
+      "Sha256": "6A3167FC795B3CC66026D5A6F447C7B2E6EEBCB1E8B163FE6A182A8C1789D5E9"
+    },
+    {
+      "Path": "Assets/BGM/11-chapter-08.wav",
+      "Sha256": "42F53E277B57427E53D4CEA9BE46F03465B942AE1D63F7F1BAB274F2DE1C7D3C"
+    },
+    {
+      "Path": "Assets/BGM/11-chapter-08.wav.meta",
+      "Sha256": "6752E8E8F51E6FDFB6A51B5EB993A3D94199289EC9E8E875D7AC405FCBD704AC"
+    },
+    {
+      "Path": "Assets/BGM/12-expedition-general.wav",
+      "Sha256": "7FC6C46E359E58D5E3AF43861112DD1E1A75D870B1CD8E3419B957FC825C324F"
+    },
+    {
+      "Path": "Assets/BGM/12-expedition-general.wav.meta",
+      "Sha256": "C3E8D9C3723DD42DE65E27F526BA6EBE12A7CA15CBFD15064CE27E170B01D49C"
+    },
+    {
+      "Path": "Assets/BGM/13-expedition-danger.wav",
+      "Sha256": "DC29C64189FB038A6E7FA740F7E8D10326C1C84A7CA50D6CAA5AB0B217707A73"
+    },
+    {
+      "Path": "Assets/BGM/13-expedition-danger.wav.meta",
+      "Sha256": "283C28C8657E1D71D75F062B1B190B585A0B24359A9FC706D9B92A41A184012F"
+    },
+    {
+      "Path": "Assets/BGM/14-boss-ordan.wav",
+      "Sha256": "C008A880FF1522FC60E8A8A74474C40B0CB78BF009413FFF7DCC99EA649172BF"
+    },
+    {
+      "Path": "Assets/BGM/14-boss-ordan.wav.meta",
+      "Sha256": "5DD301233169B216EB59FED665856EA58516AF6CDD42A10416C26ED1F7E6DC0D"
+    },
+    {
+      "Path": "Assets/BGM/15-boss-ragen.wav",
+      "Sha256": "1B8D0B63EE3FD66691EDD1C1FEE4A5E6EB27FF1B0F353294B4E9CDD9879771CF"
+    },
+    {
+      "Path": "Assets/BGM/15-boss-ragen.wav.meta",
+      "Sha256": "7E7285AD3F4FA6359E26F9F72D85BA767F4B5CFA120A7DF0AF60387FAB349E07"
+    },
+    {
+      "Path": "Assets/BGM/16-ending-humanity-lost-허락된-아래.wav",
+      "Sha256": "FD9855758411B3506F68E8C63460215BD0F126C8B4A486A9C83175792FAC39BD"
+    },
+    {
+      "Path": "Assets/BGM/16-ending-humanity-lost-허락된-아래.wav.meta",
+      "Sha256": "EA729579DEC2CBCEEE6F487D4FED1005EA98B420DEE8F5FCF31E41F1904DD2DE"
+    },
+    {
+      "Path": "Assets/BGM/17-ending-basic-남겨진-빛.wav",
+      "Sha256": "2276069602C6D673EDC48A894AE1C6CA13D157FC3B68D3551D61EC0BA1417C2E"
+    },
+    {
+      "Path": "Assets/BGM/17-ending-basic-남겨진-빛.wav.meta",
+      "Sha256": "2A76DFAA22D16E4F46556E9FBCF9C8CC9513FCC00153F93E06A19060769E79D3"
+    },
+    {
+      "Path": "Assets/BGM/18-ending-true-각자의-아래.wav",
+      "Sha256": "B7F1D556D3249902426465421C37A09EE3DE3C636B9C08717E554E1AFC6059BB"
+    },
+    {
+      "Path": "Assets/BGM/18-ending-true-각자의-아래.wav.meta",
+      "Sha256": "C0AE51D4F558ACE2464DCE26B2A694BA480223EECE50E5DE63686E1176E3CA71"
+    },
+    {
+      "Path": "Assets/BGM/19-failure-return.wav",
+      "Sha256": "21F19031ABA9A23A9C25B1EABC1099B42CA618F7664F0A5A8A3556D945398535"
+    },
+    {
+      "Path": "Assets/BGM/19-failure-return.wav.meta",
+      "Sha256": "7259EB3952C5FA4E6BC86D553C5D9D5973A671B18B561426B71142E6C4656EDA"
+    },
+    {
+      "Path": "Assets/BGM/20-choice-foley-bed.wav",
+      "Sha256": "68686049CB31314804927C0C5B9F0142FAA92B956F0F341E743C190BDA06347B"
+    },
+    {
+      "Path": "Assets/BGM/20-choice-foley-bed.wav.meta",
+      "Sha256": "A7ED027171ACA2A999C50A9E1CE1F24A7679D10B3CA7D30D32EC3D6A81AEA7F5"
+    },
+    {
+      "Path": "Assets/GameInput.inputactions",
+      "Sha256": "8E23A5A3AE1D514596A1FC8C61017F2740664904741D5A95383074A06E840E76"
+    },
+    {
+      "Path": "Assets/GameInput.inputactions.meta",
+      "Sha256": "E952AD774BBE63BE75692008486FC282EA79C65DEE7A2D24E8587E788171B044"
+    },
+    {
+      "Path": "Assets/InitTestScene25a382ab-1c88-4067-91f0-88154ab5d434.unity",
+      "Sha256": "F0E595B6BFE706AFF41966732ECECE7C506AA6E823587295D76DD625B9681D18"
+    },
+    {
+      "Path": "Assets/InitTestScene25a382ab-1c88-4067-91f0-88154ab5d434.unity.meta",
+      "Sha256": "68DBB71A49E4AF6B3F0DD4B3F700FC02A47ED1A8C078E1536550180B30551C25"
+    },
+    {
+      "Path": "Assets/InitTestScene31bbc020-2a6a-4650-9d93-87d280bb6686.unity",
+      "Sha256": "3FCD8CC02AB16FD0CA5F62415B8AEF27D9ECF6F601488CB4E8E7D296577F169F"
+    },
+    {
+      "Path": "Assets/InitTestScene31bbc020-2a6a-4650-9d93-87d280bb6686.unity.meta",
+      "Sha256": "CE353B75D5D363EAB3BD587C7438AE92DF6613C87B90E8DA88B52E8412EDC0C2"
+    },
+    {
+      "Path": "Assets/InitTestScene3f842fd2-1903-42f4-90b6-0cc21efa7f72.unity",
+      "Sha256": "6A61E080DF1435088D21415B517588E0D2694CF30A2035A97F6E14E00BE5DBE2"
+    },
+    {
+      "Path": "Assets/InitTestScene3f842fd2-1903-42f4-90b6-0cc21efa7f72.unity.meta",
+      "Sha256": "DC4ED1A952154D71CB56319FE61A14255228E2FB6A5F8BB169E445C269AD9A42"
+    },
+    {
+      "Path": "Assets/InitTestScene3fbfd8e5-a705-4594-905e-8066c5efd090.unity",
+      "Sha256": "ED00C96D5FD780552A5C26B8DBAB0F91AFFD248C3193B7C56238243DD8A3E81E"
+    },
+    {
+      "Path": "Assets/InitTestScene3fbfd8e5-a705-4594-905e-8066c5efd090.unity.meta",
+      "Sha256": "7EC5FC1E5222EBB6DDD5822392912FB0BB4BD0D5123F73F90641ED7BD574B45E"
+    },
+    {
+      "Path": "Assets/InitTestScene440f22d5-ecf7-4c78-a6bd-14e5168791c0.unity",
+      "Sha256": "539B219C062815121704DE90CF154A51492B11782448B16C0D0AAE32DDD4CCE0"
+    },
+    {
+      "Path": "Assets/InitTestScene440f22d5-ecf7-4c78-a6bd-14e5168791c0.unity.meta",
+      "Sha256": "931A2C378F9CE957B3974EEAD6F45F6553FBE3048BA02686E31BD5E34A6F2C09"
+    },
+    {
+      "Path": "Assets/InitTestScene4c3f7ede-c74c-45a8-8c34-93f19204e4bd.unity",
+      "Sha256": "83097987CFEC1985C0AB241C7047DBEA3ED400282574BBB4B2964730204654D2"
+    },
+    {
+      "Path": "Assets/InitTestScene4c3f7ede-c74c-45a8-8c34-93f19204e4bd.unity.meta",
+      "Sha256": "63047A3CC5685C52755C7845EC267894319EAF8A9C31A9CCB4950FE38C179E7C"
+    },
+    {
+      "Path": "Assets/InitTestScene5bcca666-f0e5-4bba-8ede-d5670dbf93b8.unity",
+      "Sha256": "7A95A27ABD28DC323D9ED24ABB48C641BF8F3650BD8C56A829F2473D65996D71"
+    },
+    {
+      "Path": "Assets/InitTestScene5bcca666-f0e5-4bba-8ede-d5670dbf93b8.unity.meta",
+      "Sha256": "6F634F6AEEF57D476ACF456FF41BF2FD060922500B6CC034859B9C146B157B66"
+    },
+    {
+      "Path": "Assets/InitTestScene7441ab4c-7296-4c24-a9be-2a434f6bb15e.unity",
+      "Sha256": "783EFE50DF14716E08C9DCD873D5F8F543B67265C313D919603628BB2B455C51"
+    },
+    {
+      "Path": "Assets/InitTestScene7441ab4c-7296-4c24-a9be-2a434f6bb15e.unity.meta",
+      "Sha256": "C85DB735B946C3337E6ACD72EC0CF0B0849B9DA62AA699AAF32ACB70F0B72B15"
+    },
+    {
+      "Path": "Assets/InitTestScene7f40e625-1410-4205-b683-4cda70517bfa.unity",
+      "Sha256": "3A8EC0A72A0E381F33637FB537ED089B555CF69BED9FD0E0CDC1FC35835C97BB"
+    },
+    {
+      "Path": "Assets/InitTestScene7f40e625-1410-4205-b683-4cda70517bfa.unity.meta",
+      "Sha256": "A36866B15A033EB4A7FC61DB8776FD7E42CF5761C64DD74E2350CFC2523EE36B"
+    },
+    {
+      "Path": "Assets/InitTestScene8a0e80ae-0a59-4f5f-94dd-cecebf0c8ac6.unity",
+      "Sha256": "FEF5B643736448DA798029B4EC406BB60F6DBF2DC997144BC58788B3692381CF"
+    },
+    {
+      "Path": "Assets/InitTestScene8a0e80ae-0a59-4f5f-94dd-cecebf0c8ac6.unity.meta",
+      "Sha256": "63730BBE21517C9D836A737059F5A3F20397E985E8DD09ED99508B71D1C61E48"
+    },
+    {
+      "Path": "Assets/InitTestScene9851fddc-178b-4b17-b7b4-aca78a0b4bbc.unity",
+      "Sha256": "05983EFCB50D5035D1F7E3373FF7CDD43499C26F3782C80E8C7DE353BD595D99"
+    },
+    {
+      "Path": "Assets/InitTestScene9851fddc-178b-4b17-b7b4-aca78a0b4bbc.unity.meta",
+      "Sha256": "4B99319041FE4D757B0B2A667A0DDDEFA713C347F269B213ACE0F8860E0BE547"
+    },
+    {
+      "Path": "Assets/InitTestScene9a1e989d-ce83-427a-87df-a7d8ea72a1a2.unity",
+      "Sha256": "A727635CDC98E230FD2441DE30420E1041F9A8BC18DC6FD9B69B56B23A649435"
+    },
+    {
+      "Path": "Assets/InitTestScene9a1e989d-ce83-427a-87df-a7d8ea72a1a2.unity.meta",
+      "Sha256": "C72D0C950EF2018B3877FCE74604D844190A794FA576BC365005AAC90D2CBB1B"
+    },
+    {
+      "Path": "Assets/InitTestScene9a48a059-768d-4e32-a130-fedc5cc9cca9.unity",
+      "Sha256": "72856E9F6E11C3D781F4C00FC2A2E84C55A074B8A214B36C39843E8A7A2C3CA2"
+    },
+    {
+      "Path": "Assets/InitTestScene9a48a059-768d-4e32-a130-fedc5cc9cca9.unity.meta",
+      "Sha256": "F8ED3E34D25F63BA3FE23E3C4605CF0B9D75788A0880742FBF118027BE82EF32"
+    },
+    {
+      "Path": "Assets/InitTestScene9fcec994-b0b6-435e-8ac5-5fd7e09efc5e.unity",
+      "Sha256": "D876CB03B78F90035CF603D44A8450B6A480B270A50F638155411E12C0928835"
+    },
+    {
+      "Path": "Assets/InitTestScene9fcec994-b0b6-435e-8ac5-5fd7e09efc5e.unity.meta",
+      "Sha256": "AAF9AB8276BD587D6A29021F1A116431D2695CF1E56DEA999A3FEAD2E7BBDAAB"
+    },
+    {
+      "Path": "Assets/InitTestSceneaf52ab48-e693-4367-9197-4b95f548f930.unity",
+      "Sha256": "A26E3DCF6973559FB48BC4CAEAC5B92D4DDBE3BF185A533948AD1EB184BF39C5"
+    },
+    {
+      "Path": "Assets/InitTestSceneaf52ab48-e693-4367-9197-4b95f548f930.unity.meta",
+      "Sha256": "C590254200260D57BD82D499E1B39D02BA13613DB917A9B5169B81166B95D738"
+    },
+    {
+      "Path": "Assets/InitTestSceneb28fac6c-b43b-44cb-8158-b103251210f3.unity",
+      "Sha256": "15A12CF410D5E36A13FC293E082AF7302EF203E7CD1210AF4F99B47F9D8AC679"
+    },
+    {
+      "Path": "Assets/InitTestSceneb28fac6c-b43b-44cb-8158-b103251210f3.unity.meta",
+      "Sha256": "D57F67810740BF95DC52E2F30AD83C829681F3B39601792640A060AA1A3C74AA"
+    },
+    {
+      "Path": "Assets/InitTestSceneca1bd06f-de50-40bd-8c07-d07d4bab3fe5.unity",
+      "Sha256": "26BFCB765C7DA3ADFD4B2A7C057DCB1F15B891167567DFF4144283D71CA4AEAA"
+    },
+    {
+      "Path": "Assets/InitTestSceneca1bd06f-de50-40bd-8c07-d07d4bab3fe5.unity.meta",
+      "Sha256": "1E062D8605CD6918E7CC661C20BE6430BF53A7008FDEC1CACFB5F2C5C52AB860"
+    },
+    {
+      "Path": "Assets/InitTestScened03c7e8d-262f-4d0a-9eae-3102a7a7dd31.unity",
+      "Sha256": "6BB850095A741FAE35BF5B1AA902EA1EEF6EDB29A9C1E940DF25757554AB4067"
+    },
+    {
+      "Path": "Assets/InitTestScened03c7e8d-262f-4d0a-9eae-3102a7a7dd31.unity.meta",
+      "Sha256": "4C792A76B669DE1B20546983C6DD709F790862ED08FC98EB2940C47AF7A650CE"
+    },
+    {
+      "Path": "Assets/InitTestScened56148c7-acb2-46ea-86f7-db5642d58a60.unity",
+      "Sha256": "9FFDF37060B526BEC69A7E9151EB11D31AD2596D271B4C5C5CC13F3F7946E9D6"
+    },
+    {
+      "Path": "Assets/InitTestScened56148c7-acb2-46ea-86f7-db5642d58a60.unity.meta",
+      "Sha256": "F60122840668960A4B75C8F1AB344906F8FF81F6AEEB6BE1074F500903BBC16D"
+    },
+    {
+      "Path": "Assets/InitTestScenedf3b6284-8a9b-4042-b3ec-4304f5632b05.unity",
+      "Sha256": "EB5BF2EA2B2DB4EAE5766F715FF891222B231D564D24D332ED7CEF6E4D51C1C4"
+    },
+    {
+      "Path": "Assets/InitTestScenedf3b6284-8a9b-4042-b3ec-4304f5632b05.unity.meta",
+      "Sha256": "3E06F2031CF1F22221FDE046698959AB7E3B7F1460AA4FB882BD0A23C8E60694"
+    },
+    {
+      "Path": "Assets/InitTestSceneebdd3b66-5792-4e95-b614-650521b5ceee.unity",
+      "Sha256": "315CE7924E7BDE04640DB8DD9ACE9E5464BEC54C9969940D0CC9B88874D2DB22"
+    },
+    {
+      "Path": "Assets/InitTestSceneebdd3b66-5792-4e95-b614-650521b5ceee.unity.meta",
+      "Sha256": "45254DBE4E97C64AB1A02785F745A85EA1767FF1D17DAA9A75CFADFC59E6E126"
+    },
+    {
+      "Path": "Assets/InitTestScenef1491828-1804-41ce-8c66-dc49220dc8b4.unity",
+      "Sha256": "4BC8582646CC0E7B19675ED119D808645AFE081E68D0681EF6AE9611D4B8FE61"
+    },
+    {
+      "Path": "Assets/InitTestScenef1491828-1804-41ce-8c66-dc49220dc8b4.unity.meta",
+      "Sha256": "6930ABFAA7C8C242816498DB54CDE26A4644FEAF9B9D50D20A6991CB1802A03A"
+    },
+    {
+      "Path": "Assets/InitTestScenef4ebf119-5a90-4642-8ed1-dcf3a6d9203e.unity",
+      "Sha256": "D417E1DF3249F8BD4E7AEC25595E63F3BDECF4D77268E92675BA4524DDC4C37F"
+    },
+    {
+      "Path": "Assets/InitTestScenef4ebf119-5a90-4642-8ed1-dcf3a6d9203e.unity.meta",
+      "Sha256": "E6C06367FF3265E8BAD7AB7DA4B048E48D3AB37B2E13FB26AA5EFDAB532A4BEB"
+    },
+    {
+      "Path": "Assets/InitTestScenef74ab589-6ec1-4d5e-8bc9-75135b789f7a.unity",
+      "Sha256": "DB82CE53C8B7FFBE10357A79777653CF91B8F2AF18366E178C712E3F094EC4FA"
+    },
+    {
+      "Path": "Assets/InitTestScenef74ab589-6ec1-4d5e-8bc9-75135b789f7a.unity.meta",
+      "Sha256": "C3490BE0089FC444F9A04DEABF646F92BDD6A6D8BF8D5EFEE9EC63ABA9DFAEDC"
+    },
+    {
+      "Path": "Assets/InitTestScenef7c6d093-dd2c-492d-ba79-5386b46a48d4.unity",
+      "Sha256": "711EC5D0430CFC93C2621582BF8C40693F2FF3D8C0A8AEA51054C9F30275CD3D"
+    },
+    {
+      "Path": "Assets/InitTestScenef7c6d093-dd2c-492d-ba79-5386b46a48d4.unity.meta",
+      "Sha256": "3A87A60A9A01260BC822BD6424BFCCD751C1C4628A7C9723BFE108942A88EBE0"
+    },
+    {
+      "Path": "Assets/Movie.meta",
+      "Sha256": "69F845F0AAD0BC0C35B196F8E79A251E70EE292FF1654FAD2D3F2023CB0110F1"
+    },
+    {
+      "Path": "Assets/Movie/steam_teaser_B_consent_choice_1344_00001_.mp4",
+      "Sha256": "A81352E79F1FBA54BC1260BFA000F24C6768ED6CA854B17C32A58E916005B037"
+    },
+    {
+      "Path": "Assets/Movie/steam_teaser_B_consent_choice_1344_00001_.mp4.meta",
+      "Sha256": "5D73F1869E3289817427971C06724D17902CD8A2633D51DE0913E334110E50DF"
+    },
+    {
+      "Path": "Assets/Movie/SteamTeaser_A_WeightTransfer_15s_1344x768_Master.mp4",
+      "Sha256": "726C2D56DA52FAC04A8B9584A91212065C7EFB951894CAC6AEBDC70B5223300A"
+    },
+    {
+      "Path": "Assets/Movie/SteamTeaser_A_WeightTransfer_15s_1344x768_Master.mp4.meta",
+      "Sha256": "58A11ACA30B19794060ADFC7BF042FF5A183719F1AF904700EAA8BE54A69DC3E"
+    },
+    {
+      "Path": "Assets/Movie/SteamTeaser_A_WeightTransfer_15s_864x480_Draft.mp4",
+      "Sha256": "01E63CEFEE942918ABF49B03A97586C959E13BD07859A04CEE01660302F1F114"
+    },
+    {
+      "Path": "Assets/Movie/SteamTeaser_A_WeightTransfer_15s_864x480_Draft.mp4.meta",
+      "Sha256": "A4D3987ABD71203F722048D224A68841460379EBC24F921EF4F6B2365257F902"
+    },
+    {
+      "Path": "Assets/Prefabs.meta",
+      "Sha256": "B0468C8FC0DD7F28CFFC9C2C2EBE353E629DDFF2D09141D840439BB4801951AF"
+    },
+    {
+      "Path": "Assets/Prefabs/Combat.meta",
+      "Sha256": "C0A34922F17C1053C8AE67AC4CF4CBC01674EAE7F20A9E94E642BADECB5E8173"
+    },
+    {
+      "Path": "Assets/Prefabs/Combat/CombatEncounterGraph.prefab",
+      "Sha256": "4550E60216C9B65D913B4360E8B8DB2FAC0CB9B47424FE3D5FD9A7E41F50BDAC"
+    },
+    {
+      "Path": "Assets/Prefabs/Combat/CombatEncounterGraph.prefab.meta",
+      "Sha256": "631254FD5F004C070EC7E00C99444B9D084D39A7FCF5FCB586EDA94E128D5997"
+    },
+    {
+      "Path": "Assets/Prefabs/Combat/OrdanBossEncounterGraph.prefab",
+      "Sha256": "4444E2417FE8C24446BAF4044CD28F738341082C9E45CFA58F9561FAEED2B139"
+    },
+    {
+      "Path": "Assets/Prefabs/Combat/OrdanBossEncounterGraph.prefab.meta",
+      "Sha256": "58F4EA1561B852598A6828A0EB6C5A6097490541B379EBCE7125EDB35AD4D0E7"
+    },
+    {
+      "Path": "Assets/Prefabs/Enemies.meta",
+      "Sha256": "7134E8D47CF06B0CD961BB3CCBEC4DDA8B1A48D30874C859007B291FA450897D"
+    },
+    {
+      "Path": "Assets/Prefabs/Enemies/Surveyor.prefab",
+      "Sha256": "D547112A521F0EF9574C14C71C443A6C07C2DF369495DB8AD12F7C1D6D640909"
+    },
+    {
+      "Path": "Assets/Prefabs/Enemies/Surveyor.prefab.meta",
+      "Sha256": "701A0ABEB699490053429BAADBB7BED5AD27A4819CAD3FBA62610D3DDC31FDB2"
+    },
+    {
+      "Path": "Assets/Prefabs/Enemies/Walker.prefab",
+      "Sha256": "60811E65A9ABC2D384BA16F6945AC187FE0DDD9BB00AA21FAA48E4CC7EC9398A"
+    },
+    {
+      "Path": "Assets/Prefabs/Enemies/Walker.prefab.meta",
+      "Sha256": "6B1C38FBA00949DE7CCD94E07819192F05DF0FCD39AD7B1E35674241C4C4EB0D"
+    },
+    {
+      "Path": "Assets/Prefabs/Hub.meta",
+      "Sha256": "772772C20B2021B4094ACD0600624F13714D7EB3F8E7E8BB93FF0FBC5F1F6749"
+    },
+    {
+      "Path": "Assets/Prefabs/Hub/HubMenuRoot.prefab",
+      "Sha256": "BE2930556473C47FA8E78EC7F9A46243162E3F7231A0034DA64832F46A5676A5"
+    },
+    {
+      "Path": "Assets/Prefabs/Hub/HubMenuRoot.prefab.meta",
+      "Sha256": "8F8DC1AE7635C426128A6AE5B3DB319F3408460D3C1B824A45197B7A254491D5"
+    },
+    {
+      "Path": "Assets/Prefabs/Hub/HubRuntimeRoot.prefab",
+      "Sha256": "B1CFD731A4E177C37B59CEA0813E3B51E44DD10BA96AE38A1B15F15012438EEE"
+    },
+    {
+      "Path": "Assets/Prefabs/Hub/HubRuntimeRoot.prefab.meta",
+      "Sha256": "B4C188F55CD7DA32649008AB5FA84CC434C04FF10BF64F1AB7C31071063D86AE"
+    },
+    {
+      "Path": "Assets/Prefabs/Player.meta",
+      "Sha256": "DF86DA1312E1D0E7A27B70D5EE330AFEC63DF70DE68A6D3F1B5222D22E9810EC"
+    },
+    {
+      "Path": "Assets/Prefabs/Player/CombatEncounterPlayer.prefab",
+      "Sha256": "68FFFA9384412ED8C1326E2928515145251E22AD6AADBA3584E56E736AE07247"
+    },
+    {
+      "Path": "Assets/Prefabs/Player/CombatEncounterPlayer.prefab.meta",
+      "Sha256": "6F1A32A4DD92C7BCBF2ECE9AC3FAE49E5A0E1B3EBA172D2D2589D3B054DEB73E"
+    },
+    {
+      "Path": "Assets/Prefabs/Player/MovementSandboxPlayer.prefab",
+      "Sha256": "B31D45569AFBC852AF6A92EBA33885CD4182776B98DDA345940F9D60862A2C68"
+    },
+    {
+      "Path": "Assets/Prefabs/Player/MovementSandboxPlayer.prefab.meta",
+      "Sha256": "907D974433E4FF6E6556B80918959BB3C898472A2A0A89EAF9225AA087981296"
+    },
+    {
+      "Path": "Assets/Scenes.meta",
+      "Sha256": "76D6EBB808AD24CE1B3F6468173693094D2DA20021EF6E5EFDB53D426DFB17B8"
+    },
+    {
+      "Path": "Assets/Scenes/Bootstrap.unity",
+      "Sha256": "EB6809DE2B02518BBE693FB771F6B61B154133E07C693F48465C8DF5DB05C0A9"
+    },
+    {
+      "Path": "Assets/Scenes/Bootstrap.unity.meta",
+      "Sha256": "065AC17ED944DE738FC7041CEB3CD6FDC00B464D27ACC9945D0515F8490E7EAE"
+    },
+    {
+      "Path": "Assets/Scenes/CombatEncounterSandbox.unity",
+      "Sha256": "5ACB2995F9A2E5092EF1BF7FA42922FB1B2C0F778F84D5B3B0B5F7DB98751D5B"
+    },
+    {
+      "Path": "Assets/Scenes/CombatEncounterSandbox.unity.meta",
+      "Sha256": "2FAC3D18D1EA01A803BC96CF340F228BE31148B4225EE71682C3D8A7D61AB869"
+    },
+    {
+      "Path": "Assets/Scenes/Hub.unity",
+      "Sha256": "04F3F0EA73C40A964DCE93766CF21AFE3F57DC20912AEAB86ABDADB239BC9C6A"
+    },
+    {
+      "Path": "Assets/Scenes/Hub.unity.meta",
+      "Sha256": "EFF61B30B80FAF11C00AE6745E0EB9AC70898959FF84AB179F3C11A221EB6890"
+    },
+    {
+      "Path": "Assets/Scenes/MiniMax_H3_00003_.mp4",
+      "Sha256": "76173712B943BDCFC0B0BF96A94DABBCF31698D2DE6CBF63036AB5A4FB4A4D9D"
+    },
+    {
+      "Path": "Assets/Scenes/MiniMax_H3_00003_.mp4.meta",
+      "Sha256": "C22755F1920C144FEE3C8A414316269773D210F2ECABE7B3F294FCAB111F4368"
+    },
+    {
+      "Path": "Assets/Scenes/MiniMax_H3_00004_.mp4",
+      "Sha256": "A71F37ACA237771A965F8F9CF458797F08F3EA3ABCA641A2CE70FAF3167EBC02"
+    },
+    {
+      "Path": "Assets/Scenes/MiniMax_H3_00004_.mp4.meta",
+      "Sha256": "7AF96EF703D4902A6AA64899FFEE94BCB7B62894A53FC3959A7F7E53835ABE63"
+    },
+    {
+      "Path": "Assets/Scenes/MiniMax_H3_00005_.mp4",
+      "Sha256": "71A31929115A7494EECA7D6C574F67F85D3005ACCB438B5ED5286284EE0021FA"
+    },
+    {
+      "Path": "Assets/Scenes/MiniMax_H3_00005_.mp4.meta",
+      "Sha256": "525E407495F60EC35EC901B8F70C69A5F7F1C25452CD5F8C9FBE08A89C206E7B"
+    },
+    {
+      "Path": "Assets/Scenes/MovementSandbox.unity",
+      "Sha256": "1EF6378C459ACF3364E1F2D4AEA96D43C6E8A99942530B21030C8AF734BDE9A8"
+    },
+    {
+      "Path": "Assets/Scenes/MovementSandbox.unity.meta",
+      "Sha256": "ADA28BBA73AD118C26B3E590CA2C5DDF90D2C9CA37F695F631515F03349F79E8"
+    },
+    {
+      "Path": "Assets/Scenes/OrdanBossEncounterSandbox.unity",
+      "Sha256": "12C30280E922F661C4B6AF4D31810537EC39ACC71461770408CE4AAC2999999F"
+    },
+    {
+      "Path": "Assets/Scenes/OrdanBossEncounterSandbox.unity.meta",
+      "Sha256": "92E39883F9F437896039C6256619CF8428E430C40BA6920B207646C31783F9BC"
+    },
+    {
+      "Path": "Assets/Settings.meta",
+      "Sha256": "F87C78222BCF3083D275C5C7FEB36EF52115D3BBD140B7C38D35B9EC6411164C"
+    },
+    {
+      "Path": "Assets/Settings/DefaultVolumeProfile.asset",
+      "Sha256": "4789B43834DD5EFB32EEC4C3B436BAF0895C9F8CF2A0624121DA8DD812EE984A"
+    },
+    {
+      "Path": "Assets/Settings/DefaultVolumeProfile.asset.meta",
+      "Sha256": "E168E7BBCBB60751647D479A47E6149DBE216A3296CAE1C53652A955BAF557D9"
+    },
+    {
+      "Path": "Assets/Settings/PlatformBaseline.md",
+      "Sha256": "636A15B6D4F6EE60158A0CB2C67206DF8DBE7F3855B992B31EDF76266F25F890"
+    },
+    {
+      "Path": "Assets/Settings/PlatformBaseline.md.meta",
+      "Sha256": "DFA42A6AC094B3DA468241FEFF3A81B66EB18A66F5621C856E7365B1EBA0E5EF"
+    },
+    {
+      "Path": "Assets/Settings/Renderer2D.asset",
+      "Sha256": "B8F2684833BF219E0348E5D2EA193AC2F3CC8481755BDC75206DFE6750DC6368"
+    },
+    {
+      "Path": "Assets/Settings/Renderer2D.asset.meta",
+      "Sha256": "8F7DB8088442362ED4EB3541E46127D317944B7AD95A8859C69B47851C0D4111"
+    },
+    {
+      "Path": "Assets/Settings/UniversalRenderPipelineGlobalSettings.asset",
+      "Sha256": "75AC0247F483990A85E147DF1EC52C50C63F489C601E2C9B053570794982E288"
+    },
+    {
+      "Path": "Assets/Settings/UniversalRenderPipelineGlobalSettings.asset.meta",
+      "Sha256": "FDD0DAD27CB0086F3A01A27FFFF4A4E9100FB8B8643A32FC333811389293BCF4"
+    },
+    {
+      "Path": "Assets/Settings/UniversalRP.asset",
+      "Sha256": "167D20E3285F9071DC9BCB0A4FEE7CDF8BB335DD849EC96E4B3FA39BD401F266"
+    },
+    {
+      "Path": "Assets/Settings/UniversalRP.asset.meta",
+      "Sha256": "5F03013148B256FED5702CCB8B2AEC5F0FB57960B73EDF0C01B24F70E6470FD7"
+    },
+    {
+      "Path": "Assets/UI.meta",
+      "Sha256": "7ACF81A799D4344DC3E197DECC6F2E116BE530BDB122D9580915B13603FD511D"
+    },
+    {
+      "Path": "Assets/UI/Fonts.meta",
+      "Sha256": "5E95F49117F7F192E5AEE8876B2D7104E7BE7A98F45A77EA7A8815213B8C1A52"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub.meta",
+      "Sha256": "CBA326C0B0C89AC1ED7CDD95C83BBC1C6148CD65A15D1FED2C09867928ACCE88"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/NotoSansCJKkr-Bold-SDF.asset",
+      "Sha256": "1E4055E162823ED840632395556990762AA0E6C38A38EAB34470349D072D7923"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/NotoSansCJKkr-Bold-SDF.asset.meta",
+      "Sha256": "291683025E4B0F751063732CF6C1BF54003724697C7ADEA2CF3E500904086238"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/NotoSansCJKkr-Bold.otf",
+      "Sha256": "26D0C6748500A0444844280B308F5B62C7AE92AC6C6AC88148E502DD211EB52A"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/NotoSansCJKkr-Bold.otf.meta",
+      "Sha256": "AFE86499F7CD6BA9166D00D9A1FDEA94D5196561FEE167A46009D2A9F6A350DB"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/NotoSansCJKkr-Regular-SDF.asset",
+      "Sha256": "26A9F4625038996F683318A181AD4CB03A544134F889630AE75CD87629CA8797"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/NotoSansCJKkr-Regular-SDF.asset.meta",
+      "Sha256": "E67F19B8A4300A5B09DD427BC686929742D0756E473F82FA5AE9BC6F1DA5AA04"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/NotoSansCJKkr-Regular.otf",
+      "Sha256": "6BCB2A0703AA137E874FC2DFFA85F6C21BA9A67FA329E81B8C801663AF7E992A"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/NotoSansCJKkr-Regular.otf.meta",
+      "Sha256": "6F84ECC36D55743913F5355BD594B595E871AC7DE9DE418B87F6250D898CD7C5"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/OFL-1.1.txt",
+      "Sha256": "6A73F9541C2DE74158C0E7CF6B0A58EF774F5A780BF191F2D7EC9CC53EFE2BF2"
+    },
+    {
+      "Path": "Assets/UI/Fonts/Hub/OFL-1.1.txt.meta",
+      "Sha256": "CFF037B6302C2D7EED8A5F58C022F719EE690F37CFDAFA4B11044D404A7A2971"
+    },
+    {
+      "Path": "Assets/UI/Resources.meta",
+      "Sha256": "556DBA7BA0ED23496609B9CFEABDDED7124467A8026F5949CD97D34DBA66428B"
+    },
+    {
+      "Path": "Assets/UI/Resources/TMP Settings.asset",
+      "Sha256": "71A6F2477A384F5D12D27AC22F6C30449ED87AA21FD0906FB119442FEAEECBD4"
+    },
+    {
+      "Path": "Assets/UI/Resources/TMP Settings.asset.meta",
+      "Sha256": "C3635AC3B06610CD6CE0E815A418563D7CB70DC49FE45A790A7CE5051EDE799F"
+    },
+    {
+      "Path": "Assets/UI/Shaders.meta",
+      "Sha256": "142F6FE56DA2CF181D4E55B0C86F0A10ECFD0A1CE266BFAAF1FCFC0ABB5C9BC8"
+    },
+    {
+      "Path": "Assets/UI/Shaders/Hub.meta",
+      "Sha256": "0441D34AA04ED1622960D9B115A249E452A1E75B97DB0E1DCF8D8A861EAAE5A9"
+    },
+    {
+      "Path": "Assets/UI/Shaders/Hub/TMP_SDF-Mobile.shader",
+      "Sha256": "44C39AABC7E88E7E1FEFFC1880DF754F4ADF86B62E9512AA89E9D2D65171AFF4"
+    },
+    {
+      "Path": "Assets/UI/Shaders/Hub/TMP_SDF-Mobile.shader.meta",
+      "Sha256": "94D3127E88D565DE1A4D71F6FB8F4E08A2CAEAC3D2FD6D8BE0277C033E9BF91C"
+    },
+    {
+      "Path": "Assets/UI/Shaders/Hub/TMPro_Properties.cginc",
+      "Sha256": "66DB1F03E8D7A413EBA79BCB6602FDB2DE710B586F34A6F2584ED6F68F028E90"
+    },
+    {
+      "Path": "Assets/UI/Shaders/Hub/TMPro_Properties.cginc.meta",
+      "Sha256": "E8B9FD72E432CE711D125188E548A461263E1A74FE673A01D736984BCFCCDAF8"
+    },
+    {
+      "Path": "docs/approvals/2026-09-28-c3-adapter-successor-sha-approval.md",
+      "Sha256": "107653CEDA8C38226D098DF1FB6FC9E61B3C9463109AF1640D292B628C566037"
+    },
+    {
+      "Path": "docs/proposals/2026-09-20-vd09-m5d7q0-hub-ui-only-router-graph.md",
+      "Sha256": "59524AB3344C8CBB7C250478E182569F0FB79BEE504ED6B9818DC8260664D3B8"
+    },
+    {
+      "Path": "docs/specs/work-contracts/2026-09-20-vd09-m5d7q0-hub-ui-only-router-graph.md",
+      "Sha256": "91F67947EE63E9E608DDAB32A345520FDA926A513C7D99578761CBE9022B629F"
+    },
+    {
+      "Path": "docs/verification/2026-09-20-vd09-m5d7q0-implementation-evidence.md",
+      "Sha256": "EA331572123B3CEF88D63DE837BB59E3A570312EB75D7080578341CEBFA70BD9"
+    },
+    {
+      "Path": "docs/verification/2026-09-20-vd09-m5d7q0-luna-pregate.md",
+      "Sha256": "8DEEAEAE068E6BED09797F4EB33BC3B7D0C8FB6E7B0BAFF4CFEED01962924DAC"
+    },
+    {
+      "Path": "docs/verification/2026-09-22-vd09-m5d7q0-luna-independent-review.md",
+      "Sha256": "10B8D64B3D2C61E472D7FB0C9A25816AA551BEFE0C85853759B8202816DE5CCF"
+    },
+    {
+      "Path": "docs/verification/2026-09-23-vd09-m5d7q0-luna-independent-review.md",
+      "Sha256": "4CC717A66A14FE429463E5B6FA72F30575CACBC8CD728EAB50069A8A9126C944"
+    },
+    {
+      "Path": "docs/verification/2026-09-28-vd09-m5d7q-c2-r25-luna-digest.md",
+      "Sha256": "8E58FCCA5809AED400466C88CDFBE1A1BB0737F093FCFAFC72795C8485F730C7"
+    },
+    {
+      "Path": "docs/verification/2026-09-28-vd09-m5d7q-c2r-process-execution.md",
+      "Sha256": "C635DD84FEFFAB5797345575106BF818C51AF3C861A57F13DDBBF4D50419E3C5"
+    },
+    {
+      "Path": "Packages/manifest.json",
+      "Sha256": "AD3A5D2329D5A8FD71BE89873C75BA2CAA98B4391558A69D83D81CADFE684E1E"
+    },
+    {
+      "Path": "Packages/packages-lock.json",
+      "Sha256": "B2B9B1DE4381F3C289837ACD1BDE69013C1F7581511E26861DFDF4F5AE00E550"
+    },
+    {
+      "Path": "ProjectSettings/AudioManager.asset",
+      "Sha256": "664E52352517569816C588012A5DB6879F8AED246DCEB117953FE23E50531824"
+    },
+    {
+      "Path": "ProjectSettings/ClusterInputManager.asset",
+      "Sha256": "40E65DD214BF254955D2C8829CA8CE2130FD3510485560CE012E9A1DDD93E623"
+    },
+    {
+      "Path": "ProjectSettings/DynamicsManager.asset",
+      "Sha256": "D102DD312EF330F5E5CA255C070FB34F68F59EC633D1E9FD67E2F2F6F88F66C8"
+    },
+    {
+      "Path": "ProjectSettings/EditorBuildSettings.asset",
+      "Sha256": "71EF0DE27D164D41A67D502E6EC79D5875D64ED4B61C831C1E57BD0D544D6ADB"
+    },
+    {
+      "Path": "ProjectSettings/EditorSettings.asset",
+      "Sha256": "4A87C54B3541C7BD242AAD68C3FC28661083DB1117EC56149694EE592156415E"
+    },
+    {
+      "Path": "ProjectSettings/GraphicsSettings.asset",
+      "Sha256": "BCDB6EE570B5EDC137B79E48F860495035136E494030E214FE39C151D16FE993"
+    },
+    {
+      "Path": "ProjectSettings/InputManager.asset",
+      "Sha256": "D0F454DDB880912ABCAE92E3E12957A7446786BA89E24937E019FF3BBC0D4300"
+    },
+    {
+      "Path": "ProjectSettings/MemorySettings.asset",
+      "Sha256": "1E8379A461B10AE09F3F696911088C16875D63E87ED5F2D95DF9E1892703F9FD"
+    },
+    {
+      "Path": "ProjectSettings/MultiplayerManager.asset",
+      "Sha256": "CE4075D7A7DD8AC7FFE55DE2427692C63F90DAE398208BD80CEC0F27CBE09F4B"
+    },
+    {
+      "Path": "ProjectSettings/NavMeshAreas.asset",
+      "Sha256": "7EBBF8F53B8033104E1878B95CA07A28D0954092D81C220F14196A42F651E658"
+    },
+    {
+      "Path": "ProjectSettings/PackageManagerSettings.asset",
+      "Sha256": "B3F7A3166E702974FF57D5C7A48E7FAF4BFEB9D149F6BF17A9504A52A3739D72"
+    },
+    {
+      "Path": "ProjectSettings/Physics2DSettings.asset",
+      "Sha256": "57D62FAC9AA4ABCA093E4EAEC56539DF001BE39C7AEF612CD4F07DDDBC4238A4"
+    },
+    {
+      "Path": "ProjectSettings/PhysicsCoreProjectSettings2D.asset",
+      "Sha256": "BEDC5339A832C60DC3F11B84ABC4F4384DBFA20B0CD9AD6C444B907E751FC35E"
+    },
+    {
+      "Path": "ProjectSettings/PresetManager.asset",
+      "Sha256": "29C125923FE6E29F90190D4FCE1C82D660E7051546E2C9D02908D18C9CF2436C"
+    },
+    {
+      "Path": "ProjectSettings/ProjectAuditorSettings.asset",
+      "Sha256": "9E68444B9BDA981E2927A98DF9EDF69EA88362F0C6B7F3C81B39B9D515D2A416"
+    },
+    {
+      "Path": "ProjectSettings/ProjectSettings.asset",
+      "Sha256": "5A94F3C7571DC7F2EB0C51911CE70C3CA33F5351E409BC159C1D21D34270D028"
+    },
+    {
+      "Path": "ProjectSettings/ProjectVersion.txt",
+      "Sha256": "39584C3E6C1E571D53A79EF2DD6EA91C0568AC086792CC435E86401A0BA824ED"
+    },
+    {
+      "Path": "ProjectSettings/QualitySettings.asset",
+      "Sha256": "7EC339D3E5E2B8CC73548E69256F6151782BB68A4AFB64F865FD94704DBF0DE3"
+    },
+    {
+      "Path": "ProjectSettings/SceneTemplateSettings.json",
+      "Sha256": "BB9098B3BFCDE78D93E264B96F7B77B5430E64E8C57A7AAD7F5A5D9C3945E16A"
+    },
+    {
+      "Path": "ProjectSettings/ShaderGraphSettings.asset",
+      "Sha256": "6FEAD5A816C4EED70F224D5472340ECF1EA0B4DE4F87D5926BB17FA10FFB3DC9"
+    },
+    {
+      "Path": "ProjectSettings/TagManager.asset",
+      "Sha256": "57087AD26B4AD250643ABD48B9B8525404ACAF51A21698025DB93B2DC15F33C9"
+    },
+    {
+      "Path": "ProjectSettings/TimeManager.asset",
+      "Sha256": "8FA4333AC4E99D3C522B512E4F9EC78D73401504AC0EFAECE4AEAAFA0E45DFFF"
+    },
+    {
+      "Path": "ProjectSettings/UnityConnectSettings.asset",
+      "Sha256": "45499AF5B2DEDC17B464C2E455DB05F3E9834F265BB3FEBE4EF61049E6D67FF5"
+    },
+    {
+      "Path": "ProjectSettings/URPProjectSettings.asset",
+      "Sha256": "C317FE22B9488785C0611F0642429922E5D324430D929BFFB41648130F30C218"
+    },
+    {
+      "Path": "ProjectSettings/VersionControlSettings.asset",
+      "Sha256": "E199CDFA6A8F2BF33CFD47E549198F13E3EB2A5099E908FDB4E0F14D939CCC6B"
+    },
+    {
+      "Path": "ProjectSettings/VFXManager.asset",
+      "Sha256": "2973A6AF930E142F62CDE00076BEDA8A3CC3A66D9BFCDE7A58BA7D4BE2251C26"
+    },
+    {
+      "Path": "qa/catalog/vertical-demo.json",
+      "Sha256": "657D48AD29AA2F35513F84A8CB0D31C587B470ACBAB10D3C3454DDD7111EAF6E"
+    },
+    {
+      "Path": "qa/coverage/allowed-blocker-ids.json",
+      "Sha256": "F26C362E25C27E84A47213A3D24A233A774DC1DA034A8A07DC6D1CD55C76FF35"
+    },
+    {
+      "Path": "qa/coverage/required-ac-ids.json",
+      "Sha256": "AAF5AE2ED3821C5883BE58D0D318E19CFF180C6D98A6115EF48F8D912CBFA98E"
+    },
+    {
+      "Path": "qa/fixtures/C2RRestart/README.md",
+      "Sha256": "4BED15CBDFCEAAC9A496921A2ECDA58E36344D621B14127FCDA0FE9C9BE7818C"
+    },
+    {
+      "Path": "qa/fixtures/ProfileResetCrashWorker/ProfileResetCrashWorker.csproj",
+      "Sha256": "8B92C34BBDB2A83973285D7125004DF595EEBF4C66B4769B65DA255FCDCDC31A"
+    },
+    {
+      "Path": "qa/fixtures/ProfileResetCrashWorker/Program.cs",
+      "Sha256": "740C37EE597749C0E3B3BA346A01940555F7CD09096B06E018E757FC426AAEA0"
+    },
+    {
+      "Path": "qa/fixtures/ProfileResetRootLockHolder.ps1",
+      "Sha256": "F896F707A1C53074E7E324B382E1FCB4C0E93EEDD7CFADF573126E0B59F632E5"
+    },
+    {
+      "Path": "qa/README.md",
+      "Sha256": "EA6560DCA2F5BE833AC2AA955E4DED67B551B72F290D19D97FCD25F60A66DD56"
+    },
+    {
+      "Path": "qa/rejected-audio/20260906-1850/_rejected-20260906-1850/02-city-hub.mp3",
+      "Sha256": "910BBC2AAA6C88D7895010B809D5A2C7444CD6D0BDEDEE2DDF4713395A58E2D4"
+    },
+    {
+      "Path": "qa/rejected-audio/20260906-1850/_rejected-20260906-1850/03-seryeong-bond.mp3",
+      "Sha256": "A09BDBECA1751D8E0F368C65D6F267F2600982BF5970CA27FCE52A468B331B61"
+    },
+    {
+      "Path": "qa/rejected-audio/failed-fp16-90s-20260906/01-title-menu.mp3",
+      "Sha256": "4B8B28E561789A484DA299D6F25FED613E4963758CC879059AFB51EFBDD960E8"
+    },
+    {
+      "Path": "qa/rejected-audio/failed-fp16-90s-20260906/02-city-hub.mp3",
+      "Sha256": "810995D28228406B314A2ECF8A0C7F19E0049D7A953791181A0987ABF665BB66"
+    },
+    {
+      "Path": "qa/rejected-audio/failed-fp16-90s-20260906/03-seryeong-bond.mp3",
+      "Sha256": "49BFA6CF07F7A1E609263FF44E827E87AACD4FF740BAD019BF35DD8B33192ADF"
+    },
+    {
+      "Path": "qa/rejected-audio/failed-fp16-90s-20260906/04-chapter-01.mp3",
+      "Sha256": "3E85E0E3783A2A74C611751FE45137C1E6D9AC99B53C389168E36BA598078D4C"
+    },
+    {
+      "Path": "qa/rejected-audio/music3-forced-duration-20260907/01-title-menu.mp3",
+      "Sha256": "45691E9735328C309D09BCCF3D35326DE8AEF8EAEF6FBA449891EC910B15B9BD"
+    },
+    {
+      "Path": "qa/rejected-audio/music3-forced-duration-20260907/01-title-menu.mp3.meta",
+      "Sha256": "B065CEA61A4E4175A1992C9A8729C305736879A716302BFE6265A692890F7B9F"
+    },
+    {
+      "Path": "qa/rejected-audio/music3-forced-duration-20260907/02-city-hub.mp3",
+      "Sha256": "BAFB4FDDB58BB3B50316623B0BC68070292FAAFF4C98EBB31B0FABE53385584B"
+    },
+    {
+      "Path": "qa/rejected-audio/music3-forced-duration-20260907/02-city-hub.mp3.meta",
+      "Sha256": "32390619467FD4FDE5CB2984AD3067D99C6CCD92A5E59E7550CD9B950BB3DB2D"
+    },
+    {
+      "Path": "qa/rejected-audio/music3-forced-duration-20260907/03-seryeong-bond.mp3",
+      "Sha256": "B414A21460F65A54D73FF73A1F42005EA01584C0FB1906AE9A7199350BD98E11"
+    },
+    {
+      "Path": "qa/rejected-audio/music3-forced-duration-20260907/03-seryeong-bond.mp3.meta",
+      "Sha256": "031625D9CACABA038D712237097E82B58001FFDA0D339414448AFF72279478F1"
+    },
+    {
+      "Path": "qa/rejected-audio/music3-forced-duration-20260907/04-chapter-01.mp3",
+      "Sha256": "9E75326039E703D6E446CB4D4D3A0EEB6432D96B81F45586A037C5F4F1D9D6EC"
+    },
+    {
+      "Path": "qa/rejected-audio/music3-forced-duration-20260907/04-chapter-01.mp3.meta",
+      "Sha256": "A4C18B805A93A352D38697E035B15BB1C07BA13590D807F1A976E19BA9C19AB8"
+    },
+    {
+      "Path": "qa/rejected-audio/previous-bgm-20260906/01-title-menu.mp3",
+      "Sha256": "45691E9735328C309D09BCCF3D35326DE8AEF8EAEF6FBA449891EC910B15B9BD"
+    },
+    {
+      "Path": "qa/rejected-audio/previous-bgm-20260906/02-city-hub.mp3",
+      "Sha256": "BAFB4FDDB58BB3B50316623B0BC68070292FAAFF4C98EBB31B0FABE53385584B"
+    },
+    {
+      "Path": "qa/rejected-audio/previous-bgm-20260906/03-seryeong-bond.mp3",
+      "Sha256": "B414A21460F65A54D73FF73A1F42005EA01584C0FB1906AE9A7199350BD98E11"
+    },
+    {
+      "Path": "qa/rejected-audio/previous-bgm-20260906/04-chapter-01.mp3",
+      "Sha256": "9E75326039E703D6E446CB4D4D3A0EEB6432D96B81F45586A037C5F4F1D9D6EC"
+    },
+    {
+      "Path": "qa/reviews/2026-09-09-spark01-r1-numeric-repro.ps1",
+      "Sha256": "503E59468BC41E989E621ACE925AAA72BE6D4F3AB85D646CA8780F5459C04B14"
+    },
+    {
+      "Path": "qa/reviews/2026-09-09-spark01-repro.ps1",
+      "Sha256": "E1EDD4CB6E93F017E2C32C80F0DF03F1202910581F62D374EFE2D8EF83877C20"
+    },
+    {
+      "Path": "qa/schema/qa-scenario-catalog.schema.json",
+      "Sha256": "64946C4DA36EE3F88432E15AB6391C06F2445ADF09A321CF3A16B75DB824729E"
+    },
+    {
+      "Path": "qa/tools/Finalize-BgmBatch.ps1",
+      "Sha256": "8EF52EAB7FC1E08E6C0A29D3FCAA3E822C90BDED5ABFF500CB11D4119E9119E3"
+    },
+    {
+      "Path": "qa/tools/Invoke-UnityQa.ps1",
+      "Sha256": "A4DD378FF02105345B63B40C6F446B304B04F9E8B894CCD2218806F42DD7DA85"
+    },
+    {
+      "Path": "qa/tools/sprite-preflight/example.manifest.json",
+      "Sha256": "47DB8797A2A80E9314BD5C7AD2CC956C29497C73B954C8172E2402FB7603889E"
+    },
+    {
+      "Path": "qa/tools/sprite-preflight/README.md",
+      "Sha256": "8CDE04CE41EC2C8F44B310181DFC1C9E42538931EC793FC7DD38FF5ABA6A840A"
+    },
+    {
+      "Path": "qa/tools/sprite-preflight/Test-SpriteSheetPreflight.ps1",
+      "Sha256": "0DE445E1AA5662913692340CA4C4254EDC91F7ADF169FB4691D341A91498109A"
+    },
+    {
+      "Path": "qa/tools/sprite-preflight/Test-SpriteSheetPreflight.SelfTest.ps1",
+      "Sha256": "C71B34B7C898E8953921222EB083350473886DA540DD40014F4197F25E400A61"
+    },
+    {
+      "Path": "qa/tools/Test-QaCatalog.ps1",
+      "Sha256": "E13E91B6967520D6ADC357E03C7A32D3B6A07F061A1FF0CA1F2A85228FF1B835"
+    },
+    {
+      "Path": "qa/tools/Test-UnityQaOwnedEditorWait.ps1",
+      "Sha256": "2FABA87A41D70167DACAA25B13808852F1A9BF8C32146E1053E5E14005CDADF2"
+    },
+    {
+      "Path": "qa/video/generate_minimax_h3_t2va.py",
+      "Sha256": "41337DB8CECC618B2A5A2429840AD0222DB271890F8E25C553B089271A766075"
+    }
+  ]
+}

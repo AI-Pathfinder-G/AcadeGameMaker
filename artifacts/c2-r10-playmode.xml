@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="41" result="Passed" total="41" passed="41" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-28 03:08:40Z" end-time="2026-09-28 03:24:08Z" duration="927.3176001">
+  <test-suite type="TestSuite" id="2410" name="AcadeGameMaker" fullname="AcadeGameMaker" runstate="Runnable" testcasecount="1190" result="Passed" start-time="2026-09-28 03:08:40Z" end-time="2026-09-28 03:24:08Z" duration="927.317600" total="41" passed="41" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="2107" name="AcadeGameMaker.Input.Unity.PlayMode.Tests.dll" fullname="C:/Users/me/Documents/GPT-workspace/AcadeGameMaker/Library/ScriptAssemblies/AcadeGameMaker.Input.Unity.PlayMode.Tests.dll" runstate="Runnable" testcasecount="486" result="Passed" start-time="2026-09-28 03:08:40Z" end-time="2026-09-28 03:24:08Z" duration="927.298514" total="41" passed="41" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="21688" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="2108" name="AcadeGameMaker" fullname="AcadeGameMaker" runstate="Runnable" testcasecount="486" result="Passed" start-time="2026-09-28 03:08:40Z" end-time="2026-09-28 03:24:08Z" duration="927.295461" total="41" passed="41" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="2109" name="Tests" fullname="AcadeGameMaker.Tests" runstate="Runnable" testcasecount="212" result="Passed" start-time="2026-09-28 03:08:40Z" end-time="2026-09-28 03:24:08Z" duration="927.290150" total="41" passed="41" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="2110" name="PlayMode" fullname="AcadeGameMaker.Tests.PlayMode" runstate="Runnable" testcasecount="212" result="Passed" start-time="2026-09-28 03:08:40Z" end-time="2026-09-28 03:24:08Z" duration="927.289234" total="41" passed="41" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="2111" name="InputUnity" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity" runstate="Runnable" testcasecount="212" result="Passed" start-time="2026-09-28 03:08:40Z" end-time="2026-09-28 03:24:08Z" duration="927.288264" total="41" passed="41" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1672" name="ProfileResetMemoryCutoverDataV1Tests" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" testcasecount="23" result="Passed" start-time="2026-09-28 03:08:40Z" end-time="2026-09-28 03:16:02Z" duration="441.839008" total="23" passed="23" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1676" name="AC_M5D7QC2_001_ActualHeldRootLeaseReturnsBusyWithoutMemoryOrProofMutation" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_001_ActualHeldRootLeaseReturnsBusyWithoutMemoryOrProofMutation" methodname="AC_M5D7QC2_001_ActualHeldRootLeaseReturnsBusyWithoutMemoryOrProofMutation" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="161228178" result="Passed" start-time="2026-09-28 03:08:40Z" end-time="2026-09-28 03:09:08Z" duration="27.516488" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-suite type="ParameterizedMethod" id="1697" name="AC_M5D7QC2_002_StagedDisposeFaultIsReloadAndInvokedOnce" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_002_StagedDisposeFaultIsReloadAndInvokedOnce" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-28 03:09:08Z" end-time="2026-09-28 03:10:33Z" duration="85.598588" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-case id="1693" name="AC_M5D7QC2_002_StagedDisposeFaultIsReloadAndInvokedOnce(False,False)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_002_StagedDisposeFaultIsReloadAndInvokedOnce(False,False)" methodname="AC_M5D7QC2_002_StagedDisposeFaultIsReloadAndInvokedOnce" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="1513730966" result="Passed" start-time="2026-09-28 03:09:08Z" end-time="2026-09-28 03:09:30Z" duration="21.817737" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1694" name="AC_M5D7QC2_002_StagedDisposeFaultIsReloadAndInvokedOnce(True,False)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_002_StagedDisposeFaultIsReloadAndInvokedOnce(True,False)" methodname="AC_M5D7QC2_002_StagedDisposeFaultIsReloadAndInvokedOnce" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="1612579604" result="Passed" start-time="2026-09-28 03:09:30Z" end-time="2026-09-28 03:09:51Z" duration="21.456956" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1695" name="AC_M5D7QC2_002_StagedDisposeFaultIsReloadAndInvokedOnce(False,True)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_002_StagedDisposeFaultIsReloadAndInvokedOnce(False,True)" methodname="AC_M5D7QC2_002_StagedDisposeFaultIsReloadAndInvokedOnce" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="562901373" result="Passed" start-time="2026-09-28 03:09:51Z" end-time="2026-09-28 03:10:12Z" duration="21.081920" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1696" name="AC_M5D7QC2_002_StagedDisposeFaultIsReloadAndInvokedOnce(True,True)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_002_StagedDisposeFaultIsReloadAndInvokedOnce(True,True)" methodname="AC_M5D7QC2_002_StagedDisposeFaultIsReloadAndInvokedOnce" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="1836322044" result="Passed" start-time="2026-09-28 03:10:12Z" end-time="2026-09-28 03:10:33Z" duration="21.236575" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                </test-suite>
+                <test-case id="1692" name="AC_M5D7QC2_003_ActualUnsafeLockPathIsManualAndTerminal" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_003_ActualUnsafeLockPathIsManualAndTerminal" methodname="AC_M5D7QC2_003_ActualUnsafeLockPathIsManualAndTerminal" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="571671035" result="Passed" start-time="2026-09-28 03:10:33Z" end-time="2026-09-28 03:10:55Z" duration="21.193724" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1674" name="AC_M5D7QC2_003_CheckpointSurfaceIsClosedAndNoOp" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_003_CheckpointSurfaceIsClosedAndNoOp" methodname="AC_M5D7QC2_003_CheckpointSurfaceIsClosedAndNoOp" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="2107758745" result="Passed" start-time="2026-09-28 03:10:55Z" end-time="2026-09-28 03:10:55Z" duration="0.001257" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1677" name="AC_M5D7QC2_003_InjectedBusyAfterLeaseIsReloadNotBusy" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_003_InjectedBusyAfterLeaseIsReloadNotBusy" methodname="AC_M5D7QC2_003_InjectedBusyAfterLeaseIsReloadNotBusy" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="998018884" result="Passed" start-time="2026-09-28 03:10:55Z" end-time="2026-09-28 03:11:16Z" duration="21.101989" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1673" name="AC_M5D7QC2_004_CapabilityAndReceiptCannotBeConstructedByCallers" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_004_CapabilityAndReceiptCannotBeConstructedByCallers" methodname="AC_M5D7QC2_004_CapabilityAndReceiptCannotBeConstructedByCallers" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="67017375" result="Passed" start-time="2026-09-28 03:11:16Z" end-time="2026-09-28 03:11:16Z" duration="0.000490" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-suite type="ParameterizedMethod" id="1689" name="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-28 03:11:16Z" end-time="2026-09-28 03:14:57Z" duration="221.035808" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-case id="1679" name="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_root&quot;)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_root&quot;)" methodname="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="1705491039" result="Passed" start-time="2026-09-28 03:11:16Z" end-time="2026-09-28 03:11:38Z" duration="22.019334" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1680" name="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_canonical&quot;)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_canonical&quot;)" methodname="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="122133020" result="Passed" start-time="2026-09-28 03:11:38Z" end-time="2026-09-28 03:12:00Z" duration="22.163656" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1681" name="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_generation&quot;)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_generation&quot;)" methodname="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="1400999787" result="Passed" start-time="2026-09-28 03:12:00Z" end-time="2026-09-28 03:12:22Z" duration="22.401436" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1682" name="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_actions&quot;)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_actions&quot;)" methodname="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="219686204" result="Passed" start-time="2026-09-28 03:12:22Z" end-time="2026-09-28 03:12:44Z" duration="22.136994" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1683" name="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_owner&quot;)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_owner&quot;)" methodname="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="894050395" result="Passed" start-time="2026-09-28 03:12:44Z" end-time="2026-09-28 03:13:07Z" duration="22.279732" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1684" name="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_document&quot;)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_document&quot;)" methodname="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="126005032" result="Passed" start-time="2026-09-28 03:13:07Z" end-time="2026-09-28 03:13:29Z" duration="22.046091" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1685" name="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_settings&quot;)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_settings&quot;)" methodname="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="2134044218" result="Passed" start-time="2026-09-28 03:13:29Z" end-time="2026-09-28 03:13:50Z" duration="21.536820" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1686" name="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_input&quot;)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_input&quot;)" methodname="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="1462273988" result="Passed" start-time="2026-09-28 03:13:50Z" end-time="2026-09-28 03:14:12Z" duration="22.161851" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1687" name="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_tutorial&quot;)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_tutorial&quot;)" methodname="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="483667470" result="Passed" start-time="2026-09-28 03:14:12Z" end-time="2026-09-28 03:14:35Z" duration="22.105172" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1688" name="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_progression&quot;)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact(&quot;_progression&quot;)" methodname="AC_M5D7QC2_004_CellGetterRejectsEachReflectedPairFact" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="1102574556" result="Passed" start-time="2026-09-28 03:14:35Z" end-time="2026-09-28 03:14:57Z" duration="22.182857" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                </test-suite>
+                <test-case id="1678" name="AC_M5D7QC2_004_CellGetterRejectsRetainedCellAfterAfterCellFault" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_004_CellGetterRejectsRetainedCellAfterAfterCellFault" methodname="AC_M5D7QC2_004_CellGetterRejectsRetainedCellAfterAfterCellFault" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="2090014460" result="Passed" start-time="2026-09-28 03:14:57Z" end-time="2026-09-28 03:15:19Z" duration="22.282817" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1690" name="AC_M5D7QC2_004_PreTransferCapabilityCannotMintReceiptWithRealFinalDiskProof" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_004_PreTransferCapabilityCannotMintReceiptWithRealFinalDiskProof" methodname="AC_M5D7QC2_004_PreTransferCapabilityCannotMintReceiptWithRealFinalDiskProof" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="331294753" result="Passed" start-time="2026-09-28 03:15:19Z" end-time="2026-09-28 03:15:40Z" duration="20.971092" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1691" name="AC_M5D7QC2_006_CompletedReceiptRejectsEverySingleFieldForgeryAndRetainsDefensiveEvidence" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_006_CompletedReceiptRejectsEverySingleFieldForgeryAndRetainsDefensiveEvidence" methodname="AC_M5D7QC2_006_CompletedReceiptRejectsEverySingleFieldForgeryAndRetainsDefensiveEvidence" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="367112993" result="Passed" start-time="2026-09-28 03:15:40Z" end-time="2026-09-28 03:16:02Z" duration="22.127790" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1675" name="AC_M5D7QC2_009_ResultRejectsClosedEnumAndSuccessWithoutFinalEvidence" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests.AC_M5D7QC2_009_ResultRejectsClosedEnumAndSuccessWithoutFinalEvidence" methodname="AC_M5D7QC2_009_ResultRejectsClosedEnumAndSuccessWithoutFinalEvidence" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverDataV1Tests" runstate="Runnable" seed="223650193" result="Passed" start-time="2026-09-28 03:16:02Z" end-time="2026-09-28 03:16:02Z" duration="0.000673" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="TestFixture" id="1698" name="ProfileResetMemoryCutoverV1Tests" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" testcasecount="18" result="Passed" start-time="2026-09-28 03:16:02Z" end-time="2026-09-28 03:24:08Z" duration="485.447198" total="18" passed="18" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1703" name="AC_M5D7QC2_001_Through006_ActualHubLaunchC1AndC2HappyPath" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_001_Through006_ActualHubLaunchC1AndC2HappyPath" methodname="AC_M5D7QC2_001_Through006_ActualHubLaunchC1AndC2HappyPath" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="798876095" result="Passed" start-time="2026-09-28 03:16:02Z" end-time="2026-09-28 03:16:25Z" duration="23.280031" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-suite type="ParameterizedMethod" id="1708" name="AC_M5D7QC2_003_004_008_ActualOwnedOperationFaultsFailStopAndRetainHistory" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_003_004_008_ActualOwnedOperationFaultsFailStopAndRetainHistory" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-09-28 03:16:25Z" end-time="2026-09-28 03:18:00Z" duration="94.815366" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-case id="1704" name="AC_M5D7QC2_003_004_008_ActualOwnedOperationFaultsFailStopAndRetainHistory(CancelUiEnableQuarantine,False)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_003_004_008_ActualOwnedOperationFaultsFailStopAndRetainHistory(CancelUiEnableQuarantine,False)" methodname="AC_M5D7QC2_003_004_008_ActualOwnedOperationFaultsFailStopAndRetainHistory" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="1348621994" result="Passed" start-time="2026-09-28 03:16:25Z" end-time="2026-09-28 03:16:49Z" duration="23.876499" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1705" name="AC_M5D7QC2_003_004_008_ActualOwnedOperationFaultsFailStopAndRetainHistory(CancelUiEnableQuarantine,True)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_003_004_008_ActualOwnedOperationFaultsFailStopAndRetainHistory(CancelUiEnableQuarantine,True)" methodname="AC_M5D7QC2_003_004_008_ActualOwnedOperationFaultsFailStopAndRetainHistory" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="288738702" result="Passed" start-time="2026-09-28 03:16:49Z" end-time="2026-09-28 03:17:13Z" duration="23.710215" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1706" name="AC_M5D7QC2_003_004_008_ActualOwnedOperationFaultsFailStopAndRetainHistory(DisposeOld,False)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_003_004_008_ActualOwnedOperationFaultsFailStopAndRetainHistory(DisposeOld,False)" methodname="AC_M5D7QC2_003_004_008_ActualOwnedOperationFaultsFailStopAndRetainHistory" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="393298626" result="Passed" start-time="2026-09-28 03:17:13Z" end-time="2026-09-28 03:17:37Z" duration="23.640325" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1707" name="AC_M5D7QC2_003_004_008_ActualOwnedOperationFaultsFailStopAndRetainHistory(DisposeOld,True)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_003_004_008_ActualOwnedOperationFaultsFailStopAndRetainHistory(DisposeOld,True)" methodname="AC_M5D7QC2_003_004_008_ActualOwnedOperationFaultsFailStopAndRetainHistory" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="923534391" result="Passed" start-time="2026-09-28 03:17:37Z" end-time="2026-09-28 03:18:00Z" duration="23.587230" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                </test-suite>
+                <test-case id="1719" name="AC_M5D7QC2_003_004_008_CompletedQuietTickThenReflectedTerminalReplayCannotReopenAuthority" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_003_004_008_CompletedQuietTickThenReflectedTerminalReplayCannotReopenAuthority" methodname="AC_M5D7QC2_003_004_008_CompletedQuietTickThenReflectedTerminalReplayCannotReopenAuthority" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="1238217060" result="Passed" start-time="2026-09-28 03:18:00Z" end-time="2026-09-28 03:18:23Z" duration="23.048990" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1714" name="AC_M5D7QC2_003_AfterTerminalGateAdapterCohortSubstitutionContainsOnlyOriginal" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_003_AfterTerminalGateAdapterCohortSubstitutionContainsOnlyOriginal" methodname="AC_M5D7QC2_003_AfterTerminalGateAdapterCohortSubstitutionContainsOnlyOriginal" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="1234581303" result="Passed" start-time="2026-09-28 03:18:23Z" end-time="2026-09-28 03:19:07Z" duration="43.915273" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-suite type="ParameterizedMethod" id="1717" name="AC_M5D7QC2_003_AfterTerminalGateRouterDiagnosticCorruptionContainsOnlyOriginal" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_003_AfterTerminalGateRouterDiagnosticCorruptionContainsOnlyOriginal" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-09-28 03:19:07Z" end-time="2026-09-28 03:20:34Z" duration="87.281534" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-case id="1715" name="AC_M5D7QC2_003_AfterTerminalGateRouterDiagnosticCorruptionContainsOnlyOriginal(True)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_003_AfterTerminalGateRouterDiagnosticCorruptionContainsOnlyOriginal(True)" methodname="AC_M5D7QC2_003_AfterTerminalGateRouterDiagnosticCorruptionContainsOnlyOriginal" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="142623158" result="Passed" start-time="2026-09-28 03:19:07Z" end-time="2026-09-28 03:19:51Z" duration="43.568504" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1716" name="AC_M5D7QC2_003_AfterTerminalGateRouterDiagnosticCorruptionContainsOnlyOriginal(False)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_003_AfterTerminalGateRouterDiagnosticCorruptionContainsOnlyOriginal(False)" methodname="AC_M5D7QC2_003_AfterTerminalGateRouterDiagnosticCorruptionContainsOnlyOriginal" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="748261666" result="Passed" start-time="2026-09-28 03:19:51Z" end-time="2026-09-28 03:20:34Z" duration="43.712164" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                </test-suite>
+                <test-case id="1709" name="AC_M5D7QC2_003_CleanForeignRouterAndRootRejectWithoutConsumingProof" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_003_CleanForeignRouterAndRootRejectWithoutConsumingProof" methodname="AC_M5D7QC2_003_CleanForeignRouterAndRootRejectWithoutConsumingProof" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="411285735" result="Passed" start-time="2026-09-28 03:20:34Z" end-time="2026-09-28 03:21:19Z" duration="44.921004" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-suite type="ParameterizedMethod" id="1713" name="AC_M5D7QC2_003_CoordinatedLaunchWitnessCorruptionContainsOnlyOriginalCohort" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_003_CoordinatedLaunchWitnessCorruptionContainsOnlyOriginalCohort" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-09-28 03:21:19Z" end-time="2026-09-28 03:23:25Z" duration="125.499807" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                  <properties />
+                  <test-case id="1710" name="AC_M5D7QC2_003_CoordinatedLaunchWitnessCorruptionContainsOnlyOriginalCohort(&quot;router&quot;)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_003_CoordinatedLaunchWitnessCorruptionContainsOnlyOriginalCohort(&quot;router&quot;)" methodname="AC_M5D7QC2_003_CoordinatedLaunchWitnessCorruptionContainsOnlyOriginalCohort" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="1446864367" result="Passed" start-time="2026-09-28 03:21:19Z" end-time="2026-09-28 03:22:02Z" duration="42.573054" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1711" name="AC_M5D7QC2_003_CoordinatedLaunchWitnessCorruptionContainsOnlyOriginalCohort(&quot;root&quot;)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_003_CoordinatedLaunchWitnessCorruptionContainsOnlyOriginalCohort(&quot;root&quot;)" methodname="AC_M5D7QC2_003_CoordinatedLaunchWitnessCorruptionContainsOnlyOriginalCohort" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="166702146" result="Passed" start-time="2026-09-28 03:22:02Z" end-time="2026-09-28 03:22:44Z" duration="42.230751" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                  <test-case id="1712" name="AC_M5D7QC2_003_CoordinatedLaunchWitnessCorruptionContainsOnlyOriginalCohort(&quot;actions&quot;)" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_003_CoordinatedLaunchWitnessCorruptionContainsOnlyOriginalCohort(&quot;actions&quot;)" methodname="AC_M5D7QC2_003_CoordinatedLaunchWitnessCorruptionContainsOnlyOriginalCohort" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="1890744568" result="Passed" start-time="2026-09-28 03:22:44Z" end-time="2026-09-28 03:23:25Z" duration="40.694903" asserts="0">
+                    <properties>
+                      <property name="retryIteration" value="0" />
+                      <property name="repeatIteration" value="0" />
+                    </properties>
+                  </test-case>
+                </test-suite>
+                <test-case id="1718" name="AC_M5D7QC2_004_OriginalOldCloseCwtGateHasOneConcurrentWinnerAfterRealTransfer" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_004_OriginalOldCloseCwtGateHasOneConcurrentWinnerAfterRealTransfer" methodname="AC_M5D7QC2_004_OriginalOldCloseCwtGateHasOneConcurrentWinnerAfterRealTransfer" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="1607990772" result="Passed" start-time="2026-09-28 03:23:25Z" end-time="2026-09-28 03:24:08Z" duration="42.678538" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1700" name="AC_M5D7QC2_004_ResultGetterRevalidatesReflectedOutcome" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_004_ResultGetterRevalidatesReflectedOutcome" methodname="AC_M5D7QC2_004_ResultGetterRevalidatesReflectedOutcome" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="1142628633" result="Passed" start-time="2026-09-28 03:24:08Z" end-time="2026-09-28 03:24:08Z" duration="0.000425" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1701" name="AC_M5D7QC2_006_ReceiptCannotBeConstructedFromArbitraryScalars" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_006_ReceiptCannotBeConstructedFromArbitraryScalars" methodname="AC_M5D7QC2_006_ReceiptCannotBeConstructedFromArbitraryScalars" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="672855587" result="Passed" start-time="2026-09-28 03:24:08Z" end-time="2026-09-28 03:24:08Z" duration="0.002429" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1702" name="AC_M5D7QC2_009_ReceiptDoesNotRetainLiveLeaseOrCutoverAuthority" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_009_ReceiptDoesNotRetainLiveLeaseOrCutoverAuthority" methodname="AC_M5D7QC2_009_ReceiptDoesNotRetainLiveLeaseOrCutoverAuthority" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="169105186" result="Passed" start-time="2026-09-28 03:24:08Z" end-time="2026-09-28 03:24:08Z" duration="0.001374" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1699" name="AC_M5D7QC2_009_ResultRejectsDefaultAndSuccessWithoutReceipt" fullname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests.AC_M5D7QC2_009_ResultRejectsDefaultAndSuccessWithoutReceipt" methodname="AC_M5D7QC2_009_ResultRejectsDefaultAndSuccessWithoutReceipt" classname="AcadeGameMaker.Tests.PlayMode.InputUnity.ProfileResetMemoryCutoverV1Tests" runstate="Runnable" seed="1289568672" result="Passed" start-time="2026-09-28 03:24:08Z" end-time="2026-09-28 03:24:08Z" duration="0.000284" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[Saving results to: C:/Users/me/AppData/LocalLow/AcadeGameMaker/AcadeGameMaker\TestResults.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

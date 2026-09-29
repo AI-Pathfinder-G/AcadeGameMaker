@@ -1,0 +1,62 @@
+{
+  "Scope": "최종 보정 소스의 독립 검수 기준이며 실행·수용이 아님",
+  "PredecessorManifestSha256": "0849AE5B55FDD448175A3534CB2A6E67F36102257FDFA8FEA27C0D39DAEF1175",
+  "Files": [
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileNewGameConfirmationV1.cs",
+      "Sha256": "ABD4B8CC79D0C24F16EB053B98460C68A466B03AABE0B2CFA01C7862BA027CB1"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/ProfileNewGameConfirmationV1Tests.cs",
+      "Sha256": "F80D57376F3845E16BB3D347CFB3834ACE8FCCB53F539376D880A844A90F9581"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/ProfileNewGameConfirmationV1Tests.cs.meta",
+      "Sha256": "4DDE703DFCF2E048D9737FF57EED9E0CA1192109046871AFE31C437400F13AD2"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuIntentHandoffOwnerV1.cs",
+      "Sha256": "9B9AAFA1A0898E27FAADC6CAC389838E170D1527A177893060DF5397723C34E7"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/HubMenuPresenterV1.cs",
+      "Sha256": "393B325BA5B8F6D79CA983F1A91098215E7A6993DE37E9F5D98BA775760E4900"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/NewGameConfirmationOwnerV1.cs",
+      "Sha256": "4723C8CE75022BE00911D7E5BEBCD4BE349D7902BD3442BDA0642AA1EDE37742"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/NewGameConfirmationOwnerV1.cs.meta",
+      "Sha256": "05F240AFB899893F47C94798D05D65BD97F5982120AD8EE086CBFBD27C1C482B"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffEditModeTests.cs",
+      "Sha256": "57E7EFB17307BFB156D338F7BDCE25104E3192748FD6C159F7BB7B4A7483DAD6"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/NewGameConfirmationOwnerV1Tests.cs",
+      "Sha256": "E8DF1DC55A4AD00EE2211758EBABDFBD512C4F242CC1E23E7FD966CF861B36B0"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/NewGameConfirmationOwnerV1Tests.cs.meta",
+      "Sha256": "AC62F31C59BC1FA79BC0999BFCE6D6F7965AE6C3F2E2061DE8B96587A2C6B611"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffC3AuditSuccessorTests.cs",
+      "Sha256": "1B0F8D0919770CD1FBD06F908EC23E370A18E911EC5AAC09938FAF0BFDA174E6"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffC3AuditSuccessorTests.cs.meta",
+      "Sha256": "D8098D01444B011F288F405C9C313B8BE7499EFA4951AEE0001BE2EC7F3F70AB"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/NewGameConfirmationOwnerPlayModeTests.cs",
+      "Sha256": "221A6D800979463F3121998932921886831117B189EEACED3D08B15A8A612858"
+    },
+    {
+      "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/NewGameConfirmationOwnerPlayModeTests.cs.meta",
+      "Sha256": "1F20AD5E096121FE7D60FF605474376F4F7BF4786DED820C455916B584A40D6A"
+    }
+  ]
+}

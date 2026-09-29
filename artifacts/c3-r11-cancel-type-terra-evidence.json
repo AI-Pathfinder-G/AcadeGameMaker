@@ -1,0 +1,22 @@
+{
+  "Trace": "REQ-M5D7QC3-001/005/007; AC-M5D7QC3-005/009/010",
+  "ActualModel": "gpt-6-sol",
+  "BeforeSHA256": "B573AA593F8624C4A1E6F86059EC02E4DC26EEB3203F8774E74828B166B7850B",
+  "AfterSHA256": "2FA406515CEB7C885A5F41EC6438ACC85123714AB00302B520A58B36066C9E23",
+  "RestoredSingleLiteralEqualsOriginalEntireText": true,
+  "OriginalLiteral": "AcadeGameMaker.Movement.Unity.PlayerMovementController, AcadeGameMaker.Movement.Unity",
+  "ReplacementLiteral": "AcadeGameMaker.Movement.PlayerMovementController, AcadeGameMaker.Movement.Unity",
+  "ChangedPaths": [
+    "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/NewGameConfirmationOwnerPlayModeTests.cs"
+  ],
+  "EditUnchanged": true,
+  "ExpectedLedgerEntirelyEqual": true,
+  "ExpectedRows": 377,
+  "MatrixCases": 91,
+  "EditCount": 240,
+  "PlayCount": 15,
+  "UnityExecuted": false,
+  "CompileExecuted": false,
+  "GitExecuted": false,
+  "Accepted": false
+}

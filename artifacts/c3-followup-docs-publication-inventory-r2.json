@@ -1,0 +1,4404 @@
+{
+  "SchemaVersion": 2,
+  "Date": "2026-09-29",
+  "Author": "솔",
+  "ActualModel": "gpt-6-sol",
+  "OriginMain": "46b14e97be2c5fc6017d92c09e3200899599830a",
+  "Scope": "오늘 C3 관련 문서와 상위 C3 계약·참여 원장의 읽기 전용 문서 게시 후보",
+  "DocumentInventoryCount": 104,
+  "CandidateCount": 89,
+  "DeferredOrAlreadyPublishedCount": 15,
+  "RehashChanges": [],
+  "Entries": [
+    {
+      "Path": "docs/approvals/2026-09-29-c3-audit-test-meta-guid-correction-approval.md",
+      "CurrentSHA256": "084313C609B16970F47B48D971A3E1694923AB08F33BA9DD9FB4527B3FAE9CD9",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "기존 제한 승인 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffC3AuditSuccessorTests.cs.meta",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-cancel-snapshot-type-correction-approval.md",
+      "CurrentSHA256": "7D348C893BD8E2BA86E67B8A397473E156E60E2470502ED4346D87294EEF439D",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "기존 제한 승인 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-r10-cancel-snapshot-exact-type-correction.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r10-cancel-snapshot-exact-type-correction-luna-design-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-initial-neutral-cursor-consumption-approval.md",
+      "CurrentSHA256": "C7453AC12551432E167E32B59D1886FDC3F0A357B4E1C89CA332DECC4DBD67CD",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "기존 제한 승인 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/verification/2026-09-29-c3-r10-initial-consumption-luna-runtime-review.md",
+          "SHA256": "8159E44F4E9CCD6D439A1B5BA08B9981BDD7F3632B4C31BA882F97E1D53445B5",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-r9-initial-neutral-cursor-consumption.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r9-initial-neutral-cursor-consumption-luna-design-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-intake-cancel-and-gate-correction-approval.md",
+      "CurrentSHA256": "5EAC88C2ABDAAFE23B98A774D1A9BB646E9644A0820288D44C470D8CC7E1DCEB",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "기존 제한 승인 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-late-successor-permission-correction-approval.md",
+      "CurrentSHA256": "6F271E60D685B9954EE46A7BC486432ADDAA18B24BC9FEB06DD67EAA1C12F9F0",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "기존 제한 승인 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-upper-frozen-source-manifest.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-lower-boundary-implementation-approval.md",
+      "CurrentSHA256": "56554BD3CF3E0FE339B361FB03DB1A808D567ECF47963C76DF638F5C82BF18CA",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "기존 제한 승인 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-lower-confirmed-request-boundary-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/proposals/2026-09-29-c3-lower-single-field-cas-integrity.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-lower-cas-integrity-luna-design-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-lower-confirmed-request-boundary-luna-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-lower-confirmed-request-runtime-luna-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-lower-gpt6-luna-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-play-initial-selection-preparation-approval.md",
+      "CurrentSHA256": "5EBB39A6347B6E30C610F0790E05D27591AAFEC6D6572D14D2020108730A2BA3",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "기존 제한 승인 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/verification/2026-09-29-c3-r9-initial-selection-luna-runtime-review.md",
+          "SHA256": "0EFE3364C895FBAAA05010C0740349691E82F86CEC0BEA912C0E78A03957C824",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/gpt-participation-ledger.md",
+          "SHA256": "EA1C05FA14396A95A5CD5B99EF5194F099E2B8BADEFA71E352716366F64CCFB6",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-r8-play-initial-selection-order.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r8-play-initial-selection-order-luna-design-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-playmode-fixture-placement-implementation-approval.md",
+      "CurrentSHA256": "265AEA17D4729216B90F4C4C34BECE0F83F41E5048995A59FED9A0D48FF02329",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "기존 제한 승인 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/verification/2026-09-29-c3-playmode-fixture-placement-luna-design-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-qb-coherent-unit-implementation-approval.md",
+      "CurrentSHA256": "1DD10508812A2D0D3C2EB5AD061333947719E5F9646E9DFE840AEE8D7CEE87DB",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "기존 제한 승인 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-owner-coherent-unit-plan.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/proposals/2026-09-29-c3-qb-issued-request-handle-design.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-qb-gpt6-luna-closure.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-qb-framework-import-audit-implementation-approval.md",
+      "CurrentSHA256": "FAC07B40A7787A6003F6CEE5D5AD48434C0315700078A2CE70D24DBEF2B84EFA",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "기존 제한 승인 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-qb-framework-import-audit-successor.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-qb-framework-import-audit-luna-design-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-r6-focused-test-correction-approval.md",
+      "CurrentSHA256": "4DCEB60D41ED5E2945B0550F022CA8DDAC213D89946D8A171DE782899B78B495",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "기존 제한 승인 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/verification/2026-09-29-c3-r7-focused-test-correction-luna-review.md",
+          "SHA256": "4F44E842B06D9ECD8D3107884EECC626AB7C354531E581214CFD472424947AFE",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-build-focused-selection.ps1",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-build-required-decision-expected-rows.ps1",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-verify-decision-rows.ps1",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/NewGameConfirmationOwnerV1Tests.cs",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/NewGameConfirmationOwnerPlayModeTests.cs",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/proposals/2026-09-29-c3-r6-focused-test-correction-design-r2.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r6-focused-edit-r1-luna-result-review-r3.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r6-focused-test-correction-luna-design-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-r7-submit-observation-approval.md",
+      "CurrentSHA256": "4351CA9C817B706597B26898C383ECCADDAB0011C24485B6D45E3A4D20363190",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "기존 제한 승인 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/verification/2026-09-29-c3-r7-submit-observation-luna-runtime-review.md",
+          "SHA256": "66D873790A45DC134CC05A289C4ABD5AAE4132D1265934C8C3DC5D15EFF338AA",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/NewGameConfirmationOwnerV1Tests.cs",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/proposals/2026-09-29-c3-r7-edit-submit-minimal-observation-r2.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r7-edit-submit-minimal-observation-luna-r2-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-required-decision-evidence-implementation-approval.md",
+      "CurrentSHA256": "39403B9430CC313A93F37BB8AABDF56F97C3EE11F48115241D71754F37A64035",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "기존 제한 승인 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-submit-playmode-transfer-approval.md",
+      "CurrentSHA256": "27764BD15B96C6C3746EB9E4C5556C9258B8ADC0C90040EF99820A8EBBEF9CFA",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "기존 제한 승인 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/verification/2026-09-29-c3-r8-submit-transfer-luna-runtime-review.md",
+          "SHA256": "A82B2FEACEE855DDDE0E81295A67FC6A2A071DBA5481C71E28FD724AAA084AD4",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-r7-submit-playmode-equivalent-transfer.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r7-submit-playmode-equivalent-transfer-luna-design-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3l-integration-acceptance.md",
+      "CurrentSHA256": "1000E2752EAB63B496C5DA8491D698A8FE40D492497E039D3F96A725D09B582F",
+      "OriginBlobObjectID": "d13f6ba93746036370514b22dc2cd39913621f9f",
+      "OriginBlobSHA256": "1000E2752EAB63B496C5DA8491D698A8FE40D492497E039D3F96A725D09B582F",
+      "OriginStatus": "원격과 현재 바이트 동일",
+      "RecordKind": "기존 제한 승인 기록",
+      "Candidate": false,
+      "CompletionBasis": "이미 원격에 동일 바이트 존재; 후속 변경 후보 아님",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/verification/2026-09-29-c3l-final-regression-luna-acceptance-review.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/handoffs/2026-09-29-c3l-verified-checkpoint.md",
+      "CurrentSHA256": "A59FFCE646E97D60C36AF88357F88C954A846D486AFC2FB6EC40ED20B78ADC3E",
+      "OriginBlobObjectID": "5662cb7e6cc9c76559b09f1b47ffd9285b6b7370",
+      "OriginBlobSHA256": "A59FFCE646E97D60C36AF88357F88C954A846D486AFC2FB6EC40ED20B78ADC3E",
+      "OriginStatus": "원격과 현재 바이트 동일",
+      "RecordKind": "과거 인계 상태",
+      "Candidate": false,
+      "CompletionBasis": "진행 중 상태 또는 이미 게시된 인계 역사; 새 현재 완료 문서로 선택하지 않음",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/documentation-pr-body.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/adr/0036-staged-confirmation-and-execution-acceptance.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/approvals/2026-09-28-c3-owner-implementation-design-approval.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3l-integration-acceptance.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/proposals/2026-09-28-c3-terra-implementation-sequence.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/handoffs/2026-09-29-merged-c3-lower-checkpoint.md",
+      "CurrentSHA256": "181485DAF104780B530C789F31875D459F78F5F120DCA126CD4B5F0858D216EF",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "과거 인계 상태",
+      "Candidate": false,
+      "CompletionBasis": "진행 중 상태 또는 이미 게시된 인계 역사; 새 현재 완료 문서로 선택하지 않음",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/adr/0037-gpt6-role-model-migration.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-intake-cancel-and-gate-correction-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-late-successor-permission-correction-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-qb-framework-import-audit-implementation-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-required-decision-evidence-implementation-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-lower-cas-integrity-runtime-luna-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-lower-compile-access-correction-luna-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-lower-r1-focused-execution.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-c4-acceptance-cycle-resolution.md",
+      "CurrentSHA256": "A8D35076BADAD0E897C9E27F15055956A3B13D96AE222BE81953129ECB4660B3",
+      "OriginBlobObjectID": "a20615cd3c1746fab29464368062d27befdf88a4",
+      "OriginBlobSHA256": "A8D35076BADAD0E897C9E27F15055956A3B13D96AE222BE81953129ECB4660B3",
+      "OriginStatus": "원격과 현재 바이트 동일",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": false,
+      "CompletionBasis": "이미 원격에 동일 바이트 존재; 후속 변경 후보 아님",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/specs/work-contracts/2026-09-28-vd09-m5d7q-c3-confirmation-owner.md",
+          "SHA256": "6B60F520E71B7BC2D1B7EBC9F53C283CA942676FEA02202F796514258F9D5FFB",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-vd09-m5d7q-c3-c4-acceptance-cycle-final-static-luna-review.md",
+          "SHA256": "258DB406F6D22F5D2C8FE6D02B21001058774BF17CA403E934FBA5BC7FAF8CAF",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-vd09-m5d7q-c3-c4-acceptance-cycle-resolution-luna-closure.md",
+          "SHA256": "70ECAA19E917D09E2996BA235B0B2938AA59DBE07663F1647BE736A201A81225",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-code-publication-dependency-assessment.md",
+      "CurrentSHA256": "78292AE307723AF226C1FA2C25B910EB0923B4187E45F735B6A4DD966038A239",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-initial-code-publication-baseline-contract.md",
+          "SHA256": "CEB7F6A1184F8FA32C96F0EE50B6363BD278C7B6D8C35FA16E15A978EE08211E",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "Assets/GameInput.inputactions",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/Scenes/Hub.unity",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/approvals/2026-09-28-c3-adapter-successor-sha-approval.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3l-integration-acceptance.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Packages/manifest.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "설정·QA 등 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "qa/tools/Invoke-UnityQa.ps1",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "설정·QA 등 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-edit-fixture-exact-binding.md",
+      "CurrentSHA256": "1F2B14D055F232CE737E06AAE40383B79DD0683E7FC66ACFBBDC45367149F98D",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/verification/2026-09-29-c3-edit-fixture-exact-binding-luna-design-review.md",
+          "SHA256": "62709ACDADCE176F403838CCAA6AD8FBE25427DF766154405F2112F56193B084",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-initial-code-publication-baseline-contract.md",
+      "CurrentSHA256": "CEB7F6A1184F8FA32C96F0EE50B6363BD278C7B6D8C35FA16E15A978EE08211E",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/verification/2026-09-29-c3-initial-code-publication-luna-review.md",
+          "SHA256": "E5F110C5D4B2BA370665462D3EDAE24871785188FEB37A9D5C1E4662E23B600C",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "Assets/GameInput.inputactions",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/Prefabs/Combat/OrdanBossEncounterGraph.prefab",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/Prefabs/Hub/HubRuntimeRoot.prefab",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/Prefabs/Player/CombatEncounterPlayer.prefab",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/Scenes/Bootstrap.unity",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/Scenes/Hub.unity",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/UI/Shaders/Hub/TMP_SDF-Mobile.shader",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/proposals/2026-09-29-c3-code-publication-dependency-assessment.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/specs/work-contracts/2026-08-25-vd01-movement-sandbox.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/specs/work-contracts/2026-08-25-vd02-weight-transfer.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/specs/work-contracts/2026-08-25-vd09-unity-bootstrap.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/specs/work-contracts/2026-09-05-vd03-combat-m4b1-ordan-unity-combat-bridge.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/specs/work-contracts/2026-09-06-unity-6000-6-baseline-update.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/specs/work-contracts/2026-09-08-vd07-m5b3-device-action-asset.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/specs/work-contracts/2026-09-08-vd07-m5b5-device-input-router.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Packages/manifest.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "설정·QA 등 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Packages/packages-lock.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "설정·QA 등 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "ProjectSettings/EditorBuildSettings.asset",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "설정·QA 등 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "ProjectSettings/ProjectVersion.txt",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "설정·QA 등 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "qa/tools/Invoke-UnityQa.ps1",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "설정·QA 등 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-intake-and-cancel-required-evidence.md",
+      "CurrentSHA256": "D55936D54119282834909ED4C13C3CA683C981984D9541AAA138290B01BCBE2C",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-intake-cancel-and-gate-correction-approval.md",
+          "SHA256": "5EAC88C2ABDAAFE23B98A774D1A9BB646E9644A0820288D44C470D8CC7E1DCEB",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-cancel-effect-callgraph-sol-evidence.md",
+          "SHA256": "2D669D4E7DD9346E3FE35C162F5AE2733789CCB5FB083C44D92A4C30143DF10C",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-intake-cancel-evidence-luna-design-review.md",
+          "SHA256": "5869CC9F9CCE1D32B827F2BA9CA14F9A96E6E947B2411C9A5C7473210B1BF4BC",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/gpt-participation-ledger.md",
+          "SHA256": "EA1C05FA14396A95A5CD5B99EF5194F099E2B8BADEFA71E352716366F64CCFB6",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/verification/2026-09-29-c3-upper-r3-luna-runtime-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-lower-confirmed-request-boundary-review.md",
+      "CurrentSHA256": "EAA6CBE69CACC2BCA91515296768FC6E0C76F3C2BDCF604AF661D77A70A3218D",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-lower-boundary-implementation-approval.md",
+          "SHA256": "56554BD3CF3E0FE339B361FB03DB1A808D567ECF47963C76DF638F5C82BF18CA",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-lower-confirmed-request-boundary-luna-review.md",
+          "SHA256": "D8D0A47511F83F308C7707BF5E3DD1CE1111EEACE04611F8FCDE029899EB38C1",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-lower-confirmed-request-runtime-luna-review.md",
+          "SHA256": "53AD75A876BBF8002CB25D1A00DD6602133F0C54FE23A8599B9CE3C49731B105",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3l-final-regression-evidence.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-lower-single-field-cas-integrity.md",
+      "CurrentSHA256": "D23ED6F90FE58198A4C5778133083463CA4715BB72CF87DD377C3CDC1A6C6754",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-lower-boundary-implementation-approval.md",
+          "SHA256": "56554BD3CF3E0FE339B361FB03DB1A808D567ECF47963C76DF638F5C82BF18CA",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-lower-cas-integrity-luna-design-review.md",
+          "SHA256": "CA021246180401BBAF3F5BB943067DF0F71D267A96939847515278B21DCA2FD0",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-lower-cas-integrity-runtime-luna-review.md",
+          "SHA256": "23C0F35B41294E94BF8A9B93A6FF21C5D7310487985DA8D185FDA73607316C06",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/gpt-participation-ledger.md",
+          "SHA256": "EA1C05FA14396A95A5CD5B99EF5194F099E2B8BADEFA71E352716366F64CCFB6",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileNewGameConfirmationV1.cs",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/AcadeGameMaker/Tests/EditMode/InputUnity/ProfileNewGameConfirmationV1Tests.cs",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-lower-gpt6-successor-static-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-owner-coherent-unit-plan.md",
+      "CurrentSHA256": "E68280CD03EA28B3F0CC9B60530FD88762BB27BBE24B966BAD2810D02DF1DC59",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-qb-coherent-unit-implementation-approval.md",
+          "SHA256": "1DD10508812A2D0D3C2EB5AD061333947719E5F9646E9DFE840AEE8D7CEE87DB",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-qb-gpt6-luna-closure.md",
+          "SHA256": "E99B308FA8E7D8054659F444BFD1D56A1C5441D1737CF5CF5668917D77961AE3",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-upper-coherent-runtime-luna-review.md",
+          "SHA256": "95BB6951380077708FBEBCBB80B821660E8C60F7107FB8EAEDDAB465A5BCC6DB",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-upper-sol-bounded-counter-review.md",
+          "SHA256": "9A3E7BDE7AF93BF46252C3C9BAB37B324E4C0E282A26F51B99DFB4E8397005F5",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-playmode-fixture-placement.md",
+      "CurrentSHA256": "BAB0264267FA79583C57AD121FC83E28DEE28E2C99DBCA2C7183C9C1868EAF99",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-playmode-fixture-placement-implementation-approval.md",
+          "SHA256": "265AEA17D4729216B90F4C4C34BECE0F83F41E5048995A59FED9A0D48FF02329",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/specs/work-contracts/2026-09-28-vd09-m5d7q-c3-confirmation-owner.md",
+          "SHA256": "6B60F520E71B7BC2D1B7EBC9F53C283CA942676FEA02202F796514258F9D5FFB",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-playmode-fixture-placement-luna-design-review.md",
+          "SHA256": "3D19EB6C5DD8883483744E7166842DA4FF43E164A815279868E23988F88BC6B0",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/NewGameConfirmationOwnerPlayModeTests.cs",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-qb-framework-import-audit-successor.md",
+      "CurrentSHA256": "4AB34DE39D4648E291A88CA0068FCCA68275E49D772165A1BD9DE8744642E18B",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-qb-framework-import-audit-implementation-approval.md",
+          "SHA256": "FAC07B40A7787A6003F6CEE5D5AD48434C0315700078A2CE70D24DBEF2B84EFA",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/specs/work-contracts/2026-09-28-vd09-m5d7q-c3-confirmation-owner.md",
+          "SHA256": "6B60F520E71B7BC2D1B7EBC9F53C283CA942676FEA02202F796514258F9D5FFB",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-qb-framework-import-audit-luna-design-review.md",
+          "SHA256": "A91179A46D221BC6BFE0E912A1B0D29294F6F41B9D960456E25A38067DD3157C",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffC3AuditSuccessorTests.cs",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffEditModeTests.cs",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-qb-issued-request-handle-design.md",
+      "CurrentSHA256": "28926347FAA0E247726177578C3B3A79358993F9ED0FC61C9C5886563C5F5CD3",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-qb-coherent-unit-implementation-approval.md",
+          "SHA256": "1DD10508812A2D0D3C2EB5AD061333947719E5F9646E9DFE840AEE8D7CEE87DB",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-qb-gpt6-luna-closure.md",
+          "SHA256": "E99B308FA8E7D8054659F444BFD1D56A1C5441D1737CF5CF5668917D77961AE3",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-upper-coherent-runtime-luna-review.md",
+          "SHA256": "95BB6951380077708FBEBCBB80B821660E8C60F7107FB8EAEDDAB465A5BCC6DB",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-upper-sol-bounded-counter-review.md",
+          "SHA256": "9A3E7BDE7AF93BF46252C3C9BAB37B324E4C0E282A26F51B99DFB4E8397005F5",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-r10-cancel-snapshot-exact-type-correction.md",
+      "CurrentSHA256": "5919567813731A1C17AF53B5D6E6C32C0AE74C5BC61C9C3114C618573FA125BC",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-cancel-snapshot-type-correction-approval.md",
+          "SHA256": "7D348C893BD8E2BA86E67B8A397473E156E60E2470502ED4346D87294EEF439D",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r10-cancel-snapshot-exact-type-correction-luna-design-review.md",
+          "SHA256": "E03EAD9F1FDDECB3871D1C328A0D06546FEFBAF387D7A2E0A1D40510754B2DD9",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-r10-play-remaining-r1.xml",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-r6-focused-test-correction-design-r2.md",
+      "CurrentSHA256": "DE6A88E4041114A4116720ED8639F3C17EA0C6D5AF27A4DE586863722DDEDE43",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-r6-focused-test-correction-approval.md",
+          "SHA256": "4DCEB60D41ED5E2945B0550F022CA8DDAC213D89946D8A171DE782899B78B495",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r6-focused-test-correction-luna-design-review.md",
+          "SHA256": "E230CF7C22B4C636EB4E8CFE862022C213655E4E99AB8A6CC58550D6E59494A0",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r7-focused-test-correction-luna-review.md",
+          "SHA256": "4F44E842B06D9ECD8D3107884EECC626AB7C354531E581214CFD472424947AFE",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-build-focused-selection.ps1",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-r6-focused-edit-r1.xml",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-verify-decision-rows.ps1",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/NewGameConfirmationOwnerV1.cs",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-r6-focused-test-correction-design.md",
+      "CurrentSHA256": "4D803294776EFCDE850EBB277A4222ED13B7E542893C1A3CA3363B2EE2594113",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": false,
+      "CompletionBasis": "다른 한정 문서의 정확 지문 연결을 확인하지 못함; 완료·동결 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-build-focused-selection.ps1",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-r6-focused-edit-r1.xml",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-verify-decision-rows.ps1",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/NewGameConfirmationOwnerV1.cs",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-r7-edit-submit-minimal-observation-r2.md",
+      "CurrentSHA256": "7DBDF90C6251718F6730512068132D10D76F6C3DDCB976A55BF801E820675536",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-r7-submit-observation-approval.md",
+          "SHA256": "4351CA9C817B706597B26898C383ECCADDAB0011C24485B6D45E3A4D20363190",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r7-edit-submit-minimal-observation-luna-r2-review.md",
+          "SHA256": "DF278B7A7A878F68249F81C123FBEC4DD7846C64118B9A9EC4749F6D58996ABD",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-r7-edit-submit-minimal-observation.md",
+      "CurrentSHA256": "EECF51248D3C0295AA4FA329E0B1EABDB2F467DB57D2EF7015928560FE9BD5E2",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-r7-edit-submit-minimal-observation-r2.md",
+          "SHA256": "7DBDF90C6251718F6730512068132D10D76F6C3DDCB976A55BF801E820675536",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r7-edit-submit-minimal-observation-luna-review.md",
+          "SHA256": "C21D229C74B61A92BC777AAEDF5A1E80C7979B47378A678CDF67647464CE17EA",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-r7-edit-submit-r1.xml",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/GameInput.inputactions",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-r7-submit-playmode-equivalent-transfer.md",
+      "CurrentSHA256": "CB0AAC702505ED4ECC68DC988852C8E27016FF945B70FF7606600350D28ED3A0",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-submit-playmode-transfer-approval.md",
+          "SHA256": "27764BD15B96C6C3746EB9E4C5556C9258B8ADC0C90040EF99820A8EBBEF9CFA",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r7-submit-playmode-equivalent-transfer-luna-design-review.md",
+          "SHA256": "2BD76ECED01DD1873E042DD64050058C8314A65A4F730FF2508A128E509C7D2A",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-r7-submit-observation-r1.xml",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-r8-play-initial-selection-order.md",
+      "CurrentSHA256": "DE355A7010232DE4DD1CD5975E7EA9C830A26C591A2199C062D1C1636209F9E1",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-play-initial-selection-preparation-approval.md",
+          "SHA256": "5EBB39A6347B6E30C610F0790E05D27591AAFEC6D6572D14D2020108730A2BA3",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r8-play-initial-selection-order-luna-design-review.md",
+          "SHA256": "FC060D5D4851467CAD04EA91BCA3FD953578FDE26B22590DBF7ED060ECE72FE7",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/gpt-participation-ledger.md",
+          "SHA256": "EA1C05FA14396A95A5CD5B99EF5194F099E2B8BADEFA71E352716366F64CCFB6",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-r8-play-probes-r1.xml",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-r9-initial-neutral-cursor-consumption.md",
+      "CurrentSHA256": "847ADCAC9CA526A06DD6FE2A5065602879AB446F7163BCD17D35BA0E6FC283FC",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-initial-neutral-cursor-consumption-approval.md",
+          "SHA256": "C7453AC12551432E167E32B59D1886FDC3F0A357B4E1C89CA332DECC4DBD67CD",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r9-initial-neutral-cursor-consumption-luna-design-review.md",
+          "SHA256": "B6F361F3352100242B97914F953D1489D86FF358707E6DB1207E3F044586DF8A",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-r9-play-probes-r1.xml",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/UiSemanticFrameV1.cs",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-reentrant-evidence-boundary.md",
+      "CurrentSHA256": "DFF389EBE18B29EC5B6DC790FD8D73060A505CBEA3E99FCE17CA5161D62A3E79",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-required-decision-evidence-implementation-approval.md",
+          "SHA256": "39403B9430CC313A93F37BB8AABDF56F97C3EE11F48115241D71754F37A64035",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/specs/work-contracts/2026-09-28-vd09-m5d7q-c3-confirmation-owner.md",
+          "SHA256": "6B60F520E71B7BC2D1B7EBC9F53C283CA942676FEA02202F796514258F9D5FFB",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-required-decision-test-matrix-luna-design-review.md",
+          "SHA256": "B9FAECCAC0B83E12B07DFA2AAD9A152908C408BAFD5F579DC56A27866848F688",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-required-decision-test-matrix.md",
+      "CurrentSHA256": "B213890A1204B72BDBE9B6263154341A6668F95C7BBC3D224EBAB8D15D41599D",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "설계 또는 게시 의존 제안",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-required-decision-evidence-implementation-approval.md",
+          "SHA256": "39403B9430CC313A93F37BB8AABDF56F97C3EE11F48115241D71754F37A64035",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/specs/work-contracts/2026-09-28-vd09-m5d7q-c3-confirmation-owner.md",
+          "SHA256": "6B60F520E71B7BC2D1B7EBC9F53C283CA942676FEA02202F796514258F9D5FFB",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-required-decision-test-matrix-luna-design-review.md",
+          "SHA256": "B9FAECCAC0B83E12B07DFA2AAD9A152908C408BAFD5F579DC56A27866848F688",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/specs/work-contracts/2026-09-28-vd09-m5d7q-c3-confirmation-owner.md",
+      "CurrentSHA256": "6B60F520E71B7BC2D1B7EBC9F53C283CA942676FEA02202F796514258F9D5FFB",
+      "OriginBlobObjectID": "25082b0dbb831f47cb27fff34b3d87d2b9419cc8",
+      "OriginBlobSHA256": "F678AFC3AC6EBA89B8EE1A03DBDEF841EF012D592F7D37257AD1A4F8DC146846",
+      "OriginStatus": "원격 이후 변경 문서",
+      "RecordKind": "기존 Approved 상위 C3 계약",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "Assets/AcadeGameMaker/Runtime/HubPresentation/Unity/NewGameConfirmationOwnerV1.cs",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/AcadeGameMaker/Runtime/Input/Unity/ProfileNewGameConfirmationV1.cs",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffEditModeTests.cs",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/NewGameConfirmationOwnerPlayModeTests.cs",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/adr/0036-staged-confirmation-and-execution-acceptance.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-cancel-snapshot-type-correction-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-initial-neutral-cursor-consumption-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-intake-cancel-and-gate-correction-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-play-initial-selection-preparation-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-r6-focused-test-correction-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-r7-submit-observation-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-submit-playmode-transfer-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/proposals/2026-09-29-c3-playmode-fixture-placement.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/proposals/2026-09-29-c3-qb-framework-import-audit-successor.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/proposals/2026-09-29-c3-reentrant-evidence-boundary.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/proposals/2026-09-29-c3-required-decision-test-matrix.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/README.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-playmode-fixture-placement-luna-design-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-qb-framework-import-audit-luna-design-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-required-decision-test-matrix-luna-design-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-vd09-m5d7q-c3-c4-acceptance-cycle-resolution-luna-closure.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-cancel-effect-callgraph-sol-evidence.md",
+      "CurrentSHA256": "2D669D4E7DD9346E3FE35C162F5AE2733789CCB5FB083C44D92A4C30143DF10C",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-upper-r5-frozen-source-manifest.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-intake-cancel-and-gate-correction-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/proposals/2026-09-29-c3-intake-and-cancel-required-evidence.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-confirm-callback-reachability-sol-evidence.md",
+      "CurrentSHA256": "AFBDC066B55B36A16590A793EE30FC7EE75142A85B0570042DC46428EB3D89D5",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/verification/2026-09-29-c3-cancel-effect-callgraph-sol-evidence.md",
+          "SHA256": "2D669D4E7DD9346E3FE35C162F5AE2733789CCB5FB083C44D92A4C30143DF10C",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r5-confirm-callback-and-gate-sol-evidence.md",
+          "SHA256": "D051E693AA8A746F0A9AC77F81864F56EA04D3B3DF5CB4950843AF2E3AD13452",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-upper-r3-luna-runtime-review.md",
+          "SHA256": "1D7634EBB5D041A6AE292D8C87BF66F83E329C34455C7434E91EF9DAE5C9E16C",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-edit-fixture-exact-binding-luna-design-review.md",
+      "CurrentSHA256": "62709ACDADCE176F403838CCAA6AD8FBE25427DF766154405F2112F56193B084",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-edit-fixture-exact-binding.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-final-qa-environment-preflight.md",
+      "CurrentSHA256": "FBA40131A9B062ED35E0B26ABEF434C2C937BDF452464951D5254870E5568581",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "qa/tools/Invoke-UnityQa.ps1",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "설정·QA 등 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-initial-code-publication-byte-evidence-luna-review.md",
+      "CurrentSHA256": "FBCF53DDF4D325623B447585AB9E6EDDC9C557B8CE901B6C76D3321C8E1CA3C8",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-initial-code-publication-byte-evidence-r2.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-initial-code-publication-byte-evidence.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-initial-code-publication-luna-review.md",
+      "CurrentSHA256": "E5F110C5D4B2BA370665462D3EDAE24871785188FEB37A9D5C1E4662E23B600C",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-initial-code-publication-candidate-files-notes.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-initial-code-publication-candidate-files.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/proposals/2026-09-29-c3-initial-code-publication-baseline-contract.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-intake-cancel-evidence-luna-design-review.md",
+      "CurrentSHA256": "5869CC9F9CCE1D32B827F2BA9CA14F9A96E6E947B2411C9A5C7473210B1BF4BC",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-intake-and-cancel-required-evidence.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-lower-cas-integrity-implementation-evidence.md",
+      "CurrentSHA256": "C49BFCDDDBAE8518F04D89C52E87974F63916B553C227E204E933373D16E271E",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-lower-r2-selection.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-lower-boundary-implementation-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-lower-cas-integrity-runtime-luna-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-lower-compile-access-correction-luna-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-lower-cas-integrity-luna-design-review.md",
+      "CurrentSHA256": "CA021246180401BBAF3F5BB943067DF0F71D267A96939847515278B21DCA2FD0",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-lower-single-field-cas-integrity.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-lower-cas-integrity-runtime-luna-review.md",
+      "CurrentSHA256": "23C0F35B41294E94BF8A9B93A6FF21C5D7310487985DA8D185FDA73607316C06",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-lower-single-field-cas-integrity.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-lower-compile-access-correction-luna-review.md",
+      "CurrentSHA256": "C0A9A2A83A9EC1F2F13C5D646B317D37DF5D0DECD55A6044AB0508553455B47D",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-lower-confirmed-request-boundary-luna-review.md",
+      "CurrentSHA256": "D8D0A47511F83F308C7707BF5E3DD1CE1111EEACE04611F8FCDE029899EB38C1",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-lower-confirmed-request-runtime-luna-review.md",
+      "CurrentSHA256": "53AD75A876BBF8002CB25D1A00DD6602133F0C54FE23A8599B9CE3C49731B105",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-lower-gpt6-luna-review.md",
+      "CurrentSHA256": "32E9660495F97AFF67AD1A56CB241ED7E8B7A86B0D2F1B926432822DC362626C",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-lower-r1-verification.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-lower-gpt6-successor-static-review.md",
+      "CurrentSHA256": "BFFD9E261CD98230FF9E64D1171E30571BB880552744D168FB52CE3E5864699D",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-lower-r1-focused-execution.md",
+      "CurrentSHA256": "F32F8A0E4D89B896ABFAFB25BCEFFD735E354C20C2C42947C27E3DF4FD9320DD",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-lower-r1-focused.log",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-lower-r1-focused.xml",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-lower-r1-selection.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-lower-r1-verification.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/handoffs/2026-09-29-merged-c3-lower-checkpoint.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-owner-lower-implementation-pregate-luna-review.md",
+      "CurrentSHA256": "AEA4DB7119BE5195E1D28E28EE3795FCF195CB8E4A6637C84C8455683E33B26B",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-playmode-fixture-placement-luna-design-review.md",
+      "CurrentSHA256": "3D19EB6C5DD8883483744E7166842DA4FF43E164A815279868E23988F88BC6B0",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-playmode-fixture-placement.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-qb-framework-import-audit-luna-design-review.md",
+      "CurrentSHA256": "A91179A46D221BC6BFE0E912A1B0D29294F6F41B9D960456E25A38067DD3157C",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-qb-framework-import-audit-successor.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-qb-gpt6-luna-closure.md",
+      "CurrentSHA256": "E99B308FA8E7D8054659F444BFD1D56A1C5441D1737CF5CF5668917D77961AE3",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-qb-issued-request-handle-followup-luna-review.md",
+      "CurrentSHA256": "EA07F5D9E1F4E1A86F615D1105E8EB3AA7BD33CB32DF52ADEEEAA9A09D8FF1B9",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-qb-issued-request-handle-luna-review.md",
+      "CurrentSHA256": "A7B0A543FC4B7D6619F5711DCCE6F20B49CE2F7AE58604AF0AEE5EEC20C41B98",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-qb-issued-request-handle-design.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/specs/work-contracts/2026-09-28-vd09-m5d7q-c3-confirmation-owner.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r10-cancel-snapshot-exact-type-correction-luna-design-review.md",
+      "CurrentSHA256": "E03EAD9F1FDDECB3871D1C328A0D06546FEFBAF387D7A2E0A1D40510754B2DD9",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-cancel-snapshot-type-correction-approval.md",
+          "SHA256": "7D348C893BD8E2BA86E67B8A397473E156E60E2470502ED4346D87294EEF439D",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r10-initial-consumption-luna-runtime-review.md",
+      "CurrentSHA256": "8159E44F4E9CCD6D439A1B5BA08B9981BDD7F3632B4C31BA882F97E1D53445B5",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-initial-neutral-cursor-consumption-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r10-play-probes-r1-luna-result-review.md",
+      "CurrentSHA256": "D63F4ABB166BFD11BF6298487F0D5E9C2089DE118377AFE30695C311EB115F7F",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-upper-r10-frozen-source-manifest.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r10-play-remaining-r1-luna-result-review.md",
+      "CurrentSHA256": "48EC4DCCB6574F66D51650253E338D568870FF8F7D6AC2F1DB55834E65CFAF7C",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r11-cancel-type-luna-runtime-review.md",
+      "CurrentSHA256": "B6F24ABCC572A63E2A8D6F724C1111B4F046E0C4DF769D9939945D88F19849B6",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r5-confirm-callback-and-gate-sol-evidence.md",
+      "CurrentSHA256": "D051E693AA8A746F0A9AC77F81864F56EA04D3B3DF5CB4950843AF2E3AD13452",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-upper-r5-frozen-source-manifest.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-upper-r5-terra-implementation-evidence.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-intake-cancel-and-gate-correction-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r5-source-freeze-and-selection.md",
+      "CurrentSHA256": "C42BB7C0AAC70822473B3409D296587EDAE7F57E66961F387E9E140186C642EE",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-r5-focused-edit-r1-failure-verification.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-upper-r5-frozen-source-manifest.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-audit-test-meta-guid-correction-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r6-focused-edit-r1-luna-result-review-r2.md",
+      "CurrentSHA256": "C7D2A8A6522B3CB9C9D04A7C11A74D3FD75706E6E9D4960B55941678D9840FEE",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-r6-focused-edit-r1-decision-row-comparison.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r6-focused-edit-r1-luna-result-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r6-focused-edit-r1-luna-result-review-r3.md",
+      "CurrentSHA256": "65DAF958EB1AAD5B85492D8321F594F9DB820D5BC2E5CC677854CFEA52067677",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-r6-focused-edit-r1-decision-row-comparison.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r6-focused-edit-r1-luna-result-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r6-focused-edit-r1-luna-result-review.md",
+      "CurrentSHA256": "E196520821DA37C03D86FEB69CCCB85E1A468DEB795674F06708BF8926401581",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-r6-focused-edit-r1-decision-row-comparison.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-r6-focused-edit-r1-final-comparison.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-r6-focused-edit-r1-native-exit-observation.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r6-focused-test-correction-luna-design-review.md",
+      "CurrentSHA256": "E230CF7C22B4C636EB4E8CFE862022C213655E4E99AB8A6CC58550D6E59494A0",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-r6-focused-test-correction-approval.md",
+          "SHA256": "4DCEB60D41ED5E2945B0550F022CA8DDAC213D89946D8A171DE782899B78B495",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r7-edit-submit-minimal-observation-luna-r2-review.md",
+      "CurrentSHA256": "DF278B7A7A878F68249F81C123FBEC4DD7846C64118B9A9EC4749F6D58996ABD",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-r7-submit-observation-approval.md",
+          "SHA256": "4351CA9C817B706597B26898C383ECCADDAB0011C24485B6D45E3A4D20363190",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r7-edit-submit-minimal-observation-luna-review.md",
+      "CurrentSHA256": "C21D229C74B61A92BC777AAEDF5A1E80C7979B47378A678CDF67647464CE17EA",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/proposals/2026-09-29-c3-r7-edit-submit-minimal-observation-r2.md",
+          "SHA256": "7DBDF90C6251718F6730512068132D10D76F6C3DDCB976A55BF801E820675536",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r7-edit-submit-r1-luna-result-review.md",
+      "CurrentSHA256": "7C100B6F4AC6E6DF7546F01054C7237B72B1A716AFE89E1DEEE6E0887C6F61DF",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r7-focused-test-correction-luna-review.md",
+      "CurrentSHA256": "4F44E842B06D9ECD8D3107884EECC626AB7C354531E581214CFD472424947AFE",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-upper-r7-frozen-source-manifest.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-r6-focused-test-correction-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r7-submit-observation-luna-runtime-review.md",
+      "CurrentSHA256": "66D873790A45DC134CC05A289C4ABD5AAE4132D1265934C8C3DC5D15EFF338AA",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r7-submit-observation-r1-luna-result-review.md",
+      "CurrentSHA256": "7542A9EA4E14C0DE0476B8F2DF11474671751155DCCF41551B2BEC38E6F6F1CA",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r7-submit-playmode-equivalent-transfer-luna-design-review.md",
+      "CurrentSHA256": "2BD76ECED01DD1873E042DD64050058C8314A65A4F730FF2508A128E509C7D2A",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-submit-playmode-transfer-approval.md",
+          "SHA256": "27764BD15B96C6C3746EB9E4C5556C9258B8ADC0C90040EF99820A8EBBEF9CFA",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r8-play-initial-selection-order-luna-design-review.md",
+      "CurrentSHA256": "FC060D5D4851467CAD04EA91BCA3FD953578FDE26B22590DBF7ED060ECE72FE7",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-play-initial-selection-preparation-approval.md",
+          "SHA256": "5EBB39A6347B6E30C610F0790E05D27591AAFEC6D6572D14D2020108730A2BA3",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r8-play-probes-r1-luna-result-review.md",
+      "CurrentSHA256": "6761C4FD6CF8033C56FC3B2D7BBD9587322207544823D0DAD00D7F2B48D96746",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r8-submit-transfer-luna-runtime-review.md",
+      "CurrentSHA256": "A82B2FEACEE855DDDE0E81295A67FC6A2A071DBA5481C71E28FD724AAA084AD4",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-r8-submit-transfer-terra-evidence.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-upper-r8-frozen-source-manifest.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-submit-playmode-transfer-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r9-initial-neutral-cursor-consumption-luna-design-review.md",
+      "CurrentSHA256": "B6F361F3352100242B97914F953D1489D86FF358707E6DB1207E3F044586DF8A",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-initial-neutral-cursor-consumption-approval.md",
+          "SHA256": "C7453AC12551432E167E32B59D1886FDC3F0A357B4E1C89CA332DECC4DBD67CD",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r9-initial-selection-luna-runtime-review.md",
+      "CurrentSHA256": "0EFE3364C895FBAAA05010C0740349691E82F86CEC0BEA912C0E78A03957C824",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-r9-initial-selection-terra-evidence.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-play-initial-selection-preparation-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r9-play-probes-r1-luna-result-review.md",
+      "CurrentSHA256": "984A98BAAB1AFA17F6FB647E1201C3ACD4AC6C43E4E7960F95962BABBB3E655B",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-required-decision-test-matrix-luna-design-review.md",
+      "CurrentSHA256": "B9FAECCAC0B83E12B07DFA2AAD9A152908C408BAFD5F579DC56A27866848F688",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-required-decision-evidence-implementation-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/proposals/2026-09-29-c3-required-decision-test-matrix.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/specs/work-contracts/2026-09-28-vd09-m5d7q-c3-confirmation-owner.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-upper-coherent-runtime-luna-review.md",
+      "CurrentSHA256": "95BB6951380077708FBEBCBB80B821660E8C60F7107FB8EAEDDAB465A5BCC6DB",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-upper-r3-luna-runtime-review.md",
+      "CurrentSHA256": "1D7634EBB5D041A6AE292D8C87BF66F83E329C34455C7434E91EF9DAE5C9E16C",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-required-decision-expected-rows.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-upper-local-compile-r4/command.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-upper-r3-frozen-source-manifest.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-upper-r4-frozen-source-manifest.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-upper-r5-luna-runtime-review.md",
+      "CurrentSHA256": "6950723F64DA1231BCAD506003EC7F52EA6790932EB3F24157A41468AFCB790C",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-required-decision-expected-rows.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-upper-r5-frozen-source-manifest.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-intake-cancel-and-gate-correction-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-required-decision-evidence-implementation-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-upper-r6-meta-correction-luna-review.md",
+      "CurrentSHA256": "46ACFFA03B4D6D71E61FF1C5E57067E4EA9EC07E6726DF3E0DBC59FCB14064A5",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-audit-meta-guid-correction/evidence.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-r5-focused-edit-r1-failure-verification.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3-upper-r6-frozen-source-manifest.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/HubMenuIntentHandoffC3AuditSuccessorTests.cs.meta",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "코드·자산 게시 범위 밖",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/approvals/2026-09-29-c3-audit-test-meta-guid-correction-approval.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-upper-sol-bounded-counter-review.md",
+      "CurrentSHA256": "9A3E7BDE7AF93BF46252C3C9BAB37B324E4C0E282A26F51B99DFB4E8397005F5",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "현재 완료 기록 스냅샷; 게시 전 재지문·독립 검토 필요",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3l-final-regression-luna-acceptance-review.md",
+      "CurrentSHA256": "040B69C59C513B3BE261FC3EC2C7A96FA6B40084BC3FF9277D5F1F357B336A0A",
+      "OriginBlobObjectID": "5e68ed70b57a068dc480270e5c24bfa249fa1a85",
+      "OriginBlobSHA256": "040B69C59C513B3BE261FC3EC2C7A96FA6B40084BC3FF9277D5F1F357B336A0A",
+      "OriginStatus": "원격과 현재 바이트 동일",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": false,
+      "CompletionBasis": "이미 원격에 동일 바이트 존재; 후속 변경 후보 아님",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3l-final-regression-evidence.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3l-publication-state-luna-review.md",
+      "CurrentSHA256": "2EEB5DD0096DC79C7EE4C1674AE8F919078D7B4DF39E52A4B85051BBE6D501A4",
+      "OriginBlobObjectID": "92b62ad00f40ef8f908b52155911b10c7fcb5115",
+      "OriginBlobSHA256": "2EEB5DD0096DC79C7EE4C1674AE8F919078D7B4DF39E52A4B85051BBE6D501A4",
+      "OriginStatus": "원격과 현재 바이트 동일",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": false,
+      "CompletionBasis": "이미 원격에 동일 바이트 존재; 후속 변경 후보 아님",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "docs/handoffs/2026-09-29-c3l-verified-checkpoint.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/README.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/specs/README.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3l-r4-edit-regression-luna-review.md",
+      "CurrentSHA256": "8C807625F05643B1282E63B277A8429A1AAA7D5E928AED795AE83D766FC22D3E",
+      "OriginBlobObjectID": "138b8cd7d791568a92c7453ffd7ce3e4f93f558a",
+      "OriginBlobSHA256": "8C807625F05643B1282E63B277A8429A1AAA7D5E928AED795AE83D766FC22D3E",
+      "OriginStatus": "원격과 현재 바이트 동일",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": false,
+      "CompletionBasis": "이미 원격에 동일 바이트 존재; 후속 변경 후보 아님",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c2-r35-final-editmode.xml",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3l-r4-edit-regression.log",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3l-r4-edit-regression.xml",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3l-r4-verification.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3l-r5-worker-regression-luna-review.md",
+      "CurrentSHA256": "3100471A77C0E096811725203E03F3A6F3503412F0D7C481998F69A75726A86B",
+      "OriginBlobObjectID": "bb219c12ae7a8912fb13a11c69a58d772a59a1c8",
+      "OriginBlobSHA256": "3100471A77C0E096811725203E03F3A6F3503412F0D7C481998F69A75726A86B",
+      "OriginStatus": "원격과 현재 바이트 동일",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": false,
+      "CompletionBasis": "이미 원격에 동일 바이트 존재; 후속 변경 후보 아님",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3l-r5-verification.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3l-r5-worker.xml",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-vd09-m5d7q-c3-c4-acceptance-cycle-final-static-luna-review.md",
+      "CurrentSHA256": "258DB406F6D22F5D2C8FE6D02B21001058774BF17CA403E934FBA5BC7FAF8CAF",
+      "OriginBlobObjectID": "1e0704c70860ea19d8a6998f5883a0327e58628b",
+      "OriginBlobSHA256": "258DB406F6D22F5D2C8FE6D02B21001058774BF17CA403E934FBA5BC7FAF8CAF",
+      "OriginStatus": "원격과 현재 바이트 동일",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": false,
+      "CompletionBasis": "이미 원격에 동일 바이트 존재; 후속 변경 후보 아님",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-vd09-m5d7q-c3-c4-acceptance-cycle-resolution-luna-closure.md",
+      "CurrentSHA256": "70ECAA19E917D09E2996BA235B0B2938AA59DBE07663F1647BE736A201A81225",
+      "OriginBlobObjectID": "096ada745d6262cc68b06b456ad4bcb94c6a105c",
+      "OriginBlobSHA256": "70ECAA19E917D09E2996BA235B0B2938AA59DBE07663F1647BE736A201A81225",
+      "OriginStatus": "원격과 현재 바이트 동일",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": false,
+      "CompletionBasis": "이미 원격에 동일 바이트 존재; 후속 변경 후보 아님",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-vd09-m5d7q-c3-c4-acceptance-cycle-resolution-luna-review.md",
+      "CurrentSHA256": "559C3ECA142A50B2E0140264B277BF96E5E8E92D6E0D3DC012F85C024C313AE0",
+      "OriginBlobObjectID": "01d033fea8eaa99b605b36f10017004813bec84c",
+      "OriginBlobSHA256": "559C3ECA142A50B2E0140264B277BF96E5E8E92D6E0D3DC012F85C024C313AE0",
+      "OriginStatus": "원격과 현재 바이트 동일",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": false,
+      "CompletionBasis": "이미 원격에 동일 바이트 존재; 후속 변경 후보 아님",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-vd09-m5d7q-c3l-r4-execution.md",
+      "CurrentSHA256": "5BD8328A04877DFE0ABBCB3849E7D8441D3518C3D0BB35A2230ECB6DD6512F6D",
+      "OriginBlobObjectID": "637da8c62868cd6669d1f8010aee05d4757a72ac",
+      "OriginBlobSHA256": "5BD8328A04877DFE0ABBCB3849E7D8441D3518C3D0BB35A2230ECB6DD6512F6D",
+      "OriginStatus": "원격과 현재 바이트 동일",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": false,
+      "CompletionBasis": "이미 원격에 동일 바이트 존재; 후속 변경 후보 아님",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3l-r4-edit-regression.xml",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3l-r4-owned-exit-observation-corrected.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3l-r4-verification.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-vd09-m5d7q-c3l-r5-worker-execution.md",
+      "CurrentSHA256": "0973A0E4695E738938527CA3B6A1377977A80798DC0EE7C32EBE12D33FF54FDE",
+      "OriginBlobObjectID": "7576d2af6c7fbe4f6126eb3264d9459e198c73ba",
+      "OriginBlobSHA256": "0973A0E4695E738938527CA3B6A1377977A80798DC0EE7C32EBE12D33FF54FDE",
+      "OriginStatus": "원격과 현재 바이트 동일",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": false,
+      "CompletionBasis": "이미 원격에 동일 바이트 존재; 후속 변경 후보 아님",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3l-r5-source-after.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3l-r5-source-before.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3l-r5-verification.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3l-r5-worker.log",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3l-r5-worker.xml",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-vd09-m5d7q-c3l-r6-regression-closure.md",
+      "CurrentSHA256": "50FA426E30B1ABA1E6E8CEE7B9057C0B196506391074718DE8C0C14B417578F5",
+      "OriginBlobObjectID": "cabf365ef180c008d0e9167a62290ec21c5a746f",
+      "OriginBlobSHA256": "50FA426E30B1ABA1E6E8CEE7B9057C0B196506391074718DE8C0C14B417578F5",
+      "OriginStatus": "원격과 현재 바이트 동일",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": false,
+      "CompletionBasis": "이미 원격에 동일 바이트 존재; 후속 변경 후보 아님",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3l-final-regression-evidence.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3l-r6-recovery-notice.log",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3l-r6-recovery-notice.xml",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3l-r6-source-after.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3l-r6-source-before.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "artifacts/c3l-r6-verification.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/gpt-participation-ledger.md",
+      "CurrentSHA256": "EA1C05FA14396A95A5CD5B99EF5194F099E2B8BADEFA71E352716366F64CCFB6",
+      "OriginBlobObjectID": "90ff51316dfdecd235cd391bdb380994ad8a83d8",
+      "OriginBlobSHA256": "9A2103D680320E6CF9633957D1E0D883D16388AAEC59D4F40FD1EDC76D5396C1",
+      "OriginStatus": "원격 이후 변경 문서",
+      "RecordKind": "참여 원장",
+      "Candidate": true,
+      "CompletionBasis": "R11 최종 참여/실제 15개 집중 결과 추가 완료; 전체 C3 미수용 경계를 보존",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c2-r10-playmode.xml",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/handoffs/2026-09-28-next-session.md",
+          "LocalExists": true,
+          "OriginExists": true,
+          "InDocumentInventory": false,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r11-play-focused-r1-luna-result-review.md",
+      "CurrentSHA256": "FAD61A27107B4E7CBEA42450715F22EE2232AAD4083C07152A077074BACDCE4D",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "독립 검수 또는 구조·실행 증거 기록",
+      "Candidate": true,
+      "CompletionBasis": "완료된 R11 집중 Play 제한 결과/수용 기록; C3 전체 아님",
+      "ExactFingerprintReferences": [
+        {
+          "Path": "docs/approvals/2026-09-29-c3-r11-play-focused-partial-acceptance.md",
+          "SHA256": "1CF32ED23DC6BA1AC38DDF1F04C4F4309F5DDFAC574DEB1BFDA59A081C31B4AD",
+          "Match": "현재 64자리 문서 지문을 실제 본문이 직접 언급"
+        }
+      ],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-upper-r11-frozen-source-manifest.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-r11-play-focused-partial-acceptance.md",
+      "CurrentSHA256": "1CF32ED23DC6BA1AC38DDF1F04C4F4309F5DDFAC574DEB1BFDA59A081C31B4AD",
+      "OriginBlobObjectID": null,
+      "OriginBlobSHA256": null,
+      "OriginStatus": "원격에 없는 신규 문서",
+      "RecordKind": "기존 제한 승인 기록",
+      "Candidate": true,
+      "CompletionBasis": "완료된 R11 집중 Play 제한 결과/수용 기록; C3 전체 아님",
+      "ExactFingerprintReferences": [],
+      "LinkedDocumentsAndEvidence": [
+        {
+          "Path": "artifacts/c3-upper-r11-frozen-source-manifest.json",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": false,
+          "Kind": "원시·선택·지문 증거",
+          "IncludedInCandidateDocs": false
+        },
+        {
+          "Path": "docs/verification/2026-09-29-c3-r11-play-focused-r1-luna-result-review.md",
+          "LocalExists": true,
+          "OriginExists": false,
+          "InDocumentInventory": true,
+          "Kind": "문서",
+          "IncludedInCandidateDocs": true
+        }
+      ],
+      "FrozenCurrentC3Acceptance": false,
+      "PublicationApproved": false
+    }
+  ],
+  "MissingFromOriginLinkedDocuments": [
+    {
+      "Path": "docs/approvals/2026-09-29-c3-audit-test-meta-guid-correction-approval.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-cancel-snapshot-type-correction-approval.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-initial-neutral-cursor-consumption-approval.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-intake-cancel-and-gate-correction-approval.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-lower-boundary-implementation-approval.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-play-initial-selection-preparation-approval.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-r6-focused-test-correction-approval.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-r7-submit-observation-approval.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-required-decision-evidence-implementation-approval.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-submit-playmode-transfer-approval.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/handoffs/2026-09-29-merged-c3-lower-checkpoint.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-code-publication-dependency-assessment.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-edit-fixture-exact-binding.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-initial-code-publication-baseline-contract.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-intake-and-cancel-required-evidence.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-lower-confirmed-request-boundary-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-lower-single-field-cas-integrity.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-owner-coherent-unit-plan.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-playmode-fixture-placement.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-qb-framework-import-audit-successor.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-qb-issued-request-handle-design.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-r10-cancel-snapshot-exact-type-correction.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-r6-focused-test-correction-design-r2.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-r7-edit-submit-minimal-observation-r2.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-r7-submit-playmode-equivalent-transfer.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-r8-play-initial-selection-order.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-r9-initial-neutral-cursor-consumption.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-reentrant-evidence-boundary.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/proposals/2026-09-29-c3-required-decision-test-matrix.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-lower-cas-integrity-luna-design-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-lower-cas-integrity-runtime-luna-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-lower-compile-access-correction-luna-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-lower-confirmed-request-boundary-luna-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-lower-confirmed-request-runtime-luna-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-lower-gpt6-luna-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-lower-gpt6-successor-static-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-playmode-fixture-placement-luna-design-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-qb-framework-import-audit-luna-design-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-qb-gpt6-luna-closure.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r10-cancel-snapshot-exact-type-correction-luna-design-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r11-play-focused-r1-luna-result-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r6-focused-edit-r1-luna-result-review-r3.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r6-focused-edit-r1-luna-result-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r6-focused-test-correction-luna-design-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r7-edit-submit-minimal-observation-luna-r2-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r7-submit-playmode-equivalent-transfer-luna-design-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r8-play-initial-selection-order-luna-design-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r9-initial-neutral-cursor-consumption-luna-design-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-required-decision-test-matrix-luna-design-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-upper-r3-luna-runtime-review.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": true
+    }
+  ],
+  "MissingFromOriginLinkedRawEvidence": [
+    {
+      "Path": "artifacts/c2-r10-playmode.xml",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-audit-meta-guid-correction/evidence.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-build-focused-selection.ps1",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-build-required-decision-expected-rows.ps1",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-initial-code-publication-byte-evidence-r2.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-initial-code-publication-byte-evidence.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-initial-code-publication-candidate-files-notes.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-initial-code-publication-candidate-files.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-lower-r1-focused.log",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-lower-r1-focused.xml",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-lower-r1-selection.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-lower-r1-verification.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-lower-r2-selection.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-r10-play-remaining-r1.xml",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-r5-focused-edit-r1-failure-verification.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-r6-focused-edit-r1-decision-row-comparison.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-r6-focused-edit-r1-final-comparison.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-r6-focused-edit-r1-native-exit-observation.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-r6-focused-edit-r1.xml",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-r7-edit-submit-r1.xml",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-r7-submit-observation-r1.xml",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-r8-play-probes-r1.xml",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-r8-submit-transfer-terra-evidence.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-r9-initial-selection-terra-evidence.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-r9-play-probes-r1.xml",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-required-decision-expected-rows.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-upper-frozen-source-manifest.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-upper-local-compile-r4/command.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-upper-r10-frozen-source-manifest.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-upper-r11-frozen-source-manifest.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-upper-r3-frozen-source-manifest.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-upper-r4-frozen-source-manifest.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-upper-r5-frozen-source-manifest.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-upper-r5-terra-implementation-evidence.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-upper-r6-frozen-source-manifest.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-upper-r7-frozen-source-manifest.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-upper-r8-frozen-source-manifest.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3-verify-decision-rows.ps1",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    },
+    {
+      "Path": "artifacts/c3l-final-regression-evidence.json",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": false,
+      "Kind": "원시·선택·지문 증거",
+      "IncludedInCandidateDocs": false
+    }
+  ],
+  "ExplicitDeferred": [
+    "R11 Play 15개 집중 결과 문서·루나 독립 검수·아스트라 제한 수용과 참여 원장 갱신은 완료해 후보 포함",
+    "최종 Edit 240개/377행91사례, 필수 562/51/610 및 전체 독립 검수·C3/C4 수용은 남아 있음",
+    "다른 날짜의 Q0 핀/필수 회귀 문서 및 Assets/Packages/ProjectSettings/qa 코드·설정·선택 원장은 변경/게시 후보 아님"
+  ],
+  "Limitations": [
+    "문서 게시 후보 검토일 뿐 Approved 추가·PR 생성·게시·코드 PR·통합 수용 아님",
+    "초기 코드 게시 489개 후보 중 직접 바이트 근거 공백 428개는 유지; 문서 후보로 승인 범위를 확대하지 않음",
+    "C3 전체·C4 미수용; 현재 실제 완료된 제한 검수/실패 기록의 상태만 보존",
+    "원격에 없는 연결 증거는 이 문서 범위만으로 읽을 수 없을 수 있음; 실제 증거 게시 계약은 별도 검토",
+    "일부 상대 경로·그룹 표기·파일명 단독 인용은 자동 연결하지 않음; 이 목록은 모든 의존성 폐쇄 증명이 아님"
+  ],
+  "GitMutationsPerformed": false,
+  "NetworkPerformed": false,
+  "ExecutionPerformed": false,
+  "LinkedDocumentsStillOutsideCandidate": [
+    {
+      "Path": "docs/handoffs/2026-09-29-merged-c3-lower-checkpoint.md",
+      "LocalExists": true,
+      "OriginExists": false,
+      "InDocumentInventory": true,
+      "Kind": "문서",
+      "IncludedInCandidateDocs": false
+    }
+  ],
+  "CandidateStateCounts": [
+    {
+      "Count": 2,
+      "Name": "원격 이후 변경 문서"
+    },
+    {
+      "Count": 87,
+      "Name": "원격에 없는 신규 문서"
+    }
+  ],
+  "R11FocusedPlayObservedResult": {
+    "Scope": "최종 독립 결과 검수 및 아스트라 Play 15개 집중만의 부분 수용 완료",
+    "Total": 15,
+    "Passed": 15,
+    "Failed": 0,
+    "Skipped": 0,
+    "Inconclusive": 0,
+    "ActualRunnerExitCode": 0,
+    "QaToolReturnedCode": 0,
+    "NativeEditorExitCode": "부모의 실제 종료 관찰 0; 이 원장에서 별도 재실행하지 않음",
+    "NameDifferences": 0,
+    "DuplicateNames": 0,
+    "InputDifferences": 0,
+    "Inputs": 884,
+    "XMLPath": "artifacts/c3-r11-play-focused-r1.xml",
+    "XMLSHA256": "6E8C427027138E1034F820EEE30DBEA9901B5469245579B34AFBDB574D6D18C7",
+    "VerificationSHA256": "85C038941F678EC0E01000A2CA05321974E7BC58238EBDFA7AE3F1CC1DE4A246",
+    "QaToolReturnSHA256": "ECA75CEA9106C7A67CF68589D095E2F679C9E5044C78C99E0C7E8B0A5372A3DE",
+    "FinalReviewDocumentPending": false,
+    "CurrentC3WholeAcceptance": false
+  },
+  "PriorInventory": {
+    "Path": "artifacts/c3-followup-docs-publication-inventory.json",
+    "SHA256": "42668846D498D23FD2D4F97E9A566BDD8EE68ADA9206A961F331A2652A9348B1",
+    "Preserved": true
+  },
+  "R11FinalDocuments": [
+    {
+      "Path": "docs/verification/2026-09-29-c3-r11-cancel-type-luna-runtime-review.md",
+      "CurrentSHA256": "B6F24ABCC572A63E2A8D6F724C1111B4F046E0C4DF769D9939945D88F19849B6",
+      "Candidate": true
+    },
+    {
+      "Path": "docs/verification/2026-09-29-c3-r11-play-focused-r1-luna-result-review.md",
+      "CurrentSHA256": "FAD61A27107B4E7CBEA42450715F22EE2232AAD4083C07152A077074BACDCE4D",
+      "Candidate": true
+    },
+    {
+      "Path": "docs/approvals/2026-09-29-c3-r11-play-focused-partial-acceptance.md",
+      "CurrentSHA256": "1CF32ED23DC6BA1AC38DDF1F04C4F4309F5DDFAC574DEB1BFDA59A081C31B4AD",
+      "Candidate": true
+    }
+  ]
+}

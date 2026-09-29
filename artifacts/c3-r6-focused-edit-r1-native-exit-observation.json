@@ -1,0 +1,20 @@
+{
+  "Trace": "AC-M5D7QC3-009/010; 기존 집중 실행 종료 관찰만, 수용 아님",
+  "ProcessId": 44184,
+  "CreationTimeUtc": "2026-09-29T01:02:30.3598020Z",
+  "ExpectedCreationTimeUtc": "2026-09-29T01:02:30.3598020Z",
+  "AttachedUtc": "2026-09-29T02:59:45.5615759Z",
+  "ObservedExitUtc": "2026-09-29T03:15:49.8546451Z",
+  "ActualEditorExitCode": 2,
+  "Outcome": {
+    "Classification": "TestFailure",
+    "ExitCode": 5,
+    "Detail": "passed=149 failed=6 skipped=0 inconclusive=0 total=155 actualExit=2"
+  },
+  "ResultsPath": "C:\\Users\\me\\Documents\\GPT-workspace\\AcadeGameMaker\\artifacts\\c3-r6-focused-edit-r1.xml",
+  "LogPath": "C:\\Users\\me\\Documents\\GPT-workspace\\AcadeGameMaker\\artifacts\\c3-r6-focused-edit-r1.log",
+  "NewLaunchPerformed": false,
+  "TerminationPerformed": false,
+  "ResultsSha256": "39A4C94679923DEAD39AE88EF0A6F8AA69C707D165304A509A447EF09EFDB847",
+  "LogSha256": "59966E3CBFACBFCE74946DFB6806C76C7B48F4D678A4C7D67FA5E6363AC52A5B"
+}
