@@ -1,0 +1,6 @@
+# C4 v19 핵심 런타임 정적 부분검토
+
+- 검토 범위: `artifacts/c4-frozen-source-manifest-v19.json` (SHA `980443316BFB2DC008B611FF948259200C3913C1B3C7F8C5DE6CE62D1511B595`)에 등록된 핵심 런타임 5개 파일과 Approved R4 계약 `docs/specs/work-contracts/2026-09-29-c4-r4-exact-implementation-amendment.md` (SHA `EF54AE99EEF6E482C267C949A0C1B53709FF19611E9791300E07764EBD9256C0`)을 대조했다.
+- 실제 파일 SHA는 다음과 같이 원장과 일치했다: `ProfileResetExecutionBridgeV1.cs` `52E00FE10FDEAFB8C192CF7F92B2EA428C16A202D640BEAF79C8F58E6704F32A`; `NewGameConfirmationOwnerV1.cs` `2838102F468C325E9A41C5302E753BB358179F63F0A84BEE40AFC282292C9BA7`; `DesktopProfileLaunchAdapterV1.cs` `4B157B98511A0978D19B25434F6D00E23C0CC6FB53BA8A14969182865C3BDC0E`; `InputRouter.cs` `5A210D7ED80DE86C9D3092865E7F4712C00C65B84372E479018BF43956F6695F`; `ProfileResetMemoryCutoverV1.cs` `55B8C19F88B07C5888128C86BF05A743D747AB206E6D44942110ABE0AAFDD38B`.
+- REQ-M5D7QC4-001..007 검토: 실제 C3 완료된 요청과 발급 스레드·pair를 확인한 후 단 한 번 소비한다. 원본 pair의 양측 가드 진입 후 C1을 한 번 실행하고 typed 행을 검증하며, `DiskPrepared`인 경우에만 같은 proof/root/pair로 C2를 한 번 실행한다. disk/memory 전체 결과행을 원본 객체로 보존한다. Busy/Stale의 `NoBarrier` 행만 fresh handback이 가능하며, 예약·단계 이력·Owner 및 양측 가드를 다시 확인한 뒤 fresh 완료를 공개한다. 예외는 관리 fault를 먼저 기록하고 원본 pair를 종료한다.
+- 판정: 검토한 경로에서 승인된 요구와 어긋나는 P0/P1을 발견하지 못했다. 이는 핵심 5개 파일의 정적 부분 결과이며, 실행 증거가 아니고 AC-M5D7QC4-010의 전체 수용도 아니다. AC-M5D7QC3-007/008 및 전체 C4는 미수용 상태로 둔다.

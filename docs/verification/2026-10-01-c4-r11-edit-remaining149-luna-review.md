@@ -1,0 +1,8 @@
+# R11 Edit 남은 149개 독립 실행 결과
+
+- 검토 범위: v15 큐의 다섯 번째 실행 `c4-r3-edit-remaining149`만 확인했다. 적용 기준은 AC-M5D7QC4-010과 공동 AC-M5D7QC3-007/008이다.
+- 계획은 `artifacts/c4-final-validation-queue-plan-v15.json`의 EditMode 선택 149개 및 행렬 뒤쪽 `Remaining149` 묶음이다. 실제 XML `artifacts/c4-r3-edit-remaining149.xml` SHA `55E8DC006BC00D41A55CD1FF58C8898E5AB853DB5DB5D6B0D592CE025103EA57`에서 149개 이름 모두 계획과 정확히 일치하고 각각 한 번씩 나타났으며 전부 Passed였다. 실패·건너뜀·미분류·누락·초과·중복은 0이다.
+- 이 묶음의 C4 필수 행 수는 0이다. `artifacts/c4-r3-edit-remaining149-required-row-comparison.json` SHA `45EFF64BB486C0C02BAB12BCD4BD7A059DF9A00413F34A8C6A4129132D25B7DC`에서 계획·도달·통과·실패·누락·예상 밖·잘못된 ID가 모두 0이고 `SourceMatched=true`, `EvidenceMatched=true`다. 검증기는 해당 XML 경로와 SHA(`55E8DC…03EA57`)에 결속했다.
+- 실제 종료 자료: `artifacts/c4-r3-edit-remaining149-native-exit-observation.json` SHA `3C59AA5BF49A956CB79709E13F48297A61C9FDCD8C708F1FB1DC4B3CB5677927`에서 실제 종료 코드 0, QA 반환 자료 `artifacts/c4-r3-edit-remaining149-qa-tool-return.json` SHA `397F72F6DC17A4FBF68C67EB973DD55FCA25C6864E910B63A4905F83251E423B`에서 QA와 외부 종료 코드가 모두 0이다. 검증 자료 `artifacts/c4-r3-edit-remaining149-verification.json` SHA `A9D242DC7E3BD003DCC630B5BF9797923BE390CE4401E321930DDE6236D1EE0F`는 `Verified=true`, 입력 차이 0, 동결 차이 0으로 기록하며 `WholeAccepted=false`를 유지한다.
+- 입력 전후 스냅샷은 각각 `artifacts/c4-r3-edit-remaining149-source-before.json` SHA `A6E3DB1C5E8752335D3C6F0862A6DAE8A3009B3A50252DEDE6C8884EB02FAB33`, `artifacts/c4-r3-edit-remaining149-source-after.json` SHA `640A8AA927C9E1B8A6638F3250BA81CE0DD912139584AA65420313395866E6D8`다. 두 스냅샷 모두 1084개 경로이며 경로·파일 SHA 비교 차이는 0이다.
+- 판정: 이 실행의 AC-M5D7QC3-007/008 관련 회귀 및 AC-M5D7QC4-010 실행 기준은 통과했다. 이는 9회 큐 중 한 실행의 부분 결과다. 뒤이은 Play 실행과 나머지 필수 회귀가 남아 있으므로 전체 C4 및 통합 수용은 판정하지 않았다.

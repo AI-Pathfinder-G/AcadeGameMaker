@@ -1,0 +1,17 @@
+# C4 구현 계약 r3 초안 독립 검토
+
+검토 대상 `docs/proposals/2026-09-29-c4-implementation-contract-ready-r3-draft.md`의 확인 SHA-256은 `F4A6BA518DC75960784AEBC53F77DB0B9107DAA03472D35042BC1D6F9DB75F73`이다. C4 Review 계약 SHA `3F29B8BC7D3F0172717C0FC94101BF4086FEE1FE475B65A3B2E67E0AE4FA5DC0`, C1/C2 실제 입력 서명 및 R11 소스를 대조했다. 이전 r2 초안과 세 검토 원문은 보존된다.
+
+**설계 검토 판정: P0 0건, P1 0건.** r3는 A/B/C의 기술 선택을 허용 경계와 증거 유형까지 좁혀 제시한다. 이 판정은 Draft가 Ready/Approved이거나 소스/실행 수용이 됐다는 뜻이 아니다. C3 선행 전체 수용은 미완료이고 AC007/008은 Open이며 Play610 실행 결과도 아직 대기 중이다. Astra의 정확 amendment 승인과 C4 구현·독립 시험은 별도 필수다.
+
+**A — 설계상 충분히 구체화됨.** 정지점은 실제 C1 `DiskPrepared` 반환의 전체 검증과 양측 가드 결속 뒤, 기존 C2 호출 직전 한 번이다. 정상 3인자 executor는 fixed NoOp를 쓰고 내부 시험 control만 준비 신호를 받는다. 실제 lease worker로 C2의 원래 Acquire Busy를 얻고, 별도 unsafe-lock 사례는 실제 임시 lock 파일을 같은 경로의 directory로 바꿔 원래 C2 ManualRepair를 관측한다. 후자는 lease를 붙들어 Busy로 바꾸지 않는다. 10초 준비·20초 보유·10초 join 상한, 원래 Unity thread 재개, finally cleanup, 실패/timeout은 성공 outcome으로 분류하지 않는 기준이 있어 180초 제한과 양립하도록 설계됐다. 실제 C1/C2 API의 control overload는 기존 Begin/Finalize 입력을 전달하는 형태라 typed result를 만들어 넣지 않는다. 향후 시험에서 native outcome·양측 terminal·C1/C2 각 1회·receipt/fresh 0을 확인해야 한다.
+
+**B — 명시된 범위에서 설계상 충분함.** C1 결과는 실제 `readonly struct`이며 기존 `Validate()`는 closed outcome/state와 nested proof를 확인한다. r3는 boxed copy의 단일 scalar 음성을 공유 순수 validator로 시험하고, 모든 실제 proof/C2 분기가 그 validator 성공에 지배되는지 별도 소스 근거로 증명한다. 이것은 실행 중 local 변조라고 주장하지 않는다. 실제 nested proof `_root=null`은 검증 전 동일 참조를 손상시켜 재검증·C2 미호출을 시험하며, C2의 `_outcome=default` observer는 C2 반환 뒤 composition 거절에만 사용한다. 실제 C1 조합을 재구성하거나 결과를 공급하지 않는다. AC003의 목적을 validator 음성+생산 경로 지배 증거로 제한해 명시한 해석은 제시된 AC와 모순되지 않는다. AC005 proof 경로와 AC007 C2 결과행도 실행 전·후 시점을 혼동하지 않는다. 실제 source에서 validator 순수성/지배를 확인하고 정확 field reflection binding 및 native 실행을 완료하기 전에는 이 설계 판정을 코드 수용으로 전환할 수 없다.
+
+**C — 설계상 수용 가능한 해석이나 규범 개정과 실행이 필요함.** 지원하지 않는 thread의 최초 호출은 payload가 완전 검증됐다고 주장하지 않고, 무소비·무변경·Unity/native/C1/C2 0회의 문맥 거절로 분리한다. 원래 issuer thread에서만 전체 invariants와 payload를 검증하며 등록 원본 손상은 terminal containment하고, consume 이후 예외는 pair fail-stop으로 유지한다. 이미 소비되었거나 fault로 닫힌 request는 Unity 조회 전에 관리 이력으로 inert 거절한다. thread projection/anchor/event 필드는 현재 소스에 없고 계획 상태임을 정확히 표시했다. 단일 anchor 손상으로 실행 권한을 발급하거나 복구하지 않고 거절하는 행은 정상 무결성 통과로 세지 않는다. 이 해석은 C4의 clean pre-entry rejection 비소비 규칙 및 reflection corruption에 대한 선택적 containment와 양립 가능하지만, **C4 계약/AC001의 문맥 거절 의미를 Astra가 명시 승인해야 한다.** 허용 후에도 실제 C3 발급/issued 사건 결속, trusted thread 정상 양성, wrong-thread 뒤 원래 thread 재사용, 단일 field damage·fault 기록 후 canceled 재진입, native cleanup을 새 소스에서 입증해야 한다. callback 없는 구간과 pre-auth 지연 경쟁을 실행했다고 주장하지 않는다.
+
+비용·범위 경계도 적절하다. worker에서 Adapter/Router의 Unity native FailStop을 호출하지 않고, 독립 Profile writer/외부 filesystem 전체에 managed latch를 확장하지 않는다. 관리-only thread 거절은 payload 검증이나 native cleanup 완료가 아니며, trusted original-thread fault containment와 소비 후 pair fail-stop을 대신하지 않는다. Hub Q-A/Q-B retained 슬롯은 실제 C3 close를 통해 차단해야 한다. “현재 owned ordinary-save publisher를 찾지 못함”은 조회한 runtime 참조 범위에 한정하고, 독립 Profile `Save`의 root lease/barrier 경계를 C4 guard의 차단 증거로 쓰지 않는다.
+
+구현 승인 전 잔여 절차는 정확하다. r3가 열거한 8개 runtime/3 test+2 fixture 및 meta, Q0/Q-A/Q-B amendment, 실제 AC 행·NUnit 정식 이름/count, 새 C4 source/meta 동결 manifest, 실행 선택과 QA protocol을 각각 고정해야 한다. C4가 새 source와 계획 thread 필드를 추가하면 현 R11 manifest 및 884개 입력을 전제한 C3 queue를 그대로 재사용할 수 없다. 과거 240/15/562/51/610 선택 이름·180초 규칙은 보존하되, 변경 소스 전후 지문을 포함하는 새 정확 C4 검증 원장이 필요하다. 정적 설계 검토는 이 새 원장이나 시험 통과를 발급하지 않았다.
+
+R11/C3 선행 source 변경·QA·Git·network·Unity·컴파일 실행은 하지 않았다. C4는 계속 Review이고 P1 0은 이번 설계 텍스트의 경계 판정에만 한정된다.
