@@ -1,0 +1,11 @@
+# C4 R4 통합 계약 독립 정적 검수
+
+검토 대상 R4 통합 개정 계약의 SHA-256은 EF54AE99EEF6E482C267C949A0C1B53709FF19611E9791300E07764EBD9256C0이다. 이전 R3 독립 검수 SHA 450B52AA9CE7332EA8CA480E22B8B4933FB99BAC9CAF07DEFF208ED4A9B54849의 P1을 현재 C3 소스와 대조했다. R11 동결 원장과 관련 주요 소스 지문은 현재도 일치한다. Owner CAEBD7B5DA99AF94A25C5C300789AA48CA87908CA6D8894B99AE49C2391D7043, Q-B F47C61A043DAF4695CC53E41C6BE9BB67CA147C722F7B830459AA6304B45B3B5, presenter 393B325BA5B8F6D79CA983F1A91098215E7A6993DE37E9F5D98BA775760E4900, lower ABD4B8CC79D0C24F16EB053B98460C68A466B03AABE0B2CFA01C7862BA027CB1이며, C1 BE0F16834F96272AD68C15F5004E9C37491EEF6F82D7CA728A5E1D1D60CB71E2와 C2 60DFD415C0425F88046C47F51142749F230FF39CA7C81AEBA90D4C778993F275도 기존 지문이다.
+
+R4는 현재 Owner가 CommitForExecution 뒤 ExecutionCommitted가 되고 CanBindIssuance가 AwaitingRequest와 빈 활성 슬롯을 요구한다는 실제 불변식을 정확히 짚었다. Busy/Stale에서 Cancel Rearm을 재사용하지 않고 같은 Owner를 ExecutionFreshPreparing=12로 옮긴 뒤 기존 enum 값 1..11과 정상 흐름을 유지한다. 준비 중 새 issuance를 막고, 기존 _history를 덮지 않으며 이전 epoch의 commit·C4 consume·decision·issued references를 보존하는 별도 C4 history node를 추가한다. 다음 token은 실제 신규 참조이고 epoch는 checked old+1, decision generation은 새 세대 수용만으로 올리지 않으며 실제 다음 Capture에서 정상 증가한다.
+
+실제 reciprocity와 lower completion이 지배한 뒤만 새 Q-A/Q-B slot을 live로 만들고, Owner의 pristine AwaitingRequest 및 state proof를 마지막 공개 표지로 둔다. 모든 throwing 검증과 allocation을 그 표지 전에 끝내며 공개 전 부분 실패는 원본과 신규 cohort를 terminal 폐쇄한다. 이미 승리 완료된 동일 handback의 늦은 loser는 비변경 거절한다. 정상 Q-B issuance→Owner Bind/Accept→fresh Capture/Confirm 경로와 다음 decision generation 검증을 위한 신규 실제 행도 포함한다. 이는 기존 Q-A/Q-B 첫 take·Cancel successor·history를 재설정하거나 정상 권한을 반사 제조하지 않는다고 명시한다.
+
+QA 작성·검증 규범은 별도 소유 Draft에 위임되어 있고, 둘 다 Approved 전에는 구현·실행하지 않는다고 R4가 고정한다. 함께 확인한 QA 규범 Draft SHA A883D0AF0FAC7D62BA5840676EB09377EC9F59CADAAC3F7DE770F248F932BCB1은 프로젝트 mutex와 부분/최종 QA 반환 순서를 더 구체화하지만 RequiredFacts 연결의 별도 P1이 있어 그 규범 전체 검수는 별도 QA 검수 문서에 기록한다. 이 QA P1을 Owner 전환 판정에 합치지 않는다.
+
+판정: R3에서 지적된 same Owner 세대 전환 누락은 R4에서 명시적 규범과 검증 행으로 보정됐다. R4 계약 자체의 정적 P0/P1 차단은 0/0이며 해당 세대 전환 blocker는 폐쇄 가능하다. 이 결론은 구현 적합성이나 전체 Draft 승인을 뜻하지 않는다. R4와 QA 규격 모두 Draft라 실제 API·행 원장·신규 source freeze·QA 도구·선택·Unity 결과는 아직 없다. C3 AC-007/008의 부분 증거 및 공동 C4 최종 gate는 그대로 유지된다. 소스·QA·Unity·Git을 수정하거나 실행하지 않았다.

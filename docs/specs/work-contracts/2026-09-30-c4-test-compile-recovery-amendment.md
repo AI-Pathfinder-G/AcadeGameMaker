@@ -1,0 +1,19 @@
+# C4 시험 컴파일 복구와 실패 실행 재검증
+
+- 상태: **Approved — 지정된 시험 컴파일 보정만 승인, Unity 재검증과 통합 수용 미완료**.
+- 승인: 아스트라, 실제 `gpt-6-astra`, 2026-09-30. 독립 루나 검수 `docs/verification/2026-09-30-c4-test-compile-recovery-luna-design-review.md` SHA-256 `B9F8B6B4C44304FBDBEE9874FCBF5F6DB1D204B1EB815562C60B15C2D8D13A93`, 최종 초안 SHA-256 `47043C17251CB94367F26CEECCB31C11A5E83ACF1FED16CE072078270732B171`, P0/P1=0/0.
+- 작성: 아스트라, 실제 `gpt-6-astra`, 2026-09-30.
+- 추적: `REQ-M5D7QC4-001/002/006/007`, `AC-M5D7QC4-001/002/006/007/009/010`, 공동 `AC-M5D7QC3-007/008`.
+- 선행: Approved C4 r4·QA r2와 2026-09-30 승인된 Router 컴파일 복구. 제품 동작·Runtime·Q0·현재 pin은 변경하지 않는다.
+
+계획 v4의 실제 첫 `c4-r2-focused-edit` Unity 실행은 native 종료값 1로 실패했다. 원시 로그의 고유 컴파일 오류 22곳은 `GameInputActions` 미해결 18곳, `Is.AnyOf` 미지원 3곳, `EvidenceRow.HasObserved`의 `out Dictionary<string,object>`와 실제 `out object` 불일치 1곳이다. 동일 로그의 반복 진단과 경고는 별도 실패 원인으로 계산하지 않는다. `artifacts/c4-final-validation-queue-result-v3.json`과 첫 run의 before/after/native/log는 실패 불변 증거로 보존한다. XML·QA 최종 반환은 없고 나머지 8회는 시작하지 않았다. 첫 Router CS1503 두 건은 이번 로그에서 재발하지 않았다.
+
+아스트라는 Terra에게 다음 네 시험 소스의 **컴파일 복구만** 배분한다. Edit·Play `C4ActualExecution*FixtureV1.cs`에는 기존 생성 형식 `AcadeGameMaker.Input.GameInputActions`를 해석하는 `using AcadeGameMaker.Input;`만 추가한다. Edit fixture의 `Is.AnyOf` 한 곳은 `WrongThread`, `IssuerThreadAnchor`, `IssuerThreadAtIssue` **세 값 모두**를 허용하는 동등 조건 연쇄로 교체한다. Edit·Play `ProfileResetExecutionBridge*Tests.cs`의 두 곳은 기존 프로젝트가 쓰는 `Is.EqualTo(a).Or.EqualTo(b)`의 정확한 두 열거형 값 조건으로 교체한다. Edit fixture의 `EvidenceRow.HasObserved`는 `_facts.TryGetValue`의 출력값을 `object`로 받은 뒤 원래 `Dictionary<string,object>`인지 확인하고, 기존 `value`·`certainty == Observed` 판정을 그대로 적용한다. 형식 불일치는 false로 닫는다. 시험 메서드·사례 이름/매개변수, 실제 실행 호출, checkpoint 정의 문자열, 188행 공유 `ExpectedRowsJson`, 기대 결과 집합, 공개 API, assembly 정의 및 제품 소스는 변경하지 않는다. 이 작업은 기존 Approved C4 요구의 시험 구현을 컴파일 가능하게 잇는 한정 수정이며 Unity에서 새 오류가 있는지 다시 확인해야 한다.
+
+Luna가 네 시험 소스의 현재 SHA와 한정 수정, 시험 사례 선언과 공유 행 정의 불변을 독립 정적 검수한 후 새 불변 근거를 발급한다. 기존 선택 v1 셋과 188행 v1은 보존한다. `artifacts/c4-focused-edit-selection-v2.json`과 `artifacts/c4-focused-play-selection-v2.json`은 각 v1의 모든 필드를 보존하고 `SourceFiles` 해당 시험 SHA만 바꾸어 `CreateNew`로 발급한다. 두 자료의 `ExpectedQualifiedNames`, `Selector`, `ExpectedCount`, `ParserEvidence`는 v1과 값이 같아야 한다. Hub 선택 v1은 유지한다. `artifacts/c4-required-checkpoint-rows-v2.json`은 v1의 `SourceFiles` 중 두 fixture SHA만 바꾸고 188개 `Rows` 전체·순서·`EnumSources`·`Count`는 값과 바이트 근거가 동일해야 한다. 현재 시험 소스의 선언/공유 행 정의와 각 자료의 일치를 독립 검수한다. 생성 도구의 고정 v1 출력 경로는 바꾸지 않으며 v2는 동결된 v1의 결속만 갱신하는 명시적 후속 자료다.
+
+다음 큐 결과는 `artifacts/c4-final-validation-queue-result-v4.json`에만 `CreateNew`로 기록한다. Terra는 `artifacts/c4-final-validation-queue.ps1`의 고정 `-ResultPath` 허용값 v3을 v4로만 바꾸며, 기존 fail-stop·하위 종료값/표준오류·잠금 검사는 보존한다. 이전 result-v1/v2/v3과 모든 실패 run 출력은 덮어쓰지 않는다.
+
+최종 네 소스·새 선택/행 자료·queue를 독립 검수한 뒤 `artifacts/c4-frozen-source-manifest-v7.json`을 `CreateNew`로 발급한다. v6의 102개 `Files` 경로·순서는 보존하고 네 시험 소스와 queue의 SHA 다섯 개만 새 바이트로 교체하며, 새 v2 선택 둘과 행 원장 하나를 Evidence 파일로 추가해 105개로 만든다. 기존 시험·queue `AllowedChanges` 이유를 한정 수정에 맞춰 갱신하고 새 세 Evidence 행에 `REQ-M5D7QC4-007`을 부여한다. 다른 source·meta·predecessor SHA와 이전 승인 행은 그대로다. `artifacts/c4-frozen-input-paths-v7.json`은 v6 979개 경로·이유를 전부 보존하고 v7 소스 원장·본 최종 Approved 계약·네 소스 Luna 정적 검수·선택 v2 둘·행 v2 하나를 포함해 985개로 발급한다. 자신의 경로·plan·result·run 출력은 제외하고, 기존 884개와 Assets/Packages/ProjectSettings/qa 완전성 및 `Sort-Object -CaseSensitive`를 유지한다.
+
+`artifacts/c4-final-validation-queue-plan-v5.json`은 v4의 9회 순서·기대 이름/selector/개수·선행 선택·잠금·180초·21,600초를 유지한다. v7 소스/입력 원장, 행 v2, Edit/Play 선택 v2, queue 도구만 새 경로·지문으로 결속한다. 출력이 이미 생긴 첫 run만 `c4-r3-focused-edit` stem, 동일 native witness stem, 정확 8개 출력 경로와 다시 계산한 Windows 명령행 길이로 바꾼다. 나머지 8개 run의 출력은 기존 계획 v4대로 두며 첫 실행을 포함한 새 72개 출력과 result-v4의 부재를 확인한다. Luna가 v7·v5의 전체 지문과 이전 자료 대비 허용된 차이만 독립 검수하고 아스트라가 별도 배분한 뒤에만 Unity 큐를 재실행한다. 실제 XML/native/QA/외부 결과 없이 수용을 선언하지 않으며, 새 컴파일 오류나 시험 실패가 나타나면 그 단계에서 멈춰 불변 증거로 남긴다.
