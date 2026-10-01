@@ -1,5 +1,7 @@
 # Documentation Map
 
+- [최초 코드 게시의 현재 바이트 기준 결정](./adr/0038-forward-provenance-for-initial-code-publication.md) · [읽기 전용 출처 조사 계약](./specs/work-contracts/2026-10-01-initial-code-publication-forward-provenance.md) · [v2 검증 인계](./handoffs/2026-10-01-forward-provenance-v2-verification-checkpoint.md) — 사용자가 새 현재 바이트 기준을 선택했다. 과거 428개 공백과 14개 미입증 전이는 보존한다. v2 원장은 작성됐지만 루나 최종 결과 검토가 사용량 한도로 중단돼 파일별 게시 허용 목록과 코드 게시 승인은 아직 없다.
+
 - [C3·C4 v19 공동 최종 수용](./approvals/2026-10-01-c3-c4-v15-joint-final-integration-acceptance.md) · [9회 실행 독립 검수](./verification/2026-10-01-c3-c4-v15-final-independent-luna-review.md) · [게시 근거 색인](./verification/2026-10-01-c3-c4-publication-evidence-index.md) — 현재 승인 계약 범위에서 C3 잔여 AC007/008과 C4 AC001..010을 수용했다. 1654건의 실행 합계와 C4 188행, C3 내부 377행을 대조했다. 게임 코드의 최초 원격 게시는 별도 파일별 출처·복제 검증 문턱을 유지한다. 아래 진행·미수용 표기는 각 당시 기록이다.
 
 - [C4 발급 후 미반환 경계 증거 개정 — Approved](./specs/work-contracts/2026-09-30-c4-issued-unreturned-boundaries-amendment.md) · [추가 부모·Busy 출처 개정 — Approved](./specs/work-contracts/2026-09-30-c4-unreturned-parent-and-busy-source-amendment.md) — 일곱 실제 실패 경계를 원인·증거 도달·CWT 소비 상태별로 제한하고, 동일 손상 본문의 추가 공개 부모와 직접 읽을 수 없는 C1 Busy의 source 근거를 구별한다. 독립 정적 검수와 한정 구현 승인을 마쳤고 실제 행·Unity·통합 수용은 남아 있다.

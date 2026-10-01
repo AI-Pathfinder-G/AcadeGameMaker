@@ -1,5 +1,7 @@
 # Specification System
 
+- [최초 코드 게시의 새 현재 바이트 출처 기준 — Approved, 읽기 전용 조사](./work-contracts/2026-10-01-initial-code-publication-forward-provenance.md) · [v2 관측 보정 — Approved](./work-contracts/2026-10-01-initial-code-publication-forward-provenance-v2-correction.md) — 사용자 선택에 따라 과거 공백을 보존하고 현재 501파일을 새 기준으로 검증한다. v2 결과의 루나 독립 검수는 사용량 한도로 미완료이며 파일별 게시 허용과 코드 원격 게시 권한은 없다.
+
 - [현재 C3·C4 공동 수용](../approvals/2026-10-01-c3-c4-v15-joint-final-integration-acceptance.md) — Approved 계약의 현재 v19 동결 소스에서 C3 AC007/008과 C4 AC001..010을 공동 검증했다. 아래 진행 상태 문구는 해당 문서가 작성된 당시의 단계 기록이며, 최초 게임 코드의 원격 게시 권한은 별개다.
 
 - [C4 발급 후 미반환 경계 증거 — Approved](./work-contracts/2026-09-30-c4-issued-unreturned-boundaries-amendment.md) · [추가 부모와 Busy 출처 — Approved](./work-contracts/2026-09-30-c4-unreturned-parent-and-busy-source-amendment.md) — 원본 투영 손상·생명주기 중단·proof 손상과 C2 전/새 handback 공개 전의 일곱 실패 경계를 한정한다. 동일 손상 본문의 추가 공개 부모와 직접 읽을 수 없는 C1 Busy의 source 출처를 구별하며 구현·검증은 진행 중이다.
