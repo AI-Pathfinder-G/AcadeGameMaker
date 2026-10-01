@@ -1,6 +1,13 @@
 # Specification System
 
-- [C3·C4 현재 게시 근거](../verification/2026-10-01-c3-c4-publication-evidence-index.md) · [C4 정확 구현 계약 — Approved](./work-contracts/2026-09-29-c4-r4-exact-implementation-amendment.md) · [C4 QA 증거 프로토콜 — Approved](./work-contracts/2026-09-29-c4-qa-evidence-protocol.md) — 승인된 구현 범위와 현재 부분 실행을 안내한다. 공동 최종 수용과 게임 코드 게시는 별도다.
+- [현재 C3·C4 공동 수용](../approvals/2026-10-01-c3-c4-v15-joint-final-integration-acceptance.md) — Approved 계약의 현재 v19 동결 소스에서 C3 AC007/008과 C4 AC001..010을 공동 검증했다. 아래 진행 상태 문구는 해당 문서가 작성된 당시의 단계 기록이며, 최초 게임 코드의 원격 게시 권한은 별개다.
+
+- [C4 발급 후 미반환 경계 증거 — Approved](./work-contracts/2026-09-30-c4-issued-unreturned-boundaries-amendment.md) · [추가 부모와 Busy 출처 — Approved](./work-contracts/2026-09-30-c4-unreturned-parent-and-busy-source-amendment.md) — 원본 투영 손상·생명주기 중단·proof 손상과 C2 전/새 handback 공개 전의 일곱 실패 경계를 한정한다. 동일 손상 본문의 추가 공개 부모와 직접 읽을 수 없는 C1 Busy의 source 출처를 구별하며 구현·검증은 진행 중이다.
+- [C4 C1 미호출 실패 증거 — Approved](./work-contracts/2026-09-30-c4-pre-c1-failure-evidence-amendment.md) — 실행 기록 발급 후 C1 전 일곱 경계에서 소비 전후와 미관측 세대를 정확 구분한다. 구현·검증은 진행 중이다.
+
+- [C4 일반 저장 차단 미관측 증거 — Approved](./work-contracts/2026-09-30-c4-ordinary-writer-observation-amendment.md) — 실제 일반 저장 호출이 없는 동일 사례의 `ordinaryWriterBlocked` 한 값만 정확 미관측으로 허용한다. 기존 실제 writer 검사와 나머지 정상 증거는 유지한다.
+
+- [C4 r4 실행 연결 — Approved, 구현 진행](./work-contracts/2026-09-29-c4-r4-exact-implementation-amendment.md) · [QA 증거 규약 r2](./work-contracts/2026-09-29-c4-qa-evidence-protocol.md) · [발급 세대 증거 개정](./work-contracts/2026-09-30-c4-issued-generation-evidence-amendment.md) · [C2 미호출 실패 증거 개정](./work-contracts/2026-09-30-c4-pre-c2-failure-evidence-amendment.md) — 현재 구현 계약이다. 한정 접근성·선행 선택 형식·행 출력 개정은 [현재 문서 지도](../README.md)에 연결한다. 독립 정적 설계 검수와 구현 승인 이후 최종 시험 연결·동결·실제 실행·공동 통합 수용은 진행 중이다.
 
 - [VD-09 M5D7Q-C3L 관찰 전용 잠금 구분 — Verified](./work-contracts/2026-09-28-vd09-m5d7q-c3l-observation-lease-provenance.md) · [최종 독립 검수](../verification/2026-09-29-c3l-final-regression-luna-acceptance-review.md) · [통합 수용](../approvals/2026-09-29-c3l-integration-acceptance.md) — 집중 11개와 동일 소스 필수 회귀 고유 613개로 관찰 단위만 수용했다. 실제 잠금 충돌 시간 초과만 재시도 상태이며 접근·읽기 실패는 종료 상태로 구분한다. C3 전체나 C4 실행 연결 수용은 아니다.
 

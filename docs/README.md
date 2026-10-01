@@ -1,8 +1,28 @@
 # Documentation Map
 
-- [2026-10-01 C3·C4 문서 게시 근거 색인](./verification/2026-10-01-c3-c4-publication-evidence-index.md) — C3 선행 수용과 C4 승인 계약, 현재 v15 순차 검증의 여덟 부분 결과를 구분한다. 마지막 610건 및 전체 공동 수용은 아직 미완료다. 게임 코드 게시에는 별도 파일별 승인과 깨끗한 복제 검증이 필요하다.
+- [C3·C4 v19 공동 최종 수용](./approvals/2026-10-01-c3-c4-v15-joint-final-integration-acceptance.md) · [9회 실행 독립 검수](./verification/2026-10-01-c3-c4-v15-final-independent-luna-review.md) · [게시 근거 색인](./verification/2026-10-01-c3-c4-publication-evidence-index.md) — 현재 승인 계약 범위에서 C3 잔여 AC007/008과 C4 AC001..010을 수용했다. 1654건의 실행 합계와 C4 188행, C3 내부 377행을 대조했다. 게임 코드의 최초 원격 게시는 별도 파일별 출처·복제 검증 문턱을 유지한다. 아래 진행·미수용 표기는 각 당시 기록이다.
 
-- [문서 정리 초안 변경 요청 #1](https://github.com/AI-Pathfinder-G/AcadeGameMaker/pull/1) — 사용자 기기 인증 승인으로 재인증을 완료해 생성·첨부했다. 아래 인증 차단·변경 요청 부재는 이전 기록이며 병합은 수행하지 않았다.
+- [C4 발급 후 미반환 경계 증거 개정 — Approved](./specs/work-contracts/2026-09-30-c4-issued-unreturned-boundaries-amendment.md) · [추가 부모·Busy 출처 개정 — Approved](./specs/work-contracts/2026-09-30-c4-unreturned-parent-and-busy-source-amendment.md) — 일곱 실제 실패 경계를 원인·증거 도달·CWT 소비 상태별로 제한하고, 동일 손상 본문의 추가 공개 부모와 직접 읽을 수 없는 C1 Busy의 source 근거를 구별한다. 독립 정적 검수와 한정 구현 승인을 마쳤고 실제 행·Unity·통합 수용은 남아 있다.
+
+- [C4 C1 미호출 실패 증거 개정 — Approved](./specs/work-contracts/2026-09-30-c4-pre-c1-failure-evidence-amendment.md) — 실행 기록 발급 뒤 C1 전 일곱 경계의 소비 전후와 실제 미관측 값을 구별한다. 독립 재검수 후 한정 구현을 승인했으며 실제 실행·수용은 남아 있다.
+
+- [C4 일반 저장 차단 미관측 증거 개정 — Approved](./specs/work-contracts/2026-09-30-c4-ordinary-writer-observation-amendment.md) — 같은 사례의 실제 저장 호출이 없는 경우 쓰기 차단 여부만 미관측으로 기록한다. 별도 실제 저장 관측과 다른 정상 증거 요건은 유지하며 구현·검증은 진행 중이다.
+
+- [C4 발급 후 C2 미호출 실패 증거 개정 — Approved](./specs/work-contracts/2026-09-30-c4-pre-c2-failure-evidence-amendment.md) — 네 실패 경계의 실제 미관측 세대·proof를 정상 권한이나 부재로 오인하지 않는 한정 규칙이다. 독립 설계 검수 후 관련 구현을 승인했으며 최종 증거·실제 실행·수용은 남아 있다.
+
+- [C4 발급 후 결과 미발급 세대 증거 개정 — Approved](./specs/work-contracts/2026-09-30-c4-issued-generation-evidence-amendment.md) — 오류 뒤 실제 실행 원장과 정상 영수증을 부재나 정상 전체 결과로 오인하지 않는 한정 검증 규칙이다. 독립 설계 재검수 후 관련 fixture·검증기 구현을 승인했으며 실제 실행·수용은 남아 있다.
+
+- [C4 내부 인증·생명주기 연결 개정 — Approved](./specs/work-contracts/2026-09-29-c4-fresh-checkpoint-accessibility-amendment.md) · [시험 제어 접근성 개정 — Approved](./specs/work-contracts/2026-09-29-c4-edit-control-accessibility-amendment.md) · [선행 행 출력 개정 — Approved](./specs/work-contracts/2026-09-29-c4-legacy-row-output-amendment.md) · [선행 선택 형식 개정 — Approved](./specs/work-contracts/2026-09-29-c4-predecessor-selection-format-amendment.md) — 기존 승인 범위의 한정 내부 연결과 원본 형식 보존만 개정한다. 독립 정적 설계 검수와 구현 승인을 완료했으며 도구 구현 보정·최종 소스·실제 실행·통합 수용은 진행 중이다. 새 게시 완료를 뜻하지 않는다.
+
+- [C4 r4 실행 연결 — Approved, 구현 진행](./specs/work-contracts/2026-09-29-c4-r4-exact-implementation-amendment.md) · [QA 증거 규약 r2 — Approved](./specs/work-contracts/2026-09-29-c4-qa-evidence-protocol.md) · [구현 계약 승인](./approvals/2026-09-29-c4-r4-implementation-contract-approval.md) · 연속 작업 기록 (`docs/handoffs/2026-09-29-c4-continuous-implementation.md`; 로컬 원본) — 현재 후속 구현의 소유 규격이다. 두 규격의 독립 정적 검수 P0/P1=0/0 후 제한 구현을 승인했으며 실제 실행·통합 수용은 남아 있다. 아래 C4 Review와 이전 승인 대기는 당시 이력이다.
+
+- [C3 R11 실행 직전 단계 — 수용 완료](./approvals/2026-09-29-c3-r11-pre-c4-integration-acceptance.md) — 집중 편집240·실행15와 필수562/51/610을 같은 소스로 실제 검증했다. C3 전체 및 실행 결과 기준 AC007/008은 Approved C4의 실제 결과와 공동 최종 검증까지 미완료다. 변경 요청 #3와 기존 위키에 게시된 과거 범위 이후의 새 문서·구현은 아직 추가 게시하지 않았다.
+
+- [GPT-6 역할 전환](./adr/0037-gpt6-role-model-migration.md) · 적용·병합·위키 확인 (`docs/approvals/2026-09-29-gpt6-role-routing-acceptance.md`; 로컬 원본) — 솔·테라 역할은 별도 `gpt-6-sol` 작업자, 루나는 `gpt-6-luna`로 실제 재시도에 응답했다. 현재 도구에 `gpt-6-terra`는 없으며 5.6 새 호출·재시도는 금지한다. 모델 운영 문서의 변경 요청 #2와 위키 게시를 완료했다. 아래 사용량 중단은 이전 모델의 이력이다.
+
+- [병합 이후 C3 구현 인계](./handoffs/2026-09-29-merged-c3-lower-checkpoint.md) — GPT-6으로 하위 보정과 상위 확인·취소·재무장 일관 단위를 구현했다. 초기 상위 검수의 늦은 예약 재사용과 필수 시험 누락을 보완 중이며, 새 소스 실행·필수 회귀·독립 수용은 남아 있다. 아래 인증 차단·한도 중단·초안 상태와 이전 수용 지문은 당시 기록이다.
+
+- [문서 정리 변경 요청 #1 — 원격 병합 완료](https://github.com/AI-Pathfinder-G/AcadeGameMaker/pull/1) · 실제 병합 기록 (`docs/verification/2026-09-29-documentation-merge-execution.md`; 로컬 원본) — 사용자 지시로 정확한 원본을 원격 main에 병합했다. 아래 인증 차단·변경 요청 부재는 이전 기록이며 로컬 게임 코드·작업물은 보존했다. 다음 Approved C3 합성 구현을 진행한다.
 
 - [관찰 단위 수용 이후 작업 기준](./handoffs/2026-09-29-c3l-verified-checkpoint.md) — 조회 함수 사용자 승인과 C3L 수용을 완료했다. 실제 변경 요청 인증 갱신, C3 소유자·재무장 구현과 후속 검증이 남아 있다. 이전 인계서의 미답변 승인 대기는 당시 기록이다.
 

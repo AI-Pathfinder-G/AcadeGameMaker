@@ -20,12 +20,14 @@
 | 기존 C3 실행 집중 15 | 15/15 통과, C4 기대 행 0 | [실행 집중 검수](2026-10-01-c4-r11-play15-luna-review.md) |
 | 필수 편집 562 | 562/562 통과, C4 기대 행 0 | [편집 회귀 검수](2026-10-01-c4-r11-edit562-luna-review.md) |
 | 필수 작업자 51 | 51/51 통과, C4 기대 행 0 | [작업자 검수](2026-10-01-c4-worker51-luna-result-review.md) |
-| 필수 실행 모드 610 | 2026-10-01 현재 실행 중. 완료와 전체 수용을 주장하지 않는다 | 완료 후 별도 검수 |
+| 필수 실행 모드 610 | 610/610 통과, C4 기대 행 0 | [최종 독립 검수](2026-10-01-c3-c4-v15-final-independent-luna-review.md) |
 
-앞선 여덟 실행에서 원시 XML의 실패·건너뜀·판정보류, 실제 Unity·QA 도구·바깥 종료값, 실행 전후 입력 지문 차이는 모두 0으로 보고됐다. 이는 각 실행의 부분 결과이며 v15 전체 수용은 마지막 실행·순차 결과·루나 전수 검토·아스트라 별도 판정 뒤에만 기록한다.
+아홉 실행의 시험 건수 합계 1654/1654가 통과했다. 서로 겹치는 회귀 선택을 합친 값이므로 고유 시험 수는 아니다. 원시 XML의 실패·건너뜀·판정보류, 실제 Unity·QA 도구·바깥 종료값, 실행 전후 입력 지문 차이는 모두 0이다. C4 행 188/188 및 선행 C3 내부 행 377/377이 맞는다. [테라 결과 대조](2026-10-01-c4-final-v15-qa-results-terra-report.md)와 [루나 최종 독립 검수](2026-10-01-c3-c4-v15-final-independent-luna-review.md)는 실행 결과의 근거를 보존한다. 아스트라의 [C3·C4 공동 최종 수용](../approvals/2026-10-01-c3-c4-v15-joint-final-integration-acceptance.md)은 현재 v19 소스의 `AC-M5D7QC3-007/008`, `AC-M5D7QC4-001..010`을 명시적으로 닫았다. 실행 도구 원본의 `WholeAccepted=false`는 수정하지 않았다.
 
 ## 최초 게임 코드 게시의 별도 문턱
 
-[최초 게시 권한 색인 제한 수용](../approvals/2026-09-29-c3-initial-publication-gap-authority-limited-acceptance.md)은 후보 489개 중 직접 바이트 근거 61개와 공백 428개를 보존한다. [파일별 바이트 근거 폐쇄 계약](../specs/work-contracts/2026-10-01-initial-code-publication-byte-closure.md)은 읽기 전용 원장 작성만 Approved다. 게임 코드·시험·메타·자산·설정·QA 도구는 이번 문서 게시 대상이 아니다. 파일별 독립 검수, 정확 게시 허용 목록, 깨끗한 복제의 실제 Unity 검증과 별도 통합 승인이 남아 있다.
+[최초 게시 권한 색인 제한 수용](../approvals/2026-09-29-c3-initial-publication-gap-authority-limited-acceptance.md)은 후보 489개 중 직접 바이트 근거 61개와 공백 428개를 보존한다. [파일별 바이트 근거 폐쇄 계약](../specs/work-contracts/2026-10-01-initial-code-publication-byte-closure.md)은 읽기 전용 원장 작성만 Approved다. 이후 [원장 독립 검토](2026-10-01-initial-code-publication-byte-closure-luna-result-review.md) P0/P1=0과 [아스트라 제한 수용](../approvals/2026-10-01-initial-code-publication-byte-closure-limited-acceptance.md)에 따라 초기 489개·C4 신규 12개의 정확 경로를 분류했다. 현재 정확 게시 허용 목록은 비어 있고 501개 전부 제외 상태다. 게임 코드·시험·메타·자산·설정·QA 도구는 이번 문서 게시 대상이 아니다. 근거 공백 폐쇄, 새 원격 대조, 깨끗한 복제의 실제 Unity 검증과 별도 통합 승인이 남아 있다.
 
-이 게시에서는 역사적 원시 증거의 지문·결과를 문서에 남기고, 로컬 실행 경로와 명령 정보가 포함된 원본 자료는 공개하지 않는다. 문서의 파일 경로 표기는 게시 파일 링크가 아니라 로컬 원본의 식별자다. 위키는 이 색인을 안내하는 보기이며 승인 명세의 상태를 바꾸지 않는다.
+이후 [C4 변경 22개 파일 대조](2026-10-01-c4-changed-file-evidence-closure-luna-result-review.md), [새 메타 6개 바이트 대조](2026-10-01-c4-meta6-exact-byte-evidence-luna-result-review.md), [기존 변경 10개 이력 대조](2026-10-01-c4-existing10-change-chain-luna-review.md)를 각각 독립 검토해 제한 수용했다. 현재 바이트·메타 GUID·어셈블리 연결의 일부 근거는 보강됐으나 기존 10개 파일에 대해 v1..v19의 14개 서로 다른 지문 전이를 재구성할 과거 구현 바이트는 없다. 이력 공백을 지우거나 원격 게시 허용으로 바꾸지 않았다. [향후 출처 처리 제안](../proposals/2026-10-01-initial-code-publication-forward-provenance-decision-draft.md)은 결정을 기다리는 비규범 문서다.
+
+이 게시에서는 역사적 원시 증거의 지문·결과를 문서에 남기고, 로컬 실행 경로와 명령 정보가 포함된 원본 자료는 공개하지 않는다. 문서의 파일 경로 표기는 게시 파일 링크가 아니라 로컬 원본의 식별자다. [게시 바이트 대조](2026-10-01-c3-c4-final-publication-byte-map.md)는 원본 지문과 게시본 지문이 다른 문서를 추적한다. 위키는 이 색인을 안내하는 보기이며 승인 명세의 상태를 바꾸지 않는다.
