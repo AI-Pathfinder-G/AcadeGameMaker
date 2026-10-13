@@ -1,0 +1,18 @@
+# Q0 외부 권위 고정과 일회 서명 발급 계약 초안
+
+상태: **Draft**. 실제 키 생성·서명·GitHub 게시·검증기 실행 권한이 아니다. 소유 후보는 기존 `REQ-PLAT-068/069/070`, `AC-PLAT-066/067/068`의 열린 운영 부분이다. 핵심 구현 제한 수용 `docs/approvals/2026-10-02-q0-authority-core-limited-acceptance.md` SHA-256 `7D096A71F4B526AB776E8B378DA0521D17605D58530D64219C4A05BC617B0D88`은 합성 검사만 수용했고, 현재 운영 진입점의 종료 2와 외부 승인 루트 부재를 명시한다. 이 제안은 그 상태를 바꾸지 않는다.
+
+## 권위 레코드와 비순환 순서
+
+1. 아스트라가 먼저 별도 **Approved** 운영 계약에서 정확한 저장소 소유자/저장소 ID, 문서 전용 PR의 새 권위 레코드 경로, 고정 공개키를 담을 검증기 소스·도구 허용 목록, `CurrentPublicationCleanClone` 문맥, 계획 스키마, 인증된 GitHub 읽기 커넥터와 통합 책임자의 수동 호출을 정한다. 임의 caller가 저장소·가지·레코드 경로를 선택할 수 없다. `docs/adr/0038-forward-provenance-for-initial-code-publication.md` SHA-256 `7D7FE5641B00C46E11DDB2BE4ADC83A6038FE33D2E4E8D15A1AA5283B2ABECB7`의 파일별 게시 판단을 이 계약이 대신하지 않는다.
+2. 승인된 단일 서명 프로세스에서 비영속·비내보내기 RSA 3072 키를 만들고 공개 modulus/exponent만 검증 소스에 고정한다. **검증 소스 최종 바이트와 SHA·공개키 지문을 먼저 동결**한다. 개인키는 서명까지 같은 살아 있는 프로세스가 보유하며 파일·환경변수·명령줄·로그·채팅·원격에 내보내지 않는다. 프로세스 종료·연결 단절·기한 초과 시 이전 공개키/소스는 운영 발급용으로 폐기하고 새 동결·PR부터 다시 시작한다.
+3. 아스트라가 문서 전용 PR의 권위 레코드에 역할·권위 계약 경로/SHA·문맥·검증기 정확 경로/SHA·공개키 지문·공개 modulus/exponent·발급 시각·단일 서명 세션 식별자만 기록한다. 미래 계획·서명·루나 결과 SHA는 넣지 않는다. 승인된 문서 게시 범위를 별도로 확인해 PR을 병합한 뒤, **병합된 불변 커밋**의 레코드 원시 blob과 blob SHA, 커밋 SHA·트리 SHA를 인증된 GitHub 읽기 커넥터로 통합 책임자가 직접 읽는다. 가지 이름이나 로컬 체크아웃 내용만으로 진위를 인정하지 않는다. 읽기 응답의 저장소 ID·커밋·경로·원시 blob SHA를 교차 확인하고, 레코드의 공개키/검증기 SHA가 실제 동결값과 일치할 때만 그 커밋과 레코드 SHA를 신뢰 호출 문맥에 고정한다.
+4. 그 **외부 고정 후** 현재 검증기와 Q0/감사/fixture 소스·입력·원장을 고정해 계획을 발급한다. 계획에는 권위 레코드의 불변 커밋+경로+원시 SHA, 계약 SHA, 검증기 SHA, 현재 문맥, 실행 식별자와 정확 입력 SHA가 들어간다. 아스트라가 원시 계획 SHA와 nonce를 검토하고 기존 `AGM-Q0-PLAN-V1` 정규 payload·RSA-3072/SHA-256/PKCS1 방식의 분리 승인 레코드를 같은 단명 프로세스에서 정확 한 번 서명한다. 검증 소스에는 미래 계획/manifest/검수 SHA를 넣지 않는다. 루나 독립 검수와 최종 수용은 서명 이후다.
+
+## 운영 검증과 오용 거절
+
+신뢰 호출은 통합 책임자의 수동 절차에서 인증된 커넥터가 확인한 **현재 권위 커밋·레코드 원시 SHA·고정 저장소 ID**를 검증기에 별도 전달한다. 임의 caller의 레코드 내용·SHA·커밋 문자열 또는 그와 맞춘 계획은 신뢰 입력으로 승격하지 않는다. 검증기는 신뢰 문맥과 실제 레코드 원시 바이트/위치, 동결 소스 SHA와 공개키 지문, 계획의 권위 참조·현재 문맥·실행 ID·원시 SHA, 레코드의 정규 스키마와 서명을 모두 비교한다. 과거 레코드·다른 키/저장소/커밋·변조 계획·서명·nonce 재사용·미병합 PR은 작업 시작 전에 거절한다. 인증 커넥터나 신뢰 전달 경로가 제공되지 않으면 운영 진입점은 계속 종료 2다. 저장소 내부의 자체 SHA 선언은 외부 권위가 아니다.
+
+설치된 .NET 10 참조 `System.Security.Cryptography.xml` SHA-256 `D5BD5FFBD61E6EB370D89E06721EF3F3029E2E2D75A8E4FCB45DB66B1157078D`는 `CngKey.Create(CngAlgorithm,string,CngKeyCreationParameters)`에서 이름이 없으면 비영속임을 명시하고(1748행), `CngExportPolicies.None`(1742행), `CngKeyCreationParameters.ExportPolicy/Parameters`(2126·2138행), `CngKey.IsEphemeral/KeySize`(1928·1942행), `RSACng(CngKey)`·`SignHash`(14689·14772행)를 제공한다. 후속 signer는 Windows CNG의 이름 없는 RSA 키와 `ExportPolicy=None`, 정확 3072비트 길이 설정을 사용하고 생성 직후 `IsEphemeral=true`, `KeySize=3072`, 실제 export policy를 검사한 뒤 공개 매개변수만 추출하도록 설계한다. 길이 설정과 export 금지의 실제 제공자 동작은 격리 시험으로 확인해야 하며 실패하면 발급을 중단한다. 비내보내기는 운영 API의 내보내기 차단이지 운영체제 메모리 덤프·스왑까지 물리적으로 부재하다는 주장도 아니다. signer는 개인키 출력·복구·재개 기능과 공급자 변경 우회를 갖지 않고 `finally`에서 키를 폐기한다. 장시간 PR 대기 중 프로세스 생존을 보장할 수 없으면 그 세션은 폐기한다.
+
+`qa/tools/Test-Q0SignedPlanAuthority.ps1`은 현재 준비 거절 진입점이며, `Core.psm1`의 순수 검증 범위가 운영 외부 루트 자체를 제공하지 않는다. 실제 운영 개정은 별도 정확 소스 허용·현재 SHA·합성/실제 음성 검증·루나 독립 검수 후에만 가능하다. 문서 전용 권위 레코드 PR과 `qa/tools` 검증기 게시가 모두 자동 허용되는 것은 아니다. `docs/approvals/2026-10-02-publication-byte-and-qa-scope-decision.md` SHA-256 `614B887A359722DF746C2BC5302EC5A87671780292454F4AB851B19743FF7C67`은 QA 도구를 **검토 후보**로 포함했고, `docs/approvals/2026-10-02-code-first-publication-scope-decision.md` SHA-256 `A992C8B5CD9F9398A9FF54DD38D33BE2634998E616116DCE42485268A1E448F9`도 파일별 선별을 요구한다. 따라서 권위 레코드 문서와 검증기/서명기 각 경로의 게시 허용·원격 byte 충돌·의존성은 ADR-0038 절차로 따로 판정한다. 문서 PR 병합은 게임 코드·QA 도구 게시, 깨끗한 복제, 전체 회귀 또는 최초 코드 게시 승인으로 계산하지 않는다.

@@ -1,5 +1,54 @@
 # Documentation Map
 
+- 2026-10-14 최신 세션: [1챕터 직접 플레이 준비 인계](./handoffs/2026-10-14-chapter1-session-handoff.md) · [새 세션 시작 프롬프트](./handoffs/2026-10-14-next-session-prompt.md). 기록 관리자 보정·국소 검사·원문 전달을 확인한 뒤 사용자가 플레이를 연기하여 세션을 정리했다. 실제 플레이·B1 FINAL·CH1 완주는 미완료이며 새 실행에는 새 동적 신원과 정확 권위가 필요하다.
+
+- 탄력적 본 개발: [활성 전략](./specs/work-contracts/2026-10-03-play-first-delivery-strategy.md)의 REQ/AC-PROC-011/012를 따른다. 기능 묶음 한 승인·범위 내 연속 보정·유한 국소 검사 예산·M1/M2/M3 독립 검수·한 작업 원장으로 진행한다. 작은 개발건마다 승인/전체 회귀/문서 지문을 재발급하지 않으며 기존 실제 선행과 권한 충돌은 한 번의 호환 계획으로 닫는다.
+
+- 최우선 전달 목표: 사용자가 본편 1챕터를 직접 체험할 수 있는 현재 소스의 Windows 빌드다. [CH1 전달 계약](./specs/work-contracts/2026-10-03-chapter1-playable-delivery.md), [현재 작업판](./specs/work-contracts/2026-10-03-play-first-delivery-strategy.md), [ADR-0042](./adr/0042-chapter1-playable-first.md)를 따른다. 기존 단일 전투 체험은 입력·표시·장면 수명주기를 연결하는 첫 단계이며 1챕터 완주를 대신하지 않는다. 해당 제품 단계가 Approved인 범위만 구현한다.
+
+- 모델 상위 버전 자동 적용: [ADR-0041](./adr/0041-automatic-model-version-upgrade.md)에 따라 실제 호출 목록에 같은 계열의 상위 안정 버전이 제공되면 재승인 없이 다음 배정 기준을 올린다. 새 배정 직전 확인은 유지한다. 매시간 모델 기준 자동갱신 예약은 2026-10-07 사용자 요청으로 삭제했으며 재생성하지 않는다. 역사·동결 계약·독립 검수의 실제 모델은 보존한다.
+
+- 현재 모델 배정: [ADR-0043](./adr/0043-remove-terra-role.md)과 [운영 모델](./agent-operating-model.md)에 따라 테라 역할을 제거하고 솔 `gpt-6.1-sol`이 설계·구현, 아스트라 `gpt-6-astra`가 승인·통합, 루나 `gpt-6-luna`가 독립 검수를 맡는다. 이후 솔의 `gpt-6-sol` 및 모든 역할의 GPT-5.6 호출·재개는 금지한다. [ADR-0040](./adr/0040-sol-terra-gpt61-routing.md)과 아래 모델 참여·실행 증거는 당시 실제 모델·역할의 역사다.
+
+- 현재 구현 주력: [실제 플레이 우선 전략·작업판](./specs/work-contracts/2026-10-03-play-first-delivery-strategy.md) · [ADR-0039](./adr/0039-play-first-integration-and-bounded-recovery.md) · [13사례 비효율·반복 감사](./verification/implementation-audits/2026-10-03-03.md). 최초 로컬 체험 계약·의존 조사를 다음 작업으로 배정한다. 기존 Q0는 기술 준비 완료·인간 운영 승인 대기이며 제품 연결과 실제 선행 조건을 분리한다. 아래 게시 이력은 각 당시 단계이며 현재 제품 우선순위를 대신하지 않는다.
+
+- [구현 진척 감사 기준](./qa/implementation-audit-standard.md) · [고정 서식](./qa/implementation-audit-template.md) · [최신 감사 색인](./verification/implementation-audits/README.md) — 2026-10-03 최신 사용자 지시. 매일 한국시간 오전 8시 하루 한 번 아트·소스·유니티 장면의 세부 퍼센트와 전일 대비 증감을 보고한다. 구현부·중요 체크포인트별 진척 감사는 중단하며 별도 사용자 요청은 예외다. 근거 없는 기존 전체 추정치는 비교 기준으로 사용하지 않는다.
+
+- [조건부 현재 바이트 실행 계약](./specs/work-contracts/2026-10-02-q0-trusted-child-execution.md) · [입력 기한 보정](./specs/work-contracts/2026-10-02-q0-input-deadline-correction.md) · [준비 결과의 계획 결속](./specs/work-contracts/2026-10-02-q0-preparation-plan-binding.md) · [입력 분류 보정](./specs/work-contracts/2026-10-02-q0-input-disposition-correction.md) — 현재 준비의 실제 입력 대기 결함과 첫 분류 원장 오류를 보정한다. 실패 기록은 보존하며 키 생성·실행은 각각 독립 검수와 기술 관문을 충족한 뒤 진행한다.
+
+- [Q0 준비 한정 수용](./approvals/2026-10-02-q0-cleanclone-preparation-limited-acceptance.md) · [현재 렌더 정적 원장 수용](./approvals/2026-10-02-renderer7-current-scope-limited-acceptance.md) · [외부 권위 발급 승인 계약](./specs/work-contracts/2026-10-02-q0-external-authority-issuance.md) — 실제 아스트라 검토를 마쳤고 다음 다섯 소스의 준비 구현·독립 검수로 이어간다. 현재 계획은 실행 미승인이고 새 원격 게시와 실사용 서명은 아직 수행하지 않았다.
+
+- [정상 갱신 뒤 조명 대조 수용](./approvals/2026-10-02-renderer-normal-update-v6-limited-acceptance.md) · [내장19참조 객체 식별 수용](./approvals/2026-10-02-builtin-reference-object-limited-acceptance.md) · [두 단계 발급 핵심 수용](./approvals/2026-10-02-q0-issuer-v2-limited-acceptance.md) · [Q0 격리 구현 준비](./specs/work-contracts/2026-10-02-q0-cleanclone-signed-preparation.md) — 루나 독립 검수 뒤 다음 시험/QA 구현으로 이어간다. 렌더 패스 내부 소비·외부 권위 발급·전체 회귀·게시 수용은 별도다. 아래 진행 상태는 각 작성 당시 기록이다.
+
+- [참조 분류 제한 수용](./approvals/2026-10-02-reference-classification-limited-acceptance.md) · [분류 독립 검수](./verification/2026-10-02-reference-classification-luna-review.md) — 미해석388행과 범위 밖68경로의 소유·생성물·부분 경로를 대조했다. 패키지 소유와 참조 분류만 수용하며 전체 의존 폐쇄는 미입증이다.
+- [렌더 진단 v3](./verification/2026-10-02-renderer-current-use-v3-terra-report.md) · [Q0 서명 검증 핵심 구현 계약](./specs/work-contracts/2026-10-02-q0-signed-authority-core-implementation.md) — 실제 Renderer2D 카메라·렌더 요청·콜백·출력 픽셀을 관측했다. falloff 소비와 APV 조건부 사용은 미입증이며 독립 검수를 진행한다. Q0는 실사용 승인 루트 미발급을 명시하고 격리 검증 핵심을 구현한다. 코드 게시나 전체 수용을 뜻하지 않는다.
+
+- [501개 조사·새 원격 객체 증거 제한 수용](./approvals/2026-10-02-content-survey-evidence-limited-acceptance.md) · [원격 보완 루나 독립 결과](./verification/2026-10-02-remote-object-correction-luna-review.md) — 실제 고정개정GET의 커밋/트리/501집합·7본문을 재현해 원격 지문 기록P1을 새 관측 범위에서 보완했다. 원본 오류·충돌과 미해석388개는 보존한다. 내용/간접 의존 폐쇄·Q0·렌더러·전체 회귀·게시는 별도다. 아래 배정/진행 표기는 각 당시 상태다.
+
+- [원문 보존 도구 제한 수용](./approvals/2026-10-02-raw-lineage-limited-acceptance.md) · [실제 실행·구현 보고](./verification/2026-10-02-publication-raw-lineage-terra-report.md) · [루나 독립 검수](./verification/2026-10-02-raw-lineage-luna-review.md) — 새 도구의 최종 합성 정상1·음성4와 후보 내부 출력 거절, 실제534 대조·25 원문 복원·전후 변경0을 확인했다. 독립 보고의 합성 행수 오기는 수용 문서에서 실제2파일/전이1과 실제534/전이25로 명시 정정했다. 현재 원문 보존 기능만 수용하며 역사14전이·전체 의존·게임 회귀·게시는 별도다.
+
+- [정규화 준비 보정 후 제한 수용](./approvals/2026-10-02-canonical-preparation-limited-acceptance-v2.md) · [501개 조사 기계 대조](./verification/2026-10-02-content-survey-astra-mechanical-check.md) — 루나 재호출에 성공했고 준비 보고의 분류·지문 오기를 보정했다. 501개 내용·의존 조사 결과의 독립 검수와 25개 원문 바이트 보존 도구 구현을 진행한다. 과거 한도 대기는 해소됐으며 전체 회귀·게시 수용은 별도다.
+
+- [루나 재호출 성공·후속 재개](./handoffs/2026-10-02-luna-recovery-resume.md) · [출처v2 제한 수용](./approvals/2026-10-02-forward-provenance-v2-limited-acceptance.md) — 실제 `gpt-6-luna`가 미완료 출처 검수를 끝내 P0/P1=0/0을 기록했다. 정규화534·검사기의 독립 검수와501 정식 내용·의존 조사를 재개했다. 아래 한도 대기 문구는 과거 단계이며 전체 회귀·게시 수용은 아직 별도다.
+
+- [필수 입력 선별 대조](./verification/2026-10-02-code-first-input-selection-astra-check.md) · [534개 후보 대조](./verification/2026-10-02-publication-lf534-astra-check.md) · [엄격 검사기 결과](./verification/2026-10-02-canonical-baseline-validator-astra-check.md) — 사용자 위임으로523개를 선별해29개를 추가한534 후보와 새 검사기를 작성했다. 정상2·음성8, 실제505/534 전수 대조가 통과했고2067 경계행·메타7의 전후 지문 차이0이다. [역사 보존·다음 관문](./approvals/2026-10-02-canonical-regression-preserve-history-gate.md)에 따라 새 회귀·독립 수용·게시를 구별한다. 루나 관문은 한도 회복 뒤 별도다.
+
+- [코드·필수 입력 우선 위임 적용](./approvals/2026-10-02-code-first-publication-scope-decision.md) · [523개 선별 계약](./specs/work-contracts/2026-10-02-code-first-input-selection.md) — 사용자가 판단을 위임해 코드·필수 검증 입력부터 선별한다. 실제 참조가 있는 미디어만 개별 후보로 검토하며 통상 범위 선택을 반복 질문하지 않는다. 아래 범위 질문은 위임 전 이력이다.
+
+- [505개 후속 작업 인계](./handoffs/2026-10-02-lf505-publication-checkpoint.md) · [일곱 참조 실제 조회](./verification/2026-10-02-renderer-guid7-loaded-probe-astra-check.md) · [최신 원격·전체 검증 입력 범위](./verification/2026-10-02-lf505-remote-and-v19-scope-precheck.md) — 두 추천안을 적용해 후보505·QA 검사·Unity 가져오기 진단을 마쳤다. 일곱 GUID의 현재 로드 상태는 미해석이며 기존 P1을 유지한다. 과거 전체 검증 입력 중 후보/원격에 없는523개에 대해 코드·필수 입력 우선 선별 또는 미디어 포함 전체 검토 범위를 사용자에게 요청했다. 아래 진행 문구는 당시 이력이다. 게시 승인은 없다.
+
+- [505개 Unity 진단 기계 대조](./verification/2026-10-02-lf505-unity-import-astra-check.md) · [Renderer2D 로드 참조 진단 계약](./specs/work-contracts/2026-10-02-renderer-guid7-loaded-probe.md) — 새 바이트 복사본의 Unity 한 번 실행은 종료코드 0, 자산 가져오기·C# 오류 미검출, 후보 변경 0이다. 라이선스 토큰·컴파일 캐시·종료 통신 오류는 보존한다. 일곱 GUID의 실제 로드 상태는 별도 진단 중이며 독립 수용·게시 승인은 없다. 아래 진행 문구는 각 당시 단계다.
+
+- [게시 바이트·QA 범위 사용자 결정](./approvals/2026-10-02-publication-byte-and-qa-scope-decision.md) · [505개 새 후보 계약](./specs/work-contracts/2026-10-02-publication-lf505-baseline.md) — 2026-10-02 사용자가 두 추천안을 선택했다. 저장소 줄바꿈 기준으로 새 바이트를 검증하고 QA 검사기·직접 입력 네 개를 함께 검토한다. 원문 501개와 과거 검수는 보존하며, 아래 결정 대기 문구는 선택 전 조사 이력이다. 새 후보 작성·검증은 진행 중이다.
+
+- [505개 후보 기계 대조](./verification/2026-10-02-publication-lf505-astra-check.md) · [Unity 한 번 진단 계약](./specs/work-contracts/2026-10-02-lf505-unity-import-diagnostic.md) — 정확 505개·CRLF→LF 18개·나머지 487개 원문 동일을 확인했다. 후보의 QA 일반·자체 검사는 종료코드 0이다. 별도 실행 복사본의 Unity 진단은 진행 중이며 독립 수용·게시 승인은 남아 있다.
+
+- [501파일 첫 Unity 격리 진단](./verification/2026-10-01-initial-code-publication-provisional-501-unity-import-astra-check.md) · [짧은 경로 재진단](./verification/2026-10-01-initial-code-publication-short-path-unity-recheck-astra-check.md) · [Git 줄바꿈 정규화 예비 대조](./verification/2026-10-01-initial-publication-git-canonicalization-precheck.md) — 첫 실행은 패키지 자산 접근 오류를 동반했고, 짧은 경로 재실행은 라이선스·패키지 관리자 연결 실패로 가져오기 전에 종료됐다. 경로 원인은 미판정이다. 501개 중 18개는 현 바이트가 Git 기록 과정에서 줄바꿈 정규화되므로 게시 바이트 기준을 별도 결정해야 한다. 코드 게시·전체 수용은 없다.
+
+- [QA 목록 검사기 후보 밖 입력 예비 대조](./verification/2026-10-01-initial-publication-qa-catalog-dependency-precheck.md) — 후보 안의 검사기가 읽는 네 입력은 모두 후보 밖이며, 필수 차단 ID 원장은 원격에 없다. 다른 두 입력에는 원격과 실제 내용 차이가 있다. 파일별 추가 범위·병합 판단은 미완료다.
+
+- [후속 예비 조사 인계](./handoffs/2026-10-01-forward-content-precheck-checkpoint.md) · [기반 33파일 계약](./specs/work-contracts/2026-10-01-initial-code-publication-foundation-33-precheck.md) · [메타·조립 정의 계약](./specs/work-contracts/2026-10-01-initial-code-publication-meta-asmdef-precheck.md) · [패키지 캐시 소유 계약](./specs/work-contracts/2026-10-01-initial-code-publication-package-owner-precheck.md) · [잔여 식별자 조사 계약](./specs/work-contracts/2026-10-01-initial-code-publication-residual-guid-precheck.md) · [전체 내용·의존성 조사 초안](./specs/work-contracts/2026-10-01-initial-code-publication-forward-content-dependency-draft.md) — 루나 v2 최종 검수는 한도 회복 후 별도로 진행한다. 로컬 501개 현 바이트와 네 예비 조사 지문은 일치했다. 후보 메타에서 소유를 찾지 못한 참조291행 중 현 패키지 캐시에서 265행의 단일 소유를 찾았고, 남은 26행은 네 현 로컬 메타 검색 범위에서 미발견이다. 패키지 요청/잠금 버전 차이 두 건은 [기존 승인 문맥](./verification/2026-10-01-package-version-authority-crosscheck.md)과 함께 보존한다. 전체 계약은 Draft이며 독립 검수·정식 의존 폐쇄·파일별 게시 승인은 아직 없다.
+
 - [최초 코드 게시의 현재 바이트 기준 결정](./adr/0038-forward-provenance-for-initial-code-publication.md) · [읽기 전용 출처 조사 계약](./specs/work-contracts/2026-10-01-initial-code-publication-forward-provenance.md) · [v2 검증 인계](./handoffs/2026-10-01-forward-provenance-v2-verification-checkpoint.md) — 사용자가 새 현재 바이트 기준을 선택했다. 과거 428개 공백과 14개 미입증 전이는 보존한다. v2 원장은 작성됐지만 루나 최종 결과 검토가 사용량 한도로 중단돼 파일별 게시 허용 목록과 코드 게시 승인은 아직 없다.
 
 - [C3·C4 v19 공동 최종 수용](./approvals/2026-10-01-c3-c4-v15-joint-final-integration-acceptance.md) · [9회 실행 독립 검수](./verification/2026-10-01-c3-c4-v15-final-independent-luna-review.md) · [게시 근거 색인](./verification/2026-10-01-c3-c4-publication-evidence-index.md) — 현재 승인 계약 범위에서 C3 잔여 AC007/008과 C4 AC001..010을 수용했다. 1654건의 실행 합계와 C4 188행, C3 내부 377행을 대조했다. 게임 코드의 최초 원격 게시는 별도 파일별 출처·복제 검증 문턱을 유지한다. 아래 진행·미수용 표기는 각 당시 기록이다.
@@ -16,15 +65,15 @@
 
 - [C4 내부 인증·생명주기 연결 개정 — Approved](./specs/work-contracts/2026-09-29-c4-fresh-checkpoint-accessibility-amendment.md) · [시험 제어 접근성 개정 — Approved](./specs/work-contracts/2026-09-29-c4-edit-control-accessibility-amendment.md) · [선행 행 출력 개정 — Approved](./specs/work-contracts/2026-09-29-c4-legacy-row-output-amendment.md) · [선행 선택 형식 개정 — Approved](./specs/work-contracts/2026-09-29-c4-predecessor-selection-format-amendment.md) — 기존 승인 범위의 한정 내부 연결과 원본 형식 보존만 개정한다. 독립 정적 설계 검수와 구현 승인을 완료했으며 도구 구현 보정·최종 소스·실제 실행·통합 수용은 진행 중이다. 새 게시 완료를 뜻하지 않는다.
 
-- [C4 r4 실행 연결 — Approved, 구현 진행](./specs/work-contracts/2026-09-29-c4-r4-exact-implementation-amendment.md) · [QA 증거 규약 r2 — Approved](./specs/work-contracts/2026-09-29-c4-qa-evidence-protocol.md) · [구현 계약 승인](./approvals/2026-09-29-c4-r4-implementation-contract-approval.md) · 연속 작업 기록 (`docs/handoffs/2026-09-29-c4-continuous-implementation.md`; 로컬 원본) — 현재 후속 구현의 소유 규격이다. 두 규격의 독립 정적 검수 P0/P1=0/0 후 제한 구현을 승인했으며 실제 실행·통합 수용은 남아 있다. 아래 C4 Review와 이전 승인 대기는 당시 이력이다.
+- [C4 r4 실행 연결 — Approved, 구현 진행](./specs/work-contracts/2026-09-29-c4-r4-exact-implementation-amendment.md) · [QA 증거 규약 r2 — Approved](./specs/work-contracts/2026-09-29-c4-qa-evidence-protocol.md) · [구현 계약 승인](./approvals/2026-09-29-c4-r4-implementation-contract-approval.md) · [연속 작업 기록](./handoffs/2026-09-29-c4-continuous-implementation.md) — 현재 후속 구현의 소유 규격이다. 두 규격의 독립 정적 검수 P0/P1=0/0 후 제한 구현을 승인했으며 실제 실행·통합 수용은 남아 있다. 아래 C4 Review와 이전 승인 대기는 당시 이력이다.
 
 - [C3 R11 실행 직전 단계 — 수용 완료](./approvals/2026-09-29-c3-r11-pre-c4-integration-acceptance.md) — 집중 편집240·실행15와 필수562/51/610을 같은 소스로 실제 검증했다. C3 전체 및 실행 결과 기준 AC007/008은 Approved C4의 실제 결과와 공동 최종 검증까지 미완료다. 변경 요청 #3와 기존 위키에 게시된 과거 범위 이후의 새 문서·구현은 아직 추가 게시하지 않았다.
 
-- [GPT-6 역할 전환](./adr/0037-gpt6-role-model-migration.md) · 적용·병합·위키 확인 (`docs/approvals/2026-09-29-gpt6-role-routing-acceptance.md`; 로컬 원본) — 솔·테라 역할은 별도 `gpt-6-sol` 작업자, 루나는 `gpt-6-luna`로 실제 재시도에 응답했다. 현재 도구에 `gpt-6-terra`는 없으며 5.6 새 호출·재시도는 금지한다. 모델 운영 문서의 변경 요청 #2와 위키 게시를 완료했다. 아래 사용량 중단은 이전 모델의 이력이다.
+- [GPT-6 역할 전환](./adr/0037-gpt6-role-model-migration.md) · [적용·병합·위키 확인](./approvals/2026-09-29-gpt6-role-routing-acceptance.md) — 솔·테라 역할은 별도 `gpt-6-sol` 작업자, 루나는 `gpt-6-luna`로 실제 재시도에 응답했다. 현재 도구에 `gpt-6-terra`는 없으며 5.6 새 호출·재시도는 금지한다. 모델 운영 문서의 변경 요청 #2와 위키 게시를 완료했다. 아래 사용량 중단은 이전 모델의 이력이다.
 
 - [병합 이후 C3 구현 인계](./handoffs/2026-09-29-merged-c3-lower-checkpoint.md) — GPT-6으로 하위 보정과 상위 확인·취소·재무장 일관 단위를 구현했다. 초기 상위 검수의 늦은 예약 재사용과 필수 시험 누락을 보완 중이며, 새 소스 실행·필수 회귀·독립 수용은 남아 있다. 아래 인증 차단·한도 중단·초안 상태와 이전 수용 지문은 당시 기록이다.
 
-- [문서 정리 변경 요청 #1 — 원격 병합 완료](https://github.com/AI-Pathfinder-G/AcadeGameMaker/pull/1) · 실제 병합 기록 (`docs/verification/2026-09-29-documentation-merge-execution.md`; 로컬 원본) — 사용자 지시로 정확한 원본을 원격 main에 병합했다. 아래 인증 차단·변경 요청 부재는 이전 기록이며 로컬 게임 코드·작업물은 보존했다. 다음 Approved C3 합성 구현을 진행한다.
+- [문서 정리 변경 요청 #1 — 원격 병합 완료](https://github.com/AI-Pathfinder-G/AcadeGameMaker/pull/1) · [실제 병합 기록](./verification/2026-09-29-documentation-merge-execution.md) — 사용자 지시로 정확한 원본을 원격 main에 병합했다. 아래 인증 차단·변경 요청 부재는 이전 기록이며 로컬 게임 코드·작업물은 보존했다. 다음 Approved C3 합성 구현을 진행한다.
 
 - [관찰 단위 수용 이후 작업 기준](./handoffs/2026-09-29-c3l-verified-checkpoint.md) — 조회 함수 사용자 승인과 C3L 수용을 완료했다. 실제 변경 요청 인증 갱신, C3 소유자·재무장 구현과 후속 검증이 남아 있다. 이전 인계서의 미답변 승인 대기는 당시 기록이다.
 
@@ -304,6 +353,6 @@
 `Draft → Review → Approved → Implemented → Verified`
 
 - Astra만 스펙을 `Approved`로 전환하고 통합을 승인한다.
-- Terra는 Approved 계약 안에서 단위 파트를 설계·구현한다.
+- 솔은 Approved 계약 안에서 단위 파트를 설계·구현한다.
 - Luna는 AC ID에 따라 독립 검수하고 `Verified` 증적을 남긴다.
-- 과거 외부 Ollama 산출물은 현재 작업 흐름에 사용하지 않는다. 새 단위는 GPT Terra 구현과 GPT Luna 독립 검증을 거치며 Astra 승인 전에는 상태를 전환하지 못한다.
+- 과거 외부 Ollama 산출물은 현재 작업 흐름에 사용하지 않는다. 새 단위는 솔 구현과 루나 독립 검증을 거치며 아스트라 승인 전에는 상태를 전환하지 못한다.

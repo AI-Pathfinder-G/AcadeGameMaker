@@ -1,0 +1,30 @@
+# 정규화 게시 바이트의 C3/C4 회귀 동결 설계
+
+- 상태: Draft. 구현·시험 실행·게시·기존 수용의 변경 권한이 없다.
+- 범위: 승인된 `2026-10-02-publication-lf505-baseline.md`의 505개 후보와 C4 필수 회귀를 연결할 **새 증거 분기**의 한정 설계. 과거 `c4-frozen-source-manifest-v1/v16/v17/v19.json`, 선택·행 원장, 실행 결과와 그 수용 지문은 그대로 보존한다.
+- 추적: `REQ-PLAT-038/039/040`, `AC-PLAT-036/037/038`; `REQ-M5D7QC4-001..007`, 특히 `REQ-M5D7QC4-007`, `AC-M5D7QC4-009/010`; 공동 최종 관문 `AC-M5D7QC3-007/008`. 이 문서는 새 계약 승인이 아니다.
+
+## 확인한 고정 근거
+
+`artifacts/c4-publication-lf505-baseline-v1.json`의 SHA-256은 `9E23DCFBFAA7C1B3C2AE006FBD6BDEC58F456974E7C4C878E9F38416C654762C`이다. 505개 중 487개는 바이트 동일하고 18개만 CRLF→LF이다. 각 행의 `OriginalSha256`과 `CandidateSha256`은 변환의 정확한 양끝이다. 이 원장은 새 실행 원장이나 505개만으로 완성된 Unity 프로젝트라는 증거가 아니다. 기존 v19 입력은 1084개이고 후보와 원격 양쪽에 없는 입력도 523개이므로, 독립 의존성 폐쇄 없이 이를 새 실행에 가져오지 않는다.
+
+역사 원장과 505 후보의 공통 경로 37개를 대조한 결과는 다음과 같다. v1은 지문 불일치 12개 중 **내용 차이 8개, LF만 4개**이다. v16은 9개 중 **내용 차이 1개**(`C4ActualExecutionPlayFixtureV1.cs`)와 LF만 8개이다. v17과 v19는 각각 9개 모두 LF만 다르다. 역사 원장의 특정 경로 `Sha256`이 505 행의 `OriginalSha256`과 **정확히 일치할 때만** 그 행의 `CandidateSha256`으로 정규화 전이를 주장한다. 내용이 다른 행에는 LF 전이 표식을 붙이지 않고 별도 버전으로 취급한다. v1 전체를 일괄 정규화하거나 v1 단순 참조 때문에 모든 37경로를 새 기준으로 승격하지 않는다.
+
+`Assets/AcadeGameMaker/Tests/EditMode/InputUnity/C4ActualExecutionEditFixtureV1.cs`의 현재 원본 SHA-256은 `DEDF385EC466A7B7A7CED2F75AE3EE70E290A4AFDC1C40A4AB7C0F34F15A0668`이다. 이 파일의 834–865행은 v16의 Bridge/Busy/Owner 원시 지문과 Busy 구조를, 1128–1150행은 v1의 두 ordinary writer 지문과 금지 호출을, 1191–1215행은 v16의 시험 원본 포인터를, 1329–1350행은 v16의 Bridge/Owner 지문과 단일 NoOp 호출 토큰을, 1366–1390행은 v16의 부모 시험 본문·작업자 정리 부재를 검사한다. Play fixture의 821–843행은 v1 ordinary writer, 879–902행은 v17 자기·부모 포인터, 976–999행은 v17 NoOp 단일 호출을 검사한다. 새 분기에서도 **원시 지문 검사와 소스 텍스트의 모든 행위 단언을 함께 유지**해야 한다. v1 ordinary writer 두 경로는 505에서 바이트가 같으므로 필요한 그 두 핀만 역사 경로에 그대로 남길 수 있다.
+
+현재 C4 도구는 계획에 고정 결속된다. `artifacts/c4-final-validation-queue.ps1` 3행은 역사 행 검증기를 읽고, 11행은 결과 v13을 고정하며, 16행은 정확 10개 도구 경로를 검사한다. 31·39·40행은 선택 실행·행 검증·실행 검증의 실제 호출 경로다. `c4-final-selected-run.ps1` 3·22·38행은 역사 행 검증기와 전후 입력 포착을, `c4-verify-run.ps1` 3행도 역사 행 검증기를 사용한다. `c4-verify-required-rows.ps1` 40·63·337–356행은 선택·소스·행·역사 회귀의 고정 결속이다. 단순히 새 계획 경로만 주어 과거 도구를 재사용할 수 없다.
+
+## 제한 변환과 새 동결 순서
+
+1. 새 `artifacts/c4-lf505-transition-allowlist-v1.json`에는 승인된 18행의 경로·원본 SHA·후보 SHA·변환 종류·CRLF 쌍 수를 **전수 그대로** 넣고 승인 원장 지문을 결속한다. 각 원본 바이트에서 CRLF 쌍만 LF로 바꾼 실제 후보 바이트가 후보 SHA와 일치해야 한다. 18개 외 변경, 의미 있는 내용 변경, 인코딩·끝줄의 다른 변화, 원본과 후보의 역사 경로 혼동은 실패다. 역사 원장별 공통 경로는 `HistoricalSha == OriginalSha`일 때만 `LfMapped`로 기록하고, 나머지는 `DifferentHistoricalContent`와 두 원시 지문을 기록한다. 변환표 자체의 SHA와 근거를 새 원장의 직접 입력으로 고정한다.
+2. 새 시험 분기에 필요한 source-only 후속 수정은 두 fixture 파일의 지문 선택 코드에 한정한다: `Assets/AcadeGameMaker/Tests/EditMode/InputUnity/C4ActualExecutionEditFixtureV1.cs`와 `Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/C4ActualExecutionPlayFixtureV1.cs`. 역사 원장 판독·기존 텍스트 단언은 보존하고, 새 정규화 실행은 **별도 고정 manifest 경로**에서 정확한 현재 원시 SHA를 읽는다. `C4ActualExecutionEditFixtureV1.cs` 834–865, 1191–1215, 1329–1350, 1366–1390행과 Play fixture 879–902, 976–999행의 새 핀을 각각 정확 검수한다. v1 ordinary writer는 필요한 두 원본의 SHA가 후보와 같은지 다시 확인한 뒤 그 두 경로만 역사 v1 판독을 유지한다. 원장 부재·지문 차이·토큰 수/순서 차이·부모 본문 차이는 실패이며 fallback이나 지문 생략이 없다. 시험 메서드명·선택명·제품 호출과 기대 동작은 바꾸지 않는다.
+3. 새 fixture가 바뀌면 505 원장의 fixture `CandidateSha256`은 **편집 전 LF 바이트**의 증거로만 남는다. 새 fixture의 최종 SHA를 별도로 발급해 정확 승인 전이 `LF 후보 SHA → 새 시험 핀 수정 SHA`로 기록한다. Bridge `52E00FE10FDEAFB8C192CF7F92B2EA428C16A202D640BEAF79C8F58E6704F32A → 29B823BFC025F7185C3B859DDEE4A7B8036B811D22C298322CB9694F9A12AE54`는 LF-only이며, Bridge 소스 자체에 기능 변경을 허용하지 않는다. 새 fixture가 읽는 manifest에는 **경로만** 코드에 담고 manifest 자신의 SHA를 코드에 되먹이지 않는다. 최종 fixture 바이트를 먼저 고정하고 새 manifest가 그 SHA를 묶어 순환 결속을 피한다.
+4. 새 `artifacts/c4-lf505-frozen-source-manifest-v1.json`은 역사 v19, 승인 505 원장, 변환표, 최종 제품·fixture 원시 SHA, 그 전이 사유, 새 선택·행·도구 경로를 정확히 고정한다. v1/v16/v17/v19 파일은 새 원장의 `HistoricalEvidence`로 **원본 SHA 그대로** 참조한다. 역사 지문을 후보 지문으로 덮어쓰지 않는다. 선택·행 생성 전에 소스와 도구의 최종 SHA를 동결하고, 생성 뒤 새 manifest·입력 원장의 직접 결속 및 원장 자체 SHA를 검수한다.
+5. `c4-focused-edit-selection-v6.json`, `c4-focused-play-selection-v4.json`, `c4-focused-hub-selection-v3.json`, `c4-required-checkpoint-rows-v9.json`은 수정하지 않는다. 기존 생성기와 동일한 정확 원본 입력을 격리 작업 공간에서 재생성하여 **새 버전 경로**로 발급한다. Play 선택의 부모 시험은 `BC0C22518CE1A267547F72B758160610464E70D053D3A08F01CE2B80A5624BE9 → 14D9DB02E96C84CCC6615B9995EE2736A424263609EAD51F064E45A5AA6FB9D0`, 공통 enum 파서 Bridge는 위 LF 전이를 사용한다. 행 원장의 `SourceFiles` 두 fixture는 편집 후 SHA를 사용한다. 188행의 식별자·순서·기대값, 세 집중 선택의 이름·순서·selector·부모 결속은 불변이어야 한다. 지문 결속 이외 필드 변경은 실패다. 고정 v1 출력 생성기는 저장소의 역사 출력을 덮어쓰지 않도록 별도 빈 상대 경로에서 실행하고, 명령·도구/입력 SHA·종료코드·새 출력 SHA·역사 출력 전후 SHA를 새 증거로 고정한다.
+6. 새 `artifacts/c4-lf505-input-paths-v1.json`, `artifacts/c4-lf505-predecessor-selection-map-v1.json`, `artifacts/c4-lf505-final-validation-plan-v1.json`은 확정된 파일 허용목록만 담는다. 새 실행 도구는 `artifacts/c4-lf505-final-validation-queue.ps1`, `c4-lf505-final-selected-run.ps1`, `c4-lf505-verify-required-rows.ps1`, `c4-lf505-verify-run.ps1`의 별도 후속 파일로 제한해 역사 도구의 하드코딩된 결과 경로·도구 10경로·행/선택 결속을 새 계획에 맞게 **정확 치환**한다. 기존 `c4-capture-inputs.ps1`, Unity QA 실행 도구, 실제 출력 검증 조건은 바꾸지 않는다. 새 도구 네 개는 전후 입력 동일성, 실패 즉시 정지, 단일 계획·선택·소스 SHA 결속, native/QA/outer 종료 0, 전체 행 일치, 누락·예상 밖·중복 ID 거절, 시간 제한 180초와 기존 프로젝트 mutex 동작을 유지한다. 새 결과 경로와 각 실행 stem은 모두 사전 부재를 확인하고 `CreateNew`로 기록한다. 새 도구의 정확 callable/경로 목록과 SHA는 승인 계약에서 동결한다.
+
+## 재검증 관문과 중단 조건
+
+새 계획의 아홉 선택은 Focused Edit 139, Focused Play 32, Focused Hub 5, Matrix 91, Remaining 149, Play 15, Edit 562, Worker 51, Play 610으로 유지한다. 각 선택의 정확 이름·순서·부모·selector와 행의 전체 레코드를 기존 동결본과 대조한다. 505 프로젝트가 실제 실행에 필요한 1084 입력을 충족하는지 별도 파일 단위 출처·허용목록과 클린 복제 관문에서 먼저 확인한다. 승인되지 않은 523개를 편의상 포함하거나, 깨끗한 복제에 없다는 이유로 시험을 생략할 수 없다. 승인된 정확 입력이 닫히지 않으면 Unity 실행 전 중단한다. 이후 새 계획·도구의 정적/음성 검증, 선택/행 재생성 증거, 아홉 실제 실행의 이름·행·입력 전후·종료 코드, 루나 독립 검수와 아스트라 수용이 모두 필요하다.
+
+역사 SHA와 505 `OriginalSha256`이 다른 행을 LF로 표시할 때, 새 fixture의 post-edit SHA 대신 pre-edit 후보 SHA를 최종 소스로 쓸 때, 후보 focused-play 선택이나 행 원장의 옛 원시 핀이 남을 때, 자기 참조를 피하려고 원시 SHA 검사를 느슨하게 할 때, 역사 v1 전체를 자동 재결속할 때, 제품 소스·자산·설정·메타·조립·공개 권한을 바꿀 때는 중단한다. 이 설계는 현재 정규화 후보의 회귀가 이미 통과했거나 C4 수용이 새 바이트에 이전되었다고 주장하지 않는다.

@@ -1,5 +1,27 @@
 # Specification System
 
+- 현재 절차 전략: [실제 플레이 우선·반복 복구 제한](./work-contracts/2026-10-03-play-first-delivery-strategy.md). REQ-PROC/AC-PROC-001..010, 다음 주력은 최초 체험의 별도 제품 계약·실제 의존 조사다. 절차 승인과 미래 제품 구현/실행 수용은 구분한다. 기존 필수 회귀·Q0 운영 승인 경계는 유지한다.
+
+- [Q0 신뢰 자식·아홉 선택 — 조건부 Approved](./work-contracts/2026-10-02-q0-trusted-child-execution.md) · [입력 분류 보정](./work-contracts/2026-10-02-q0-input-disposition-correction.md) — 입력 확정·통신/컴파일 지원·동결·새 권위 발급·독립 검수·아홉 실행을 단계별 기술 관문으로 묶는다.
+- [공개 입력 대기 기한 보정 — Approved](./work-contracts/2026-10-02-q0-input-deadline-correction.md) · [준비 결과와 계획의 비순환 결속 — Approved](./work-contracts/2026-10-02-q0-preparation-plan-binding.md) — 첫 실패 증거를 보존하고 실제 입력 시간초과 및 준비 결과 두 개의 서명 결속을 확인한다.
+
+- [Q0 외부 권위·단명 일회 발급 — Approved](./work-contracts/2026-10-02-q0-external-authority-issuance.md) — 준비 검수 뒤 정확 두 문서 게시·병합과 실제 권위 조회, 한 건의 서명 검수를 허용한다. 일반 명령행/C# 호출은 거절하며 전체 Unity 실행과 게임 게시는 후속 계약 범위다.
+
+- [참조 분류](./work-contracts/2026-10-02-unresolved-reference-owner-classification.md) · [내장 객체 조회](./work-contracts/2026-10-02-builtin-reference-resolution.md) · [조명 대조 진단](./work-contracts/2026-10-02-renderer-lighting-gate-diagnostic.md) — 참조 소유와 실제 객체 조회를 구별한다. 조명 v4 컴파일 실패는 [장면 핸들 보정](./work-contracts/2026-10-02-renderer-lighting-scenehandle-correction.md)으로 이어간다. 기존 증거는 보존하고 전체 폐쇄·게시를 자동 수용하지 않는다.
+- [Q0 서명 검증 핵심](./work-contracts/2026-10-02-q0-signed-authority-core-implementation.md) · [비영속 제공자 실제 검증](./work-contracts/2026-10-02-q0-ephemeral-cng-provider-verification.md) — 격리 핵심은 독립 검수를 완료했다. 실제 운영 권위/키 발급과 Q0 연결은 별도이며 현재 운영 진입점은 거절한다.
+
+- [원문 보존 독립 검수 — 완료, 제한 수용](./work-contracts/2026-10-02-raw-lineage-independent-review.md) · [원격 객체 보완 — Approved](./work-contracts/2026-10-02-content-survey-remote-object-correction.md) · [원격 보완 독립 검수 — Approved](./work-contracts/2026-10-02-remote-object-correction-independent-review.md) — 원문 보존 도구의 실제 결과는 별도 수용 문서에 결속했다. 조사 v1의 커밋/트리 지문 혼동은 원본을 보존하고 새 원격 관측으로 보완한다.
+
+- [501개 조사 독립 검수 — Approved](./work-contracts/2026-10-02-content-survey-independent-review.md) · [원문 바이트 보존 도구 — Approved](./work-contracts/2026-10-02-publication-raw-lineage-snapshot.md) — 완료된 조사 결과를 독립 대조하고 CRLF→LF 전이25개의 원문을 별도 보관한다. 제품·기존 시험·534 후보는 보존하며 게시 범위를 자동 확장하지 않는다.
+
+- [정식501 내용·의존 조사 — Approved](./work-contracts/2026-10-02-initial-publication-content-dependency.md) · [정규화 준비 독립 검수 — Approved](./work-contracts/2026-10-02-canonical-preparation-independent-review.md) — 출처v2의 실제 루나 독립 검수와 아스트라 제한 수용으로 선행 관문을 충족했다. 과거 Draft는 보존하며 현재 정확 계약에서만 후속 판독을 허용한다. 파일별 게시·전체 회귀 수용은 별도다.
+
+- [534개 후보 작성 — Approved](./work-contracts/2026-10-02-publication-lf534-selected-inputs.md) · [변환수 필드 보완 — Approved](./work-contracts/2026-10-02-lf534-transition-count-supplement.md) · [엄격 정규화 검사기 — Approved](./work-contracts/2026-10-02-canonical-baseline-validator.md) — 정확 선별29개를 추가한 별도534 후보와 엄격 바이트 대조를 다룬다. 역사 입력·지문·제품을 보존하며 후속 시험 fixture 변경·Unity·게시·독립 수용은 별도다.
+
+- [코드·필수 입력 우선 선별 — Approved](./work-contracts/2026-10-02-code-first-input-selection.md) — 사용자 위임에 따라 추가523개를 실제 의존으로 판독한다. 새 원장 작성 한정이며 복사·Unity·원격 게시·독립 수용은 별도다.
+
+- [505개 저장소 바이트 후보 작성 — Approved](./work-contracts/2026-10-02-publication-lf505-baseline.md) — 사용자 선택에 따라 정규화된 바이트와 QA 입력 네 개를 새 검토 후보로 결속한다. 원본 보존·자체 QA 검사·새 증거 작성 한정이며 독립 수용·코드 게시 권한은 없다.
+
 - [최초 코드 게시의 새 현재 바이트 출처 기준 — Approved, 읽기 전용 조사](./work-contracts/2026-10-01-initial-code-publication-forward-provenance.md) · [v2 관측 보정 — Approved](./work-contracts/2026-10-01-initial-code-publication-forward-provenance-v2-correction.md) — 사용자 선택에 따라 과거 공백을 보존하고 현재 501파일을 새 기준으로 검증한다. v2 결과의 루나 독립 검수는 사용량 한도로 미완료이며 파일별 게시 허용과 코드 원격 게시 권한은 없다.
 
 - [현재 C3·C4 공동 수용](../approvals/2026-10-01-c3-c4-v15-joint-final-integration-acceptance.md) — Approved 계약의 현재 v19 동결 소스에서 C3 AC007/008과 C4 AC001..010을 공동 검증했다. 아래 진행 상태 문구는 해당 문서가 작성된 당시의 단계 기록이며, 최초 게임 코드의 원격 게시 권한은 별개다.
