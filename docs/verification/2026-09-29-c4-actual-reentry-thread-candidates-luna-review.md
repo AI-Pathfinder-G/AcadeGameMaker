@@ -1,0 +1,17 @@
+# C4 실제 취소 재진입·최초 실행 스레드 후보 독립 검토
+
+검토 대상 `docs/proposals/2026-09-29-c4-actual-reentry-and-thread-boundary-candidates.md`의 실제 SHA-256은 `F42A96EE86AD400588D2A1F36FDAAF7628C57AEACC8CFD30E390CC1AA3B11223`이다. C4 계약 SHA `3F29B8BC7D3F0172717C0FC94101BF4086FEE1FE475B65A3B2E67E0AE4FA5DC0`, R11 InputRouter `66CD817B322565753A3533EA93FFA2BD4E347B24C9A61D5F9C4A1A1169EC54AB`, C3 lower `ABD4B8CC79D0C24F16EB053B98460C68A466B03AABE0B2CFA01C7862BA027CB1`, C2 `60DFD415C0425F88046C47F51142749F230FF39CA7C81AEBA90D4C778993F275`, Play fixture `2FA406515CEB7C885A5F41EC6438ACC85123714AB00302B520A58B36066C9E23`, 설치 InputSystem 1.20.0 소스를 정적으로 대조했다.
+
+**판정: P0 0건, P1 3건 유지.** 제안은 기존 P1 A/B/C를 폐쇄하지 않는다. 새 취소 재진입 행, private 스레드 출생 증거, 미소비 wrong-thread 정책 모두 구현 승인과 실제 실행이 남아 있다. C4는 Review이고 진행 중인 Play610은 아직 결과가 없다.
+
+패키지 경로는 제안의 핵심 전제를 지지한다. `DisableAllActions`(1159~1178)는 활성 action의 `ResetActionState`를 호출하고, 진행 phase는 Canceled로 전이(889~929)되어 `m_Suppressed`가 아니면 리스너 호출(2699~2724, 2770~2774)에 이른다. Router의 실제 terminal 경로(402~421)는 terminal·capture 억제를 기록한 뒤 old UI를 Disable하고, 그 다음 Router callback을 해제한다. 따라서 old UI action이 그 시점에 실제 진행 중이라면 Router 외부 fixture 구독자의 동기 canceled listener가 C2 terminal 경로에서 같은 스레드 재진입을 시도할 수 있다는 정적 가능성이 있다. 다만 현재 fixture와 실행 결과가 그 진행 상태를 보장하지 않으므로 사건이 발생했다고 인정할 수 없다. Dispose만으로 두 번째 canceled를 보장하지 않는 구분도 타당하다.
+
+현재 Play의 `SelectInitialNewGame`(425~442)은 Enter 제출 뒤 437행에서 Presenter/Late 처리 후 `RequestReady`와 실제 NewGame 항목을 확인하고, 442행에서 다시 빈 Publish/PresenterFixed를 수행한다. 이 경로 그대로라면 C2 진입 때 Submit이 아직 진행 중이라고 할 수 없다. 별도 신규 fixture에서 실제 Enter 발행을 원래 C3 request/take/confirm/commit 경로에 연결하고 추가 release/publish로 상태를 지우지 않으려는 방향은 실행 가짜 상태보다 낫다. 실제 action phase가 살아 있는지 정상 입력 관측으로 확인하고, callback 발생이 없으면 이 행은 실패로 남겨야 한다. 동기 C2가 이미 실행된 다음 Router old UI Disable에서 재진입하는 행이므로, 입증 범위는 그 시점의 이미 소비된 request에 대한 C4 재호출 거절과 기존 winner의 단일 완료다. C1 내부 callback 없는 구간의 재진입이나 pre-auth 경쟁을 증명하지 않는다.
+
+fixture가 구독하는 패키지의 기존 `canceled` 이벤트는 새 제품 hook와 구별할 수 있다. 그러나 구독은 기존 입력 사건의 관측점일 뿐 제품 API의 재진입 방지 자체는 아니다. 패키지가 리스너 예외를 격리할 수 있으므로 callback 안 assertion만으로 시험을 끝내지 않고, 호출 결과/예외를 저장한 뒤 callback 바깥에서 검증해야 한다. callback에서 action 상태를 파괴·재갱신하거나 같은 terminal 작업을 추가 호출하지 않아야 하며, 구독 해제와 원래 C2 결과·receipt·history의 정확 비교가 필요하다. fixture 이벤트가 실제 발생했는지, listener가 같은 관리 스레드였는지, 재시도 거절이 비변경이었는지를 각각 증명해야 한다.
+
+최초 호출의 스레드 경계는 현재 소스에 birth witness가 없다. C3의 실제 request mint 경로(301~311)는 요청 witness/issued history를 등록하지만 thread reference는 기록하지 않는다. 현재 lower의 issued 요청 참조 검사(396~400)는 adapter의 Unity root 조회(408~412)보다 먼저라서, 적절한 새 private thread witness를 별도 사건에 결속하고 managed reference로 검사한다면 wrong-thread 최초 호출을 Unity 조회 전에 거절하는 설계 후보는 가능하다. 다만 이는 새 상태와 C3 발급 이력 변경이며 현재 Approved C3/허용 변경 범위로 자동 승인되지 않는다. 정상 C3 mint가 실제 Unity thread에서 일어난다는 별도 근거, witness 단일 손상 시 containment를 어떤 스레드에서 수행할지, 게이트 후 재인증과 기존 consumed loser의 선행 비변경 거절 순서를 먼저 승인해야 한다. `ManagedThreadId` 같은 재구성 가능한 숫자를 authority로 쓰거나 worker 최초 호출이 안전하다고 확대할 근거는 없다.
+
+결과적으로 canceled event 후보는 AC008의 한 실제 재진입 경계를 구체화하고, 소비 완료 worker는 같은 actual request의 late loser를 별도 검증할 수 있다. 그러나 둘은 서로 다른 사건이다. consumed-history 거절은 C1/C2 호출·승자 terminal 변경 전이어야 하며, 실제 winner 호출/완료·동일 C1/C2 1회·history 보존을 대조해야 한다. wrong-thread 미소비 최초 호출, callback 없는 동기 구간, 사전 인증 지연 경합은 이 두 행으로 닫히지 않는다. AC008 전체나 앞선 A/B/C P1 폐쇄 주장은 성립하지 않는다.
+
+필요한 후속 작업은 신규 fixture와 exact named selection, thread witness의 새 private 권한/이력 경계에 대한 별도 Approved amendment, 독립 정적 검수, 실제 실행이다. 이는 설계 가능성 검토이며 C4 구현 Ready/Approved 판정이 아니다. 소스·QA·기존 증거·Git·네트워크·Unity·컴파일을 변경하거나 실행하지 않았다.

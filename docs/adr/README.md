@@ -4,6 +4,11 @@ ADR은 쉽게 되돌리기 어렵고, 맥락 없이 보면 의외이며, 실제 
 
 | ADR | 상태 | 결정 |
 |---|---|---|
+| [0043](./0043-remove-terra-role.md) | accepted; 사용자 정정 | 테라 역할·작업자 이름 배정 제거, 솔 설계·구현 통합; 아스트라 승인·루나 독립 검증과 역사 증거 유지 |
+| [0042](./0042-chapter1-playable-first.md) | accepted; 우선순위 한정 | 본편 1챕터의 사용자 체험 빌드를 최우선으로 하고 단일 전투 연결을 기반 단계로 재배치; 제품 단계별 승인·독립 검수 유지 |
+| [0041](./0041-automatic-model-version-upgrade.md) | accepted; 사용자 명시 지시 | 실제 호출 가능한 같은 계열의 상위 안정 버전을 새 작업 배정부터 자동 적용하고 매시간 보조 확인 |
+| [0040](./0040-sol-terra-gpt61-routing.md) | accepted; 사용자 명시 지시 | 솔·테라 역할은 각각 `gpt-6.1-sol`, 루나는 `gpt-6-luna`로 즉시 배정; 과거 실제 모델과 독립 검수 분리 유지 |
+| [0039](./0039-play-first-integration-and-bounded-recovery.md) | accepted; 절차 한정 | 실제 플레이 통합을 다음 주력으로 배정하고 사전 정상 경로·영향별 검사·같은 실패 반복 종료 기준 적용; 기존 제품/Q0 관문 유지 |
 | [0038](./0038-forward-provenance-for-initial-code-publication.md) | accepted direction; file-by-file publication gated | 최초 게임 코드 게시의 현재 바이트를 새 독립 출처 기준으로 검증하고 과거 근거 공백은 보존 |
 | [0037](./0037-gpt6-role-model-migration.md) | accepted | 솔·테라·루나 역할을 호출 가능한 GPT-6 모델로 전환하고 5.6 신규·재시도 호출 금지 |
 | [0036](./0036-staged-confirmation-and-execution-acceptance.md) | accepted; execution implementation remains separately gated | 확인 소유자 선행 검증과 실제 실행 연결 공동 최종 검증을 분리하고 전체 수용 기준을 유지 |

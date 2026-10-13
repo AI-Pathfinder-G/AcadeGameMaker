@@ -1,0 +1,28 @@
+# Q0 신뢰 부모와 Unity 자식 실행 결속 계약 초안
+
+상태: **Draft**. 구현·키/원격·Unity 실행 승인이 아니다. 선행 `docs/specs/work-contracts/2026-10-02-q0-external-authority-issuance.md` SHA-256 `451998AB32068DF1879E76B0A4CEC2ACB13619CDE7D48F25CB1E0E25A88AADEC`의 수동 신뢰 경계와 `REQ-PLAT-061/062`, `AC-PLAT-059/060`을 따른다. 승인 계약이 허용한 현재 계획은 `ExecutionAuthorized=false`이며, 실제 아홉 선택 실행과 실행 nonce 소비는 **별도 Approved 실행 계약·아스트라 수동 개시 판정 전까지 금지**된다. 일반 `PlanPath,RepositoryRoot` 두 인자 C#·PowerShell 검증은 계속 종료 2다.
+
+## 실제 출발점과 정확 후속 허용 후보
+
+준비 복제 `output/q0-cleanclone-signed-prep-r1`의 네 C# 경로는 `Assets/AcadeGameMaker/Tests/EditMode/InputUnity/HubUiOnlyQ0ScopeAuditEditModeTests.cs`, `Assets/AcadeGameMaker/Tests/EditMode/HubPresentation/C4ExecutionBridgeStrictAuditTests.cs`, `Assets/AcadeGameMaker/Tests/EditMode/InputUnity/C4ActualExecutionEditFixtureV1.cs`, `Assets/AcadeGameMaker/Tests/PlayMode/InputUnity/C4ActualExecutionPlayFixtureV1.cs`다. 현재 Q0/fixture의 `RejectUnissuedCurrentSignedPlan`은 계획 **경로만** 환경에서 읽고 `pwsh` 두 인자 호출을 하며 종료 2를 실패로 처리한다. 이 기존 미발급 안전 상태를 역사로 보존한다.
+
+다섯 후속 도구는 같은 복제의 `artifacts/c4-canonical-verify-required-rows.ps1`, `c4-canonical-capture-inputs.ps1`, `c4-canonical-final-selected-run.ps1`, `c4-canonical-verify-run.ps1`, `c4-canonical-final-validation-queue.ps1`다. 공통 `artifacts/c4-canonical-verify-context.ps1`은 지금 두 인자에서 실패하며 SHA-256 `F9F6E549702D28508A6C8DE07FEAFB9F87D74203361CCE28122FB805F4C7284C`, 실제 Git 읽기 보조 `artifacts/c4-canonical-repository-binding.psm1`은 SHA-256 `E828AA40240CABF17E9B38DFC38477B0AA88C319CF7BBCA93AAEF5B9F67E51A3`이다. 저장소 보조는 실제 `rev-parse --show-toplevel`, `HEAD`, `HEAD^{tree}`, `ls-files -z`, `status --porcelain=v1 -z --untracked-files=all`과 원시 파일 SHA를 읽는다(39–79행). 도구들의 현재 `PlanSha256` 인자 일치는 여전히 권위가 아니다.
+
+후속 아스트라 승인 후보의 변경 허용 목록은 **별도 부재 확인 복제** `output/q0-trusted-child-r1`의 위 네 `.cs`와 다섯 `c4-canonical-*.ps1`, 공통 `c4-canonical-verify-context.ps1`, 새 `artifacts/c4-canonical-trusted-child-lease.psm1`뿐이다. 네 `.meta`, 원본·534 후보, 준비 복제, `qa/tools/Test-Q0FixedPlanAuthority.ps1`와 issuer v2, 게임 소스·자산·asmdef·설정·기존 원장/선택/행은 불변이다. 출력은 복제 밖 새 실행 점유·증거 경로로만 `CreateNew`; 정확 이름은 구현 승인 전에 동결한다. 이 추가 인터페이스와 그 SHA의 선행 완성 조건은 **후속 실행을 허용할 새 계획의 소스 동결과 발급**에만 적용한다. 현재 Approved 외부 발급 계약의 다섯 소스 준비와 `ExecutionAuthorized=false` 계획 한 건의 권위 발급·서명 검수는 그 계약의 시작 조건이 충족되면 먼저 진행할 수 있다. 미래 자식 인터페이스 미완성을 이유로 현재 발급을 중단하지 않는다. 현재 발급 성공은 실제 아홉 선택 실행이나 미래 소스 승인이 아니며, 현재 권위·키·서명을 이후 변경된 프로그램이나 새 실행 계획에 강제 재사용하지 않는다. 현재 발급 결과를 보존한 뒤 자식 구현·독립 검수·새 정확 실행 계획과 필요한 권위/키 세대의 기술 승인을 한 후속 실행 계약에서 묶어 진행한다. 새 키나 다른 소스 동결이 필요하면 해당 후속 계약이 정확 경로·세대·발급 범위를 먼저 승인하며 현재 한 번 발급 계약의 키 제한을 우회하지 않는다. 같은 사용자 기술 승인을 다시 묻거나 중간 문서만을 위한 별도 발급 단계를 추가하지 않는다.
+
+## 현재 수동 발급 호출과 후속 실행의 경계
+
+2026-10-02 실제 `gpt-6-astra`는 위 선후 관계를 판정했다. 현재 발급 계약 SHA `451998AB32068DF1879E76B0A4CEC2ACB13619CDE7D48F25CB1E0E25A88AADEC`는 변경하지 않는다. 주 조정자가 인증된 GitHub 연결 도구의 응답을 직접 확인하고 고정 저장소 ID·불변 커밋·경로·원시 blob·공개키/소스 SHA를 대조한 뒤, 자신이 시작한 단일 발급 프로세스의 표준입력으로 **공개 단계 자료만** 수동 전달하는 것은 현재 수동 신뢰 경계의 운반 수단으로 허용할 수 있다. 표준입력 그 자체나 입력 JSON의 `Authenticated=true`는 인증이 아니다. 발급 프로세스는 단계 순서·현재 세션/키 세대·동결값·엄격 필드를 다시 대조하고, 주 조정자가 외부 확인을 마친 값으로 그 호출 안의 `TrustedRootContext`를 생성한다. 임의 입력자가 제공한 권위 객체를 역직렬화하여 신뢰하지 않으며, 환경·파일·일반 CLI 우회나 연결 도구 대신 임의 SHA만 맞추는 호출은 거절한다. 조정자의 실제 인증 조회 응답과 전달한 공개 자료의 지문을 증거에 남긴다. 개인키·내부 세션 객체는 표준입력/출력으로 전달하지 않는다. 기존 45분 단조 기한·입력 대기 만료·실패 즉시 폐기·한 번 결속/서명은 그대로다. 이는 별도 프로세스에 인증 자격증명을 부여하거나 동일 계정의 임의 코드를 격리한다는 주장이 아니다.
+## 부모가 가진 권위와 일회 전달
+
+아스트라는 인증 GitHub 읽기로 고정한 저장소 ID·불변 커밋·권위 blob을 현재 검증 소스 SHA와 직접 대조한 **같은 수동 부모 호출**에서만 `Confirm-Q0FixedPlanAuthority(PlanPath,RepositoryRoot,TrustedRootContext)`를 실행한다. `TrustedRootContext`는 파일·환경·CLI 역직렬화가 아닌 그 호출의 메모리 객체다. 부모는 정확 계획/서명·현재 세대/문맥을 검증하고, 별도 실행 승인이 있을 때 계획의 32자리 nonce와 `InvocationId`를 키로 복제 밖 점유 파일을 `CreateNew`로 **자식 시작 전에** 기록한다. 이미 사용/존재/실패 중단된 nonce는 재사용·재개하지 않는다. 이 점유는 실행 단위 하나이며 아홉 선택과 그 행 검증이 하나의 계획 아래 순차로 묶인다.
+
+부모는 살아 있는 동안 자기가 시작한 PowerShell 큐→선택 runner→Unity/검증기 프로세스의 PID·생성시각·부모 관계와 계획 SHA, 정확 `Stem`, 역할을 보관한다. 계획의 `InvocationId`로 찾는 로컬 일시 통신 채널에서 자식은 자신의 PID·계획 원시 SHA·역할/Stem을 보내고, 부모는 실제 OS 연결 프로세스와 자신이 시작한 프로세스 계보를 대조한 다음 **그 자식/역할/Stem에만** 무작위 일회 도전값과 검증된 권위 요약을 메모리로 돌려준다. 도전값은 한 번 응답되면 부모 원장에서 소비한다. 채널 이름·계획 경로·SHA·JSON만으로 양성 반환하지 않는다. 사용 가능한 Windows 프로세스/파이프 PID 조회 API와 Unity 편집기 조립 지원은 구현 전 설치 참조로 확인하고, 미지원이면 가짜 전역 토큰이나 파일 영수증으로 대체하지 않고 중단한다. 이 설계는 같은 계정의 악성 코드 격리를 주장하지 않는다.
+
+자식 쪽 공통 helper는 받은 요약을 **현재 부모와 일회 연결의 결과**로만 취급한다. 각 C# 시험/fixture 및 PowerShell 도구는 원시 계획·분리 서명 레코드와 동결 공개키/권위 요약의 일치를 직접 다시 확인하고, 독립적으로 실제 Git 청결·정규화 절대 루트·HEAD/tree·tracked 경로/바이트 SHA를 읽는다. 부모의 빈 Git 출력, 클라이언트가 쓴 `Approved=true`, 환경 SHA는 사용하지 않는다. 환경변수는 복제 밖 계획 **경로 하나**만 제공한다. 자식은 동일 `InvocationId/Stem/role`을 매 단계 비교하고 일회 채널이 없거나 두 인자 직접 실행이면 기존 종료 2를 유지한다. 고정 검증기의 원래 수동 3인자 권위 함수 자체를 자식 프로세스로 직렬화/이전하지 않는다.
+
+## 아홉 선택과 판정 보존
+
+큐는 잠금/실제 계획·입력 재검사 뒤 `Edit139`, `Play32`, `Hub5`, `Matrix91`, `Remaining149`, `Play15`, `Edit562`, `Worker51`, `Play610`의 **최종 원장에 동결된 정확 이름·순서·선택자**로만 자식을 시작한다. 각 선택 전·후 및 각 자식 진입에서 부모 결속과 실제 clean-clone Git/입력 SHA를 다시 확인한다. C4 188행, C3 377행의 ID·내용·순서와 필요한 0행의 예상 밖 행 거절, 부모 XML 결과 일치, 180초·실제 native/QA/outer 종료 0·건너뜀/실패/중복/누락 0을 유지한다. 긴 Play610에서도 부모 세션·점유는 종료까지 살아 있어야 하며 부모 사망/채널 단절은 전체 실행을 실패 종료시키고 nonce를 소모 상태로 남긴다. 실행 산출물은 복제 밖에서만 생성해 `git status`를 오염시키지 않는다. 과거 원시25/현재 정규화 바이트를 별도 권위로 검사하고, 과거 검수 문서를 현행 소스의 독립 검수로 바꾸지 않는다.
+
+격리 음성 시험에는 부모 없이 직접 C#/도구 호출, 임의 일치 계획/SHA·권위 파일·환경 키, 다른 공개키/과거 세대, 다른 PID·Stem·역할, 도전값 재사용·순서 뒤바뀜·부모 종료, 두 번째 큐/동일 nonce, 단계 사이 staged/unstaged/untracked·HEAD/tree/파일 SHA 변경, 출력 복제 내부 쓰기, 188/377행 또는 아홉 선택 누락을 넣는다. 신뢰 부모의 실제 외부 인증과 진짜 운영 서명·Git clean clone·Unity 아홉 실행의 양성은 합성 시험으로 대신하지 않는다. 테라 구현, 루나 독립 검수, 아스트라의 별도 실행 승인과 결과 수용 전에는 `AC-PLAT-059/060`, 전체 의존 폐쇄 또는 게시 허가를 참으로 기록하지 않는다.
