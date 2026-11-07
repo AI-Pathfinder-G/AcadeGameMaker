@@ -1,0 +1,21 @@
+{
+  "name": "AcadeGameMaker.Movement.PlayMode.Tests",
+  "rootNamespace": "AcadeGameMaker.Tests.PlayMode.Movement",
+  "references": [
+    "AcadeGameMaker.Core",
+    "AcadeGameMaker.Movement",
+    "AcadeGameMaker.Movement.Unity"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

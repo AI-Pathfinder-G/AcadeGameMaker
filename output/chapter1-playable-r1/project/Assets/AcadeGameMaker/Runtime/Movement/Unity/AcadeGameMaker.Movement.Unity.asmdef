@@ -1,0 +1,17 @@
+{
+  "name": "AcadeGameMaker.Movement.Unity",
+  "rootNamespace": "AcadeGameMaker.Movement",
+  "references": [
+    "AcadeGameMaker.Core",
+    "AcadeGameMaker.Movement"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

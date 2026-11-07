@@ -1,0 +1,21 @@
+{
+  "name": "AcadeGameMaker.Transfer.Unity.PlayMode.Tests",
+  "rootNamespace": "AcadeGameMaker.Tests.PlayMode.TransferUnity",
+  "references": [
+    "AcadeGameMaker.Core",
+    "AcadeGameMaker.Transfer",
+    "AcadeGameMaker.Transfer.Unity",
+    "AcadeGameMaker.Movement",
+    "AcadeGameMaker.Movement.Unity"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": ["TestAssemblies"]
+}

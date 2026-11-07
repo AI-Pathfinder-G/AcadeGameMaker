@@ -1,0 +1,19 @@
+{
+  "name": "AcadeGameMaker.Camera.EditMode.Tests",
+  "rootNamespace": "AcadeGameMaker.Tests.EditMode.Camera",
+  "references": [
+    "AcadeGameMaker.Core",
+    "AcadeGameMaker.Movement",
+    "AcadeGameMaker.Camera"
+  ],
+  "includePlatforms": ["Editor"],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": true,
+  "optionalUnityReferences": ["TestAssemblies"]
+}

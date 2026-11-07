@@ -1,0 +1,15 @@
+{
+  "name": "AcadeGameMaker.Combat.Unity.EditMode.Tests",
+  "rootNamespace": "AcadeGameMaker.Tests.EditMode.CombatUnity",
+  "references": ["AcadeGameMaker.Core", "AcadeGameMaker.Combat", "AcadeGameMaker.Movement", "AcadeGameMaker.Movement.Unity", "AcadeGameMaker.Transfer", "AcadeGameMaker.Transfer.Unity", "AcadeGameMaker.Combat.Unity", "AcadeGameMaker.Combat.Authoring.Editor", "AcadeGameMaker.Input.Unity", "AcadeGameMaker.Camera.Unity", "Unity.RenderPipelines.Universal.Runtime", "Unity.RenderPipelines.Universal.2D.Runtime"],
+  "includePlatforms": ["Editor"],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": ["TestAssemblies"]
+}

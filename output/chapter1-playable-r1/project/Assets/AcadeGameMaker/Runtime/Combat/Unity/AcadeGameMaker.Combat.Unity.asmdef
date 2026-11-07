@@ -1,0 +1,21 @@
+{
+  "name": "AcadeGameMaker.Combat.Unity",
+  "rootNamespace": "AcadeGameMaker.Combat.Unity",
+  "references": [
+    "AcadeGameMaker.Core",
+    "AcadeGameMaker.Combat",
+    "AcadeGameMaker.Movement",
+    "AcadeGameMaker.Movement.Unity",
+    "AcadeGameMaker.Transfer",
+    "AcadeGameMaker.Transfer.Unity"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

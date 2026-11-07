@@ -1,0 +1,27 @@
+{
+  "name": "AcadeGameMaker.Combat.Authoring.Editor",
+  "rootNamespace": "AcadeGameMaker.Combat.Authoring",
+  "references": [
+    "AcadeGameMaker.Core",
+    "AcadeGameMaker.Movement",
+    "AcadeGameMaker.Movement.Unity",
+    "AcadeGameMaker.Transfer",
+    "AcadeGameMaker.Transfer.Unity",
+    "AcadeGameMaker.Combat",
+    "AcadeGameMaker.Combat.Unity",
+    "AcadeGameMaker.Input.Unity",
+    "AcadeGameMaker.Camera",
+    "AcadeGameMaker.Camera.Unity",
+    "AcadeGameMaker.Camera.Authoring.Editor",
+    "Unity.RenderPipelines.Universal.Runtime",
+    "Unity.RenderPipelines.Universal.2D.Runtime",
+    "Unity.TextMeshPro",
+    "AcadeGameMaker.Hub.Presentation.Unity",
+    "AcadeGameMaker.Run.Unity",
+    "Unity.InputSystem"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "autoReferenced": true
+}

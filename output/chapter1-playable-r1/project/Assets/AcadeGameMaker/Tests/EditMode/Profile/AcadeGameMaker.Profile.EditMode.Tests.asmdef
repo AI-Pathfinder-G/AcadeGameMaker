@@ -1,0 +1,15 @@
+{
+  "name": "AcadeGameMaker.Profile.EditMode.Tests",
+  "rootNamespace": "AcadeGameMaker.Tests.EditMode.Profile",
+  "references": ["AcadeGameMaker.Profile"],
+  "includePlatforms": ["Editor"],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": ["TestAssemblies"]
+}

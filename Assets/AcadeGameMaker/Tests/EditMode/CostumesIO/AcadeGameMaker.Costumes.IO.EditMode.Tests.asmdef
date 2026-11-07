@@ -1,0 +1,15 @@
+{
+  "name": "AcadeGameMaker.Costumes.IO.EditMode.Tests",
+  "rootNamespace": "AcadeGameMaker.Tests.EditMode.CostumesIO",
+  "references": ["AcadeGameMaker.Costumes.IO", "AcadeGameMaker.Costumes"],
+  "includePlatforms": ["Editor"],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": true,
+  "optionalUnityReferences": ["TestAssemblies"]
+}

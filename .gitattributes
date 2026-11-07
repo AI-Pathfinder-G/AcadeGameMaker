@@ -30,3 +30,15 @@
 *.kra filter=lfs diff=lfs merge=lfs -text
 *.aseprite filter=lfs diff=lfs merge=lfs -text
 
+
+# Preserve the approved delivery source bytes and its diagnostic delta.
+/output/chapter1-playable-r1/project/** -text
+/output/chapter1-boot-input-probe-20261024/project/** -text
+
+# Keep SHA-pinned CH1 evidence and checkpoint records byte-identical.
+/output/ch1-*-20261029/** -text
+/output/ch1-*-20261030/** -text
+/output/ch1-*-20261031/** -text
+/preparation/session-integration-20261104/** -text
+/docs/approvals/2026-10-24-resume-interface-limited-integration.md -text
+/docs/verification/2026-10-24-resume-interface-luna-review.md -text

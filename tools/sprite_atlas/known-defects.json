@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "notes": [
+    {"jobId":"09-doeon-movement","disposition":"needs-review","reason":"Known row boundaries require manual visual review; candidate horizontal separations were reported near y=290, 545, and 790."}
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "AcadeGameMaker.Input.Unity.PlayMode.Tests",
+  "rootNamespace": "AcadeGameMaker.Tests.PlayMode.InputUnity",
+  "references": [
+    "AcadeGameMaker.Core",
+    "AcadeGameMaker.Camera",
+    "AcadeGameMaker.Camera.Unity",
+    "Unity.RenderPipelines.Universal.Runtime", "Unity.RenderPipelines.Universal.2D.Runtime",
+    "AcadeGameMaker.Input",
+    "AcadeGameMaker.Input.Unity",
+    "AcadeGameMaker.Movement",
+    "AcadeGameMaker.Movement.Unity",
+    "AcadeGameMaker.Transfer",
+    "AcadeGameMaker.Transfer.Unity",
+    "AcadeGameMaker.Combat",
+    "AcadeGameMaker.Combat.Unity",
+    "Unity.InputSystem",
+    "Unity.InputSystem.TestFramework",
+    "AcadeGameMaker.Profile"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

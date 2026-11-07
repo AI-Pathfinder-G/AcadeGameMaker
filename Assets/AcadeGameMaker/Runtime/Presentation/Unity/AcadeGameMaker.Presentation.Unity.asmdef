@@ -1,0 +1,14 @@
+{
+  "name": "AcadeGameMaker.Presentation.Unity",
+  "rootNamespace": "AcadeGameMaker.Presentation.Unity",
+  "references": ["AcadeGameMaker.Costumes", "AcadeGameMaker.Costumes.IO", "AcadeGameMaker.Presentation"],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

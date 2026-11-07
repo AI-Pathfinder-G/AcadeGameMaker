@@ -1,0 +1,174 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8712516618853309103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6730966502732490916}
+  - component: {fileID: 1020250509123595814}
+  - component: {fileID: 3338866019738479826}
+  - component: {fileID: 4036018015269650488}
+  - component: {fileID: 6176176731474530971}
+  - component: {fileID: 1961000944490099942}
+  m_Layer: 0
+  m_Name: Surveyor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6730966502732490916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712516618853309103}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1020250509123595814
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712516618853309103}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &3338866019738479826
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712516618853309103}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.8, y: 1.6}
+  m_EdgeRadius: 0
+--- !u!114 &4036018015269650488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712516618853309103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9fae5386f9b4e3ba79283c3d1a26355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AcadeGameMaker.Transfer.Unity::AcadeGameMaker.Transfer.Unity.RegularEnemyTransferModifierSink
+  _targetId: surveyor
+  _baseModifierProfileId: Enemy.Regular.Baseline.v1
+--- !u!114 &6176176731474530971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712516618853309103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917ee41c4a424c299c638d5b54ad3171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AcadeGameMaker.Transfer.Unity::AcadeGameMaker.Transfer.Unity.TransferTarget
+  _targetId: surveyor
+  _kind: 1
+  _localAimPointXQ1000: 0
+  _localAimPointYQ1000: 0
+  _localAimShapeCenterXQ1000: 0
+  _localAimShapeCenterYQ1000: 0
+  _localAimShapeHalfExtentXQ1000: 400
+  _localAimShapeHalfExtentYQ1000: 800
+  _baseModifierProfileId: Enemy.Regular.Baseline.v1
+  _targetCollider: {fileID: 3338866019738479826}
+  _targetPoseRoot: {fileID: 6730966502732490916}
+  _targetOwnerSink: {fileID: 4036018015269650488}
+--- !u!114 &1961000944490099942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8712516618853309103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390da8d2841a4866aaa555b29a2eb2a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AcadeGameMaker.Combat.Unity::AcadeGameMaker.Combat.Unity.CombatTarget
+  _targetId: surveyor
+  _maxHealth: 6
+  _invulnerabilityTicks: 0
+  _canReceivePlayerBasicAttack: 1
+  _localAimPointXQ1000: 0
+  _localAimPointYQ1000: 0
+  _localAimShapeCenterXQ1000: 0
+  _localAimShapeCenterYQ1000: 0
+  _localAimShapeHalfExtentXQ1000: 400
+  _localAimShapeHalfExtentYQ1000: 800
+  _targetCollider: {fileID: 3338866019738479826}
+  _targetPoseRoot: {fileID: 6730966502732490916}
+  _transferTarget: {fileID: 6176176731474530971}

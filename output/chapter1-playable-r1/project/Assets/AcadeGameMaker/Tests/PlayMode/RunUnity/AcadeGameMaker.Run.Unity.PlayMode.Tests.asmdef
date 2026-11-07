@@ -1,0 +1,9 @@
+{
+  "name": "AcadeGameMaker.Run.Unity.PlayMode.Tests",
+  "rootNamespace": "AcadeGameMaker.Tests.PlayMode.RunUnity",
+  "references": ["AcadeGameMaker.Run", "AcadeGameMaker.Run.Unity", "AcadeGameMaker.Input.Unity", "AcadeGameMaker.Core", "AcadeGameMaker.Profile", "Unity.InputSystem", "Unity.InputSystem.TestFramework", "AcadeGameMaker.Transfer.Unity", "AcadeGameMaker.Combat.Unity", "AcadeGameMaker.Movement.Unity", "AcadeGameMaker.Hub.Presentation.Unity", "Unity.TextMeshPro", "AcadeGameMaker.Combat", "AcadeGameMaker.Movement"],
+  "includePlatforms": [], "excludePlatforms": [], "allowUnsafeCode": false,
+  "overrideReferences": false, "precompiledReferences": [], "autoReferenced": false,
+  "defineConstraints": [], "versionDefines": [], "noEngineReferences": false,
+  "optionalUnityReferences": ["TestAssemblies"]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "AcadeGameMaker.Costumes",
+  "rootNamespace": "AcadeGameMaker.Costumes",
+  "references": [], "includePlatforms": [], "excludePlatforms": [],
+  "allowUnsafeCode": false, "overrideReferences": false, "precompiledReferences": [],
+  "autoReferenced": true, "defineConstraints": [], "versionDefines": [], "noEngineReferences": true
+}

@@ -1,0 +1,24 @@
+{
+  "name": "AcadeGameMaker.Movement.EditMode.Tests",
+  "rootNamespace": "AcadeGameMaker.Tests.EditMode.Movement",
+  "references": [
+    "AcadeGameMaker.Core",
+    "AcadeGameMaker.Movement",
+    "AcadeGameMaker.Movement.Unity",
+    "AcadeGameMaker.Movement.Authoring.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "requirements": [
+    "REQ-ART-005",
+    "REQ-ART-008",
+    "REQ-ART-013",
+    "REQ-ART-014",
+    "REQ-CH1-008"
+  ],
+  "acceptance": [
+    "AC-ORD-DISPLAY-001",
+    "AC-ORD-DISPLAY-002",
+    "AC-ORD-DISPLAY-003",
+    "AC-ORD-DISPLAY-004"
+  ],
+  "meaning": "이번 승인에서 양방향 정적 표시용 신규 세부를 채택했습니다. 기존 왼쪽 미수용은 불변입니다.",
+  "sources": [
+    {
+      "path": "output/ch1-enemy-art-20261029/profile-correction-record.json",
+      "sha256": "0B29DFFD55C18AC21BAA21D524008C0819E41F687190A4BF7A7903210149AA1E"
+    },
+    {
+      "path": "output/ch1-enemy-art-20261029/profile-right-luna-review.md",
+      "sha256": "621E12A9798E545C7E6454DF5570185D8ACF8230E47BBCA86EE6C2EFD188FF50"
+    },
+    {
+      "path": "output/ch1-enemy-art-20261029/profile-left-luna-review.md",
+      "sha256": "A3CF13C903DBD1B0DD38A591D6799FDD98FF08F67F7C4882A60879BB8F02B987"
+    },
+    {
+      "path": "output/ch1-enemy-art-20261029/ordan-static-display-scope-decision.md",
+      "sha256": "BC053E440E5B50A04CABEA6F66B127263461B8F4FF90B9638DD7783F51FD86A7"
+    },
+    {
+      "path": "output/ch1-enemy-art-20261029/final-integration-decision.md",
+      "sha256": "CDC145E9C8B658C5A95AE774CA6F6708260EBCDF7278A36840EA24FA0C73937D"
+    }
+  ]
+}
