@@ -497,7 +497,8 @@ namespace AcadeGameMaker.Input.Unity
             var threat=new Chapter1VerificationBossPolicy.Threat(state.ActiveStage,state.IsAccelerated,hostile.LatestOutcome.Digest.Disposition==OrdanBossHostileDisposition.Queued,
                 hostile.LatestOutcome.Observation.Contact,hostile.LatestOutcome.Observation.Occluded,pull.LatestOutcome.Disposition==OrdanBossBalanceAuditPullDisposition.Queued,
                 pull.AuthoredAnchorXQ4096,pull.AuthoredAnchorYQ4096,pull.AuthoredMaximumStepQ4096,
-                bridge.LatestOutcome.SeizureTrajectoryProjection.HasValue?bridge.LatestOutcome.SeizureTrajectoryProjection.Value.FrozenDuration:0);
+                bridge.LatestOutcome.SeizureTrajectoryProjection.HasValue?bridge.LatestOutcome.SeizureTrajectoryProjection.Value.FrozenDuration:0,
+                pose.WallSide!=AcadeGameMaker.Movement.WallSide.None || !string.IsNullOrEmpty(pose.WallId));
             var observedRun=evidence.RunKey;var observedGeneration=evidence.Generation;var observedTick=evidence.Tick.Value;
             var observedX=pose.PositionXQ4096/4096f;var observedY=pose.PositionYQ4096/4096f;var observedVx=pose.VelocityXQ4096/4096f;
             var observedGrounded=pose.IsGrounded;var observedLocked=player.IsInputGateLocked;var observedFocused=ControlAvailable;var observedAim=aimValid && evidence.AliveEnemyCount>0;
@@ -973,10 +974,11 @@ namespace AcadeGameMaker.Input.Unity
         private bool TryContinueOwnedJump(int tick,float x,float y,float vx,float vy,bool grounded,bool locked,OrdanPatternSlot slot,OrdanBossPhase phase,int age,float latency,Threat threat,out int direction)
         {
             direction=0;
-            if(!_carryActive || !_ownedIdentityBound || !_ownedIdentity.Same(_tokenIdentity) || !_spaceObserved || !_spaceHeld || _launchSequence<0 || tick!=_carryTick+1 || (_carryTick!=_launchTick && _lastOwnedSequence<=_carryReadSequence) || tick>=_carryUntil || grounded || locked || !_focused || _resume || !float.IsFinite(x)||!float.IsFinite(y)||!float.IsFinite(vx)||!float.IsFinite(vy)||!float.IsFinite(latency)||latency<=0 || slot!=_launchSlot || phase!=OrdanBossPhase.Telegraph || age<1 || age>46 || tick-age!=_launchPhaseStart || threat.Stage<OrdanHealthStage.Stage1 || threat.Stage>OrdanHealthStage.Stage3 || threat.Queued || threat.Contact || threat.Pulling)
+            if(!_carryActive || !_ownedIdentityBound || !_ownedIdentity.Same(_tokenIdentity) || !_spaceObserved || !_spaceHeld || _launchSequence<0 || tick!=_carryTick+1 || (_carryTick!=_launchTick && _lastOwnedSequence<=_carryReadSequence) || tick>=_carryUntil || grounded || locked || !_focused || _resume || !float.IsFinite(x)||!float.IsFinite(y)||!float.IsFinite(vx)||!float.IsFinite(vy)||!float.IsFinite(latency)||latency<=0 || slot!=_launchSlot || phase!=OrdanBossPhase.Telegraph || age<1 || age>46 || tick-age!=_launchPhaseStart || threat.Stage<OrdanHealthStage.Stage1 || threat.Stage>OrdanHealthStage.Stage3 || threat.Queued || threat.Contact || threat.Pulling || threat.WallContact)
             {InvalidateOwnedJump();return false;}
             var low=x+Math.Min(vx,_launchDirection*8f)*latency-.02f;var high=x+Math.Max(vx,_launchDirection*8f)*latency+.02f;var half=OrdanBossHostileDamageProducer.ApprovedPlayerHalfWidth/4096f;
             if(low-half<=OrdanBossHostileDamageProducer.ApprovedArena.MinX/4096f || high+half>=OrdanBossHostileDamageProducer.ApprovedArena.MaxX/4096f){InvalidateOwnedJump();return false;}
+            if(!OwnedDebtLineEnvelopeClear(x,y,vx,vy,_launchDirection,slot,age,latency)){InvalidateOwnedJump();return false;}
             _carryTick=tick;_carryReadSequence=_lastOwnedSequence;direction=_launchDirection;return true;
         }
         private string _run;private long _generation;private int _tick=-1,_pressTick=-1,_jumpStart=-1,_jumpUntil=-1;
@@ -1005,7 +1007,7 @@ namespace AcadeGameMaker.Input.Unity
             _tick=tick;
             var keys=new List<Key>();
             var threat=observedThreat??new Threat(OrdanHealthStage.Stage1,false,false,false,false,false,28672,4915,410,0);
-            if(_carryActive && (locked || grounded || threat.Queued || threat.Contact || threat.Pulling || !_ownedIdentityBound || !_ownedIdentity.Same(_tokenIdentity)))InvalidateOwnedJump();
+            if(_carryActive && (locked || grounded || threat.Queued || threat.Contact || threat.Pulling || threat.WallContact || !_ownedIdentityBound || !_ownedIdentity.Same(_tokenIdentity)))InvalidateOwnedJump();
             if(!TrySafeIntent(x,y,vx,vy,grounded,locked,slot,phase,age,latency,threat,out var direction,out var jump,out var reason))
             {if(reason!="모든 정상 이동/점프 후보의 예고 도달·벽·실제 패턴 안전을 입증할 수 없음" || !TryContinueOwnedJump(tick,x,y,vx,vy,grounded,locked,slot,phase,age,latency,threat,out direction)){InvalidateOwnedJump();Unresolved=reason;_last=new Command(Array.Empty<Key>(),false);return _last;}}
             if(_carryActive && tick!=_carryTick){if(tick==_carryTick+1 && tick<_carryUntil && phase==OrdanBossPhase.Telegraph && slot==_launchSlot && tick-age==_launchPhaseStart)_carryTick=tick;else InvalidateOwnedJump();}
@@ -1021,9 +1023,9 @@ namespace AcadeGameMaker.Input.Unity
         }
         internal readonly struct Threat
         {
-            internal Threat(OrdanHealthStage stage,bool accelerated,bool queued,bool contact,bool occluded,bool pulling,int anchorX,int anchorY,int maximumStep,int seizureDuration)
-            {Stage=stage;Accelerated=accelerated;Queued=queued;Contact=contact;Occluded=occluded;Pulling=pulling;AnchorX=anchorX;AnchorY=anchorY;MaximumStep=maximumStep;SeizureDuration=seizureDuration;}
-            internal OrdanHealthStage Stage {get;} internal bool Accelerated {get;} internal bool Queued {get;} internal bool Contact {get;} internal bool Occluded {get;} internal bool Pulling {get;}
+            internal Threat(OrdanHealthStage stage,bool accelerated,bool queued,bool contact,bool occluded,bool pulling,int anchorX,int anchorY,int maximumStep,int seizureDuration,bool wallContact=false)
+            {Stage=stage;Accelerated=accelerated;Queued=queued;Contact=contact;Occluded=occluded;Pulling=pulling;AnchorX=anchorX;AnchorY=anchorY;MaximumStep=maximumStep;SeizureDuration=seizureDuration;WallContact=wallContact;}
+            internal OrdanHealthStage Stage {get;} internal bool Accelerated {get;} internal bool Queued {get;} internal bool Contact {get;} internal bool Occluded {get;} internal bool Pulling {get;} internal bool WallContact {get;}
             internal int AnchorX {get;} internal int AnchorY {get;} internal int MaximumStep {get;} internal int SeizureDuration {get;}
         }
         // Conservative certificates, not a replacement simulation: unproved alternatives fail neutral.
@@ -1079,6 +1081,46 @@ namespace AcadeGameMaker.Input.Unity
                 direction=candidate;return true;
             }
             reason="모든 정상 이동/점프 후보의 예고 도달·벽·실제 패턴 안전을 입증할 수 없음";return false;
+        }
+        // REQ-BAP-CARRY-001 / AC-SOP-004. A certificate for this already-owned jump only, never a physics replay.
+        // COM emits once at Execute age 0 (tick t); contact uses player pose t-1 and queues damage for t+1.
+        // Check the exact prior-pose horizon plus two conservative samples; delivery is not another attack frame.
+        internal static bool OwnedDebtLineEnvelopeClear(float x,float y,float vx,float vy,int direction,OrdanPatternSlot slot,int age,float latency)
+        {
+            if((slot!=OrdanPatternSlot.DebtLineA && slot!=OrdanPatternSlot.DebtLineB) || age<1 || age>46 || direction<-1 || direction>1 ||
+                !float.IsFinite(x) || !float.IsFinite(y) || !float.IsFinite(vx) || !float.IsFinite(vy) || !float.IsFinite(latency) || latency<=0 ||
+                Math.Abs(vx)>8.001f || vy>14.391f || vy< -22.001f)return false;
+            var halfWidth=OrdanBossHostileDamageProducer.ApprovedPlayerHalfWidth/4096f;
+            var halfHeight=OrdanBossHostileDamageProducer.ApprovedPlayerHalfHeight/4096f;
+            var arena=OrdanBossHostileDamageProducer.ApprovedArena;
+            var floor=arena.MinY/4096f+halfHeight;
+            if(y<floor-.03f)return false;
+            var fireInTicks=checked(48-age);var seconds=fireInTicks/60f;
+            var first=checked(fireInTicks-1)/60f;var last=checked(fireInTicks+1)/60f;
+            var line=slot==OrdanPatternSlot.DebtLineA?OrdanBossHostileDamageProducer.ApprovedDebtLineA:OrdanBossHostileDamageProducer.ApprovedDebtLineB;
+            var clearance=line.MaxY/4096f+halfHeight+.02f;
+            if(Math.Min(LowerBallisticHeight(y,vy,first),LowerBallisticHeight(y,vy,last))<=clearance)return false;
+            // Round below the slowest authored gravity (Q4096 * .65) and fall cap for an upper flight bound.
+            // Holding the original Space avoids jump-cut; any release, pull, lock or contact revokes the owner before here.
+            const float slowGravity=19.96f;const float slowFall=15.39f;
+            var upperVelocity=Math.Max(vy,-slowFall);
+            var apex=y+Math.Max(0,upperVelocity)*Math.Max(0,upperVelocity)/(2*slowGravity)+.03f;
+            if(apex+halfHeight+.02f>=arena.MaxY/4096f)return false;
+            var height=Math.Max(0,y-floor+.03f);
+            var terminalTime=Math.Max(0,(upperVelocity+slowFall)/slowGravity);
+            var landing=(upperVelocity+(float)Math.Sqrt(upperVelocity*upperVelocity+2*slowGravity*height))/slowGravity;
+            if(landing>terminalTime)
+            {var terminalHeight=height+upperVelocity*terminalTime-.5f*slowGravity*terminalTime*terminalTime;landing=terminalTime+Math.Max(0,terminalHeight)/slowFall;}
+            // Fastest Stage3 Debt Execute18 + Recovery33 precede the unscaled next Telegraph60.
+            // Land before its start; earliest next hostile sample is Execute tick minus one, not damage delivery.
+            if(!float.IsFinite(landing) || landing>=seconds+51f/60f || landing+latency>=seconds+110f/60f)return false;
+            var low=x+Math.Min(vx,direction*8f)*landing-.02f;
+            var high=x+Math.Max(vx,direction*8f)*landing+.02f;
+            if(low-halfWidth<=arena.MinX/4096f || high+halfWidth>=arena.MaxX/4096f)return false;
+            // This corridor remains wholly left of the authored boss body through landing.
+            // General right-region candidates are handled first by the unchanged ordinary selector.
+            if(high+halfWidth>=OrdanBossHostileDamageProducer.ApprovedOrdanBody.MinX/4096f)return false;
+            return true;
         }
         internal static float LowerBallisticHeight(float y,float velocity,float seconds)=>y+velocity*seconds-15.36f*seconds*seconds-.256f*seconds-.03f;
         internal static float GuaranteedRightReach(float x,float vx,float seconds)

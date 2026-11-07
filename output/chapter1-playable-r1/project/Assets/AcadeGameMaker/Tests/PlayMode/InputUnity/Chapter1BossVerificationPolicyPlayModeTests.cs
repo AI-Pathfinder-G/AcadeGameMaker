@@ -425,13 +425,13 @@ namespace AcadeGameMaker.Tests.PlayMode.InputUnity
     {
         private readonly object _issuer=new object(),_lease=new object(),_router=new object(),_player=new object();
         private Chapter1VerificationBossPolicy.OwnedJumpIdentity Identity(long epoch=1,long cycle=1,long mode=1)=>new Chapter1VerificationBossPolicy.OwnedJumpIdentity(_issuer,_lease,_router,_player,"source","case","birth",1,epoch,cycle,mode,true);
-        private static Chapter1VerificationBossPolicy.Threat Threat(bool queued=false,bool contact=false,bool pulling=false)=>new Chapter1VerificationBossPolicy.Threat(OrdanHealthStage.Stage1,false,queued,contact,false,pulling,28672,4915,410,0);
+        private static Chapter1VerificationBossPolicy.Threat Threat(bool queued=false,bool contact=false,bool pulling=false,bool wall=false)=>new Chapter1VerificationBossPolicy.Threat(OrdanHealthStage.Stage1,false,queued,contact,false,pulling,28672,4915,410,0,wall);
         private void Consume(Chapter1VerificationBossPolicy p,Key[] keys,long sequence,bool ready=true,long epoch=1,long cycle=1)
         {p.ObserveOwnedConsumption(_issuer,_lease,"source","case","birth",1,epoch,cycle,keys,sequence,ready);}
         private Chapter1VerificationBossPolicy Ready()
         {var p=new Chapter1VerificationBossPolicy();p.BindOwnedJump(Identity());p.Consumed(false,true,1);p.Consumed(false,true,2);Consume(p,Array.Empty<Key>(),1);Consume(p,Array.Empty<Key>(),2);return p;}
-        private static Chapter1VerificationBossPolicy.Command Read(Chapter1VerificationBossPolicy p,int tick=101,int age=3,bool grounded=false,bool locked=false,bool focus=true,float x=-7f,bool queued=false,bool contact=false,bool pulling=false,OrdanPatternSlot slot=OrdanPatternSlot.DebtLineA,OrdanBossPhase phase=OrdanBossPhase.Telegraph,bool aim=false,int cooldown=0)
-        {return p.Read("run",1,tick,x,1.04f,.333f,grounded,locked,focus,aim,cooldown,slot,phase,age,.35f,13.88f,Threat(queued,contact,pulling));}
+        private static Chapter1VerificationBossPolicy.Command Read(Chapter1VerificationBossPolicy p,int tick=101,int age=3,bool grounded=false,bool locked=false,bool focus=true,float x=-7f,bool queued=false,bool contact=false,bool pulling=false,OrdanPatternSlot slot=OrdanPatternSlot.DebtLineA,OrdanBossPhase phase=OrdanBossPhase.Telegraph,bool aim=false,int cooldown=0,float y=1.04f,float vy=13.88f,bool wall=false)
+        {return p.Read("run",1,tick,x,y,.333f,grounded,locked,focus,aim,cooldown,slot,phase,age,.35f,vy,Threat(queued,contact,pulling,wall));}
         private Chapter1VerificationBossPolicy Launched(bool consume=true)
         {var p=Ready();var c=Read(p,100,2,true);Assert.That(c.Keys,Does.Contain(Key.Space));if(consume)Consume(p,c.Keys,3);return p;}
         [Test] public void ContinuationRequiresOwnedConsumedJump()
@@ -445,7 +445,7 @@ namespace AcadeGameMaker.Tests.PlayMode.InputUnity
         [Test] public void ContinuationDoesNotInventFutureReceipt()
         {var p=Launched();var c=Read(p);Consume(p,c.Keys,5);Read(p,102,4);Assert.That(p.Unresolved,Is.Not.Null);var q=Launched();Consume(q,new[]{Key.D,Key.Space},3);Assert.That(q.OwnedContinuationActive,Is.True);}
         [Test] public void ContinuationStopsAtFiniteDeadline()
-        {var p=Launched();for(var tick=101;tick<=144;tick++){var c=Read(p,tick,tick-98);Assert.That(p.Unresolved,Is.Null);Consume(p,c.Keys,tick-97);}Assert.That(p.OwnedContinuationDeadline,Is.EqualTo(148));Read(p,145,47);Assert.That(p.Unresolved,Is.Not.Null);Assert.That(p.OwnedContinuationActive,Is.False);}
+        {var p=Launched();for(var tick=101;tick<=144;tick++){var t=(tick-101)/60f;var y=1.04f+13.88f*t-15.36f*t*t-.256f*t;var vy=13.88f-30.72f*t;var c=Read(p,tick,tick-98,y:y,vy:vy);Assert.That(p.Unresolved,Is.Null);Consume(p,c.Keys,tick-97);}Assert.That(p.OwnedContinuationDeadline,Is.EqualTo(148));Read(p,145,47);Assert.That(p.Unresolved,Is.Not.Null);Assert.That(p.OwnedContinuationActive,Is.False);}
         [Test] public void ContinuationRejectsReleaseOrContextLoss()
         {var p=Launched();Consume(p,new[]{Key.D},4);Read(p);Assert.That(p.Unresolved,Is.Not.Null);var q=Launched();Consume(q,new[]{Key.D,Key.Space},4,false);Read(q);Assert.That(q.Unresolved,Is.Not.Null);var r=Launched();Read(r,focus:false);Assert.That(r.OwnedContinuationActive,Is.False);}
         [Test] public void ContinuationRejectsLockOrQueuedThreat()
@@ -458,6 +458,39 @@ namespace AcadeGameMaker.Tests.PlayMode.InputUnity
         {var p=new Chapter1VerificationBossPolicy();p.Consumed(false,true,1);p.Consumed(false,true,2);Read(p);Assert.That(p.Unresolved,Is.Not.Null);Assert.Throws<InvalidOperationException>(()=>Read(Ready(),x:float.NaN));}
         [Test] public void ContinuationProducesOnlyAuthorizedKeys()
         {var p=Launched();var c=Read(p);foreach(var key in c.Keys)Assert.That(key==Key.A || key==Key.D || key==Key.Space,Is.True);Assert.That(c.Keys,Has.Length.EqualTo(2));Assert.That(c.Attack,Is.False);}
+
+        [Test] public void OwnedDebtEnvelopeSeparatesInactiveRiseFromFireWindow()
+        {
+            Assert.That(Chapter1VerificationBossPolicy.OwnedDebtLineEnvelopeClear(-7,1.04126f,.333f,13.87793f,1,OrdanPatternSlot.DebtLineA,3,.35f),Is.True);
+            Assert.That(Chapter1VerificationBossPolicy.OwnedDebtLineEnvelopeClear(-7,1.04126f,.333f,13.87793f,1,OrdanPatternSlot.DebtLineB,3,.35f),Is.False);
+            var owned=Launched();var c=Read(owned,y:1.04126f,vy:13.87793f);Assert.That(owned.Unresolved,Is.Null);Assert.That(c.Keys,Does.Contain(Key.Space));
+            var unowned=Ready();Read(unowned,y:1.04126f,vy:13.87793f);Assert.That(unowned.Unresolved,Is.Not.Null);
+        }
+        [Test] public void OwnedDebtEnvelopeRejectsDescendingAndInsufficientApex()
+        {
+            Assert.That(Chapter1VerificationBossPolicy.OwnedDebtLineEnvelopeClear(-7,3,.333f,-2,1,OrdanPatternSlot.DebtLineA,20,.35f),Is.False);
+            Assert.That(Chapter1VerificationBossPolicy.OwnedDebtLineEnvelopeClear(-7,1.04f,.333f,2,1,OrdanPatternSlot.DebtLineA,3,.35f),Is.False);
+            var p=Launched();var c=Read(p,vy:-5);Assert.That(p.Unresolved,Is.Not.Null);Assert.That(c.Keys,Is.Empty);Assert.That(p.OwnedContinuationActive,Is.False);
+        }
+        [Test] public void OwnedDebtEnvelopeKeepsClosedLineMarginAndLandingBounds()
+        {
+            var first=44f/60;var last=46f/60;var upper=(OrdanBossHostileDamageProducer.ApprovedDebtLineA.MaxY+OrdanBossHostileDamageProducer.ApprovedPlayerHalfHeight)/4096f+.02f;
+            var boundary=(float)Math.Ceiling((upper-Math.Min(Chapter1VerificationBossPolicy.LowerBallisticHeight(0,13.87793f,first),Chapter1VerificationBossPolicy.LowerBallisticHeight(0,13.87793f,last)))*4096)/4096;
+            Assert.That(Chapter1VerificationBossPolicy.OwnedDebtLineEnvelopeClear(-7,boundary-1f/4096,.333f,13.87793f,1,OrdanPatternSlot.DebtLineA,3,.35f),Is.False);
+            Assert.That(Chapter1VerificationBossPolicy.OwnedDebtLineEnvelopeClear(-7,boundary+1f/4096,.333f,13.87793f,1,OrdanPatternSlot.DebtLineA,3,.35f),Is.True);
+            Assert.That(Chapter1VerificationBossPolicy.OwnedDebtLineEnvelopeClear(4,1.04f,.333f,13.88f,1,OrdanPatternSlot.DebtLineA,3,.35f),Is.False);
+            Assert.That(Chapter1VerificationBossPolicy.OwnedDebtLineEnvelopeClear(-10,1.04f,-8,13.88f,-1,OrdanPatternSlot.DebtLineA,3,.35f),Is.False);
+            Assert.That(Chapter1VerificationBossPolicy.OwnedDebtLineEnvelopeClear(-7,8,.333f,13.88f,1,OrdanPatternSlot.DebtLineA,3,.35f),Is.False);
+            Assert.That(Chapter1VerificationBossPolicy.OwnedDebtLineEnvelopeClear(-7,1.04f,.333f,13.88f,1,OrdanPatternSlot.DebtLineA,3,3f),Is.False);
+        }
+
+        [Test] public void OwnedDebtEnvelopeUsesFastestStageAndObservedWallContact()
+        {
+            Assert.That(Chapter1VerificationBossPolicy.OwnedDebtLineEnvelopeClear(-7,1.04126f,.333f,13.87793f,1,OrdanPatternSlot.DebtLineA,3,1.16f),Is.True);
+            Assert.That(Chapter1VerificationBossPolicy.OwnedDebtLineEnvelopeClear(-7,1.04126f,.333f,13.87793f,1,OrdanPatternSlot.DebtLineA,3,1.18f),Is.False);
+            var p=Launched();var c=Read(p,wall:true);Assert.That(p.OwnedContinuationActive,Is.False);Assert.That(p.Unresolved,Is.Not.Null);Assert.That(c.Keys,Is.Empty);
+            var ordinary=Launched();Read(ordinary,wall:true,x:9);Assert.That(ordinary.OwnedContinuationActive,Is.False);
+        }
 
         // AC-SOP-001/004: denied standalone authority, never an Editor positive handoff.
         private Chapter1VerificationBossPolicy StandaloneUnowned()
