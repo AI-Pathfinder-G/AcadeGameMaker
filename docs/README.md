@@ -2,7 +2,7 @@
 
 활성 Unity 제품은 `output/chapter1-playable-r1/project`이며 루트 `Assets`는 기존 경로로 보존한 별도 개발 기반이다. 이 통합은 소스·설계 보존이며 Unity 실행·최종 CH1 수용을 뜻하지 않는다.
 
-- [현재 우선순위와 미해결 이슈](./handoffs/2026-11-04-priorities-and-open-issues.md)
+- [현재 개발 경로·보정·미검증 범위](./handoffs/2026-11-07-current-development.md)
 - [에이전트 최신 지시](../AGENTS.md)
 - [단독 소유·검사 플랫폼 차이안](../preparation/ch1-standalone-owner-platform-20261104/contract-delta.md)
 - [해당 범위 통합 결정](../preparation/ch1-standalone-owner-platform-20261104/astra-scope-decision.md)
