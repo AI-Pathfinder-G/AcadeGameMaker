@@ -1,3 +1,14 @@
+# 현재 개발·안전 통합 상태 — 2026-11-07
+
+활성 Unity 제품은 `output/chapter1-playable-r1/project`이며 루트 `Assets`는 기존 경로로 보존한 별도 개발 기반이다. 이 통합은 소스·설계 보존이며 Unity 실행·최종 CH1 수용을 뜻하지 않는다.
+
+- [현재 우선순위와 미해결 이슈](./handoffs/2026-11-04-priorities-and-open-issues.md)
+- [에이전트 최신 지시](../AGENTS.md)
+- [단독 소유·검사 플랫폼 차이안](../preparation/ch1-standalone-owner-platform-20261104/contract-delta.md)
+- [해당 범위 통합 결정](../preparation/ch1-standalone-owner-platform-20261104/astra-scope-decision.md)
+
+실행 원시·중복 배포 ZIP·개인 환경 자료와 기존 로컬 80커밋 이력은 로컬 복구 ref에 보존하고 이번 공개 snapshot의 부모로 전송하지 않는다. 기존 원격 역사 문서는 유지한다.
+
 # Documentation Map
 
 - 2026-10-14 최신 세션: [1챕터 직접 플레이 준비 인계](./handoffs/2026-10-14-chapter1-session-handoff.md) · [새 세션 시작 프롬프트](./handoffs/2026-10-14-next-session-prompt.md). 기록 관리자 보정·국소 검사·원문 전달을 확인한 뒤 사용자가 플레이를 연기하여 세션을 정리했다. 실제 플레이·B1 FINAL·CH1 완주는 미완료이며 새 실행에는 새 동적 신원과 정확 권위가 필요하다.

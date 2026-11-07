@@ -1,0 +1,15 @@
+{
+  "name": "AcadeGameMaker.Presentation.Unity.PlayMode.Tests",
+  "rootNamespace": "AcadeGameMaker.Tests.PlayMode.PresentationUnity",
+  "references": ["AcadeGameMaker.Presentation.Unity", "AcadeGameMaker.Costumes", "AcadeGameMaker.Costumes.IO", "AcadeGameMaker.Presentation"],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": ["TestAssemblies"]
+}

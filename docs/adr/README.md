@@ -1,3 +1,5 @@
+
+
 # Architecture Decision Records
 
 ADR은 쉽게 되돌리기 어렵고, 맥락 없이 보면 의외이며, 실제 대안을 비교해 선택한 결정의 이유를 보존한다. 상태가 명시되지 않은 기존 ADR은 accepted로 취급한다.

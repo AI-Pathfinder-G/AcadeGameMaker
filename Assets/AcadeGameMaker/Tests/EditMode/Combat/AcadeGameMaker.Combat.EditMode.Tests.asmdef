@@ -1,0 +1,22 @@
+{
+  "name": "AcadeGameMaker.Combat.EditMode.Tests",
+  "rootNamespace": "AcadeGameMaker.Tests.EditMode.Combat",
+  "references": [
+    "AcadeGameMaker.Core",
+    "AcadeGameMaker.Combat"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

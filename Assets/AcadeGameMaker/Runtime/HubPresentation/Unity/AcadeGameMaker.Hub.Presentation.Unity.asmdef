@@ -1,0 +1,8 @@
+{
+  "name": "AcadeGameMaker.Hub.Presentation.Unity",
+  "rootNamespace": "AcadeGameMaker.Hub.Presentation.Unity",
+  "references": [ "AcadeGameMaker.Core", "AcadeGameMaker.Input", "AcadeGameMaker.Input.Unity", "AcadeGameMaker.Profile", "Unity.TextMeshPro" ],
+  "includePlatforms": [], "excludePlatforms": [], "allowUnsafeCode": false,
+  "overrideReferences": false, "precompiledReferences": [], "autoReferenced": true,
+  "defineConstraints": [], "versionDefines": [], "noEngineReferences": false
+}

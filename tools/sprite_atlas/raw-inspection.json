@@ -1,0 +1,646 @@
+{
+  "expectedSheetCount": 18,
+  "label": "offline draft — pending visual acceptance",
+  "planErrors": [],
+  "requirementIds": [
+    "REQ-SPR-001",
+    "REQ-SPR-006",
+    "REQ-SPR-007",
+    "REQ-SPR-010"
+  ],
+  "schemaVersion": 1,
+  "sheets": [
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          341,
+          682,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "01-doeon-idle",
+      "raw": "images/sprites/production-v1/raw/01-doeon-idle.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "gear_repair",
+        "thinking",
+        "look_up"
+      ],
+      "sourceSha256": "985124eccf5f6ae352a10e120384add55dd9f071441f5d8c6a4505f3abbfcf5f"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          341,
+          682,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "02-seryeong-idle",
+      "raw": "images/sprites/production-v1/raw/02-seryeong-idle.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "forward_stretch",
+        "folded_gaze",
+        "writing"
+      ],
+      "sourceSha256": "3ded5b30008ecce085892acb498dc5a5cea661d77d5c6eaaa7328d62c57af7eb"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          341,
+          682,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "03-seoha-npc-idle",
+      "raw": "images/sprites/production-v1/raw/03-seoha-npc-idle.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "forward_flirt",
+        "table_lean",
+        "shop_talk"
+      ],
+      "sourceSha256": "29055ac2ecc72c28a3938a868763316e240e74aa429cdd9225df57fa0bd5dead"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          341,
+          682,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "04-lovers-interactions",
+      "raw": "images/sprites/production-v1/raw/04-lovers-interactions.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "arm_link",
+        "cheek_kiss",
+        "handhold"
+      ],
+      "sourceSha256": "27dc78cd6031633a41e048be4ba337efef44442b04e02119b3ef5807f3740aa2"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          341,
+          682,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "05-lovers-shop",
+      "raw": "images/sprites/production-v1/raw/05-lovers-shop-v2.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "shop_guard",
+        "leave_together",
+        "shop_reaction"
+      ],
+      "sourceSha256": "07d94ef6bdb66f15f795686531c5a142e9367e91283a73fd5096189fe76c27d4"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          341,
+          682,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "06-ain-yudam-idle",
+      "raw": "images/sprites/production-v1/raw/06-ain-yudam-idle.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "ain_field_aid",
+        "ain_axis_refuse",
+        "yudam_ledger"
+      ],
+      "sourceSha256": "6c402bc070ebd05b0e2bd6f469961bc0c0125ccea9f3287720f6e66e515599e8"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          341,
+          682,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "07-village-roles",
+      "raw": "images/sprites/production-v1/raw/07-village-roles.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "iseon_inspect",
+        "tailor_stitch",
+        "courier_dispatch"
+      ],
+      "sourceSha256": "dfa0b3d78bd5b0ed5aff56a661323d5b206aa7c84f447bc2efb011236bf441b0"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          341,
+          682,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "08-mujin-hub",
+      "raw": "images/sprites/production-v1/raw/08-mujin-hub.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "blanket_offer",
+        "bed_assign",
+        "supply_worry"
+      ],
+      "sourceSha256": "9db1b1274d6bf8b26d3301c3b7234483e0a9f3717c43f2e7df4c1aae092aa3bc"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "needs-review",
+      "id": "09-doeon-movement",
+      "raw": "images/sprites/production-v1/raw/09-doeon-movement.png",
+      "reason": "Known row boundaries require manual visual review; candidate horizontal separations were reported near y=290, 545, and 790.",
+      "rows": [
+        "idle_walk",
+        "run_cycle",
+        "jump_land",
+        "dash_hurt"
+      ],
+      "sourceSha256": "b344a06a295f35ae10db7e7b811aee048f14a3b2d0f531be8e5728ad133bca63"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "10-doeon-combat",
+      "raw": "images/sprites/production-v1/raw/10-doeon-combat.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "basic_attack",
+        "weight_transfer",
+        "compression_verdict",
+        "shared_plane"
+      ],
+      "sourceSha256": "184ba046e9bc4d88e3bf73e31145104de5b816f3584a3208a9628baabd57c852"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "11-seryeong-movement-combat",
+      "raw": "images/sprites/production-v1/raw/11-seryeong-movement-combat.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "run_cycle",
+        "jump_land",
+        "bow_shot",
+        "support_recover"
+      ],
+      "sourceSha256": "ca5489e62a3820cdc3505b26eec5de080699ad73ecc2eba09c8d6e9b52e12df2"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "12-seoha-boss",
+      "raw": "images/sprites/production-v1/raw/12-seoha-boss-v2.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "approach",
+        "double_strike",
+        "delayed_strike",
+        "reel_block"
+      ],
+      "sourceSha256": "96bd5e4921b91b83a905c12815a387f91d760863e95e54f04722b6836cd1c75c"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "13-ordan-combat",
+      "raw": "images/sprites/production-v1/raw/13-ordan-combat.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "guard_step",
+        "debt_line",
+        "seizure_weight",
+        "balance_audit"
+      ],
+      "sourceSha256": "131d0445891fea9eca5edbd6e48b9d6f253d3cb6f8f0800dc14bd5a67cc141c4"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "14-taegan-combat",
+      "raw": "images/sprites/production-v1/raw/14-taegan-combat.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "guard_step",
+        "pole_thrust",
+        "return_hook",
+        "bridge_pull"
+      ],
+      "sourceSha256": "d581a8d13669c8ad4fd430a9d2a7d20ffac09f43f751d7e5174396ffb32cacd0"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "15-chaeryun-combat",
+      "raw": "images/sprites/production-v1/raw/15-chaeryun-combat.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "sidestep",
+        "keyplate_deploy",
+        "cross_fire",
+        "return_shot"
+      ],
+      "sourceSha256": "84a32be1fbeb260289192abfc63ca72663b7579f831abe20b5dd6b9e3f35d321"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "16-mujin-combat",
+      "raw": "images/sprites/production-v1/raw/16-mujin-combat.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "heavy_strike",
+        "takeover_cut",
+        "release_relock",
+        "phase_stagger"
+      ],
+      "sourceSha256": "39c2ed1cc2473223a9a4591d43143130bc6035de21a781e814b1cc8e074326bc"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "17-ragen-combat",
+      "raw": "images/sprites/production-v1/raw/17-ragen-combat.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "ruler_address",
+        "short_long",
+        "bracing_hand",
+        "field_cross"
+      ],
+      "sourceSha256": "9324a252e78eac3de28f5d1913ee8af0348629b12de599c0dc2be47e1b269c48"
+    },
+    {
+      "defaultFloorEdges": {
+        "xEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536
+        ],
+        "yEdges": [
+          0,
+          256,
+          512,
+          768,
+          1024
+        ]
+      },
+      "dimensions": {
+        "colorModel": "RGBA after decode",
+        "height": 1024,
+        "width": 1536
+      },
+      "disposition": "pending_review",
+      "id": "18-boss-creatures",
+      "raw": "images/sprites/production-v1/raw/18-boss-creatures.png",
+      "reason": "requires reviewed extraction bounds and visual acceptance",
+      "rows": [
+        "baekgak_sweep",
+        "baekgak_shell",
+        "windsac_spray",
+        "windsac_grip"
+      ],
+      "sourceSha256": "37a161b6d21c70155c2fcb946f8ccce7232afb4ae752ef574a7c9461dfd5ff24"
+    }
+  ]
+}

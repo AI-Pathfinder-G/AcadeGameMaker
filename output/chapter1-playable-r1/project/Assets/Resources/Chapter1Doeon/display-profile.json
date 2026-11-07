@@ -1,0 +1,28 @@
+{
+  "profile": "master-direct-display",
+  "posesPerDirection": 1,
+  "nominalBodyLogicalPixels": 32,
+  "opaqueBoundsThreshold": 128,
+  "mirror": false,
+  "imagePixelsModified": false,
+  "right": {
+    "width": 1254,
+    "height": 1254,
+    "bodyHeightPx": 1179,
+    "pixelsPerUnit": 663.1875,
+    "pivotX": 0.5107655502392344,
+    "pivotY": 0.0215311004784689,
+    "resourceName": "Chapter1Doeon/Right",
+    "sourceSha256": "AF3ECDA757396413E309A1F873207F679570C3EC19EFEB7BDD4767D661D7BA92"
+  },
+  "left": {
+    "width": 1254,
+    "height": 1254,
+    "bodyHeightPx": 1148,
+    "pixelsPerUnit": 645.75,
+    "pivotX": 0.4972089314194577,
+    "pivotY": 0.03668261562998405,
+    "resourceName": "Chapter1Doeon/Left",
+    "sourceSha256": "E4C0B19B2031502B2C7A19C6BB6E98A0015674CAC5F739F14616F87F703243A3"
+  }
+}

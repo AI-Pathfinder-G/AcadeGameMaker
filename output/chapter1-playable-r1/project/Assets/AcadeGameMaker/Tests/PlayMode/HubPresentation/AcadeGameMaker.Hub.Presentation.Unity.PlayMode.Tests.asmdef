@@ -1,0 +1,24 @@
+{
+  "name": "AcadeGameMaker.Hub.Presentation.Unity.PlayMode.Tests",
+  "rootNamespace": "AcadeGameMaker.Tests.PlayMode.HubPresentation",
+  "references": [
+    "AcadeGameMaker.Hub.Presentation.Unity",
+    "AcadeGameMaker.Input.Unity",
+    "Unity.TextMeshPro",
+    "AcadeGameMaker.Input.Unity.PlayMode.Tests"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

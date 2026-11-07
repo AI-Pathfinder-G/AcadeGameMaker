@@ -1,0 +1,34 @@
+{
+  "profile": "ordan-static-display-v1",
+  "posesPerDirection": 1,
+  "alphaMeasurementThreshold": 16,
+  "bodyWorldHeight": 2.4,
+  "mirror": false,
+  "imagePixelsModified": false,
+  "right": {
+    "resourceName": "Chapter1Ordan/Right",
+    "width": 1215,
+    "height": 1295,
+    "headTopY": 120,
+    "contactY": 1273,
+    "footCenterX": 661,
+    "bodyHeightPx": 1153,
+    "pixelsPerUnit": 480.4166666666667,
+    "pivotX": 0.5440329218106996,
+    "pivotY": 0.01698841698841699,
+    "sourceSha256": "B9A2AEF4EF6D4C08E98BD45D664301F862120FEA6DE4B20093623A00E2ADEEB3"
+  },
+  "left": {
+    "resourceName": "Chapter1Ordan/Left",
+    "width": 1215,
+    "height": 1295,
+    "headTopY": 117,
+    "contactY": 1266,
+    "footCenterX": 542.5,
+    "bodyHeightPx": 1149,
+    "pixelsPerUnit": 478.75,
+    "pivotX": 0.44650205761316875,
+    "pivotY": 0.022393822393822392,
+    "sourceSha256": "6167D7BF5F2ED4089EC188F976F510AA9C0FE37900EFD79EDF549DA6140B053D"
+  }
+}

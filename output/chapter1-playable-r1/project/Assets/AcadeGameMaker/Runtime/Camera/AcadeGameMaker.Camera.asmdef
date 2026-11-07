@@ -1,0 +1,8 @@
+{
+  "name": "AcadeGameMaker.Camera",
+  "rootNamespace": "AcadeGameMaker.Camera",
+  "references": ["AcadeGameMaker.Core", "AcadeGameMaker.Movement"],
+  "includePlatforms": [], "excludePlatforms": [], "allowUnsafeCode": false,
+  "overrideReferences": false, "precompiledReferences": [], "autoReferenced": true,
+  "defineConstraints": [], "versionDefines": [], "noEngineReferences": true
+}

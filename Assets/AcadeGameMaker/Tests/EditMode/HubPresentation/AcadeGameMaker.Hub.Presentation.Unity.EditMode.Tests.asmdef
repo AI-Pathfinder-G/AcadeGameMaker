@@ -1,0 +1,20 @@
+{
+  "name": "AcadeGameMaker.Hub.Presentation.Unity.EditMode.Tests",
+  "rootNamespace": "AcadeGameMaker.Tests.EditMode.HubPresentation",
+  "references": [
+    "AcadeGameMaker.Hub.Authoring.Editor",
+    "AcadeGameMaker.Hub.Presentation.Unity",
+    "AcadeGameMaker.Input.Unity",
+    "Unity.TextMeshPro"
+  ],
+  "includePlatforms": ["Editor"],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": ["TestAssemblies"]
+}
