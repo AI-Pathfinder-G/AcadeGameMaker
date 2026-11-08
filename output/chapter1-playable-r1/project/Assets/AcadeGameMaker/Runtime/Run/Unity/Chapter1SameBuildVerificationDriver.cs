@@ -16,7 +16,7 @@ namespace AcadeGameMaker.Run.Unity
     {
         private Chapter1VerificationInputPilot _pilot;
         private Chapter1StandaloneVerificationSession _standaloneSession;
-        private bool _optionValidated,_standaloneReady;
+        private bool _optionValidated,_standaloneReady,_standaloneAttached,_standaloneNeutralWaitLogged;
         bool IChapter1StandaloneVerificationOwner.TryObserveStandaloneOwner(Chapter1VerificationInputPilot requester,out Chapter1StandaloneVerificationSession session)
         {
             session=null;
@@ -77,8 +77,8 @@ namespace AcadeGameMaker.Run.Unity
             if(mode=="branch1" || mode=="branch2")
             {
                 if(!Chapter1StandaloneVerificationSession.Admitted(mode,Application.isEditor,Debug.isDebugBuild,_optionValidated,_writer!=null,saveEmpty))throw new InvalidOperationException("단독 검증 소유 인계 선행이 없습니다.");
-                _standaloneSession=new Chapter1StandaloneVerificationSession(this,mode);_standaloneReady=true;
-                if(!_pilot.AttachStandaloneOwner(this))throw new InvalidOperationException("실제 자기 Pilot의 단독 소유 인계가 거절됐습니다.");
+                _standaloneSession=new Chapter1StandaloneVerificationSession(this,mode);
+                // Attach the owned input only after focus and startup OS events settle.
             }
             gameObject.AddComponent<Chapter1VerificationPresentationObserver>().Bind(this);
             _pilot.Neutral();Record("wait","자연 장면 부팅과 입력 중립을 기다립니다. 기한은 늘리지 않습니다.");
@@ -125,6 +125,33 @@ namespace AcadeGameMaker.Run.Unity
                 if(!_focusLogged || _wasFocused!=Application.isFocused)
                 {_focusLogged=true;_wasFocused=Application.isFocused;Record("focus","actual="+Application.isFocused+" settingsChanged=false");}
                 if(!Application.isFocused){_pilot.Neutral();return;}
+                if(_mode=="branch1" || _mode=="branch2")
+                {
+                    if(!_standaloneAttached)
+                    {
+                        _pilot.Neutral();
+                        if(!Chapter1VerificationInputPilot.StartupQuiet(
+                            Now-_start,Now-_pilot.LastForeignInputAt,Application.isFocused))return;
+                        _standaloneReady=true;
+                        if(!_pilot.AttachStandaloneOwner(this))
+                            throw new InvalidOperationException("안정된 시작 이후 자기 Pilot의 소유 인계가 거절됐습니다.");
+                        _standaloneAttached=true;
+                        Progress("standalone-owner armed after startup, nonownedBefore="+_pilot.ForeignInputCount+" stillRequiresOwnedDynamicNeutral=true");
+                        return;
+                    }
+                    if(_standaloneSession==null || !_standaloneSession.Active)
+                        throw new InvalidOperationException("단독 입력 소유권이 철회됐으므로 자동 플레이를 중단합니다.");
+                    if(!_pilot.StandaloneInputReady)
+                    {
+                        _pilot.Neutral();
+                        if(!_standaloneNeutralWaitLogged)
+                        {
+                            _standaloneNeutralWaitLogged=true;
+                            Progress("waiting for two consumed owned neutral updates before first expedition intent");
+                        }
+                        return;
+                    }
+                }
                 if(_flow==null)
                 {
                     var owners=UnityEngine.Object.FindObjectsByType<Chapter1PlayableFlowOwner>();

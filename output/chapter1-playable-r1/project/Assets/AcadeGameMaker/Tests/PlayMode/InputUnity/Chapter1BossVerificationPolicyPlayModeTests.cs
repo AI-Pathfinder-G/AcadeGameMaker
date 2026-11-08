@@ -136,8 +136,9 @@ namespace AcadeGameMaker.Tests.PlayMode.InputUnity
             }
             // Actual command attack zone boundaries, one Q4096 unit on either side.
             var q=1f/4096f;
-            foreach(var x in new[]{8.75f-q,8.75f,8.75f+q,9.25f-q,9.25f,9.25f+q})
-            {var policy=Ready();var c=policy.Read("run",1,100,x,.81f,0,true,false,true,true,0,OrdanPatternSlot.DebtLineA,OrdanBossPhase.Telegraph,2,.35f);Assert.That(policy.Unresolved,Is.Null);Assert.That(c.Attack,Is.EqualTo(x>=8.75f && x<=9.25f),"actual attack boundary x="+x);}
+            var left=(OrdanBossHostileDamageProducer.ApprovedOrdanBody.MaxX+OrdanBossHostileDamageProducer.ApprovedPlayerHalfWidth)/4096f+.05f;
+            foreach(var x in new[]{left-q,left,left+q,9.25f-q,9.25f,9.25f+q})
+            {var policy=Ready();var c=policy.Read("run",1,100,x,.81f,0,true,false,true,true,0,OrdanPatternSlot.DebtLineA,OrdanBossPhase.Telegraph,2,.35f);Assert.That(policy.Unresolved,Is.Null);Assert.That(c.Attack,Is.EqualTo(x>=left && x<=9.25f),"actual attack boundary x="+x);}
             // Debt B: an already airborne normal jump can clear the line; do not invent a ground jump proof.
             // The conservative fire-height threshold is quantized to the same production Q4096 unit.
             var bSeconds=6f/60;var bThreshold=3f+3277f/4096+.25f+.02f+15.36f*bSeconds*bSeconds+.256f*bSeconds+.03f;
@@ -436,6 +437,116 @@ namespace AcadeGameMaker.Tests.PlayMode.InputUnity
         {var p=Ready();var c=Read(p,100,2,true);Assert.That(c.Keys,Does.Contain(Key.Space));if(consume)Consume(p,c.Keys,3);return p;}
         [Test] public void ContinuationRequiresOwnedConsumedJump()
         {var missing=Launched(false);Read(missing);Assert.That(missing.Unresolved,Is.Not.Null);var p=Launched();var c=Read(p);Assert.That(p.Unresolved,Is.Null);Assert.That(c.Keys,Does.Contain(Key.Space));Assert.That(p.OwnedContinuationActive,Is.True);}
+        [Test] public void ContinuationAcceptsOneDelayedNeutralReceiptBeforeJump()
+        {
+            var p=Ready();
+            var jump=Read(p,100,2,true);
+            Assert.That(jump.Keys,Does.Contain(Key.Space));
+            Consume(p,Array.Empty<Key>(),3); // queued neutral was issued before jump.
+            Consume(p,jump.Keys,4); // exact next owned D+Space consumption.
+            var next=Read(p,101,3);
+            Assert.That(p.Unresolved,Is.Null);
+            Assert.That(p.OwnedContinuationActive,Is.True);
+            Assert.That(next.Keys,Does.Contain(Key.Space));
+        }
+        [Test] public void ContinuationRejectsTwoDelayedNeutralReceiptsAndMissingSequence()
+        {
+            var p=Ready();
+            var jump=Read(p,100,2,true);
+            Consume(p,Array.Empty<Key>(),3);
+            Consume(p,Array.Empty<Key>(),4); // more than one: stale jump must fail closed.
+            Consume(p,jump.Keys,5);
+            Read(p,101,3);
+            Assert.That(p.Unresolved,Is.Not.Null);
+            var q=Ready();
+            var other=Read(q,100,2,true);
+            Consume(q,Array.Empty<Key>(),3);
+            Consume(q,other.Keys,5); // missing sequence 4.
+            Read(q,101,3);
+            Assert.That(q.Unresolved,Is.Not.Null);
+        }
+        [Test] public void StandaloneBatchedPhysicsGapRemainsFinite()
+        {
+            Assert.That(Chapter1VerificationBossPolicy.IsBoundedStandaloneTickGap(2072,2080),Is.True);
+            foreach(var tick in new[]{2072,2073,2081,2090})
+                Assert.That(Chapter1VerificationBossPolicy.IsBoundedStandaloneTickGap(2072,tick),Is.False);
+        }
+        private Chapter1VerificationBossPolicy StandalonePrepared(Chapter1VerificationInputPilot pilot,Chapter1StandaloneVerificationSession session)
+        {
+            var p=new Chapter1VerificationBossPolicy();
+            p.BindOwnedJump(new Chapter1VerificationBossPolicy.OwnedJumpIdentity(pilot,session,_router,_player,1,1,true));
+            p.Consumed(false,true,1);p.Consumed(false,true,2);
+            p.ObserveStandaloneConsumption(pilot,session,1,Array.Empty<Key>(),1,true);
+            p.ObserveStandaloneConsumption(pilot,session,1,Array.Empty<Key>(),2,true);
+            return p;
+        }
+        [Test] public void StandaloneStartupQuietRequiresForegroundAndNoRecentForeignInput()
+        {
+            Assert.That(Chapter1VerificationInputPilot.StartupQuiet(2,10,true),Is.False);
+            Assert.That(Chapter1VerificationInputPilot.StartupQuiet(3.2,.99,true),Is.False);
+            Assert.That(Chapter1VerificationInputPilot.StartupQuiet(3.2,1.01,true),Is.True);
+            Assert.That(Chapter1VerificationInputPilot.StartupQuiet(5,3,false),Is.False);
+            Assert.That(Chapter1VerificationInputPilot.StartupQuiet(double.NaN,2,true),Is.False);
+            Assert.That(Chapter1VerificationInputPilot.StartupQuiet(4,double.PositiveInfinity,true),Is.False);
+            // Nonowner changes after the session is armed still revoke input.
+            Assert.That(Chapter1StandaloneVerificationSession.ObservationValid(
+                true,true,true,true,true,true,false,true),Is.True);
+            Assert.That(Chapter1StandaloneVerificationSession.ObservationValid(
+                true,true,true,true,true,true,true,true),Is.False);
+        }
+        [Test] public void StandalonePendingJumpRequiresReceiptAfterOneFrame()
+        {
+            // Replays the actual Windows observation boundary: owned D+Space
+            // issued at Telegraph age2; next FixedUpdate sees age10 before
+            // the next Dynamic input receipt. No forged owner state is allowed.
+            using(var pilot=new Chapter1VerificationInputPilot(_=>{}))
+            {
+                var session=new Chapter1StandaloneVerificationSession(new object(),"branch1");
+                Assert.That(session.Bind(pilot),Is.True);
+                var p=StandalonePrepared(pilot,session);
+                var start=Read(p,100,2,true);
+                Assert.That(start.Keys,Does.Contain(Key.Space));
+                var pending=p.Read("run",1,108,-6.980713f,1.04125977f,1.16650391f,false,false,true,false,0,
+                    OrdanPatternSlot.DebtLineA,OrdanBossPhase.Telegraph,10,.35f,13.87793f,Threat());
+                Assert.That(p.Unresolved,Is.Null,p.OwnedJumpDebugState);
+                CollectionAssert.AreEqual(new[]{Key.D,Key.Space},pending.Keys);
+                Assert.That(p.OwnedContinuationActive,Is.False,"first Dynamic D+Space receipt still pending");
+                p.ObserveStandaloneConsumption(pilot,session,1,new[]{Key.D,Key.Space},3,true);
+                Assert.That(p.OwnedContinuationActive,Is.True,"real owned receipt now activates carry");
+                var next=p.Read("run",1,116,-5.8f,2.60f,8f,false,false,true,false,0,
+                    OrdanPatternSlot.DebtLineA,OrdanBossPhase.Telegraph,18,.35f,9.78f,Threat());
+                Assert.That(p.Unresolved,Is.Null,p.OwnedJumpDebugState);
+                Assert.That(next.Keys,Does.Contain(Key.Space));
+            }
+        }
+        [Test] public void StandalonePendingJumpRejectsUnconfirmedSecondFrameAndThreat()
+        {
+            using(var pilot=new Chapter1VerificationInputPilot(_=>{}))
+            {
+                var session=new Chapter1StandaloneVerificationSession(new object(),"branch1");
+                Assert.That(session.Bind(pilot),Is.True);
+                var p=StandalonePrepared(pilot,session);
+                Assert.That(Read(p,100,2,true).Keys,Does.Contain(Key.Space));
+                var pending=p.Read("run",1,108,-6.980713f,1.04125977f,1.16650391f,false,false,true,false,0,
+                    OrdanPatternSlot.DebtLineA,OrdanBossPhase.Telegraph,10,.35f,13.87793f,Threat());
+                Assert.That(p.Unresolved,Is.Null);
+                Assert.That(p.OwnedContinuationActive,Is.False);
+                // Use a state where the ordinary selector is unable to prove safety.
+                p.Read("run",1,116,-6.980713f,1.04125977f,1.16650391f,false,false,true,false,0,
+                    OrdanPatternSlot.DebtLineA,OrdanBossPhase.Telegraph,18,.35f,13.87793f,Threat());
+                Assert.That(p.Unresolved,Is.Not.Null,"missing actual receipt must close after one frame");
+                var q=StandalonePrepared(pilot,session);
+                Assert.That(Read(q,100,2,true).Keys,Does.Contain(Key.Space));
+                q.Read("run",1,108,-6.980713f,1.04125977f,1.16650391f,false,false,true,false,0,
+                    OrdanPatternSlot.DebtLineA,OrdanBossPhase.Telegraph,10,.35f,13.87793f,Threat(queued:true,contact:true));
+                Assert.That(q.Unresolved,Is.Not.Null,"already queued contact must not become pending carry");
+                var gap=StandalonePrepared(pilot,session);
+                Assert.That(Read(gap,100,2,true).Keys,Does.Contain(Key.Space));
+                gap.Read("run",1,109,-6.980713f,1.04125977f,1.16650391f,false,false,true,false,0,
+                    OrdanPatternSlot.DebtLineA,OrdanBossPhase.Telegraph,11,.35f,13.87793f,Threat());
+                Assert.That(gap.Unresolved,Is.Not.Null,"physics gap above eight ticks must fail");
+            }
+        }
         [Test] public void ContinuationRequiresSameCompletedIdentity()
         {var p=Launched();p.BindOwnedJump(Identity(mode:2));Read(p);Assert.That(p.Unresolved,Is.Not.Null);var q=Launched();Assert.Throws<InvalidOperationException>(()=>q.Read("other",1,101,-7,1,.3f,false,false,true,false,0,OrdanPatternSlot.DebtLineA,OrdanBossPhase.Telegraph,3,.35f,13.8f,Threat()));}
         [Test] public void ContinuationRequiresContinuousTicksAndPhase()
@@ -454,6 +565,26 @@ namespace AcadeGameMaker.Tests.PlayMode.InputUnity
         {var p=Launched();Read(p,x:-11.8f);Assert.That(p.Unresolved,Is.Not.Null);var q=Launched();Read(q,pulling:true);Assert.That(q.Unresolved,Is.Not.Null);}
         [Test] public void ContinuationPreservesAttackReleaseAndCooldown()
         {var p=Launched();var c=Read(p,aim:true,cooldown:1000);Assert.That(c.Attack,Is.False);var q=Ready();q.Consumed(true,false,3);var a=q.Read("run",1,100,9,1,0,true,false,true,true,1000,OrdanPatternSlot.DebtLineA,OrdanBossPhase.Telegraph,2,.35f,0,Threat());Assert.That(a.Attack,Is.False);}
+        [Test] public void SafeRightSideNearBodyPermitsActualAttackWithoutChangingHostileGuards()
+        {
+            // Observed Windows stage: x=8.309, y=0.82 after an authored
+            // BalanceAudit pull; previous fixed x>=8.75 left it unable to hit.
+            var p=Ready();
+            var command=p.Read("run",1,3000,8.309326f,.815185547f,0,true,false,true,true,0,
+                OrdanPatternSlot.BalanceAudit,OrdanBossPhase.Recovery,35,.35f,0,Threat());
+            Assert.That(p.Unresolved,Is.Null);
+            Assert.That(command.Attack,Is.True,
+                "exact right-side geometry, real distance and available cooldown");
+            var tooClose=Ready();
+            var denied=tooClose.Read("run",1,3000,8.20f,.815185547f,0,true,false,true,true,0,
+                OrdanPatternSlot.BalanceAudit,OrdanBossPhase.Recovery,35,.35f,0,Threat());
+            Assert.That(denied.Attack,Is.False,"player must clear body before attacking");
+            var hostile=Ready();
+            var hazard=hostile.Read("run",1,3000,8.309326f,.815185547f,0,true,false,true,true,0,
+                OrdanPatternSlot.BalanceAudit,OrdanBossPhase.Execute,0,.35f,0,Threat(queued:true,contact:true));
+            Assert.That(hazard.Attack,Is.False);
+            Assert.That(hostile.Unresolved,Is.Not.Null,"already queued contact is still denied");
+        }
         [Test] public void ContinuationPreservesLegacyCallersAndFailures()
         {var p=new Chapter1VerificationBossPolicy();p.Consumed(false,true,1);p.Consumed(false,true,2);Read(p);Assert.That(p.Unresolved,Is.Not.Null);Assert.Throws<InvalidOperationException>(()=>Read(Ready(),x:float.NaN));}
         [Test] public void ContinuationProducesOnlyAuthorizedKeys()
@@ -478,6 +609,53 @@ namespace AcadeGameMaker.Tests.PlayMode.InputUnity
             Assert.Throws<InvalidOperationException>(()=>new Chapter1VerificationBossBudget().AddCleanup("unreserved"));
         }
         // State-machine evidence only; analytic fixture poses below do not prove actual Unity collision safety.
+        [Test] public void RecoveryApproachStartsAtObservedAge20AndClearsBody()
+        {
+            // Exact observed Windows case: DebtLineA Recovery age18 x=2.7583,
+            // first x=3.0249 is age20, grounded, vy=0, rightward speed8.
+            // This pure kinematic fixture tests the bounded state machine,
+            // not real Physics2D collisions or chapter completion.
+            var p=Ready();
+            var first=p.Read("run",1,1982,3.024902f,.815185547f,8,true,false,true,false,0,
+                OrdanPatternSlot.DebtLineA,OrdanBossPhase.Recovery,20,.35f,0,Threat());
+            CollectionAssert.AreEqual(new[]{Key.D,Key.Space},first.Keys);
+            var last=first.Keys;
+            var braking=false;
+            var released=false;
+            for(var n=1;n<=51;n++)
+            {
+                Consume(p,last,n+2);
+                var t=n/60f;
+                var absoluteAge=20+n;
+                var recovery=absoluteAge<39;
+                // Fully authored air acceleration is 40 u/s². At n=40 the
+                // right side is cleared, the owned input releases Space and
+                // presses A; after that this analytic pose decelerates.
+                var brakeTime=Math.Max(0,(n-40)/60f);
+                var x=3.024902f+8f*Math.Min(t,40f/60f)
+                    +8*brakeTime-20*brakeTime*brakeTime;
+                var vx=n<=40?8f:Math.Max(0,8-40*brakeTime);
+                var keys=p.Read("run",1,1982+n,x,
+                    .815185547f+14.39f*t-15.36f*t*t,vx,false,false,true,false,0,
+                    recovery?OrdanPatternSlot.DebtLineA:OrdanPatternSlot.SeizureWeight,
+                    recovery?OrdanBossPhase.Recovery:OrdanBossPhase.Telegraph,
+                    recovery?absoluteAge:absoluteAge-39,.35f,14.39f-30.72f*t,Threat());
+                Assert.That(p.Unresolved,Is.Null,"step="+n+" position="+x);
+                if(n==40){CollectionAssert.AreEqual(new[]{Key.A},keys.Keys);braking=true;}
+                if(n>40 && n<=48){CollectionAssert.AreEqual(new[]{Key.A},keys.Keys);}
+                if(n>=49 && keys.Keys.Length==0)released=true;
+                last=keys.Keys;
+            }
+            Assert.That(braking && released,Is.True,
+                "right-side A braking followed by neutral Space release");
+            foreach(var invalid in new[]{19,21})
+            {
+                var q=Ready();
+                var noJump=q.Read("run",1,2000,3.024902f,.815185547f,8,true,false,true,false,0,
+                    OrdanPatternSlot.DebtLineA,OrdanBossPhase.Recovery,invalid,.35f,0,Threat());
+                if(invalid==21)CollectionAssert.DoesNotContain(noJump.Keys,Key.Space);
+            }
+        }
         [Test] public void OwnedRecoveryApproachConsumesOneEdgeThenReleasesAtObservedRightSide()
         {
             var p=Ready();var first=p.Read("run",1,2000,3.06f,.815185547f,8,true,false,true,false,0,OrdanPatternSlot.DebtLineA,OrdanBossPhase.Recovery,15,.35f,0,Threat());
@@ -488,7 +666,7 @@ namespace AcadeGameMaker.Tests.PlayMode.InputUnity
                 var c=p.Read("run",1,2000+n,3.06f+8*t,.815185547f+14.39f*t-15.36f*t*t,8,false,false,true,false,0,
                     age<39?OrdanPatternSlot.DebtLineA:OrdanPatternSlot.SeizureWeight,age<39?OrdanBossPhase.Recovery:OrdanBossPhase.Telegraph,age<39?age:age-39,.35f,14.39f-30.72f*t,Threat());
                 Assert.That(p.Unresolved,Is.Null);Assert.That(c.Attack,Is.False);
-                if(n<39)CollectionAssert.AreEqual(new[]{Key.D,Key.Space},c.Keys);else Assert.That(c.Keys,Is.Empty,"actual right-side observation releases Space once");
+                if(n<39)CollectionAssert.AreEqual(new[]{Key.D,Key.Space},c.Keys);else CollectionAssert.AreEqual(new[]{Key.A},c.Keys,"observed right-side pose starts bounded A braking, with Space released");
             }
         }
         [Test] public void OwnedRecoveryApproachRejectsUnownedLostProofAndDiscontinuity()

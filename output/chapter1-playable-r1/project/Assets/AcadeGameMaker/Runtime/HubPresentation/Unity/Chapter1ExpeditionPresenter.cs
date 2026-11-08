@@ -2,6 +2,7 @@ using System;
 using AcadeGameMaker.Input.Unity;
 using AcadeGameMaker.Run.Unity;
 using TMPro;
+using UnityEngine.UI;
 using UnityEngine;
 
 namespace AcadeGameMaker.Hub.Presentation.Unity
@@ -18,6 +19,9 @@ namespace AcadeGameMaker.Hub.Presentation.Unity
         private Chapter1HubLifetimeOwner _source;
         private UiSemanticFrameCursorV1 _cursor;
         private int _focus;
+        private bool _compactHud;
+        private RawImage _hubBackdrop;
+        private RawImage _hubPanel;
         private UnityEngine.Camera _presentationClearCamera;
 #if UNITY_EDITOR || UNITY_INCLUDE_TESTS
         private const bool ValidationMenuEnabled=true;
@@ -51,6 +55,42 @@ namespace AcadeGameMaker.Hub.Presentation.Unity
                 _presentationClearCamera.allowMSAA=false;
             }
             _presentationClearCamera.enabled=true;
+        }
+        // Runtime-only hub art. It stays behind all authored TMP controls and
+        // never receives clicks; gameplay cameras and simulation are unaffected.
+        private void UpdateHubArtwork(bool visible)
+        {
+            if(_hubBackdrop==null && Application.isPlaying && _status!=null)
+            {
+                var parent=_status.rectTransform.parent;
+                var bg=new GameObject("CH1-Hub-Backdrop",typeof(RectTransform),typeof(RawImage));
+                bg.transform.SetParent(parent,false);
+                var bgRect=bg.GetComponent<RectTransform>();
+                bgRect.anchorMin=bgRect.anchorMax=new Vector2(.5f,.5f);
+                bgRect.sizeDelta=new Vector2(640,360);
+                bgRect.anchoredPosition=Vector2.zero;
+                _hubBackdrop=bg.GetComponent<RawImage>();
+                _hubBackdrop.texture=Chapter1IndustrialBackdrop.GetTexture();
+                _hubBackdrop.color=new Color(1f,1f,1f,.88f);
+                _hubBackdrop.raycastTarget=false;
+                bg.transform.SetAsFirstSibling();
+
+                var panel=new GameObject("CH1-Hub-Contrast-Panel",typeof(RectTransform),typeof(RawImage));
+                panel.transform.SetParent(parent,false);
+                var panelRect=panel.GetComponent<RectTransform>();
+                panelRect.anchorMin=panelRect.anchorMax=new Vector2(.5f,.5f);
+                panelRect.sizeDelta=new Vector2(440,225);
+                panelRect.anchoredPosition=new Vector2(0,55);
+                _hubPanel=panel.GetComponent<RawImage>();
+                _hubPanel.texture=Texture2D.whiteTexture;
+                _hubPanel.color=new Color(.05f,.085f,.12f,.85f);
+                _hubPanel.raycastTarget=false;
+                panel.transform.SetSiblingIndex(1);
+            }
+            if(_hubBackdrop!=null && _hubBackdrop.gameObject.activeSelf!=visible)
+                _hubBackdrop.gameObject.SetActive(visible);
+            if(_hubPanel!=null && _hubPanel.gameObject.activeSelf!=visible)
+                _hubPanel.gameObject.SetActive(visible);
         }
         private void OnDisable()
         {
@@ -98,13 +138,35 @@ namespace AcadeGameMaker.Hub.Presentation.Unity
         }
         private void LateUpdate()
         {
-            if(_flow==null)return;_scaler.Refresh();var view=_flow.View;
+            if(_flow==null)return;
+            _scaler.Refresh();
+            var view=_flow.View;
+            var compact=view.Phase==Chapter1RunPhase.InRoom ||
+                view.Phase==Chapter1RunPhase.AtBarrier ||
+                view.Phase==Chapter1RunPhase.AtBoss ||
+                view.Phase==Chapter1RunPhase.BossCleanup;
+            if(compact!=_compactHud)
+            {
+                _compactHud=compact;
+                _status.fontSize=compact?10.5f:16f;
+                _status.alignment=compact?TextAlignmentOptions.TopLeft:TextAlignmentOptions.Center;
+                _status.rectTransform.anchoredPosition=compact?new Vector2(0,145):new Vector2(0,115);
+                _status.rectTransform.sizeDelta=compact?new Vector2(610,56):new Vector2(620,90);
+            }
+            if(compact)
+            {
+                var router=_flow.Lifetime==null?null:_flow.Lifetime.CurrentRouter;
+                if(router!=null && router.transform.parent!=null)
+                    Chapter1IndustrialBackdrop.Ensure(
+                        router.transform.parent.GetComponentInChildren<UnityEngine.Camera>(true));
+            }
             var ownStatus=view.Phase<Chapter1RunPhase.PreparingChoice || view.Phase==Chapter1RunPhase.AtBarrier || view.Phase==Chapter1RunPhase.EndingSuccessfulRun;
             if(_status.gameObject.activeSelf!=ownStatus)_status.gameObject.SetActive(ownStatus);
             var hub=view.Phase==Chapter1RunPhase.Hub || view.Phase==Chapter1RunPhase.ReturnedToHub || view.Phase==Chapter1RunPhase.PreparingHub;
             var returned=view.Phase==Chapter1RunPhase.ReturnedToHub;
             var failed=view.Phase==Chapter1RunPhase.ExpeditionStorageFailed;
             var recovering=view.Phase==Chapter1RunPhase.RetiringHubForStorageRetry || view.Phase==Chapter1RunPhase.PreparingHubAfterStorageRetry;
+            UpdateHubArtwork(hub || failed || recovering || view.Phase==Chapter1RunPhase.Diagnostic || view.Phase==Chapter1RunPhase.LockedPostBoss);
             if(failed || recovering)_focus=0;
             if(returned)_focus=5;
             // REQ-C1B-SRETRY-006: 기존 버튼0의 동일 hit rect만 사용한다. 복구 중 버튼은 잠근다.
@@ -120,8 +182,8 @@ namespace AcadeGameMaker.Hub.Presentation.Unity
                 case Chapter1RunPhase.PreparingHubAfterStorageRetry:_status.text=view.Error+"\n새 거점의 저장 준비와 새 중립 입력을 기다립니다.";break;
                 case Chapter1RunPhase.Diagnostic:_status.text="원정을 진행할 수 없습니다.\n"+view.Error;break;
                 case Chapter1RunPhase.LockedPostBoss:_status.text="보스 구간 정리 완료 · 후속 연결 대기\n현재 단계는 1챕터 완료가 아닙니다.";break;
-                case Chapter1RunPhase.AtBarrier:_status.text="체력 "+view.Health+"/5 · 봉쇄선\n상자에 오른쪽 클릭으로 전이한 뒤 Q로 선택 기술을 사용해 길을 열고 출구로 이동합니다.";break;
-                default:_status.text="체력 "+view.Health+"/5\n이동 WASD · 점프 Space · 대시 Shift · 공격 왼쪽 클릭 · 전이 오른쪽 클릭 · 선택 기술 Q";break;
+                case Chapter1RunPhase.AtBarrier:_status.text="CH1 · 봉쇄선     체력 "+view.Health+"/5\n우클릭 상자 전이 · Q 기술로 봉쇄선 해제 · 출구로 이동";break;
+                default:_status.text="CH1 · "+(view.Phase==Chapter1RunPhase.AtBoss?"보스 · 오르단":string.IsNullOrEmpty(view.RoomId)?"원정":view.RoomId)+"     체력 "+view.Health+"/5\nWASD 이동 · Space 점프 · Shift 대시 · 좌클릭 공격 · 우클릭 전이 · Q 기술";break;
             }
             if(hub && view.LastStorageFailure!=null)_status.text+="\n이전 출정 오류: "+view.LastStorageFailure.Error;
         }

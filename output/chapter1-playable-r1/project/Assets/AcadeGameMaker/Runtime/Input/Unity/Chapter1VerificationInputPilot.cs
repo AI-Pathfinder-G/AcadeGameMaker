@@ -73,10 +73,15 @@ namespace AcadeGameMaker.Input.Unity
         private Chapter1StandaloneVerificationSession _standaloneSession;
         private OwnedPair _standalonePair;
         private bool _standaloneAttachAttempted,_standaloneFocused;
-        private long _standaloneEpoch=1,_standaloneConsumed=-1;
+        private long _standaloneEpoch=1,_standaloneConsumed=-1,_standaloneForeignBaseline;
+        private double _lastForeignInputAt=-1;
+        internal double LastForeignInputAt=>_lastForeignInputAt;
+        internal long ForeignInputCount=>_foreignEvents;
+        internal static bool StartupQuiet(double elapsed,double sinceExternal,bool focused)=>focused && elapsed>=3.2d && sinceExternal>=1.0d && !double.IsInfinity(elapsed) && !double.IsInfinity(sinceExternal);
         private int _standaloneNeutral;
         private bool _standaloneCarryLogged;
         private bool StandaloneReady => _standaloneSession!=null && _standaloneSession.Active && ReferenceEquals(_standaloneSession.Pilot,this) && _standaloneNeutral>=2 && _standaloneFocused;
+        internal bool StandaloneInputReady=>StandaloneReady;
         internal bool AttachStandaloneOwner(IChapter1StandaloneVerificationOwner owner)
         {
             if(_standaloneAttachAttempted || _ownedContext!=null || _disposed || owner==null)return false;
@@ -85,8 +90,8 @@ namespace AcadeGameMaker.Input.Unity
             if(type.FullName!="AcadeGameMaker.Run.Unity.Chapter1SameBuildVerificationDriver" || type.Assembly.GetName().Name!="AcadeGameMaker.Run.Unity" || !type.IsSealed)return false;
             Chapter1StandaloneVerificationSession session;
             if(!owner.TryObserveStandaloneOwner(this,out session) || session==null || !session.Active || !ReferenceEquals(session.Owner,owner) || !session.Bind(this))return false;
-            _standaloneSession=session;_standaloneFocused=Application.isFocused;
-            _record("standalone-owner attached=true session="+session.Id+" mode="+session.Mode+" fixtureEvidence=false productionDeviceId=unavailable exclusiveInputAttribution=false");
+            _standaloneSession=session;_standaloneFocused=Application.isFocused;_standaloneForeignBaseline=_foreignEvents;
+            _record("standalone-owner attached=true session="+session.Id+" mode="+session.Mode+" preOwnerForeignInput="+_standaloneForeignBaseline+" fixtureEvidence=false productionDeviceId=unavailable exclusiveInputAttribution=false");
             return true;
         }
         internal void RevokeStandaloneOwner()
@@ -189,6 +194,7 @@ namespace AcadeGameMaker.Input.Unity
         private InputRouter _bossRouter;
         private int _bossApproachLogged;
         private string _bossRouterChange="unbound",_bossPreviousRouter="none";
+        private bool _bossRouterReported;
         private int _bossRouterReplacements;
         private int _bossObservationTick=-1,_bossPriorPlayer=-1,_bossPriorHealth=-1;
         private string _bossSignature="",_bossCommandSignature="";
@@ -286,7 +292,7 @@ namespace AcadeGameMaker.Input.Unity
                     var changed=0;foreach(var control in value.EnumerateChangedControls(device))changed++;
                     if(changed>0)
                     {
-                        _foreignEvents++;if(_standaloneSession!=null && _standaloneSession.Active)RevokeStandaloneOwner();if(_ownedContext!=null)throw new InvalidOperationException("격리 시험계의 비소유 사건입니다.");
+                        _foreignEvents++;_lastForeignInputAt=Time.realtimeSinceStartupAsDouble;if(_standaloneSession!=null && _standaloneSession.Active)RevokeStandaloneOwner();if(_ownedContext!=null)throw new InvalidOperationException("격리 시험계의 비소유 사건입니다.");
                         if(_foreignEvents<=16)_record("nonowned-input device="+device.deviceId+" layout="+device.layout+" changedControls="+changed+" exclusiveInputAttribution=false");
                     }
                 }
@@ -307,7 +313,7 @@ namespace AcadeGameMaker.Input.Unity
                 var own=standalone?_standalonePair:null;
                 var standaloneStates=own!=null && _mouse.position.ReadValue().Equals(own.Point) && _mouse.leftButton.isPressed==own.Attack && _mouse.rightButton.isPressed==own.Transfer;
                 if(standaloneStates)foreach(var key in _keyboard.allKeys){if(key.isPressed!=(Array.IndexOf(own.Keys,key.keyCode)>=0)){standaloneStates=false;break;}}
-                if(standalone && (own==null || !Chapter1StandaloneVerificationSession.ObservationValid(_standaloneSession.Active,_keyboard.added && _mouse.added && _keyboard.enabled && _mouse.enabled,own.KeyboardSeen,own.MouseSeen,own.Sequence==_sequence && own.Cycle==_standaloneEpoch && own.Dynamic==_dynamicBeforeCalls,standaloneStates,_foreignEvents>0,_standaloneFocused)))
+                if(standalone && (own==null || !Chapter1StandaloneVerificationSession.ObservationValid(_standaloneSession.Active,_keyboard.added && _mouse.added && _keyboard.enabled && _mouse.enabled,own.KeyboardSeen,own.MouseSeen,own.Sequence==_sequence && own.Cycle==_standaloneEpoch && own.Dynamic==_dynamicBeforeCalls,standaloneStates,_foreignEvents>_standaloneForeignBaseline,_standaloneFocused)))
                 {RevokeStandaloneOwner();Error="단독 사건/상태 소비 선행 누락입니다.";return;}
                 var expectedKeys=_ownedContext==null?(standalone?own.Keys:_keys):receipt.Keys;var expectedAttack=_ownedContext==null?(standalone?own.Attack:_attack):receipt.Attack;var expectedTransfer=_ownedContext==null?(standalone?own.Transfer:_transfer):receipt.Transfer;
                 if(standalone && !_mouse.position.ReadValue().Equals(own.Point)){RevokeStandaloneOwner();Error="단독 포인터 상태 불일치입니다.";return;}
@@ -419,7 +425,14 @@ namespace AcadeGameMaker.Input.Unity
         }
         private void BossRecord(string detail)
         {
-            detail+=" router="+BossRouterIdentity(_bossRouter)+" routerIdentityScope=process-object-lifetime routerChange="+_bossRouterChange+" routerReplacementOrdinal="+_bossRouterReplacements+" previousRouter="+_bossPreviousRouter;
+            // Report the full router provenance once per binding/replacement
+            // and again on any unresolved failure. Every other row remains a
+            // real, budgeted record, but omits the unchanged ~200-byte suffix.
+            if(!_bossRouterReported || detail.StartsWith("unresolved ",StringComparison.Ordinal))
+            {
+                detail+=" router="+BossRouterIdentity(_bossRouter)+" routerIdentityScope=process-object-lifetime routerChange="+_bossRouterChange+" routerReplacementOrdinal="+_bossRouterReplacements+" previousRouter="+_bossPreviousRouter;
+                _bossRouterReported=true;
+            }
             _bossBudget.Add(detail);_record("boss "+detail);
         }
         private bool ObserveBossCombat(InputRouter router,Action<string> progress)
@@ -432,7 +445,7 @@ namespace AcadeGameMaker.Input.Unity
             {
                 var hadPrevious=!ReferenceEquals(_bossRouter,null) || _bossRouterChange=="retired";if(!ReferenceEquals(_bossRouter,null))_bossPreviousRouter=BossRouterIdentity(_bossRouter).Replace(" routerReason="," previousRouterReason=");
                 _bossRouterChange=hadPrevious?"replacement":"initial-binding";if(hadPrevious)_bossRouterReplacements++;
-                _bossRouter=router;_bossPolicy=new Chapter1VerificationBossPolicy();_bossApproachLogged=0;_bossObservationTick=-1;_bossPriorPlayer=-1;_bossPriorHealth=-1;_bossSignature="";}
+                _bossRouter=router;_bossRouterReported=false;_bossPolicy=new Chapter1VerificationBossPolicy();_bossApproachLogged=0;_bossObservationTick=-1;_bossPriorPlayer=-1;_bossPriorHealth=-1;_bossSignature="";}
             var value=combat.LatestOutcome;
             if(value.Tick.Value==_bossObservationTick)return true;
             var bridge=graph.GetComponentInChildren<OrdanBossSimulationDriver>(true);
@@ -452,19 +465,26 @@ namespace AcadeGameMaker.Input.Unity
                 var q=value.CanonicalRequestTrace[i];var d=value.DamageResults[i];
                 damage+=d.AppliedAmount;trace+=Chapter1VerificationBossPolicy.FormatTrace(q,d,value.Tick.Value);
             }
-            if(value.DamageResults.Count>0 || damage>0 || hp!=_bossPriorPlayer || boss!=_bossPriorHealth || signature!=_bossSignature || value.Tick.Value%60==0)
+            if(value.DamageResults.Count>0 || damage>0 || hp!=_bossPriorPlayer || boss!=_bossPriorHealth || signature!=_bossSignature || value.Tick.Value%180==0)
             {
                 var pose=router.BoundPlayerForAuthoring.Snapshot;
                 var receipt=router.CurrentReceipt;var exact=router.TryGetChapter1CompletedEvidence(out var evidence);
-                BossRecord("completed tick="+value.Tick.Value+" movementTick="+pose.Tick.Value+" contiguous="+(_bossObservationTick>=0 && value.Tick.Value==_bossObservationTick+1)+
-                    " run="+(exact?evidence.RunKey:"unavailable")+" generation="+(exact?evidence.Generation:-1)+" receipt="+(receipt.HasValue?receipt.Value.Tick.Value:-1)+
-                    " playerBefore="+_bossPriorPlayer+" playerHp="+hp+" bossBefore="+_bossPriorHealth+" bossHp="+boss+
-                    " xQ="+pose.PositionXQ4096+" yQ="+pose.PositionYQ4096+" vxQ="+pose.VelocityXQ4096+" vyQ="+pose.VelocityYQ4096+
-                    " slot="+snapshot.PatternSlot+" phase="+snapshot.Phase+" age="+snapshot.PhaseAge+" attackOrdinal="+h.Digest.AttackOrdinal+
-                    " hostile="+h.Digest.Disposition+" geometry="+h.Observation.GeometryKey+" contact="+h.Observation.Contact+" occluded="+h.Observation.Occluded+
-                    " hostileSourceTick="+h.Tick.Value+" hostileDelivery="+(h.Digest.DeliveryTick.HasValue?h.Digest.DeliveryTick.Value.Value:-1)+" hostileRequest="+h.Digest.RequestId+
-                    " pull="+pull.LatestOutcome.Disposition.ToString()+" pullSource="+pull.LatestOutcome.SourceTick.Value+" pullOrdinal="+pull.LatestOutcome.AttackOrdinal+" pullQueued="+pull.LatestOutcome.QueuedNextDirectiveId+" attackAttempt="+(value.Attack.Attempt.HasValue?value.Attack.Attempt.Value.Code.ToString():"none")+
-                    " cooldownEnd="+value.Attack.Snapshot.CooldownEndTick+" issued="+_sequence+" consumed="+_consumed+" attackState="+_bossPolicy.AttackState+trace);
+                // Live authoritative health, pose, hostile contact, pull and
+                // damage trace are retained. Repeated IDs, camera and clock
+                // derivatives are not needed in every bounded evidence row.
+                BossRecord("completed tick="+value.Tick.Value+
+                    " playerHp="+hp+" bossHp="+boss+
+                    " xQ="+pose.PositionXQ4096+" yQ="+pose.PositionYQ4096+
+                    " vxQ="+pose.VelocityXQ4096+" vyQ="+pose.VelocityYQ4096+
+                    " slot="+snapshot.PatternSlot+" phase="+snapshot.Phase+
+                    " age="+snapshot.PhaseAge+" attackOrdinal="+h.Digest.AttackOrdinal+
+                    " hostile="+h.Digest.Disposition+" contact="+h.Observation.Contact+
+                    " occluded="+h.Observation.Occluded+
+                    " hostileSourceTick="+h.Tick.Value+
+                    " hostileDelivery="+(h.Digest.DeliveryTick.HasValue?h.Digest.DeliveryTick.Value.Value:-1)+
+                    " pull="+pull.LatestOutcome.Disposition+
+                    " attackAttempt="+(value.Attack.Attempt.HasValue?value.Attack.Attempt.Value.Code.ToString():"none")+
+                    " consumed="+_consumed+trace);
                 if(boss>=0 && _bossPriorHealth>=0 && boss<_bossPriorHealth)progress("boss-hp tick="+value.Tick.Value+" before="+_bossPriorHealth+" after="+boss);
             }
             _bossObservationTick=value.Tick.Value;_bossPriorPlayer=hp;_bossPriorHealth=boss;_bossSignature=signature;return true;
@@ -520,9 +540,19 @@ namespace AcadeGameMaker.Input.Unity
             if(_bossPolicy.Unresolved!=null){Neutral();BossRecord("unresolved tick="+evidence.Tick.Value+" reason="+_bossPolicy.Unresolved+
                 " observedRun="+observedRun+" observedGeneration="+observedGeneration+" observedTick="+observedTick+" x="+observedX.ToString("R",System.Globalization.CultureInfo.InvariantCulture)+" y="+observedY.ToString("R",System.Globalization.CultureInfo.InvariantCulture)+
                 " vx="+observedVx.ToString("R",System.Globalization.CultureInfo.InvariantCulture)+" vy="+observedVy.ToString("R",System.Globalization.CultureInfo.InvariantCulture)+" grounded="+observedGrounded+" locked="+observedLocked+" focused="+observedFocused+
-                " slot="+observedSlot+" phase="+observedPhase+" age="+observedAge+" latency="+observedLatency.ToString("R",System.Globalization.CultureInfo.InvariantCulture)+" jumpStart=unavailable-not-captured jumpUntil=unavailable-not-captured candidateReasons=unavailable-not-captured");throw new InvalidOperationException(_bossPolicy.Unresolved);}
+                " slot="+observedSlot+" phase="+observedPhase+" age="+observedAge+" latency="+observedLatency.ToString("R",System.Globalization.CultureInfo.InvariantCulture)+" ownedJump="+_bossPolicy.OwnedJumpDebugState+" candidateReasons=unavailable-not-captured");throw new InvalidOperationException(_bossPolicy.Unresolved);}
             var commandSignature=string.Join(",",command.Keys)+"/"+command.Attack;
-            if(commandSignature!=_bossCommandSignature){BossRecord("intent tick="+evidence.Tick.Value+" run="+evidence.RunKey+" generation="+evidence.Generation+" keys="+commandSignature+" point="+point+" nextSequence="+(_sequence+1)+" consumed="+_consumed+" state="+_bossPolicy.AttackState);_bossCommandSignature=commandSignature;}
+            if(commandSignature!=_bossCommandSignature)
+            {
+                // Preserve each observed key/attack transition and sequence;
+                // large unchanged owner diagnostics belong to jump events and
+                // failure reports, not every attack press/release.
+                var jumpDetail=Array.IndexOf(command.Keys,Key.Space)>=0?" ownedJump="+_bossPolicy.OwnedJumpDebugState:"";
+                BossRecord("intent tick="+evidence.Tick.Value+" keys="+commandSignature+
+                    " nextSequence="+(_sequence+1)+" consumed="+_consumed+
+                    " state="+_bossPolicy.AttackState+jumpDetail);
+                _bossCommandSignature=commandSignature;
+            }
             Hold(command.Keys,point,command.Attack);
         }
         internal void ApproachForFailure(Vector2 position){Hold(position.x<6?new[]{Key.D}:Array.Empty<Key>(),Vector2.zero);}
@@ -950,12 +980,12 @@ namespace AcadeGameMaker.Input.Unity
                 (Lease is Chapter1StandaloneVerificationSession standalone ? standalone.Active && ReferenceEquals(standalone.Pilot,Issuer) && (standalone.Mode=="branch1" || standalone.Mode=="branch2") && Source==null && CaseName==null && OwnerBirth==null && OwnerPid==0 : !string.IsNullOrEmpty(Source) && !string.IsNullOrEmpty(CaseName) && !string.IsNullOrEmpty(OwnerBirth) && OwnerPid>0);
             internal bool Same(OwnedJumpIdentity b)=>Valid && b.Valid && ReferenceEquals(Issuer,b.Issuer) && ReferenceEquals(Lease,b.Lease) && ReferenceEquals(Router,b.Router) && ReferenceEquals(Player,b.Player) && Source==b.Source && CaseName==b.CaseName && OwnerBirth==b.OwnerBirth && OwnerPid==b.OwnerPid && Epoch==b.Epoch && Cycle==b.Cycle && ModeEpoch==b.ModeEpoch;
         }
-        private OwnedJumpIdentity _ownedIdentity,_tokenIdentity;private bool _ownedIdentityBound,_spaceObserved,_spaceHeld,_launchPending,_carryActive;private int _launchDirection,_launchTick,_launchPhaseStart,_carryUntil,_carryTick;private OrdanPatternSlot _launchSlot;private long _lastOwnedSequence=-1,_neutralSpaceSequence=-1,_launchSequence=-1,_carryReadSequence=-1;
+        private OwnedJumpIdentity _ownedIdentity,_tokenIdentity;private bool _ownedIdentityBound,_spaceObserved,_spaceHeld,_launchPending,_carryActive;private int _launchDirection,_launchTick,_launchPhaseStart,_carryUntil,_carryTick,_pendingCarryLatestTick=-1,_pendingCarryReads;private OrdanPatternSlot _launchSlot;private long _lastOwnedSequence=-1,_neutralSpaceSequence=-1,_launchSequence=-1,_carryReadSequence=-1,_launchArmedAt=-1;
         // REQ-BVP-003/004, AC-BVP-001/003: one bounded owned normal-input navigation attempt.
         // This is an observed gameplay experiment, not a future collision-safety certificate.
-        private bool _approachAttempted,_approachActive,_approachClosed,_approachPress,_approachAirborne;
+        private bool _approachAttempted,_approachActive,_approachClosed,_approachPress,_approachAirborne,_approachBraking,_approachBrakeConsumed;
         private int _approachStart,_approachTick,_approachRecoveryStart;
-        private long _approachReleaseSequence,_approachReadSequence;
+        private long _approachReleaseSequence,_approachReadSequence,_approachBrakeSequence;
         private OwnedJumpIdentity _approachIdentity;
         private void CloseApproach(string reason)
         {if(!_approachActive)return;_approachActive=false;_approachClosed=true;Unresolved="소유 Recovery 탐색 폐쇄: "+reason;}
@@ -964,9 +994,16 @@ namespace AcadeGameMaker.Input.Unity
         internal bool RecoveryApproachAirborneObserved=>_approachAirborne;
         internal bool OwnedContinuationActive=>_carryActive;
         internal int OwnedContinuationDeadline=>_carryUntil;
+        internal string OwnedJumpDebugState=>"valid="+_ownedIdentity.Valid+" standalone="+(_ownedIdentity.Lease is Chapter1StandaloneVerificationSession)+" pending="+_launchPending+" carry="+_carryActive+" spaceObserved="+_spaceObserved+" spaceHeld="+_spaceHeld+" neutralSeq="+_neutralSpaceSequence+" lastSeq="+_lastOwnedSequence+" armedAt="+_launchArmedAt+" launchTick="+_launchTick+" pendingReads="+_pendingCarryReads+" pendingTick="+_pendingCarryLatestTick+" carryTick="+_carryTick+" start="+_jumpStart+" until="+_jumpUntil+" resume="+_resume+" focused="+_focused;
         internal void BindOwnedJump(OwnedJumpIdentity identity)
         {if(!_ownedIdentityBound || !_ownedIdentity.Same(identity)){CloseApproach("owner identity changed");InvalidateOwnedJump();_spaceObserved=false;_lastOwnedSequence=-1;_neutralSpaceSequence=-1;}_ownedIdentity=identity;_ownedIdentityBound=identity.Valid;}
-        private void InvalidateOwnedJump(){_launchPending=false;_carryActive=false;_launchSequence=-1;}
+        private void InvalidateOwnedJump(){_launchPending=false;_carryActive=false;_launchSequence=-1;_launchArmedAt=-1;_pendingCarryReads=0;_pendingCarryLatestTick=-1;}
+        // The standalone player may publish up to eight completed physics ticks
+        // in a single visual input frame. The isolated Unity fixture stays exact.
+        internal static bool IsBoundedStandaloneTickGap(int previous,int next)
+        {return previous>=0 && next>previous+1 && next-previous<=8;}
+        private bool OwnedTickSequenceValid(int previous,int next)
+        {return next==previous+1 || _tokenIdentity.Lease is Chapter1StandaloneVerificationSession && IsBoundedStandaloneTickGap(previous,next);}
         internal void ObserveStandaloneConsumption(object issuer,Chapter1StandaloneVerificationSession session,long epoch,Key[] keys,long sequence,bool ready)
         {ObserveOwnedConsumption(issuer,session,null,null,null,0,epoch,session==null?0:session.Id,keys,sequence,ready && session!=null && session.Active && ReferenceEquals(session.Pilot,issuer));}
         // Called only after the existing event ID/time/device/payload and state checks. No allocation, clock read or exception.
@@ -980,24 +1017,67 @@ namespace AcadeGameMaker.Input.Unity
             if(!permitted){CloseApproach("unexpected owned keys");InvalidateOwnedJump();_spaceObserved=false;_lastOwnedSequence=sequence;return;}
             if(_approachActive)
             {
-                if(!_approachPress && sequence==_approachReleaseSequence+1 && space && direction==1 && _spaceObserved && !_spaceHeld)_approachPress=true;
+                if(_approachBraking)
+                {
+                    if(!space && direction==-1)_approachBrakeConsumed=true;
+                    else if(!_approachBrakeConsumed && sequence==_approachBrakeSequence+1 && space && direction==1){}
+                    else CloseApproach("brake input must be owned A without Space");
+                }
+                else if(!_approachPress && sequence==_approachReleaseSequence+1 && space && direction==1 && _spaceObserved && !_spaceHeld)_approachPress=true;
                 else if(!_approachPress || !space || direction!=1)CloseApproach("missing single released-to-pressed D+Space consumption");
             }
-            if(!space){InvalidateOwnedJump();_neutralSpaceSequence=sequence;}
+            if(!space)
+            {
+                // A previously queued neutral may finish consumption after the
+                // policy has decided to jump, before the one D+Space edge arrives.
+                // Preserve that pending edge for exactly ONE newer neutral receipt.
+                var queuedNeutral=_launchPending && !_carryActive && direction==0 &&
+                    _launchArmedAt>=0 && sequence==_launchArmedAt+1 &&
+                    sequence==_neutralSpaceSequence+1;
+                if(!queuedNeutral)InvalidateOwnedJump();
+                _neutralSpaceSequence=sequence;
+            }
             else if(_launchPending && _spaceObserved && !_spaceHeld && _neutralSpaceSequence>=0 && sequence==_neutralSpaceSequence+1 && direction==_launchDirection)
-            {_carryActive=true;_launchPending=false;_launchSequence=sequence;_tokenIdentity=_ownedIdentity;_carryTick=_launchTick;}
+            {_carryActive=true;_launchPending=false;_launchArmedAt=-1;_launchSequence=sequence;_tokenIdentity=_ownedIdentity;_carryTick=Math.Max(_launchTick,_pendingCarryLatestTick);}
             else if(!_spaceObserved || !_spaceHeld || !_carryActive || direction!=_launchDirection)InvalidateOwnedJump();
             _spaceHeld=space;_spaceObserved=true;_lastOwnedSequence=sequence;
         }
         private bool TryContinueOwnedJump(int tick,float x,float y,float vx,float vy,bool grounded,bool locked,OrdanPatternSlot slot,OrdanBossPhase phase,int age,float latency,Threat threat,out int direction)
         {
             direction=0;
-            if(!_carryActive || !_ownedIdentityBound || !_ownedIdentity.Same(_tokenIdentity) || !_spaceObserved || !_spaceHeld || _launchSequence<0 || tick!=_carryTick+1 || (_carryTick!=_launchTick && _lastOwnedSequence<=_carryReadSequence) || tick>=_carryUntil || grounded || locked || !_focused || _resume || !float.IsFinite(x)||!float.IsFinite(y)||!float.IsFinite(vx)||!float.IsFinite(vy)||!float.IsFinite(latency)||latency<=0 || slot!=_launchSlot || phase!=OrdanBossPhase.Telegraph || age<1 || age>46 || tick-age!=_launchPhaseStart || threat.Stage<OrdanHealthStage.Stage1 || threat.Stage>OrdanHealthStage.Stage3 || threat.Queued || threat.Contact || threat.Pulling || threat.WallContact)
+            if(!_carryActive || !_ownedIdentityBound || !_ownedIdentity.Same(_tokenIdentity) || !_spaceObserved || !_spaceHeld || _launchSequence<0 || !OwnedTickSequenceValid(_carryTick,tick) || (_carryTick!=_launchTick && _lastOwnedSequence<=_carryReadSequence) || tick>=_carryUntil || grounded || locked || !_focused || _resume || !float.IsFinite(x)||!float.IsFinite(y)||!float.IsFinite(vx)||!float.IsFinite(vy)||!float.IsFinite(latency)||latency<=0 || slot!=_launchSlot || phase!=OrdanBossPhase.Telegraph || age<1 || age>46 || tick-age!=_launchPhaseStart || threat.Stage<OrdanHealthStage.Stage1 || threat.Stage>OrdanHealthStage.Stage3 || threat.Queued || threat.Contact || threat.Pulling || threat.WallContact)
             {InvalidateOwnedJump();return false;}
             var low=x+Math.Min(vx,_launchDirection*8f)*latency-.02f;var high=x+Math.Max(vx,_launchDirection*8f)*latency+.02f;var half=OrdanBossHostileDamageProducer.ApprovedPlayerHalfWidth/4096f;
             if(low-half<=OrdanBossHostileDamageProducer.ApprovedArena.MinX/4096f || high+half>=OrdanBossHostileDamageProducer.ApprovedArena.MaxX/4096f){InvalidateOwnedJump();return false;}
             if(!OwnedDebtLineEnvelopeClear(x,y,vx,vy,_launchDirection,slot,age,latency)){InvalidateOwnedJump();return false;}
             _carryTick=tick;_carryReadSequence=_lastOwnedSequence;direction=_launchDirection;return true;
+        }
+        // A published standalone jump may precede verified Dynamic consumption
+        // by one render frame; FixedUpdate can advance several physics ticks.
+        // Permit one provisional observation only for that still-pending owned
+        // launch, with full hostile-time safety and unchanged launch deadline.
+        private bool TryContinuePendingOwnedJump(int tick,float x,float y,float vx,float vy,bool grounded,bool locked,OrdanPatternSlot slot,OrdanBossPhase phase,int age,float latency,Threat threat,out int direction)
+        {
+            direction=0;
+            if(!_launchPending || _carryActive || !(_ownedIdentity.Lease is Chapter1StandaloneVerificationSession) ||
+               !_ownedIdentityBound || !_ownedIdentity.Valid || !_spaceObserved || _spaceHeld ||
+               _neutralSpaceSequence!=_lastOwnedSequence || _launchArmedAt<0 ||
+               _lastOwnedSequence-_launchArmedAt>1 || _lastOwnedSequence<_launchArmedAt ||
+               _pendingCarryReads!=0 || !IsBoundedStandaloneTickGap(_launchTick,tick) ||
+               tick>=_carryUntil || grounded || locked || !_focused || _resume ||
+               !float.IsFinite(x) || !float.IsFinite(y) || !float.IsFinite(vx) || !float.IsFinite(vy) ||
+               !float.IsFinite(latency) || latency<=0 || slot!=_launchSlot ||
+               phase!=OrdanBossPhase.Telegraph || age<1 || age>46 ||
+               tick-age!=_launchPhaseStart || threat.Queued || threat.Contact ||
+               threat.Pulling || threat.WallContact || threat.Stage<OrdanHealthStage.Stage1 ||
+               threat.Stage>OrdanHealthStage.Stage3)
+               return false;
+            if(!OwnedDebtLineEnvelopeClear(x,y,vx,vy,_launchDirection,slot,age,latency))
+                return false;
+            _pendingCarryReads=1;
+            _pendingCarryLatestTick=tick;
+            direction=_launchDirection;
+            return true;
         }
         private string _run;private long _generation;private int _tick=-1,_pressTick=-1,_jumpStart=-1,_jumpUntil=-1;
         private bool _focused=true,_resume=true,_pressed,_released;private int _neutralUpdates;
@@ -1021,7 +1101,7 @@ namespace AcadeGameMaker.Input.Unity
             Focus(focused);
             if(!focused || _resume){_last=new Command(Array.Empty<Key>(),false);return _last;}
             if(tick==_tick)return _last;
-            if(_carryActive && tick!=_tick+1)InvalidateOwnedJump();
+            if(_carryActive && !OwnedTickSequenceValid(_tick,tick))InvalidateOwnedJump();
             _tick=tick;
             var keys=new List<Key>();
             var threat=observedThreat??new Threat(OrdanHealthStage.Stage1,false,false,false,false,false,28672,4915,410,0);
@@ -1031,15 +1111,23 @@ namespace AcadeGameMaker.Input.Unity
 
             if(_carryActive && (locked || grounded || threat.Queued || threat.Contact || threat.Pulling || threat.WallContact || !_ownedIdentityBound || !_ownedIdentity.Same(_tokenIdentity)))InvalidateOwnedJump();
             if(!TrySafeIntent(x,y,vx,vy,grounded,locked,slot,phase,age,latency,threat,out var direction,out var jump,out var reason))
-            {if(reason!="모든 정상 이동/점프 후보의 예고 도달·벽·실제 패턴 안전을 입증할 수 없음" || !TryContinueOwnedJump(tick,x,y,vx,vy,grounded,locked,slot,phase,age,latency,threat,out direction)){InvalidateOwnedJump();Unresolved=reason;_last=new Command(Array.Empty<Key>(),false);return _last;}}
-            if(_carryActive && tick!=_carryTick){if(tick==_carryTick+1 && tick<_carryUntil && phase==OrdanBossPhase.Telegraph && slot==_launchSlot && tick-age==_launchPhaseStart)_carryTick=tick;else InvalidateOwnedJump();}
+            {if(reason!="모든 정상 이동/점프 후보의 예고 도달·벽·실제 패턴 안전을 입증할 수 없음" || !(TryContinuePendingOwnedJump(tick,x,y,vx,vy,grounded,locked,slot,phase,age,latency,threat,out direction) || TryContinueOwnedJump(tick,x,y,vx,vy,grounded,locked,slot,phase,age,latency,threat,out direction))){InvalidateOwnedJump();Unresolved=reason;_last=new Command(Array.Empty<Key>(),false);return _last;}}
+            if(_carryActive && tick!=_carryTick){if(OwnedTickSequenceValid(_carryTick,tick) && tick<_carryUntil && phase==OrdanBossPhase.Telegraph && slot==_launchSlot && tick-age==_launchPhaseStart)_carryTick=tick;else InvalidateOwnedJump();}
             if(direction!=0)keys.Add(direction>0?Key.D:Key.A);
             if(jump && _jumpStart<0){_jumpStart=tick;_jumpUntil=checked(tick+Math.Max(24,48-age+2));
                 if(_ownedIdentityBound && grounded && !locked && phase==OrdanBossPhase.Telegraph && age>=0 && age<=46 && (slot==OrdanPatternSlot.DebtLineA || slot==OrdanPatternSlot.DebtLineB) && _spaceObserved && !_spaceHeld && _neutralSpaceSequence==_lastOwnedSequence && !threat.Queued && !threat.Contact && !threat.Pulling)
-                {_launchPending=true;_launchDirection=direction;_launchTick=tick;_launchPhaseStart=tick-age;_launchSlot=slot;_carryUntil=Math.Min(_jumpUntil,Math.Min(checked(_launchPhaseStart+48+2),checked(tick+50)));}}
+                {_launchPending=true;_launchArmedAt=_lastOwnedSequence;_pendingCarryLatestTick=-1;_pendingCarryReads=0;_launchDirection=direction;_launchTick=tick;_launchPhaseStart=tick-age;_launchSlot=slot;_carryUntil=Math.Min(_jumpUntil,Math.Min(checked(_launchPhaseStart+48+2),checked(tick+50)));}}
             if(_jumpStart>=0 && tick<_jumpUntil)keys.Add(Key.Space);
             else if(_jumpStart>=0 && slot!=OrdanPatternSlot.DebtLineA && slot!=OrdanPatternSlot.DebtLineB)_jumpStart=-1;
-            var attack=RightRegionClear((int)(x*4096),(int)(y*4096)) && aim && !locked && tick>=cooldown && _released && !_pressed && tick>_pressTick && x>=8.75f && x<=9.25f;
+                        // The right attack zone begins at the authored boss body edge
+            // plus player half-width and a real 0.05 world-unit gap, not
+            // the old arbitrary 8.75 threshold. RightRegionClear still
+            // enforces Seizure, DebtLine, audit and arena clearances.
+            var attackLeft=OrdanBossHostileDamageProducer.ApprovedOrdanBody.MaxX/4096f+
+                OrdanBossHostileDamageProducer.ApprovedPlayerHalfWidth/4096f+.05f;
+            var attack=RightRegionClear((int)(x*4096),(int)(y*4096)) && aim && !locked &&
+                tick>=cooldown && _released && !_pressed && tick>_pressTick &&
+                x>=attackLeft && x<=9.25f;
             if(attack){_released=false;_pressTick=tick;}
             _last=new Command(keys.ToArray(),attack);return _last;
         }
@@ -1053,14 +1141,14 @@ namespace AcadeGameMaker.Input.Unity
             if(!_approachActive)
             {
                 if(_approachAttempted || !clear || !_ownedIdentityBound || !_ownedIdentity.Valid || !_spaceObserved || _spaceHeld || _neutralSpaceSequence!=_lastOwnedSequence ||
-                    slot!=OrdanPatternSlot.DebtLineA || phase!=OrdanBossPhase.Recovery || age<0 || age>18 || !grounded || vy!=0 || x<3f || x>3.25f || vx<7.5f || vx>8.001f)return false;
+                    slot!=OrdanPatternSlot.DebtLineA || phase!=OrdanBossPhase.Recovery || age<0 || age>20 || !grounded || vy!=0 || x<3f || x>3.25f || vx<7.5f || vx>8.001f)return false;
                 _approachAttempted=true;_approachActive=true;_approachStart=tick;_approachTick=tick;_approachRecoveryStart=tick-age;
                 _approachReleaseSequence=_lastOwnedSequence;_approachReadSequence=_lastOwnedSequence;_approachIdentity=_ownedIdentity;
                 InvalidateOwnedJump();_jumpStart=-1;_jumpUntil=-1;keys=new[]{Key.D,Key.Space};return true;
             }
             var samePhase=slot==OrdanPatternSlot.DebtLineA && phase==OrdanBossPhase.Recovery && tick-age==_approachRecoveryStart ||
                 slot==OrdanPatternSlot.SeizureWeight && phase==OrdanBossPhase.Telegraph && tick-age==_approachRecoveryStart+39 && age>=0 && age<48;
-            if(!clear || !_approachIdentity.Same(_ownedIdentity) || tick!=_approachTick+1 || tick>=_approachStart+60 || !samePhase || _lastOwnedSequence<=_approachReadSequence ||
+            if(!clear || !_approachIdentity.Same(_ownedIdentity) || !(tick==_approachTick+1 || _approachIdentity.Lease is Chapter1StandaloneVerificationSession && IsBoundedStandaloneTickGap(_approachTick,tick)) || tick>=_approachStart+60 || !samePhase || _lastOwnedSequence<=_approachReadSequence ||
                 tick>_approachStart+2 && !_approachPress)
             {CloseApproach("identity/focus/threat/tick/phase/deadline or actual Space press missing");return true;}
             _approachTick=tick;_approachReadSequence=_lastOwnedSequence;
@@ -1071,8 +1159,19 @@ namespace AcadeGameMaker.Input.Unity
             if(x-half<=arena.MinX/4096f || x+half>=arena.MaxX/4096f || y-height<arena.MinY/4096f || y+height>=arena.MaxY/4096f ||
                 x+half>=body.MinX/4096f && x-half<=body.MaxX/4096f && y-height<=body.MaxY/4096f+.02f)
             {CloseApproach("actual arena/body clearance lost");return true;}
+            if(_approachBraking)
+            {
+                if(x<=body.MaxX/4096f+half+.05f || vx<-.2f)
+                {CloseApproach("braking lost the observed right-side corridor");return true;}
+                if(_approachBrakeConsumed && vx<=2f)
+                {_approachActive=false;_jumpStart=-1;_jumpUntil=-1;return true;} // one neutral release.
+                keys=new[]{Key.A};return true;
+            }
             if(_approachPress && _approachAirborne && x>body.MaxX/4096f+half+.05f)
-            {_approachActive=false;_jumpStart=-1;_jumpUntil=-1;return true;} // one neutral release; original selector resumes next tick.
+            {
+                _approachBraking=true;_approachBrakeConsumed=false;_approachBrakeSequence=_lastOwnedSequence;
+                keys=new[]{Key.A};return true; // release Space and decelerate after real clearance.
+            }
             keys=new[]{Key.D,Key.Space};return true;
         }
         internal readonly struct Threat
