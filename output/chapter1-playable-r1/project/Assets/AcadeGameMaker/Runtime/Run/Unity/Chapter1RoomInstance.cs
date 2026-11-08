@@ -72,9 +72,9 @@ namespace AcadeGameMaker.Run.Unity
                 _previousVisualX[i]=_visualSources[i].bounds.center.x;
                 var art=playerArt!=null?playerArt:Chapter1IndustrialArt.ForEnvironment(_visualSources[i]);
                 var marker=new GameObject((playerArt!=null?"DoeonStaticView":art!=null?"IndustrialEnvironmentView":"TemporaryActorView")+i);marker.transform.SetParent(transform,false);
-                var renderer=marker.AddComponent<SpriteRenderer>();renderer.sprite=art!=null?art:_sprite;
+                var renderer=marker.AddComponent<SpriteRenderer>();renderer.sprite=playerArt!=null?playerArt:art!=null?art:_sprite;
                 if(art!=null && playerArt==null){renderer.drawMode=SpriteDrawMode.Tiled;renderer.tileMode=SpriteTileMode.Continuous;renderer.sortingOrder=-1;}
-                renderer.color=art!=null?Color.white:_visualSources[i].gameObject.layer==8?new Color(.25f,.28f,.32f):
+                renderer.color=playerArt!=null || art!=null?Color.white:_visualSources[i].gameObject.layer==8?new Color(.25f,.28f,.32f):
                     _visualSources[i].gameObject.name.Contains("Player")?new Color(.85f,.9f,1f):new Color(.8f,.35f,.25f);
                 _markers[i]=renderer;
             }
@@ -85,6 +85,7 @@ namespace AcadeGameMaker.Run.Unity
         private void LateUpdate()
         {
             if(_markers==null)return;
+            var visualRouter=GetComponentInChildren<InputRouter>(true);
             for(var i=0;i<_markers.Length;i++)
             {
                 var source=_visualSources[i];var visible=source!=null && source.enabled && source.gameObject.activeInHierarchy;
@@ -96,7 +97,7 @@ namespace AcadeGameMaker.Run.Unity
                     {
                         _playerFacingLeft[i]=Chapter1DoeonArt.FacingLeft(_previousVisualX[i],bounds.center.x,_playerFacingLeft[i]);
                         _previousVisualX[i]=bounds.center.x;
-                        _markers[i].sprite=Chapter1DoeonArt.ForPlayer(source,_playerFacingLeft[i]);
+                        _markers[i].sprite=Chapter1DoeonAnimation.ForPlayerPose(source,_playerFacingLeft[i],visualRouter);
                         _markers[i].transform.position=new Vector3(bounds.center.x,bounds.min.y,bounds.center.z);
                         _markers[i].transform.localScale=Vector3.one;
                     }

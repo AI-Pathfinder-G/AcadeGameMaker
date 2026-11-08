@@ -1,10 +1,19 @@
 # Character / monster / NPC / boss art inventory — 2026-11-09
 
+## Package A local implementation — right-facing Doeon animation candidate (2026-11-09)
+
+- **Implemented, not final accepted:** tools/sprite_atlas/build_ch1_doeon_candidate.py performs deterministic processing of preserved original 09-doeon-movement.png / 10-doeon-combat.png into two 384x256 RGBA candidate atlases. Each 6x4 sheet holds 24 keyed poses at 64x64px, PPU 18, common top-left foot baseline 52. Source 09 manually reviewed Y edges [0,284,533,780,1024] avoid the known fixed-grid row-overlap. Source 10 uses exact 256px row edges. Candidate images are NOT original sprite masters or independently approved final media.
+- **Unity integration:** current active project includes Assets/Resources/Chapter1Doeon/Candidate-movement.png, Candidate-combat.png, candidate-animation-profile.json. Chapter1DoeonAnimation chooses right-facing idle / walk / run / jump / dash / basic attack / hit frames from actual completed player movement, input attack ordinal and health publications. Renderer and OnGUI use the same visual selection with UV-safe cropped sprites, not a second movement/attack simulation. Source left static Left.png remains exact fallback; there is no blind mirror.
+- **Provenance:** originals remain read-only in H:\GPT-workspace\AcadeGameMaker\images\sprites\production-v1\raw. The source/atlas SHA-256, frame extraction geometry and candidate status live in output/ch1-package-A-20261109/doeon-right-candidate/manifest.json. No raw 1536x1024 concept sheet or full Seryeong archive was copied into Unity.
+- **Unity test:** 2026-11-09 output/ch1-package-A-20261109/unity-targeted/results.xml reported 2/2 passed, exit 0 (candidate atlas format, point filter, state precedence and clip selection).
+- **Actual Windows preview:** Unity 6000.6.0f1 built output/chapter1-autonomous-20261021/build/windows/attempt-009/AcadeGameMakerChapter1.exe, success exit 0. Launched an isolated player from output/ch1-package-A-20261109/game-smoke and captured true gameplay frames at 7s, 9s, 11s in output/ch1-package-A-20261109/visual-frame-{7,9,11}s.png. One R01 test was deliberately bounded; no full branch acceptance claim or independent graphic approval.
+- **Final scoped code/test check:** the stricter candidate profile reader and SHA-provenance metadata passed the renewed targeted Unity test (2/2) under output/ch1-package-A-20261109/unity-targeted-v2/results.xml. A second deterministic atlas generation reproduced byte-for-byte identical movement.png, combat.png and manifest.json hashes. The latest attempt-010 Windows build succeeded, and its isolated real Windows branch1 autoplay recorded Extraction ChapterCompleted and final success=True with exit code 0; see output/ch1-package-A-20261109/branch1-full-game-result.json. A separate Solidarity / fail-retry rerun for attempt-010 has not been performed; prior attempt-008 results remain historical.
+- **Still pending:** authored LEFT action atlas, clean art edge / magenta halo polish, per-frame foot/weapon/effect alignment on real stage, visual attack/hit timing review, more transition states and 1x/4x animation QA, independent review when Codex becomes available. The generated candidate remains reversible and must not be counted as completed all-direction character media.
 ## Actual status
 
 - Active Unity project: output/chapter1-playable-r1/project
 - Original art archive, READ ONLY: H:\GPT-workspace\AcadeGameMaker\images
-- Playable CH1 still uses Doeon and Ordan with one static image per LEFT/RIGHT direction.
+- Initial inventory baseline used Doeon and Ordan static left/right sprites; later Package A candidate integration is recorded above.
 - Walker/Surveyor currently show temporary actor geometry. No character-specific accepted raster atlas was found in the scanned original images or current Unity Resources.
 - Existing production-v1 raw files are magenta-key concept/keypose sheets. They are NOT transparent, completed, synchronized animation clips.
 - Seoha approved appearance: boss B6 v7 and NPC B3 v5 (LEFT figure in original paired sheet). Do not silently import discarded styles.

@@ -263,6 +263,32 @@ namespace AcadeGameMaker.Input.Unity
             }
             view=new Chapter1EncounterEvidenceView(completed,body,alive,_chapterHealthPublication,producer,_chapterToken);return true;
         }
+        // CH1 visual-only sampled facts. No second movement/combat owner and
+        // no input reads: the output is derived from completed published state.
+        // Exact collider identity prevents a room's extra actor from inheriting
+        // the player animation. Does not alter combat/physics or acceptance.
+        internal bool TryGetDoeonAnimationEvidence(
+            Collider2D exactPlayer, out int tick, out int velocityXQ4096,
+            out int velocityYQ4096, out bool grounded, out bool dashing,
+            out int health, out long committedAttackOrdinal)
+        {
+            tick=velocityXQ4096=velocityYQ4096=health=0;
+            grounded=dashing=false;committedAttackOrdinal=-1;
+            if(exactPlayer==null || _player==null || IsFaulted ||
+               !ReferenceEquals(_player.GetComponent<Collider2D>(),exactPlayer) ||
+               !TryGetChapter1CompletedEvidence(out var completed))
+                return false;
+            var motion=_player.Snapshot;
+            if(motion.Tick!=completed.Tick)return false;
+            tick=motion.Tick.Value;
+            velocityXQ4096=motion.VelocityXQ4096;
+            velocityYQ4096=motion.VelocityYQ4096;
+            grounded=motion.IsGrounded;
+            dashing=motion.ActionState==MovementActionState.Dashing;
+            health=completed.Health;
+            committedAttackOrdinal=_nextAttackSequenceId;
+            return true;
+        }
         private void InitializeChapter1Regular()
         {
             if(!_chapterEntryInstalled || _chapterSink==null || _combat!=null || _localRequireNeutralStart || _authoredHubUiOnly ||

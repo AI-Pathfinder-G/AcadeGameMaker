@@ -1,4 +1,5 @@
 using System;
+using AcadeGameMaker.Input.Unity;
 using UnityEngine;
 
 namespace AcadeGameMaker.Run.Unity
@@ -69,7 +70,7 @@ namespace AcadeGameMaker.Run.Unity
                 new Vector2(frame.pivotX, frame.pivotY), frame.pixelsPerUnit, 0, SpriteMeshType.FullRect);
         }
 
-        internal static bool DrawPlayer(Rect colliderRect, Collider2D source)
+        internal static bool DrawPlayer(Rect colliderRect, Collider2D source, InputRouter router = null)
         {
             if (!IsPlayer(source)) return false;
             var bounds = source.bounds;
@@ -77,7 +78,7 @@ namespace AcadeGameMaker.Run.Unity
             { _guiSource = source; _guiPreviousX = bounds.center.x; _guiLeft = false; }
             _guiLeft = FacingLeft(_guiPreviousX, bounds.center.x, _guiLeft);
             _guiPreviousX = bounds.center.x;
-            var sprite = ForPlayer(source, _guiLeft);
+            var sprite = Chapter1DoeonAnimation.ForPlayerPose(source, _guiLeft, router);
             if (bounds.size.y <= 0) return false;
             var pixelsPerWorldUnit = colliderRect.height / bounds.size.y;
             var width = sprite.rect.width / sprite.pixelsPerUnit * pixelsPerWorldUnit;
@@ -88,7 +89,8 @@ namespace AcadeGameMaker.Run.Unity
             try
             {
                 GUI.color = Color.white;
-                GUI.DrawTexture(new Rect(left, top, width, height), sprite.texture, ScaleMode.StretchToFill, true);
+                GUI.DrawTextureWithTexCoords(new Rect(left, top, width, height),
+                    sprite.texture, Chapter1DoeonAnimation.TextureUv(sprite), true);
             }
             finally { GUI.color = old; }
             return true;

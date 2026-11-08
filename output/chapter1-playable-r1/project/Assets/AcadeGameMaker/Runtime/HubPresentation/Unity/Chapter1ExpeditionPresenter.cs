@@ -208,7 +208,7 @@ namespace AcadeGameMaker.Hub.Presentation.Unity
                 var player=lower.Contains("player");var boss=Chapter1OrdanArt.IsOwned(graph,collider);
                 var box=lower.Contains("counterweight")||lower.Contains("box");var exit=lower.Contains("exit");var gate=lower.Contains("gate");
                 GUI.color=player?new Color(.25f,.7f,1f):boss?new Color(.95f,.3f,.35f):box?new Color(.75f,.55f,.95f):exit?new Color(.3f,1f,.6f,.6f):gate?new Color(1f,.65f,.2f):new Color(.6f,.65f,.7f,.8f);
-                if(!Chapter1OrdanArt.Draw(rect,graph,collider) && !Chapter1DoeonArt.DrawPlayer(rect,collider) && !Chapter1IndustrialArt.DrawEnvironment(rect,collider))GUI.DrawTexture(rect,Texture2D.whiteTexture);GUI.color=Color.white;
+                if(!Chapter1OrdanArt.Draw(rect,graph,collider) && !Chapter1DoeonArt.DrawPlayer(rect,collider,router) && !Chapter1IndustrialArt.DrawEnvironment(rect,collider))GUI.DrawTexture(rect,Texture2D.whiteTexture);GUI.color=Color.white;
                 if(player||boss||box||exit||gate)GUI.Label(new Rect(rect.x,rect.y-22,Mathf.Max(90,rect.width),24),player?"도언":boss?"오르단":box?"전이 가능한 상자":exit?"출구":"봉쇄선");
             }
             GUI.color=old;

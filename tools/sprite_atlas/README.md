@@ -54,3 +54,33 @@ row count, checks frame edges, source hashes, and notes overdense/chroma backgro
 Outputs are source_only_needs_visual_review; they never become accepted gameplay
 media and must not be copied wholesale to Assets. The 18-sheet 2026-11-09 review
 is described in docs/art/2026-11-09-character-sprite-inventory-and-worklist.md.
+## Chapter 1 Doeon right-facing candidate — 2026-11-09
+
+The user directed Package A (player graphics) after recovering existing character art.
+This companion generator is separate from the 18-sheet offline-approved packing
+pipeline above; it **does not** change its accepted media gates or convert
+source-only images into approved all-facing character art.
+
+Use the preserved originals 09-doeon-movement.png and 10-doeon-combat.png:
+
+    python tools/sprite_atlas/build_ch1_doeon_candidate.py --source-root "PATH_TO_PRESERVED_SPRITE_RAW" --output output/ch1-package-A-test
+
+Requires Python 3.12, NumPy, Pillow and OpenCV. The output directory must not
+already exist. The generator uses fixed reviewed manual Y edges for movement
+[0,284,533,780,1024], source/atlas hashes, a common 64px cell and 18PPU.
+It strips chroma and disconnected source specks, saves 48 RGBA frame candidates,
+and provides nearest-neighbor 4x checker previews plus an immutable manifest.
+
+The active Unity project contains local right-facing candidate resources in
+Assets/Resources/Chapter1Doeon/Candidate-{movement,combat}.png. They are
+visual-only presentations driven from completed gameplay evidence.
+Left movement/combat is not fabricated or mirrored: the existing individually
+authored static left sprite remains the fallback. Original concept art is
+never modified. New character art is still pending full visual acceptance,
+independent review, directional coverage, manual animation QA and exact
+combat effects alignment. This is not a finished character graphics package.
+
+Local evidence (excluded from the public source release):
+output/ch1-package-A-20261109/doeon-right-candidate/manifest.json
+output/ch1-package-A-20261109/unity-targeted-v2/results.xml
+output/ch1-package-A-20261109/visual-frame-{7,9,11}s.png

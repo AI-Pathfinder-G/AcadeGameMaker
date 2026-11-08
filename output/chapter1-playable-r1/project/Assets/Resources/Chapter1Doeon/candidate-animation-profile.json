@@ -1,0 +1,33 @@
+{
+    "schema":  "chapter1-doeon-right-candidate-anim-v1",
+    "disposition":  "candidate-not-independent-accepted",
+    "facing":  "right-only",
+    "cannotMirrorLeft":  true,
+    "leftFallback":  "Chapter1Doeon/Left",
+    "sourceEvidence":  "output/ch1-package-A-20261109/doeon-right-candidate/manifest.json",
+    "movementResource":  "Chapter1Doeon/Candidate-movement",
+    "combatResource":  "Chapter1Doeon/Candidate-combat",
+    "rows":  4,
+    "columns":  6,
+    "cellSize":  64,
+    "pixelsPerUnit":  18,
+    "pivotNormalized":  [
+                            0.5,
+                            0.1875
+                        ],
+    "clipRows":  {
+                     "idleWalk":  0,
+                     "run":  1,
+                     "jumpLand":  2,
+                     "dashHit":  3,
+                     "basicAttack":  0,
+                     "weightTransfer":  1,
+                     "compressionVerdict":  2,
+                     "sharedPlane":  3
+                 },
+    "noMechanicsChange":  true,
+    "movementSourceSha256":  "b344a06a295f35ae10db7e7b811aee048f14a3b2d0f531be8e5728ad133bca63",
+    "combatSourceSha256":  "184ba046e9bc4d88e3bf73e31145104de5b816f3584a3208a9628baabd57c852",
+    "movementAtlasSha256":  "b10fc715ce261fc6d626d1a98caf511825b9db47df7a78716b8c7032e06d9c3a",
+    "combatAtlasSha256":  "9438a34aa9803d52cf60d7739726dde4eaf9a8412fad346e6e33efe4cf405774"
+}
