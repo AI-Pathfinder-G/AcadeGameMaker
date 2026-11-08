@@ -1,3 +1,7 @@
+## 2026-11-08 active chat audit pause (newest user instruction)
+- User paused prior audit/approval/source-pin waiting rules for this active chat. Perform development and focused local verification directly in this session without inventing Luna gates or misrepresenting provenance. Keep OS/file protections, original evidence, saved data, and other project processes intact.
+- GPT-6 in this chat may perform the authorized bounded implementation and Unity checks. Codex/Luna independent verification is deferred until the user's Codex account limit recovers; local checks are not independent acceptance. Existing fixture's protected owner case remains unchanged; the new local smoke has a separate synthetic test-only context.
+- Do not retroactively turn failed natural boss runs into passes or silently merge the draft PR to main. The current local smoke result validates only restoration and evidence budget behavior.
 ## 최신 사용자 지시 — 2026-11-08 Unity 개발 재개
 
 사용자가 “유니티 프로그램 호출해서 개발 시작해”라고 명시하여 11월7일 Unity 실행 보류를 해제했다. 현재 활성 worktree의 output/chapter1-playable-r1/project에서 실제 Unity 컴파일·집중 검사·필요한 구현을 재개한다. 이전 실패 원문과 원본 보존본은 유지하고 다른 프로젝트 프로세스·파일은 변경하지 않는다.
