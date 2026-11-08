@@ -459,6 +459,52 @@ namespace AcadeGameMaker.Tests.PlayMode.InputUnity
         [Test] public void ContinuationProducesOnlyAuthorizedKeys()
         {var p=Launched();var c=Read(p);foreach(var key in c.Keys)Assert.That(key==Key.A || key==Key.D || key==Key.Space,Is.True);Assert.That(c.Keys,Has.Length.EqualTo(2));Assert.That(c.Attack,Is.False);}
 
+        // Exhaustion remains failure; terminal evidence is reserved inside each caller's existing 64/128 KiB cap.
+        [Test] public void CleanupBudgetKeepsTerminalEvidenceAfterOrdinaryExhaustion()
+        {
+            var overhead=Chapter1VerificationBossBudget.SerializedUpperBound("");
+            var fullRow=new string('x',8192-overhead);
+            Assert.That(Chapter1VerificationBossBudget.SerializedUpperBound(fullRow),Is.EqualTo(8192));
+            foreach(var maximum in new[]{65536,131072})
+            {
+                var budget=new Chapter1VerificationBossBudget(maximum,true);
+                Assert.Throws<InvalidOperationException>(()=>budget.AddCleanup(fullRow+"x"));
+                for(var used=0;used<maximum-3*8192;used+=8192)budget.Add(fullRow);
+                Assert.Throws<InvalidOperationException>(()=>budget.Add("ordinary-exhausted"));
+                budget.AddCleanup(fullRow);budget.AddCleanup(fullRow);budget.AddCleanup(fullRow);
+                Assert.Throws<InvalidOperationException>(()=>budget.AddCleanup("fourth-terminal-row"));
+                Assert.Throws<InvalidOperationException>(()=>budget.Add("ordinary-still-exhausted"));
+            }
+            Assert.Throws<InvalidOperationException>(()=>new Chapter1VerificationBossBudget().AddCleanup("unreserved"));
+        }
+        // State-machine evidence only; analytic fixture poses below do not prove actual Unity collision safety.
+        [Test] public void OwnedRecoveryApproachConsumesOneEdgeThenReleasesAtObservedRightSide()
+        {
+            var p=Ready();var first=p.Read("run",1,2000,3.06f,.815185547f,8,true,false,true,false,0,OrdanPatternSlot.DebtLineA,OrdanBossPhase.Recovery,15,.35f,0,Threat());
+            CollectionAssert.AreEqual(new[]{Key.D,Key.Space},first.Keys);Assert.That(first.Attack,Is.False);
+            for(var n=1;n<=39;n++)
+            {
+                Consume(p,new[]{Key.D,Key.Space},n+2);var t=n/60f;var age=15+n;
+                var c=p.Read("run",1,2000+n,3.06f+8*t,.815185547f+14.39f*t-15.36f*t*t,8,false,false,true,false,0,
+                    age<39?OrdanPatternSlot.DebtLineA:OrdanPatternSlot.SeizureWeight,age<39?OrdanBossPhase.Recovery:OrdanBossPhase.Telegraph,age<39?age:age-39,.35f,14.39f-30.72f*t,Threat());
+                Assert.That(p.Unresolved,Is.Null);Assert.That(c.Attack,Is.False);
+                if(n<39)CollectionAssert.AreEqual(new[]{Key.D,Key.Space},c.Keys);else Assert.That(c.Keys,Is.Empty,"actual right-side observation releases Space once");
+            }
+        }
+        [Test] public void OwnedRecoveryApproachRejectsUnownedLostProofAndDiscontinuity()
+        {
+            var unowned=new Chapter1VerificationBossPolicy();unowned.Consumed(false,true,1);unowned.Consumed(false,true,2);
+            var ordinary=unowned.Read("run",1,2000,3.06f,.815185547f,8,true,false,true,false,0,OrdanPatternSlot.DebtLineA,OrdanBossPhase.Recovery,15,.35f,0,Threat());
+            CollectionAssert.DoesNotContain(ordinary.Keys,Key.Space,"unowned caller gets no navigation edge");
+            foreach(var failure in new[]{"no-press","queued","gap","owner","focus","wall","negative-age"})
+            {
+                var p=Ready();p.Read("run",1,2000,3.06f,.815185547f,8,true,false,true,false,0,OrdanPatternSlot.DebtLineA,OrdanBossPhase.Recovery,15,.35f,0,Threat());
+                if(failure=="owner")p.BindOwnedJump(Identity(epoch:2));if(failure=="focus")p.Focus(false);
+                Consume(p,failure=="no-press"?new[]{Key.D}:new[]{Key.D,Key.Space},3);
+                var c=p.Read("run",1,failure=="gap"?2002:2001,3.19f,1.046f,8,false,false,failure!="focus",false,0,failure=="negative-age"?OrdanPatternSlot.SeizureWeight:OrdanPatternSlot.DebtLineA,failure=="negative-age"?OrdanBossPhase.Telegraph:OrdanBossPhase.Recovery,failure=="negative-age"?-23:failure=="gap"?17:16,.35f,13.87793f,Threat(queued:failure=="queued",wall:failure=="wall"));
+                Assert.That(c.Keys,Is.Empty,failure);Assert.That(c.Attack,Is.False);Assert.That(p.Unresolved,Is.Not.Null,failure);
+            }
+        }
         [Test] public void OwnedDebtEnvelopeSeparatesInactiveRiseFromFireWindow()
         {
             Assert.That(Chapter1VerificationBossPolicy.OwnedDebtLineEnvelopeClear(-7,1.04126f,.333f,13.87793f,1,OrdanPatternSlot.DebtLineA,3,.35f),Is.True);
