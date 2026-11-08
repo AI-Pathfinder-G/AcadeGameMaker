@@ -1,0 +1,74 @@
+# Character / monster / NPC / boss art inventory — 2026-11-09
+
+## Actual status
+
+- Active Unity project: output/chapter1-playable-r1/project
+- Original art archive, READ ONLY: H:\GPT-workspace\AcadeGameMaker\images
+- Playable CH1 still uses Doeon and Ordan with one static image per LEFT/RIGHT direction.
+- Walker/Surveyor currently show temporary actor geometry. No character-specific accepted raster atlas was found in the scanned original images or current Unity Resources.
+- Existing production-v1 raw files are magenta-key concept/keypose sheets. They are NOT transparent, completed, synchronized animation clips.
+- Seoha approved appearance: boss B6 v7 and NPC B3 v5 (LEFT figure in original paired sheet). Do not silently import discarded styles.
+- Seryeong A1/H1 media package reports zero accepted appearance combinations, and other Seryeong source sheets have outstanding apparel/hair/left-direction reviews.
+- Each proposed attack/motion must use the authored gameplay state as a visual input. Neither sprite clips nor the visual tool may change movement, damage, collider or attack timing.
+
+## This session's completed source work
+
+1. Restored the source inventory: 18 raw sheets / 384 nonempty SOURCE keypose cells. Six poses per row, eight 3-row sheets and ten 4-row sheets. Source cells are not accepted sprites.
+2. Built deterministic non-destructive magenta-source diagnostics in tools/sprite_atlas/inspect_generated_keyposes.py. This detects the original background near RGB(251,3,251), logs source hashes, uses actual 3- or 4-row geometry, measures cut edges, and produces RGBA / nearest-neighbor 1x and 4x source-only previews.
+3. Built tools/sprite_atlas/render_stage_previews.py: 14 animated six-keypose GIFs across Doeon idle/combat, Seoha NPC, Ordan combat; plus offline 640x360 logical-stage composite and 4x view. These are NOT Unity captures.
+4. All four synthetic image preflight regression tests pass. Originals were never modified and none of these drafts was imported into Unity.
+
+## Source-specific extraction results (all remain SOURCE ONLY)
+
+This table counts nonempty candidate pose cells, border-touch cells on the declared grid and normalization overflows. Zero border touches does NOT mean visual acceptance.
+
+| Planned source | Source cells | Edge-touch cells | Overflows | Immediate task |
+|---|---:|---:|---:|---|| 01-doeon-idle | 18 | 0 | 0 | Review silhouette/alpha/left action before Unity binding |
+| 02-seryeong-idle | 18 | 2 | 0 | Repair slight border contamination, inspect every frame |
+| 03-seoha-npc-idle | 18 | 0 | 0 | Review silhouette/alpha/left action before Unity binding |
+| 04-lovers-interactions | 18 | 18 | 0 | Split group actors / manual source boundaries |
+| 05-lovers-shop | 18 | 13 | 0 | Split group actors / manual source boundaries |
+| 06-ain-yudam-idle | 18 | 18 | 0 | Split group actors / manual source boundaries |
+| 07-village-roles | 18 | 15 | 0 | Split group actors / manual source boundaries |
+| 08-mujin-hub | 18 | 9 | 0 | Manual source rect/row layout review and clipping repair |
+| 09-doeon-movement | 24 | 22 | 0 | Manual source rect/row layout review and clipping repair |
+| 10-doeon-combat | 24 | 2 | 0 | Repair slight border contamination, inspect every frame |
+| 11-seryeong-movement-combat | 24 | 17 | 0 | Manual source rect/row layout review and clipping repair |
+| 12-seoha-boss | 24 | 7 | 0 | Manual source rect/row layout review and clipping repair |
+| 13-ordan-combat | 24 | 0 | 0 | Review silhouette/alpha/left action before Unity binding |
+| 14-taegan-combat | 24 | 14 | 0 | Manual source rect/row layout review and clipping repair |
+| 15-chaeryun-combat | 24 | 2 | 0 | Repair slight border contamination, inspect every frame |
+| 16-mujin-combat | 24 | 24 | 0 | Manual source rect/row layout review and clipping repair |
+| 17-ragen-combat | 24 | 14 | 0 | Manual source rect/row layout review and clipping repair |
+| 18-boss-creatures | 24 | 7 | 5 | Quarantine overflow/rebuild pose |
+### Findings for the actual CH1 cast
+
+- Doeon 01-idle: 18 candidate source poses, no cropped-edge touches. Doeon 09-movement: 22 edge-touch cells with the assumed grid, NOT suitable for import. Reviewed Y-edge candidate [0,284,533,780,1024] still clips four cells; more precise manual source correction is mandatory. Doeon 10-combat: 24 source poses, two edge-touch cells, plus LEFT authored source not yet present.
+- Ordan 13-combat: 24 source poses and zero edge-touch cells. Most promising first 1CH boss pose preview. Guard-step, DebtLine, SeizureWeight and BalanceAudit each have six key poses. The existing live LEFT render is not replaced; no blind leftward flip of asymmetric armor/device allowed.
+- Walker and Surveyor: actual gameplay enemies still need distinct sprites, anticipation/execute/recover, hit/defeat and facing coverage. Do not substitute the future CRX creature prototypes without authoring.
+- NPCs: Seryeong, Ain, Yudam, Iseon, Mujin, gravity tailor and vertical courier require individual crop, alpha, expression/idle/interaction and stage placement. Mixed source sheets cannot be treated as one actor. Seoha B3 NPC is separate from B6 boss.
+- Later bosses: Seoha B6 v7, Taegan, Chaeryun, Mujin, Ragen, Baekgak/wind-sac mother have raw concept poses; each requires form-specific left/right, timed action visual states and geometry alignment. The creature-boss source currently exceeds preview cell geometry in five cells; do not silently crop these.
+- Full combat animations also need separate effects, weapon/hand anchors, sound, attack anticipation and reaction clips. Raw source cells include baked effect fragments requiring separation.
+
+## Prioritized next production / verification
+
+| Priority | Target | Completion criteria |
+|---|---|---|
+| P0 | Doeon movement/attack | Manual row grid; alpha clean; feet/pivot; right and separately authored left poses; actual movement/attack state drives frames; 1x/4x game QA |
+| P0 | Walker / Surveyor | Distinct approved visuals; 2 directions; idle/move/telegraph/execute/hurt/defeat; replaces TemporaryActorView; shot/LOS readability |
+| P0 | Ordan CH1 boss | Use reviewed 13 source for proto; author left; four pattern clip groups synced to authored Telegraph/Execute/Recovery, no gameplay authority changes |
+| P1 | CH1 NPC portraits/actors | Seryeong apparel/hair validation; Ain/Yudam/Mujin/etc individual pose/face, interaction and dialogue stage placement |
+| P1 | Later bosses + 6 creatures | Individually approved actor/color/weapon/phase sprites, no invented skills; cleanup quarantined cells |
+| P1 | Pixel VFX / UI | Separate baked weapons/projectiles/effects, point filter, 18PPU logical frame, URP lighting and accessibility QA |
+| P2 | Voice/audio and release art QA | BGM/SFX/cinematics and repeatable actual gameplay performance checks |
+
+## Local evidence & limitations
+
+- Correct 18-sheet source manifest: output/ch1-art-audit-20261109/chroma-preflight-v2-all18/manifest.json
+- Original vs current game comparison: output/ch1-art-audit-20261109/reference-vs-current-contact-sheet.png
+- Animation GIFs and 640x360 stage: output/ch1-art-audit-20261109/animated-previews
+- First preflight under chroma-preflight/ had an erroneous four-row assumption for some NPC sheets. It was superseded by chroma-preflight-v2-all18, and must NOT be used for cross-source comparison.
+- CH1 Windows build attempt-008 previously passed two complete story branches and one natural failure/retry in auto-play. The separate broader PlayMode regression timed out after 210 seconds without XML. Codex independent QA is deferred per user instruction; this is not a full product/art release approval.
+- Do not publish preview contact sheets or raw user assets to the public GitHub repository as accepted gameplay art. Raw images, logs and the large Seryeong source corpus remain in the original archive/local output.
+
+This report is a measured art-work backlog and source-only processing record, not an assertion of gameplay art completion.

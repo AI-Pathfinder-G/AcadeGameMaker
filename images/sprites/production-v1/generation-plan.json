@@ -1,0 +1,199 @@
+{
+    "version":  1,
+    "sourceMetadataOnly":  true,
+    "rawAssetsIncluded":  false,
+    "originalSourceSha256":  "3ae0c2435dd40440cadac5415197659b4a6190c1e3ad806cedb69831b88b1696",
+    "provenance":  "Read-only user-owned archived generation-plan.json; only job IDs and action rows copied; refs, absolute paths and image prompts withheld.",
+    "jobs":  [
+                 {
+                     "id":  "01-doeon-idle",
+                     "cols":  6,
+                     "rowCount":  3,
+                     "rows":  [
+                                  "gear_repair: neutral, look down, hold belt meter, adjust knob, check, neutral",
+                                  "thinking: neutral, fold left arm, right hand to chin, ponder, lower hand, neutral",
+                                  "look_up: neutral, head up, gaze far upper right, hold upward look, lower gaze, neutral"
+                              ]
+                 },
+                 {
+                     "id":  "02-seryeong-idle",
+                     "cols":  6,
+                     "rowCount":  3,
+                     "rows":  [
+                                  "forward_stretch: neutral, hands together in front, lean gently forward stretch arms, fullest stretch, straighten, neutral",
+                                  "folded_gaze: neutral, fold arms, look toward right offscreen Doeon, thoughtful affectionate look, relax shoulders, neutral",
+                                  "writing: neutral, take small notebook, open notebook, write a line, close notebook, put away"
+                              ]
+                 },
+                 {
+                     "id":  "03-seoha-npc-idle",
+                     "cols":  6,
+                     "rowCount":  3,
+                     "rows":  [
+                                  "forward_flirt: upright, small inviting hand gesture, lean slightly forward to speak, knowing friendly smile, straighten, upright",
+                                  "table_lean: stand beside waist-high small shop table, place one hand on its edge, casually lean elbow on tabletop, turn smiling face toward customer, straighten, hand off table. Table identical and in same place in ALL six frames, contained within cell",
+                                  "shop_talk: hold small closed weapon case at waist, present it forward, indicate brass seal, smile, withdraw case, hold at waist"
+                              ]
+                 },
+                 {
+                     "id":  "04-lovers-interactions",
+                     "cols":  6,
+                     "rowCount":  3,
+                     "rows":  [
+                                  "arm_link: stand close, Seryeong reaches for Doeon\u0027s arm, loops her arm through his, leans affectionately, shared smile, settles together",
+                                  "cheek_kiss: stand side by side, Doeon turns toward Seryeong, gentle brief surprise kiss to her cheek, both recoil a little bashfully, both faces visibly blush red cheeks, shy shared smile. Fully clothed affectionate romantic moment",
+                                  "handhold: hands apart, fingers approach, fingertips touch, clasp hands, look at each other, comfortable hand-in-hand rest"
+                              ]
+                 },
+                 {
+                     "id":  "05-lovers-shop",
+                     "cols":  6,
+                     "rowCount":  3,
+                     "rows":  [
+                                  "shop_guard: neutral, Seryeong folds arms, turns head toward Seoha, displeased stern gaze, maintains gaze as Doeon glances at her, settles. Seoha stays amused at table",
+                                  "leave_together: Seryeong unfolds arms, turns to Doeon, takes his arm, Doeon willingly turns with her, pair takes one step away, Seoha watches. No dragging resisting person",
+                                  "shop_reaction: Seryeong stands arms folded, Doeon looks embarrassed, Seoha offers palm-up amused gesture, Seryeong raises eyebrow, Doeon gently nods to leave, neutral"
+                              ]
+                 },
+                 {
+                     "id":  "06-ain-yudam-idle",
+                     "cols":  6,
+                     "rowCount":  3,
+                     "rows":  [
+                                  "ain_field_aid: neutral, crouch to open small first-aid bag, check bandage, close bag, rise, neutral",
+                                  "ain_axis_refuse: supported upright, eyes turn to visitor, slowly lift palm in refusal, hold calm resolute gaze, lower hand, supported upright. Never unconscious or released from machine",
+                                  "yudam_ledger: guard small notebook close to chest, glance at visitor, open notes, write, close notes, protect them again"
+                              ]
+                 },
+                 {
+                     "id":  "07-village-roles",
+                     "cols":  6,
+                     "rowCount":  3,
+                     "rows":  [
+                                  "iseon_inspect: neutral, raise gauge, read gauge, mark clipboard, lower tools, neutral",
+                                  "tailor_stitch: sit on simple fixed stool, hold cloth on lap, stitch, pull thread, inspect seam, rest cloth. Same stool position",
+                                  "courier_dispatch: stand with satchel, open flap, take folded route card, inspect route, fold put away, check safety clasp"
+                              ]
+                 },
+                 {
+                     "id":  "08-mujin-hub",
+                     "cols":  6,
+                     "rowCount":  3,
+                     "rows":  [
+                                  "blanket_offer: hold folded blanket, notice visitor, lift blanket, offer blanket with warm smile, draw back, hold blanket",
+                                  "bed_assign: neutral, open bed roster, count with finger, mark entry, close roster, nod",
+                                  "supply_worry: neutral, look at nearly empty small supply pouch, check again, sigh worried, resolve, neutral"
+                              ]
+                 },
+                 {
+                     "id":  "09-doeon-movement",
+                     "cols":  6,
+                     "rowCount":  4,
+                     "rows":  [
+                                  "idle_walk: two relaxed idle poses followed by four-step walking cycle, same scale",
+                                  "run_cycle: six distinct running phases heel contact, compression, passing, opposite contact, compression, passing, in place",
+                                  "jump_land: crouch, push off, rise knees bent, apex, fall legs extend, land crouch. Keep actor-root position cell center, only intentional jump vertical offset",
+                                  "dash_hurt: prepare low dash, leaning dash push, dash extension, braking, hit recoil, recover upright"
+                              ]
+                 },
+                 {
+                     "id":  "10-doeon-combat",
+                     "cols":  6,
+                     "rowCount":  4,
+                     "rows":  [
+                                  "basic_attack: ready, right arm draws back, palm thrust toward right, full extension, pull back, ready. No sword or invented gun",
+                                  "weight_transfer: ready, sight target right, extend open palm, close fingers to commit, release wrist, ready. No baked beam/target/effects",
+                                  "compression_verdict: ready, deliberate aim, raise clenched hand, compress fist downward, hold resolve, recover. Character-only telegraph no explosions",
+                                  "shared_plane: ready, open both hands, spread palms toward right, hold stable horizontal gesture, lower hands, recover. No baked platform"
+                              ]
+                 },
+                 {
+                     "id":  "11-seryeong-movement-combat",
+                     "cols":  6,
+                     "rowCount":  4,
+                     "rows":  [
+                                  "run_cycle: six distinct running poses in place keeping bow secured",
+                                  "jump_land: crouch, lift, rise, apex, descend, land recover",
+                                  "bow_shot: bow low, raise bow right, draw string, hold aim, release, lower bow. Arrow not detached sprite or across cells",
+                                  "support_recover: watch ally right, reach belt medicine pouch, ready small bandage, offer support gesture, return pouch, ready. No heal beam or invented healing magic"
+                              ]
+                 },
+                 {
+                     "id":  "12-seoha-boss",
+                     "cols":  6,
+                     "rowCount":  4,
+                     "rows":  [
+                                  "approach: six-step purposeful forward walk in place holding compact control baton",
+                                  "double_strike: ready, short anticipation, first baton thrust, small recoil, second distinct thrust, recover",
+                                  "delayed_strike: ready, lift baton, clearly hold long anticipation, downward strike, low followthrough, recover",
+                                  "reel_block: ready, open hip reel, point control hook to right, extend empty short cable entirely inside cell, reel back, ready"
+                              ]
+                 },
+                 {
+                     "id":  "13-ordan-combat",
+                     "cols":  6,
+                     "rowCount":  4,
+                     "rows":  [
+                                  "guard_step: idle breathing two poses, heavy step two poses, reset guard two poses",
+                                  "debt_line: ready, forearm device raises, lock aim low, recoil device, unlock, recover; no long damage lines across cells",
+                                  "seizure_weight: ready, hoist back weight, overhead anticipation, lower weight in controlled strike, low followthrough, recover; whole device inside cell",
+                                  "balance_audit: ready, plant rig, brace two arms, press control down, stagger exposed face, recover. No baked arena wave"
+                              ]
+                 },
+                 {
+                     "id":  "14-taegan-combat",
+                     "cols":  6,
+                     "rowCount":  4,
+                     "rows":  [
+                                  "guard_step: six careful walking phases with pole held diagonally",
+                                  "pole_thrust: ready, pole retract, point aim, forward thrust, withdraw, recover",
+                                  "return_hook: ready, release empty hook from winch, hook extends right inside cell, pause, hook retracts, recover",
+                                  "bridge_pull: ready, set feet, grip winch handle, pull hard, release tension, exhausted recovery. No civilians or actual bridge inside sprite"
+                              ]
+                 },
+                 {
+                     "id":  "15-chaeryun-combat",
+                     "cols":  6,
+                     "rowCount":  4,
+                     "rows":  [
+                                  "sidestep: six agile sidestep phases in place, upright trader poise",
+                                  "keyplate_deploy: ready, touch belt control, one plate unfolds, angle plate, hold, fold recover",
+                                  "cross_fire: ready, raise two unequal launchers at different heights, aim lock, first recoil, second recoil, lower reload. No muzzle flashes baked",
+                                  "return_shot: ready, set angled mechanical plate, raise launcher, fire recoil, manually reload, recover. No magical mirror or beam"
+                              ]
+                 },
+                 {
+                     "id":  "16-mujin-combat",
+                     "cols":  6,
+                     "rowCount":  4,
+                     "rows":  [
+                                  "heavy_strike: brace, lift weight, hold anticipation, strike downward, followthrough, recover",
+                                  "takeover_cut: face machine connection, ready cutting tool, wind back, cut empty machine cable, recoil, recover. No body harmed",
+                                  "release_relock: light stance, quick step, reach control lever, delayed fist/tool strike, withdraw, recover",
+                                  "phase_stagger: heavy brace, hit recoil, outer weights loosen, plates lowered to ground, lighter guard, recover. Same body no transformation"
+                              ]
+                 },
+                 {
+                     "id":  "17-ragen-combat",
+                     "cols":  6,
+                     "rowCount":  4,
+                     "rows":  [
+                                  "ruler_address: calm stance, remember name look, open palm, indicate distant apparatus offscreen, withdraw hand, calm",
+                                  "short_long: staff guard, short jab, partial recover, long delayed windup, long strike, recover",
+                                  "bracing_hand: guard, plant right braced knee, ready palm/staff block, push back, withdraw, guard",
+                                  "field_cross: low guard, lean ready, first stride, extended forward staff thrust, brake, guard"
+                              ]
+                 },
+                 {
+                     "id":  "18-boss-creatures",
+                     "cols":  6,
+                     "rowCount":  4,
+                     "rows":  [
+                                  "baekgak_sweep: cling six feet, lift front leg, hold curled leg, sweep, leg back, cling",
+                                  "baekgak_shell: cling, raise shell plates, plates tremble, shed few tiny chips inside cell, lower plates, cling",
+                                  "windsac_spray: glide sacs normal, one sac inflates, hold enlarged sac, contract emitting no detached spray, deflate, glide",
+                                  "windsac_grip: float, spread rakes, reach right, grip small fixed beam inside cell, press down, ease off. Beam repeated in same position"
+                              ]
+                 }
+             ]
+}
