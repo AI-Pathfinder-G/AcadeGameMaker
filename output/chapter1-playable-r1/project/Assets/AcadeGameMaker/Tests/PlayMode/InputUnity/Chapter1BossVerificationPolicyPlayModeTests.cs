@@ -494,6 +494,106 @@ namespace AcadeGameMaker.Tests.PlayMode.InputUnity
             Assert.That(Chapter1StandaloneVerificationSession.ObservationValid(
                 true,true,true,true,true,true,true,true),Is.False);
         }
+        // Reproduce the archived attempt-039 observation without restarting
+        // the failed natural route. A D+Space publication is not consumption.
+        [Test] public void StandaloneEighteenTickBurstWithoutJumpReceiptFailsClosed()
+        {
+            using(var pilot=new Chapter1VerificationInputPilot(_=>{}))
+            {
+                var session=new Chapter1StandaloneVerificationSession(
+                    new object(),"branch1");
+                Assert.That(session.Bind(pilot),Is.True);
+                var policy=StandalonePrepared(pilot,session);
+                var initial=policy.Read("run",1,1896,-7f,.8100586f,0f,
+                    true,false,true,false,0,OrdanPatternSlot.DebtLineA,
+                    OrdanBossPhase.Telegraph,2,.35f,0,Threat());
+                CollectionAssert.AreEqual(new[]{Key.D,Key.Space},initial.Keys);
+                Assert.That(policy.OwnedContinuationActive,Is.False);
+                // Next FixedUpdate observation at age20: still grounded
+                // at x=-7, with no Dynamic D+Space receipt in between.
+                var skipped=policy.Read("run",1,1914,-7f,.8100586f,0f,
+                    true,false,true,false,0,OrdanPatternSlot.DebtLineA,
+                    OrdanBossPhase.Telegraph,20,.35f,0,Threat());
+                Assert.That(skipped.Keys,Is.Empty);
+                Assert.That(skipped.Attack,Is.False);
+                Assert.That(policy.Unresolved,
+                    Does.Contain("소유 입력 미소비"));
+                Assert.That(policy.Unresolved,Does.Contain("18"));
+                Assert.That(policy.OwnedContinuationActive,Is.False);
+            }
+        }
+        [Test] public void StandaloneRecoveryPressWaitsTwoTicksButNeverForgesAReceipt()
+        {
+            using(var pilot=new Chapter1VerificationInputPilot(_=>{}))
+            {
+                var session=new Chapter1StandaloneVerificationSession(
+                    new object(),"branch1");
+                Assert.That(session.Bind(pilot),Is.True);
+                var p=StandalonePrepared(pilot,session);
+                var first=p.Read("run",1,1982,3.06f,.815185547f,8f,
+                    true,false,true,false,0,OrdanPatternSlot.DebtLineA,
+                    OrdanBossPhase.Recovery,19,.35f,0,Threat());
+                CollectionAssert.AreEqual(new[]{Key.D,Key.Space},first.Keys);
+                // Same render frame, next physics tick; no Dynamic receipt.
+                var pending=p.Read("run",1,1983,3.158203f,.815185547f,8f,
+                    true,false,true,false,0,OrdanPatternSlot.DebtLineA,
+                    OrdanBossPhase.Recovery,20,.35f,0,Threat());
+                CollectionAssert.AreEqual(new[]{Key.D,Key.Space},pending.Keys);
+                Assert.That(p.Unresolved,Is.Null);
+                Assert.That(p.RecoveryApproachPressObserved,Is.False);
+                Assert.That(p.RecoveryApproachAirborneObserved,Is.False);
+                // Only a real owner receipt can advance the press state.
+                p.ObserveStandaloneConsumption(pilot,session,1,
+                    new[]{Key.D,Key.Space},3,true);
+                Assert.That(p.RecoveryApproachPressObserved,Is.True);
+                var airborne=p.Read("run",1,1984,3.29f,1.04126f,8f,
+                    false,false,true,false,0,OrdanPatternSlot.DebtLineA,
+                    OrdanBossPhase.Recovery,21,.35f,13.88f,Threat());
+                Assert.That(p.Unresolved,Is.Null,p.OwnedJumpDebugState);
+                CollectionAssert.AreEqual(new[]{Key.D,Key.Space},airborne.Keys);
+                Assert.That(p.RecoveryApproachAirborneObserved,Is.True);
+            }
+        }
+
+        [Test] public void StandaloneRecoveryUnconsumedThreeTickGapAndThreatFailClosed()
+        {
+            using(var pilot=new Chapter1VerificationInputPilot(_=>{}))
+            {
+                var session=new Chapter1StandaloneVerificationSession(
+                    new object(),"branch1");
+                Assert.That(session.Bind(pilot),Is.True);
+                var p=StandalonePrepared(pilot,session);
+                p.Read("run",1,1982,3.06f,.815185547f,8f,
+                    true,false,true,false,0,OrdanPatternSlot.DebtLineA,
+                    OrdanBossPhase.Recovery,19,.35f,0,Threat());
+                for(var gap=1;gap<=2;gap++)
+                {
+                    var pending=p.Read("run",1,1982+gap,3.06f+.1f*gap,
+                        .815185547f,8f,true,false,true,false,0,
+                        OrdanPatternSlot.DebtLineA,OrdanBossPhase.Recovery,
+                        19+gap,.35f,0,Threat());
+                    CollectionAssert.AreEqual(new[]{Key.D,Key.Space},
+                        pending.Keys);
+                    Assert.That(p.RecoveryApproachPressObserved,Is.False);
+                }
+                var missed=p.Read("run",1,1985,3.36f,.815185547f,8f,
+                    true,false,true,false,0,OrdanPatternSlot.DebtLineA,
+                    OrdanBossPhase.Recovery,22,.35f,0,Threat());
+                Assert.That(missed.Keys,Is.Empty);
+                Assert.That(p.Unresolved,
+                    Does.Contain("unconsumed after two completed ticks"));
+                Assert.That(p.RecoveryApproachState,Is.EqualTo(3));
+                var q=StandalonePrepared(pilot,session);
+                q.Read("run",1,1982,3.06f,.815185547f,8f,
+                    true,false,true,false,0,OrdanPatternSlot.DebtLineA,
+                    OrdanBossPhase.Recovery,19,.35f,0,Threat());
+                var danger=q.Read("run",1,1983,3.158203f,.815185547f,8f,
+                    true,false,true,false,0,OrdanPatternSlot.DebtLineA,
+                    OrdanBossPhase.Recovery,20,.35f,0,Threat(queued:true));
+                Assert.That(danger.Keys,Is.Empty);
+                Assert.That(q.Unresolved,Is.Not.Null);
+            }
+        }
         [Test] public void StandalonePendingJumpRequiresReceiptAfterOneFrame()
         {
             // Replays the actual Windows observation boundary: owned D+Space

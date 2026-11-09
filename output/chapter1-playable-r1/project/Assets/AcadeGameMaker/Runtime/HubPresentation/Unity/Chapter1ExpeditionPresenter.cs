@@ -55,6 +55,9 @@ namespace AcadeGameMaker.Hub.Presentation.Unity
                 _presentationClearCamera.allowMSAA=false;
             }
             _presentationClearCamera.enabled=true;
+            // Resolve authored boss art before entering the combat encounter.
+            // Graphics-only cache: no input/physics/time authority changes.
+            if(Application.isPlaying)Chapter1OrdanArt.PreloadForHub();
         }
         // Runtime-only hub art. It stays behind all authored TMP controls and
         // never receives clicks; gameplay cameras and simulation are unaffected.

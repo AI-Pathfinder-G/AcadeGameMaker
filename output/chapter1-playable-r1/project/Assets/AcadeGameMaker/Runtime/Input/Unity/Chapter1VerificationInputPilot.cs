@@ -1103,6 +1103,21 @@ namespace AcadeGameMaker.Input.Unity
             if(tick==_tick)return _last;
             if(_carryActive && !OwnedTickSequenceValid(_tick,tick))InvalidateOwnedJump();
             _tick=tick;
+            // Exact attempt-039 failure: a queued standalone D+Space was
+            // NOT consumed by the next Dynamic update before 18 physics
+            // ticks advanced. Do not infer the jump took effect, increase
+            // the 8-tick budget, or silently select a second unsafe edge.
+            if(_launchPending && !_carryActive &&
+               _ownedIdentity.Lease is Chapter1StandaloneVerificationSession &&
+               tick>_launchTick && (long)tick-_launchTick>8)
+            {
+                var gap=tick-_launchTick;
+                Unresolved="소유 입력 미소비: 단독 D+Space 발행 뒤 "+gap+
+                    " 완료 물리틱 동안 소비 영수증이 없어 안전한 후속 입력을 확정할 수 없습니다.";
+                InvalidateOwnedJump();
+                _last=new Command(Array.Empty<Key>(),false);
+                return _last;
+            }
             var keys=new List<Key>();
             var threat=observedThreat??new Threat(OrdanHealthStage.Stage1,false,false,false,false,false,28672,4915,410,0);
             if(_approachClosed){_last=new Command(Array.Empty<Key>(),false);return _last;}
@@ -1148,6 +1163,30 @@ namespace AcadeGameMaker.Input.Unity
             }
             var samePhase=slot==OrdanPatternSlot.DebtLineA && phase==OrdanBossPhase.Recovery && tick-age==_approachRecoveryStart ||
                 slot==OrdanPatternSlot.SeizureWeight && phase==OrdanBossPhase.Telegraph && tick-age==_approachRecoveryStart+39 && age>=0 && age<48;
+            // In a standalone Player, Unity can execute several FixedUpdates
+            // before its next Dynamic input update. Keep the already requested
+            // D+Space pending for at most TWO completed ticks, but do not
+            // claim a consumed press or airborne pose without observation.
+            var pendingUnconsumed=_approachIdentity.Lease is Chapter1StandaloneVerificationSession &&
+                !_approachPress && !_spaceHeld && grounded && vy==0 &&
+                _lastOwnedSequence==_approachReleaseSequence &&
+                tick>_approachStart && tick<=_approachStart+2 &&
+                (tick==_approachTick+1 || IsBoundedStandaloneTickGap(_approachTick,tick)) &&
+                clear && samePhase && _approachIdentity.Same(_ownedIdentity) &&
+                x+OrdanBossHostileDamageProducer.ApprovedPlayerHalfWidth/4096f+.05f <
+                    OrdanBossHostileDamageProducer.ApprovedOrdanBody.MinX/4096f;
+            if(pendingUnconsumed)
+            {
+                _approachTick=tick;
+                keys=new[]{Key.D,Key.Space};
+                return true;
+            }
+            if(!_approachPress && _lastOwnedSequence==_approachReleaseSequence &&
+                tick>_approachStart+2)
+            {
+                CloseApproach("Recovery D+Space owned press unconsumed after two completed ticks");
+                return true;
+            }
             if(!clear || !_approachIdentity.Same(_ownedIdentity) || !(tick==_approachTick+1 || _approachIdentity.Lease is Chapter1StandaloneVerificationSession && IsBoundedStandaloneTickGap(_approachTick,tick)) || tick>=_approachStart+60 || !samePhase || _lastOwnedSequence<=_approachReadSequence ||
                 tick>_approachStart+2 && !_approachPress)
             {CloseApproach("identity/focus/threat/tick/phase/deadline or actual Space press missing");return true;}

@@ -158,6 +158,30 @@ namespace AcadeGameMaker.Hub.Presentation.Unity
             _leftPatternFrames=frames;
         }
 
+        private static bool _hubPreloadAttempted;
+        // Move the existing large, synchronous Resource/Sprite setup to the
+        // non-combat hub phase. No boss transform, combat, clock or input is
+        // read or changed. This reduces (but does not guarantee removal of)
+        // the first boss rendering hitch after a room transition.
+        internal static void PreloadForHub()
+        {
+            if(!Application.isPlaying || _hubPreloadAttempted)return;
+            _hubPreloadAttempted=true;
+            try
+            {
+                Load();
+                LoadRightPattern();
+                LoadLeftPattern();
+            }
+            catch(Exception error)
+            {
+                // Preserve the original Draw() failure path rather than
+                // declaring partial art ready or failing the hub controls.
+                Debug.LogWarning("Ordan hub art preload incomplete: "+
+                    error.GetType().Name);
+            }
+        }
+
         private static Sprite Make(Frame frame, string expected)
         {
             if (frame == null || frame.resourceName != expected || frame.width != 1215 || frame.height != 1295 ||
