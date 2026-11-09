@@ -1,0 +1,24 @@
+﻿{
+    "schema":  "ch1-ordan-right-combat-phase-atlas-v1",
+    "status":  "provisional-not-manual-approved",
+    "resource":  "Chapter1Ordan/Candidate-OrdanAttackRight",
+    "sha256":  "da080a408258835faf991683acb6860b45fc8fc355eca5ff3abd8a4cc0ae7382",
+    "rows":  [
+                 "guard-step",
+                 "debt-line",
+                 "seizure-weight",
+                 "balance-audit"
+             ],
+    "columns":  6,
+    "rowsCount":  4,
+    "cell":  [
+                 128,
+                 128
+             ],
+    "rightOnly":  true,
+    "leftOriginalStaticUnchanged":  true,
+    "manualArtAccepted":  false,
+    "independentQA":  false,
+    "attackSimulationChanged":  false,
+    "originalMasterKept":  true
+}

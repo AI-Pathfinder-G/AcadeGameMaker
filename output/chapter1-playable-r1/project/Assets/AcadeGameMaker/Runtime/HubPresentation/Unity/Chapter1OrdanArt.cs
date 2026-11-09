@@ -1,4 +1,5 @@
 using System;
+using AcadeGameMaker.Run.Unity;
 using UnityEngine;
 
 namespace AcadeGameMaker.Hub.Presentation.Unity
@@ -19,6 +20,9 @@ namespace AcadeGameMaker.Hub.Presentation.Unity
             public Frame right, left;
         }
         private static Sprite _right, _left;
+        private static Sprite[,] _rightPatternFrames;
+        private static bool _patternLoadAttempted;
+        private const int PatternCell=128, PatternColumns=6, PatternRows=4;
         private static Transform _graph;
         private static Collider2D _source;
         private static float _previousX;
@@ -57,6 +61,61 @@ namespace AcadeGameMaker.Hub.Presentation.Unity
             catch { UnityEngine.Object.Destroy(right); throw; }
             _right = right; _left = left;
         }
+        // Visual selector only. The four actual combat slots share three
+        // source action rows (both DebtLine variants use the DebtLine row).
+        // No fake death, vulnerable hit, or projectile pose is fabricated.
+        internal static int SelectRightPatternCell(int slot,int phase,int age)
+        {
+            if(age<0 || phase<0 || phase>4)return -1;
+            int row;
+            switch(slot)
+            {
+                case 1:
+                case 3:row=1;break; // DebtLineA/B
+                case 2:row=2;break; // SeizureWeight
+                case 4:row=3;break; // BalanceAudit
+                default:return -1;
+            }
+            int key;
+            switch(phase)
+            {
+                case 0:key=age<6?1:2;break; // actual telegraph
+                case 1:key=age<6?3:4;break; // actual execute
+                case 2:key=5;break;         // recovery
+                default:return -1;         // unanimated, static fallback
+            }
+            return row*PatternColumns+key;
+        }
+
+        private static void LoadRightPattern()
+        {
+            if(_patternLoadAttempted)return;
+            _patternLoadAttempted=true;
+            var texture=Resources.Load<Texture2D>(
+                "Chapter1Ordan/Candidate-OrdanAttackRight");
+            var profile=Resources.Load<TextAsset>(
+                "Chapter1Ordan/candidate-right-pattern-profile");
+            if(texture==null || profile==null ||
+               !profile.text.Contains("ch1-ordan-right-combat-phase-atlas-v1") ||
+               !profile.text.Contains("provisional-not-manual-approved") ||
+               texture.width!=PatternCell*PatternColumns ||
+               texture.height!=PatternCell*PatternRows ||
+               texture.filterMode!=FilterMode.Point || texture.mipmapCount!=1)
+                return; // Never replace user-authored static art on failure.
+            var frames=new Sprite[PatternRows,PatternColumns];
+            for(var row=0;row<PatternRows;row++)
+            for(var key=0;key<PatternColumns;key++)
+            {
+                var rect=new Rect(key*PatternCell,
+                    texture.height-(row+1)*PatternCell,
+                    PatternCell,PatternCell);
+                frames[row,key]=Sprite.Create(texture,rect,
+                    new Vector2(.52f,.024f),49f,0,SpriteMeshType.FullRect);
+                frames[row,key].name="OrdanRight"+row+"_"+key;
+            }
+            _rightPatternFrames=frames;
+        }
+
         private static Sprite Make(Frame frame, string expected)
         {
             if (frame == null || frame.resourceName != expected || frame.width != 1215 || frame.height != 1295 ||
@@ -87,13 +146,38 @@ namespace AcadeGameMaker.Hub.Presentation.Unity
             _previousX = bounds.center.x;
             Load();
             var sprite = _facingLeft ? _left : _right;
+            if(!_facingLeft &&
+               Chapter1OrdanVisualEvidence.TryRead(graph,
+                   out var publishedSlot,out var publishedPhase,out var age))
+            {
+                var cell=SelectRightPatternCell(publishedSlot,publishedPhase,age);
+                if(cell>=0)
+                {
+                    LoadRightPattern();
+                    if(_rightPatternFrames!=null)
+                        sprite=_rightPatternFrames[cell/PatternColumns,
+                            cell%PatternColumns];
+                }
+            }
             var screenScale = colliderRect.height / bounds.size.y;
             var width = sprite.rect.width / sprite.pixelsPerUnit * screenScale;
             var height = sprite.rect.height / sprite.pixelsPerUnit * screenScale;
             var x = Mathf.Round(colliderRect.center.x - sprite.pivot.x / sprite.pixelsPerUnit * screenScale);
             var y = Mathf.Round(colliderRect.yMax - (sprite.rect.height - sprite.pivot.y) / sprite.pixelsPerUnit * screenScale);
             var old = GUI.color;
-            try { GUI.color = Color.white; GUI.DrawTexture(new Rect(x, y, width, height), sprite.texture, ScaleMode.StretchToFill, true); }
+            try
+            {
+                GUI.color = Color.white;
+                // GUI.DrawTexture would draw the WHOLE 6x4 atlas; use the
+                // selected Sprite UVs (also identical for static masters).
+                var tile=sprite.textureRect;
+                var uv=new Rect(tile.x/sprite.texture.width,
+                    tile.y/sprite.texture.height,
+                    tile.width/sprite.texture.width,
+                    tile.height/sprite.texture.height);
+                GUI.DrawTextureWithTexCoords(new Rect(x,y,width,height),
+                    sprite.texture,uv,true);
+            }
             finally { GUI.color = old; }
             return true;
         }
