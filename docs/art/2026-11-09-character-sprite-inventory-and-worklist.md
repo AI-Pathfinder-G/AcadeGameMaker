@@ -1,5 +1,15 @@
 # Character / monster / NPC / boss art inventory — 2026-11-09
 
+## Package A continuation — articulated left-facing prototype (2026-11-09)
+
+- The first left motion experiment only shifted legs and had obvious static-looking gait. That experiment remains excluded from Unity.
+- Revised authoring tool tools/sprite_atlas/rig_ch1_doeon_left_prototype.py uses the actual separately authored Left.png alpha silhouette. It isolates head/torso, two independent sleeves and two leg groups with retained asymmetric costume/gear; poses are joint-rotated, never right-sheet mirrored. Six pose keys per row were made distinct across idle/walk/run/jump, 24 frames total. No authored left combat/hurt frame was fabricated.
+- The source-hash manifest, limb mask audit and nearest-neighbor 4x checker review are in output/ch1-package-A-20261109/left-joint-motion-experiment-v3. This is PROVISIONAL PROCEDURAL LEFT MOTION, not a final hand-painted authoring package.
+- In the current Unity project, Assets/Resources/Chapter1Doeon/Candidate-left-movement.png is a 384x256 RGBA source with unique .meta GUID and explicit provenance in candidate-animation-profile.json. Chapter1DoeonAnimation maps completed movement state to idle/walk/run/jump/dash visual frames. Existing Left.png is preserved for left attack/hit and any invalid/absent pose; no transform.flipX or second gameplay authority.
+- Offline synthetic rig tests: 3/3 pass, including 24-frame bounds, distinct gait keys and independent source geometry. Unity targeted PlayMode test Chapter1DoeonAnimationTests: final 4/4 pass (unapproved left combat explicitly absent, original fallback still available).
+- Built Unity 6000.6.0f1 Windows candidate attempt-013 successfully, exit 0. Isolated real Windows Extraction automatic run completed and yielded resultSuccess=true, exit code 0. Actual gameplay screenshots were captured in output/ch1-package-A-20261109/left-auto-frame-*.png. The direct Windows keyboard screenshot attempt did not provide adequate independent left gait-motion QA and must not be treated as manual play acceptance. Solidarity/failure-retry after attempt-013 were NOT repeated (prior attempt-008 receipts remain historical).
+- Still required before Package A final acceptance: designer-authored left combat/attack/hit frames, manual rig seam and gait polish at 1x/4x, actor-facing swaps under true keyboard/gamepad movement, attack/hit audiovisual synchronization, more complete rendering/performance checks, and deferred independent Codex review.
+
 ## Package A continuation — facing and edge polish (2026-11-09)
 
 - Independent left-facing master exists at output/chapter1-playable-r1/project/Assets/Resources/Chapter1Doeon/Left.png, 1254x1254 RGBA. Full search of original images found no separately authored left-facing movement/combat keypose atlas.

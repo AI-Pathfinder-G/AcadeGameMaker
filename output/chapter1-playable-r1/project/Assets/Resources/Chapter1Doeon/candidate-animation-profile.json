@@ -32,5 +32,11 @@
     "combatAtlasSha256":  "085b0cf8708018c60158554eb3e701d030fca52fe7020ae0d2143ac9484b03d0",
     "edgeRefinement":  "ch1-conservative-edge-chroma-v1",
     "remainingPurpleEffectPixelsForReview":  14,
-    "rightSpriteAcceptance":  "candidate-visual-review-pending"
+    "rightSpriteAcceptance":  "candidate-visual-review-pending",
+    "leftMotionResource":  "Chapter1Doeon/Candidate-left-movement",
+    "leftMotionStatus":  "procedural-experiment-not-hand-drawn",
+    "leftMotionSourceSha256":  "e4c0b19b2031502b2c7a19c6bb6e98a0015674cac5f739f14616f87f703243a3",
+    "leftMotionAtlasSha256":  "82462fe1cdcdfe2b3432039ec8822ae7dba578d3d12b5bf2d47d0a93f78d1142",
+    "leftCombatAvailable":  false,
+    "noMirroredRightSprites":  true
 }

@@ -1,3 +1,19 @@
+## 2026-11-09 Package A left motion — CURRENT
+
+Active Git branch fix/ch1-unity-resume-20261108. Continued package A after
+right candidate commit 78b11d6: independently left-authored Left.png has been
+used to build a new 24-frame PROVISIONAL articulated movement atlas (not mirrored
+right sprites), imported to Chapter1Doeon/Candidate-left-movement. Rendering
+source Chapter1DoeonAnimation uses completed motion state and returns the true
+left static master for missing left attack/hit poses. No mechanics changed.
+Focused Unity animation tests 4/4 passed after compiler fix. Windows candidate
+attempt-013 compiled exit 0; isolated Extraction branch1 autoplay completed
+with resultSuccess=true, exit 0. Raw proof and gameplay stills:
+output/ch1-package-A-20261109. Do not say all facing animations are accepted:
+manual left gait realism and left combat/hurt sheets remain missing. Codex
+independent review deferred, no main merge or source art publication. Original
+H:\GPT-workspace\AcadeGameMaker remains read-only. Later standalone work
+must preserve the previous build attempt-012 and current quarantined outputs.
 ## 2026-11-08 chat session restoration verification (user paused audit gates)
 The current GPT-6 chat added a test-only Unity selected case, ChatSessionRecoverySmokeTests.cs under the active Unity project Tests/PlayMode/InputUnity. It does not alter the protected original owner fixture, nor claim a Luna approval. The new synthetic test lease is confined to test assembly, batchmode and temporary input devices. No natural boss test was invoked.
 - Unity 6000.6.0f1, test AcadeGameMaker.Tests.PlayMode.InputUnity.ChatSessionRecoverySmokeTests.RestoresAfterGeneralBudgetExhaustion, XML Passed, total=1 passed=1 failed=0 skipped=0; process exit 0.

@@ -21,7 +21,7 @@ namespace AcadeGameMaker.Tests.PlayMode.RunUnity
         [Test] public void LeftFacingStillUsesIndependentlyAuthoredStaticMaster()
         {
             Assert.That(Resources.Load<Texture2D>("Chapter1Doeon/Candidate-left"),
-                Is.Null, "Rejected procedural left prototype must not enter the runtime");
+                Is.Null, "Old rejected left asset must not enter runtime or override the actual left master");
             Assert.That(Resources.Load<Texture2D>("Chapter1Doeon/Left"), Is.Not.Null);
             var go=new GameObject("Player");
             try
@@ -34,6 +34,47 @@ namespace AcadeGameMaker.Tests.PlayMode.RunUnity
                     Resources.Load<Texture2D>("Chapter1Doeon/Left")));
             }
             finally { Object.DestroyImmediate(go); }
+        }
+        [Test] public void ProceduralLeftMotionIsDistinctAndNeverClaimsLeftCombat()
+        {
+            var authored=Resources.Load<Texture2D>("Chapter1Doeon/Left");
+            var provisional=Resources.Load<Texture2D>(
+                "Chapter1Doeon/Candidate-left-movement");
+            var profile=Resources.Load<TextAsset>(
+                "Chapter1Doeon/candidate-animation-profile");
+            Assert.That(authored,Is.Not.Null);
+            Assert.That(provisional,Is.Not.Null);
+            Assert.That(provisional,Is.Not.SameAs(authored));
+            Assert.That(profile,Is.Not.Null);
+            Assert.That(profile.text,Does.Contain(
+                "procedural-experiment-not-hand-drawn"));
+            Assert.That(System.Text.RegularExpressions.Regex.IsMatch(
+                profile.text, "\"leftCombatAvailable\"\\s*:\\s*false"),Is.True);
+            Assert.That(System.Text.RegularExpressions.Regex.IsMatch(
+                profile.text, "\"noMirroredRightSprites\"\\s*:\\s*true"),Is.True);
+            Assert.That(provisional.width,Is.EqualTo(384));
+            Assert.That(provisional.height,Is.EqualTo(256));
+            Assert.That(provisional.filterMode,Is.EqualTo(FilterMode.Point));
+            Assert.That(provisional.mipmapCount,Is.EqualTo(1));
+            Assert.That(Chapter1DoeonAnimation.LeftMotionCandidateAvailable,Is.True);
+            // 4 action rows: idle, walk, run/dash, jump. Every row is visible
+            // from the same left-authored source, with no transform.flipX.
+            foreach(var clip in new[]{1,2,3,4,5})
+            {
+                var pose=Chapter1DoeonAnimation.LeftMotionFrame(clip,35,4096);
+                Assert.That(pose,Is.Not.Null,"clip "+clip);
+                Assert.That(pose.texture,Is.SameAs(provisional));
+                var uv=Chapter1DoeonAnimation.TextureUv(pose);
+                Assert.That(uv.width,Is.EqualTo(1f/6f).Within(.0001f));
+                Assert.That(uv.height,Is.EqualTo(.25f).Within(.0001f));
+                Assert.That(pose.pivot.y,Is.EqualTo(12f).Within(.001f));
+            }
+            Assert.That(Chapter1DoeonAnimation.LeftMotionFrame(6,50,0),Is.Null,
+                "left attack still uses independently authored static fallback");
+            Assert.That(Chapter1DoeonAnimation.LeftMotionFrame(7,50,0),Is.Null,
+                "left hit still uses independently authored static fallback");
+            Assert.That(Chapter1DoeonAnimation.LeftMotionFrame(2,-1,0),Is.Null);
+            Assert.That(Chapter1DoeonAnimation.LeftMotionFrame(123,50,0),Is.Null);
         }
         [Test] public void CandidateAtlasesAreExactAndPointSampled()
         {

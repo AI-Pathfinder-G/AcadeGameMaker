@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace AcadeGameMaker.Run.Unity
 {
-    // Package A visual-only right-facing candidate. Never controls physics,
+    // Package A visual-only candidate; left is separately derived from the left-authored static master. No horizontal mirroring. Never controls physics,
     // combat damage, input, collision, camera, save, or encounter lifetime.
-    // Left-facing movement atlas has not been authored: use existing approved
+    // Left attack/hit key poses remain unauthored: use existing approved
     // Left static artwork, never a false horizontal flip of asymmetric gear.
     internal static class Chapter1DoeonAnimation
     {
@@ -24,11 +24,13 @@ namespace AcadeGameMaker.Run.Unity
         private sealed class CandidateProfile
         {
             public string schema,disposition,facing,movementResource,combatResource;
+            public string leftMotionResource,leftMotionStatus;
             public bool cannotMirrorLeft;
             public int rows,columns,cellSize,pixelsPerUnit;
         }
         private static Sprite[,] _movement;
         private static Sprite[,] _combat;
+        private static Sprite[,] _leftMovement;
         private static bool _loadAttempted;
         private static Collider2D _visualSource;
         private static int _lastTick = -1, _lastHealth = -1;
@@ -40,6 +42,46 @@ namespace AcadeGameMaker.Run.Unity
             get { EnsureLoaded(); return _movement != null && _combat != null; }
         }
 
+        // Provisional articulated left motion. Never used for attack/hit
+        // or as an authoritative art acceptance claim. The old independently
+        // authored Left.png remains the exact fallback for those states.
+        internal static bool LeftMotionCandidateAvailable
+        {
+            get { EnsureLoaded(); return _leftMovement != null; }
+        }
+
+        internal static Sprite LeftMotionFrame(int clip, int tick, int vyQ4096)
+        {
+            EnsureLoaded();
+            if (_leftMovement == null || tick < 0 || clip == ClipAttack ||
+                clip == ClipHit || clip < ClipIdle || clip > ClipHit) return null;
+            var row=0;
+            var frame=0;
+            switch (clip)
+            {
+                case ClipIdle:
+                    row=0;
+                    frame=(tick/22)%6;
+                    break;
+                case ClipWalk:
+                    row=1;
+                    frame=(tick/7)%6;
+                    break;
+                case ClipRun:
+                    row=2;
+                    frame=(tick/4)%6;
+                    break;
+                case ClipDash:
+                    row=2;
+                    frame=(tick/3)%6;
+                    break;
+                case ClipJump:
+                    row=3;
+                    frame=vyQ4096>1024?1:vyQ4096< -1024?4:3;
+                    break;
+            }
+            return _leftMovement[row,frame];
+        }
         internal static int SelectVisualClip(int vxQ4096, int vyQ4096,
             bool grounded, bool dashing, int attackAge, int hitAge)
         {
@@ -79,10 +121,12 @@ namespace AcadeGameMaker.Run.Unity
             _lastHealth = health;
             _lastAttackOrdinal = attackOrdinal;
 
-            if (facingLeft || !CandidateAvailable) return fallback;
             var clip = SelectVisualClip(vxQ,vyQ,grounded,dashing,
                 tick-_attackStarted,tick-_hitStarted);
+            if (facingLeft) return LeftMotionFrame(clip,tick,vyQ) ?? fallback;
+            if (!CandidateAvailable) return fallback;
             var frame = 0;
+
             var row = 0;
             var sheet = _movement;
             switch (clip)
@@ -142,6 +186,16 @@ namespace AcadeGameMaker.Run.Unity
             if (!Compatible(movement) || !Compatible(combat)) return;
             _movement = Slice(movement);
             _combat = Slice(combat);
+            // Optional provisional motion, never accepted or flipped as final
+            // left combat art. A corrupt/missing atlas retains the true left
+            // static source rather than showing mirrored right equipment.
+            if (settings.leftMotionResource == "Chapter1Doeon/Candidate-left-movement" &&
+                settings.leftMotionStatus == "procedural-experiment-not-hand-drawn")
+            {
+                var left=Resources.Load<Texture2D>(settings.leftMotionResource);
+                if (Compatible(left)) _leftMovement=Slice(left);
+            }
+
         }
 
         private static bool Compatible(Texture2D image) =>

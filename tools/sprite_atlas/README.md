@@ -104,3 +104,20 @@ ever mirroring the right costume. It does not output approved left animation.
 The visual result was considered too static for live use, and no prototype
 asset was bound to Unity. A separately authored left movement/combat sheet is
 still required before two-facing animation can be accepted.
+## Package A experimental articulated left-facing motion
+
+Run only against the individually authored, existing Left.png source.
+
+    python tools/sprite_atlas/rig_ch1_doeon_left_prototype.py --source "PATH_TO_ACTIVE_UNITY/Assets/Resources/Chapter1Doeon/Left.png" --output output/ch1-package-A-left-experiment
+    python -m unittest discover -s tools/sprite_atlas/test -p test_ch1_doeon_left_rig.py -v
+
+The generator makes an EXPLICITLY PROCEDURAL 6x4 movement candidate, with
+input SHA and limb-mask analysis. It does not mirror right-facing costume
+design and it does not invent hand-authored left combat or hit frames.
+Its local evidence was output/ch1-package-A-20261109/left-joint-motion-experiment-v3.
+
+When prototyping in Unity, use resource Chapter1Doeon/Candidate-left-movement
+and the source/asset hashes in candidate-animation-profile.json. The runtime
+is intentionally visual-only; attack and hurt return the individually authored
+static Left.png fallback. The atlas is NOT approved final left animation:
+seams and motion transitions still require independent visual/gameplay QA.
