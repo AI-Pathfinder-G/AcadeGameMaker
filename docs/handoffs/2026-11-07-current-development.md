@@ -1,3 +1,23 @@
+## 2026-11-09 CH1 position-derived visual gait cadence — CURRENT
+
+User requested next art task after 1e79bcc4, dev worktree
+H:\GPT-workspace\AcadeGameMaker-integration-20261107
+and branch fix/ch1-unity-resume-20261108. The published player
+MotionSnapshot.PositionXQ4096 is now read-only exposed to Doeon visuals.
+A six-key stride phase accumulates actual pixel displacement, not fixed
+simulation tick intervals; grounded feet freeze at zero movement and do
+not advance through teleport or duplicate renderer sampling. Walk has
+5.5 sprite-pixels per step and run/dash 9, PPU 18; source and right/left
+facing atlas content unchanged. Movement/attack/hitbox/input/save code
+is unchanged apart from exposing read-only published position.
+Focused Unity art tests 9/9 pass and Windows candidate attempt-022 built.
+Extraction branch1 success=True exit0 in isolated build. Actual Windows Solidarity branch2 and failure->hub->retry tests completed
+success=True exit0, all along with Extraction. Cross-path proof:
+output/ch1-package-A-20261109/physical-gait-all-paths-audit.json.
+These are not Codex independent QA or final manual foot-slip acceptance. Original archive
+H:\GPT-workspace\AcadeGameMaker, previous packages, remote main and
+Codex independent QA remain untouched/deferred. Manual art acceptance
+not achieved, especially right RUN torso source wobble and left hand poses.
 ## 2026-11-09 CH1 Doeon left RUN shoulder bridge — CURRENT
 
 The user requested continuing package A. The last accepted local baseline

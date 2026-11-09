@@ -221,6 +221,62 @@ namespace AcadeGameMaker.Tests.PlayMode.RunUnity
             Assert.That(Chapter1DoeonAnimation.TextureUv(jump).y,
                 Is.EqualTo(0f).Within(.0001f),"actual jump is row3");
         }
+        [Test] public void PhysicalDistanceNotWallClockDrivesWalkingAndRunningFrames()
+        {
+            // At 8 world-units/sec, 4 fixed physics ticks move 0.533 units
+            // and ~9.6 sprite pixels: just over one RUN key (9px/key).
+            var run=Chapter1DoeonAnimation.AdvanceGaitPhaseFromPosition(
+                0f,0,2184,4,true,8*4096,true);
+            Assert.That(run,Is.EqualTo(2184f*18f/(4096f*9f)).Within(.0002f));
+            Assert.That(Chapter1DoeonAnimation.GaitFrame(run),Is.EqualTo(1));
+            // At 4 units/sec walk, same 4-tick interval moves half as far
+            // and is <one WALK key (5.5px/key).
+            var walk=Chapter1DoeonAnimation.AdvanceGaitPhaseFromPosition(
+                0f,0,1092,4,true,4*4096,false);
+            Assert.That(walk,Is.EqualTo(1092f*18f/(4096f*5.5f)).Within(.0002f));
+            Assert.That(Chapter1DoeonAnimation.GaitFrame(walk),Is.EqualTo(0));
+            walk=Chapter1DoeonAnimation.AdvanceGaitPhaseFromPosition(
+                walk,1092,2184,4,true,4*4096,false);
+            Assert.That(Chapter1DoeonAnimation.GaitFrame(walk),Is.EqualTo(1));
+            // Repeated OnGUI+SpriteRenderer sampling the same physics tick
+            // cannot advance twice; a wall collision stops the visual gait.
+            Assert.That(Chapter1DoeonAnimation.AdvanceGaitPhaseFromPosition(
+                run,2184,2184,0,true,8*4096,true),Is.EqualTo(run));
+            Assert.That(Chapter1DoeonAnimation.AdvanceGaitPhaseFromPosition(
+                run,2184,2184,1,true,8*4096,true),Is.EqualTo(run));
+            Assert.That(Chapter1DoeonAnimation.AdvanceGaitPhaseFromPosition(
+                run,2184,4368,4,false,8*4096,true),Is.EqualTo(run),
+                "airborne legs do not cycle like grounded feet");
+            Assert.That(Chapter1DoeonAnimation.AdvanceGaitPhaseFromPosition(
+                run,2184,4368,9,true,8*4096,true),Is.EqualTo(run),
+                "stale visual sample must not teleport the feet cycle");
+            Assert.That(Chapter1DoeonAnimation.AdvanceGaitPhaseFromPosition(
+                run,2184,40960,1,true,8*4096,true),Is.EqualTo(run),
+                "portal relocation must never count as a running stride");
+            var reversed=Chapter1DoeonAnimation.AdvanceGaitPhaseFromPosition(
+                run,2184,0,4,true,-8*4096,true);
+            Assert.That(reversed,Is.GreaterThan(run),
+                "changing direction preserves natural gait cadence");
+            var wrapped=Chapter1DoeonAnimation.AdvanceGaitPhaseFromPosition(
+                5.8f,0,2184,4,true,8*4096,true);
+            Assert.That(wrapped,Is.GreaterThanOrEqualTo(0f));
+            Assert.That(wrapped,Is.LessThan(6f));
+            foreach(var phase in new[]{0f,1.9f,5.999f,6f,12f})
+                Assert.That(Chapter1DoeonAnimation.GaitFrame(phase),
+                    Is.InRange(0,5));
+            Assert.That(Chapter1DoeonAnimation.GaitFrame(float.NaN),Is.EqualTo(0));
+            Assert.That(Chapter1DoeonAnimation.GaitFrame(float.PositiveInfinity),
+                Is.EqualTo(0));
+            // Explicit distance-driven frame index must address 24-key
+            // source clip rows without altering an actor's actual position.
+            var pose=Chapter1DoeonAnimation.LeftMotionFrame(3,8,0,2);
+            Assert.That(pose,Is.Not.Null);
+            Assert.That(Chapter1DoeonAnimation.TextureUv(pose).x,
+                Is.EqualTo(2f/6f).Within(.0001f));
+            Assert.That(Chapter1DoeonAnimation.TextureUv(pose).y,
+                Is.EqualTo(.25f).Within(.0001f),"RUN row remains row2");
+        }
+
         [Test] public void CandidateAtlasesAreExactAndPointSampled()
         {
             var movement=Resources.Load<Texture2D>("Chapter1Doeon/Candidate-movement");

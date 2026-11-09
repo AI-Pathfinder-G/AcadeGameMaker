@@ -271,9 +271,9 @@ namespace AcadeGameMaker.Input.Unity
             Collider2D exactPlayer, out int tick, out int velocityXQ4096,
             out int velocityYQ4096, out bool grounded, out bool dashing,
             out int health, out long committedAttackOrdinal,
-            out bool firedAttackThisTick)
+            out bool firedAttackThisTick, out int positionXQ4096)
         {
-            tick=velocityXQ4096=velocityYQ4096=health=0;
+            tick=velocityXQ4096=velocityYQ4096=health=positionXQ4096=0;
             grounded=dashing=firedAttackThisTick=false;committedAttackOrdinal=-1;
             if(exactPlayer==null || _player==null || IsFaulted ||
                !ReferenceEquals(_player.GetComponent<Collider2D>(),exactPlayer) ||
@@ -282,6 +282,7 @@ namespace AcadeGameMaker.Input.Unity
             var motion=_player.Snapshot;
             if(motion.Tick!=completed.Tick)return false;
             tick=motion.Tick.Value;
+            positionXQ4096=motion.PositionXQ4096;
             velocityXQ4096=motion.VelocityXQ4096;
             velocityYQ4096=motion.VelocityYQ4096;
             grounded=motion.IsGrounded;

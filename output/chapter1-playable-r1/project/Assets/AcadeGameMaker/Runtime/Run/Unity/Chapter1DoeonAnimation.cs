@@ -44,6 +44,11 @@ namespace AcadeGameMaker.Run.Unity
         private static int _attackStarted = -99999, _hitStarted = -99999;
         private static long _lastAttackOrdinal = -1;
         private static Color _currentTint = Color.white;
+        // Presentation cadence derives from completed movement displacement,
+        // never wall-clock frames or issued input. Neither gameplay speed nor
+        // collision/attack outcomes are changed by these fields.
+        private static int _lastGaitTick=-1, _lastGaitXQ4096;
+        private static float _gaitPhase;
         internal static Color CurrentVisualTint => _currentTint;
 
         internal static bool CandidateAvailable
@@ -59,7 +64,8 @@ namespace AcadeGameMaker.Run.Unity
             get { EnsureLoaded(); return _leftMovement != null; }
         }
 
-        internal static Sprite LeftMotionFrame(int clip, int tick, int vyQ4096)
+        internal static Sprite LeftMotionFrame(int clip, int tick, int vyQ4096,
+            int displacementFrame=-1)
         {
             EnsureLoaded();
             if (_leftMovement == null || tick < 0 || clip == ClipAttack ||
@@ -74,15 +80,15 @@ namespace AcadeGameMaker.Run.Unity
                     break;
                 case ClipWalk:
                     row=1;
-                    frame=(tick/7)%6;
+                    frame=displacementFrame>=0?displacementFrame:(tick/7)%6;
                     break;
                 case ClipRun:
                     row=2;
-                    frame=(tick/4)%6;
+                    frame=displacementFrame>=0?displacementFrame:(tick/4)%6;
                     break;
                 case ClipDash:
                     row=2;
-                    frame=(tick/3)%6;
+                    frame=displacementFrame>=0?displacementFrame:(tick/3)%6;
                     break;
                 case ClipJump:
                     row=3;
@@ -159,6 +165,33 @@ namespace AcadeGameMaker.Run.Unity
             return age < 6 ? 4 : 5;
         }
 
+        // One cycle has six visual keys; run uses a longer physical step
+        // than walk. Movement distance is the *completed position delta*,
+        // so a blocked actor cannot keep jogging in place or speed up/slow
+        // down the gait independently from actual physical travel.
+        internal static float AdvanceGaitPhaseFromPosition(float previousPhase,
+            int oldXQ4096, int newXQ4096, int elapsedTicks,
+            bool grounded, int velocityXQ4096, bool running)
+        {
+            if(elapsedTicks<=0 || elapsedTicks>8 || !grounded ||
+                Math.Abs((long)velocityXQ4096)<1024)
+                return previousPhase;
+            var deltaQ=Math.Abs((long)newXQ4096-oldXQ4096);
+            // Ignore a portal/teleport or a stale sample. Even fast dash
+            // cannot travel 0.75 world units within one fixed physics tick.
+            if(deltaQ>(long)elapsedTicks*3072L)
+                return previousPhase;
+            var pixelDistance=deltaQ*PixelsPerUnit/4096f;
+            var pixelsPerKey=running?9f:5.5f;
+            return Mathf.Repeat(previousPhase+pixelDistance/pixelsPerKey,6f);
+        }
+
+        internal static int GaitFrame(float phase)
+        {
+            if(float.IsNaN(phase) || float.IsInfinity(phase)) return 0;
+            return Mathf.Clamp(Mathf.FloorToInt(Mathf.Repeat(phase,6f)),0,5);
+        }
+
         internal static int SelectVisualClip(int vxQ4096, int vyQ4096,
             bool grounded, bool dashing, int attackAge, int hitAge)
         {
@@ -184,7 +217,8 @@ namespace AcadeGameMaker.Run.Unity
                 !router.TryGetDoeonAnimationEvidence(source,
                     out var tick, out var vxQ, out var vyQ,
                     out var grounded, out var dashing, out var health,
-                    out var attackOrdinal, out var firedAttackThisTick))
+                    out var attackOrdinal, out var firedAttackThisTick,
+                    out var positionXQ4096))
             {
                 _currentTint = Color.white;
                 return fallback;
@@ -197,6 +231,8 @@ namespace AcadeGameMaker.Run.Unity
                 _lastHealth = -1;
                 _lastAttackOrdinal = -1;
                 _attackStarted = _hitStarted = -99999;
+                _lastGaitTick=-1;
+                _gaitPhase=0f;
             }
             if (_lastHealth >= 0 && health < _lastHealth) _hitStarted = tick;
             // Do not animate cooldown / invalid-aim presses. Attack visuals
@@ -204,6 +240,16 @@ namespace AcadeGameMaker.Run.Unity
             // not by the router's issued input sequence counter.
             if (ShouldStartFiredAttackVisual(firedAttackThisTick,tick,_attackStarted))
                 _attackStarted = tick;
+            if(_lastGaitTick>=0 && tick>_lastGaitTick)
+                _gaitPhase=AdvanceGaitPhaseFromPosition(_gaitPhase,
+                    _lastGaitXQ4096,positionXQ4096,tick-_lastGaitTick,
+                    grounded,vxQ,
+                    dashing || Math.Abs((long)vxQ)>=5L*4096L);
+            if(tick!=_lastGaitTick)
+            {
+                _lastGaitTick=tick;
+                _lastGaitXQ4096=positionXQ4096;
+            }
             _lastTick = tick;
             _lastHealth = health;
             _lastAttackOrdinal = attackOrdinal;
@@ -212,11 +258,12 @@ namespace AcadeGameMaker.Run.Unity
                 tick-_hitStarted);
             var clip = SelectVisualClip(vxQ,vyQ,grounded,dashing,
                 tick-_attackStarted,tick-_hitStarted);
+            var physicalGaitFrame=GaitFrame(_gaitPhase);
             if (facingLeft)
             {
                 var age = clip == ClipHit ? tick-_hitStarted : tick-_attackStarted;
                 return LeftCombatFrame(clip,age) ??
-                    LeftMotionFrame(clip,tick,vyQ) ?? fallback;
+                    LeftMotionFrame(clip,tick,vyQ,physicalGaitFrame) ?? fallback;
             }
             if (!CandidateAvailable) return fallback;
             var frame = 0;
@@ -242,7 +289,7 @@ namespace AcadeGameMaker.Run.Unity
                     break;
                 case ClipDash:
                     row=3;
-                    frame=(tick/3)%3;
+                    frame=physicalGaitFrame/2;
                     break;
                 case ClipJump:
                     row=2;
@@ -251,11 +298,11 @@ namespace AcadeGameMaker.Run.Unity
                     break;
                 case ClipRun:
                     row=1;
-                    frame=(tick/4)%6;
+                    frame=physicalGaitFrame;
                     break;
                 case ClipWalk:
                     row=0;
-                    frame=2+(tick/7)%4;
+                    frame=2+(physicalGaitFrame*4)/6;
                     break;
                 default:
                     row=0;
