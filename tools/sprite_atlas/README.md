@@ -121,3 +121,17 @@ and the source/asset hashes in candidate-animation-profile.json. The runtime
 is intentionally visual-only; attack and hurt return the individually authored
 static Left.png fallback. The atlas is NOT approved final left animation:
 seams and motion transitions still require independent visual/gameplay QA.
+## Package A experimental articulated left combat
+
+For an isolated, read-only original Left.png image:
+
+    python tools/sprite_atlas/rig_ch1_doeon_left_combat.py --source "ACTIVE_UNITY/Assets/Resources/Chapter1Doeon/Left.png" --output output/CH1-left-combat-research
+    python -m unittest discover -s tools/sprite_atlas/test -p test_ch1_doeon_left_combat.py -v
+
+The original LEFT costume is not mirrored from right assets. The generator
+creates an experimental 6x4 RGBA 64px atlas with fixed foot baseline and
+per-frame SHA / bbox audit: rows0/1 are attack/hurt candidates and rows2/3
+are unbound research poses. Assets/Resources/Chapter1Doeon/Candidate-left-combat
+is optional visual-only Unity resource. It does not grant mechanics authority,
+damage, original sprite approval, new skills or hand-drawn animation rights.
+The original individually authored Left.png remains the fallback if needed.

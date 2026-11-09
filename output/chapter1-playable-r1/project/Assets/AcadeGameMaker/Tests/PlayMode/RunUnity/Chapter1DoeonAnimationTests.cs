@@ -76,6 +76,55 @@ namespace AcadeGameMaker.Tests.PlayMode.RunUnity
             Assert.That(Chapter1DoeonAnimation.LeftMotionFrame(2,-1,0),Is.Null);
             Assert.That(Chapter1DoeonAnimation.LeftMotionFrame(123,50,0),Is.Null);
         }
+        [Test] public void LeftCombatCandidateSeparatesAttackAndHitFromNoncombat()
+        {
+            var left=Resources.Load<Texture2D>("Chapter1Doeon/Candidate-left-combat");
+            var right=Resources.Load<Texture2D>("Chapter1Doeon/Candidate-combat");
+            var profile=Resources.Load<TextAsset>("Chapter1Doeon/candidate-animation-profile");
+            Assert.That(left,Is.Not.Null);
+            Assert.That(right,Is.Not.Null);
+            Assert.That(left,Is.Not.SameAs(right),"never flip source-right equipment");
+            Assert.That(left.width,Is.EqualTo(384));
+            Assert.That(left.height,Is.EqualTo(256));
+            Assert.That(left.mipmapCount,Is.EqualTo(1));
+            Assert.That(left.filterMode,Is.EqualTo(FilterMode.Point));
+            Assert.That(profile.text,Does.Contain("procedural-experiment-not-hand-drawn"));
+            Assert.That(profile.text,Does.Contain("Candidate-left-combat"));
+            Assert.That(System.Text.RegularExpressions.Regex.IsMatch(
+                profile.text, "\"leftCombatAvailable\"\\s*:\\s*false"),Is.True,
+                "final left combat art is not authored or accepted");
+            Assert.That(Chapter1DoeonAnimation.LeftCombatCandidateAvailable,Is.True);
+            foreach(var age in new[]{0,3,8,15,20})
+            {
+                var pose=Chapter1DoeonAnimation.LeftCombatFrame(6,age);
+                Assert.That(pose,Is.Not.Null,"attack age="+age);
+                Assert.That(pose.texture,Is.SameAs(left));
+                Assert.That(pose.pivot.y,Is.EqualTo(12f).Within(.001f));
+                var uv=Chapter1DoeonAnimation.TextureUv(pose);
+                Assert.That(uv.height,Is.EqualTo(.25f).Within(.0001f));
+                Assert.That(uv.width,Is.EqualTo(1f/6f).Within(.0001f));
+                Assert.That(uv.y,Is.EqualTo(.75f).Within(.0001f),"row0 attack");
+            }
+            foreach(var age in new[]{0,2,6,9,11})
+            {
+                var hurt=Chapter1DoeonAnimation.LeftCombatFrame(7,age);
+                Assert.That(hurt,Is.Not.Null,"hit age="+age);
+                Assert.That(hurt.texture,Is.SameAs(left));
+                Assert.That(Chapter1DoeonAnimation.TextureUv(hurt).y,
+                    Is.EqualTo(.50f).Within(.0001f),"row1 hit recoil");
+            }
+            foreach(var clip in new[]{1,2,3,4,5,0,8})
+                Assert.That(Chapter1DoeonAnimation.LeftCombatFrame(clip,2),Is.Null);
+            Assert.That(Chapter1DoeonAnimation.LeftCombatFrame(6,-1),Is.Null);
+            Assert.That(Chapter1DoeonAnimation.LeftCombatFrame(7,-1),Is.Null);
+            Assert.That(Chapter1DoeonAnimation.LeftCombatFrame(6,21),Is.Null);
+            Assert.That(Chapter1DoeonAnimation.LeftCombatFrame(7,12),Is.Null);
+            Assert.That(Chapter1DoeonAnimation.LeftMotionFrame(6,3,0),Is.Null,
+                "left combat state never borrows a fake movement sprite");
+            Assert.That(Chapter1DoeonAnimation.LeftMotionFrame(7,3,0),Is.Null);
+            Assert.That(Resources.Load<Texture2D>("Chapter1Doeon/Left"),Is.Not.Null,
+                "the independently authored static fallback must remain");
+        }
         [Test] public void CandidateAtlasesAreExactAndPointSampled()
         {
             var movement=Resources.Load<Texture2D>("Chapter1Doeon/Candidate-movement");

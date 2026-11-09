@@ -1,3 +1,18 @@
+## 2026-11-09 Package A left combat — local provisional implementation
+
+Still on fix/ch1-unity-resume-20261108. User instructed continuing art
+development. Added separate source-derived left combat frame atlas from
+original Left.png with NO mirrored right art. The 384x256 sheet has 24
+jointed pixels candidates, of which rows0/1 (6 attack, 6 hit) are bound to
+visual-only completed gameplay state; rows2/3 are research poses only.
+The candidate is not final authored media. Existing left static art is kept
+as fallback; no movement/combat physics, input ownership or save changes.
+
+Synthetic tests 4/4 and Unity focused tests 5/5 passed. Unity Windows
+candidate attempt-015 succeeded. The isolated real Windows branch1 Extraction test completed with success=True and exit code 0. Evidence: output/ch1-package-A-20261109/left-combat-game-result.json and left-combat-frame-*.png.
+Original H:\GPT-workspace\AcadeGameMaker remains untouched. Independent
+Codex QA deferred; main and public remote are unchanged. Do not misstate
+art-direction approval or complete both-facing release acceptance.
 ## 2026-11-09 Package A left motion — CURRENT
 
 Active Git branch fix/ch1-unity-resume-20261108. Continued package A after

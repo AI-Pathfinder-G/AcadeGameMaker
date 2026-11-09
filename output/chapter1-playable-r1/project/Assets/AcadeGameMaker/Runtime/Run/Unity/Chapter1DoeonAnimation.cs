@@ -6,8 +6,8 @@ namespace AcadeGameMaker.Run.Unity
 {
     // Package A visual-only candidate; left is separately derived from the left-authored static master. No horizontal mirroring. Never controls physics,
     // combat damage, input, collision, camera, save, or encounter lifetime.
-    // Left attack/hit key poses remain unauthored: use existing approved
-    // Left static artwork, never a false horizontal flip of asymmetric gear.
+    // Optional left attack/hit frames are procedural candidates, NOT final authored poses;
+    // Original Left.png stays the fallback; right gear is never mirrored.
     internal static class Chapter1DoeonAnimation
     {
         private const int FrameSize = 64;
@@ -25,12 +25,14 @@ namespace AcadeGameMaker.Run.Unity
         {
             public string schema,disposition,facing,movementResource,combatResource;
             public string leftMotionResource,leftMotionStatus;
+            public string leftCombatCandidateResource,leftCombatCandidateStatus;
             public bool cannotMirrorLeft;
             public int rows,columns,cellSize,pixelsPerUnit;
         }
         private static Sprite[,] _movement;
         private static Sprite[,] _combat;
         private static Sprite[,] _leftMovement;
+        private static Sprite[,] _leftCombat;
         private static bool _loadAttempted;
         private static Collider2D _visualSource;
         private static int _lastTick = -1, _lastHealth = -1;
@@ -82,6 +84,33 @@ namespace AcadeGameMaker.Run.Unity
             }
             return _leftMovement[row,frame];
         }
+        // Provisional combat-only left frames from the independent left master.
+        // Right-facing artwork is never flipped to reconstruct the left.
+        // Source attack/hit boxes, damage timing and simulation stay unchanged.
+        internal static bool LeftCombatCandidateAvailable
+        {
+            get { EnsureLoaded(); return _leftCombat != null; }
+        }
+
+        internal static Sprite LeftCombatFrame(int clip, int actionAge)
+        {
+            EnsureLoaded();
+            if (_leftCombat == null || actionAge < 0) return null;
+            int row,frame;
+            if (clip == ClipAttack && actionAge < 21)
+            {
+                row = 0;
+                frame = Mathf.Min(5,actionAge*6/21);
+            }
+            else if (clip == ClipHit && actionAge < 12)
+            {
+                row = 1;
+                frame = Mathf.Min(5,actionAge*6/12);
+            }
+            else
+                return null;
+            return _leftCombat[row,frame];
+        }
         internal static int SelectVisualClip(int vxQ4096, int vyQ4096,
             bool grounded, bool dashing, int attackAge, int hitAge)
         {
@@ -123,7 +152,12 @@ namespace AcadeGameMaker.Run.Unity
 
             var clip = SelectVisualClip(vxQ,vyQ,grounded,dashing,
                 tick-_attackStarted,tick-_hitStarted);
-            if (facingLeft) return LeftMotionFrame(clip,tick,vyQ) ?? fallback;
+            if (facingLeft)
+            {
+                var age = clip == ClipHit ? tick-_hitStarted : tick-_attackStarted;
+                return LeftCombatFrame(clip,age) ??
+                    LeftMotionFrame(clip,tick,vyQ) ?? fallback;
+            }
             if (!CandidateAvailable) return fallback;
             var frame = 0;
 
@@ -195,7 +229,15 @@ namespace AcadeGameMaker.Run.Unity
                 var left=Resources.Load<Texture2D>(settings.leftMotionResource);
                 if (Compatible(left)) _leftMovement=Slice(left);
             }
-
+            if (settings.leftCombatCandidateResource ==
+                    "Chapter1Doeon/Candidate-left-combat" &&
+                settings.leftCombatCandidateStatus ==
+                    "procedural-experiment-not-hand-drawn")
+            {
+                var leftCombat = Resources.Load<Texture2D>(
+                    settings.leftCombatCandidateResource);
+                if (Compatible(leftCombat)) _leftCombat = Slice(leftCombat);
+            }
         }
 
         private static bool Compatible(Texture2D image) =>

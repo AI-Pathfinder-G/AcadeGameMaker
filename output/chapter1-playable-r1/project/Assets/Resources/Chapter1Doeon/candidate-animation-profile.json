@@ -38,5 +38,9 @@
     "leftMotionSourceSha256":  "e4c0b19b2031502b2c7a19c6bb6e98a0015674cac5f739f14616f87f703243a3",
     "leftMotionAtlasSha256":  "82462fe1cdcdfe2b3432039ec8822ae7dba578d3d12b5bf2d47d0a93f78d1142",
     "leftCombatAvailable":  false,
-    "noMirroredRightSprites":  true
+    "noMirroredRightSprites":  true,
+    "leftCombatCandidateResource":  "Chapter1Doeon/Candidate-left-combat",
+    "leftCombatCandidateStatus":  "procedural-experiment-not-hand-drawn",
+    "leftCombatCandidateSha256":  "1f8cdb6629b1c4b0a65843afca468bec54bd75e6f64bbf04447da35918a0d9ae",
+    "leftCombatSourceSha256":  "e4c0b19b2031502b2c7a19c6bb6e98a0015674cac5f739f14616f87f703243a3"
 }
