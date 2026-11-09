@@ -150,3 +150,18 @@ rows, opaque RGB values, atlas frame layout and gameplay mechanics remain
 unaltered. A strict source SHA/output SHA and per-frame coordinate ledger
 is emitted in manifest.json. Treat the result as visual-review candidate,
 not independent acceptance of authored animation.
+## Package A run shoulder-root reattachment
+
+Source-derived left motion atlas row2 is RUN (the fourth row3 is JUMP).
+The previously generated art had a 46/48-pixel detached shoulder/arm in
+run frames 2/3. Fix only those two 64px frames if their major-component
+geometry matches; one pixel per frame joins arm to torso. No blank gaps of
+more than one pixel may be auto-filled. Preserved original Left.png is
+never modified, and the tool never changes combat, pivot or hitbox logic.
+
+    python tools/sprite_atlas/repair_ch1_doeon_left_run_shoulder.py --input "PATH_TO_PREVIOUS_LEFT_MOVEMENT_CANDIDATE" --output output/NEW_LEFT_RUN_ROOT_REVIEW
+    python -m unittest discover -s tools/sprite_atlas/test -p test_ch1_doeon_left_run_shoulder.py -v
+
+Review manifest.json source SHA, exact per-frame pixels and before/after
+nearest-neighbor preview. The output remains a PROVISIONAL sprite candidate
+until an artist verifies movement quality and user-play screen capture.

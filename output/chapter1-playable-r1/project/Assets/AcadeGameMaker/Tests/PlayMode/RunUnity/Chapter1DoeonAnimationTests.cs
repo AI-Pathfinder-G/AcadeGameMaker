@@ -187,6 +187,40 @@ namespace AcadeGameMaker.Tests.PlayMode.RunUnity
                 Is.EqualTo(Color.white),"flash expires without persistent tint");
         }
 
+        [Test] public void LeftRunShoulderRootPatchIsDistinctFromJumpRow()
+        {
+            var left=Resources.Load<Texture2D>(
+                "Chapter1Doeon/Candidate-left-movement");
+            var profile=Resources.Load<TextAsset>(
+                "Chapter1Doeon/candidate-animation-profile");
+            Assert.That(left,Is.Not.Null);
+            Assert.That(profile,Is.Not.Null);
+            Assert.That(profile.text,Does.Contain(
+                "two-pixel-joint-root-patch-art-candidate-only"));
+            Assert.That(profile.text,Does.Contain("leftRunShoulderChangedPixels"));
+            Assert.That(profile.text,Does.Not.Contain("leftJumpShoulderRepair"));
+            Assert.That(Chapter1DoeonAnimation.LeftMotionCandidateAvailable,Is.True);
+            // Source atlas row2 contains RUN. Physics tick 8 and 12
+            // select the 2 repaired shoulder-root frames (cols 2 and 3).
+            var run2=Chapter1DoeonAnimation.LeftMotionFrame(3,8,0);
+            var run3=Chapter1DoeonAnimation.LeftMotionFrame(3,12,0);
+            Assert.That(run2,Is.Not.Null);
+            Assert.That(run3,Is.Not.Null);
+            Assert.That(run2.texture,Is.SameAs(left));
+            Assert.That(run3.texture,Is.SameAs(left));
+            Assert.That(Chapter1DoeonAnimation.TextureUv(run2).y,
+                Is.EqualTo(.25f).Within(.0001f),"row2 is run, not jump");
+            Assert.That(Chapter1DoeonAnimation.TextureUv(run3).y,
+                Is.EqualTo(.25f).Within(.0001f),"row2 is run, not jump");
+            Assert.That(Chapter1DoeonAnimation.TextureUv(run2).x,
+                Is.EqualTo(2f/6f).Within(.0001f));
+            Assert.That(Chapter1DoeonAnimation.TextureUv(run3).x,
+                Is.EqualTo(3f/6f).Within(.0001f));
+            var jump=Chapter1DoeonAnimation.LeftMotionFrame(4,8,5000);
+            Assert.That(jump,Is.Not.Null);
+            Assert.That(Chapter1DoeonAnimation.TextureUv(jump).y,
+                Is.EqualTo(0f).Within(.0001f),"actual jump is row3");
+        }
         [Test] public void CandidateAtlasesAreExactAndPointSampled()
         {
             var movement=Resources.Load<Texture2D>("Chapter1Doeon/Candidate-movement");

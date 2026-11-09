@@ -36,7 +36,7 @@
     "leftMotionResource":  "Chapter1Doeon/Candidate-left-movement",
     "leftMotionStatus":  "procedural-experiment-not-hand-drawn",
     "leftMotionSourceSha256":  "e4c0b19b2031502b2c7a19c6bb6e98a0015674cac5f739f14616f87f703243a3",
-    "leftMotionAtlasSha256":  "82462fe1cdcdfe2b3432039ec8822ae7dba578d3d12b5bf2d47d0a93f78d1142",
+    "leftMotionAtlasSha256":  "96cfbe884ef90116207864e869aa6f6d34aa09cfde8b6e226c5b5a1aa8b2d05b",
     "leftCombatAvailable":  false,
     "noMirroredRightSprites":  true,
     "leftCombatCandidateResource":  "Chapter1Doeon/Candidate-left-combat",
@@ -44,5 +44,7 @@
     "leftCombatCandidateSha256":  "733cb0127384b0f7b3311dbb9fa8a73d00de5094a05a88d6831c8be7b879be74",
     "leftCombatSourceSha256":  "e4c0b19b2031502b2c7a19c6bb6e98a0015674cac5f739f14616f87f703243a3",
     "leftCombatPixelCleanup":  "conservative-1px-seam-candidate-not-final-art",
-    "leftCombatPixelChanges":  20
+    "leftCombatPixelChanges":  20,
+    "leftRunShoulderRepair":  "two-pixel-joint-root-patch-art-candidate-only",
+    "leftRunShoulderChangedPixels":  2
 }

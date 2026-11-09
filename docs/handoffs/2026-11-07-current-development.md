@@ -1,3 +1,18 @@
+## 2026-11-09 CH1 Doeon left RUN shoulder bridge — CURRENT
+
+The user requested continuing package A. The last accepted local baseline
+was 9013f41e on fix/ch1-unity-resume-20261108, with all other repos untouched.
+Image component audit found a left arm detached by one 64px pixel in RUN row2,
+columns 2 and 3 (not jump row3). A strict 2-pixel bridge script and 4 offline
+regression cases were added; one pixel at x28 y21 in each affected frame.
+Original Left.png master, right-facing art, input/combat/physics/save logic
+and prior release ZIP were not modified. Verified connected-components and
+exact original-art palette retention under output/ch1-package-A-20261109.
+Revised Candidate-left-movement.png and SHA-bound candidate-animation-profile
+are in active Unity Resources. A targeted Unity 8/8 test passed, and Windows
+candidate attempt-020 built exit 0. Isolated Extraction autoplay completed success=True exit=0 on attempt-020;
+receipt left-run-joint-game-branch1-result.json confirms pass; no manual art approval.
+No main/remote push. Final authored left art & independent Codex review pending.
 ## 2026-11-09 CH1 Doeon left combat pixel cleanup — CURRENT
 
 The user asked to continue Package A. Worktree:
