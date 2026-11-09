@@ -142,7 +142,7 @@ namespace AcadeGameMaker.Tests.PlayMode.RunUnity
             // The simulation commits hit/miss immediately, not 4-8 ticks
             // after a new visual wind-up. Key pose 3 is strike/recoil at tick0.
             var strike=new[]{3,3,4,4,4,5,5,5,5,0,0,0};
-            var hurt=new[]{3,3,4,4,4,5,5,5,5,0,0,0};
+            var hurt=new[]{3,3,4,4,4,5,5,5,5,5,5,5};
             for(var age=0;age<12;++age)
             {
                 Assert.That(Chapter1DoeonAnimation.SelectAttackFrame(age),
@@ -413,6 +413,30 @@ namespace AcadeGameMaker.Tests.PlayMode.RunUnity
             Assert.That(Chapter1DoeonAnimation.FeedbackSpriteByIndex(-1),Is.Null);
             Assert.That(Chapter1DoeonAnimation.FeedbackSpriteByIndex(24),Is.Null);
         }
+        [Test] public void LeftHurtRecoveryDoesNotReboundAfterSettling()
+        {
+            // The left cutout recoil key5 visually matches independently
+            // authored idle key1; returning key0 after age9 introduced an
+            // extra silhouette jump unrelated to any new HP-loss event.
+            for(var age=5;age<12;++age)
+            {
+                Assert.That(Chapter1DoeonAnimation.SelectHitFrame(age),
+                    Is.EqualTo(5),"no second recoil at age="+age);
+                var sprite=Chapter1DoeonAnimation.LeftCombatFrame(7,age);
+                Assert.That(sprite,Is.Not.Null);
+                Assert.That(Chapter1DoeonAnimation.TextureUv(sprite).x,
+                    Is.EqualTo(5f/6f).Within(.0001f));
+                Assert.That(Chapter1DoeonAnimation.TextureUv(sprite).y,
+                    Is.EqualTo(.5f).Within(.0001f));
+            }
+            Assert.That(Chapter1DoeonAnimation.SelectHitFrame(12),Is.EqualTo(-1));
+            Assert.That(Chapter1DoeonAnimation.SelectHitFrame(-1),Is.EqualTo(-1));
+            // The fired attack is a different timeline: it still settles
+            // through frame0 as previously verified.
+            Assert.That(Chapter1DoeonAnimation.SelectAttackFrame(10),Is.EqualTo(0));
+            Assert.That(Chapter1DoeonAnimation.SelectRightHitFrame(10),Is.EqualTo(5));
+        }
+
         [Test] public void CandidateAtlasesAreExactAndPointSampled()
         {
             var movement=Resources.Load<Texture2D>("Chapter1Doeon/Candidate-movement");

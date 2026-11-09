@@ -1,3 +1,25 @@
+## 2026-11-09 CH1 Doeon left hurt visual recovery snap correction — CURRENT
+
+Active local dev worktree H:\GPT-workspace\AcadeGameMaker-integration-20261107,
+branch fix/ch1-unity-resume-20261108, prior head 3959a9d.
+After examining candidate left attack/hurt sprite source poses, discovered
+left hurt animation had a redundant frame5 -> frame0 transition at ages
+9-11. Frame5 is an exact source match to independently authored idle key1;
+frame0 produces a gratuitous 78-pixel RGBA jump. Changed ONLY the
+Chapter1DoeonAnimation.SelectHitFrame visual selector to hold frame5
+through age11, with idle resumed at age12. No PNG or original source
+modified, left attack/right hurt sequences unchanged, no damage/hitbox/
+movement/input/save changes. Visual metrics and old/new contact sheet:
+output/ch1-package-A-20261109/left-action-naturalness-stage.
+Offline source-backed pixel regression 3/3 passed. Unity focused PlayMode
+13/13 passed. Candidate Windows attempt-030 built exit0. Actual Windows attempt-030 checks for failure -> saved hub -> new-run retry,
+Extraction and Solidarity all succeeded with exit0 and cleanup. See
+output/ch1-package-A-20261109/left-action-naturalness-stage/
+left-recoil-3path-audit.json for cryptographic proof and source matching.
+Codex independent review and manual graphic acceptance are deferred;
+no remote Git push or main merge. Original masters and previous RC
+builds remain untouched. Next: left glove/gear authored art followed
+by first distinctive Walker/Surveyor monster asset production.
 ## 2026-11-09 Doeon right swing wrist contact — CURRENT
 
 User directed next ArcadeGameMaker Package A graphics improvement.

@@ -180,8 +180,11 @@ namespace AcadeGameMaker.Run.Unity
             if (age < 0 || age >= HitVisualTicks) return -1;
             if (age < 2) return 3; // immediate damage recoil
             if (age < 5) return 4;
-            if (age < 9) return 5;
-            return 0;
+            // Key5 is an exact copy of the independently authored left
+            // idle key1. Earlier fallback to key0 after age9 introduced
+            // a second unnecessary recoil snap before normal idle resumes.
+            // Keep the stable recovered pose until this visual ends.
+            return 5;
         }
 
         internal static int SelectRightHitFrame(int age)
