@@ -21,7 +21,9 @@ namespace AcadeGameMaker.Hub.Presentation.Unity
         }
         private static Sprite _right, _left;
         private static Sprite[,] _rightPatternFrames;
+        private static Sprite[,] _leftPatternFrames;
         private static bool _patternLoadAttempted;
+        private static bool _leftPatternLoadAttempted;
         private const int PatternCell=128, PatternColumns=6, PatternRows=4;
         private static Transform _graph;
         private static Collider2D _source;
@@ -116,6 +118,46 @@ namespace AcadeGameMaker.Hub.Presentation.Unity
             _rightPatternFrames=frames;
         }
 
+        // Authored LEFT master rig. No mirrored RIGHT sprites enter this loader.
+        internal static Sprite LeftPhaseSprite(int row,int key)
+        {
+            LoadLeftPattern();
+            if(_leftPatternFrames==null || row<0 || row>=PatternRows ||
+               key<0 || key>=PatternColumns) return null;
+            return _leftPatternFrames[row,key];
+        }
+
+        private static void LoadLeftPattern()
+        {
+            if(_leftPatternLoadAttempted)return;
+            _leftPatternLoadAttempted=true;
+            var texture=Resources.Load<Texture2D>(
+                "Chapter1Ordan/Candidate-OrdanAttackLeft");
+            var profile=Resources.Load<TextAsset>(
+                "Chapter1Ordan/candidate-left-pattern-profile");
+            if(texture==null || profile==null ||
+               !profile.text.Contains("ch1-ordan-left-rig-from-owned-left-static-v1") ||
+               !profile.text.Contains("provisional-cutout-rig-not-final-hand-authored") ||
+               !profile.text.Contains("rightFramesMirrored") ||
+               texture.width!=PatternCell*PatternColumns ||
+               texture.height!=PatternCell*PatternRows ||
+               texture.filterMode!=FilterMode.Point || texture.mipmapCount!=1)
+                return; // The original independent LEFT static stays available.
+            var frames=new Sprite[PatternRows,PatternColumns];
+            for(var row=0;row<PatternRows;row++)
+            for(var key=0;key<PatternColumns;key++)
+            {
+                var rect=new Rect(key*PatternCell,
+                    texture.height-(row+1)*PatternCell,
+                    PatternCell,PatternCell);
+                frames[row,key]=Sprite.Create(texture,rect,
+                    new Vector2(.446502f,.0223938f),47.4f,0,
+                    SpriteMeshType.FullRect);
+                frames[row,key].name="OrdanLeft"+row+"_"+key;
+            }
+            _leftPatternFrames=frames;
+        }
+
         private static Sprite Make(Frame frame, string expected)
         {
             if (frame == null || frame.resourceName != expected || frame.width != 1215 || frame.height != 1295 ||
@@ -146,17 +188,25 @@ namespace AcadeGameMaker.Hub.Presentation.Unity
             _previousX = bounds.center.x;
             Load();
             var sprite = _facingLeft ? _left : _right;
-            if(!_facingLeft &&
-               Chapter1OrdanVisualEvidence.TryRead(graph,
+            if(Chapter1OrdanVisualEvidence.TryRead(graph,
                    out var publishedSlot,out var publishedPhase,out var age))
             {
                 var cell=SelectRightPatternCell(publishedSlot,publishedPhase,age);
                 if(cell>=0)
                 {
-                    LoadRightPattern();
-                    if(_rightPatternFrames!=null)
-                        sprite=_rightPatternFrames[cell/PatternColumns,
-                            cell%PatternColumns];
+                    var row=cell/PatternColumns;
+                    var key=cell%PatternColumns;
+                    if(_facingLeft)
+                    {
+                        var left=LeftPhaseSprite(row,key);
+                        if(left!=null) sprite=left;
+                    }
+                    else
+                    {
+                        LoadRightPattern();
+                        if(_rightPatternFrames!=null)
+                            sprite=_rightPatternFrames[row,key];
+                    }
                 }
             }
             var screenScale = colliderRect.height / bounds.size.y;

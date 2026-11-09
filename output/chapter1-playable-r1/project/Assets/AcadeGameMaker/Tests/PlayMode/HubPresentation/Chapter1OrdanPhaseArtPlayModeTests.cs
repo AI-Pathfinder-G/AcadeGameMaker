@@ -69,5 +69,50 @@ namespace AcadeGameMaker.Tests.PlayMode.HubPresentation
             Assert.That(originalLeft.width,Is.EqualTo(1215));
             Assert.That(originalLeft.height,Is.EqualTo(1295));
         }
+
+        [Test]
+        public void LeftArticulatedCandidateIsNativeLeftAndRetainsStaticSource()
+        {
+            var atlas=Resources.Load<Texture2D>(
+                "Chapter1Ordan/Candidate-OrdanAttackLeft");
+            var profile=Resources.Load<TextAsset>(
+                "Chapter1Ordan/candidate-left-pattern-profile");
+            var rightAtlas=Resources.Load<Texture2D>(
+                "Chapter1Ordan/Candidate-OrdanAttackRight");
+            var originalLeft=Resources.Load<Texture2D>("Chapter1Ordan/Left");
+            Assert.That(atlas,Is.Not.Null);
+            Assert.That(rightAtlas,Is.Not.Null);
+            Assert.That(profile,Is.Not.Null);
+            Assert.That(atlas,Is.Not.SameAs(rightAtlas));
+            Assert.That(atlas,Is.Not.SameAs(originalLeft));
+            Assert.That(atlas.width,Is.EqualTo(768));
+            Assert.That(atlas.height,Is.EqualTo(512));
+            Assert.That(atlas.filterMode,Is.EqualTo(FilterMode.Point));
+            Assert.That(atlas.mipmapCount,Is.EqualTo(1));
+            Assert.That(profile.text,Does.Contain(
+                "ch1-ordan-left-rig-from-owned-left-static-v1"));
+            Assert.That(profile.text,Does.Contain(
+                "provisional-cutout-rig-not-final-hand-authored"));
+            Assert.That(profile.text,Does.Contain(
+                "rightFramesMirrored"));
+            for(var row=0;row<4;++row)
+            for(var key=0;key<6;++key)
+            {
+                var sprite=Chapter1OrdanArt.LeftPhaseSprite(row,key);
+                Assert.That(sprite,Is.Not.Null,"row="+row+" key="+key);
+                Assert.That(sprite.texture,Is.SameAs(atlas));
+                Assert.That(sprite.rect.width,Is.EqualTo(128));
+                Assert.That(sprite.rect.height,Is.EqualTo(128));
+                Assert.That(sprite.pixelsPerUnit,Is.EqualTo(47.4f).Within(.01f));
+                Assert.That(sprite.pivot.x,Is.EqualTo(128*.446502f).Within(.01f));
+                Assert.That(sprite.rect.x,Is.EqualTo(key*128));
+                Assert.That(sprite.rect.y,Is.EqualTo((3-row)*128));
+            }
+            Assert.That(Chapter1OrdanArt.LeftPhaseSprite(-1,0),Is.Null);
+            Assert.That(Chapter1OrdanArt.LeftPhaseSprite(4,0),Is.Null);
+            Assert.That(Chapter1OrdanArt.LeftPhaseSprite(0,6),Is.Null);
+            Assert.That(originalLeft.width,Is.EqualTo(1215));
+            Assert.That(originalLeft.height,Is.EqualTo(1295));
+        }
     }
 }

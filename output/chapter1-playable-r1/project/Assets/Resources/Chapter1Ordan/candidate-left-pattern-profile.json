@@ -1,0 +1,26 @@
+﻿{
+    "schema":  "ch1-ordan-left-rig-from-owned-left-static-v1",
+    "status":  "provisional-cutout-rig-not-final-hand-authored",
+    "resource":  "Chapter1Ordan/Candidate-OrdanAttackLeft",
+    "sha256":  "1f1410522eebc50f09aea0aec2947fd568859a800248547fdfc251c880472b51",
+    "sourceSha256":  "6167d7bf5f2ed4089ec188f976f510aa9c0fe37900efd79edf549da6140b053d",
+    "rows":  [
+                 "guard-step",
+                 "debt-line",
+                 "seizure-weight",
+                 "balance-audit"
+             ],
+    "columns":  6,
+    "rowsCount":  4,
+    "cell":  [
+                 128,
+                 128
+             ],
+    "leftOnly":  true,
+    "rightSourceUsed":  false,
+    "rightFramesMirrored":  false,
+    "originalLeftMasterUnmodified":  true,
+    "manualArtAccepted":  false,
+    "independentQA":  false,
+    "attackSimulationChanged":  false
+}
