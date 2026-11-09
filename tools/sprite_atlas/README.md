@@ -135,3 +135,18 @@ are unbound research poses. Assets/Resources/Chapter1Doeon/Candidate-left-combat
 is optional visual-only Unity resource. It does not grant mechanics authority,
 damage, original sprite approval, new skills or hand-drawn animation rights.
 The original individually authored Left.png remains the fallback if needed.
+## Package A conservative 1px left combat cleanup
+
+Use only on a known, source-hash-provenanced left combat **candidate** atlas.
+The original independently authored Left.png and prior candidate build remain
+unchanged. Requires NumPy, Pillow, OpenCV.
+
+    python tools/sprite_atlas/repair_ch1_doeon_left_combat_pixels.py --input "PATH_TO_384x256_LEFT_COMBAT_CANDIDATE" --output output/CH1-left-seam-cleanup
+    python -m unittest discover -s tools/sprite_atlas/test -p test_ch1_doeon_left_combat_pixel_repair.py -v
+
+Repairs only detached 1px components and fully enclosed single pixels in
+torso/hip seam area on the first two (bound) animation rows. Unbound research
+rows, opaque RGB values, atlas frame layout and gameplay mechanics remain
+unaltered. A strict source SHA/output SHA and per-frame coordinate ledger
+is emitted in manifest.json. Treat the result as visual-review candidate,
+not independent acceptance of authored animation.

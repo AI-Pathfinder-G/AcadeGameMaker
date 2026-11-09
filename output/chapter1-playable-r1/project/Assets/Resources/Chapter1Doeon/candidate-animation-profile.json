@@ -41,6 +41,8 @@
     "noMirroredRightSprites":  true,
     "leftCombatCandidateResource":  "Chapter1Doeon/Candidate-left-combat",
     "leftCombatCandidateStatus":  "procedural-experiment-not-hand-drawn",
-    "leftCombatCandidateSha256":  "1f8cdb6629b1c4b0a65843afca468bec54bd75e6f64bbf04447da35918a0d9ae",
-    "leftCombatSourceSha256":  "e4c0b19b2031502b2c7a19c6bb6e98a0015674cac5f739f14616f87f703243a3"
+    "leftCombatCandidateSha256":  "733cb0127384b0f7b3311dbb9fa8a73d00de5094a05a88d6831c8be7b879be74",
+    "leftCombatSourceSha256":  "e4c0b19b2031502b2c7a19c6bb6e98a0015674cac5f739f14616f87f703243a3",
+    "leftCombatPixelCleanup":  "conservative-1px-seam-candidate-not-final-art",
+    "leftCombatPixelChanges":  20
 }

@@ -1,3 +1,20 @@
+## 2026-11-09 CH1 Doeon left combat pixel cleanup — CURRENT
+
+The user asked to continue Package A. Worktree:
+H:\GPT-workspace\AcadeGameMaker-integration-20261107
+Branch: fix/ch1-unity-resume-20261108. Original preserved source:
+H:\GPT-workspace\AcadeGameMaker (read-only).
+
+Added deterministic procedural pixel cleanup tool and synthetic tests.
+On candidate LEFT combat frames only (6 attack + 6 hit), removed 10 detached
+single-pixel artifacts and filled 10 enclosed 1px torso/hip seam gaps.
+Original graphic source and unbound research rows 2/3 remain unchanged.
+The refined atlas candidate was copied to Unity Resources/Chapter1Doeon
+and the profile SHA-256 refreshed. Right sprite, combat/physics/input/save
+and previous RC zip untouched. Pixel tests 4/4, reproduction 3/3 hashes,
+Unity focused tests 7/7 passed. This does not replace separately authored
+final left animation; manual visual and Codex independent QA remain pending.
+Windows build attempt-019 succeeded, and isolated Extraction branch1 autoplay completed (success=True, exit code 0). Receipts: output/ch1-package-A-20261109/build-left-seam-cleanup-result.json and left-seam-branch1-smoke-result.json. Full independent/manual visual QA is still pending.
 ## 2026-11-09 CH1 Doeon actual-fired combat presentation — ACTIVE
 
 Continued Package A on dev worktree. InputRouter now distinguishes completed
