@@ -65,5 +65,10 @@
                                       0,
                                       1,
                                       -1
-                                  ]
+                                  ],
+    "actionFeedbackResource":  "Chapter1Doeon/Candidate-action-feedback",
+    "actionFeedbackStatus":  "visual-only-swing-on-fired-recoil-on-actual-hp-loss",
+    "actionFeedbackAtlasSha256":  "8d671228380494ed7e3d4d6cb8029a8be28fd58144dd57138796f890a32eb5a4",
+    "actionFeedbackSourceSchema":  "chapter1-doeon-action-feedback-candidate-v1",
+    "actionFeedbackManualAccepted":  false
 }

@@ -179,3 +179,21 @@ art and right jump/dash/hit rows.
 The result has per-frame before/after anchors and SHA-256 ledger plus
 nearest-neighbor side-by-side review. Alignment is not new authored
 art and is not independent approval of all gait poses or planted feet.
+## Package A event-driven pixel-art action feedback
+
+The 4x6 transparent VFX atlas is original, generated PIXEL feedback,
+not new gameplay projectiles, hitboxes or authority. Use a facing-aware
+short gold swing on an actually completed FiredHit OR FiredMiss, and a
+distinct short red shoulder recoil only on confirmed player HP loss.
+Do not show damage sparks on FiredMiss or rejected/cooldown button presses.
+Both world SpriteRenderer and OnGUI use the same 64px / 18 PPU /
+pivot (0.5,0.1875), without mirroring original character costume art.
+The independently authored left master, existing action candidate and
+combat simulation remain unchanged.
+
+    python tools/sprite_atlas/build_ch1_doeon_action_feedback.py --output "NEW_REVIEW_DIR"
+    python -m unittest discover -s tools/sprite_atlas/test -p test_ch1_doeon_action_feedback.py -v
+
+Version: chapter1-doeon-action-feedback-candidate-v1. A manifest SHA,
+per-frame visible-pixel ledger and nearest-neighbor 4x preview are emitted.
+Manual appearance approval and Codex independent QA are still outstanding.

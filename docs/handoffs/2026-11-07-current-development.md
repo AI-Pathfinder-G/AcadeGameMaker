@@ -1,3 +1,23 @@
+## 2026-11-09 CH1 Doeon action feedback visual overlay — CURRENT
+
+Following local dev commit fb61f6c, user directed continuing the Package A
+visual art polish on active branch fix/ch1-unity-resume-20261108,
+H:\GPT-workspace\AcadeGameMaker-integration-20261107.
+A new visual-only pixel-art 4x6 RGBA sprite atlas contains left/right
+swing trails and actual-health-loss recoil sparks. Completed FiredHit AND
+FiredMiss produce a short four-tick directional SWING; only confirmed HP
+loss produces a five-tick damage spark. Both overlays share the Doeon
+64px/18PPU foot pivot. The effects are selected by Chapter1DoeonAnimation
+and drawn via world room SpriteRenderer plus OnGUI. No movement, attack
+hitboxes, combat timing, save or input ownership was modified.
+The source generator/tests, Unity PNG/meta, profile and render code were
+changed locally. Offline tests 4/4, Unity focused tests 11/11 and
+Windows attempt-026 build exit0 passed. Extraction and Solidarity actual
+automated Windows paths passed exit0. Actual Windows failure -> hub -> new run retry also passed exit0
+with real enemy damage. All three candidate traces are verified in
+output/ch1-package-A-20261109/doeon-action-feedback-three-path-audit.json. Original H:\GPT-workspace\AcadeGameMaker
+and old release RC assets are unchanged. Codex independent review and manual
+art acceptance remain pending; do not push to remote or merge main.
 ## 2026-11-09 CH1 Doeon right WALK/RUN root alignment — CURRENT
 
 Active dev branch fix/ch1-unity-resume-20261108 on

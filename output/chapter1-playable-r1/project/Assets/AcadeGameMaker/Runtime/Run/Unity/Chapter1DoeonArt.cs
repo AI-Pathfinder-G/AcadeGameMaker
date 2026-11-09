@@ -89,8 +89,20 @@ namespace AcadeGameMaker.Run.Unity
             try
             {
                 GUI.color = Chapter1DoeonAnimation.CurrentVisualTint;
-                GUI.DrawTextureWithTexCoords(new Rect(left, top, width, height),
+                var screenRect=new Rect(left,top,width,height);
+                GUI.DrawTextureWithTexCoords(screenRect,
                     sprite.texture, Chapter1DoeonAnimation.TextureUv(sprite), true);
+                var actionEffect=Chapter1DoeonAnimation.CurrentVisualEffect;
+                if(actionEffect != null && sprite.rect.width == 64 &&
+                    sprite.rect.height == 64)
+                {
+                    // Transparent impact feedback follows the same 64px
+                    // character pivot in OnGUI as in the world renderer.
+                    GUI.color = Color.white;
+                    GUI.DrawTextureWithTexCoords(screenRect,
+                        actionEffect.texture,
+                        Chapter1DoeonAnimation.TextureUv(actionEffect),true);
+                }
             }
             finally { GUI.color = old; }
             return true;

@@ -309,6 +309,76 @@ namespace AcadeGameMaker.Tests.PlayMode.RunUnity
                 "right visual art still needs final human acceptance");
             Assert.That(Chapter1DoeonAnimation.CandidateAvailable,Is.True);
         }
+        [Test] public void DirectionalSwingAndHurtCuesFollowOnlyCompletedEvidence()
+        {
+            var feedback=Resources.Load<Texture2D>(
+                "Chapter1Doeon/Candidate-action-feedback");
+            var profile=Resources.Load<TextAsset>(
+                "Chapter1Doeon/candidate-animation-profile");
+            Assert.That(feedback,Is.Not.Null);
+            Assert.That(feedback.width,Is.EqualTo(384));
+            Assert.That(feedback.height,Is.EqualTo(256));
+            Assert.That(feedback.filterMode,Is.EqualTo(FilterMode.Point));
+            Assert.That(feedback.mipmapCount,Is.EqualTo(1));
+            Assert.That(profile.text,Does.Contain(
+                "visual-only-swing-on-fired-recoil-on-actual-hp-loss"));
+            Assert.That(profile.text,Does.Contain(
+                "chapter1-doeon-action-feedback-candidate-v1"));
+            Assert.That(profile.text,Does.Contain(
+                "candidate-not-independent-accepted"));
+            // Attack FiredMiss gets a swing, never false red hit sparks.
+            // A real HP drop outranks any simultaneous fired swing.
+            for(var age=0;age<4;++age)
+            {
+                Assert.That(Chapter1DoeonAnimation.SelectActionEffectIndex(
+                    true,age,99),Is.EqualTo(age));
+                Assert.That(Chapter1DoeonAnimation.SelectActionEffectIndex(
+                    false,age,99),Is.EqualTo(12+age));
+            }
+            for(var age=0;age<5;++age)
+            {
+                Assert.That(Chapter1DoeonAnimation.SelectActionEffectIndex(
+                    true,0,age),Is.EqualTo(6+age));
+                Assert.That(Chapter1DoeonAnimation.SelectActionEffectIndex(
+                    false,0,age),Is.EqualTo(18+age));
+            }
+            foreach(var age in new[]{-10,4,5,11,30})
+            {
+                Assert.That(Chapter1DoeonAnimation.SelectActionEffectIndex(
+                    true,age,99),Is.EqualTo(-1));
+            }
+            Assert.That(Chapter1DoeonAnimation.SelectActionEffectIndex(
+                true,20,5),Is.EqualTo(-1));
+            Assert.That(Chapter1DoeonAnimation.SelectActionEffectIndex(
+                false,20,5),Is.EqualTo(-1));
+            for(var row=0;row<4;++row)
+            {
+                var index=row*6;
+                var sprite=Chapter1DoeonAnimation.FeedbackSpriteByIndex(index);
+                Assert.That(sprite,Is.Not.Null);
+                Assert.That(sprite.texture,Is.SameAs(feedback));
+                Assert.That(sprite.pixelsPerUnit,Is.EqualTo(18f));
+                Assert.That(sprite.pivot.x,Is.EqualTo(32f));
+                Assert.That(sprite.pivot.y,Is.EqualTo(12f));
+                var uv=Chapter1DoeonAnimation.TextureUv(sprite);
+                Assert.That(uv.x,Is.EqualTo(0f).Within(.0001f));
+                Assert.That(uv.y,Is.EqualTo((3-row)*.25f).Within(.0001f));
+                Assert.That(uv.width,Is.EqualTo(1f/6f).Within(.0001f));
+                Assert.That(uv.height,Is.EqualTo(.25f).Within(.0001f));
+            }
+            Assert.That(Chapter1DoeonAnimation.FeedbackSpriteByIndex(-1),Is.Null);
+            Assert.That(Chapter1DoeonAnimation.FeedbackSpriteByIndex(24),Is.Null);
+            var go=new GameObject("Player");
+            try
+            {
+                var collider=go.AddComponent<CapsuleCollider2D>();
+                Chapter1DoeonAnimation.ForPlayerPose(collider,true,null);
+                Assert.That(Chapter1DoeonAnimation.CurrentVisualEffect,Is.Null,
+                    "lost/unpublished evidence must hide previous action effects");
+            }
+            finally { Object.DestroyImmediate(go); }
+        }
+
         [Test] public void CandidateAtlasesAreExactAndPointSampled()
         {
             var movement=Resources.Load<Texture2D>("Chapter1Doeon/Candidate-movement");

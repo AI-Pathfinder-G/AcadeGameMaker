@@ -31,6 +31,7 @@ namespace AcadeGameMaker.Run.Unity
             public string schema,disposition,facing,movementResource,combatResource;
             public string leftMotionResource,leftMotionStatus;
             public string leftCombatCandidateResource,leftCombatCandidateStatus;
+            public string actionFeedbackResource,actionFeedbackStatus;
             public bool cannotMirrorLeft;
             public int rows,columns,cellSize,pixelsPerUnit;
         }
@@ -38,18 +39,23 @@ namespace AcadeGameMaker.Run.Unity
         private static Sprite[,] _combat;
         private static Sprite[,] _leftMovement;
         private static Sprite[,] _leftCombat;
+        private static Sprite[,] _actionFeedback;
         private static bool _loadAttempted;
         private static Collider2D _visualSource;
         private static int _lastTick = -1, _lastHealth = -1;
         private static int _attackStarted = -99999, _hitStarted = -99999;
         private static long _lastAttackOrdinal = -1;
         private static Color _currentTint = Color.white;
+        private static Sprite _currentEffect;
         // Presentation cadence derives from completed movement displacement,
         // never wall-clock frames or issued input. Neither gameplay speed nor
         // collision/attack outcomes are changed by these fields.
         private static int _lastGaitTick=-1, _lastGaitXQ4096;
         private static float _gaitPhase;
         internal static Color CurrentVisualTint => _currentTint;
+        // Same published event/tick and pivot as the player. Always null if
+        // neither an actual fired attack nor confirmed HP loss occurred.
+        internal static Sprite CurrentVisualEffect => _currentEffect;
 
         internal static bool CandidateAvailable
         {
@@ -135,6 +141,25 @@ namespace AcadeGameMaker.Run.Unity
             return Color.white;
         }
 
+        internal static Sprite FeedbackSpriteByIndex(int index)
+        {
+            EnsureLoaded();
+            return _actionFeedback != null && index>=0 && index<24
+                ? _actionFeedback[index/6,index%6] : null;
+        }
+
+        internal static int SelectActionEffectIndex(bool facingLeft,
+            int firedAttackAge, int actualHurtAge)
+        {
+            // Return row * 6 + column in a 4x6 VFX atlas. Actual HP loss
+            // outranks attack. No hit effect is inferred from FiredMiss.
+            if(actualHurtAge>=0 && actualHurtAge<5)
+                return (facingLeft?1:3)*6 + actualHurtAge;
+            if(firedAttackAge>=0 && firedAttackAge<4)
+                return (facingLeft?0:2)*6 + firedAttackAge;
+            return -1;
+        }
+
         internal static bool ShouldStartFiredAttackVisual(
             bool firedAttackThisTick, int tick, int previousStartTick)
         {
@@ -207,6 +232,9 @@ namespace AcadeGameMaker.Run.Unity
 
         internal static Sprite ForPlayerPose(Collider2D source, bool facingLeft, InputRouter router)
         {
+            // Reset before each visual source read; never reuse the previous
+            // actor's last hit/swing sprite when the publisher is unavailable.
+            _currentEffect = null;
             var fallback = Chapter1DoeonArt.ForPlayer(source, facingLeft);
             if (fallback == null)
             {
@@ -259,6 +287,9 @@ namespace AcadeGameMaker.Run.Unity
             var clip = SelectVisualClip(vxQ,vyQ,grounded,dashing,
                 tick-_attackStarted,tick-_hitStarted);
             var physicalGaitFrame=GaitFrame(_gaitPhase);
+            var effectIndex=SelectActionEffectIndex(facingLeft,
+                tick-_attackStarted,tick-_hitStarted);
+            _currentEffect=FeedbackSpriteByIndex(effectIndex);
             if (facingLeft)
             {
                 var age = clip == ClipHit ? tick-_hitStarted : tick-_attackStarted;
@@ -333,6 +364,15 @@ namespace AcadeGameMaker.Run.Unity
             if (!Compatible(movement) || !Compatible(combat)) return;
             _movement = Slice(movement);
             _combat = Slice(combat);
+            if(settings.actionFeedbackResource ==
+                    "Chapter1Doeon/Candidate-action-feedback" &&
+                settings.actionFeedbackStatus ==
+                    "visual-only-swing-on-fired-recoil-on-actual-hp-loss")
+            {
+                var feedback=Resources.Load<Texture2D>(
+                    settings.actionFeedbackResource);
+                if(Compatible(feedback)) _actionFeedback=Slice(feedback);
+            }
             // Optional provisional motion, never accepted or flipped as final
             // left combat art. A corrupt/missing atlas retains the true left
             // static source rather than showing mirrored right equipment.

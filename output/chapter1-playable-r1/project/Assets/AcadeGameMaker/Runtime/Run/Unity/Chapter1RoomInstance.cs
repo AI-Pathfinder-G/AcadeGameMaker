@@ -14,6 +14,7 @@ namespace AcadeGameMaker.Run.Unity
         [SerializeField] private string _basicMovementAcceptanceSha;
         private Collider2D[] _visualSources;
         private SpriteRenderer[] _markers;
+        private SpriteRenderer[] _feedbackMarkers;
         private bool[] _playerFacingLeft;
         private float[] _previousVisualX;
         private SpriteRenderer _crushMarker;
@@ -65,6 +66,7 @@ namespace AcadeGameMaker.Run.Unity
             _texture.SetPixels(new[]{Color.white,Color.white,Color.white,Color.white});_texture.Apply();
             _sprite=Sprite.Create(_texture,new Rect(0,0,2,2),new Vector2(.5f,.5f),2);
             _visualSources=GetComponentsInChildren<Collider2D>(true);_markers=new SpriteRenderer[_visualSources.Length];
+            _feedbackMarkers=new SpriteRenderer[_visualSources.Length];
             _playerFacingLeft=new bool[_markers.Length];_previousVisualX=new float[_markers.Length];
             for(var i=0;i<_markers.Length;i++)
             {
@@ -77,6 +79,16 @@ namespace AcadeGameMaker.Run.Unity
                 renderer.color=playerArt!=null || art!=null?Color.white:_visualSources[i].gameObject.layer==8?new Color(.25f,.28f,.32f):
                     _visualSources[i].gameObject.name.Contains("Player")?new Color(.85f,.9f,1f):new Color(.8f,.35f,.25f);
                 _markers[i]=renderer;
+                if(playerArt!=null)
+                {
+                    var effectView=new GameObject("DoeonActionFeedback"+i);
+                    effectView.transform.SetParent(marker.transform,false);
+                    var effectRenderer=effectView.AddComponent<SpriteRenderer>();
+                    effectRenderer.sortingOrder=renderer.sortingOrder+1;
+                    effectRenderer.color=Color.white;
+                    effectRenderer.enabled=false;
+                    _feedbackMarkers[i]=effectRenderer;
+                }
             }
             if(_roomId=="R05")
             {var marker=new GameObject("TemporaryLethalAreaView");marker.transform.SetParent(transform,false);_crushMarker=marker.AddComponent<SpriteRenderer>();_crushMarker.sprite=_sprite;
@@ -99,6 +111,12 @@ namespace AcadeGameMaker.Run.Unity
                         _previousVisualX[i]=bounds.center.x;
                         _markers[i].sprite=Chapter1DoeonAnimation.ForPlayerPose(source,_playerFacingLeft[i],visualRouter);
                         _markers[i].color=Chapter1DoeonAnimation.CurrentVisualTint;
+                        if(_feedbackMarkers[i]!=null)
+                        {
+                            var effect=Chapter1DoeonAnimation.CurrentVisualEffect;
+                            _feedbackMarkers[i].sprite=effect;
+                            _feedbackMarkers[i].enabled=effect!=null;
+                        }
                         _markers[i].transform.position=new Vector3(bounds.center.x,bounds.min.y,bounds.center.z);
                         _markers[i].transform.localScale=Vector3.one;
                     }
