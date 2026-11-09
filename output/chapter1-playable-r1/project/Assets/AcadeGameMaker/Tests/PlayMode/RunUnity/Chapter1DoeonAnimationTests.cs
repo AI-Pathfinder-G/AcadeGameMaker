@@ -18,6 +18,23 @@ namespace AcadeGameMaker.Tests.PlayMode.RunUnity
             Assert.That(Chapter1DoeonAnimation.SelectVisualClip(0,0,true,false,21,12),Is.EqualTo(1),"expired effects release");
         }
 
+        [Test] public void LeftFacingStillUsesIndependentlyAuthoredStaticMaster()
+        {
+            Assert.That(Resources.Load<Texture2D>("Chapter1Doeon/Candidate-left"),
+                Is.Null, "Rejected procedural left prototype must not enter the runtime");
+            Assert.That(Resources.Load<Texture2D>("Chapter1Doeon/Left"), Is.Not.Null);
+            var go=new GameObject("Player");
+            try
+            {
+                var source=go.AddComponent<CapsuleCollider2D>();
+                var authored=Chapter1DoeonArt.ForPlayer(source,true);
+                var selected=Chapter1DoeonAnimation.ForPlayerPose(source,true,null);
+                Assert.That(selected,Is.SameAs(authored));
+                Assert.That(selected.texture,Is.SameAs(
+                    Resources.Load<Texture2D>("Chapter1Doeon/Left")));
+            }
+            finally { Object.DestroyImmediate(go); }
+        }
         [Test] public void CandidateAtlasesAreExactAndPointSampled()
         {
             var movement=Resources.Load<Texture2D>("Chapter1Doeon/Candidate-movement");

@@ -84,3 +84,23 @@ Local evidence (excluded from the public source release):
 output/ch1-package-A-20261109/doeon-right-candidate/manifest.json
 output/ch1-package-A-20261109/unity-targeted-v2/results.xml
 output/ch1-package-A-20261109/visual-frame-{7,9,11}s.png
+
+## Package A follow-up: conservative edge polish and rejected left experiment
+
+Use after building candidate right atlases from the previously authored Doeon sources:
+
+    python tools/sprite_atlas/refine_ch1_doeon_edges.py --candidate-root output/ch1-package-A-20261109/doeon-right-candidate --output output/ch1-package-A-20261109/refined-new
+    python -m unittest discover -s tools/sprite_atlas/test -p test_ch1_doeon_edge_refinement.py -v
+
+refine_ch1_doeon_edges.py changes only high-chroma boundary RGB pixels
+having an existing nearby opaque non-magenta neighbor. Alpha, dimensions,
+positions, status and authorial combat authority never change. The 2026-11-09
+candidate replaced 104 movement and 80 combat fringe RGB values. It kept 14
+unresolvable candidate border pixels for manual art/VFX cleanup.
+
+prototype_doeon_left_poses.py is deliberately a REJECTED offline experiment:
+it derives motion warps only from individually authored static Left.png without
+ever mirroring the right costume. It does not output approved left animation.
+The visual result was considered too static for live use, and no prototype
+asset was bound to Unity. A separately authored left movement/combat sheet is
+still required before two-facing animation can be accepted.
