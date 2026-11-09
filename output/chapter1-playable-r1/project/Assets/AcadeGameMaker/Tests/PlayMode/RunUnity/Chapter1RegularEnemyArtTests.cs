@@ -67,7 +67,7 @@ namespace AcadeGameMaker.Tests.PlayMode.RunUnity
             Assert.That(profile.text,Does.Contain(
                 "build_ch1_regular_enemy_v3.py"));
             Assert.That(System.Text.RegularExpressions.Regex.IsMatch(
-                profile.text,"\"artIteration\"\\s*:\\s*3"),Is.True);
+                profile.text,"\"artIteration\"\\s*:\\s*4"),Is.True);
             Assert.That(System.Text.RegularExpressions.Regex.IsMatch(
                 profile.text,"\"v3UniqueArtKeys\"\\s*:\\s*32"),Is.True);
             Assert.That(System.Text.RegularExpressions.Regex.IsMatch(

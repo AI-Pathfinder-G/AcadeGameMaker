@@ -93,6 +93,27 @@ class Ch1MonsterV3Tests(unittest.TestCase):
             self.assertLess(float(jaccard),.75,
                             "Silhouette must change, not just repaint: row "+str(row))
 
+    def test_gait_v4_is_limited_to_stride_keys_and_mechanically_articulated(self):
+        # Compare against the preserved v3 raster. Do not silently shift idle,
+        # attack, hit, defeat or recovery artwork while refining locomotion.
+        root=Path(__file__).resolve().parents[3]
+        old=root/"output/ch1-package-A-20261109/regular-enemy-v3-redesign-final/Candidate-CH1-RegularEnemies-v3.png"
+        if not old.exists():
+            self.skipTest("Preserved local V3 baseline not present")
+        with Image.open(old) as source:
+            baseline=np.asarray(source.convert("RGBA"))
+        for row in range(4):
+            for key in range(8):
+                before=baseline[row*64:(row+1)*64,key*64:(key+1)*64]
+                after=np.asarray(artist.render(row,key))
+                changed=int(np.count_nonzero(np.any(before!=after,axis=2)))
+                if key in (1,2):
+                    self.assertGreater(changed,35,
+                        f"Stride requires tangible mechanic displacement {row},{key}")
+                else:
+                    self.assertEqual(changed,0,
+                        f"Non-locomotion state must remain pixel-identical {row},{key}")
+
     def test_artifact_is_reproducible_and_has_native_1x_review(self):
         with tempfile.TemporaryDirectory() as temp:
             dest=Path(temp)/"regular-enemies-v3"

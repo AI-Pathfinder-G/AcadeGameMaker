@@ -80,8 +80,11 @@ def walker(side:int,key:int)->Image.Image:
     damaged=(key==5)
     dead=(key==6)
     recover=(key==7)
-    gait=(-3 if key==1 else 3 if key==2 else 0)
-    body=(-3 if charge else 2 if strike else -2 if damaged else 0)
+    gait=(-4 if key==1 else 4 if key==2 else 0)
+    # Counterweight lags each hoof strike. These are drawn key poses, not
+    # position/physics changes, and preserve the same shared foot pivot.
+    stride_body=(-1 if key==1 else 1 if key==2 else 0)
+    body=(-3 if charge else 2 if strike else -2 if damaged else stride_body)
     # Distinct dead posture: pressure vessel and ram fall over as a machine.
     if dead:
         p.poly([(-19,44),(-4,39),(13,39),(22,45),(20,50),(-19,50)],I)
@@ -106,6 +109,13 @@ def walker(side:int,key:int)->Image.Image:
         p.poly([(pos-8+s,47),(pos+5+s,47),
                 (pos+8+s,50),(pos+6+s,51),(pos-8+s,51)],BLACK)
         p.box(pos-6+s,49,pos+4+s,50,STEEL)
+    # Leg pistons compress on opposite phases while grounded shoes retain
+    # the original 51px floor. The brass pivot gives actual stepping cues.
+    if key in (1,2):
+        p.line([(-10,36),(-9+gait,41)],BRASS,2)
+        p.line([(9,36),(10-gait,41)],BRASS,2)
+        p.dot(-9+gait,41,WARNING if key==1 else STEEL)
+        p.dot(10-gait,41,WARNING if key==2 else STEEL)
     # Non-human silhouette: behind the boiler hang two unequal pressure
     # cylinders. High vent stacks make the character legible at 1x.
     p.poly([(-18,15),(-11,11),(-7,17),(-7,34),(-19,33)],I)
@@ -141,6 +151,10 @@ def walker(side:int,key:int)->Image.Image:
     p.line([(-16,22),(-14,16),(-9,14),(-4+body,20)],BLACK,3)
     p.line([(-16,22),(-14,16),(-9,14),(-4+body,20)],BRASS,1)
     p.line([(-18,30),(-13,38),(-7+body,34)],STEEL,2)
+    if key in (1,2):
+        # The vent and boiler recoil asymmetrically with each compression.
+        p.line([(-16,7),(-16,5 if key==1 else 9)],BRASS,1)
+        p.dot(-17 if key==1 else -14,11,WARNING)
     # Micro cage head/ram crest, deliberately dominated by the pressure arm.
     p.poly([(5+body,12),(11+body,10),(16+body,14),
             (15+body,21),(8+body,22),(4+body,18)],I)
@@ -206,8 +220,8 @@ def surveyor(side:int,key:int)->Image.Image:
     hurt=key==5
     dead=key==6
     recover=key==7
-    gait=(-3 if key==1 else 3 if key==2 else 0)
-    sway=(1 if key==1 else -1 if key==2 else -2 if hurt else 0)
+    gait=(-4 if key==1 else 4 if key==2 else 0)
+    sway=(2 if key==1 else -2 if key==2 else -2 if hurt else 0)
     if dead:
         # Collapsed measuring mast, fallen triangle-frame and inert lens.
         p.poly([(-17,43),(-10,38),(2,41),(17,47),
@@ -232,6 +246,11 @@ def surveyor(side:int,key:int)->Image.Image:
     p.line([(-7,39),(-14,47)],STEEL,2)
     p.box(-19,49,-12,51,BLACK)
     p.dot(-16,49,CYAN)
+    if key in (1,2):
+        # Survey tripod compensation alternates independently of its optic.
+        # A deliberately small heel flash keeps the phase readable at 1x.
+        p.line([(-15,44),(-18 if key==1 else -12,47)],CHALK,1)
+        p.dot(-18 if key==1 else -12,47,PALE)
     # Thin diagnostic mast and exoskeletal reticule support.
     p.poly([(-7+sway,27),(-3+sway,22),(6+sway,25),
             (9+sway,38),(-10+sway,40)],I)
@@ -268,6 +287,11 @@ def surveyor(side:int,key:int)->Image.Image:
               PALE if charge or fire else CYAN if not hurt else COLD)
     p.line([(10+sway,17),(15+sway,20)],CHALK,1)
     p.dot(14+sway,16,PALE if charge or fire else INDIGO)
+    if key in (1,2):
+        # The scanning reticle counter-rotates during measured locomotion.
+        # No synthetic projectile or target-damage cue is introduced.
+        p.line([(-6,7),(-4 if key==1 else -8,9)],CYAN,1)
+        p.dot(-4 if key==1 else -8,9,PALE)
     # Angular triangulation projector with a split nose, not a rifle.
     arm_y=30 if fire else 33 if charge else 36 if hurt else 34
     nose=18 if charge else 18 if fire else 17 if recover else 20

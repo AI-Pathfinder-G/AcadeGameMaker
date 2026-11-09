@@ -1,8 +1,8 @@
-{
+﻿{
     "schema":  "ch1-regular-enemies-visual-candidate-profile-v1",
     "resource":  "Chapter1Enemies/Candidate-RegularEnemies",
     "state":  "provisional-visual-only-not-final-approved",
-    "atlasSha256":  "ceb05ecd519591f4b1781bfd435865b39d08e4bb14dfaf7101a07f6aecab766f",
+    "atlasSha256":  "bc36c88c4e6f02eddd60d37e4fd8da07f7092532076b808ddf971bf4f20dd796",
     "rows":  [
                  "walker-right",
                  "walker-left",
@@ -34,10 +34,11 @@
     "independentQA":  false,
     "manualArtAccepted":  false,
     "replacedPrototypeSha256":  "4cee6cd17c119df8e09dacd13298aae3b9552729609bbd39ba249ef8f67a86c4",
-    "artIteration":  3,
+    "artIteration":  4,
     "redesignSchema":  "ch1-walker-surveyor-silhouette-redesign-v3",
     "previousV2Sha256":  "3d1647ee5d43bfc6c124fb8c262ea6ec5579715552face4cb5a838242aa51bb9",
     "walkerSignature":  "oversized pressure piston boiler core unequal tanks shock hooves",
     "surveyorSignature":  "monocular prism expandable triangular halo tripod survey legs",
-    "v3UniqueArtKeys":  32
+    "v3UniqueArtKeys":  32,
+    "gaitPolish":  "mechanical hoof counterweight and triangulation tripod phase-specific v4"
 }
