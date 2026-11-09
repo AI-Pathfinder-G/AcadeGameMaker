@@ -271,3 +271,20 @@ authority** is transferred into visual code. The V2/V3 comparisons
 and 3-path automated Windows receipts are under
 output/ch1-package-B-v3-20261109. Independent artist approval and
 Codex QA remain outstanding.
+## V3 original monster attack feedback overlays
+
+Author new independent direction-specific pixel effects via
+
+    python tools/sprite_atlas/build_ch1_regular_enemy_v3_effects.py --output "NEW_OUTPUT_DIR"
+    python -m unittest discover -s tools/sprite_atlas/test -p test_ch1_regular_enemy_v3_effects.py -v
+
+4x8 64px transparent RGBA atlas, 18 PPU, pivot (.5,.1875).
+Walker effects only on published warning/execute/recover.
+Surveyor only on published fire-warning/fire/suppression/cooldown.
+Blank idle/walk/dead and blank Walker hurt, since no separate Walker
+actual damage event has been published to this presentation layer.
+Never infer an actual hit from a fired shot or VFX collision.
+The visual-only runtime uses the existing completed CarriedBehaviorView;
+no new attack, AI, collision, input or saving authority is permitted.
+Actual game evaluation and full art acceptance remain separate gates.
+See docs/art/2026-11-09-walker-surveyor-v3-attack-feedback.md.

@@ -1,0 +1,45 @@
+{
+    "schema":  "ch1-regular-enemy-v3-published-phase-vfx-v1",
+    "resource":  "Chapter1Enemies/Candidate-RegularEnemyVfx",
+    "state":  "visual-only-candidate-not-artist-approved",
+    "atlasSha256":  "6aea54a07a9ba201af2e06ee1a8b2e6d8c6ab9de0ec12e4e88e4f417eaf7737a",
+    "rows":  4,
+    "columns":  8,
+    "pixelCell":  [
+                      64,
+                      64
+                  ],
+    "pixelsPerUnit":  18,
+    "normalizedPivot":  [
+                            0.5,
+                            0.1875
+                        ],
+    "allowedKeysByRow":  {
+                             "0":  [
+                                       3,
+                                       4,
+                                       7
+                                   ],
+                             "1":  [
+                                       3,
+                                       4,
+                                       7
+                                   ],
+                             "2":  [
+                                       3,
+                                       4,
+                                       5,
+                                       7
+                                   ],
+                             "3":  [
+                                       3,
+                                       4,
+                                       5,
+                                       7
+                                   ]
+                         },
+    "noCombatOrPhysicsChanges":  true,
+    "manualArtAccepted":  false,
+    "CodexIndependentQA":  false,
+    "sourceGenerator":  "tools/sprite_atlas/build_ch1_regular_enemy_v3_effects.py"
+}

@@ -1,3 +1,30 @@
+## 2026-11-09 CH1 V3 Walker/Surveyor phase-driven pressure/prism FX — CURRENT
+
+User requested next implementation after Walker/Surveyor V3 original art.
+Active development branch fix/ch1-unity-resume-20261108, workspace
+H:\GPT-workspace\AcadeGameMaker-integration-20261107, prior head 2ff73bb.
+New original 4x8x64px transparent RGBA effect generator:
+tools/sprite_atlas/build_ch1_regular_enemy_v3_effects.py
+and tests test_ch1_regular_enemy_v3_effects.py. 14 active frames
+for published Walker DashTelegraph/DashActive/Recovery and Surveyor
+FireTelegraph/Fire/Suppressed/Cooldown (R/L); all 18 idle/move/death/
+unpublished Walker hurt frames blank. All original V3 sprites untouched.
+Unity imported Candidate-RegularEnemyVfx.png and separate profile in
+Assets/Resources/Chapter1Enemies. New Run.Unity visual-only
+Chapter1RegularEnemyVfx.cs consumes completed CarriedBehaviorView, NO
+simulation write, new hitbox, player damage, game saves or input.
+Chapter1RoomInstance uses child VFX SpriteRenderer at original
+foot pivot and corrects normal enemy drawMode=Tiled to Simple.
+Art generator tests 4/4, Unity FX tests 3/3, existing enemy 5/5 and
+Doeon 13/13 passed. Windows candidate attempt-037 build exit 0.
+Actual isolated Windows attempt-037 game paths Extraction, Solidarity,
+real damage -> failure -> hub -> retry all succeeded exit0 and cleanup.
+70 native R01 screenshot frames show pressure and prism action cues.
+Full source and route SHA proof: output/ch1-package-B-v3-20261109/
+v3-action-vfx-full-provenance-audit.json. This is not final art QA.
+Design and remaining issues documented at
+docs/art/2026-11-09-walker-surveyor-v3-attack-feedback.md.
+No main merge, remote push, release or Codex QA. Manual art not approved.
 ## 2026-11-09 CH1 Walker and Surveyor V3 redesign — CURRENT
 
 Active worktree H:\GPT-workspace\AcadeGameMaker-integration-20261107

@@ -85,14 +85,15 @@ namespace AcadeGameMaker.Run.Unity
                 marker.transform.SetParent(transform,false);
                 var renderer=marker.AddComponent<SpriteRenderer>();
                 renderer.sprite=art!=null?art:_sprite;
-                if(art!=null && playerArt==null){renderer.drawMode=SpriteDrawMode.Tiled;renderer.tileMode=SpriteTileMode.Continuous;renderer.sortingOrder=-1;}
+                if(art!=null && playerArt==null && enemyArt==null){renderer.drawMode=SpriteDrawMode.Tiled;renderer.tileMode=SpriteTileMode.Continuous;renderer.sortingOrder=-1;}
                 renderer.color=playerArt!=null || enemyArt!=null ||
                     art!=null?Color.white:_visualSources[i].gameObject.layer==8?new Color(.25f,.28f,.32f):
                     _visualSources[i].gameObject.name.Contains("Player")?new Color(.85f,.9f,1f):new Color(.8f,.35f,.25f);
                 _markers[i]=renderer;
-                if(playerArt!=null)
+                if(playerArt!=null || enemyArt!=null)
                 {
-                    var effectView=new GameObject("DoeonActionFeedback"+i);
+                    var effectView=new GameObject((playerArt!=null?
+                        "DoeonActionFeedback":"RegularEnemyActionFeedback")+i);
                     effectView.transform.SetParent(marker.transform,false);
                     var effectRenderer=effectView.AddComponent<SpriteRenderer>();
                     effectRenderer.sortingOrder=renderer.sortingOrder+1;
@@ -141,6 +142,13 @@ namespace AcadeGameMaker.Run.Unity
                         var keyed=Chapter1RegularEnemyArt.ForEnemy(source,enemyEvidence);
                         _markers[i].sprite=keyed;
                         _markers[i].color=Color.white;
+                        if(_feedbackMarkers[i]!=null)
+                        {
+                            var cue=Chapter1RegularEnemyVfx.ForEnemy(
+                                source,enemyEvidence);
+                            _feedbackMarkers[i].sprite=cue;
+                            _feedbackMarkers[i].enabled=cue!=null;
+                        }
                         // Sprite is 64px at 18 PPU and pivot y=.1875;
                         // foot is aligned with collider bottom but no
                         // gameplay collider is modified.
