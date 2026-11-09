@@ -19,6 +19,11 @@ namespace AcadeGameMaker.Run.Unity
         private const int ClipDash = 5;
         private const int ClipAttack = 6;
         private const int ClipHit = 7;
+        // Combat hits are resolved in the same completed simulation tick as
+        // the fired press. The first rendered key pose therefore depicts the
+        // strike / recoil, never an invented delayed wind-up.
+        private const int AttackVisualTicks = 12;
+        private const int HitVisualTicks = 12;
 
         [Serializable]
         private sealed class CandidateProfile
@@ -38,6 +43,8 @@ namespace AcadeGameMaker.Run.Unity
         private static int _lastTick = -1, _lastHealth = -1;
         private static int _attackStarted = -99999, _hitStarted = -99999;
         private static long _lastAttackOrdinal = -1;
+        private static Color _currentTint = Color.white;
+        internal static Color CurrentVisualTint => _currentTint;
 
         internal static bool CandidateAvailable
         {
@@ -95,27 +102,68 @@ namespace AcadeGameMaker.Run.Unity
         internal static Sprite LeftCombatFrame(int clip, int actionAge)
         {
             EnsureLoaded();
-            if (_leftCombat == null || actionAge < 0) return null;
-            int row,frame;
-            if (clip == ClipAttack && actionAge < 21)
+            if (_leftCombat == null) return null;
+            int row, frame;
+            if (clip == ClipAttack)
             {
-                row = 0;
-                frame = Mathf.Min(5,actionAge*6/21);
+                row=0;
+                frame=SelectAttackFrame(actionAge);
             }
-            else if (clip == ClipHit && actionAge < 12)
+            else if (clip == ClipHit)
             {
-                row = 1;
-                frame = Mathf.Min(5,actionAge*6/12);
+                row=1;
+                frame=SelectHitFrame(actionAge);
             }
-            else
-                return null;
-            return _leftCombat[row,frame];
+            else return null;
+            return frame < 0 ? null : _leftCombat[row,frame];
         }
+        // Warm strike/readable recoil at exact completed gameplay events.
+        // This is a renderer color only; it cannot affect combat, collision,
+        // timing, save, or input. Hit always wins over attack.
+        internal static Color VisualTintForAges(int attackAge, int hitAge)
+        {
+            if (hitAge >= 0 && hitAge < 5)
+                return new Color(1f,.63f,.60f,1f);
+            if (attackAge >= 0 && attackAge < 4)
+                return new Color(1f,.97f,.70f,1f);
+            return Color.white;
+        }
+
+        internal static bool ShouldStartFiredAttackVisual(
+            bool firedAttackThisTick, int tick, int previousStartTick)
+        {
+            return firedAttackThisTick && tick >= 0 && tick != previousStartTick;
+        }
+
+        internal static int SelectAttackFrame(int age)
+        {
+            if (age < 0 || age >= AttackVisualTicks) return -1;
+            if (age < 2) return 3; // strike on the actual fired tick
+            if (age < 5) return 4; // authored follow-through
+            if (age < 9) return 5; // recover
+            return 0; // settle into source stance
+        }
+
+        internal static int SelectHitFrame(int age)
+        {
+            if (age < 0 || age >= HitVisualTicks) return -1;
+            if (age < 2) return 3; // immediate damage recoil
+            if (age < 5) return 4;
+            if (age < 9) return 5;
+            return 0;
+        }
+
+        internal static int SelectRightHitFrame(int age)
+        {
+            if (age < 0 || age >= HitVisualTicks) return -1;
+            return age < 6 ? 4 : 5;
+        }
+
         internal static int SelectVisualClip(int vxQ4096, int vyQ4096,
             bool grounded, bool dashing, int attackAge, int hitAge)
         {
-            if (hitAge >= 0 && hitAge < 12) return ClipHit;
-            if (attackAge >= 0 && attackAge < 21) return ClipAttack;
+            if (hitAge >= 0 && hitAge < HitVisualTicks) return ClipHit;
+            if (attackAge >= 0 && attackAge < AttackVisualTicks) return ClipAttack;
             if (dashing) return ClipDash;
             if (!grounded || (vyQ4096 > 1024 || vyQ4096 < -1024))
                 return ClipJump;
@@ -127,13 +175,20 @@ namespace AcadeGameMaker.Run.Unity
         internal static Sprite ForPlayerPose(Collider2D source, bool facingLeft, InputRouter router)
         {
             var fallback = Chapter1DoeonArt.ForPlayer(source, facingLeft);
-            if (fallback == null) return null;
+            if (fallback == null)
+            {
+                _currentTint = Color.white;
+                return null;
+            }
             if (router == null ||
                 !router.TryGetDoeonAnimationEvidence(source,
                     out var tick, out var vxQ, out var vyQ,
                     out var grounded, out var dashing, out var health,
-                    out var attackOrdinal))
+                    out var attackOrdinal, out var firedAttackThisTick))
+            {
+                _currentTint = Color.white;
                 return fallback;
+            }
 
             if (!ReferenceEquals(_visualSource, source) || tick < _lastTick ||
                 attackOrdinal < _lastAttackOrdinal)
@@ -144,12 +199,17 @@ namespace AcadeGameMaker.Run.Unity
                 _attackStarted = _hitStarted = -99999;
             }
             if (_lastHealth >= 0 && health < _lastHealth) _hitStarted = tick;
-            if (_lastAttackOrdinal >= 0 && attackOrdinal > _lastAttackOrdinal)
+            // Do not animate cooldown / invalid-aim presses. Attack visuals
+            // are triggered by immutable completed Combat FiredHit/FiredMiss,
+            // not by the router's issued input sequence counter.
+            if (ShouldStartFiredAttackVisual(firedAttackThisTick,tick,_attackStarted))
                 _attackStarted = tick;
             _lastTick = tick;
             _lastHealth = health;
             _lastAttackOrdinal = attackOrdinal;
 
+            _currentTint = VisualTintForAges(tick-_attackStarted,
+                tick-_hitStarted);
             var clip = SelectVisualClip(vxQ,vyQ,grounded,dashing,
                 tick-_attackStarted,tick-_hitStarted);
             if (facingLeft)
@@ -167,12 +227,18 @@ namespace AcadeGameMaker.Run.Unity
             {
                 case ClipHit:
                     row = 3;
-                    frame = (tick-_hitStarted) < 6 ? 4 : 5;
+                    // The authored right movement hit source uses frame4
+                    // for contact and frame5 for release. The left source
+                    // has an independent row1 (SelectHitFrame), so do not
+                    // apply left joint-pose indices to right sprite art.
+                    frame = SelectRightHitFrame(tick-_hitStarted);
+                    if (frame < 0) return fallback;
                     break;
                 case ClipAttack:
                     sheet = _combat;
                     row = 0;
-                    frame = Mathf.Min(5,(tick-_attackStarted)*6/21);
+                    frame = SelectAttackFrame(tick-_attackStarted);
+                    if (frame < 0) return fallback;
                     break;
                 case ClipDash:
                     row=3;

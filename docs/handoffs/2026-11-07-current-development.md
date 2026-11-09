@@ -1,3 +1,18 @@
+## 2026-11-09 CH1 Doeon actual-fired combat presentation — ACTIVE
+
+Continued Package A on dev worktree. InputRouter now distinguishes completed
+Combat BasicAttackAttempt.Fired (FiredHit/FiredMiss) from merely issued presses
+which may be rejected for cooldown/aim. Animations start on the completed fire
+tick, while health-drop reactions use completed health publication. Both actual
+left and right candidate sprite rows remain 64x64; right hit sequence reverted
+to the authored 4/5 frames; all attack/hurt display stages settle within 12
+ticks. SpriteRenderer and GUI gain short, renderer-only attack/hurt color flash.
+No attack damage/collider/timing is changed. Unity focused PlayMode tests 7/7
+passed, Windows candidate attempt-017 built exit0, and actual Windows branch1
+Extraction ended success=true exit0. Data at output/ch1-package-A-20261109.
+Actual Windows Solidarity branch2 succeeded (exit0, success=True). The same build also completed failure -> hub/save -> retry with success=True, exit0. Corresponding branch2 and failure-retry receipts are under output/ch1-package-A-20261109. All are bounded automated game-path evidence, not independent QA or final visual acceptance.
+Manual visual QA and Codex independent review still deferred; no main merge.
+The preserved original H:\GPT-workspace\AcadeGameMaker was not modified.
 ## 2026-11-09 Package A left combat — local provisional implementation
 
 Still on fix/ch1-unity-resume-20261108. User instructed continuing art

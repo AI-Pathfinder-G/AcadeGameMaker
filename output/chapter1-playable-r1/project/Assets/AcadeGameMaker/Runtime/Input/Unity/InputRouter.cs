@@ -270,10 +270,11 @@ namespace AcadeGameMaker.Input.Unity
         internal bool TryGetDoeonAnimationEvidence(
             Collider2D exactPlayer, out int tick, out int velocityXQ4096,
             out int velocityYQ4096, out bool grounded, out bool dashing,
-            out int health, out long committedAttackOrdinal)
+            out int health, out long committedAttackOrdinal,
+            out bool firedAttackThisTick)
         {
             tick=velocityXQ4096=velocityYQ4096=health=0;
-            grounded=dashing=false;committedAttackOrdinal=-1;
+            grounded=dashing=firedAttackThisTick=false;committedAttackOrdinal=-1;
             if(exactPlayer==null || _player==null || IsFaulted ||
                !ReferenceEquals(_player.GetComponent<Collider2D>(),exactPlayer) ||
                !TryGetChapter1CompletedEvidence(out var completed))
@@ -287,6 +288,23 @@ namespace AcadeGameMaker.Input.Unity
             dashing=motion.ActionState==MovementActionState.Dashing;
             health=completed.Health;
             committedAttackOrdinal=_nextAttackSequenceId;
+            // The input sequence count includes cooldown and invalid-aim
+            // presses. Only an actual completed FiredHit or FiredMiss may
+            // start the presentation attack; damage authority remains Combat.
+            if(_chapterRegular && _chapterCombat!=null &&
+                _chapterCombat.HasLatestOutcomeForEncounterHandoff)
+            {
+                var actual=_chapterCombat.LatestOutcomeForEncounterHandoff;
+                if(actual.Tick==completed.Tick && actual.Attack.Attempt.HasValue)
+                    firedAttackThisTick=actual.Attack.Attempt.Value.Fired;
+            }
+            else if(!_chapterRegular && _chapterBarrier==null &&
+                !_combatRetired && _combat!=null && _combat.HasLatestOutcome)
+            {
+                var actual=_combat.LatestOutcome;
+                if(actual.Tick==completed.Tick && actual.Attack.Attempt.HasValue)
+                    firedAttackThisTick=actual.Attack.Attempt.Value.Fired;
+            }
             return true;
         }
         private void InitializeChapter1Regular()

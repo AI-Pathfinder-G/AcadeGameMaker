@@ -98,6 +98,7 @@ namespace AcadeGameMaker.Run.Unity
                         _playerFacingLeft[i]=Chapter1DoeonArt.FacingLeft(_previousVisualX[i],bounds.center.x,_playerFacingLeft[i]);
                         _previousVisualX[i]=bounds.center.x;
                         _markers[i].sprite=Chapter1DoeonAnimation.ForPlayerPose(source,_playerFacingLeft[i],visualRouter);
+                        _markers[i].color=Chapter1DoeonAnimation.CurrentVisualTint;
                         _markers[i].transform.position=new Vector3(bounds.center.x,bounds.min.y,bounds.center.z);
                         _markers[i].transform.localScale=Vector3.one;
                     }

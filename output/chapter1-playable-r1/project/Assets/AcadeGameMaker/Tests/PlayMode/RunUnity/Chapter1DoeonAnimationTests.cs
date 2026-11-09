@@ -94,7 +94,7 @@ namespace AcadeGameMaker.Tests.PlayMode.RunUnity
                 profile.text, "\"leftCombatAvailable\"\\s*:\\s*false"),Is.True,
                 "final left combat art is not authored or accepted");
             Assert.That(Chapter1DoeonAnimation.LeftCombatCandidateAvailable,Is.True);
-            foreach(var age in new[]{0,3,8,15,20})
+            foreach(var age in new[]{0,1,4,8,11})
             {
                 var pose=Chapter1DoeonAnimation.LeftCombatFrame(6,age);
                 Assert.That(pose,Is.Not.Null,"attack age="+age);
@@ -117,6 +117,7 @@ namespace AcadeGameMaker.Tests.PlayMode.RunUnity
                 Assert.That(Chapter1DoeonAnimation.LeftCombatFrame(clip,2),Is.Null);
             Assert.That(Chapter1DoeonAnimation.LeftCombatFrame(6,-1),Is.Null);
             Assert.That(Chapter1DoeonAnimation.LeftCombatFrame(7,-1),Is.Null);
+            Assert.That(Chapter1DoeonAnimation.LeftCombatFrame(6,12),Is.Null);
             Assert.That(Chapter1DoeonAnimation.LeftCombatFrame(6,21),Is.Null);
             Assert.That(Chapter1DoeonAnimation.LeftCombatFrame(7,12),Is.Null);
             Assert.That(Chapter1DoeonAnimation.LeftMotionFrame(6,3,0),Is.Null,
@@ -125,6 +126,67 @@ namespace AcadeGameMaker.Tests.PlayMode.RunUnity
             Assert.That(Resources.Load<Texture2D>("Chapter1Doeon/Left"),Is.Not.Null,
                 "the independently authored static fallback must remain");
         }
+        [Test] public void AttackAndHitVisualsUseCompletedImpactTick()
+        {
+            // A queued press can be rejected for cooldown or invalid aim.
+            // Only the completed Combat FiredHit/FiredMiss receipt animates.
+            Assert.That(Chapter1DoeonAnimation.ShouldStartFiredAttackVisual(
+                false,100,99),Is.False,"issued but rejected attack");
+            Assert.That(Chapter1DoeonAnimation.ShouldStartFiredAttackVisual(
+                true,100,99),Is.True,"accepted fired attack");
+            Assert.That(Chapter1DoeonAnimation.ShouldStartFiredAttackVisual(
+                true,100,100),Is.False,"duplicate renderer sample same tick");
+            Assert.That(Chapter1DoeonAnimation.ShouldStartFiredAttackVisual(
+                true,-1,99),Is.False,"invalid incomplete tick");
+
+            // The simulation commits hit/miss immediately, not 4-8 ticks
+            // after a new visual wind-up. Key pose 3 is strike/recoil at tick0.
+            var strike=new[]{3,3,4,4,4,5,5,5,5,0,0,0};
+            var hurt=new[]{3,3,4,4,4,5,5,5,5,0,0,0};
+            for(var age=0;age<12;++age)
+            {
+                Assert.That(Chapter1DoeonAnimation.SelectAttackFrame(age),
+                    Is.EqualTo(strike[age]),"strike age="+age);
+                Assert.That(Chapter1DoeonAnimation.SelectHitFrame(age),
+                    Is.EqualTo(hurt[age]),"hurt age="+age);
+            }
+            foreach(var age in new[]{-1,12,13,21})
+            {
+                Assert.That(Chapter1DoeonAnimation.SelectAttackFrame(age),Is.EqualTo(-1));
+                Assert.That(Chapter1DoeonAnimation.SelectHitFrame(age),Is.EqualTo(-1));
+            }
+            Assert.That(Chapter1DoeonAnimation.SelectVisualClip(
+                0,0,true,false,0,30),Is.EqualTo(6),"fired attack has priority");
+            Assert.That(Chapter1DoeonAnimation.SelectVisualClip(
+                0,0,true,false,12,30),Is.EqualTo(1),"attack expires after 12 ticks");
+            Assert.That(Chapter1DoeonAnimation.SelectVisualClip(
+                0,0,true,false,0,0),Is.EqualTo(7),"damage overrides attack");
+        }
+
+        [Test] public void SourceSpecificHitFramesAndImpactTintRemainPresentationOnly()
+        {
+            // Right-source row3 has independent hurt key poses 4/5,
+            // rather than left rig row1 poses 3/4/5/0.
+            for (var age=0;age<12;++age)
+                Assert.That(Chapter1DoeonAnimation.SelectRightHitFrame(age),
+                    Is.EqualTo(age<6?4:5),"right hit age="+age);
+            Assert.That(Chapter1DoeonAnimation.SelectRightHitFrame(-1),Is.EqualTo(-1));
+            Assert.That(Chapter1DoeonAnimation.SelectRightHitFrame(12),Is.EqualTo(-1));
+
+            var fire=Chapter1DoeonAnimation.VisualTintForAges(0,40);
+            Assert.That(fire.r,Is.EqualTo(1f));
+            Assert.That(fire.g,Is.EqualTo(.97f).Within(.001f));
+            Assert.That(fire.b,Is.EqualTo(.70f).Within(.001f));
+            Assert.That(fire.a,Is.EqualTo(1f));
+            var damage=Chapter1DoeonAnimation.VisualTintForAges(0,0);
+            Assert.That(damage.r,Is.EqualTo(1f));
+            Assert.That(damage.g,Is.EqualTo(.63f).Within(.001f));
+            Assert.That(damage.b,Is.EqualTo(.60f).Within(.001f));
+            Assert.That(damage.a,Is.EqualTo(1f));
+            Assert.That(Chapter1DoeonAnimation.VisualTintForAges(4,5),
+                Is.EqualTo(Color.white),"flash expires without persistent tint");
+        }
+
         [Test] public void CandidateAtlasesAreExactAndPointSampled()
         {
             var movement=Resources.Load<Texture2D>("Chapter1Doeon/Candidate-movement");

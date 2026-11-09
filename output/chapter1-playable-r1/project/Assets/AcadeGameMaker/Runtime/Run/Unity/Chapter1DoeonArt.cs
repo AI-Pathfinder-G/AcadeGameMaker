@@ -88,7 +88,7 @@ namespace AcadeGameMaker.Run.Unity
             var old = GUI.color;
             try
             {
-                GUI.color = Color.white;
+                GUI.color = Chapter1DoeonAnimation.CurrentVisualTint;
                 GUI.DrawTextureWithTexCoords(new Rect(left, top, width, height),
                     sprite.texture, Chapter1DoeonAnimation.TextureUv(sprite), true);
             }
