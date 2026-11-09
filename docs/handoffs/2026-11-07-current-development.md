@@ -1,3 +1,26 @@
+## 2026-11-09 CH1 original regular enemy actor art — CURRENT
+
+On fix/ch1-unity-resume-20261108 (H:\GPT-workspace\AcadeGameMaker-integration-20261107)
+user requested continuing graphics after Doeon recovery commit 612165d.
+NEW original Walker/Surveyor sprite art generated from editable
+tools/sprite_atlas/build_ch1_regular_enemy_character_atlas.py:
+4 rows (two enemies x two independent facings), eight pose keys,
+32 distinct 64px art frames. Walker armored melee vs Surveyor cyan ranger.
+V1 and v2 assets/source SHA evidence preserved locally in
+output/ch1-package-A-20261109/regular-enemy-authored-v2.
+Run.Unity now reads already completed immutable behavior publication
+from Combat.Unity, selects real idle/walk/telegraph/execute/hurt/dead/
+recover candidate sprites and uses existing enemy colliders as visual
+foot anchors. No new gameplay attack/AI/collision/LOS/save authority.
+Combat assembly producer friend visibility is enabled for player.
+Offline source tests 4/4, final Unity tests 4/4, existing Doeon 13/13, player build attempt-033
+success exit0, isolated Extraction completion success exit0. R01 native
+game screenshot shows both new actors. All three Windows clean-room gameplay routes success=True exit0 and cleanup
+confirmed in output/ch1-package-A-20261109/regular-enemy-authored-v2-full-audit.json.
+Native R01 gameplay shows both enemies. This is candidate integration,
+not manual final artwork acceptance or independent QA.
+Visual art acceptance and Codex independent review remain pending.
+No remote push or main merge; original separate game repository untouched.
 ## 2026-11-09 CH1 Doeon left hurt visual recovery snap correction — CURRENT
 
 Active local dev worktree H:\GPT-workspace\AcadeGameMaker-integration-20261107,

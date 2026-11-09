@@ -10,6 +10,7 @@ using System.Runtime.CompilerServices;
 // values to gate a local input-mode request; it receives no Combat mutation API.
 [assembly: InternalsVisibleTo("AcadeGameMaker.Input.Unity")]
 [assembly: InternalsVisibleTo("AcadeGameMaker.Input.Unity.PlayMode.Tests")]
+[assembly: InternalsVisibleTo("AcadeGameMaker.Run.Unity")]
 #if UNITY_EDITOR || UNITY_INCLUDE_TESTS
 [assembly: InternalsVisibleTo("AcadeGameMaker.Run.Unity.PlayMode.Tests")]
 #endif

@@ -229,3 +229,22 @@ The original V1 source and V2 SHA and per-frame x-bound ledger are
 separately available in manifest.json and nearest-neighbor side-by-side
 previews. No gameplay, original character art, collider or attack damage
 changes. Still requires manual native moving-VFX review and Codex QA.
+## Walker and Surveyor CH1 original sprite candidates
+
+Walker and Surveyor previously had functional simulation but were
+displayed as TemporaryActorView placeholder geometry. Original
+authoring generator builds a 512x256 RGBA atlas with 4 rows x 8 keys
+of 64x64 authored sprite art. Rows: Walker R/L and Surveyor R/L.
+Keys: idle, stride-A, stride-B, telegraph, execute, hurt, dead,
+recover. Original separate pixel images, not mirrored player art.
+
+    python tools/sprite_atlas/build_ch1_regular_enemy_character_atlas.py --output "NEW_ART_FOLDER"
+    python -m unittest discover -s tools/sprite_atlas/test -p test_ch1_regular_enemies.py -v
+
+Use resource Chapter1Enemies/Candidate-RegularEnemies at 18 PPU,
+point filter, normalized pivot (0.5,0.1875). The Run.Unity
+presentation-only adapter uses read-only completed Combat.Unity
+published behavior to select the pose; never advance simulation,
+change collider or synthesize a damage/hit event.
+Candidate is not artist approved. Manually review at native 1x
+and seek independent Codex audit after allowance reset.

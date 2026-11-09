@@ -1,4 +1,5 @@
 using System;
+using AcadeGameMaker.Combat.Unity;
 using AcadeGameMaker.Input.Unity;
 using UnityEngine;
 
@@ -15,6 +16,7 @@ namespace AcadeGameMaker.Run.Unity
         private Collider2D[] _visualSources;
         private SpriteRenderer[] _markers;
         private SpriteRenderer[] _feedbackMarkers;
+        private RegularEnemyBehaviorSimulationDriver _enemyBehavior;
         private bool[] _playerFacingLeft;
         private float[] _previousVisualX;
         private SpriteRenderer _crushMarker;
@@ -66,17 +68,26 @@ namespace AcadeGameMaker.Run.Unity
             _texture.SetPixels(new[]{Color.white,Color.white,Color.white,Color.white});_texture.Apply();
             _sprite=Sprite.Create(_texture,new Rect(0,0,2,2),new Vector2(.5f,.5f),2);
             _visualSources=GetComponentsInChildren<Collider2D>(true);_markers=new SpriteRenderer[_visualSources.Length];
+            _enemyBehavior=GetComponentInChildren<RegularEnemyBehaviorSimulationDriver>(true);
             _feedbackMarkers=new SpriteRenderer[_visualSources.Length];
             _playerFacingLeft=new bool[_markers.Length];_previousVisualX=new float[_markers.Length];
             for(var i=0;i<_markers.Length;i++)
             {
                 var playerArt=Chapter1DoeonArt.ForPlayer(_visualSources[i],false);
+                var enemyArt=Chapter1RegularEnemyArt.ForEnemy(_visualSources[i],null);
                 _previousVisualX[i]=_visualSources[i].bounds.center.x;
-                var art=playerArt!=null?playerArt:Chapter1IndustrialArt.ForEnvironment(_visualSources[i]);
-                var marker=new GameObject((playerArt!=null?"DoeonStaticView":art!=null?"IndustrialEnvironmentView":"TemporaryActorView")+i);marker.transform.SetParent(transform,false);
-                var renderer=marker.AddComponent<SpriteRenderer>();renderer.sprite=playerArt!=null?playerArt:art!=null?art:_sprite;
+                var art=playerArt!=null?playerArt:
+                    enemyArt!=null?enemyArt:
+                    Chapter1IndustrialArt.ForEnvironment(_visualSources[i]);
+                var marker=new GameObject((playerArt!=null?"DoeonStaticView":
+                    enemyArt!=null?"RegularEnemyArtView":
+                    art!=null?"IndustrialEnvironmentView":"TemporaryActorView")+i);
+                marker.transform.SetParent(transform,false);
+                var renderer=marker.AddComponent<SpriteRenderer>();
+                renderer.sprite=art!=null?art:_sprite;
                 if(art!=null && playerArt==null){renderer.drawMode=SpriteDrawMode.Tiled;renderer.tileMode=SpriteTileMode.Continuous;renderer.sortingOrder=-1;}
-                renderer.color=playerArt!=null || art!=null?Color.white:_visualSources[i].gameObject.layer==8?new Color(.25f,.28f,.32f):
+                renderer.color=playerArt!=null || enemyArt!=null ||
+                    art!=null?Color.white:_visualSources[i].gameObject.layer==8?new Color(.25f,.28f,.32f):
                     _visualSources[i].gameObject.name.Contains("Player")?new Color(.85f,.9f,1f):new Color(.8f,.35f,.25f);
                 _markers[i]=renderer;
                 if(playerArt!=null)
@@ -98,6 +109,10 @@ namespace AcadeGameMaker.Run.Unity
         {
             if(_markers==null)return;
             var visualRouter=GetComponentInChildren<InputRouter>(true);
+            // Read only the published -170 regular-enemy behavior snapshot.
+            // Never request or advance enemy simulation to show pixels.
+            CarriedBehaviorView? enemyEvidence=_enemyBehavior!=null
+                ?_enemyBehavior.LatestCarriedViewForEncounterHandoff:null;
             for(var i=0;i<_markers.Length;i++)
             {
                 var source=_visualSources[i];var visible=source!=null && source.enabled && source.gameObject.activeInHierarchy;
@@ -118,6 +133,19 @@ namespace AcadeGameMaker.Run.Unity
                             _feedbackMarkers[i].enabled=effect!=null;
                         }
                         _markers[i].transform.position=new Vector3(bounds.center.x,bounds.min.y,bounds.center.z);
+                        _markers[i].transform.localScale=Vector3.one;
+                    }
+                    else if(Chapter1RegularEnemyArt.IsEnemy(source) &&
+                            Chapter1RegularEnemyArt.CandidateAvailable)
+                    {
+                        var keyed=Chapter1RegularEnemyArt.ForEnemy(source,enemyEvidence);
+                        _markers[i].sprite=keyed;
+                        _markers[i].color=Color.white;
+                        // Sprite is 64px at 18 PPU and pivot y=.1875;
+                        // foot is aligned with collider bottom but no
+                        // gameplay collider is modified.
+                        _markers[i].transform.position=new Vector3(
+                            bounds.center.x,bounds.min.y,bounds.center.z);
                         _markers[i].transform.localScale=Vector3.one;
                     }
                     else

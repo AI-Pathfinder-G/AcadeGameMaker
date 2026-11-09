@@ -1,7 +1,7 @@
 {
   "name": "AcadeGameMaker.Run.Unity",
   "rootNamespace": "AcadeGameMaker.Run.Unity",
-  "references": ["AcadeGameMaker.Run", "AcadeGameMaker.Core", "AcadeGameMaker.Input.Unity", "AcadeGameMaker.Profile"],
+  "references": ["AcadeGameMaker.Run", "AcadeGameMaker.Core", "AcadeGameMaker.Input.Unity", "AcadeGameMaker.Profile", "AcadeGameMaker.Combat", "AcadeGameMaker.Combat.Unity"],
   "includePlatforms": [], "excludePlatforms": [], "allowUnsafeCode": false,
   "overrideReferences": false, "precompiledReferences": [], "autoReferenced": true,
   "defineConstraints": [], "versionDefines": [], "noEngineReferences": false

@@ -8,4 +8,5 @@ using System.Runtime.CompilerServices;
 // evidence; it receives no mutation or simulation authority.
 [assembly: InternalsVisibleTo("AcadeGameMaker.Input.Unity")]
 [assembly: InternalsVisibleTo("AcadeGameMaker.Input.Unity.PlayMode.Tests")]
+[assembly: InternalsVisibleTo("AcadeGameMaker.Run.Unity")]
 [assembly: InternalsVisibleTo("AcadeGameMaker.Run.Unity.PlayMode.Tests")]
