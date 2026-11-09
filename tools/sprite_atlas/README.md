@@ -197,3 +197,35 @@ combat simulation remain unchanged.
 Version: chapter1-doeon-action-feedback-candidate-v1. A manifest SHA,
 per-frame visible-pixel ledger and nearest-neighbor 4x preview are emitted.
 Manual appearance approval and Codex independent QA are still outstanding.
+## Package A right swing to authored hand contact
+
+The V1 ACTION FEEDBACK atlas has the first right swing trail starting
+about 4.39px away from the actual right punch. V2 is a reversible
+RIGHT ONLY -3px X translation of exactly four swing frames, bringing
+the earliest contact to about 2px. It never changes left-direction
+VFX, hurt sparks, character portraits, boss hitboxes or attack timings.
+
+    python tools/sprite_atlas/build_ch1_doeon_action_feedback.py --output "NEW_V1_CANDIDATE_FOLDER"
+    python tools/sprite_atlas/align_ch1_doeon_right_swing_to_hand.py --input "V1_CANDIDATE_FOLDER/Candidate-Doeon-action-feedback.png" --output "NEW_V2_CANDIDATE_FOLDER"
+    python -m unittest discover -s tools/sprite_atlas/test -p test_ch1_doeon_swing_hand_alignment.py -v
+
+The second generator refuses unknown shifts, alpha clipping, an
+existing destination, and unexpected source frame geometry.
+Keep both V1 and V2 SHA receipts; output remains art pending
+real 1x player-view and Codex independent verification.
+## Package A right swing wrist-contact correction
+
+Use the original V1 action-feedback candidate as immutable input.
+The right swing started ~4.39px from actual right strike fist; the
+reviewed V2 output slides exactly four right-swing keys -3 pixels to
+bring the initial contact to ~2px. NEVER move left-side VFX or add a
+damage/hit effect to FiredMiss. The tool refuses any source-alpha
+clipping, wrong frame layout, unknown shift, or existing output dir.
+
+    python tools/sprite_atlas/align_ch1_doeon_right_swing_to_hand.py --input "V1_Candidate-action-feedback.png" --output "NEW_V2_REVIEW_FOLDER"
+    python -m unittest discover -s tools/sprite_atlas/test -p test_ch1_doeon_swing_hand_alignment.py -v
+
+The original V1 source and V2 SHA and per-frame x-bound ledger are
+separately available in manifest.json and nearest-neighbor side-by-side
+previews. No gameplay, original character art, collider or attack damage
+changes. Still requires manual native moving-VFX review and Codex QA.

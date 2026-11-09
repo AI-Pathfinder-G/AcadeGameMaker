@@ -68,7 +68,12 @@
                                   ],
     "actionFeedbackResource":  "Chapter1Doeon/Candidate-action-feedback",
     "actionFeedbackStatus":  "visual-only-swing-on-fired-recoil-on-actual-hp-loss",
-    "actionFeedbackAtlasSha256":  "8d671228380494ed7e3d4d6cb8029a8be28fd58144dd57138796f890a32eb5a4",
+    "actionFeedbackAtlasSha256":  "f2d77ba59f4b3028e2b46abc35fdf0181405caabb9b8d3638ee23a8a05a86420",
     "actionFeedbackSourceSchema":  "chapter1-doeon-action-feedback-candidate-v1",
-    "actionFeedbackManualAccepted":  false
+    "actionFeedbackManualAccepted":  false,
+    "actionFeedbackContactAlignment":  "right-swing-only-four-frames-shifted-left-3px-art-candidate",
+    "actionFeedbackContactInputSha256":  "8d671228380494ed7e3d4d6cb8029a8be28fd58144dd57138796f890a32eb5a4",
+    "actionFeedbackRefinementSchema":  "doeon-action-feedback-right-hand-contact-v2",
+    "actionFeedbackContactShiftX":  -3,
+    "actionFeedbackContactFrames":  4
 }

@@ -379,6 +379,40 @@ namespace AcadeGameMaker.Tests.PlayMode.RunUnity
             finally { Object.DestroyImmediate(go); }
         }
 
+        [Test] public void RightSwingContactAlignmentRetainsAllOtherActionVisualRows()
+        {
+            var feedback=Resources.Load<Texture2D>(
+                "Chapter1Doeon/Candidate-action-feedback");
+            var profile=Resources.Load<TextAsset>(
+                "Chapter1Doeon/candidate-animation-profile");
+            Assert.That(feedback,Is.Not.Null);
+            Assert.That(profile,Is.Not.Null);
+            Assert.That(profile.text,Does.Contain(
+                "right-swing-only-four-frames-shifted-left-3px-art-candidate"));
+            Assert.That(profile.text,Does.Contain(
+                "doeon-action-feedback-right-hand-contact-v2"));
+            Assert.That(profile.text,Does.Contain("actionFeedbackContactInputSha256"));
+            Assert.That(System.Text.RegularExpressions.Regex.IsMatch(
+                profile.text,"\"actionFeedbackContactShiftX\"\\s*:\\s*-3"),Is.True);
+            Assert.That(System.Text.RegularExpressions.Regex.IsMatch(
+                profile.text,"\"actionFeedbackContactFrames\"\\s*:\\s*4"),Is.True);
+            Assert.That(System.Text.RegularExpressions.Regex.IsMatch(
+                profile.text,"\"actionFeedbackManualAccepted\"\\s*:\\s*false"),Is.True);
+            Assert.That(feedback.width,Is.EqualTo(384));
+            Assert.That(feedback.height,Is.EqualTo(256));
+            Assert.That(feedback.filterMode,Is.EqualTo(FilterMode.Point));
+            Assert.That(feedback.mipmapCount,Is.EqualTo(1));
+            foreach(var row in new[]{0,1,2,3})
+            {
+                var first=Chapter1DoeonAnimation.FeedbackSpriteByIndex(row*6);
+                Assert.That(first,Is.Not.Null);
+                Assert.That(first.texture,Is.SameAs(feedback));
+                var uv=Chapter1DoeonAnimation.TextureUv(first);
+                Assert.That(uv.y,Is.EqualTo((3-row)*.25f).Within(.0001f));
+            }
+            Assert.That(Chapter1DoeonAnimation.FeedbackSpriteByIndex(-1),Is.Null);
+            Assert.That(Chapter1DoeonAnimation.FeedbackSpriteByIndex(24),Is.Null);
+        }
         [Test] public void CandidateAtlasesAreExactAndPointSampled()
         {
             var movement=Resources.Load<Texture2D>("Chapter1Doeon/Candidate-movement");

@@ -1,3 +1,43 @@
+## 2026-11-09 Doeon right swing wrist contact — CURRENT
+
+User directed next ArcadeGameMaker Package A graphics improvement.
+Active dev worktree H:\GPT-workspace\AcadeGameMaker-integration-20261107,
+branch fix/ch1-unity-resume-20261108; prior local head eeaae8d.
+Found the right swing trail first active key 4.39px from the right fist,
+versus left 1px. New deterministic VFX-only tool translates the four
+right swing keys -3px, reducing initial contact gap to approx 2px.
+Original V1 source and all left/hurt VFX rows, character art, combat
+physics, save/input ownership are preserved. Active PNG and SHA-bound
+Unity candidate animation profile changed, signed shift is numeric.
+Generator tests 4/4. After first JSON metadata test failure corrected,
+Unity focused tests 12/12 passed. Windows attempt-028 built exit0.
+Real Windows automated paths: Extraction/Solidarity both completion
+success=True exit0; real failure -> hub -> new run retry also success=True
+exit0; cleanup verified. Exact proof and 57 native screenshots in
+output/ch1-package-A-20261109. R06 left/right attack effects were
+visually identified in native boss-011 and boss-024 screenshots.
+This proves actual rendering, not every moving phase/art acceptance.
+Original archived art and previous RC untouched. Codex independent QA
+and hand-retouch approval remain pending; no remote push/main merge.
+## 2026-11-09 CH1 Doeon right swing to hand contact — CURRENT
+
+Active dev branch fix/ch1-unity-resume-20261108 at
+H:\GPT-workspace\AcadeGameMaker-integration-20261107.
+User asked to continue Doeon Package A graphics. The prior right
+swing trail was 4.39px from the active right fist on strike frame3.
+A strict visual-only per-frame -3px X translation of four right swing
+effect keys brings it to ~2px. Left swing and left/right recoil effect
+frames, actual character art, game mechanics and all other atlas keys
+were preserved. V1 source and V2 refined SHA manifest stored under
+output/ch1-package-A-20261109/doeon-action-feedback-hand-contact-v2.
+Unity profile SHA and numeric right contact metadata refreshed.
+Offline negative/fidelity tests 4/4 passed. Focused Unity 12/12 pass
+after fixing JSON metadata shift -3 that PowerShell initially emitted
+as a string. Windows candidate build and gameplay receipts to be
+confirmed separately before claiming whole Chapter1 acceptance.
+Manual moving-art QA and Codex independent review still pending.
+Original H:\GPT-workspace\AcadeGameMaker and prior RC not modified.
+Do not push remote, merge main or treat source art as approved.
 ## 2026-11-09 CH1 Doeon action feedback visual overlay — CURRENT
 
 Following local dev commit fb61f6c, user directed continuing the Package A
