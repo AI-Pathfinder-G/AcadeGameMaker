@@ -50,6 +50,64 @@ namespace AcadeGameMaker.Tests.PlayMode.RunUnity
             Assert.That(Chapter1RegularEnemyArt.SpriteAt(0,8),Is.Null);
         }
 
+        [Test] public void V3OriginalSilhouetteArtReplacesV2WithoutChangingAnimationContract()
+        {
+            var profile=Resources.Load<TextAsset>(
+                "Chapter1Enemies/candidate-enemy-profile");
+            var atlas=Resources.Load<Texture2D>(
+                "Chapter1Enemies/Candidate-RegularEnemies");
+            Assert.That(profile,Is.Not.Null);
+            Assert.That(atlas,Is.Not.Null);
+            Assert.That(profile.text,Does.Contain(
+                "ch1-walker-surveyor-silhouette-redesign-v3"));
+            Assert.That(profile.text,Does.Contain(
+                "oversized pressure piston boiler core"));
+            Assert.That(profile.text,Does.Contain(
+                "monocular prism expandable triangular halo"));
+            Assert.That(profile.text,Does.Contain(
+                "build_ch1_regular_enemy_v3.py"));
+            Assert.That(System.Text.RegularExpressions.Regex.IsMatch(
+                profile.text,"\"artIteration\"\\s*:\\s*3"),Is.True);
+            Assert.That(System.Text.RegularExpressions.Regex.IsMatch(
+                profile.text,"\"v3UniqueArtKeys\"\\s*:\\s*32"),Is.True);
+            Assert.That(System.Text.RegularExpressions.Regex.IsMatch(
+                profile.text,"\"manualArtAccepted\"\\s*:\\s*false"),Is.True);
+            Assert.That(profile.text,Does.Contain("previousV2Sha256"));
+            Assert.That(atlas.width,Is.EqualTo(512));
+            Assert.That(atlas.height,Is.EqualTo(256));
+            Assert.That(atlas.filterMode,Is.EqualTo(FilterMode.Point));
+            for(var row=0;row<4;++row)
+            {
+                var rest=Chapter1RegularEnemyArt.SpriteAt(row,0);
+                var warning=Chapter1RegularEnemyArt.SpriteAt(row,3);
+                var active=Chapter1RegularEnemyArt.SpriteAt(row,4);
+                var dead=Chapter1RegularEnemyArt.SpriteAt(row,6);
+                Assert.That(rest,Is.Not.Null);
+                Assert.That(warning,Is.Not.Null);
+                Assert.That(active,Is.Not.Null);
+                Assert.That(dead,Is.Not.Null);
+                Assert.That(rest.rect.x,Is.Not.EqualTo(warning.rect.x));
+                Assert.That(warning.rect.x,Is.Not.EqualTo(active.rect.x));
+                Assert.That(dead.rect.x,Is.Not.EqualTo(rest.rect.x));
+                Assert.That(rest.pivot.y,Is.EqualTo(12f).Within(.001f));
+                Assert.That(dead.pivot.y,Is.EqualTo(12f).Within(.001f));
+                Assert.That(warning.texture,Is.SameAs(atlas));
+            }
+            // No original combat behavior was modified. Existing
+            // published-Phase selection contract remains stable.
+            Assert.That(Chapter1RegularEnemyArt.SelectWalkerKey(
+                WalkerBehaviorPhase.DashTelegraph,
+                RegularEnemyMovementIntent.None,42),Is.EqualTo(3));
+            Assert.That(Chapter1RegularEnemyArt.SelectWalkerKey(
+                WalkerBehaviorPhase.DashActive,
+                RegularEnemyMovementIntent.DashHorizontal,43),Is.EqualTo(4));
+            Assert.That(Chapter1RegularEnemyArt.SelectSurveyorKey(
+                SurveyorBehaviorPhase.FireTelegraph,
+                RegularEnemyMovementIntent.None,42),Is.EqualTo(3));
+            Assert.That(Chapter1RegularEnemyArt.SelectSurveyorKey(
+                SurveyorBehaviorPhase.Fire,
+                RegularEnemyMovementIntent.None,43),Is.EqualTo(4));
+        }
         [Test] public void CompletedBehaviorPhasesSelectOnlyTheirVisualKeys()
         {
             Assert.That(Chapter1RegularEnemyArt.SelectWalkerKey(

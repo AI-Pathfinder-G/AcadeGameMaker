@@ -1,3 +1,30 @@
+## 2026-11-09 CH1 Walker and Surveyor V3 redesign — CURRENT
+
+Active worktree H:\GPT-workspace\AcadeGameMaker-integration-20261107
+on branch fix/ch1-unity-resume-20261108. User rejected Walker/Surveyor
+v2 visuals as generic, approved pressure ram + prism triangulation
+machine direction and explicitly ordered actual development.
+New editable original sprite generator: tools/sprite_atlas/
+build_ch1_regular_enemy_v3.py. No source image mirroring, no reuse of
+Doeon/Ordan visuals. Walker v3 boiler/cage/piston hoof guard; Surveyor
+v3 monocular optic/triangulation halo/tripod projector. Four rows R/L
+per enemy, eight keys, all 32 unique, native 1x plus 4x reviews.
+V2 original backup and v3 source, before/after visual comparison and
+integrity data at output/ch1-package-B-v3-20261109.
+Active resource Candidate-RegularEnemies.png retains name and size,
+profile artIteration=3, output SHA ceb05ecd519591f4b1781bfd435865b39d08e4bb14dfaf7101a07f6aecab766f
+and no final manual art approval. Runtime Chapter1RegularEnemyArt and
+published Combat phases UNCHANGED; no AI, hitbox, input, save edits.
+Source test v3 5/5, Unity monster 5/5, Doeon regression 13/13 pass.
+Windows candidate attempt-035 built exit0. Actual isolated auto runs:
+Extraction, Solidarity, real damage -> failure -> hub -> retry all pass
+success=True exit0 + owned input cleanup. R01 actual screenshots prove
+V3 actors visible in the game. Full raw SHA audit at
+output/ch1-package-B-v3-20261109/v3-three-route-integrity-audit.json.
+Design detail: docs/art/2026-11-09-walker-surveyor-v3-design.md.
+Still pending: native manual 1x quality acceptance, attack warning VFX,
+Walker distinct hurt publish/animation binding, richer walk, Codex QA.
+No public remote push, main merge or source-art overwrite permitted.
 ## 2026-11-09 CH1 original regular enemy actor art — CURRENT
 
 On fix/ch1-unity-resume-20261108 (H:\GPT-workspace\AcadeGameMaker-integration-20261107)

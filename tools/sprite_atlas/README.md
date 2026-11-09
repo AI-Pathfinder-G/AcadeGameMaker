@@ -248,3 +248,26 @@ published behavior to select the pose; never advance simulation,
 change collider or synthesize a damage/hit event.
 Candidate is not artist approved. Manually review at native 1x
 and seek independent Codex audit after allowance reset.
+## V3 pressure ram Walker and prism Surveyor redesign
+
+The V2 source (generic humanoid melee and rifleman) remains untouched.
+Use the V3 original geometric authoring generator to build a separate
+512x256 RGBA 4x8 sheet: Walker R/L and Surveyor R/L with key order
+idle, stride-a, stride-b, telegraph, execute, hurt, dead, recover.
+
+    python tools/sprite_atlas/build_ch1_regular_enemy_v3.py --output "NEW_CANDIDATE_OUTPUT_DIR"
+    python -m unittest discover -s tools/sprite_atlas/test -p test_ch1_regular_enemy_v3.py -v
+
+Walker uses an asymmetric boiler ram, external pressure tanks and
+shock hooves. Surveyor uses a large monocular lens, triangular
+measuring halo, tripod feet and diagnostic projector instead of
+a normal gun. Frame generator never imports past images, all 32
+sprite key hashes must differ, and originals must remain archived.
+The output includes 1x and 4x sprite reviews, editable Python source,
+per-frame SHA/bounds plus candidate-only schema. Unity integration
+reuses the same Chapter1Enemies/Candidate-RegularEnemies sprite path
+and the original published behavior-to-key mapping: **NO gameplay
+authority** is transferred into visual code. The V2/V3 comparisons
+and 3-path automated Windows receipts are under
+output/ch1-package-B-v3-20261109. Independent artist approval and
+Codex QA remain outstanding.
