@@ -277,6 +277,38 @@ namespace AcadeGameMaker.Tests.PlayMode.RunUnity
                 Is.EqualTo(.25f).Within(.0001f),"RUN row remains row2");
         }
 
+        [Test] public void RightWalkingAndRunningTorsoRootsRemainExplicitlyBounded()
+        {
+            var right=Resources.Load<Texture2D>("Chapter1Doeon/Candidate-movement");
+            var rightCombat=Resources.Load<Texture2D>("Chapter1Doeon/Candidate-combat");
+            var left=Resources.Load<Texture2D>("Chapter1Doeon/Candidate-left-movement");
+            var profile=Resources.Load<TextAsset>("Chapter1Doeon/candidate-animation-profile");
+            Assert.That(right,Is.Not.Null);
+            Assert.That(rightCombat,Is.Not.Null);
+            Assert.That(left,Is.Not.Null);
+            Assert.That(profile,Is.Not.Null);
+            Assert.That(right,Is.Not.SameAs(rightCombat),
+                "movement-only alignment must not alter combat frames");
+            Assert.That(right,Is.Not.SameAs(left),
+                "independently authored left motion is not mirrored right artwork");
+            Assert.That(right.width,Is.EqualTo(384));
+            Assert.That(right.height,Is.EqualTo(256));
+            Assert.That(right.filterMode,Is.EqualTo(FilterMode.Point));
+            Assert.That(right.mipmapCount,Is.EqualTo(1));
+            Assert.That(profile.text,Does.Contain(
+                "visual-only-integer-x-pose-root-shifts-candidate-not-accepted"));
+            Assert.That(System.Text.RegularExpressions.Regex.IsMatch(
+                profile.text, "\"rightTorsoAlignedFrames\"\\s*:\\s*12"),Is.True);
+            Assert.That(System.Text.RegularExpressions.Regex.IsMatch(
+                profile.text, "\"rightTorsoWalkAnchorX\"\\s*:\\s*31"),Is.True);
+            Assert.That(System.Text.RegularExpressions.Regex.IsMatch(
+                profile.text, "\"rightTorsoRunAnchorX\"\\s*:\\s*34"),Is.True);
+            Assert.That(profile.text,Does.Contain("rightTorsoAlignmentInputSha256"));
+            Assert.That(profile.text,Does.Contain("rightTorsoAlignmentShifts"));
+            Assert.That(profile.text,Does.Contain("candidate-not-independent-accepted"),
+                "right visual art still needs final human acceptance");
+            Assert.That(Chapter1DoeonAnimation.CandidateAvailable,Is.True);
+        }
         [Test] public void CandidateAtlasesAreExactAndPointSampled()
         {
             var movement=Resources.Load<Texture2D>("Chapter1Doeon/Candidate-movement");

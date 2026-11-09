@@ -165,3 +165,17 @@ never modified, and the tool never changes combat, pivot or hitbox logic.
 Review manifest.json source SHA, exact per-frame pixels and before/after
 nearest-neighbor preview. The output remains a PROVISIONAL sprite candidate
 until an artist verifies movement quality and user-play screen capture.
+## Package A right-side WALK/RUN torso-root stabilization
+
+Original right keyposes have a source-defined 3px WALK / 2px RUN
+torso-root variation. The conservative candidate generator shifts
+only those 12 tiles by at most 2 integer pixels, preserving exact
+colors, alpha counts, 64px frame size, y51 foot height, all left
+art and right jump/dash/hit rows.
+
+    python tools/sprite_atlas/stabilize_ch1_doeon_right_torso.py --input "SOURCE_RIGHT_CANDIDATE.png" --output "NEW_OUTPUT_DIR" --expected-sha "SOURCE_SHA256"
+    python -m unittest discover -s tools/sprite_atlas/test -p test_ch1_doeon_right_torso.py -v
+
+The result has per-frame before/after anchors and SHA-256 ledger plus
+nearest-neighbor side-by-side review. Alignment is not new authored
+art and is not independent approval of all gait poses or planted feet.

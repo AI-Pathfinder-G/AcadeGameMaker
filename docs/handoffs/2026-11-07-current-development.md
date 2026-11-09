@@ -1,3 +1,19 @@
+## 2026-11-09 CH1 Doeon right WALK/RUN root alignment — CURRENT
+
+Active dev branch fix/ch1-unity-resume-20261108 on
+H:\GPT-workspace\AcadeGameMaker-integration-20261107.
+User continued Package A (Doeon character art). Source right WALK/RUN
+torso root varies 3px/2px, while all feet end at y51. New visual-only
+generator tools/sprite_atlas/stabilize_ch1_doeon_right_torso.py uses a
+reversible <=2px integer X shift for right WALK row0 / RUN row1.
+Eight of twelve frames shifted; right jump/dash/hit and all left art
+remain unchanged. Unity Resources/Candidate-movement.png and profile
+SHA were updated. Review evidence at output/ch1-package-A-20261109/
+right-torso-alignment-v1. Offline tests 3/3, Unity tests 10/10 pass,
+and candidate attempt-024 Windows build succeeded (exit0).
+All three isolated attempt-024 Windows game-path checks completed success=True exit0 (Extraction, Solidarity, real failure/hub/retry); confirmed by output/ch1-package-A-20261109/right-torso-all-paths-audit.json. This is automated functional evidence, not manual art acceptance.
+Original H:\GPT-workspace\AcadeGameMaker is read-only and preserved.
+Manual visual quality and Codex independent QA deferred, no remote push.
 ## 2026-11-09 CH1 position-derived visual gait cadence — CURRENT
 
 User requested next art task after 1e79bcc4, dev worktree

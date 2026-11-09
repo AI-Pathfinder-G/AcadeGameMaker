@@ -28,7 +28,7 @@
     "noMechanicsChange":  true,
     "movementSourceSha256":  "b344a06a295f35ae10db7e7b811aee048f14a3b2d0f531be8e5728ad133bca63",
     "combatSourceSha256":  "184ba046e9bc4d88e3bf73e31145104de5b816f3584a3208a9628baabd57c852",
-    "movementAtlasSha256":  "47b9ef8db8df2e052de77d905cc06c1d2c648cc9cae369f3da010f519cb97dcb",
+    "movementAtlasSha256":  "aa80f3370d48e9a95f51890bec9a321d06a73d9a8120cf590fa939c0246d5f4c",
     "combatAtlasSha256":  "085b0cf8708018c60158554eb3e701d030fca52fe7020ae0d2143ac9484b03d0",
     "edgeRefinement":  "ch1-conservative-edge-chroma-v1",
     "remainingPurpleEffectPixelsForReview":  14,
@@ -46,5 +46,24 @@
     "leftCombatPixelCleanup":  "conservative-1px-seam-candidate-not-final-art",
     "leftCombatPixelChanges":  20,
     "leftRunShoulderRepair":  "two-pixel-joint-root-patch-art-candidate-only",
-    "leftRunShoulderChangedPixels":  2
+    "leftRunShoulderChangedPixels":  2,
+    "rightTorsoAlignment":  "visual-only-integer-x-pose-root-shifts-candidate-not-accepted",
+    "rightTorsoAlignmentInputSha256":  "47b9ef8db8df2e052de77d905cc06c1d2c648cc9cae369f3da010f519cb97dcb",
+    "rightTorsoAlignedFrames":  12,
+    "rightTorsoWalkAnchorX":  31,
+    "rightTorsoRunAnchorX":  34,
+    "rightTorsoAlignmentShifts":  [
+                                      0,
+                                      -1,
+                                      1,
+                                      1,
+                                      2,
+                                      -1,
+                                      0,
+                                      0,
+                                      -1,
+                                      0,
+                                      1,
+                                      -1
+                                  ]
 }
